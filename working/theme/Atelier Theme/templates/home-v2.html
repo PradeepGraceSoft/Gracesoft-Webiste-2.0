@@ -1,0 +1,38 @@
+<!--
+ templateType: page
+ isAvailableForNewContent: true
+ label: Atelier Theme Homepage
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+  <aside class="gs-preview-note"><strong>LOCAL REVIEW PREVIEW</strong> · Separate homepage concept · Atelier · Content Refresh concept · Static approximation, not a HubSpot HubL render</aside>
+  <a class="gs-skip" href="#main-content">Skip to main content</a>
+  <header class="gs-header">
+    <div class="gs-container gs-nav">
+      <a class="gs-brand" href="https://www.gracesoft.com/">GraceSoft <span>Easy InnKeeping</span></a>
+      <nav class="gs-navlinks" aria-label="Main navigation">
+        <a href="https://www.gracesoft.com/feature-listing">Products</a><a href="#property-types">Property types</a><a href="https://www.gracesoft.com/pricing">Pricing</a><a href="https://www.gracesoft.com/testimonials">Customer stories</a><a href="https://apps.gracesoft.com/pmsui/">Login</a><a class="gs-button gs-button--primary" href="https://www.gracesoft.com/livedemo">Request a Demo</a>
+      </nav>
+      <button class="gs-menu-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </div>
+    <nav class="gs-container gs-mobile-menu" id="mobile-menu" data-mobile-menu data-open="false" aria-label="Mobile navigation">
+      <a href="https://www.gracesoft.com/feature-listing">Products</a><a href="#property-types">Property types</a><a href="https://www.gracesoft.com/pricing">Pricing</a><a href="https://www.gracesoft.com/testimonials">Customer stories</a><a href="https://www.gracesoft.com/livedemo">Request a Demo</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="gs-home-v2 gs-content-refresh">{% dnd_area "content_home", label="Content refresh homepage" %}{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-01.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-02.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-03.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-04.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-05.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-06.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-07.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-08.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-09.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-10.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-11.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-12.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% end_dnd_area %}</main>
+  <footer class="gs-footer"><div class="gs-container gs-footer-grid"><div><strong>GraceSoft Easy InnKeeping</strong><p>Hospitality property management software</p><p>7310 Cortez Rd, Richmond, TX 77469 · +1-713-981-5300</p></div><nav aria-label="Footer"><a href="https://www.gracesoft.com/corporate-contact">Contact</a><a href="https://www.gracesoft.com/privacy-statement">Privacy &amp; terms</a><a href="https://www.gracesoft.com/pricing">Pricing</a></nav></div></footer>
+  <noscript><style>.gs-mobile-menu{display:grid;gap:12px;padding:16px}.gs-menu-toggle{display:none}</style></noscript>
+{% endblock body %}

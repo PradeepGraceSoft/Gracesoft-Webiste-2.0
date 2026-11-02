@@ -1,0 +1,140 @@
+[
+  {
+    "name": "text_1",
+    "label": "Your Questions, Answered",
+    "type": "text",
+    "default": "Your Questions, Answered"
+  },
+  {
+    "name": "text_2",
+    "label": "What is hospitality property management software?",
+    "type": "text",
+    "default": "What is hospitality property management software?"
+  },
+  {
+    "name": "text_3",
+    "label": "A hospitality property management system (PMS) helps lodging team",
+    "type": "text",
+    "default": "A hospitality property management system (PMS) helps lodging teams organize reservations, room availability, guest records, billing and daily operations."
+  },
+  {
+    "name": "text_4",
+    "label": "What is GraceSoft Easy InnKeeping?",
+    "type": "text",
+    "default": "What is GraceSoft Easy InnKeeping?"
+  },
+  {
+    "name": "text_5",
+    "label": "Easy InnKeeping is GraceSoft’s cloud-based hospitality PMS, with ",
+    "type": "text",
+    "default": "Easy InnKeeping is GraceSoft’s cloud-based hospitality PMS, with connected booking, distribution, guest engagement and operational tools."
+  },
+  {
+    "name": "text_6",
+    "label": "What types of properties does GraceSoft support?",
+    "type": "text",
+    "default": "What types of properties does GraceSoft support?"
+  },
+  {
+    "name": "text_7",
+    "label": "GraceSoft serves independent hotels, motels, bed and breakfasts, ",
+    "type": "text",
+    "default": "GraceSoft serves independent hotels, motels, bed and breakfasts, inns, resorts, vacation rentals, campgrounds, RV parks, dude ranches, condos and multi-property businesses."
+  },
+  {
+    "name": "text_8",
+    "label": "Does GraceSoft provide an online booking engine?",
+    "type": "text",
+    "default": "Does GraceSoft provide an online booking engine?"
+  },
+  {
+    "name": "text_9",
+    "label": "Yes. GraceSoft offers an online booking engine that connects with",
+    "type": "text",
+    "default": "Yes. GraceSoft offers an online booking engine that connects with property websites so guests can check availability and reserve directly."
+  },
+  {
+    "name": "text_10",
+    "label": "Does GraceSoft support OTA integrations?",
+    "type": "text",
+    "default": "Does GraceSoft support OTA integrations?"
+  },
+  {
+    "name": "text_11",
+    "label": "Yes. GraceSoft lists connections with online travel agencies (OTA",
+    "type": "text",
+    "default": "Yes. GraceSoft lists connections with online travel agencies (OTAs) and booking platforms, including Booking.com, Expedia, Airbnb and Vrbo. Confirm current availability for your setup."
+  },
+  {
+    "name": "text_12",
+    "label": "Can GraceSoft manage multiple properties?",
+    "type": "text",
+    "default": "Can GraceSoft manage multiple properties?"
+  },
+  {
+    "name": "text_13",
+    "label": "Yes. GraceSoft offers multi-property management, including access",
+    "type": "text",
+    "default": "Yes. GraceSoft offers multi-property management, including access to multiple properties through a unified login. Discuss portfolio requirements with the team."
+  },
+  {
+    "name": "text_14",
+    "label": "Does GraceSoft offer AI Voice and Chat Assistants?",
+    "type": "text",
+    "default": "Does GraceSoft offer AI Voice and Chat Assistants?"
+  },
+  {
+    "name": "text_15",
+    "label": "Yes. GraceSoft describes AI voice and chat options for property q",
+    "type": "text",
+    "default": "Yes. GraceSoft describes AI voice and chat options for property questions, availability, rates and booking inquiries, including outside normal desk hours."
+  },
+  {
+    "name": "text_16",
+    "label": "What payment gateways does GraceSoft support?",
+    "type": "text",
+    "default": "What payment gateways does GraceSoft support?"
+  },
+  {
+    "name": "text_17",
+    "label": "Published options include Stripe, Square, Authorize.Net and Shift",
+    "type": "text",
+    "default": "Published options include Stripe, Square, Authorize.Net and Shift4. Gateway support varies by location and configuration; check the payments page and confirm with GraceSoft."
+  },
+  {
+    "name": "text_18",
+    "label": "Can guests book directly through a property’s website?",
+    "type": "text",
+    "default": "Can guests book directly through a property’s website?"
+  },
+  {
+    "name": "text_19",
+    "label": "Yes. The online booking engine provides a direct reservation path",
+    "type": "text",
+    "default": "Yes. The online booking engine provides a direct reservation path from your website. GraceSoft also offers website solutions for lodging businesses."
+  },
+  {
+    "name": "text_20",
+    "label": "Does GraceSoft provide mobile access?",
+    "type": "text",
+    "default": "Does GraceSoft provide mobile access?"
+  },
+  {
+    "name": "text_21",
+    "label": "Yes. GraceSoft describes cloud access from desktop, tablet and mo",
+    "type": "text",
+    "default": "Yes. GraceSoft describes cloud access from desktop, tablet and mobile, with apps for Android, iPhone and iPad. Confirm the workflows available on your device."
+  },
+  {
+    "name": "text_22",
+    "label": "How can I request a GraceSoft product demonstration?",
+    "type": "text",
+    "default": "How can I request a GraceSoft product demonstration?"
+  },
+  {
+    "name": "text_23",
+    "label": "Use Request a Demo to discuss your property, team and workflows. ",
+    "type": "text",
+    "default": "Use Request a Demo to discuss your property, team and workflows. You can also review pricing or contact GraceSoft before choosing a configuration."
+  }
+]

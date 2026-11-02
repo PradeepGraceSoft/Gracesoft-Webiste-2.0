@@ -1,0 +1,50 @@
+[
+  {
+    "name": "text_1",
+    "label": "Trusted by Hospitality Businesses for Over 25 Years",
+    "type": "text",
+    "default": "Trusted by Hospitality Businesses for Over 25 Years"
+  },
+  {
+    "name": "text_2",
+    "label": "GraceSoft brings over 25 years of hospitality software experience",
+    "type": "text",
+    "default": "GraceSoft brings over 25 years of hospitality software experience to the teams behind each stay."
+  },
+  {
+    "name": "text_3",
+    "label": "“The transition with GraceSoft was great, with no issues during o",
+    "type": "text",
+    "default": "“The transition with GraceSoft was great, with no issues during onboarding, migration, or training.”"
+  },
+  {
+    "name": "link_4",
+    "label": "Read the full customer testimonial",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/testimonials"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Read the full customer testimonial"
+  },
+  {
+    "name": "link_5",
+    "label": "Explore Customer Stories",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/case-study"
+    }
+  },
+  {
+    "name": "link_5_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Customer Stories"
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "name": "text_1",
+    "label": "Powerful Features. Simple Everyday Workflows.",
+    "type": "text",
+    "default": "Powerful Features. Simple Everyday Workflows."
+  },
+  {
+    "name": "text_2",
+    "label": "Explore Easy InnKeeping with a walkthrough of the screens your te",
+    "type": "text",
+    "default": "Explore Easy InnKeeping with a walkthrough of the screens your team uses each day."
+  },
+  {
+    "name": "link_3",
+    "label": "Reservations",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "link_3_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Reservations"
+  },
+  {
+    "name": "link_4",
+    "label": "Guest Management",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/crm-software"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Guest Management"
+  },
+  {
+    "name": "link_5",
+    "label": "Housekeeping",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/housekeeping"
+    }
+  },
+  {
+    "name": "link_5_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Housekeeping"
+  },
+  {
+    "name": "link_6",
+    "label": "Channel Manager",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/channel-manager"
+    }
+  },
+  {
+    "name": "link_6_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Channel Manager"
+  },
+  {
+    "name": "link_7",
+    "label": "Reports",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/feature-listing"
+    }
+  },
+  {
+    "name": "link_7_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Reports"
+  },
+  {
+    "name": "link_8",
+    "label": "Point of Sale",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/point-of-sale-system"
+    }
+  },
+  {
+    "name": "link_8_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Point of Sale"
+  },
+  {
+    "name": "link_9",
+    "label": "Request a Product Walkthrough",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/livedemo"
+    }
+  },
+  {
+    "name": "link_9_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Request a Product Walkthrough"
+  },
+  {
+    "name": "product_image_1",
+    "label": "Product screenshot 1",
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "src": "",
+      "alt": "Easy InnKeeping reservation calendar showing room availability and stays"
+    }
+  },
+  {
+    "name": "product_image_2",
+    "label": "Product screenshot 2",
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "src": "",
+      "alt": "Easy InnKeeping dashboard with property operations and performance information"
+    }
+  }
+]

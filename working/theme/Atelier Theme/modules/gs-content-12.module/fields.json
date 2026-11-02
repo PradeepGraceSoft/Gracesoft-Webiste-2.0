@@ -1,0 +1,44 @@
+[
+  {
+    "name": "text_1",
+    "label": "Ready to Make Hospitality Management Simpler?",
+    "type": "text",
+    "default": "Ready to Make Hospitality Management Simpler?"
+  },
+  {
+    "name": "text_2",
+    "label": "Discover how GraceSoft can help streamline your operations, captu",
+    "type": "text",
+    "default": "Discover how GraceSoft can help streamline your operations, capture more bookings, and create better guest experiences."
+  },
+  {
+    "name": "link_3",
+    "label": "Schedule a Demo",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/livedemo"
+    }
+  },
+  {
+    "name": "link_3_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Schedule a Demo"
+  },
+  {
+    "name": "link_4",
+    "label": "Contact Our Team",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/corporate-contact"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Contact Our Team"
+  }
+]

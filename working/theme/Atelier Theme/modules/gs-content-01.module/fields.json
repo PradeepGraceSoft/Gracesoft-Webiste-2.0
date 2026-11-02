@@ -1,0 +1,61 @@
+[
+  {
+    "name": "text_1",
+    "label": "GraceSoft Easy InnKeeping",
+    "type": "text",
+    "default": "GraceSoft Easy InnKeeping"
+  },
+  {
+    "name": "text_2",
+    "label": "Hero heading",
+    "type": "richtext",
+    "default": "Smarter Hospitality Management.<br><em>Better Guest Experiences.</em>"
+  },
+  {
+    "name": "text_3",
+    "label": "Run your hospitality business with one connected platform for pro",
+    "type": "text",
+    "default": "Run your hospitality business with one connected platform for property management, reservations, direct bookings, guest communication, and AI-powered automation."
+  },
+  {
+    "name": "link_4",
+    "label": "Request a Demo",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/livedemo"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Request a Demo"
+  },
+  {
+    "name": "link_5",
+    "label": "Explore Our Platform",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "#platform"
+    }
+  },
+  {
+    "name": "link_5_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Our Platform"
+  },
+  {
+    "name": "product_image_1",
+    "label": "Product screenshot 1",
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "src": "",
+      "alt": "GraceSoft Easy InnKeeping reservation calendar with rooms and scheduled stays"
+    }
+  }
+]

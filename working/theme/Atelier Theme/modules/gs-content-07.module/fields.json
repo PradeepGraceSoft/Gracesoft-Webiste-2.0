@@ -1,0 +1,101 @@
+[
+  {
+    "name": "text_1",
+    "label": "Connected to the Hospitality Tools You Already Use",
+    "type": "text",
+    "default": "Connected to the Hospitality Tools You Already Use"
+  },
+  {
+    "name": "text_2",
+    "label": "Connect distribution and payments to your operational workflow. G",
+    "type": "text",
+    "default": "Connect distribution and payments to your operational workflow. GraceSoft’s published integration information includes:"
+  },
+  {
+    "name": "text_3",
+    "label": "Online travel agencies and booking platforms",
+    "type": "text",
+    "default": "Online travel agencies and booking platforms"
+  },
+  {
+    "name": "text_4",
+    "label": "Booking.com · Expedia · Airbnb · Vrbo",
+    "type": "text",
+    "default": "Booking.com · Expedia · Airbnb · Vrbo"
+  },
+  {
+    "name": "text_5",
+    "label": "Payment gateways",
+    "type": "text",
+    "default": "Payment gateways"
+  },
+  {
+    "name": "text_6",
+    "label": "Stripe · Square · Authorize.Net · Shift4",
+    "type": "text",
+    "default": "Stripe · Square · Authorize.Net · Shift4"
+  },
+  {
+    "name": "text_7",
+    "label": "Guest communication",
+    "type": "text",
+    "default": "Guest communication"
+  },
+  {
+    "name": "text_8",
+    "label": "Bring email, SMS and supported booking messages into a unified in",
+    "type": "text",
+    "default": "Bring email, SMS and supported booking messages into a unified inbox."
+  },
+  {
+    "name": "text_9",
+    "label": "Availability depends on region, account and configuration. Confir",
+    "type": "text",
+    "default": "Availability depends on region, account and configuration. Confirm the connections your property needs."
+  },
+  {
+    "name": "link_10",
+    "label": "Review booking channel connections",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/channel-manager"
+    }
+  },
+  {
+    "name": "link_10_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Review booking channel connections"
+  },
+  {
+    "name": "link_11",
+    "label": "Review payment integrations",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/payments"
+    }
+  },
+  {
+    "name": "link_11_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Review payment integrations"
+  },
+  {
+    "name": "link_12",
+    "label": "Explore the Unified Inbox",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/unified-inbox"
+    }
+  },
+  {
+    "name": "link_12_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore the Unified Inbox"
+  }
+]

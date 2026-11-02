@@ -1,0 +1,143 @@
+[
+  {
+    "name": "text_1",
+    "label": "Technology Built for the Way You Run Your Property",
+    "type": "text",
+    "default": "Technology Built for the Way You Run Your Property"
+  },
+  {
+    "name": "link_2",
+    "label": "Hotels and Motels",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "link_2_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Hotels and Motels"
+  },
+  {
+    "name": "link_3",
+    "label": "Bed & Breakfasts",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/bed-breakfast-reservation-software"
+    }
+  },
+  {
+    "name": "link_3_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Bed & Breakfasts"
+  },
+  {
+    "name": "link_4",
+    "label": "Resorts and Inns",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/bed-breakfast-reservation-software"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Resorts and Inns"
+  },
+  {
+    "name": "link_5",
+    "label": "Vacation Rentals",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/vacation-rental-management-software"
+    }
+  },
+  {
+    "name": "link_5_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Vacation Rentals"
+  },
+  {
+    "name": "link_6",
+    "label": "Campgrounds and RV Parks",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/campground-management-software"
+    }
+  },
+  {
+    "name": "link_6_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Campgrounds and RV Parks"
+  },
+  {
+    "name": "link_7",
+    "label": "Dude Ranches",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/dude-rancher-software"
+    }
+  },
+  {
+    "name": "link_7_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Dude Ranches"
+  },
+  {
+    "name": "link_8",
+    "label": "Condos",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/condo-management-software"
+    }
+  },
+  {
+    "name": "link_8_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Condos"
+  },
+  {
+    "name": "link_9",
+    "label": "Multi-Property Groups",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/multi-property"
+    }
+  },
+  {
+    "name": "link_9_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Multi-Property Groups"
+  },
+  {
+    "name": "link_10",
+    "label": "campground and resort management",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/campground-management-software"
+    }
+  },
+  {
+    "name": "link_10_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "campground and resort management"
+  }
+]

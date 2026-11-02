@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+hubspot.config.yml
+.hs/
+.hscli/
+**/credentials*
+**/token*
+node_modules/
+.DS_Store

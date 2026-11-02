@@ -1,0 +1,4 @@
+<section class="gs-hero">
+      <div class="gs-container gs-hero-layout">
+        <div><p class="gs-kicker">{{ module.text_1|escape_html }}</p><h1>{{ module.text_2 }}</h1><p class="gs-lead">{{ module.text_3|escape_html }}</p><div class="gs-actions"><a class="gs-button gs-button--primary" href="{{ module.link_4.href|escape_url }}">{{ module.link_4_label|escape_html }}</a><a class="gs-button gs-button--secondary" href="{{ module.link_5.href|escape_url }}">{{ module.link_5_label|escape_html }}</a></div></div>
+        <div class="gs-product-art"><figure><img src="{{ (module.product_image_1.src or get_asset_url('../../assets/calendar.png'))|escape_url }}" width="1200" height="675" fetchpriority="high" alt="{{ module.product_image_1.alt|escape_attr }}"><figcaption>Easy InnKeeping · Reservation calendar</figcaption></figure></div></div></section>
