@@ -1,0 +1,236 @@
+[
+  {
+    "name": "category",
+    "label": "Category",
+    "type": "text",
+    "default": "Engage guests"
+  },
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Keep track of the conversation before, during and after a stay"
+  },
+  {
+    "name": "intro",
+    "label": "Intro",
+    "type": "text",
+    "default": "A guest may ask about a room before booking and contact the front desk again after arrival. Explore how guest messaging, profiles and follow-up tools fit those moments."
+  },
+  {
+    "name": "stage_1",
+    "label": "Stage 1",
+    "type": "text",
+    "default": "Before arrival"
+  },
+  {
+    "name": "stage_1_example",
+    "label": "Stage 1 example",
+    "type": "text",
+    "default": "A traveler asks whether a room is available for the weekend."
+  },
+  {
+    "name": "stage_1_capabilities",
+    "label": "Stage 1 capabilities",
+    "type": "text",
+    "default": "Explore the guest inbox, AI voice and chat, and quotes for prospective guests."
+  },
+  {
+    "name": "stage_1_url",
+    "label": "Stage 1 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/unified-inbox"
+    }
+  },
+  {
+    "name": "stage_1_label",
+    "label": "Stage 1 label",
+    "type": "text",
+    "default": "Explore Guest Communication"
+  },
+  {
+    "name": "stage_2",
+    "label": "Stage 2",
+    "type": "text",
+    "default": "During the stay"
+  },
+  {
+    "name": "stage_2_example",
+    "label": "Stage 2 example",
+    "type": "text",
+    "default": "A guest asks the front desk about a late checkout."
+  },
+  {
+    "name": "stage_2_capabilities",
+    "label": "Stage 2 capabilities",
+    "type": "text",
+    "default": "Explore guest communication, profiles and Guest Hub for in-stay requests."
+  },
+  {
+    "name": "stage_2_url",
+    "label": "Stage 2 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/unified-inbox"
+    }
+  },
+  {
+    "name": "stage_2_label",
+    "label": "Stage 2 label",
+    "type": "text",
+    "default": "Explore Guest Communication"
+  },
+  {
+    "name": "stage_3",
+    "label": "Stage 3",
+    "type": "text",
+    "default": "After checkout"
+  },
+  {
+    "name": "stage_3_example",
+    "label": "Stage 3 example",
+    "type": "text",
+    "default": "A returning guest wants to hear about another stay."
+  },
+  {
+    "name": "stage_3_capabilities",
+    "label": "Stage 3 capabilities",
+    "type": "text",
+    "default": "Explore CRM, campaigns and loyalty options for follow-up."
+  },
+  {
+    "name": "stage_3_url",
+    "label": "Stage 3 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/crm-software"
+    }
+  },
+  {
+    "name": "stage_3_label",
+    "label": "Stage 3 label",
+    "type": "text",
+    "default": "Explore Hospitality CRM"
+  },
+  {
+    "name": "timeline_label",
+    "label": "Timeline label",
+    "type": "text",
+    "default": "Illustrative guest journey"
+  },
+  {
+    "name": "communication_url",
+    "label": "Communication url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/unified-inbox"
+    }
+  },
+  {
+    "name": "communication_label",
+    "label": "Communication label",
+    "type": "text",
+    "default": "Explore Guest Communication"
+  },
+  {
+    "name": "crm_url",
+    "label": "Crm url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/crm-software"
+    }
+  },
+  {
+    "name": "crm_label",
+    "label": "Crm label",
+    "type": "text",
+    "default": "Explore Hospitality CRM"
+  },
+  {
+    "name": "feature_1",
+    "label": "Feature 1",
+    "type": "text",
+    "default": "Guest inbox"
+  },
+  {
+    "name": "feature_1_description",
+    "label": "Feature 1 description",
+    "type": "text",
+    "default": "Bring guest questions and replies into one workspace."
+  },
+  {
+    "name": "feature_1_url",
+    "label": "Feature 1 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/unified-inbox"
+    }
+  },
+  {
+    "name": "feature_1_label",
+    "label": "Feature 1 label",
+    "type": "text",
+    "default": "Explore the Unified Inbox"
+  },
+  {
+    "name": "feature_2",
+    "label": "Feature 2",
+    "type": "text",
+    "default": "AI voice and chat"
+  },
+  {
+    "name": "feature_2_description",
+    "label": "Feature 2 description",
+    "type": "text",
+    "default": "Explore how voice and chat assistants handle guest inquiries."
+  },
+  {
+    "name": "feature_2_url",
+    "label": "Feature 2 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/gracesoft-ai"
+    }
+  },
+  {
+    "name": "feature_2_label",
+    "label": "Feature 2 label",
+    "type": "text",
+    "default": "Explore GraceSoft AI"
+  },
+  {
+    "name": "feature_3",
+    "label": "Feature 3",
+    "type": "text",
+    "default": "Guest profiles and follow-up"
+  },
+  {
+    "name": "feature_3_description",
+    "label": "Feature 3 description",
+    "type": "text",
+    "default": "Explore guest profiles, campaigns and loyalty options for returning guests."
+  },
+  {
+    "name": "feature_3_url",
+    "label": "Feature 3 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/crm-software"
+    }
+  },
+  {
+    "name": "feature_3_label",
+    "label": "Feature 3 label",
+    "type": "text",
+    "default": "Explore Hospitality CRM"
+  }
+]

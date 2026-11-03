@@ -2,8 +2,9 @@
 .gs-nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
 .gs-brand { color: var(--gs-primary); font-size: 1.16rem; font-weight: 800; letter-spacing: -.03em; text-decoration: none; }
 .gs-brand span { font-weight: 500; }
+.gs-brand img { display: block; width: clamp(190px, 24vw, 300px); height: auto; }
 .gs-navlinks { display: flex; align-items: center; gap: 22px; }
-.gs-navlinks a { font-size: .94rem; font-weight: 650; text-decoration: none; }
+.gs-navlinks a { font-size: 1rem; font-weight: 650; text-decoration: none; }
 .gs-menu-toggle { display: none; border: 1px solid var(--gs-line); border-radius: 12px; padding: 9px 12px; background: white; color: var(--gs-ink); }
 .gs-hero { padding: 76px 0 82px; background: radial-gradient(ellipse at 86% 25%, #f9e7a6 0, transparent 43%), linear-gradient(135deg, #fff8ef, #fff1dc 64%, #f8d7da); }
 .gs-hero-layout { display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 48px; }
@@ -66,6 +67,7 @@
 .gs-header { border-color: rgba(212, 199, 181, .62); background: rgba(251, 248, 242, .9); backdrop-filter: blur(16px); }
 .gs-nav { min-height: 82px; }
 .gs-brand { display: inline-flex; align-items: baseline; gap: 7px; color: #715142; font-family: var(--gs-display); font-size: 1.35rem; letter-spacing: -.045em; }
+.gs-brand img { display: block; width: clamp(178px, 19vw, 238px); height: auto; }
 .gs-brand span { color: #74685e; font-family: var(--gs-font); font-size: .77rem; font-weight: 600; letter-spacing: .015em; }
 .gs-navlinks { gap: clamp(14px, 1.8vw, 27px); }
 .gs-navlinks a:not(.gs-button) { color: #50483f; font-size: .88rem; font-weight: 600; }

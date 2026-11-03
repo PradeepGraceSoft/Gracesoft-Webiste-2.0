@@ -1,9 +1,9 @@
 [
   {
     "name": "text_1",
-    "label": "GraceSoft Easy InnKeeping",
+    "label": "Hero eyebrow",
     "type": "text",
-    "default": "GraceSoft Easy InnKeeping"
+    "default": "/ Property management software"
   },
   {
     "name": "text_2",
@@ -13,13 +13,13 @@
   },
   {
     "name": "text_3",
-    "label": "Run your hospitality business with one connected platform for pro",
+    "label": "Hero subheading",
     "type": "text",
-    "default": "Run your hospitality business with one connected platform for property management, reservations, direct bookings, guest communication, and AI-powered automation."
+    "default": "One platform for front desk, bookings, payments and guest CRM, with AI voice and chat assistants to answer guest questions."
   },
   {
     "name": "link_4",
-    "label": "Request a Demo",
+    "label": "Request Demo",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -30,22 +30,22 @@
     "name": "link_4_label",
     "label": "Link label",
     "type": "text",
-    "default": "Request a Demo"
+    "default": "Request Demo"
   },
   {
     "name": "link_5",
-    "label": "Explore Our Platform",
+    "label": "Start Free Trial",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
-      "href": "#platform"
+      "href": "https://www.gracesoft.com/freetrial"
     }
   },
   {
     "name": "link_5_label",
     "label": "Link label",
     "type": "text",
-    "default": "Explore Our Platform"
+    "default": "Start Free Trial"
   },
   {
     "name": "product_image_1",

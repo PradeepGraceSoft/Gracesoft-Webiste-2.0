@@ -29,7 +29,7 @@
 .atelier-products[open] summary::after {transform:translateY(2px) rotate(225deg)}
 .atelier-product-panel {background:#fffefb;padding:24px;gap:0;border:1px solid #d4dcd2;border-radius:14px;box-shadow:0 15px 38px #1d38251f,0 2px 5px #1d38250a}
 .atelier-product-panel>div {padding:0 16px}
-.atelier-product-panel strong {display:block;font:600 18px/1.3 Georgia,serif;padding:4px 8px 12px;margin:0 0 4px;color:#244c3c}
+.atelier-product-panel strong {display:block;font:650 12px/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;padding:4px 8px 10px;margin:0 0 4px;color:#506256}
 .atelier-product-panel a {display:flex;align-items:center;justify-content:space-between;gap:5px;padding:9px 8px;border-radius:5px;font:500 14px/1.45 system-ui,sans-serif;color:#34483d}
 .atelier-product-panel a:is(:hover,:focus-visible) {background:#edf3eb;color:#16452f;text-decoration:none}
 .atelier-product-panel a:is(:hover,:focus-visible)::after {content:"→";font-size:14px}
@@ -42,4 +42,107 @@
   .atelier-product-panel {padding:10px;box-shadow:none}
   .atelier-product-panel>div {padding:8px}
   .atelier-product-panel>div+div {border-top:1px solid #dce3d9}
+}
+
+.gs-awards {background:#e9eee3;border-block:1px solid #ced8c8;color:#213e30}
+.gs-awards-inner {display:grid;grid-template-columns:minmax(210px,1fr) 2fr;align-items:center;gap:clamp(20px,4vw,60px);padding-block:26px}
+.gs-awards h2 {margin:0 0 10px;font:normal clamp(23px,2vw,30px)/1.15 Georgia,serif}
+.gs-awards a {color:#1d513a;font-weight:600;text-underline-offset:4px}
+.gs-awards ul {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;gap:12px;list-style:none;padding:0;margin:0}
+.gs-awards li {background:#fffef9;border:1px solid #d6ddcf;border-radius:10px;padding:6px}
+.gs-awards img {display:block;width:100%;height:80px;object-fit:contain}
+@media(max-width:850px){.gs-awards-inner{grid-template-columns:1fr}}
+@media(max-width:600px){.gs-awards ul{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.atelier-product-panel a {justify-content:flex-start;gap:9px}
+.atelier-product-panel a svg {flex:none;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;color:#305d47}
+.atelier-product-panel a:is(:hover,:focus-visible)::after {margin-left:auto}
+
+@media (min-width:1001px) {
+  .atelier-product-panel {
+    box-shadow:0 18px 44px -8px rgb(24 44 34 / 30%),0 3px 8px rgb(24 44 34 / 10%);
+  }
+  body:has(.atelier-products[open]) .gs-header::after {
+    content:"";
+    position:absolute;
+    inset:100% 0 auto;
+    height:100vh;
+    background:rgb(35 49 40 / 9%);
+    pointer-events:none;
+  }
+}
+
+/* Product walkthrough */
+.gs-tour {padding:clamp(48px,6vw,92px) 0;color:#213e33;background:#fbf9f2}
+.gs-tour [hidden] {display:none}
+.tour-head {max-width:850px;margin-bottom:32px}
+.tour-head h2 {font:normal clamp(34px,4.4vw,62px)/1.04 Georgia,serif;letter-spacing:-.035em;margin:12px 0 16px}
+.tour-head p:not(.tour-label) {max-width:68ch;font-size:18px;line-height:1.55}
+.tour-label {font:700 12px/1.4 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#466451}
+.tour-widget {display:grid;grid-template-columns:minmax(165px,1fr) minmax(0,3.7fr);background:#1c4134;border-radius:18px;padding:clamp(16px,2.4vw,32px);gap:24px;color:#fffdf3}
+.tour-controls h3 {font:normal 28px/1.15 Georgia,serif;margin:4px 0 22px}
+.tour-controls button {display:block;width:100%;text-align:left;padding:12px 14px;margin:5px 0;border:1px solid #789284;background:transparent;color:inherit;border-radius:7px;font:600 15px/1.4 system-ui,sans-serif;cursor:pointer}
+.tour-controls button[aria-selected="true"] {background:#dfebd8;color:#173c30;border-color:#dfebd8}
+.gs-tour :focus-visible {outline:3px solid #c68243;outline-offset:3px}
+.tour-panels {min-width:0}
+.tour-panels figure {margin:0;background:#fffdf6;color:#294538;border-radius:10px;overflow:hidden}
+.tour-panels img {display:block;width:100%;height:auto}
+.tour-panels figcaption {padding:13px 18px;border-top:1px solid #cbd6c7}
+.tour-panels [data-tour-panel]+[data-tour-panel]:not([hidden]) {margin-top:14px}
+.tour-widget[data-ready] .tour-panels [data-tour-panel] {margin:0}
+.tour-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 26px;margin:30px 0}
+.tour-cards article {padding:16px 0 4px;border-top:2px solid #b5c8b6}
+.tour-cards h3,.tour-routes h3 {margin:0 0 8px;font:600 18px/1.4 system-ui,sans-serif}
+.tour-cards p,.tour-panels article p {margin:0 0 12px;line-height:1.55}
+.tour-link {color:#214e39;font-weight:650;text-underline-offset:4px}
+.tour-distribution {background:#eef1e7}
+.tour-routes {display:grid;gap:12px}
+.tour-routes>div {padding:20px;border-radius:12px;background:#fffdf6;border:1px solid #cbd6c7}
+.tour-routes ol {display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin:0;padding:0;list-style:none}
+.tour-routes li {display:flex;gap:18px;align-items:center}
+.tour-routes li+li::before {content:"→";color:#42654e}
+.tour-routes li:last-child {font-weight:650}
+.tour-guest-journey .tour-widget {background:#e0e7d6;color:#213e33;grid-template-columns:minmax(170px,1fr) minmax(0,2.6fr)}
+.tour-guest-journey button[aria-selected="true"] {background:#24543f;color:white}
+.tour-panels article {padding:clamp(18px,3vw,42px);background:#fdfbf4;border-radius:12px}
+.tour-panels h4 {margin:0 0 14px;font:650 14px/1.3 system-ui,sans-serif}
+.tour-panels .tour-bubble {width:fit-content;max-width:34ch;background:#e6eddf;border-radius:16px 16px 16px 3px;padding:14px 18px;font:normal clamp(19px,2.3vw,28px)/1.25 Georgia,serif}
+.tour-actions {display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
+@media(prefers-reduced-motion:no-preference){
+  .tour-widget[data-ready] [data-tour-panel]:not([hidden]) {animation:tour-enter .28s ease-out}
+  @keyframes tour-enter {from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:none}}
+}
+@media(max-width:720px){
+  .tour-widget,.tour-guest-journey .tour-widget {grid-template-columns:1fr;gap:14px}
+  .tour-controls [role=tablist] {display:flex;flex-wrap:wrap;gap:6px}
+  .tour-controls button {width:auto;margin:0}
+  .tour-cards {grid-template-columns:1fr}
+  .tour-routes ol {display:grid}
+  .tour-routes li+li::before {content:"↓"}
+}
+
+#platform.tour-overview {padding-block:clamp(50px,6vw,88px);background:#f8f6ee}
+.tour-overview .gs-title {max-width:24ch}
+.tour-overview .gs-lead {max-width:66ch}
+.gs-tour>.gs-container {display:grid;grid-template-columns:minmax(210px,.8fr) minmax(0,2fr);align-items:start;gap:clamp(28px,4vw,64px)}
+.chapter-number {display:inline-block;color:#41614e;font:700 12px/1.4 system-ui,sans-serif;letter-spacing:.14em;padding:7px 12px;border:1px solid #b4c6b5;border-radius:20px}
+.tour-head .chapter-subtitle {font:normal 23px/1.25 Georgia,serif;margin:16px 0 8px}
+.chapter-body {min-width:0}
+.chapter-body .tour-cards {grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0 0 22px}
+.chapter-body .tour-cards article {display:flex;flex-direction:column;align-items:flex-start;padding:clamp(16px,2vw,25px);background:#fffef9;border:1px solid #cdd9cc;border-radius:14px;box-shadow:0 4px 13px #1d413408}
+.chapter-body .tour-cards article:is(:hover,:focus-within) {border-color:#86a28e;box-shadow:0 8px 20px #1d413415}
+.chapter-body .tour-cards svg {width:38px;height:38px;padding:9px;box-sizing:border-box;margin-bottom:15px;border-radius:10px;background:#e7eee3;stroke:#28553e;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.65}
+.chapter-body .tour-cards a {margin-top:auto}
+.chapter-body>.tour-link {display:inline-block;margin-top:18px}
+@media(min-width:761px) and (min-height:580px){.gs-tour .tour-head {position:sticky;top:105px}}
+@media(max-width:760px){
+  .gs-tour>.gs-container {display:block}
+  .gs-tour .tour-head {margin-bottom:22px}
+  .chapter-body .tour-cards {grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:no-preference){
+  .chapter-body .tour-cards article {transition:transform .18s ease,box-shadow .18s ease}
+  .chapter-body .tour-cards article:is(:hover,:focus-within) {transform:translateY(-3px)}
+  .chapter-enter {animation:chapter-arrive .44s ease-out both}
+  @keyframes chapter-arrive {from{opacity:.55;translate:0 14px}to{opacity:1;translate:0 0}}
 }

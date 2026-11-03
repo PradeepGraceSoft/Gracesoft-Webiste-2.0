@@ -1,0 +1,164 @@
+[
+  {
+    "name": "category",
+    "label": "Category",
+    "type": "text",
+    "default": "Sell direct"
+  },
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Give guests a direct path from your website to a reservation"
+  },
+  {
+    "name": "intro",
+    "label": "Intro",
+    "type": "text",
+    "default": "Your website introduces the property. Your booking engine gives guests a way to reserve. Your channel manager helps the team maintain availability across supported booking channels."
+  },
+  {
+    "name": "direct_heading",
+    "label": "Direct heading",
+    "type": "text",
+    "default": "Direct reservations"
+  },
+  {
+    "name": "direct_step_1",
+    "label": "Direct step 1",
+    "type": "text",
+    "default": "Property website"
+  },
+  {
+    "name": "direct_step_2",
+    "label": "Direct step 2",
+    "type": "text",
+    "default": "Booking engine"
+  },
+  {
+    "name": "direct_step_3",
+    "label": "Direct step 3",
+    "type": "text",
+    "default": "Reservation calendar"
+  },
+  {
+    "name": "channels_heading",
+    "label": "Channels heading",
+    "type": "text",
+    "default": "Channel reservations"
+  },
+  {
+    "name": "channels_step_1",
+    "label": "Channels step 1",
+    "type": "text",
+    "default": "Booking channels"
+  },
+  {
+    "name": "channels_step_2",
+    "label": "Channels step 2",
+    "type": "text",
+    "default": "Channel manager"
+  },
+  {
+    "name": "channels_step_3",
+    "label": "Channels step 3",
+    "type": "text",
+    "default": "Reservation calendar"
+  },
+  {
+    "name": "feature_1",
+    "label": "Feature 1",
+    "type": "text",
+    "default": "Property website"
+  },
+  {
+    "name": "feature_1_description",
+    "label": "Feature 1 description",
+    "type": "text",
+    "default": "Introduce your rooms, amenities and policies, then guide guests toward booking."
+  },
+  {
+    "name": "feature_1_url",
+    "label": "Feature 1 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/websites"
+    }
+  },
+  {
+    "name": "feature_1_label",
+    "label": "Feature 1 label",
+    "type": "text",
+    "default": "Explore Property Websites"
+  },
+  {
+    "name": "feature_2",
+    "label": "Feature 2",
+    "type": "text",
+    "default": "Booking engine"
+  },
+  {
+    "name": "feature_2_description",
+    "label": "Feature 2 description",
+    "type": "text",
+    "default": "Let guests check availability and reserve through your property website."
+  },
+  {
+    "name": "feature_2_url",
+    "label": "Feature 2 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/online-booking-engine"
+    }
+  },
+  {
+    "name": "feature_2_label",
+    "label": "Feature 2 label",
+    "type": "text",
+    "default": "Explore the Booking Engine"
+  },
+  {
+    "name": "feature_3",
+    "label": "Feature 3",
+    "type": "text",
+    "default": "Channel manager"
+  },
+  {
+    "name": "feature_3_description",
+    "label": "Feature 3 description",
+    "type": "text",
+    "default": "Manage rates and availability across supported booking channels."
+  },
+  {
+    "name": "feature_3_url",
+    "label": "Feature 3 url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/channel-manager"
+    }
+  },
+  {
+    "name": "feature_3_label",
+    "label": "Feature 3 label",
+    "type": "text",
+    "default": "Explore the Channel Manager"
+  },
+  {
+    "name": "plans_url",
+    "label": "Plans url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/websites"
+    }
+  },
+  {
+    "name": "plans_label",
+    "label": "Plans label",
+    "type": "text",
+    "default": "See Website Plans"
+  }
+]

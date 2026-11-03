@@ -72,3 +72,60 @@ document.addEventListener('DOMContentLoaded',function(){
   });
   window.addEventListener('beforeprint', function() { targets.forEach(function(element) { show(element, true); }); });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-tour]').forEach(function (widget, group) {
+    const list = widget.querySelector('[data-tour-tabs]');
+    const tabs = Array.from(list.querySelectorAll('button'));
+    const panels = Array.from(widget.querySelectorAll('[data-tour-panel]'));
+    if (!tabs.length || tabs.length !== panels.length) return;
+
+    function select(index) {
+      tabs.forEach(function (tab, i) {
+        tab.tabIndex = i === index ? 0 : -1;
+        tab.setAttribute('aria-selected', String(i === index));
+        panels[i].hidden = i !== index;
+      });
+    }
+
+    list.setAttribute('role', 'tablist');
+    list.setAttribute('aria-label', widget.querySelector('h3').textContent);
+    tabs.forEach(function (tab, i) {
+      const id = 'gs-tour-' + group + '-' + i;
+      tab.id = id;
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', id + '-panel');
+      panels[i].id = id + '-panel';
+      panels[i].tabIndex = 0;
+      panels[i].setAttribute('role', 'tabpanel');
+      panels[i].setAttribute('aria-labelledby', id);
+      tab.addEventListener('click', function () { select(i); });
+      tab.addEventListener('keydown', function (event) {
+        const next = {ArrowRight:(i+1)%tabs.length, ArrowDown:(i+1)%tabs.length,
+          ArrowLeft:(i+tabs.length-1)%tabs.length, ArrowUp:(i+tabs.length-1)%tabs.length,
+          Home:0, End:tabs.length-1}[event.key];
+        if (next === undefined) return;
+        event.preventDefault();
+        select(next);
+        tabs[next].focus();
+      });
+    });
+    select(0);
+    list.hidden = false;
+    widget.dataset.ready = '';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('chapter-enter');
+      observer.unobserve(entry.target);
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.tour-head, .chapter-body .tour-cards article').forEach(function (element) {
+    observer.observe(element);
+  });
+});

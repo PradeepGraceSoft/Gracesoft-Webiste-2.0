@@ -1,0 +1,11 @@
+<section class="gs-awards"><div class="gs-container gs-awards-inner">
+  <div><h2>{{ module.heading|escape_html }}</h2><a href="{{ module.destination.href|escape_url }}">{{ module.cta|escape_html }} <span aria-hidden="true">&rarr;</span></a></div>
+  <ul aria-label="Industry awards">
+    <li><img loading="lazy" src="{{ (module.badge_1.src or get_asset_url('../../assets/award-badge_1.png'))|escape_url }}" alt="{{ module.badge_1.alt|escape_attr }}" width="361" height="361"></li>
+    <li><img loading="lazy" src="{{ (module.badge_2.src or get_asset_url('../../assets/award-badge_2.png'))|escape_url }}" alt="{{ module.badge_2.alt|escape_attr }}" width="347" height="347"></li>
+    <li><img loading="lazy" src="{{ (module.badge_3.src or get_asset_url('../../assets/award-badge_3.png'))|escape_url }}" alt="{{ module.badge_3.alt|escape_attr }}" width="374" height="415"></li>
+    <li><img loading="lazy" src="{{ (module.badge_4.src or get_asset_url('../../assets/award-badge_4.png'))|escape_url }}" alt="{{ module.badge_4.alt|escape_attr }}" width="361" height="361"></li>
+    <li><img loading="lazy" src="{{ (module.badge_5.src or get_asset_url('../../assets/award-badge_5.png'))|escape_url }}" alt="{{ module.badge_5.alt|escape_attr }}" width="352" height="391"></li>
+    <li><img loading="lazy" src="{{ (module.badge_6.src or get_asset_url('../../assets/award-badge_6.png'))|escape_url }}" alt="{{ module.badge_6.alt|escape_attr }}" width="462" height="462"></li>
+  </ul>
+</div></section>

@@ -1,0 +1,89 @@
+[
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Hear from properties using Easy InnKeeping."
+  },
+  {
+    "name": "cta",
+    "label": "Link label",
+    "type": "text",
+    "default": "Read customer stories"
+  },
+  {
+    "name": "destination",
+    "label": "Customer stories URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/case-study"
+    }
+  },
+  {
+    "name": "badge_1",
+    "label": "Award badge 1",
+    "type": "image",
+    "default": {
+      "src": "",
+      "width": 361,
+      "height": 361,
+      "alt": "GraceSoft award badge 1"
+    }
+  },
+  {
+    "name": "badge_2",
+    "label": "Award badge 2",
+    "type": "image",
+    "default": {
+      "src": "",
+      "width": 347,
+      "height": 347,
+      "alt": "GraceSoft award badge 2"
+    }
+  },
+  {
+    "name": "badge_3",
+    "label": "Award badge 3",
+    "type": "image",
+    "default": {
+      "src": "",
+      "width": 374,
+      "height": 415,
+      "alt": "GraceSoft award badge 3"
+    }
+  },
+  {
+    "name": "badge_4",
+    "label": "Award badge 4",
+    "type": "image",
+    "default": {
+      "src": "",
+      "width": 361,
+      "height": 361,
+      "alt": "GraceSoft award badge 4"
+    }
+  },
+  {
+    "name": "badge_5",
+    "label": "Award badge 5",
+    "type": "image",
+    "default": {
+      "src": "",
+      "width": 352,
+      "height": 391,
+      "alt": "GraceSoft award badge 5"
+    }
+  },
+  {
+    "name": "badge_6",
+    "label": "Award badge 6",
+    "type": "image",
+    "default": {
+      "src": "",
+      "width": 462,
+      "height": 462,
+      "alt": "GraceSoft award badge 6"
+    }
+  }
+]

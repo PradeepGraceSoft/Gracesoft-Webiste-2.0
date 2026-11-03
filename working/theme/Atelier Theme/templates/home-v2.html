@@ -5,30 +5,29 @@
 -->
 {% extends "./layouts/base.html" %}
 {% block body %}
-  <aside class="gs-preview-note"><strong>LOCAL REVIEW PREVIEW</strong> · Separate homepage concept · Atelier · Content Refresh concept · Static approximation, not a HubSpot HubL render</aside>
   <a class="gs-skip" href="#main-content">Skip to main content</a>
   <header class="gs-header">
     <div class="gs-container gs-nav">
-      <a class="gs-brand" href="https://www.gracesoft.com/">GraceSoft <span>Easy InnKeeping</span></a>
+      <a class="gs-brand" href="https://www.gracesoft.com/" aria-label="GraceSoft Easy InnKeeping home"><img src="{{ get_asset_url('../assets/gracesoft-logo-approved.png') }}" alt="GraceSoft" width="500" height="180"></a>
       <button class="gs-menu-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="atelier-navigation">Menu</button>
       <nav class="atelier-navigation" id="atelier-navigation" data-mobile-menu data-open="false" aria-label="Main navigation">
         <details class="atelier-products">
           <summary>Product</summary>
           <div class="atelier-product-panel">
-            <div><strong>Run your property</strong>
-              <a href="https://www.gracesoft.com/hotel-management-software">Property Management System</a>
-              <a href="https://www.gracesoft.com/payments">Payments and Billing</a>
-              <a href="https://www.gracesoft.com/point-of-sale-system">Point of Sale</a>
+            <div><strong>Manage operations</strong>
+              <a href="https://www.gracesoft.com/hotel-management-software"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M3 18h18M5 15a7 7 0 0 1 14 0ZM12 8V5m-2 0h4"/></svg><span>Property Management System</span></a>
+              <a href="https://www.gracesoft.com/payments"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6 15h4"/></svg><span>Payments and Billing</span></a>
+              <a href="https://www.gracesoft.com/point-of-sale-system"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M4 16h16l1 4H3zM8 16l1-5h6l2 5"/><rect x="6" y="3" width="12" height="8" rx="1"/></svg><span>Point of Sale</span></a>
             </div>
             <div><strong>Sell direct</strong>
-              <a href="https://www.gracesoft.com/online-booking-engine">Booking Engine</a>
-              <a href="https://www.gracesoft.com/channel-manager">Channel Manager</a>
-              <a href="https://www.gracesoft.com/websites">Property Websites</a>
+              <a href="https://www.gracesoft.com/online-booking-engine"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 5 3 3 5-5"/></svg><span>Booking Engine</span></a>
+              <a href="https://www.gracesoft.com/channel-manager"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M12 8v4M5 16v-4h14v4"/><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/></svg><span>Channel Manager</span></a>
+              <a href="https://www.gracesoft.com/websites"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h1m3 0h1M6 13h5m-5 3h10"/></svg><span>Property Websites</span></a>
             </div>
             <div><strong>Engage guests</strong>
-              <a href="https://www.gracesoft.com/unified-inbox">Guest Communication</a>
-              <a href="https://www.gracesoft.com/crm-software">Hospitality CRM</a>
-              <a href="#guest-assistant">AI Voice and Chat Assistant</a>
+              <a href="https://www.gracesoft.com/unified-inbox"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M4 3h12a2 2 0 0 1 2 2v8H9l-5 4v-4H2V5a2 2 0 0 1 2-2ZM9 16v2h7l4 3v-3h2V9h-1"/></svg><span>Guest Communication</span></a>
+              <a href="https://www.gracesoft.com/crm-software"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M5 16a4 4 0 0 1 8 0m2-7h4m-4 4h3"/></svg><span>Hospitality CRM</span></a>
+              <a href="#guest-assistant"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0m-7 7v4m-4 0h8"/></svg><span>AI Voice and Chat Assistant</span></a>
             </div>
           </div>
         </details>
@@ -44,14 +43,12 @@
 
   <main id="main-content" class="gs-home-v2 gs-content-refresh">{% dnd_area "content_home", label="Content refresh homepage" %}{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-01.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
 {% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-02.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
-{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-03.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
-{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-04.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
-{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-05.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-operations.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-distribution.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-guest-journey.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
 {% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-06.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
-{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-07.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
-{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-08.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
 {% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-09.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
-{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-10.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-awards.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
 {% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-11.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
 {% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-12.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
 {% end_dnd_area %}</main>
