@@ -1,1 +1,15 @@
-<section class="gs-section tour-overview" id="platform"><div class="gs-container"><h2 class="gs-title">{{ module.text_1|escape_html }}</h2><p class="gs-lead">{{ module.text_2|escape_html }}</p></div></section>
+<section class="gs-section tour-overview" id="platform">
+  <div class="gs-container">
+    <div>
+      <h2 class="gs-title">{{ module.text_1|escape_html }}</h2>
+      <p class="gs-lead">{{ module.text_2|escape_html }}</p>
+    </div>
+    <nav class="chapter-index" aria-label="Product chapters">
+      <ol>
+        <li><a href="#manage-operations"><span class="index-number" aria-hidden="true">01</span>{{ module.chapter_1_label|escape_html }}<span class="index-arrow" aria-hidden="true">&darr;</span></a></li>
+        <li><a href="#sell-direct"><span class="index-number" aria-hidden="true">02</span>{{ module.chapter_2_label|escape_html }}<span class="index-arrow" aria-hidden="true">&darr;</span></a></li>
+        <li><a href="#guest-assistant"><span class="index-number" aria-hidden="true">03</span>{{ module.chapter_3_label|escape_html }}<span class="index-arrow" aria-hidden="true">&darr;</span></a></li>
+      </ol>
+    </nav>
+  </div>
+</section>

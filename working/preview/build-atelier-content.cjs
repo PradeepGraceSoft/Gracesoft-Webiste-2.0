@@ -27,7 +27,7 @@ function renderModule(relativePath) {
 const template = read('templates/home-v2.html');
 const body = template.match(/{% block body %}([\s\S]*?){% endblock body %}/)[1]
   .replace(/{% dnd_module path="([^"]+)" %}/g, (_, modulePath) => renderModule(modulePath))
-  .replace("{{ get_asset_url('../assets/gracesoft-logo-approved.png') }}", publicPath + 'assets/gracesoft-logo-approved.png')
+  .replace(/\{\{ get_asset_url\('\.\.\/(assets\/[\w.-]+)'\) \}\}/g, (_, asset) => publicPath + asset)
   .replace(/{% (?:end_)?dnd_[^%]*%}/g, '');
 const layout = read('templates/layouts/base.html');
 const staticPage = layout.replace('{{ html_lang }}', 'en')

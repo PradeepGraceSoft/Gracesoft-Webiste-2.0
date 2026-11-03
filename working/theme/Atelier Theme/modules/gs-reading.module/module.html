@@ -1,0 +1,18 @@
+<section class="reading-section" id="operator-reading"><div class="gs-container">
+  <h2>{{ module.heading|escape_html }}</h2>
+  <div class="reading-grid">
+    <article><a href="{{ module.article_1_url.href|escape_url }}">
+      <img loading="lazy" width="960" height="480" src="{{ (module.article_1_image.src or get_asset_url('../../assets/reading-reservations.jpg'))|escape_url }}" alt="{{ module.article_1_image.alt|escape_attr }}">
+      <div><span>{{ module.article_1_topic|escape_html }}</span><h3>{{ module.article_1_title|escape_html }}</h3></div>
+    </a></article>
+    <article><a href="{{ module.article_2_url.href|escape_url }}">
+      <img loading="lazy" width="320" height="213" src="{{ (module.article_2_image.src or get_asset_url('../../assets/reading-direct-bookings.jpg'))|escape_url }}" alt="{{ module.article_2_image.alt|escape_attr }}">
+      <div><span>{{ module.article_2_topic|escape_html }}</span><h3>{{ module.article_2_title|escape_html }}</h3></div>
+    </a></article>
+    <article><a href="{{ module.article_3_url.href|escape_url }}">
+      <img loading="lazy" width="320" height="240" src="{{ (module.article_3_image.src or get_asset_url('../../assets/reading-guest-stay.jpg'))|escape_url }}" alt="{{ module.article_3_image.alt|escape_attr }}">
+      <div><span>{{ module.article_3_topic|escape_html }}</span><h3>{{ module.article_3_title|escape_html }}</h3></div>
+    </a></article>
+  </div>
+  <a class="reading-all" href="{{ module.all_url.href|escape_url }}">{{ module.all_label|escape_html }} <span aria-hidden="true">&rarr;</span></a>
+</div></section>

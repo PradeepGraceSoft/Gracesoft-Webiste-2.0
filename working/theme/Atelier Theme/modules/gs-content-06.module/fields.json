@@ -1,9 +1,9 @@
 [
   {
     "name": "text_1",
-    "label": "Technology Built for the Way You Run Your Property",
+    "label": "Directory heading",
     "type": "text",
-    "default": "Technology Built for the Way You Run Your Property"
+    "default": "What kind of property do you manage?"
   },
   {
     "name": "link_2",
@@ -126,18 +126,57 @@
     "default": "Multi-Property Groups"
   },
   {
-    "name": "link_10",
-    "label": "campground and resort management",
-    "type": "url",
-    "default": {
-      "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/campground-management-software"
-    }
+    "name": "intro",
+    "label": "Supporting line",
+    "type": "text",
+    "default": "Choose your property type to explore the tools that fit your day."
   },
   {
-    "name": "link_10_label",
-    "label": "Link label",
+    "name": "link_2_description",
+    "label": "Card description 1",
     "type": "text",
-    "default": "campground and resort management"
+    "default": "Coordinate room assignments, arrivals and departures."
+  },
+  {
+    "name": "link_3_description",
+    "label": "Card description 2",
+    "type": "text",
+    "default": "Keep room availability and guest details close at hand."
+  },
+  {
+    "name": "link_4_description",
+    "label": "Card description 3",
+    "type": "text",
+    "default": "Connect guest stays with front desk and on-property services."
+  },
+  {
+    "name": "link_5_description",
+    "label": "Card description 4",
+    "type": "text",
+    "default": "Track bookings and availability across rental units."
+  },
+  {
+    "name": "link_6_description",
+    "label": "Card description 5",
+    "type": "text",
+    "default": "Explore reservations for sites and overnight stays."
+  },
+  {
+    "name": "link_7_description",
+    "label": "Card description 6",
+    "type": "text",
+    "default": "Explore reservation workflows for ranch stays."
+  },
+  {
+    "name": "link_8_description",
+    "label": "Card description 7",
+    "type": "text",
+    "default": "Find availability and reservations by condo unit."
+  },
+  {
+    "name": "link_9_description",
+    "label": "Card description 8",
+    "type": "text",
+    "default": "Explore tools for teams responsible for several properties."
   }
 ]

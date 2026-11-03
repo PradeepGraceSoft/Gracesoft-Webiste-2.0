@@ -7,9 +7,9 @@
   },
   {
     "name": "text_2",
-    "label": "Keep the conversation going beyond front-desk hours. GraceSoft’s ",
+    "label": "AI Voice and Chat Assistants",
     "type": "text",
-    "default": "Keep the conversation going beyond front-desk hours. GraceSoft’s AI Voice and Chat Assistants help answer guest questions and capture booking opportunities."
+    "default": "Unify front desk workflows, bookings and payments on one connected platform. Explore AI voice and chat assistants for guest inquiries; availability and setup depend on your configuration."
   },
   {
     "name": "text_3",

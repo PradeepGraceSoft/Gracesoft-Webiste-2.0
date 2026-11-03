@@ -3,21 +3,21 @@
     "name": "heading",
     "label": "Heading",
     "type": "text",
-    "default": "Hear from properties using Easy InnKeeping."
+    "default": "Awards and recognition"
   },
   {
     "name": "cta",
     "label": "Link label",
     "type": "text",
-    "default": "Read customer stories"
+    "default": "Read the SoftwareSuggest guide"
   },
   {
     "name": "destination",
-    "label": "Customer stories URL",
+    "label": "Publication URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/case-study"
+      "href": "https://www.softwaresuggest.com/blog/best-hotel-management-apps/"
     }
   },
   {
@@ -85,5 +85,11 @@
       "height": 462,
       "alt": "GraceSoft award badge 6"
     }
+  },
+  {
+    "name": "intro",
+    "type": "text",
+    "label": "Introduction",
+    "default": "SoftwareSuggest features GraceSoft Easy InnKeeping in its 2026 guide to hotel management apps."
   }
 ]

@@ -125,7 +125,36 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.unobserve(entry.target);
     });
   }, {threshold: 0.12});
-  document.querySelectorAll('.tour-head, .chapter-body .tour-cards article').forEach(function (element) {
+  document.querySelectorAll('.tour-head, .chapter-body .tour-cards article, .voice-card').forEach(function (element) {
     observer.observe(element);
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (!('IntersectionObserver' in window)) return;
+  document.querySelectorAll('.gs-awards').forEach(function (section) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    section.querySelectorAll('li').forEach(function (badge, index) {
+      badge.style.setProperty('--award-position', index);
+    });
+    function reveal() {
+      if (reducedMotion.matches) return;
+      section.classList.add('awards-revealing');
+    }
+    const observer = new IntersectionObserver(function (entries) {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      reveal();
+      observer.disconnect();
+    }, {threshold:0.2});
+    observer.observe(section);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const compact = matchMedia('(max-width:720px)');
+  function sizeFooter() {
+    document.querySelectorAll('.footer-groups details').forEach(group => { group.open = !compact.matches; });
+  }
+  sizeFooter();
+  compact.addEventListener('change', sizeFooter);
 });

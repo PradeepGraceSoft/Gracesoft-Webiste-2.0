@@ -1,38 +1,61 @@
-# GraceSoft website redesign workspace
+# GraceSoft Atelier website workspace
 
-This repository is the single local workspace for the GraceSoft redesign. Local work is isolated from production. **Do not change HubSpot files or settings, including the active theme, without the owner's explicit permission naming the action and target.** Read [AGENTS.md](AGENTS.md) before making project changes.
+Build reusable templates and author page content locally. Deliver a separate unpublished HubSpot website page for owner review. The owner handles final publication.
 
-The standing homepage objective is qualified organic/AEO visibility plus lead conversion. See `docs/homepage-visibility-and-conversion-strategy.md` for strategy and `docs/homepage-content-draft-2026-11-02.md` for the current review copy.
+## Working folders
 
-The standing content brief is `docs/content-strategy-playbook.md`; the latest proposed homepage copy is `docs/homepage-content-draft-2026-11-02.md`. The restored export remains read-only and its page inventory is `docs/export-page-inventory.csv`.
+| Location | Purpose |
+| --- | --- |
+| [Atelier theme](working/theme/Atelier%20Theme/) | Canonical HubL source. Put reusable page layouts in templates/, editable components in modules/, styles in css/, scripts in js/ and images in assets/. |
+| working/pages/ | Create when authoring the first new page. Keep one folder per page slug with its page.json create payload, including page metadata and any page-specific content overrides. Keep credentials out. |
+| [Local previews](working/preview/) | Rendered review artifacts and build scripts. The homepage builder renders module defaults for the homepage specifically. |
+| [Design baseline](docs/theme-selection.md) and [content playbook](docs/content-strategy-playbook.md) | Design and editorial rules for new pages. |
+| [Portal evidence](docs/portal-validation/) | Record portal ID, template path, draft ID, review URL and verified state. |
+| docs/migration/, archive/, reference/, source/, published/ | Migration plans, historical materials, reference snapshots and local release packages. |
+| Hubspot Existing Page Export/ | Read-only evidence indexed in [the export inventory](docs/export-page-inventory.csv). |
 
-## Folder map
+## From local template to review draft
 
-```text
-reference/                  Read-only existing-site notes; the restored static export is in `Hubspot Existing Page Export/` and is read-only
-source/read-only-reference/ Reserved for an explicitly authorized HubSpot source snapshot
-working/
-  theme/Atelier Theme/  Current local HubSpot-compatible theme source
-  preview/home-v2-atelier-content.html  Current static review preview
-  preview/                              Review scripts, screenshots and audit artifacts
-docs/                       Design, content, SEO, accessibility and release notes
-docs/portal-validation/     HubSpot account, theme and editor-validation evidence
-published/                  Local release package only; never deploys by itself
-archive/                    Legacy scaffolds/reports preserved for traceability
-skills/                     Project-specific implementation guidance
-```
+1. **Choose the template.** Reuse a matching Atelier template across pages. When the layout is new, add a named HubL page template with editable modules and a drag-and-drop area. Keep unique page copy in the page payload or page-specific module overrides. Changes to a shared template or module can affect every page using it.
+2. **Prepare the page locally.** Give it a descriptive internal name, HTML title, unique review slug, language, draft state and exact remote templatePath. A static preview HTML file is a review artifact; the CMS page API takes structured JSON. Check headings, links, keyboard access and mobile layout before remote work.
+3. **Upload only new assets needed for the authorized draft.** Use account 107648 and the existing remote theme folder. Example for a newly authored template, run from the project root:
 
-## Current HubSpot boundary
+   ```powershell
+   hs cms upload "working/theme/Atelier Theme/templates/product-page.html" "gracesoft-atelier-review-20261103-b73c9e/templates/product-page.html" --account=107648
+   ```
 
-- The local HubSpot CLI config lists GraceSoft portal 107648 (`easy-innkeeping`). A uniquely named warm-palette development theme was uploaded after separate explicit authorization; no page was created and no theme was activated.
-- The owner restored **Act3** as the active theme and confirmed it is the baseline. Do not change this setting.
-- That prior upload approval does not extend to any further upload, account, theme, page, settings, or publication changes.
-- The restored `Hubspot Existing Page Export/` supersedes older notes that said the archive was absent. See `docs/export-analysis.md` for reproduced counts and limitations.
+   Upload new module or asset dependencies first. Obtain specific approval before overwriting an existing remote file. Selecting the target folder does not require changing the active Act3 theme.
 
-## Current local draft
+4. **Create one draft.** Check the review log and HubSpot for an existing draft with the same slug before submitting or retrying. For a new page, the CLI request is `hs api /cms/v3/pages/site-pages --method POST --account=107648 --data <page-json>`. Supply the JSON contents as one argument. Include `"state":"DRAFT"` and a templatePath such as `gracesoft-atelier-review-20261103-b73c9e/templates/product-page.html`. Do not use the live homepage slug. The last CLI creation attempt lacked the required `content` scope. If still blocked, use an authorized credential or have the owner create a website page from the uploaded template in HubSpot and save it as a draft. Do not repeat a successful theme upload.
+5. **Verify and hand off.** Read the returned page by ID, check its unpublished state, slug and template path, and open its preview. Verify page-specific copy actually rendered. Record the ID and HubSpot review link, then stop. Publishing, scheduling, domain changes and theme activation are outside this workflow.
 
-Open `working/preview/home-v2-atelier-content.html` in a browser for the current local review. It is not a HubSpot HubL render. See `docs/atelier-content-review.md` for its sources and completed checks. The content-only proposal is in `docs/homepage-content-draft-2026-11-02.md`; it is not applied to the local homepage implementation.
+## Sync a page after someone edits it in HubSpot
 
-## Safety
+Use the HubSpot page ID, even if the title or slug changes. For an existing page, open its folder under `working/pages/`. Keep `page.json` as your local working content. Keep `published-baseline.json` as the last published snapshot you reconciled. A new, never-published page only needs a draft baseline.
 
-Do not place credentials, tokens, cookies or account exports in Git without an explicit scoped plan. Keep owner-provided exports read-only. Never publish from this repository.
+1. **Read the state you need.** If Sales changed a button and published it, fetch the regular site-page endpoint. For saved but unpublished editor changes, fetch the separate draft endpoint. Neither GET changes HubSpot. In PowerShell:
+
+   ```powershell
+   $pageId = 'YOUR_PAGE_ID'
+   $endpoint = "/cms/v3/pages/site-pages/$pageId"
+   $published = hs api $endpoint --account=107648 --json
+   if ($LASTEXITCODE -ne 0) { throw 'Published page read failed' }
+   $published | Set-Content -Encoding utf8 published-latest.json
+
+   $draft = hs api "$endpoint/draft" --account=107648 --json
+   if ($LASTEXITCODE -ne 0) { throw 'Draft read failed' }
+   $draft | Set-Content -Encoding utf8 draft-latest.json
+   ```
+
+2. **Compare before importing.** On first sync, inspect the published snapshot beside existing local content before establishing the baseline. On later syncs, compare three versions: last reconciled publication, latest publication, and local working content. Compare editable values and layout by module instance and field. Ignore timestamp-only differences. Preserve IDs, order, additions and deletions.
+3. **Merge deliberately.** If only Sales changed the button label, import it into the local page. If you edited an FAQ too, keep both edits. If both sides changed the same label, or one removed a module the other edited, show the conflict and resolve it with the owner. When there are no remote content changes, leave local work alone. After reconciliation, save the latest published snapshot as the published baseline; keep unpublished local changes only in the working copy.
+4. **Separate page content from shared code.** Page-editor overrides belong to that page. Design Manager edits to a shared template, CSS or module require a separate source comparison: fetch the remote asset with `hs cms fetch` into a separate comparison folder and diff against Git before any authorized upload. A shared asset update can affect already-published pages.
+5. **Before an authorized draft update**, re-read both states. Reconcile any further publication and preserve pending editor changes in the fresh draft. If a field conflicts, stop for resolution. Send only the intended writable changes to `PATCH /cms/v3/pages/site-pages/{pageId}/draft`; build any required nested object from the fresh draft. A final comparison is not a lock: coordinate a brief editing handoff before writing. Verify by reading the draft back and opening Preview. The owner publishes. Refresh the published baseline only after a confirmed publication or published-state sync.
+
+Keep fetched snapshots local unless explicitly approved for version control. The homepage preview builder renders theme defaults; importing a page snapshot alone does not update that preview.
+
+## Homepage baseline
+
+The owner completed the Atelier homepage design. The template is already uploaded at `gracesoft-atelier-review-20261103-b73c9e/templates/home-v2.html`. No new Atelier homepage draft ID was returned by the recorded attempt. See the [review handoff](docs/atelier-content-review.md). For the local homepage run `node working/preview/build-atelier-content.cjs` and open [the preview](working/preview/home-v2-atelier-content.html).
+
+Read [AGENTS.md](AGENTS.md) for approval boundaries. Older setup and release-request snapshots are retained under archive/legacy-workspace-notes/ for traceability.

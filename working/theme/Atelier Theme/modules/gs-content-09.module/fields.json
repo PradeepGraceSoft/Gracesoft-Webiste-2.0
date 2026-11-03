@@ -1,25 +1,91 @@
 [
   {
     "name": "text_1",
-    "label": "Trusted by Hospitality Businesses for Over 25 Years",
+    "label": "Heading",
     "type": "text",
-    "default": "Trusted by Hospitality Businesses for Over 25 Years"
+    "default": "Why properties choose GraceSoft Easy InnKeeping"
   },
   {
     "name": "text_2",
-    "label": "GraceSoft brings over 25 years of hospitality software experience",
+    "label": "Introduction",
     "type": "text",
-    "default": "GraceSoft brings over 25 years of hospitality software experience to the teams behind each stay."
+    "default": "From front desk tasks to ranch activities, hear how properties use Easy InnKeeping."
   },
   {
-    "name": "text_3",
-    "label": "“The transition with GraceSoft was great, with no issues during o",
+    "name": "voice_1_topic",
+    "label": "Topic 1",
     "type": "text",
-    "default": "“The transition with GraceSoft was great, with no issues during onboarding, migration, or training.”"
+    "default": "Daily operations"
+  },
+  {
+    "name": "voice_1_quote",
+    "label": "Exact quote 1",
+    "type": "text",
+    "default": "After two years with GraceSoft, we've seen a significant improvement in operational efficiency. The platform's intuitive design and comprehensive features, including integrated POS and channel management, streamline our daily tasks."
+  },
+  {
+    "name": "voice_1_name",
+    "label": "Speaker 1",
+    "type": "text",
+    "default": "Aaron Tracey"
+  },
+  {
+    "name": "voice_1_property",
+    "label": "Property 1",
+    "type": "text",
+    "default": "Dow Center Hotel, Rockwell Lodge & Conference rooms"
+  },
+  {
+    "name": "voice_2_topic",
+    "label": "Topic 2",
+    "type": "text",
+    "default": "Activity reservations"
+  },
+  {
+    "name": "voice_2_quote",
+    "label": "Exact quote 2",
+    "type": "text",
+    "default": "For eight years, GraceSoft Easy Innkeeping has been the backbone of our complex reservation system. Its customizable booking engine seamlessly handles our diverse inventory \u2013 from equestrian activities to ATV rentals \u2013 ensuring efficient management and accurate guest forecasting."
+  },
+  {
+    "name": "voice_2_name",
+    "label": "Speaker 2",
+    "type": "text",
+    "default": "JP McCormick"
+  },
+  {
+    "name": "voice_2_property",
+    "label": "Property 2",
+    "type": "text",
+    "default": "Stagecoach Trails Guest Ranch"
+  },
+  {
+    "name": "voice_3_topic",
+    "label": "Topic 3",
+    "type": "text",
+    "default": "Multiple properties"
+  },
+  {
+    "name": "voice_3_quote",
+    "label": "Exact quote 3",
+    "type": "text",
+    "default": "Calling from a single, boutique resort to a multi-property operation presented significant logistical challenges. GraceSoft Easy Innkeeping provided the robust, yet intuitive, system we needed to streamline reservations across our hotels, suites, and campgrounds."
+  },
+  {
+    "name": "voice_3_name",
+    "label": "Speaker 3",
+    "type": "text",
+    "default": "Matthew Nail"
+  },
+  {
+    "name": "voice_3_property",
+    "label": "Property 3",
+    "type": "text",
+    "default": "Quail Creek Resort"
   },
   {
     "name": "link_4",
-    "label": "Read the full customer testimonial",
+    "label": "Read Customer Testimonials",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -28,13 +94,13 @@
   },
   {
     "name": "link_4_label",
-    "label": "Link label",
+    "label": "Button label",
     "type": "text",
-    "default": "Read the full customer testimonial"
+    "default": "Read Customer Testimonials"
   },
   {
     "name": "link_5",
-    "label": "Explore Customer Stories",
+    "label": "Explore Case Studies",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -43,8 +109,8 @@
   },
   {
     "name": "link_5_label",
-    "label": "Link label",
+    "label": "Button label",
     "type": "text",
-    "default": "Explore Customer Stories"
+    "default": "Explore Case Studies"
   }
 ]

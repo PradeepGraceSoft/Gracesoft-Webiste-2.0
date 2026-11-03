@@ -10,5 +10,23 @@
     "label": "GraceSoft Easy InnKeeping is a cloud-based hospitality property m",
     "type": "text",
     "default": "Manage daily operations from arrival to checkout, sell direct through your property website, and engage guests before, during and after their stay."
+  },
+  {
+    "name": "chapter_1_label",
+    "label": "Chapter 1 link label",
+    "type": "text",
+    "default": "Manage operations"
+  },
+  {
+    "name": "chapter_2_label",
+    "label": "Chapter 2 link label",
+    "type": "text",
+    "default": "Sell direct"
+  },
+  {
+    "name": "chapter_3_label",
+    "label": "Chapter 3 link label",
+    "type": "text",
+    "default": "Engage guests"
   }
 ]

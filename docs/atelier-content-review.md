@@ -72,3 +72,19 @@ Remaining: screen-reader and zoom review, complete WCAG audit, field CWV, HubL c
 
 Review the new local copy. A future upload would require explicit authorization naming a new remote theme and any separate unpublished page. Current Act3 configuration stays untouched. This work does not authorize publication.
 
+
+## Follow-up visual refinement — 3 November 2026
+
+The paired hero actions (`Request Demo` and `Start Free Trial`) now use the same forest-green fill, border, label treatment, and shared height. Their flex alignment and centered labels keep them on one baseline; equal minimum widths make the desktop pair feel balanced. At narrow mobile widths they share the available row width equally with compact padding. Hover and visible keyboard-focus states are defined together. This refinement is scoped to the Atelier content-refresh hero and does not change button styling elsewhere.
+
+A rendered visual check is still required at desktop and mobile widths; the local browser screenshot workflow has not been rerun for this small CSS adjustment. See the paired-action checks added to `docs/accessibility-checklist.md` and `docs/visual-review.md`.
+
+## Hero subheading update — 3 November 2026
+
+Updated the editable hero subheading default and local preview to: “One platform for your front desk, bookings, and payments, with AI voice and chat assistants that answer guest questions 24/7”. The supporting text now uses the theme's modern Avenir/Segoe UI sans-serif stack, a slightly stronger weight, tighter tracking and comfortable responsive line spacing. It remains distinct from the editorial serif headline.
+
+The 24/7 assistant availability is owner-requested draft wording. Confirm the supported service behavior and configuration scope before publication; see the claim register. This is a local source and preview change only.
+
+## 2026-11-03 owner review handoff
+
+The CLI uploaded the completed local Atelier theme to account 107648 under `gracesoft-atelier-review-20261103-b73c9e`. The review template is `templates/home-v2.html` inside that folder. Creation of a separate unpublished website page was rejected with MISSING_SCOPES (required scope: content). No new page ID was issued. Resume by creating one draft only after suitable CMS content access is available. Do not repeat the theme upload or publish the page.
