@@ -2,11 +2,37 @@ document.addEventListener('DOMContentLoaded',function(){
   var button=document.querySelector('[data-menu-button]');
   var menu=document.querySelector('[data-mobile-menu]');
   if(button&&menu){
-    function close(){button.setAttribute('aria-expanded','false');menu.dataset.open='false';}
+    const products = menu.querySelector('.atelier-products');
+    const desktopHover = window.matchMedia('(min-width: 1001px) and (any-hover: hover)');
+    let closeTimer;
+    products.addEventListener('pointerenter', function(event) {
+      if (event.pointerType !== 'mouse' || !desktopHover.matches) return;
+      clearTimeout(closeTimer);
+      products.open = true;
+    });
+    products.addEventListener('pointerleave', function(event) {
+      if (event.pointerType !== 'mouse' || !desktopHover.matches) return;
+      closeTimer = setTimeout(function() {
+        if (!products.contains(document.activeElement)) products.open = false;
+      }, 250);
+    });
+    function dismissProduct(event) {
+      if (products.open && !products.contains(event.target)) products.open = false;
+    }
+    document.addEventListener('click', dismissProduct);
+    document.addEventListener('focusin', dismissProduct);
+    products.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && products.open) {
+        event.stopPropagation();
+        products.open = false;
+        products.querySelector('summary').focus();
+      }
+    });
+    function close(){products.open=false;button.setAttribute('aria-expanded','false');menu.dataset.open='false';}
     button.addEventListener('click',function(){var open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));menu.dataset.open=String(!open);});
     menu.addEventListener('click',function(e){if(e.target.closest('a'))close();});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&button.getAttribute('aria-expanded')==='true'){close();button.focus();}});
-    window.addEventListener('resize',function(){if(window.innerWidth>700)close();});
+    window.addEventListener('resize',function(){if(window.innerWidth>1000)close();});
   }
 
   // Reveal individual elements, never whole tall sections or the initial hero.

@@ -10,15 +10,37 @@
   <header class="gs-header">
     <div class="gs-container gs-nav">
       <a class="gs-brand" href="https://www.gracesoft.com/">GraceSoft <span>Easy InnKeeping</span></a>
-      <nav class="gs-navlinks" aria-label="Main navigation">
-        <a href="https://www.gracesoft.com/feature-listing">Products</a><a href="#property-types">Property types</a><a href="https://www.gracesoft.com/pricing">Pricing</a><a href="https://www.gracesoft.com/testimonials">Customer stories</a><a href="https://apps.gracesoft.com/pmsui/">Login</a><a class="gs-button gs-button--primary" href="https://www.gracesoft.com/livedemo">Request a Demo</a>
+      <button class="gs-menu-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="atelier-navigation">Menu</button>
+      <nav class="atelier-navigation" id="atelier-navigation" data-mobile-menu data-open="false" aria-label="Main navigation">
+        <details class="atelier-products">
+          <summary>Product</summary>
+          <div class="atelier-product-panel">
+            <div><strong>Run your property</strong>
+              <a href="https://www.gracesoft.com/hotel-management-software">Property Management System</a>
+              <a href="https://www.gracesoft.com/payments">Payments and Billing</a>
+              <a href="https://www.gracesoft.com/point-of-sale-system">Point of Sale</a>
+            </div>
+            <div><strong>Sell direct</strong>
+              <a href="https://www.gracesoft.com/online-booking-engine">Booking Engine</a>
+              <a href="https://www.gracesoft.com/channel-manager">Channel Manager</a>
+              <a href="https://www.gracesoft.com/websites">Property Websites</a>
+            </div>
+            <div><strong>Engage guests</strong>
+              <a href="https://www.gracesoft.com/unified-inbox">Guest Communication</a>
+              <a href="https://www.gracesoft.com/crm-software">Hospitality CRM</a>
+              <a href="#guest-assistant">AI Voice and Chat Assistant</a>
+            </div>
+          </div>
+        </details>
+        <a href="#property-types">Property Types</a>
+        <a href="https://www.gracesoft.com/pricing">Pricing</a>
+        <a href="https://www.gracesoft.com/testimonials-1">Reviews</a>
+        <a href="https://www.gracesoft.com/blog">Resources</a>
+        <a href="https://www.gracesoft.com/about">Company</a>
+        <a href="https://apps.gracesoft.com/pmsui/">Login</a>
+        <a class="atelier-demo" href="https://www.gracesoft.com/livedemo">Request a Demo</a>
       </nav>
-      <button class="gs-menu-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-menu">Menu</button>
-    </div>
-    <nav class="gs-container gs-mobile-menu" id="mobile-menu" data-mobile-menu data-open="false" aria-label="Mobile navigation">
-      <a href="https://www.gracesoft.com/feature-listing">Products</a><a href="#property-types">Property types</a><a href="https://www.gracesoft.com/pricing">Pricing</a><a href="https://www.gracesoft.com/testimonials">Customer stories</a><a href="https://www.gracesoft.com/livedemo">Request a Demo</a>
-    </nav>
-  </header>
+    </div>  </header>
 
   <main id="main-content" class="gs-home-v2 gs-content-refresh">{% dnd_area "content_home", label="Content refresh homepage" %}{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-01.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
 {% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/gs-content-02.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
