@@ -333,3 +333,19 @@
 .footer-contact svg {width:19px;height:15px;align-self:flex-start;margin-top:5px;flex:none}
 .footer-contact .contact-region strong {min-width:36px;font-size:14px}
 .footer-contact .contact-region {margin-top:4px}
+
+
+/* Operations: decorative icon feedback. */
+@media (prefers-reduced-motion:no-preference) and (hover:hover){
+ .tour-operations .tour-cards article:hover>svg,
+ .tour-distribution .tour-cards article:hover>svg{animation:operations-icon-bounce .65s ease-in-out}
+}
+@keyframes operations-icon-bounce{
+ 0%,100%{transform:translateY(0) rotate(0)}
+ 30%{transform:translateY(-5px) rotate(-8deg)}
+ 60%{transform:translateY(-2px) rotate(7deg)}
+ 80%{transform:translateY(-1px) rotate(-3deg)}
+}
+
+.tour-operations .tour-head>.tour-link{display:inline-block;margin-top:12px}
+

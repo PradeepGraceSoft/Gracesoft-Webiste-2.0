@@ -1,0 +1,47 @@
+[
+  {
+    "width": 1440,
+    "tabs": [
+      "Reservations",
+      "Front desk",
+      "Housekeeping",
+      "Billing and payments",
+      "Point of sale",
+      "Reporting"
+    ],
+    "overflow": false,
+    "imagesLoaded": true,
+    "keyboard": true
+  },
+  {
+    "width": 390,
+    "tabs": [
+      "Reservations",
+      "Front desk",
+      "Housekeeping",
+      "Billing and payments",
+      "Point of sale",
+      "Reporting"
+    ],
+    "overflow": false,
+    "imagesLoaded": true,
+    "keyboard": true
+  },
+  {
+    "width": 320,
+    "tabs": [
+      "Reservations",
+      "Front desk",
+      "Housekeeping",
+      "Billing and payments",
+      "Point of sale",
+      "Reporting"
+    ],
+    "overflow": false,
+    "imagesLoaded": true,
+    "keyboard": true
+  },
+  {
+    "noJsPanels": 6
+  }
+]

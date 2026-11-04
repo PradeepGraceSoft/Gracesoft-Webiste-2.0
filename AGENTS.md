@@ -3,6 +3,7 @@
 ## Workspace-specific operating notes (2026-10-29)
 
 - Read `skills/seo-aeo/SKILL.md`, `skills/hubspot-editable/SKILL.md`, and `skills/accessibility-usability-conversion/SKILL.md` when doing the matching work.
+- For every new GraceSoft website page, apply all three skills above and `skills/page-qa-release/SKILL.md`. Deliver editable, HubSpot-supported CMS source and a page-specific QA report with test evidence.
 - For all new GraceSoft content, follow `docs/content-strategy-playbook.md` and use `docs/export-page-inventory.csv` to locate read-only export evidence. The restored `Hubspot Existing Page Export/` supersedes older notes saying the export is absent.
 - The current folder layout is documented in `README.md`: active V2 source and local previews live under `working/`; the restored read-only archive is `Hubspot Existing Page Export/`; its inventory and review live under `docs/export-page-inventory.csv` and `docs/export-analysis.md`; portal validation records live under `docs/portal-validation/`.
 - Theme direction is not final. Review `docs/theme-selection.md` and the local sample before treating palette, type or layout as approved.

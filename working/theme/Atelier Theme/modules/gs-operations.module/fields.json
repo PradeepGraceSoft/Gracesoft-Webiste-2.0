@@ -21,7 +21,7 @@
     "name": "screen_1",
     "label": "Screen 1",
     "type": "text",
-    "default": "Calendar"
+    "default": "Reservations"
   },
   {
     "name": "screen_1_image",
@@ -42,7 +42,7 @@
     "name": "screen_2",
     "label": "Screen 2",
     "type": "text",
-    "default": "Dashboard"
+    "default": "Front desk"
   },
   {
     "name": "screen_2_image",
@@ -153,8 +153,92 @@
     "default": "Explore the Property Management System"
   },
   {
+    "name": "screen_3",
+    "label": "Screen 3 label",
+    "type": "text",
+    "default": "Housekeeping"
+  },
+  {
+    "name": "screen_3_image",
+    "label": "Housekeeping screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Housekeeping screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_3_caption",
+    "label": "Screen 3 caption",
+    "type": "text",
+    "default": "Housekeeping preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_4",
+    "label": "Screen 4 label",
+    "type": "text",
+    "default": "Billing and payments"
+  },
+  {
+    "name": "screen_4_image",
+    "label": "Billing and payments screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Billing and payments screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_4_caption",
+    "label": "Screen 4 caption",
+    "type": "text",
+    "default": "Billing and payments preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_5",
+    "label": "Screen 5 label",
+    "type": "text",
+    "default": "Point of sale"
+  },
+  {
+    "name": "screen_5_image",
+    "label": "Point of sale screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Point of sale screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_5_caption",
+    "label": "Screen 5 caption",
+    "type": "text",
+    "default": "Point of sale preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_6",
+    "label": "Screen 6 label",
+    "type": "text",
+    "default": "Reporting"
+  },
+  {
+    "name": "screen_6_image",
+    "label": "Reporting screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Reporting screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_6_caption",
+    "label": "Screen 6 caption",
+    "type": "text",
+    "default": "Reporting preview \u2014 product screenshot coming soon."
+  },
+  {
     "name": "feature_1_url",
-    "label": "Feature 1 url",
+    "label": "Feature 1 URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -163,13 +247,13 @@
   },
   {
     "name": "feature_1_label",
-    "label": "Feature 1 label",
+    "label": "Feature 1 CTA label",
     "type": "text",
     "default": "Explore reservations"
   },
   {
     "name": "feature_2_url",
-    "label": "Feature 2 url",
+    "label": "Feature 2 URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -178,28 +262,28 @@
   },
   {
     "name": "feature_2_label",
-    "label": "Feature 2 label",
+    "label": "Feature 2 CTA label",
     "type": "text",
     "default": "Explore front desk tools"
   },
   {
     "name": "feature_3_url",
-    "label": "Feature 3 url",
+    "label": "Feature 3 URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/hotel-management-software"
+      "href": "https://www.gracesoft.com/feature-listing"
     }
   },
   {
     "name": "feature_3_label",
-    "label": "Feature 3 label",
+    "label": "Feature 3 CTA label",
     "type": "text",
     "default": "Explore housekeeping"
   },
   {
     "name": "feature_4_url",
-    "label": "Feature 4 url",
+    "label": "Feature 4 URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -208,13 +292,13 @@
   },
   {
     "name": "feature_4_label",
-    "label": "Feature 4 label",
+    "label": "Feature 4 CTA label",
     "type": "text",
     "default": "Explore payments"
   },
   {
     "name": "feature_5_url",
-    "label": "Feature 5 url",
+    "label": "Feature 5 URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -223,22 +307,22 @@
   },
   {
     "name": "feature_5_label",
-    "label": "Feature 5 label",
+    "label": "Feature 5 CTA label",
     "type": "text",
     "default": "Explore point of sale"
   },
   {
     "name": "feature_6_url",
-    "label": "Feature 6 url",
+    "label": "Feature 6 URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/hotel-management-software"
+      "href": "https://www.gracesoft.com/feature-listing"
     }
   },
   {
     "name": "feature_6_label",
-    "label": "Feature 6 label",
+    "label": "Feature 6 CTA label",
     "type": "text",
     "default": "Explore reporting"
   }

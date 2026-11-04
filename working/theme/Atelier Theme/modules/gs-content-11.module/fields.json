@@ -43,9 +43,9 @@
   },
   {
     "name": "text_8",
-    "label": "Can guests book directly through my property website?",
+    "label": "Can guests book directly through my website?",
     "type": "text",
-    "default": "Can guests book directly through my property website?"
+    "default": "Can guests book directly through my website?"
   },
   {
     "name": "text_9",
@@ -123,7 +123,7 @@
     "name": "text_25",
     "type": "text",
     "label": "Visit the GraceSoft pricing page to compare options. If you ",
-    "default": "Visit the GraceSoft pricing page to compare options. If you also need a property website, ask which website services and fees apply."
+    "default": "Visit the GraceSoft pricing page to compare options. If you also need Website Builder, ask which services and fees apply."
   },
   {
     "name": "text_26",
@@ -152,8 +152,8 @@
   {
     "name": "text_30",
     "type": "text",
-    "label": "Who can update my property website?",
-    "default": "Who can update my property website?"
+    "label": "Who can update my website?",
+    "default": "Who can update my website?"
   },
   {
     "name": "text_31",
@@ -238,7 +238,7 @@
   },
   {
     "name": "resource_30_1",
-    "label": "Explore property websites URL",
+    "label": "Explore Website Builder URL",
     "type": "url",
     "default": {
       "type": "EXTERNAL",
@@ -248,7 +248,7 @@
   {
     "name": "resource_30_1_label",
     "type": "text",
-    "label": "Explore property websites",
-    "default": "Explore property websites"
+    "label": "Explore Website Builder",
+    "default": "Explore Website Builder"
   }
 ]

@@ -3,13 +3,13 @@
     "name": "category",
     "label": "Category",
     "type": "text",
-    "default": "Sell direct"
+    "default": "Grow your bookings"
   },
   {
     "name": "heading",
     "label": "Heading",
     "type": "text",
-    "default": "Give guests a direct path from your website to a reservation"
+    "default": "Connect direct bookings and booking channels in one strategy."
   },
   {
     "name": "intro",
@@ -27,7 +27,7 @@
     "name": "direct_step_1",
     "label": "Direct step 1",
     "type": "text",
-    "default": "Property website"
+    "default": "Website Builder"
   },
   {
     "name": "direct_step_2",
@@ -69,7 +69,7 @@
     "name": "feature_1",
     "label": "Feature 1",
     "type": "text",
-    "default": "Property website"
+    "default": "Website Builder"
   },
   {
     "name": "feature_1_description",
@@ -90,7 +90,7 @@
     "name": "feature_1_label",
     "label": "Feature 1 label",
     "type": "text",
-    "default": "Explore Property Websites"
+    "default": "Explore Website Builder"
   },
   {
     "name": "feature_2",
@@ -102,7 +102,7 @@
     "name": "feature_2_description",
     "label": "Feature 2 description",
     "type": "text",
-    "default": "Let guests check availability and reserve through your property website."
+    "default": "Let guests check availability and reserve through your website."
   },
   {
     "name": "feature_2_url",
@@ -159,6 +159,33 @@
     "name": "plans_label",
     "label": "Plans label",
     "type": "text",
-    "default": "See Website Plans"
+    "default": "See Website Builder Plans"
+  },
+  {
+    "name": "feature_4",
+    "label": "Feature 4",
+    "type": "text",
+    "default": "Google Hotel Ads"
+  },
+  {
+    "name": "feature_4_description",
+    "label": "Feature 4 Description",
+    "type": "text",
+    "default": "Connect your property with Google Hotel Ads to support visibility and direct booking opportunities."
+  },
+  {
+    "name": "feature_4_label",
+    "label": "Feature 4 Label",
+    "type": "text",
+    "default": "Explore Google Hotel Ads"
+  },
+  {
+    "name": "feature_4_url",
+    "label": "Google Hotel Ads URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/feature-listing"
+    }
   }
 ]

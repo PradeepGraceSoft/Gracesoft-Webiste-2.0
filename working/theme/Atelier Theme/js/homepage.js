@@ -158,3 +158,37 @@ document.addEventListener('DOMContentLoaded', function () {
   sizeFooter();
   compact.addEventListener('change', sizeFooter);
 });
+
+// Advance every ten seconds; hovering the image pauses the countdown.
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('#manage-operations [data-tour][data-ready]').forEach(function (widget) {
+    const tabs = Array.from(widget.querySelectorAll('[role="tab"]'));
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    let hoveringImage = false, timer;
+    function schedule() {
+      clearTimeout(timer);
+      if (hoveringImage || document.hidden) return;
+      timer = setTimeout(function () {
+        const current = tabs.findIndex(tab => tab.getAttribute('aria-selected') === 'true');
+        const next = tabs[(current + 1) % tabs.length];
+        next.click();
+        const panel = document.getElementById(next.getAttribute('aria-controls'));
+        if (!reduced.matches) panel.animate?.([
+          {opacity: .5, transform: 'translateX(20px)'},
+          {opacity: 1, transform: 'translateX(0)'}
+        ], {duration: 400, easing: 'ease-out'});
+        schedule();
+      }, 10000);
+    }
+    widget.querySelectorAll('[data-tour-panel] img').forEach(function (image) {
+      image.addEventListener('mouseenter', function () { hoveringImage = true; schedule(); });
+      image.addEventListener('mouseleave', function () { hoveringImage = false; schedule(); });
+    });
+    tabs.forEach(tab => tab.addEventListener('click', function () {
+      hoveringImage = Boolean(widget.querySelector('[data-tour-panel]:not([hidden]) img:hover'));
+      schedule();
+    }));
+    document.addEventListener('visibilitychange', schedule);
+    schedule();
+  });
+});
