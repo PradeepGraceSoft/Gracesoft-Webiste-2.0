@@ -11,8 +11,15 @@ const escape = value => String(value ?? '').replace(/[&<>"']/g, character =>
   ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'})[character]);
 
 // Render this theme's default field expressions for local review.
+const moduleStyles = new Set();
+const moduleScripts = new Set();
 function renderModule(relativePath) {
   const directory = path.normalize(path.join('templates', relativePath));
+  for (const [filename, assets] of [['module.css', moduleStyles], ['module.js', moduleScripts]]) {
+    if (fs.existsSync(path.join(theme, directory, filename))) {
+      assets.add(publicPath + directory.split(path.sep).join('/') + '/' + filename);
+    }
+  }
   const fields = JSON.parse(read(path.join(directory, 'fields.json')));
   const defaults = Object.fromEntries(fields.map(field => [field.name, field.default]));
   return read(path.join(directory, 'module.html'))
@@ -35,7 +42,9 @@ const staticPage = layout.replace('{{ html_lang }}', 'en')
   .replace(/\{\{\s*require_css\(get_asset_url\("\.\.\/\.\.\/([^"]+)"\)\)\s*\}\}/g, (_, file) => '<link rel="stylesheet" href="' + publicPath + file + '">')
   .replace(/\{\{ require_js\(get_asset_url\("\.\.\/\.\.\/([^"]+)"\), "footer"\) \}\}/, '')
   .replace('{% block body %}{% endblock body %}', () => body)
-  .replace('{{ standard_footer_includes }}', '<script src="' + publicPath + 'js/homepage.js"></script>');
+  .replace('</head>', () => [...moduleStyles].map(url => '<link rel="stylesheet" href="' + url + '">').join('\n') + '\n</head>')
+  .replace('{{ standard_footer_includes }}', () => [publicPath + 'js/homepage.js', ...moduleScripts]
+    .map(url => '<script src="' + url + '"></script>').join('\n'));
 if (/\{[{%]/.test(staticPage)) throw Error(staticPage.match(/\{[{%].{0,140}/)[0]);
 fs.writeFileSync(path.join(__dirname, 'home-v2-atelier-content.html'), staticPage);
 

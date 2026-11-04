@@ -382,3 +382,42 @@
 @media(max-width:1000px){:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget{grid-template-columns:minmax(0,1fr)}}
 
 .tour-guest-journey .tour-widget{color:#fffdf3}
+
+/* Atelier front desk footer */
+.atelier-footer {background:#173c31;color:#f8f6ee;padding:0 0 20px}
+.atelier-footer a,.footer-groups summary {color:inherit}
+.atelier-footer :focus-visible {outline-color:#edcc84}
+.desk-strip {background:#f8f6ee;color:#204c3a;border-bottom:2px solid #bd9e5b}
+.desk-strip :focus-visible {outline-color:#245843}
+.desk-bar,.desk-bar nav,.desk-utility,.desk-utility nav,.desk-utility .footer-apps {display:flex;align-items:center;flex-wrap:wrap}
+.desk-bar,.desk-utility {justify-content:space-between;gap:14px;padding-block:15px}
+.desk-bar img {display:block;width:150px;height:auto}
+.desk-bar nav {gap:8px 18px}
+.desk-bar nav a {display:inline-flex;align-items:center;min-height:44px;font-weight:650;text-decoration:none}
+.desk-bar nav a:last-child {padding:0 18px;background:#245843;color:white;border-radius:7px}
+.desk-bar nav a:hover {text-decoration:underline}
+.desk-directory {display:grid;grid-template-columns:minmax(195px,1.1fr) minmax(0,4fr);gap:32px;padding-block:32px}
+.desk-directory h2,.desk-directory summary,.desk-utility h2 {margin:0;color:#fff5d9;font:650 16px/1.4 system-ui,sans-serif}
+.desk-directory address {margin-top:12px;max-width:26ch}
+.desk-directory .footer-groups {border:0;padding:0}
+.desk-directory .footer-groups ul {margin:8px 0 0}
+.desk-directory a:hover,.desk-utility a:hover {color:white;text-decoration:underline}
+.desk-utility,.atelier-footer .footer-base {border-top:1px solid #597369}
+.desk-utility .footer-apps {gap:12px;padding:0}
+.desk-utility .footer-apps img {height:36px}
+.desk-utility .footer-apps a:last-child img {height:54px}
+.desk-utility nav a {display:grid;place-items:center;width:40px;height:40px}
+.desk-utility nav svg {width:19px;height:19px;fill:currentColor}
+.atelier-footer .footer-base {margin:0;font-size:14px}
+@media(max-width:1100px) and (min-width:721px) {
+  .desk-directory {grid-template-columns:minmax(190px,1fr) 3fr}
+  .desk-directory .footer-groups {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .desk-directory .footer-groups details:first-child ul {columns:1}
+}
+@media(max-width:720px) {
+  .desk-directory {grid-template-columns:1fr;gap:20px;padding-block:22px}
+  .desk-directory summary {padding:14px 0}
+  .desk-directory .footer-groups details {border-color:#597369}
+  .desk-bar nav {gap:4px 12px;font-size:14px}
+  .desk-utility .footer-apps {align-items:flex-start;flex-direction:column;gap:4px}
+}
