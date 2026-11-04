@@ -1,0 +1,71 @@
+[
+  {
+    "name": "text_1",
+    "label": "Hospitality Experience Meets Modern Technology",
+    "type": "text",
+    "default": "Hospitality Experience Meets Modern Technology"
+  },
+  {
+    "name": "text_2",
+    "label": "Experience with perspective",
+    "type": "text",
+    "default": "Experience with perspective"
+  },
+  {
+    "name": "text_3",
+    "label": "A long-standing focus on lodging, with connected booking and oper",
+    "type": "text",
+    "default": "A long-standing focus on lodging, with connected booking and operational tools."
+  },
+  {
+    "name": "text_4",
+    "label": "Built around everyday work",
+    "type": "text",
+    "default": "Built around everyday work"
+  },
+  {
+    "name": "text_5",
+    "label": "Explore practical workflows in a demo tailored to your team and p",
+    "type": "text",
+    "default": "Explore practical workflows in a demo tailored to your team and property type."
+  },
+  {
+    "name": "text_6",
+    "label": "A path to what’s next",
+    "type": "text",
+    "default": "A path to what’s next"
+  },
+  {
+    "name": "text_7",
+    "label": "Add AI-powered guest engagement to the conversation about your pr",
+    "type": "text",
+    "default": "Add AI-powered guest engagement to the conversation about your property’s needs."
+  },
+  {
+    "name": "text_8",
+    "label": "People to help you",
+    "type": "text",
+    "default": "People to help you"
+  },
+  {
+    "name": "text_9",
+    "label": "Discuss onboarding, training and support with the GraceSoft team.",
+    "type": "text",
+    "default": "Discuss onboarding, training and support with the GraceSoft team."
+  },
+  {
+    "name": "link_10",
+    "label": "Contact Our Team",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/corporate-contact"
+    }
+  },
+  {
+    "name": "link_10_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Contact Our Team"
+  }
+]

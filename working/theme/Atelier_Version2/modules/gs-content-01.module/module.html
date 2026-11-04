@@ -1,0 +1,16 @@
+<section class="opening" aria-labelledby="opening-title">
+  <div class="opening-inner wrap gs-container">
+    <div class="opening-copy">
+      <p class="brandline"><i aria-hidden="true"></i> {{ module.text_1|escape_html }}</p>
+      <h1 id="opening-title">{{ module.text_2 }}</h1>
+      <p class="opening-lead">{{ module.text_3|escape_html }}</p>
+      <div class="gs-actions"><a class="gs-button gs-button--primary" href="{{ module.link_4.href|escape_url }}">{{ module.link_4_label|escape_html }} <span aria-hidden="true">↗</span></a><a class="gs-button gs-button--secondary" href="{{ module.link_5.href|escape_url }}">{{ module.link_5_label|escape_html }} <span aria-hidden="true">↓</span></a></div>
+    </div>
+    <div class="exhibit"><div class="scene">
+      <figure id="view-property"><div class="terrain" aria-hidden="true"></div><img src="{{ (module.property_image.src or get_asset_url('../../assets/property.svg'))|escape_url }}" alt="{{ module.property_image.alt|escape_attr }}" width="622" height="421" fetchpriority="high"></figure>
+      <figure id="view-calendar" hidden><img loading="lazy" src="{{ (module.product_image_1.src or get_asset_url('../../assets/calendar.png'))|escape_url }}" width="1200" height="675" alt="{{ module.product_image_1.alt|escape_attr }}"><figcaption class="sr-only">Easy InnKeeping · Reservation calendar</figcaption></figure>
+      <figure id="view-dashboard" hidden><img loading="lazy" src="{{ (module.dashboard_image.src or get_asset_url('../../assets/dashboard.png'))|escape_url }}" width="1200" height="675" alt="{{ module.dashboard_image.alt|escape_attr }}"></figure>
+    </div><a class="inspect-screen" href="{{ (module.product_image_1.src or get_asset_url('../../assets/calendar.png'))|escape_url }}" hidden>Open full-size screen <span aria-hidden="true">↗</span></a>
+    <noscript><p>Easy InnKeeping · Reservation calendar</p><img src="{{ (module.product_image_1.src or get_asset_url('../../assets/calendar.png'))|escape_url }}" width="1200" height="675" alt="{{ module.product_image_1.alt|escape_attr }}"></noscript></div>
+  </div>
+</section>

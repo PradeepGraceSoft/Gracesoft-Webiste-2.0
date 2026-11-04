@@ -1,0 +1,101 @@
+[
+  {
+    "name": "text_1",
+    "label": "Turn More Website Visitors into Direct Bookings",
+    "type": "text",
+    "default": "Turn More Website Visitors into Direct Bookings"
+  },
+  {
+    "name": "text_2",
+    "label": "Give guests a clear path from discovering your property to reserv",
+    "type": "text",
+    "default": "Give guests a clear path from discovering your property to reserving a stay. Connect your website to an online booking engine with current availability, while managing channel inventory and rates centrally."
+  },
+  {
+    "name": "text_3",
+    "label": "A website that reflects your property",
+    "type": "text",
+    "default": "A website that reflects your property"
+  },
+  {
+    "name": "text_4",
+    "label": "Show guests what makes your stay distinctive.",
+    "type": "text",
+    "default": "Show guests what makes your stay distinctive."
+  },
+  {
+    "name": "text_5",
+    "label": "A direct route to a reservation",
+    "type": "text",
+    "default": "A direct route to a reservation"
+  },
+  {
+    "name": "text_6",
+    "label": "Let guests check availability and book on your website.",
+    "type": "text",
+    "default": "Let guests check availability and book on your website."
+  },
+  {
+    "name": "text_7",
+    "label": "Connected distribution",
+    "type": "text",
+    "default": "Connected distribution"
+  },
+  {
+    "name": "text_8",
+    "label": "Keep supported channels aligned with your available inventory.",
+    "type": "text",
+    "default": "Keep supported channels aligned with your available inventory."
+  },
+  {
+    "name": "text_9",
+    "label": "Build your direct booking channel and reduce reliance on third pa",
+    "type": "text",
+    "default": "Build your direct booking channel and reduce reliance on third parties. Booking and revenue outcomes vary."
+  },
+  {
+    "name": "link_10",
+    "label": "Explore Website Solutions",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/websites"
+    }
+  },
+  {
+    "name": "link_10_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Website Solutions"
+  },
+  {
+    "name": "link_11",
+    "label": "Explore the Booking Engine",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/online-booking-engine"
+    }
+  },
+  {
+    "name": "link_11_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore the Booking Engine"
+  },
+  {
+    "name": "link_12",
+    "label": "Explore the Channel Manager",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/channel-manager"
+    }
+  },
+  {
+    "name": "link_12_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore the Channel Manager"
+  }
+]

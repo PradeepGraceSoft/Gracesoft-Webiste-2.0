@@ -1,0 +1,79 @@
+[
+  {
+    "name": "text_1",
+    "label": "Hero eyebrow",
+    "type": "text",
+    "default": "GraceSoft Easy InnKeeping"
+  },
+  {
+    "name": "text_2",
+    "label": "Hero heading",
+    "type": "richtext",
+    "default": "One front desk.<br><em>The whole property.</em>"
+  },
+  {
+    "name": "text_3",
+    "label": "Hero subheading",
+    "type": "text",
+    "default": "Hospitality property management software for the people behind every stay. Bring reservations, direct bookings, payments and guest conversations into one workspace."
+  },
+  {
+    "name": "link_4",
+    "label": "Request Demo",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/livedemo"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Request a demo"
+  },
+  {
+    "name": "link_5",
+    "label": "Platform tour destination",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "#manage-operations"
+    }
+  },
+  {
+    "name": "link_5_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Tour the platform"
+  },
+  {
+    "name": "product_image_1",
+    "label": "Product screenshot 1",
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "src": "",
+      "alt": "GraceSoft Easy InnKeeping reservation calendar with rooms and scheduled stays"
+    }
+  },
+  {
+    "name": "property_image",
+    "label": "Property illustration",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Illustrated boutique hotel with illuminated guest rooms, a reception canopy and a tree-lined courtyard."
+    }
+  },
+  {
+    "name": "dashboard_image",
+    "label": "Dashboard screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Easy InnKeeping dashboard showing property operations and performance information"
+    }
+  }
+]

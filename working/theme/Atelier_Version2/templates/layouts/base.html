@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ html_lang }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ standard_header_includes }}
+  {{ require_css(get_asset_url("../../css/base.css")) }}
+  {{ require_css(get_asset_url("../../css/homepage.css")) }}
+  {{ require_js(get_asset_url("../../js/homepage.js"), "footer") }}
+{{ require_css(get_asset_url("../../css/midnight.css")) }}{{ require_css(get_asset_url("../../css/daylight.css")) }}{{ require_css(get_asset_url("../../css/atelier.css")) }}{{ require_css(get_asset_url("../../css/content-refresh.css")) }}{{ require_css(get_asset_url("../../atelier4/design.css")) }}</head>
+<body class="v4">
+  {% block body %}{% endblock body %}
+  {{ require_js(get_asset_url("../../atelier4/motion.js"), "footer") }}
+  {{ standard_footer_includes }}
+</body>
+</html>
+

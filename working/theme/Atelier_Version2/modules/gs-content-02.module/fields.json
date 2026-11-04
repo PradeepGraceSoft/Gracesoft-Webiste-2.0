@@ -1,0 +1,104 @@
+[
+  {
+    "name": "text_1",
+    "label": "Everything You Need to Manage Your Hospitality Business",
+    "type": "text",
+    "default": "More time for guests. More value from every day."
+  },
+  {
+    "name": "text_2",
+    "label": "GraceSoft Easy InnKeeping is a cloud-based hospitality property m",
+    "type": "text",
+    "default": "Explore the difference in daily admin, software costs and guest communication."
+  },
+  {
+    "name": "metric_0_value",
+    "label": "Outcome 1 value",
+    "type": "text",
+    "default": "8"
+  },
+  {
+    "name": "metric_0_unit",
+    "label": "Outcome 1 unit",
+    "type": "text",
+    "default": "hrs"
+  },
+  {
+    "name": "metric_0_label",
+    "label": "Outcome 1 label",
+    "type": "text",
+    "default": "Saved weekly"
+  },
+  {
+    "name": "metric_0_title",
+    "label": "Outcome 1 title",
+    "type": "text",
+    "default": "Less routine admin"
+  },
+  {
+    "name": "metric_0_body",
+    "label": "Outcome 1 body",
+    "type": "text",
+    "default": "Time saved on reservations, reports and front-desk tasks."
+  },
+  {
+    "name": "metric_1_value",
+    "label": "Outcome 2 value",
+    "type": "text",
+    "default": "20"
+  },
+  {
+    "name": "metric_1_unit",
+    "label": "Outcome 2 unit",
+    "type": "text",
+    "default": "%"
+  },
+  {
+    "name": "metric_1_label",
+    "label": "Outcome 2 label",
+    "type": "text",
+    "default": "Lower costs"
+  },
+  {
+    "name": "metric_1_title",
+    "label": "Outcome 2 title",
+    "type": "text",
+    "default": "Reduce overlapping subscriptions"
+  },
+  {
+    "name": "metric_1_body",
+    "label": "Outcome 2 body",
+    "type": "text",
+    "default": "Compare total software spending, including subscriptions and add-ons."
+  },
+  {
+    "name": "metric_2_value",
+    "label": "Outcome 3 value",
+    "type": "text",
+    "default": "60"
+  },
+  {
+    "name": "metric_2_unit",
+    "label": "Outcome 3 unit",
+    "type": "text",
+    "default": "%"
+  },
+  {
+    "name": "metric_2_label",
+    "label": "Outcome 3 label",
+    "type": "text",
+    "default": "AI resolution"
+  },
+  {
+    "name": "metric_2_title",
+    "label": "Outcome 3 title",
+    "type": "text",
+    "default": "More room for personal service"
+  },
+  {
+    "name": "metric_2_body",
+    "label": "Outcome 3 body",
+    "type": "text",
+    "default": "Routine guest questions resolved without staff intervention."
+  }
+]

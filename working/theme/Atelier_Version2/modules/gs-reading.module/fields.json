@@ -1,0 +1,113 @@
+[
+  {
+    "name": "heading",
+    "label": "Section heading",
+    "default": "Practical reading for property operators",
+    "type": "text"
+  },
+  {
+    "name": "article_1_image",
+    "label": "Article 1 image",
+    "default": {
+      "src": "",
+      "alt": ""
+    },
+    "type": "image"
+  },
+  {
+    "name": "article_1_url",
+    "label": "Article 1 destination",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/blog/5-mistakes-hoteliers-make-when-managing-reservations-and-how-to-avoid-them"
+    },
+    "type": "url"
+  },
+  {
+    "name": "article_1_topic",
+    "label": "Article 1 topic",
+    "default": "Manage operations",
+    "type": "text"
+  },
+  {
+    "name": "article_1_title",
+    "label": "Article 1 headline",
+    "default": "5 Mistakes Hoteliers Make When Managing Reservations (and How to Avoid Them)",
+    "type": "text"
+  },
+  {
+    "name": "article_2_image",
+    "label": "Article 2 image",
+    "default": {
+      "src": "",
+      "alt": ""
+    },
+    "type": "image"
+  },
+  {
+    "name": "article_2_url",
+    "label": "Article 2 destination",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/blog/7-ways-to-increase-direct-bookings-with-an-integrated-online-booking-engine"
+    },
+    "type": "url"
+  },
+  {
+    "name": "article_2_topic",
+    "label": "Article 2 topic",
+    "default": "Sell direct",
+    "type": "text"
+  },
+  {
+    "name": "article_2_title",
+    "label": "Article 2 headline",
+    "default": "7 Ways to Increase Direct Bookings with an Integrated Online Booking Engine",
+    "type": "text"
+  },
+  {
+    "name": "article_3_image",
+    "label": "Article 3 image",
+    "default": {
+      "src": "",
+      "alt": ""
+    },
+    "type": "image"
+  },
+  {
+    "name": "article_3_url",
+    "label": "Article 3 destination",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/blog/from-check-in-to-check-out-how-automation-improves-guest-experience"
+    },
+    "type": "url"
+  },
+  {
+    "name": "article_3_topic",
+    "label": "Article 3 topic",
+    "default": "Engage guests",
+    "type": "text"
+  },
+  {
+    "name": "article_3_title",
+    "label": "Article 3 headline",
+    "default": "From Check-In to Check-Out: How Automation Improves the Guest Experience",
+    "type": "text"
+  },
+  {
+    "name": "all_url",
+    "label": "Blog destination",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/blog"
+    },
+    "type": "url"
+  },
+  {
+    "name": "all_label",
+    "label": "Blog link label",
+    "default": "View All Articles",
+    "type": "text"
+  }
+]
