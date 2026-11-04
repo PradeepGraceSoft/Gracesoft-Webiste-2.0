@@ -159,36 +159,64 @@ document.addEventListener('DOMContentLoaded', function () {
   compact.addEventListener('change', sizeFooter);
 });
 
-// Advance every ten seconds; hovering the image pauses the countdown.
+// Product walkthrough: one shared clock drives the slide and its progress line.
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('#manage-operations [data-tour][data-ready]').forEach(function (widget) {
+  document.querySelectorAll('#manage-operations [data-tour][data-ready], #sell-direct [data-tour][data-ready], #guest-assistant [data-tour][data-ready]').forEach(function (widget) {
     const tabs = Array.from(widget.querySelectorAll('[role="tab"]'));
+    const panels = Array.from(widget.querySelectorAll('[data-tour-panel]'));
+    const icons = widget.closest('section').querySelectorAll('.tour-cards article > svg');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    let hoveringImage = false, timer;
-    function schedule() {
-      clearTimeout(timer);
-      if (hoveringImage || document.hidden) return;
-      timer = setTimeout(function () {
-        const current = tabs.findIndex(tab => tab.getAttribute('aria-selected') === 'true');
-        const next = tabs[(current + 1) % tabs.length];
-        next.click();
-        const panel = document.getElementById(next.getAttribute('aria-controls'));
-        if (!reduced.matches) panel.animate?.([
-          {opacity: .5, transform: 'translateX(20px)'},
-          {opacity: 1, transform: 'translateX(0)'}
-        ], {duration: 400, easing: 'ease-out'});
-        schedule();
-      }, 10000);
+    const duration = 10000;
+    let elapsed = 0, last = performance.now(), hover = false, frame, auto = false;
+    tabs.forEach(function (tab, i) {
+      const label = document.createElement('span');
+      label.className = 'walkthrough-label'; label.textContent = tab.textContent;
+      tab.textContent = '';
+      const number = document.createElement('span');
+      number.className = 'walkthrough-number'; number.textContent = String(i + 1).padStart(2, '0');
+      number.setAttribute('aria-hidden', 'true'); tab.append(number);
+      if (icons[i]) tab.append(icons[i].cloneNode(true));
+      tab.append(label);
+      const progress = document.createElement('span');
+      progress.className = 'walkthrough-progress'; progress.setAttribute('aria-hidden', 'true');
+      tab.append(progress);
+      tab.addEventListener('click', function () { if (!auto) reset(); reveal(i); });
+      tab.addEventListener('keydown', function (event) {
+        if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) {
+          reset(); reveal(tabs.findIndex(t => t.getAttribute('aria-selected') === 'true'));
+        }
+      });
+    });
+    function reset() { elapsed = 0; last = performance.now(); paint(); }
+    function paint() {
+      tabs.forEach(tab => tab.style.setProperty('--tour-progress', tab.getAttribute('aria-selected') === 'true' ? elapsed / duration : 0));
+    }
+    function reveal(i) {
+      const list = tabs[i].parentElement;
+      if (list.scrollWidth > list.clientWidth) list.scrollTo({left: tabs[i].offsetLeft - list.offsetLeft - 4, behavior: 'instant'});
+      if (reduced.matches) return;
+      panels[i].getAnimations().forEach(animation => animation.cancel());
+      panels[i].animate([{opacity:.4,transform:'translateX(18px)'},{opacity:1,transform:'translateX(0)'}],{duration:420,easing:'cubic-bezier(.2,.7,.2,1)'});
+      panels[i].querySelector('figcaption').animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:380,delay:100,fill:'backwards'});
     }
     widget.querySelectorAll('[data-tour-panel] img').forEach(function (image) {
-      image.addEventListener('mouseenter', function () { hoveringImage = true; schedule(); });
-      image.addEventListener('mouseleave', function () { hoveringImage = false; schedule(); });
+      image.addEventListener('mouseenter', function () { hover = true; });
+      image.addEventListener('mouseleave', function () { hover = false; last = performance.now(); });
     });
-    tabs.forEach(tab => tab.addEventListener('click', function () {
-      hoveringImage = Boolean(widget.querySelector('[data-tour-panel]:not([hidden]) img:hover'));
-      schedule();
-    }));
-    document.addEventListener('visibilitychange', schedule);
-    schedule();
+    function tick(now) {
+      hover = Boolean(widget.querySelector('[data-tour-panel]:not([hidden]) img:hover'));
+      if (!hover && !document.hidden) elapsed += now - last;
+      last = now;
+      if (elapsed >= duration) {
+        const current = tabs.findIndex(tab => tab.getAttribute('aria-selected') === 'true');
+        elapsed = 0; auto = true; tabs[(current + 1) % tabs.length].click(); auto = false;
+      }
+      paint(); frame = requestAnimationFrame(tick);
+    }
+    document.addEventListener('visibilitychange', function () { last = performance.now(); });
+    reduced.addEventListener('change', function () {
+      if (reduced.matches) panels.forEach(panel => panel.getAnimations({subtree:true}).forEach(animation => animation.cancel()));
+    });
+    frame = requestAnimationFrame(tick);
   });
 });

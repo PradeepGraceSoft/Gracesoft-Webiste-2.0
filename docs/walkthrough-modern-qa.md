@@ -1,0 +1,13 @@
+# Modern operations walkthrough QA — 2026-11-04
+
+Checkpoint ae88094 (Cleaned md files and worked manage operators) was pushed to origin/feature/gracesoft-home-v2 before implementation. This redesign remains local and uncommitted.
+
+Updated the existing preview and operations module: slim numbered steps with feature icons, larger screenshot stage with browser frame and shadow, editable benefit headings, slide/caption transitions, synchronized ten-second progress line, and horizontally scrollable mobile navigation. Existing placeholder images remain explicitly labeled. Existing no-button autoplay preference is preserved; image hover freezes elapsed time and mouse leave resumes the remaining duration. Manual selection resets the timer. Reduced motion suppresses transitions and progress animation while retaining requested slide switching.
+
+Evidence: working/preview/check-walkthrough-modern.cjs and walkthrough-modern-qa.json. At 1440, 390 and 320 CSS pixels, verified progress near 40% after four seconds, hover freezing, resume, keyboard End selection, loop back to Reservations, six caption headings, and no horizontal document overflow. Inspected walkthrough-review-1440.png and walkthrough-review-390.png after correcting mobile grid sizing. JavaScript syntax and git diff whitespace checks pass.
+
+Limitations: this is a static local approximation, not HubL portal rendering. Full WCAG conformance is not claimed: the user-requested autoplay has image-hover pausing but no persistent keyboard/touch pause control. New module fields require authorized portal/editor validation before release. No HubSpot writes or deployment.
+
+Extended the same walkthrough to Grow your bookings with four editable tabs and local placeholder images. Removed both reservation-flow boxes and the standalone Website Builder plans link, including unused fields. Checked four tab/image selections and no overflow at 1440, 390 and 320px; inspected desktop capture. Shared animation logic keeps independent timers per viewer. Evidence: check-booking-walkthrough.cjs, check-booking-timing.cjs and booking-walkthrough screenshots.
+
+Engage guests now has four cards: Guest inbox, AI voice assistant, AI chat assistant, and Guest profiles and follow-up. Split AI copy and links remain editable. Replaced the text journey panels with four editable screenshot panels using labeled placeholders. Shared countdown/progress/hover pause behavior applies independently to this viewer. Verified tab/image loading and no overflow at 1440, 390 and 320px; inspected desktop capture. All four hover icons and reduced-motion suppression passed. Evidence: check-guest-walkthrough.cjs, check-guest-timing.cjs and guest-walkthrough screenshots.

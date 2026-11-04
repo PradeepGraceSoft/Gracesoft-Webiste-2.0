@@ -338,7 +338,8 @@
 /* Operations: decorative icon feedback. */
 @media (prefers-reduced-motion:no-preference) and (hover:hover){
  .tour-operations .tour-cards article:hover>svg,
- .tour-distribution .tour-cards article:hover>svg{animation:operations-icon-bounce .65s ease-in-out}
+ .tour-distribution .tour-cards article:hover>svg,
+ .tour-guest-journey .tour-cards article:hover>svg{animation:operations-icon-bounce .65s ease-in-out}
 }
 @keyframes operations-icon-bounce{
  0%,100%{transform:translateY(0) rotate(0)}
@@ -349,3 +350,35 @@
 
 .tour-operations .tour-head>.tour-link{display:inline-block;margin-top:12px}
 
+
+/* Operations walkthrough: slim navigation and framed product stage. */
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget{grid-template-columns:155px minmax(0,1fr);gap:20px;padding:24px;border:1px solid #406052;background:radial-gradient(ellipse at top right,#315c48 0,transparent 65%),#1c4134;box-shadow:0 18px 40px #1c413415}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls h3{font-size:26px;margin:4px 0 24px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button{position:relative;display:flex;align-items:center;gap:8px;padding:15px 9px;margin:4px 0;border:0;border-radius:7px;background:transparent;overflow:hidden;font-size:13px;min-height:52px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button[aria-selected="true"]{background:#e1ecd9;color:#173c30}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button:hover{background:#ffffff14}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button[aria-selected="true"]:hover{background:#e1ecd9}
+.walkthrough-number{font-size:10px;letter-spacing:.06em;opacity:.8;font-variant-numeric:tabular-nums}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button svg{width:17px;height:17px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.walkthrough-label{line-height:1.4}
+.walkthrough-progress{position:absolute;bottom:0;left:0;width:100%;height:3px;background:#8c442e;transform:scaleX(var(--tour-progress,0));transform-origin:left}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels{align-self:start;border-radius:12px;box-shadow:0 14px 30px #071d2540;overflow:hidden}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels figure{border-radius:0 0 10px 10px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels::before{content:"●  ●  ●";display:block;padding:8px 14px;font:12px/1.2 system-ui;color:#788b7d;background:#edf0e7;border-bottom:1px solid #ccd7c9;letter-spacing:3px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels img{aspect-ratio:16/9;object-fit:contain;background:#f4f6ef}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels figcaption{padding:18px 20px;min-height:112px;font:14px/1.55 system-ui,sans-serif;background:#fffdf6}
+.walkthrough-benefit{display:block;font:400 23px/1.2 Georgia,serif;margin-bottom:8px;color:#243a32}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget[data-ready] [data-tour-panel]:not([hidden]){animation:none}
+@media(max-width:1000px){
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget{grid-template-columns:1fr;padding:18px}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls h3{margin-bottom:14px}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls [role="tablist"]{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:4px 4px 8px;scrollbar-width:thin;scrollbar-color:#a9c0aa transparent}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button{width:auto;flex:0 0 auto;white-space:nowrap;margin:0;padding:12px;min-height:48px}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels figcaption{min-height:132px;padding:16px}
+}
+@media(prefers-reduced-motion:reduce){.walkthrough-progress{display:none}}
+
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls{min-width:0}
+@media(max-width:1000px){:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget{grid-template-columns:minmax(0,1fr)}}
+
+.tour-guest-journey .tour-widget{color:#fffdf3}

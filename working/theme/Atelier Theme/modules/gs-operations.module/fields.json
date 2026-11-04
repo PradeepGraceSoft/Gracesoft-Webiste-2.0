@@ -325,5 +325,41 @@
     "label": "Feature 6 CTA label",
     "type": "text",
     "default": "Explore reporting"
+  },
+  {
+    "name": "screen_1_heading",
+    "label": "Screen 1 benefit heading",
+    "type": "text",
+    "default": "See availability at a glance"
+  },
+  {
+    "name": "screen_2_heading",
+    "label": "Screen 2 benefit heading",
+    "type": "text",
+    "default": "Keep the front desk informed"
+  },
+  {
+    "name": "screen_3_heading",
+    "label": "Screen 3 benefit heading",
+    "type": "text",
+    "default": "Prepare for the next arrival"
+  },
+  {
+    "name": "screen_4_heading",
+    "label": "Screen 4 benefit heading",
+    "type": "text",
+    "default": "Review charges and payments"
+  },
+  {
+    "name": "screen_5_heading",
+    "label": "Screen 5 benefit heading",
+    "type": "text",
+    "default": "Connect on-property purchases"
+  },
+  {
+    "name": "screen_6_heading",
+    "label": "Screen 6 benefit heading",
+    "type": "text",
+    "default": "Review property performance"
   }
 ]

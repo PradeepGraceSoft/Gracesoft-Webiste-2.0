@@ -18,141 +18,6 @@
     "default": "A guest may ask about a room before booking and contact the front desk again after arrival. Explore how guest messaging, profiles and follow-up tools fit those moments."
   },
   {
-    "name": "stage_1",
-    "label": "Stage 1",
-    "type": "text",
-    "default": "Before arrival"
-  },
-  {
-    "name": "stage_1_example",
-    "label": "Stage 1 example",
-    "type": "text",
-    "default": "A traveler asks whether a room is available for the weekend."
-  },
-  {
-    "name": "stage_1_capabilities",
-    "label": "Stage 1 capabilities",
-    "type": "text",
-    "default": "Explore the guest inbox, AI voice and chat, and quotes for prospective guests."
-  },
-  {
-    "name": "stage_1_url",
-    "label": "Stage 1 url",
-    "type": "url",
-    "default": {
-      "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/unified-inbox"
-    }
-  },
-  {
-    "name": "stage_1_label",
-    "label": "Stage 1 label",
-    "type": "text",
-    "default": "Explore Guest Communication"
-  },
-  {
-    "name": "stage_2",
-    "label": "Stage 2",
-    "type": "text",
-    "default": "During the stay"
-  },
-  {
-    "name": "stage_2_example",
-    "label": "Stage 2 example",
-    "type": "text",
-    "default": "A guest asks the front desk about a late checkout."
-  },
-  {
-    "name": "stage_2_capabilities",
-    "label": "Stage 2 capabilities",
-    "type": "text",
-    "default": "Explore guest communication, profiles and Guest Hub for in-stay requests."
-  },
-  {
-    "name": "stage_2_url",
-    "label": "Stage 2 url",
-    "type": "url",
-    "default": {
-      "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/unified-inbox"
-    }
-  },
-  {
-    "name": "stage_2_label",
-    "label": "Stage 2 label",
-    "type": "text",
-    "default": "Explore Guest Communication"
-  },
-  {
-    "name": "stage_3",
-    "label": "Stage 3",
-    "type": "text",
-    "default": "After checkout"
-  },
-  {
-    "name": "stage_3_example",
-    "label": "Stage 3 example",
-    "type": "text",
-    "default": "A returning guest wants to hear about another stay."
-  },
-  {
-    "name": "stage_3_capabilities",
-    "label": "Stage 3 capabilities",
-    "type": "text",
-    "default": "Explore CRM, campaigns and loyalty options for follow-up."
-  },
-  {
-    "name": "stage_3_url",
-    "label": "Stage 3 url",
-    "type": "url",
-    "default": {
-      "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/crm-software"
-    }
-  },
-  {
-    "name": "stage_3_label",
-    "label": "Stage 3 label",
-    "type": "text",
-    "default": "Explore Hospitality CRM"
-  },
-  {
-    "name": "timeline_label",
-    "label": "Timeline label",
-    "type": "text",
-    "default": "Illustrative guest journey"
-  },
-  {
-    "name": "communication_url",
-    "label": "Communication url",
-    "type": "url",
-    "default": {
-      "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/unified-inbox"
-    }
-  },
-  {
-    "name": "communication_label",
-    "label": "Communication label",
-    "type": "text",
-    "default": "Explore Guest Communication"
-  },
-  {
-    "name": "crm_url",
-    "label": "Crm url",
-    "type": "url",
-    "default": {
-      "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/crm-software"
-    }
-  },
-  {
-    "name": "crm_label",
-    "label": "Crm label",
-    "type": "text",
-    "default": "Explore Hospitality CRM"
-  },
-  {
     "name": "feature_1",
     "label": "Feature 1",
     "type": "text",
@@ -183,13 +48,13 @@
     "name": "feature_2",
     "label": "Feature 2",
     "type": "text",
-    "default": "AI voice and chat"
+    "default": "AI voice assistant"
   },
   {
     "name": "feature_2_description",
     "label": "Feature 2 description",
     "type": "text",
-    "default": "Explore how voice and chat assistants handle guest inquiries."
+    "default": "Explore how voice assistants help handle guest enquiries by phone."
   },
   {
     "name": "feature_2_url",
@@ -232,5 +97,146 @@
     "label": "Feature 3 label",
     "type": "text",
     "default": "Explore Hospitality CRM"
+  },
+  {
+    "name": "feature_4",
+    "label": "Feature 4",
+    "type": "text",
+    "default": "AI chat assistant"
+  },
+  {
+    "name": "feature_4_description",
+    "label": "Feature 4 Description",
+    "type": "text",
+    "default": "Explore how chat assistants help answer guest questions through chat."
+  },
+  {
+    "name": "feature_4_label",
+    "label": "Feature 4 Label",
+    "type": "text",
+    "default": "Explore GraceSoft AI"
+  },
+  {
+    "name": "feature_4_url",
+    "label": "AI chat link",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/gracesoft-ai"
+    }
+  },
+  {
+    "name": "viewer_title",
+    "label": "Walkthrough heading",
+    "type": "text",
+    "default": "Explore guest engagement"
+  },
+  {
+    "name": "screen_1",
+    "label": "Screen 1",
+    "type": "text",
+    "default": "Guest inbox"
+  },
+  {
+    "name": "screen_1_heading",
+    "label": "Screen 1 Heading",
+    "type": "text",
+    "default": "Keep conversations together"
+  },
+  {
+    "name": "screen_1_caption",
+    "label": "Screen 1 Caption",
+    "type": "text",
+    "default": "Guest inbox preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_1_image",
+    "label": "Guest inbox screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Guest inbox screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_2",
+    "label": "Screen 2",
+    "type": "text",
+    "default": "AI voice assistant"
+  },
+  {
+    "name": "screen_2_heading",
+    "label": "Screen 2 Heading",
+    "type": "text",
+    "default": "Help answer guest calls"
+  },
+  {
+    "name": "screen_2_caption",
+    "label": "Screen 2 Caption",
+    "type": "text",
+    "default": "AI voice assistant preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_2_image",
+    "label": "AI voice assistant screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "AI voice assistant screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_3",
+    "label": "Screen 3",
+    "type": "text",
+    "default": "AI chat assistant"
+  },
+  {
+    "name": "screen_3_heading",
+    "label": "Screen 3 Heading",
+    "type": "text",
+    "default": "Support guest questions through chat"
+  },
+  {
+    "name": "screen_3_caption",
+    "label": "Screen 3 Caption",
+    "type": "text",
+    "default": "AI chat assistant preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_3_image",
+    "label": "AI chat assistant screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "AI chat assistant screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_4",
+    "label": "Screen 4",
+    "type": "text",
+    "default": "Guest profiles and follow-up"
+  },
+  {
+    "name": "screen_4_heading",
+    "label": "Screen 4 Heading",
+    "type": "text",
+    "default": "Keep guest details close"
+  },
+  {
+    "name": "screen_4_caption",
+    "label": "Screen 4 Caption",
+    "type": "text",
+    "default": "Guest profiles and follow-up preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_4_image",
+    "label": "Guest profiles and follow-up screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Guest profiles and follow-up screenshot placeholder; not a product screen"
+    }
   }
 ]

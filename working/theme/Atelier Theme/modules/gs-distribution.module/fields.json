@@ -18,54 +18,6 @@
     "default": "Your website introduces the property. Your booking engine gives guests a way to reserve. Your channel manager helps the team maintain availability across supported booking channels."
   },
   {
-    "name": "direct_heading",
-    "label": "Direct heading",
-    "type": "text",
-    "default": "Direct reservations"
-  },
-  {
-    "name": "direct_step_1",
-    "label": "Direct step 1",
-    "type": "text",
-    "default": "Website Builder"
-  },
-  {
-    "name": "direct_step_2",
-    "label": "Direct step 2",
-    "type": "text",
-    "default": "Booking engine"
-  },
-  {
-    "name": "direct_step_3",
-    "label": "Direct step 3",
-    "type": "text",
-    "default": "Reservation calendar"
-  },
-  {
-    "name": "channels_heading",
-    "label": "Channels heading",
-    "type": "text",
-    "default": "Channel reservations"
-  },
-  {
-    "name": "channels_step_1",
-    "label": "Channels step 1",
-    "type": "text",
-    "default": "Booking channels"
-  },
-  {
-    "name": "channels_step_2",
-    "label": "Channels step 2",
-    "type": "text",
-    "default": "Channel manager"
-  },
-  {
-    "name": "channels_step_3",
-    "label": "Channels step 3",
-    "type": "text",
-    "default": "Reservation calendar"
-  },
-  {
     "name": "feature_1",
     "label": "Feature 1",
     "type": "text",
@@ -147,21 +99,6 @@
     "default": "Explore the Channel Manager"
   },
   {
-    "name": "plans_url",
-    "label": "Plans url",
-    "type": "url",
-    "default": {
-      "type": "EXTERNAL",
-      "href": "https://www.gracesoft.com/websites"
-    }
-  },
-  {
-    "name": "plans_label",
-    "label": "Plans label",
-    "type": "text",
-    "default": "See Website Builder Plans"
-  },
-  {
     "name": "feature_4",
     "label": "Feature 4",
     "type": "text",
@@ -186,6 +123,120 @@
     "default": {
       "type": "EXTERNAL",
       "href": "https://www.gracesoft.com/feature-listing"
+    }
+  },
+  {
+    "name": "viewer_title",
+    "label": "Walkthrough heading",
+    "type": "text",
+    "default": "Explore booking tools"
+  },
+  {
+    "name": "screen_1",
+    "label": "Screen 1",
+    "type": "text",
+    "default": "Website Builder"
+  },
+  {
+    "name": "screen_1_heading",
+    "label": "Screen 1 Heading",
+    "type": "text",
+    "default": "Introduce your property"
+  },
+  {
+    "name": "screen_1_caption",
+    "label": "Screen 1 Caption",
+    "type": "text",
+    "default": "Website Builder preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_1_image",
+    "label": "Website Builder screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Website Builder screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_2",
+    "label": "Screen 2",
+    "type": "text",
+    "default": "Booking engine"
+  },
+  {
+    "name": "screen_2_heading",
+    "label": "Screen 2 Heading",
+    "type": "text",
+    "default": "Give guests a direct booking path"
+  },
+  {
+    "name": "screen_2_caption",
+    "label": "Screen 2 Caption",
+    "type": "text",
+    "default": "Booking engine preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_2_image",
+    "label": "Booking engine screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Booking engine screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_3",
+    "label": "Screen 3",
+    "type": "text",
+    "default": "Channel manager"
+  },
+  {
+    "name": "screen_3_heading",
+    "label": "Screen 3 Heading",
+    "type": "text",
+    "default": "Coordinate rates and availability"
+  },
+  {
+    "name": "screen_3_caption",
+    "label": "Screen 3 Caption",
+    "type": "text",
+    "default": "Channel manager preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_3_image",
+    "label": "Channel manager screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Channel manager screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_4",
+    "label": "Screen 4",
+    "type": "text",
+    "default": "Google Hotel Ads"
+  },
+  {
+    "name": "screen_4_heading",
+    "label": "Screen 4 Heading",
+    "type": "text",
+    "default": "Support discovery on Google"
+  },
+  {
+    "name": "screen_4_caption",
+    "label": "Screen 4 Caption",
+    "type": "text",
+    "default": "Google Hotel Ads preview \u2014 product screenshot coming soon."
+  },
+  {
+    "name": "screen_4_image",
+    "label": "Google Hotel Ads screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Google Hotel Ads screenshot placeholder; not a product screen"
     }
   }
 ]
