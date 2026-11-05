@@ -1,0 +1,66 @@
+<!--
+  templateType: "drag_drop_email"
+  isAvailableForNewContent: false
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{{content.html_title}}</title>
+    <!--
+    Prevent iOS 11 from automatically scaling emails
+    - https://litmus.com/blog/what-email-marketers-need-to-know-about-ios-11-and-the-new-iphones
+    -->
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--
+    We have included meta ‘Content Type’ so that we can set the character
+    set as UTF8 u2013 specifying as much as possible can be a good thing when
+    writing code for the whole range of email clients.
+    More info on Content-Type Character Encoding in HTML Emails:
+    - https://www.emailonacid.com/blog/article/email-development/the_importance_of_content-type_character_encoding_in_html_emails/
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
+    The IE=Edge meta tag enables CSS3 and media queries in Windows Phone 7.5
+    and higher. That's why you should use it in your email.
+    More info:
+    - https://www.campaignmonitor.com/forums/topic/7989/windows-phone-8-has-full-css3media-query-support/
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--
+    Meta ‘Viewport’ as seen above sets the viewable area to the width of the
+    device screen u2013 this is essential if you want your email to be
+    responsive. If your email is intended solely for desktop users then
+    don't include this line of code.
+    -->
+    {% style_settings is_json=True %}
+      {"background_color":"#04161e","background_image":null,"background_image_type":null,"body_border_color":null,"body_border_color_choice":null,"body_border_width":"1","body_color":"#ffffff","color_picker_favorite1":null,"color_picker_favorite2":null,"color_picker_favorite3":null,"color_picker_favorite4":null,"color_picker_favorite5":null,"color_picker_favorite6":null,"email_body_padding":null,"email_body_width":null,"heading_one_font":{"bold":null,"color":null,"font":null,"font_style":{},"italic":null,"size":"22","underline":null},"heading_two_font":{"bold":null,"color":null,"font":null,"font_style":{},"italic":null,"size":"22","underline":null},"links_font":{"bold":false,"color":"#4497b6","font":null,"font_style":{},"italic":false,"size":null,"underline":true},"primary_accent_color":null,"primary_font":"Verdana, sans-serif","primary_font_color":"#112337","primary_font_line_height":null,"primary_font_size":"15","secondary_accent_color":null,"secondary_font":"Verdana, sans-serif","secondary_font_color":"#23496d","secondary_font_line_height":null,"secondary_font_size":"12","user_module_defaults":{"button_email":{"background_color":"#e1a517","corner_radius":0,"font":"Verdana, sans-serif","font_color":"#ffffff","font_size":16,"font_style":{"color":"#ffffff","font":"Verdana, sans-serif","size":{"units":"px","value":16},"styles":{"bold":true,"italic":false,"underline":false}}},"email_divider":{"color":{"color":"#e1a517","opacity":100},"height":2,"line_type":"solid"}}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes}}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }} 
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+
+  <body bgcolor="{{style_settings.background_color}}">
+  {{ preview_snippet }}
+  {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% widget_block email_flex_area "main" overrideable=True %}
+            {% widget_attribute "default_layout" is_json=True %}
+              {"boxFirstElementIndex":0,"boxLastElementIndex":0,"boxed":false,"sections":[{"columns":[{"id":"module_1541596235300_0","widgets":["module_1541596301904138","module_154201598411913","module_154159623530022","module_15420142970053"],"width":12}],"id":"module_1541596235300","style":{"backgroundColor":"#112337","backgroundImage":"","backgroundImageType":"REPEAT","backgroundType":"CONTENT","paddingBottom":"0px","paddingTop":"0px"}},{"columns":[{"id":"builtin_column_0-0","widgets":["builtin_module_0_0_0","module_153967835847739"],"width":12}],"id":"builtin_section-0","style":{"backgroundType":"CONTENT","paddingBottom":"60px","paddingTop":"40px"}},{"columns":[{"id":"builtin_column_2-0","widgets":["builtin_module_2_0_0"],"width":12}],"id":"builtin_section-2","style":{"backgroundColor":"#04161e","backgroundType":"CONTENT","paddingBottom":"50px","paddingTop":"30px"}}]}
+            {% end_widget_attribute %}
+            {% widget_attribute "default_widgets" %}
+              {"builtin_module_0_0_0":{"body":{"html":"<h1 style=\"text-align: center;\">We are so grateful to you</h1>\n<p style=\"text-align: center;\">To thank you for being such a brilliant customer, you can take an extra 20% off everything on our site. Just enter the code TURKEY18 at checkout. Happy shopping!</p>","module_id":1155639},"id":"builtin_module_0_0_0","module_id":1155639,"name":"builtin_module_0_0_0","type":"module"},"builtin_module_2_0_0":{"body":{"align":"center","font":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":false}},"hs_enable_module_padding":false,"link_font":{"color":"#ffffff","font":"Verdana, sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}},"module_id":2869621,"unsubscribe_link_type":"unsubscribe"},"id":"builtin_module_2_0_0","module_id":2869621,"name":"builtin_module_2_0_0","type":"module"},"module_153967835847739":{"body":{"alignment":"center","background_color":"#e1a517","corner_radius":0,"cta_field":null,"destination":"http://www.example.com","font_style":{"color":"#ffffff","font":"Verdana, sans-serif","size":{"units":"px","value":16},"styles":{"bold":true,"italic":false,"underline":false}},"make_full_width":true,"module_id":1976948,"text":"Save now"},"id":"module_153967835847739","module_id":1976948,"name":"module_153967835847739","type":"module"},"module_154159623530022":{"body":{"html":"<p style=\"text-align: center;\"><strong><span style=\"font-size: 36px; color: #ffffff;\">Happy Thanksgiving!</span></strong></p>","module_id":1155639},"id":"module_154159623530022","module_id":1155639,"name":"module_154159623530022","type":"module"},"module_1541596301904138":{"body":{"alignment":"center","css":{},"hs_enable_module_padding":false,"img":{"alt":"","height":455,"src":"email_dnd_template_images/Fall2-leaves-top.png","width":2814},"link":null,"module_id":1367093},"id":"module_1541596301904138","module_id":1367093,"name":"module_1541596301904138","type":"module"},"module_15420142970053":{"body":{"alignment":"center","css":{},"hs_enable_module_padding":false,"img":{"alt":"","height":461,"src":"email_dnd_template_images/Fall2-leaves-bottom.png","width":2817},"link":null,"module_id":1367093},"id":"module_15420142970053","module_id":1367093,"name":"module_15420142970053","type":"module"},"module_154201598411913":{"body":{"alignment":"center","css":{"padding-bottom":"10px","padding-left":"20px","padding-right":"20px","padding-top":"10px"},"hs_enable_module_padding":true,"img":{"alt":"","height":81,"src":"email_dnd_template_images/Fall2-Turkey.png","width":250},"link":null,"module_id":1367093},"id":"module_154201598411913","module_id":1367093,"name":"module_154201598411913","type":"module"}}
+            {% end_widget_attribute %}
+            {% end_widget_block %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

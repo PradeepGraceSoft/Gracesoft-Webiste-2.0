@@ -1,0 +1,54 @@
+{% import "../_variables.css" as var %}
+
+.footer__section--top {
+  padding-top: 2.78rem;
+  padding-bottom: 2.78rem;
+}
+
+.footer h4 {
+  margin-bottom: 1.11rem;
+  font-family: {{ var.text_font_family }};
+  font-weight: {{ var.text_font_weight }};
+  font-style: {{ var.text_font_style }};
+  font-size: {{ var.large_text }}rem;
+  line-height: {{ var.text_height }};
+}
+
+.footer__form-title h4,
+.footer__icons .module .module__inner > * {
+  margin-bottom: 0;
+}
+
+/* Dark scheme */
+
+{% if theme.components.footer.scheme == 'dark' %}
+
+  .footer {
+    background: {{ var.dark }};
+  }
+  
+  .footer__section--top {
+    background: {{ var.white_bg }};
+  }
+  
+  .footer h4 {
+    color: {{ var.white }};
+  }
+
+/* Light scheme */
+
+{% else %}
+
+  .footer {
+    background: {{ var.white }};
+  }
+  
+  .footer__section--top {
+    background: {{ var.light }};
+  }
+  
+  .footer h4 {
+    color: {{ var.dark }};
+  }
+
+{% endif %}

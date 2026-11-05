@@ -1,0 +1,68 @@
+{% import '../_variables.css' as var %}
+
+.header--overlap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 6;
+}
+
+/* Fixes HS editor overlapping problem */
+
+.hs-inline-edit .header--overlap {
+  z-index: 2147483599;
+}
+
+.header--overlap:not(.header--sticky-active) .header__section--top,
+.header--overlap:not(.header--sticky-active),
+.header--overlap:not(.header--sticky-active) .header__section--main {
+  background: none;
+}
+
+.header--overlap .header__section--main,
+.header--overlap .header__info,
+.header--overlap .header__lang,
+.header--overlap:not(.header--sticky-active) .header__nav .nav > ul > li:not(:last-child) {
+  border-color: {{ var.white_borders }};
+}
+
+.header--overlap:not(.header--sticky-active) .header__info {
+  color: {{ var.white_text }};
+}
+
+.header--overlap:not(.header--sticky-active) .header__info a,
+.header--overlap:not(.header--sticky-active) .header__info a:hover {
+  color: {{ var.white }};
+}
+
+.header--overlap:not(.header--sticky-active) .site-search__open {
+  border-color: {{ var.white_borders }};
+  color: {{ var.white }};
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .header--overlap:not(.header--sticky-active) .header__lang {
+    border-right-color: {{ var.white_borders }};
+  }
+}
+
+.header--overlap:not(.header--sticky-active) .lang-select__button {
+  color: {{ var.white }};
+}
+
+.header--overlap:not(.header--sticky-active) .header__mobile-nav .mnav__open {
+  color: {{ var.white }};
+}
+
+.header--overlap:not(.header--sticky-active) .header__nav .nav__list--level1 > li > .nav__link {
+  color: {{ var.white }};
+}
+
+.header--overlap:not(.header--sticky-active) .header__nav .nav--arrows .nav__list--level1 > .nav__item--branch > a {
+  background-image: url("data:image/svg+xml, <svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path d='M3.60311 4.14644C3.40785 4.34171 3.40785 4.65829 3.60311 4.85356L6.60312 7.85355C6.79837 8.0488 7.11497 8.0488 7.31022 7.85355L10.3102 4.85356C10.5055 4.65829 10.5055 4.34171 10.3102 4.14644C10.115 3.95119 9.79837 3.95119 9.60312 4.14644L6.95667 6.7929L4.31022 4.14644C4.11496 3.95119 3.79838 3.95119 3.60311 4.14644Z' fill='{{ var.white_text_hex|replace('#', '%23') }}' fill-opacity='{{ var.white_text_opacity }}'></path></svg>");
+}
+
+.header--overlap:not(.header--sticky-active) .header__nav .nav__link .super-text {
+  color: {{ var.white_text }};
+}

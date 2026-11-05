@@ -1,0 +1,388 @@
+<!--
+  templateType: global_partial
+  label: Footer 3
+-->
+
+{# Color scheme #}
+{% if theme.components.footer.scheme == 'dark' %}
+  {% set footer_color_scheme = 'dark' %}
+{% else %}
+  {% set footer_color_scheme = 'light' %}
+{% endif %}
+
+{% dnd_area 'above_footer', label='Above footer', class='above-footer' %}{% end_dnd_area %}
+
+<footer class="footer footer--3 hs-search-hidden">
+  <div class="footer__section footer__section--main section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s4 md-s12">
+          <div class="footer__logo">
+            {% module 'footer_logo' path='@hubspot/logo' label='Logo'
+              img={
+                'override_inherited_src': true,
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/act3-logo-color.svg',
+                'alt': 'Act3 logo',
+                "width": "52"
+              }
+            %}
+          </div>
+          <div class="footer__about">
+            {% module 'footer_about' path='../modules/rich-text' label='About' 
+              text='<h4>Create a modern HubSpot website with Act3.</h4>' 
+              settings={
+                'color_scheme': footer_color_scheme 
+              }
+              wrapper={
+                'max_width': {
+                  'lg': '280'
+                }
+              }
+            %}
+          </div>
+          <div class="footer__icons">
+            {% if theme.components.footer.scheme == 'dark' %}
+              {% set footer_icons_color = 'ghost' %}
+            {% else %}
+              {% set footer_icons_color = 'light' %}
+            {% endif %}
+            {% module 'footer_icons' path='../modules/icon' label='Icons'
+              icon=[
+                {
+                  'internal_name': 'X (Twitter)',
+                  'type': 'code',
+                  'code': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>',
+                  'color': footer_icons_color,
+                  'link': {
+                    'url': {
+                      'href': 'https://x.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'internal_name': 'Slack',
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Slack Logo',
+                    'unicode': 'f198',
+                    'type': 'REGULAR',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': footer_icons_color,
+                  'link': {
+                    'url': {
+                      'href': 'https://youtube.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'internal_name': 'GitHub',
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'github',
+                    'unicode': 'f09b',
+                    'type': 'REGULAR',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': footer_icons_color,
+                  'link': {
+                    'url': {
+                      'href': 'https://github.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                }
+              ]
+              settings={
+                'shape': 'disc',
+                'fill': 'outline',
+                'size': 'medium',
+                'space': 10
+              }
+              wrapper={
+                'margin': {
+                  'bottom': {
+                    'sm': '60'
+                  }
+                }
+              }
+            %}
+          </div>
+        </div>
+        <div class="col s8 md-s12">
+          <div class="footer__nav">
+            {% module 'footer_nav' path='../modules/column-navigation' label='Navigation'
+              column=[
+                {
+                  'title': 'Website',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Home',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'About',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Team',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Product',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Pricing',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Services',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Resources',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Conversion',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Click Through',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Lead Gen',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Get a Quote',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Download',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Request a Demo',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Get Started',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Blog',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Classic',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Minimalist',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Modern',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Robust',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Help',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Demo',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Get started',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Components',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Features',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Tutorials',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+              settings={
+                'color_scheme': footer_color_scheme,
+                'col_lg': 's3',
+                'col_md': 'md-s3',
+                'col_sm': 'sm-s6'
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__section footer__section--bottom section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="footer__copyright-and-links">
+            <div class="row items-center">
+              <div class="col s6">
+                <div class="footer__copyright">
+                  {% module 'footer_copyright' path='../modules/rich-text' label='Copyright' 
+                    text='Copyright © {{ year }} Company, Inc.' 
+                    settings={
+                      'text_size': 'small',
+                      'color_scheme': footer_color_scheme
+                    }
+                  %}
+                </div>
+              </div>
+              <div class="col s6">
+                <div class="footer__links">
+                  {% module 'footer_links' path='../modules/rich-text' label='Links'
+                    text='
+                      <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                      </ul>
+                    ' 
+                    settings={
+                      'text_size': 'small',
+                      'color_scheme': footer_color_scheme
+                    }
+                  %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{{ require_css(get_asset_url('../css/components/footer-03.css')) }}

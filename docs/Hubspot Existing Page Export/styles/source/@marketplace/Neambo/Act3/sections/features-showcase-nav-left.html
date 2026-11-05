@@ -1,0 +1,33 @@
+<!--
+ templateType: section
+ label: Features showcase with left navigation
+ description: "Highlight the most important features, benefits or services with a beautiful navigable slider."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/features-showcase-nav-left.jpg
+-->
+{% dnd_section
+  full_width=true,
+  padding={
+    'default': {
+      'top': 0,
+      'bottom': 0,
+      'left': 0,
+      'right': 0
+    }
+  }
+%}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-extra-settings',
+        bg_color='light'
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/features-showcase',
+        settings={
+          'col_order': 'left'
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

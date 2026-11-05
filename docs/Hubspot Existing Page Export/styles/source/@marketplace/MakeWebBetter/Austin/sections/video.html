@@ -1,0 +1,73 @@
+<!--
+templateType: section
+label: Video
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/video.png
+description: "Section with middle centered heading, text, and video."
+-->
+
+{% dnd_section
+  class="au-video-section",
+  max_width=1090
+%}
+{% dnd_column 
+%}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 35,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Speed Up With Ingenious Approach</h2><p>Empower your business with this highly creative theme. Choose the best option to always stay ahead.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+       %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module
+        path='../modules/video-popup',
+        style={
+         "alignment" : {
+         "alignment" : "center"         
+         }
+        }
+     %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

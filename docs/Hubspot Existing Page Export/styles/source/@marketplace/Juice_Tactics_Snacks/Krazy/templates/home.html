@@ -1,0 +1,881 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Home
+screenshotPath: ../images/template-previews/homepage.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--home container-fluid-custom', label='Main section' %}
+
+  {# START: Hero Two Column #}
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-hero-1",
+        offset=0,
+        width=12,
+        button_1={
+          "button_text" : "Sign Up"
+        },
+        button_2={
+          "button_text" : "Learn more"
+        },
+        heading_text="Grow Your Business 10x with Krazy",
+        image={
+          "alt" : "pexels-dan-cristian-1476321",
+          "height" : 3647,
+          "loading" : "lazy",
+          "max_height" : 3647,
+          "max_width" : 4866,
+          "size_type" : "auto_custom_max",
+          "src" : get_asset_url('../images/hero-tech.png'),
+          "width" : 4866
+        },
+        styles={
+          "button_2" : {
+            "button_outline" : true            
+          }
+        },
+        tag_line="Freemium Technology Theme"
+      %}
+  {% module_attribute "rich_text" %}
+  <p>The Krazy brings all of your website requirements under one roof,&nbsp; services, sales, operations, and support altogether.</p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Hero Two Column #}
+
+  {# START: Logo Slider #}
+  {% dnd_section
+  background_color="rgba(243, 243, 247, 1)",
+  padding={
+    "default" : {
+      "bottom" : "20px",
+      "top" : "20px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-logo-slider",
+        offset=0,
+        width=12,
+        logo=[ {
+          "boolean_field" : false,
+          "image" : {
+            "alt" : "logo-1",
+            "height" : 400,
+            "loading" : "lazy",
+            "max_height" : 400,
+            "max_width" : 400,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/logo-1.svg'),
+            "width" : 400
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "boolean_field" : false,
+          "image" : {
+            "alt" : "logo-2",
+            "height" : 400,
+            "loading" : "lazy",
+            "max_height" : 400,
+            "max_width" : 400,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/logo-2.svg'),
+            "width" : 400
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "boolean_field" : false,
+          "image" : {
+            "alt" : "logo-2",
+            "height" : 400,
+            "loading" : "lazy",
+            "max_height" : 400,
+            "max_width" : 400,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/logo-3.svg'),
+            "width" : 400
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "boolean_field" : false,
+          "image" : {
+            "alt" : "logo-2",
+            "height" : 400,
+            "loading" : "lazy",
+            "max_height" : 400,
+            "max_width" : 400,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/logo-4.svg'),
+            "width" : 400
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "boolean_field" : false,
+          "image" : {
+            "alt" : "logo-2",
+            "height" : 400,
+            "loading" : "lazy",
+            "max_height" : 400,
+            "max_width" : 400,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/logo-5.svg'),
+            "width" : 400
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "filter" : false,
+          "image" : {
+            "alt" : "logo-2",
+            "height" : 400,
+            "loading" : "lazy",
+            "max_height" : 400,
+            "max_width" : 400,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/logo-6.svg'),
+            "width" : 400
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "filter" : false,
+          "image" : {
+            "alt" : "logo-2",
+            "height" : 400,
+            "loading" : "lazy",
+            "max_height" : 400,
+            "max_width" : 400,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/logo-1.svg'),
+            "width" : 400
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        } ]
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Logo Slider #}
+
+  {# START: Basic Content #}
+  {% dnd_section 
+    padding={
+    "default" : {
+      "bottom" : "0px"
+    }
+  }
+  %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-basic",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        heading_text="Sync Across All Devices",
+        tag_line="Our BeSpoke Solutions"
+      %}
+  {% module_attribute "rich_text" %}
+  <p>Everything you need to make your business grow super fast!</p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Basic Content #}
+
+
+  {# START: Services Content #}
+  {% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "20px",
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-two-column-content-1",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Read more"
+        },
+        heading_text="Web Applications",
+        image={
+          "alt" : "pexels-pixabay-270408",
+          "height" : 852,
+          "loading" : "lazy",
+          "max_height" : 852,
+          "max_width" : 1280,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/pexels-pixabay-270408.jpg'),
+          "width" : 1280
+        },
+        tag_line=""
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-two-column-content-1",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Read more"
+        },
+        heading_text="Mobile Apps",
+        image={
+          "alt" : "pexels-torsten-dettlaff-54284",
+          "height" : 853,
+          "loading" : "lazy",
+          "max_height" : 853,
+          "max_width" : 1280,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/pexels-torsten-dettlaff.jpg'),
+          "width" : 1280
+        },
+        styles={
+          "content_type" : "right-image"
+        },
+        tag_line=""
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-card-2",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        card=[ {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "WHMCS",
+            "type" : "REGULAR",
+            "unicode" : "f40d"
+          },
+          "card_number" : "",
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Dashboard"
+        }, {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "Wired Network",
+            "type" : "SOLID",
+            "unicode" : "f6ff"
+          },
+          "card_number" : "",
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Custom Rules"
+        }, {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "Toggle On",
+            "type" : "SOLID",
+            "unicode" : "f205"
+          },
+          "card_number" : "",
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Presets"
+        }, {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "Area Chart",
+            "type" : "SOLID",
+            "unicode" : "f1fe"
+          },
+          "card_number" : "",
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Metrics"
+        } ],
+        heading_text="",
+        styles={
+          "card" : {
+            "border" : {
+              "card_border" : {
+                "bottom" : {
+                  "color" : "#5b1ee1",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "left" : {
+                  "color" : "#5b1ee1",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "right" : {
+                  "color" : "#5b1ee1",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "top" : {
+                  "color" : "#5b1ee1",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                }
+              }
+            },
+            "content_alignment" : {
+              "card_text_center" : false
+            }
+          },
+          "content_text_center" : false
+        },
+        tag_line=""
+      %}
+  {% module_attribute "rich_text" %}
+
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Services Content #}
+
+  {# START: Pricing #}
+  {% dnd_section
+  background_color="rgba(243, 243, 247, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-pricing",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Need a Customized Plan? Please contact us."
+        },
+        heading_text="Plans & Pricing",
+        pricing=[ {
+          "pricing_button" : {
+            "pricing_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "pricing_button_text" : "Choose plan",
+            "pricing_button_type" : "simple"
+          },
+          "pricing_currency" : "$",
+          "pricing_features" : [ {
+            "pricing_features" : "Email Support",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "IOS and Android App",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Customizable Dashboard",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Metric API"
+          } ],
+          "pricing_name" : "Basic",
+          "pricing_number" : "15",
+          "pricing_popular" : {
+            "badge_text" : "Most Popular",
+            "enable_badge" : false
+          },
+          "pricing_text" : "<p><span>per month</span></p>"
+        }, {
+          "pricing_button" : {
+            "pricing_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "pricing_button_text" : "Choose plan",
+            "pricing_button_type" : "simple"
+          },
+          "pricing_currency" : "$",
+          "pricing_features" : [ {
+            "pricing_features" : "Email Support",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "IOS and Android App",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Customizable Dashboard",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Metric API"
+          } ],
+          "pricing_name" : "Startup",
+          "pricing_number" : "30",
+          "pricing_popular" : {
+            "badge_text" : "Most Popular",
+            "enable_badge" : false
+          },
+          "pricing_text" : "<p><span>per month</span></p>"
+        }, {
+          "pricing_button" : {
+            "pricing_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "pricing_button_text" : "Choose plan",
+            "pricing_button_type" : "simple"
+          },
+          "pricing_currency" : "$",
+          "pricing_features" : [ {
+            "pricing_features" : "Email Support",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "IOS and Android App",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Customizable Dashboard",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Metric API"
+          } ],
+          "pricing_name" : "Professional",
+          "pricing_number" : "75",
+          "pricing_popular" : {
+            "badge_text" : "Most Popular",
+            "enable_badge" : true
+          },
+          "pricing_text" : "<p><span>per month</span></p>"
+        }, {
+          "pricing_button" : {
+            "pricing_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "pricing_button_text" : "Choose plan",
+            "pricing_button_type" : "simple"
+          },
+          "pricing_currency" : "$",
+          "pricing_features" : [ {
+            "pricing_features" : "Email Support",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "IOS and Android App",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Customizable Dashboard",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Metric API"
+          } ],
+          "pricing_name" : "Business",
+          "pricing_number" : "100",
+          "pricing_popular" : {
+            "badge_text" : "Most Popular",
+            "enable_badge" : false
+          },
+          "pricing_text" : "<p><span>per month</span></p>"
+        } ],
+        styles={
+          "button" : {
+            "button_outline" : true
+          },
+          "pricing" : {
+            "background" : {
+              "card_background_color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              }
+            },
+            "button" : {
+              "pricing_card_button_fullwidth" : true,
+              "pricing_card_button_outline" : false
+            },
+            "card_border" : {
+              "border" : {
+                "bottom" : {
+                  "color" : "#eeeeee",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "left" : {
+                  "color" : "#eeeeee",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "right" : {
+                  "color" : "#eeeeee",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "top" : {
+                  "color" : "#eeeeee",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                }
+              }
+            }
+          },
+          "section_button" : {
+            "button_outline" : true
+          }
+        },
+        tag_line="No credit card required"
+      %}
+  {% module_attribute "rich_text" %}
+  <p>No risk, 30-day money back guarantee!</p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Pricing #}
+
+  {# START: Testimonial Slider #}
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-testimonial",
+        offset=0,
+        width=12,
+        heading_text="What People Say About Us",
+        styles={
+          "heading" : {
+            "heading_font_size" : 0
+          },
+          "section_background_color" : {
+            "color" : "#EEEEEE",
+            "opacity" : 100
+          }
+        },
+        testimonial=[ {
+          "testimonial_image" : {
+            "alt" : "author-square",
+            "height" : 50,
+            "max_height" : 50,
+            "max_width" : 50,
+            "src" : get_asset_url('../images/author-square.jpg'),
+            "width" : 50
+          },
+          "testimonial_name" : "Bryant Chou",
+          "testimonial_text" : "<p>Nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>",
+          "testimonial_title" : "Director at TrueBox"
+        }, {
+          "testimonial_image" : {
+            "alt" : "author-square",
+            "height" : 50,
+            "max_height" : 50,
+            "max_width" : 50,
+            "src" : get_asset_url('../images/author-square.jpg'),
+            "width" : 50
+          },
+          "testimonial_name" : "Kyle Killen",
+          "testimonial_text" : "<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>",
+          "testimonial_title" : "Designer at Tiempo Labs"
+        }, {
+          "testimonial_image" : {
+            "alt" : "author-square",
+            "height" : 50,
+            "max_height" : 50,
+            "max_width" : 50,
+            "src" : get_asset_url('../images/author-square.jpg'),
+            "width" : 50
+          },
+          "testimonial_name" : "Sergei Kalashnikov",
+          "testimonial_text" : "<p>Ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna</p>",
+          "testimonial_title" : "CEO at BintoBox"
+        } ]
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Testimonial Slider #}
+
+
+  {# START: CTA Single Column #}
+  {% dnd_section
+  background_image={
+    "background_position" : "MIDDLE_CENTER",
+    "background_size" : "cover",
+    "image_url" : get_asset_url('../images/pexels-negative-space-33999.jpg')
+  },
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "80px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-cta-2",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Drop a query"
+        },
+        heading_text="Contact Us",
+        styles={
+          "card" : {
+            "background" : {
+              "card_background_gradient" : {
+                "colors" : [ {
+                  "color" : {
+                    "a" : 0.4,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                }, {
+                  "color" : {
+                    "a" : 0.4,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                } ],
+                "side_or_corner" : {
+                  "verticalSide" : "BOTTOM"
+                }
+              },
+              "card_background_type" : "gradient"
+            }
+          },
+          "content_type" : "right-cta"
+        },
+        tag_line="Have a question?"
+      %}
+  {% module_attribute "rich_text" %}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: CTA Single Column #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,240 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Contact Us Four
+screenshotPath: ../images/template-previews/contact-four.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--contact-us-four'
+%}
+
+{#  Banner Section #}
+{% dnd_section 
+  vertical_alignment='MIDDLE',
+  full_width=true,
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_column
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+   {% dnd_module 
+    path='../modules/banner-layouts',  
+      'subtitle'="",
+      'content'="<h1>Try the familiar functions in the new</h1><p>Proficient freelance UI/UX designer having more than 12 years of experience in creating and designing digital products. Skilled in balsamiq, XD, figma, fireworks, dreamweaver, HTML5, jquery, javascript.</p>",
+        primary_cta = {'type': 'btn','text' : 'View More'},
+        secondary_cta = { 'type': 'btn','text' : 'More Information'},
+        image= {
+          'src': get_asset_url('../images/multipurpose/banner-four.png'),
+          'alt': 'girl'
+        },
+         style_1={
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 40,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+        }
+%}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "banner_with_image"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Banner Section #}
+
+{# Title Seciton #}
+{% dnd_section 
+    padding={
+        'default': {
+          'top': 80,
+          'right': 20,
+          'bottom': 60,
+          'left': 20
+        },
+        'mobile': {
+          'top': 40,
+          'right': 20,
+          'bottom': 20,
+          'left': 20
+        }
+     }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h2>Reach Us</h2><p>If you need any assistance from me, please feel free to contact me.</p>"
+      style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 760 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{#  End of Title Section #}
+
+{# Contact Section #}
+{% include_dnd_partial path='../sections/contact-section.html', %}
+{# End of Contact Section #}
+
+{# Subscription Form Seciton #}
+{% dnd_section 
+  padding={
+        'default': {
+          'top': 60,
+          'right': 20,
+          'bottom': 60,
+          'left': 20
+        },
+        'mobile': {
+          'top': 40,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        }
+     }
+%}
+{% dnd_column %}
+{% dnd_row 
+   padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 20,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h2>Subscribe to our newsletter</h2><p>If you need any assistance from me, please feel free to contact me.</p>"
+     style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 760 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/form',
+    style= {
+       'form_max_width': {enable: true, 'form_max_width': 600},
+    }
+%} 
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "single_field_inline_button"
+}
+{% end_module_attribute %}
+
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{#  End of Subscription Form Section #}
+
+{# Spacer #}
+{% dnd_section
+full_width=true,
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module 'au_spacer' 
+	path='../modules/spacer',
+  style= {
+    'height_desktop_': 60,
+    'height_tablet_': 60,
+    'height_mobile_': 40
+  }      
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{% end_dnd_area %}
+{% endblock body %}

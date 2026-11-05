@@ -1,0 +1,2 @@
+var mybutton=document.getElementById("myBtn");function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?mybutton.style.display="block":mybutton.style.display="none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}window.onscroll=function(){scrollFunction()};
+//# sourceURL=https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/hub_generated/template_assets/1/185706371389/1738579449818/template_main.js

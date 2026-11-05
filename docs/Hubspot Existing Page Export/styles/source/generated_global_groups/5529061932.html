@@ -1,0 +1,82 @@
+<div class="" data-global-widget-path="generated_global_groups/5529061932.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dp22-header main-header-container white-header" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell wrapper" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span3 widget-span widget-type-linked_image logo" style="" data-widget-type="linked_image" data-x="0" data-w="3">
+<div class="cell-wrapper layout-widget-wrapper">
+{% linked_image "module_1494393034298856" original_width=1404, src='https://cdn2.hubspot.net/hubfs/107648/gracesoft_LOGO.png', img_load_error=false, alt='gracesoft_LOGO.png', link='http://www.gracesoft.com', img_alt='gracesoft_LOGO.png', open_in_new_tab=false, width=580, original_height=484, overrideable=false, height=200, label='Add Company Logo' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span9 widget-span widget-type-menu menu-container custom-menu-primary-container" style="" data-widget-type="menu" data-x="3" data-w="9">
+<div class="cell-wrapper layout-widget-wrapper">
+{% menu "module_1494394560733900" root_type='site_root', site_map_name='default', site_menu_name='default', max_levels='3', flyouts='true', flow='horizontal', overrideable=false, label='Menu' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html " style="" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block raw_html "module_1494405096054733" overrideable=false, label='Script (Do not Delete or Move)' %}
+{% widget_attribute "value" %}<script>
+    
+
+$(function() {
+
+    /** 
+     * Mobile Nav
+     *
+     * Hubspot Standard Toggle Menu
+     */
+
+    $('.custom-menu-primary-container').addClass('js-enabled');
+    
+    /* Mobile button with three lines icon */
+        $('.custom-menu-primary-container .hs-menu-wrapper').before('<div class="mobile-trigger"><i></i></div>');
+        
+    /* Uncomment for mobile button that says 'MENU' 
+        $('.custom-menu-primary-container .hs-menu-wrapper').before('<div class="mobile-trigger">MENU</div>');
+    */
+    
+    $('.custom-menu-primary-container .flyouts .hs-item-has-children > a').after(' <div class="child-trigger"><i></i></div>');
+    $('.mobile-trigger').click(function() {
+        $(this).next('.custom-menu-primary-container .hs-menu-wrapper').slideToggle(250);
+        $('body').toggleClass('mobile-open');
+        $('.child-trigger').removeClass('child-open');
+        $('.hs-menu-children-wrapper').slideUp(250);
+        return false;
+     });
+
+    $('.child-trigger').click(function() {
+        $(this).parent().siblings('.hs-item-has-children').find('.child-trigger').removeClass('child-open');
+        $(this).parent().siblings('.hs-item-has-children').find('.hs-menu-children-wrapper').slideUp(250);
+        $(this).next('.hs-menu-children-wrapper').slideToggle(250);
+        $(this).next('.hs-menu-children-wrapper').children('.hs-item-has-children').find('.hs-menu-children-wrapper').slideUp(250);
+        $(this).next('.hs-menu-children-wrapper').children('.hs-item-has-children').find('.child-trigger').removeClass('child-open');
+        $(this).toggleClass('child-open');
+        return false;
+    });
+
+});
+    
+</script>{% end_widget_attribute %}
+{% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div>

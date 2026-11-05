@@ -1,0 +1,9 @@
+{% import '../_variables.css' as var %}
+
+.membership-logout__intro {
+  text-wrap: balance;
+}
+
+.membership-logout__details {
+  margin-top: {{ var.gutter }}px;
+}

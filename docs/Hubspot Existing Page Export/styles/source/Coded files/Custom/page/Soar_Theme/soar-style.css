@@ -1,0 +1,72 @@
+/* ==========================================================================
+   HubSpot Design Assets - COS Boilerplate Framework v2.0.0                                  
+   ========================================================================== */
+{% set soar = true %}
+  
+
+/* ==========================================================================  
+    EXTERNAL RESOURCES                                              
+   ========================================================================== */
+  
+/* =============== @import, @font-face, and CSS File Includes =============== */ 
+
+/* EX: @import url('http://example.com/example_style.css'); */ 
+ 
+{# Import FontAwesome for Icons #} 
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+{# Import Montserrat from Google Fonts #}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i');
+
+
+/* ==========================================================================
+    Variables                                 
+   ========================================================================== */
+
+{# Set the main font family stack. Make sure to include any fall back fonts #}
+{% set mainFontFamily = "Montserrat, sans-serif" %}
+
+{# Set the main text color #}
+{% set mainTextColor = "#494d4e" %}
+
+{# Set the main background color #}
+{% set mainBackgroundColor = "#fff" %}
+
+{# Set the main accent color. Default: blue #}
+{% set mainAccentColor = "#0d91d1" %}
+
+{# Set the url for the Blog Listing Page banner image #}
+{% set blogListingsBannerImage = "//cdn2.hubspot.net/hubfs/762525/Soar%20Theme/blog-background.jpg" %}
+
+{# Set the footer background color. Also used for accent bar at above logo. Default: gray #}
+{% set footerBackgroundColor = "#3b3f40" %}
+
+{# Set the secondary text color. Normally used over dark backgrounds #}
+{% set secondaryTextColor = "#fff" %}
+
+{# Set the secondary background color. Used on form comment form and post listings. Default: light gray #}
+{% set secondaryBackgroundColor = "#f9f9f9" %}
+
+{# Set the form text color. Affects all forms except comment form. Default: white #}
+{% set formTextColor = "#fff" %}
+
+/* ==========================================================================
+    Components (make edits in each respective file)                                 
+   ========================================================================== */
+
+    
+{% import 'Coded files/Custom/page/Macros/_macros.css' %}
+
+/* == HubSpot Module Hotfixes ===== */
+{% include 'Coded files/Custom/page/Soar_Theme/_module_hotfixes.css' %} 
+
+/* == Theme Specific Styles ====== */
+{% include 'Coded files/Custom/page/Soar_Theme/_base.css' %}
+
+{% include 'Coded files/Custom/page/Soar_Theme/_hero.css' %}
+{% include 'Coded files/Custom/page/Soar_Theme/_structure.css' %}
+{% include 'Coded files/Custom/page/Soar_Theme/_navigation.css' %}
+{% include 'Coded files/Custom/page/Soar_Theme/_blog.css' %}
+{% include 'Coded files/Custom/page/Soar_Theme/_forms.css' %}
+{% include 'Coded files/Custom/page/Soar_Theme/_misc.css' %}
+

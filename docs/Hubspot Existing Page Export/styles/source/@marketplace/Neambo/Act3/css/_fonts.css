@@ -1,0 +1,25 @@
+{# Default text #}
+{% set ef_text_font_family = "Arial, sans-serif" %}
+{% set ef_text_font_weight = "normal" %}
+{% set ef_text_font_style = "normal" %}
+{% set ef_strong_font_family = "Arial, sans-serif" %}
+{% set ef_strong_font_weight = "bold" %}
+{% set ef_strong_font_style = "normal" %}
+
+{# Headings text #}
+{% set ef_headings_font_family = "Arial, sans-serif" %}
+{% set ef_headings_font_weight = "normal" %}
+{% set ef_headings_font_style = "normal" %}
+{% set ef_headings_strong_font_family = "Arial, sans-serif" %}
+{% set ef_headings_strong_font_weight = "bold" %}
+{% set ef_headings_strong_font_style = "normal" %}
+
+{# UI elements text #}
+{% set ef_ui_font_family = "Arial, sans-serif" %}
+{% set ef_ui_font_weight = "normal" %}
+{% set ef_ui_font_style = "normal" %}
+{% set ef_ui_strong_font_family = "Arial, sans-serif" %}
+{% set ef_ui_strong_font_weight = "bold" %}
+{% set ef_ui_strong_font_style = "normal" %}
+
+/* Include your CSS font code here (e.g. @font-face, @import). For best speed performance, use the same Font Family for all three */

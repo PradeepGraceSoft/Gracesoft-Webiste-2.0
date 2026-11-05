@@ -1,0 +1,79 @@
+{% import "../_variables.css" as var %}
+
+.form--dark .hs-input,
+.form--dark #hs-pwd-widget-password {
+  border-color: {{ var.white }};
+}
+
+.form--dark .hs-input[type='checkbox'],
+.form--dark .hs-input[type='radio'] {
+  border-color: rgba(255, 255, 255, .5);
+}
+
+.form--dark .hs-input:hover,
+.form--dark #hs-pwd-widget-password:hover {
+  box-shadow: 0 0 0 8px {{ var.white_borders }};
+}
+
+.form--dark .hs-input[type='checkbox']:hover,
+.form--dark .hs-input[type='radio']:hover {
+  box-shadow: 0 0 0 8px rgba({{ var.white|default('#ffffff')|convert_rgb }}, .2);
+}
+
+.form--dark .hs-input:focus,
+.form--dark #hs-pwd-widget-password:focus {
+  border-color: {{ var.accent }};
+  box-shadow: 0 0 0 4px rgba({{ var.accent|default('#F65954')|convert_rgb }}, .15), 0 0 0 1px {{ var.accent }} inset;
+}
+
+.form--dark-no-accent .hs-input:focus,
+.form--dark-no-accent #hs-pwd-widget-password:focus {
+  border-color: {{ var.white }};
+  box-shadow: 0 0 0 4px {{ var.white_borders }}, 0 0 0 1px {{ var.white }} inset;
+}
+
+.form--dark .hs-input[type='checkbox']:focus,
+.form--dark .hs-input[type='radio']:focus {
+  border-color: {{ var.accent }};
+  box-shadow: 0 0 0 4px rgba({{ var.accent|default('#F65954')|convert_rgb }}, .2);
+}
+
+.form--dark-no-accent .hs-input[type='checkbox']:focus,
+.form--dark-no-accent .hs-input[type='radio']:focus {
+  border-color: {{ var.white }};
+  box-shadow: 0 0 0 4px {{ var.white_borders }};
+}
+
+.form--dark .hs-input.error {
+  border-color: {{ var.accent }};
+  box-shadow: 0 0 0 4px rgba({{ var.accent|default('#F65954')|convert_rgb }}, .2), 0 0 0 1px {{ var.accent }} inset;
+}
+
+.form--dark-no-accent .hs-input.error {
+  border-color: {{ var.white }};
+  box-shadow: 0 0 0 4px {{ var.white_borders }}, 0 0 0 1px {{ var.white }} inset;
+}
+
+.form--dark .hs-input[type='checkbox']:checked,
+.form--dark .hs-input[type='radio']:checked {
+  background-color: {{ var.accent }};
+  border-color: transparent;
+}
+
+.form--dark-no-accent .hs-input[type='checkbox']:checked,
+.form--dark-no-accent .hs-input[type='radio']:checked {
+  background-color: {{ var.white }};
+}
+
+.form--dark-no-accent .hs-input[type='checkbox']:checked {
+  background-image: url("data:image/svg+xml, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><path fill=\"{{ var.dark|replace('#', '%23') }}\" d=\"M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z\"></path></svg>");
+}
+
+.form--dark-no-accent .hs-input[type='radio']:checked {
+  background-image: url("data:image/svg+xml, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><path fill=\"{{ var.dark|replace('#', '%23') }}\" d=\"M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z\"></path></svg>");
+}
+
+.form--dark-no-accent .hs-error-msg {
+  background: {{ var.white }};
+  color: {{ var.dark }};
+}

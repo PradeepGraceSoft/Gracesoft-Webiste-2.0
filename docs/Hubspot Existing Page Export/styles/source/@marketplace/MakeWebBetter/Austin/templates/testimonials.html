@@ -1,0 +1,168 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Testimonials Page
+screenshotPath: ../images/template-previews/testimonials.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--testimonial'
+%}
+
+{# Testimonial Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+    full_width=true,
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_column 
+   padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+      "subtitle"="",
+      "content"="<h1>Testimonials</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec felis at pellentesque. Sed amet dolor penatibus sed at posuere justo, lacinia neque.</p>"
+       primary_cta={ type: 'none' },
+       secondary_cta={ type: 'none' }
+       style_1={
+          'banner_content_alignment': { 
+            'banner_content_alignment_desktop_' : {
+              alignment_choice: 'center'
+            },
+            'banner_content_alignment_mobile_' : {
+              alignment_choice: 'center'
+            }
+          },
+          'max_width':{ enable: true,value: 760 },   
+             'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+        }
+     %}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_color"
+}
+{% end_module_attribute %}
+{% module_attribute 'banner_content_alignment_desktop_' is_json=True %}
+{
+"alignment_choice": "center"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Testimonial Banner #}
+
+{# Team Listing #}
+{% dnd_section
+    padding={
+				'default': {
+          'top': 40,
+          'right': 20,
+          'bottom': 80,
+          'left': 20
+        },
+        'mobile': {
+          'top': 20,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        }
+			}
+		%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 'au_team_listing' 
+				path='../modules/testimonials',
+        "hide_show_quotes"="false",
+        style= {
+          'card_spacing':{
+            'spacing_desktop_': {
+                 'padding': {
+                      'top': {
+                        'value': 40,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 40,
+                        'units': 'px'
+                      }
+                  }
+            }
+          }
+        }
+%}
+{% module_attribute 'testimonial_layouts_choice' is_json=True %}
+{
+"testimonial_layouts": "card_layout"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Team Listing Section #}
+
+{% end_dnd_area %}
+{% endblock body %}

@@ -1,0 +1,130 @@
+<!--
+  templateType: global_partial
+  label: Website footer
+-->
+<footer class="footer">
+  {% dnd_area 'footer'
+    label='Footer'
+  %}
+    {% dnd_section
+      padding={
+        'top': 48,
+        'bottom': 48
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_column 
+            width=6,
+            margin={
+              "bottom": "20px"
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='@hubspot/logo' %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module
+                path='@hubspot/rich_text',
+                label='Column 1 content',                
+                html='<p style="font-size: 18px; line-height: 1.75;">Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.</p>'
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module
+                path='../../modules/social-follow',
+                styles={
+                  'alignment': {
+                    'alignment': {
+                      'horizontal_align': 'LEFT'
+                    }
+                  }
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}                
+          {% end_dnd_column %}
+          {% dnd_column
+            offset=6,
+            width=3,
+            margin={
+              "bottom": "20px"
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path='@hubspot/rich_text',  
+                label='Column 2 content',                             
+                html='<div style="text-align: left;">
+                  <div>
+                  <div><strong>Pages</strong></div>
+                  <br>
+                  <div style="line-height: 2;">Home</div>
+                  <div style="line-height: 2;">Services</div>
+                  <div style="line-height: 2;">Portfolio</div>
+                  <div style="line-height: 2;">About</div>
+                  <div style="line-height: 2;">Contact</div>
+                  <div style="line-height: 2;">FAQ</div>
+                  <div style="line-height: 2;">Landing Page</div>
+                  <div style="line-height: 2;">Thank You</div>          
+                  </div>
+                  </div>'
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column
+            offset=9,
+            width=3,
+            margin={
+              "bottom": "20px"
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path='@hubspot/rich_text',
+                label='Column 3 content',  
+                html='<div style="text-align: left;">
+                  <div>
+                  <div><strong>Resources</strong></div>
+                  <br>
+                  <div style="line-height: 2;">Blog</div>
+                  <div style="line-height: 2;">Watch a Demo</div>
+                  <div style="line-height: 2;">Academy</div>
+                  <div style="line-height: 2;">Webinars</div>
+                  <div style="line-height: 2;">Product Changes</div>                  
+                  </div>
+                  </div>'
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+
+        {% end_dnd_row %}  
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# Footer bottom #}
+
+    {% dnd_section
+      padding={
+        'top': 48,
+        'bottom': 48
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            label='Copyright',
+            html='<div style="text-align: right;"><p>Copyright © {{ year }}, {{ site_settings.company_name }}</p></div>'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}      
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</footer>

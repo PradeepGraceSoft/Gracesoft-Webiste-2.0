@@ -1,0 +1,98 @@
+{% import "../_variables.css" as var %}
+
+/* Nav */
+
+.tabs__nav {
+  margin: 0 -.28rem {{ var.gutter }}px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabs--nav-border .tabs__nav {
+  border-bottom: 3px solid;
+}
+
+.tabs__nav-item {
+  flex-shrink: 0;
+}
+
+.tabs__nav .tabs__btn {
+  margin: 0 .28rem .56rem;
+}
+
+.tabs--nav-border .tabs__nav .tabs__btn {
+  margin-bottom: 0;
+  transform-origin: bottom;
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .tabs__nav {
+    display: none;
+  }
+}
+
+/* Content */
+
+.tabs__content .tabs__btn {
+  display: none;
+  width: 100%;
+  margin: 0 0 .56rem;
+  text-align: start;
+}
+
+.tabs__content .tabs__btn:hover {
+  transform: none;
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .tabs__content .tabs__btn {
+    display: block;
+  }
+
+  .tabs__tab {
+    padding: {{ var.gutter }}px 0;
+  }
+  
+  .tabs--indent .tabs__tab {
+    padding-left: {{ var.btn_medium_plr }}rem;
+    padding-right: {{ var.btn_medium_plr }}rem;
+  }
+  
+  .tabs--indent.tabs--buttons-small .tabs__tab {
+    padding-left: {{ var.btn_small_plr }}rem;
+    padding-right: {{ var.btn_small_plr }}rem;
+  }
+  
+  .tabs--indent.tabs--buttons-large .tabs__tab {
+    padding-left: {{ var.btn_large_plr }}rem;
+    padding-right: {{ var.btn_large_plr }}rem;
+  }
+}
+
+.tabs__tab:not(.tabs__tab--active) {
+  display: none;
+}
+
+.tabs--active .tabs__tab--active {
+  animation: .2s ease-in-out forwards fadeInUp;
+}
+
+@media (min-width: {{ var.sm + 1 }}px) {
+  .tabs--active .tabs__tab--active {
+    transform-origin: left top;
+  }
+}
+
+/* Light scheme */
+
+.tabs--light.tabs--nav-border .tabs__nav {
+  border-color: {{ var.accent }};
+}
+
+/* Dark scheme */
+
+.tabs--dark.tabs--nav-border .tabs__nav {
+  border-color: {{ var.white_borders }};
+}

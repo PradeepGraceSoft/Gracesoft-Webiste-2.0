@@ -1,0 +1,815 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: About
+screenshotPath: ../images/template-previews/about.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--about container-fluid-custom', label='Main section' %}
+
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-hero-1",
+        offset=0,
+        width=12,
+        button_1={
+          "button_text" : "Install Theme"
+        },
+        button_2={
+          "button_icon" : {
+            "name" : ""
+          },
+          "button_text" : "Learn more"
+        },
+        heading_text="The story behind Krazy",
+        image={
+          "alt" : "large-placeholder-image",
+          "height" : 3647,
+          "loading" : "lazy",
+          "max_height" : 3647,
+          "max_width" : 4866,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/pexels-dan-cristian-1476321.jpg'),
+          "width" : 4866
+        },
+        styles={
+          "button_2" : {
+            "button_outline" : true
+          },
+          "image_corner" : {
+            "radius" : 6
+          }
+        },
+        tag_line="About us"
+      %}
+        {% module_attribute "rich_text" %}
+          <p>Lorem ipsum dolor sit amet, consecteturlomer adipiscing elit. Aenean bibendum at.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+  
+  {% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "20px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-animated-counter",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        card=[ {
+          "card_content" : "<p>Venture capital raised</p>",
+          "card_number" : "3000",
+          "card_suffix" : "$m"
+        }, {
+          "card_content" : "<p>Founded since 2010</p>",
+          "card_number" : "12",
+          "card_suffix" : "year"
+        }, {
+          "card_content" : "<p>Global Workforce</p>",
+          "card_number" : "223",
+          "card_suffix" : "+"
+        }, {
+          "card_content" : "<p>Active users and growing</p>",
+          "card_number" : "1856",
+          "card_suffix" : "+"
+        } ],
+        heading_text="Our Krazy Facts",
+        styles={
+          "card" : {
+            "background" : {
+              "card_background_gradient" : {
+                "colors" : [ {
+                  "color" : {
+                    "a" : 1,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                }, {
+                  "color" : {
+                    "a" : 1,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                } ],
+                "side_or_corner" : {
+                  "verticalSide" : "BOTTOM"
+                }
+              },
+              "card_background_type" : "gradient"
+            },
+            "border" : {
+              "card_border" : {
+                "bottom" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "left" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "right" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "top" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                }
+              }
+            },
+            "content_alignment" : {
+              "card_text_center" : false
+            },
+            "corner" : {
+              "radius" : 4
+            },
+            "number" : {
+              "card_number_color" : {
+                "color" : "#14192b",
+                "opacity" : 100
+              },
+              "card_number_size" : 48
+            },
+            "number_suffix" : {
+              "card_number_suffix_size" : 40
+            }
+          },
+          "content_text_center" : true
+        },
+        tag_line=""
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "20px",
+      "top" : "20px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-two-column-content-1",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        heading_text="How company started",
+        image={
+          "alt" : "people-team",
+          "height" : 853,
+          "loading" : "lazy",
+          "max_height" : 853,
+          "max_width" : 1280,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/peoples-team.jpg'),
+          "width" : 1280
+        },
+        styles={
+          "heading" : {
+            "heading_type" : "<h2>"
+          },
+          "image_corner" : {
+            "radius" : 6
+          }
+        },
+        tag_line="Our life in technology"
+      %}
+        {% module_attribute "rich_text" %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel ut congue varius congue aliquet leo. Netus neque nibh semper in diam viverra nibh aliquam elit. Amet orci et dolor, faucibus a leo malesuada ullamcorper. Amet pellentesque velit felis mollis turpis pellentesque donec. Cursus consectetur mattis molestie nibh no.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "20px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-card-2",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        card=[ {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "Check Circle",
+            "type" : "REGULAR",
+            "unicode" : "f058"
+          },
+          "card_number" : "",
+          "card_text" : "<div>\n<div>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper scelerisque morbi lobortis laoreet vel.</p>\n</div>\n</div>",
+          "card_title" : "Commitment"
+        }, {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "flag",
+            "type" : "REGULAR",
+            "unicode" : "f024"
+          },
+          "card_number" : "",
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Ownership"
+        }, {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "Lightbulb",
+            "type" : "SOLID",
+            "unicode" : "f0eb"
+          },
+          "card_number" : "",
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Innovation"
+        }, {
+          "card_button" : {
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_footer_text" : "",
+          "card_icon" : {
+            "name" : "User Friends",
+            "type" : "SOLID",
+            "unicode" : "f500"
+          },
+          "card_number" : "",
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Teamwork"
+        } ],
+        heading_text="Our Values",
+        styles={
+          "card" : {
+            "border" : {
+              "card_border" : {
+                "bottom" : {
+                  "color" : "#dae5ec",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "left" : {
+                  "color" : "#dae5ec",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "right" : {
+                  "color" : "#dae5ec",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "top" : {
+                  "color" : "#dae5ec",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                }
+              }
+            },
+            "content_alignment" : {
+              "card_text_center" : false
+            },
+            "corner" : {
+              "radius" : 4
+            },
+            "title" : {
+              "card_title_color" : {
+                "color" : "#14192b",
+                "opacity" : 100
+              }
+            }
+          },
+          "content_text_center" : true
+        },
+        tag_line=""
+      %}
+        {% module_attribute "rich_text" %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-card-3",
+        offset=0,
+        width=12,
+        button={
+          "button_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://484997.hs-sites.com/krazy/contact",
+              "type" : "EXTERNAL"
+            }
+          },
+          "button_text" : "Join our team"
+        },
+        card=[ {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : ""
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_icon" : [ {
+            "card_icon" : {
+              "name" : "Facebook F",
+              "type" : "REGULAR",
+              "unicode" : "f39e"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          } ],
+          "card_image" : {
+            "alt" : "theta",
+            "height" : 640,
+            "loading" : "lazy",
+            "max_height" : 640,
+            "max_width" : 640,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/theta.jpg'),
+            "width" : 640
+          },
+          "card_text" : "<p><span>CEO, Co - Founder</span></p>",
+          "card_title" : "John Doe"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : ""
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_icon" : [ {
+            "card_icon" : {
+              "name" : "Facebook F",
+              "type" : "REGULAR",
+              "unicode" : "f39e"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          } ],
+          "card_image" : {
+            "alt" : "Kaira Samson",
+            "height" : 640,
+            "loading" : "lazy",
+            "max_height" : 640,
+            "max_width" : 640,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/alpha.jpg'),
+            "width" : 640
+          },
+          "card_text" : "<p><span>Founder</span></p>",
+          "card_title" : "Kaira Samson"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : ""
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_icon" : [ {
+            "card_icon" : {
+              "name" : "Facebook F",
+              "type" : "REGULAR",
+              "unicode" : "f39e"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          } ],
+          "card_image" : {
+            "alt" : "Serena Holmes",
+            "height" : 640,
+            "loading" : "lazy",
+            "max_height" : 640,
+            "max_width" : 640,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/gamma.jpg'),
+            "width" : 640
+          },
+          "card_text" : "<p><span>VP of Marketing</span></p>",
+          "card_title" : "Serena Holmes"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : ""
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "",
+            "card_button_type" : "simple"
+          },
+          "card_icon" : [ {
+            "card_icon" : {
+              "name" : "Facebook F",
+              "type" : "REGULAR",
+              "unicode" : "f39e"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "card_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          } ],
+          "card_image" : {
+            "alt" : "Shaw Meyer",
+            "height" : 1280,
+            "loading" : "lazy",
+            "max_height" : 1280,
+            "max_width" : 1280,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/zeta.jpg'),
+            "width" : 1280
+          },
+          "card_text" : "<p><span>Creative Head</span></p>",
+          "card_title" : "Shaw Meyer"
+        } ],
+        heading_text="The Team behind Krazy Technology",
+        styles={
+          "card" : {
+            "background" : {
+              "card_background_gradient" : {
+                "colors" : [ {
+                  "color" : {
+                    "a" : 1,
+                    "b" : 240,
+                    "g" : 234,
+                    "r" : 233
+                  }
+                }, {
+                  "color" : {
+                    "a" : 1,
+                    "b" : 240,
+                    "g" : 234,
+                    "r" : 233
+                  }
+                } ],
+                "side_or_corner" : {
+                  "verticalSide" : "BOTTOM"
+                }
+              }
+            },
+            "content_alignment" : {
+              "card_text_center" : true
+            },
+            "corner" : {
+              "radius" : 6
+            },
+            "icon" : {
+              "card_icon_background_color" : {
+                "color" : "#0144e4",
+                "opacity" : 100
+              },
+              "card_icon_color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              }
+            },
+            "title" : {
+              "card_title_size" : 24
+            }
+          },
+          "content_text_center" : false
+        },
+        tag_line=""
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-recent-post",
+        offset=0,
+        width=12,
+        blog_read_more_icon={
+          "name" : ""
+        },
+        blog_read_more_text="",
+        button={
+          "button_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://484997.hs-sites.com/krazy/contact",
+              "type" : "EXTERNAL"
+            }
+          },
+          "button_text" : "Contact Us"
+        },
+        heading_text="Krazy in the news",
+        styles={
+          "card" : {
+            "colors" : {
+              "article_card_topic_background_color" : {
+                "color" : "#f7f8fa",
+                "opacity" : 100
+              },
+              "article_card_topic_border_color" : {
+                "color" : "#dae5ec",
+                "opacity" : 100
+              },
+              "article_card_topic_color" : {
+                "color" : "#14192b",
+                "opacity" : 100
+              },
+              "blog_card_title_color" : {
+                "color" : "#14192b",
+                "opacity" : 100
+              }
+            },
+            "content_alignment" : {
+              "blog_card_text_center" : false
+            },
+            "corner" : {
+              "radius" : 4
+            }
+          },
+          "content_text_center" : false,
+          "heading" : {
+            "heading_type" : "<h2>"
+          }
+        },
+        tag_line=""
+      %}
+        {% module_attribute "rich_text" %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitoli. Vestibulum enim nulla enim sapien nulla quis.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {% dnd_section
+  background_image={
+    "background_position" : "MIDDLE_CENTER",
+    "background_size" : "cover",
+    "image_url" : get_asset_url('../images/pexels-negative-space-33999.jpg')
+  },
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "80px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-cta-2",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Drop a query"
+        },
+        heading_text="Contact Us",
+        styles={
+          "card" : {
+            "background" : {
+              "card_background_gradient" : {
+                "colors" : [ {
+                  "color" : {
+                    "a" : 0.4,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                }, {
+                  "color" : {
+                    "a" : 0.4,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                } ],
+                "side_or_corner" : {
+                  "verticalSide" : "BOTTOM"
+                }
+              },
+              "card_background_type" : "gradient"
+            }
+          },
+          "content_type" : "right-cta"
+        },
+        tag_line="Have a question?"
+      %}
+        {% module_attribute "rich_text" %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

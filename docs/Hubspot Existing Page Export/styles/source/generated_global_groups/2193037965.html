@@ -1,0 +1,61 @@
+<div class=''>        <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+        <div class="row-fluid ">
+            <div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+                <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+                <div class="row-fluid ">
+                    <div class="span6 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="6">
+
+                        <div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+                        <div class="row-fluid ">
+                            <div class="span12 widget-span widget-type-header " style="" data-widget-type="header" data-x="0" data-w="12">
+                                <div class="cell-wrapper layout-widget-wrapper">
+                                    {% header "wizard_module_179828153316626978585432386673428369819" header_tag='h2', overrideable=False, value='Share this Page', label='Header' %}
+                                </div><!--end layout-widget-wrapper -->
+                            </div><!--end widget-span -->
+                        </div><!--end row-->
+                        </div><!--end row-wrapper -->
+                        <div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+                        <div class="row-fluid ">
+                            <div class="span12 widget-span widget-type-social_sharing footer-social" style="" data-widget-type="social_sharing" data-x="0" data-w="12">
+                                <div class="cell-wrapper layout-widget-wrapper">
+                                    {% widget_block social_sharing "wizard_module_116693811511225778675499460634614308339" wrapping_html='', label='Social Sharing', overrideable=False, use_page_url=True  %}
+                                        {% widget_attribute "pinterest" is_json=True %}{"network": "Pinterest", "default": true, "enabled": false, "custom_link_format": "", "pinterest_media": "", "link_format": "http://pinterest.com/pin/create/button/?url={{ social_link_url }}&media={{ pinterest_media }}", "custom_link": "", "img_src": "https://static.hubspot.com/final/img/common/icons/social/pinterest-24x24.png"}{% end_widget_attribute %}
+                                        {% widget_attribute "twitter" is_json=True %}{"network": "Twitter", "default": true, "enabled": true, "custom_link_format": "", "link_format": "https://twitter.com/intent/tweet?original_referer={{ social_link_url }}&url={{ social_link_url }}&source=tweetbutton&text={{ social_page_title }}", "img_src": "https://static.hubspot.com/final/img/common/icons/social/twitter-24x24.png", "custom_link": ""}{% end_widget_attribute %}
+                                        {% widget_attribute "google_plus" is_json=True %}{"network": "Google+", "default": true, "enabled": false, "custom_link_format": "", "link_format": "https://plus.google.com/share?url={{ social_link_url }}", "img_src": "https://static.hubspot.com/final/img/common/icons/social/googleplus-24x24.png", "custom_link": ""}{% end_widget_attribute %}
+                                        {% widget_attribute "linkedin" is_json=True %}{"network": "LinkedIn", "default": true, "enabled": true, "custom_link_format": "", "link_format": "http://www.linkedin.com/shareArticle?mini=True&url={{ social_link_url }}", "img_src": "https://static.hubspot.com/final/img/common/icons/social/linkedin-24x24.png", "custom_link": ""}{% end_widget_attribute %}
+                                        {% widget_attribute "facebook" is_json=True %}{"network": "Facebook", "default": true, "enabled": true, "custom_link_format": "", "link_format": "http://www.facebook.com/share.php?u={{ social_link_url }}", "img_src": "https://static.hubspot.com/final/img/common/icons/social/facebook-24x24.png", "custom_link": ""}{% end_widget_attribute %}
+                                        {% widget_attribute "email" is_json=True %}{"network": "Email", "default": true, "enabled": true, "custom_link_format": "", "link_format": "mailto:?subject=Check out {{ social_link_url }} &body=Check out {{ social_link_url }}", "img_src": "https://static.hubspot.com/final/img/common/icons/social/email-24x24.png", "custom_link": ""}{% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div><!--end layout-widget-wrapper -->
+                            </div><!--end widget-span -->
+                        </div><!--end row-->
+                        </div><!--end row-wrapper -->
+                    </div><!--end widget-span -->
+                <div class="span6 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="6" data-w="6">
+
+                    <div class="row-fluid-wrapper row-depth-2 row-number-3 ">
+                    <div class="row-fluid ">
+                        <div class="span12 widget-span widget-type-header " style="" data-widget-type="header" data-x="0" data-w="12">
+                            <div class="cell-wrapper layout-widget-wrapper">
+                                {% header "wizard_module_310997679235762768381560153858263858267" header_tag='h2', overrideable=False, value='Recent Blog Posts', label='Header' %}
+                            </div><!--end layout-widget-wrapper -->
+                        </div><!--end widget-span -->
+                    </div><!--end row-->
+                    </div><!--end row-wrapper -->
+                    <div class="row-fluid-wrapper row-depth-2 row-number-4 ">
+                    <div class="row-fluid ">
+                        <div class="span12 widget-span widget-type-post_listing " style="" data-widget-type="post_listing" data-x="0" data-w="12">
+                            <div class="cell-wrapper layout-widget-wrapper">
+                                {% post_listing "wizard_module_228763991212090281217563928026132155189" select_blog='default', label='Post Listing', overrideable=False, list_title='', listing_type='recent', max_links='5' %}
+                            </div><!--end layout-widget-wrapper -->
+                        </div><!--end widget-span -->
+                    </div><!--end row-->
+                    </div><!--end row-wrapper -->
+                </div><!--end widget-span -->
+        </div><!--end row-->
+        </div><!--end row-wrapper -->
+    </div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div>

@@ -1,0 +1,11 @@
+<!--
+  templateType: section
+  label: Hero - Two Column
+  description: "A two column hero with text and logos on the left and image on the right."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/hero-two-col.png
+-->
+
+{% dnd_section full_width=true %}
+  {% dnd_module path="../modules/Hero" styles={"module": context.module} %}{% end_dnd_module %}
+{% end_dnd_section %}

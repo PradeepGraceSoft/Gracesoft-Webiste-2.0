@@ -1,0 +1,49 @@
+{% import "../_variables.css" as var %}
+
+.section-intro__overline {
+  margin-bottom: 10px;
+  font-size: {{ var.large_text }}rem;
+}
+
+.section-intro__divider {
+  line-height: 0;
+}
+
+.section-intro__divider div {
+  display: inline-block;
+  vertical-align: top;
+  width: 80px;
+  max-width: 100%;
+  height: 4px;
+  border-radius: {{ var.radius_1 }};
+  background: {{ var.accent_bg }};
+}
+
+.section-intro--dark .section-intro__divider--auto div {
+  background: {{ var.white }};
+}
+
+.section-intro__desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-intro__desc-inner {
+  width: 100%;
+}
+
+.module--text-left .section-intro__desc   { align-items: flex-start }
+.module--text-center .section-intro__desc { align-items: center }
+.module--text-right .section-intro__desc  { align-items: flex-end }
+
+@media (max-width: {{ var.md }}px) {
+  .module--md-text-left .section-intro__desc   { align-items: flex-start }
+  .module--md-text-center .section-intro__desc { align-items: center }
+  .module--md-text-right .section-intro__desc  { align-items: flex-end }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .module--sm-text-left .section-intro__desc   { align-items: flex-start }
+  .module--sm-text-center .section-intro__desc { align-items: center }
+  .module--sm-text-right .section-intro__desc  { align-items: flex-end }
+}

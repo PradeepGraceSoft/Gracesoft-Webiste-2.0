@@ -1,0 +1,73 @@
+<!--
+templateType: section
+label: Two Column Image Text
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/two-column-img-text.png
+description: "Two column with content on left side and image on right side."
+-->
+
+{# Two Column Image Text #}
+{% dnd_section
+    vertical_alignment='MIDDLE',
+    class="au-tab-full-width"
+%}
+{% dnd_column 
+    offset=0,
+    width=6 %}
+{% dnd_row 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module
+    path='../modules/title-content',
+    "subtitle"="",
+    "content"="<h2>Be Distinctive And Reach To Customer’s Heart</h2><p>Stand Out from others. Be smart and proactive. Speed up faster, smoother, and hindrance-free. Noone will be able to beat you.</p>"
+    primary_cta={ type: 'btn', style: 'filled_light', text: 'Explore' }
+    secondary_cta={ type: 'btn', style: 'outline_light', text: 'Glance Here' }
+ %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% dnd_column 
+    offset=6,
+    width=6
+    %}
+{% dnd_row
+        padding={
+          'default': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          },
+          'mobile': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          }
+    }
+%}
+{% dnd_module
+        path='../modules/image'
+        "image"={
+        'src': get_asset_url('../images/multipurpose/banner-four.png'),
+        'alt': "Girl",
+    },
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

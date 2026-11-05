@@ -1,0 +1,149 @@
+{% unless macros %}{% import 'Coded files/Custom/page/Macros/_macros.css' %}{% endunless %}
+
+/* ==========================================================================
+   4. HERO SECTION                                            
+   ========================================================================== */
+
+.hero-content {
+    border: 3px solid {{ mainAccentColor }};
+    color: {{ mainAccentColor }};
+    background-color: rgba(255,255,255,.6); 
+    {{ rem('padding','26') }}
+    width: 90% !important;
+    float: none !important;
+    margin: 0 auto !important;
+    text-align: center;
+}
+@media screen and (min-width: 800px) {
+    .hero-content {
+        width: 70% !important;    
+    }
+}
+@media screen and (min-width: 1280px) {
+    .hero-content {
+        width: 55% !important;    
+        {{ rem('max-width','800') }}
+    }
+}
+.hero-cta {
+    text-align: center;
+    {{ rem('margin-top','34') }}
+}
+.hero-content h1 {  
+    {{ rem('font-size', '42') }}
+    font-weight: 600;
+    text-transform: uppercase;
+    {{ rem('padding-bottom', '2') }}
+    line-height: 1;
+}
+.hero-content h3 {
+    {{ rem('font-size', '17') }} 
+    text-transform: uppercase;
+}
+.hero-content h1, .hero-content h2, .hero-content h3, .hero-content h4 {
+    margin: 0;
+}
+
+.hero-subscribe {
+    height: 80%;
+}
+.hero-subscribe h3 {
+    {{ rem('font-size','32') }}   
+}
+.no-scroll {
+    overflow: hidden;
+}
+.open-subscribe {
+    content: "Subscribe";
+    cursor: pointer;
+    {{ userSelect('none') }}
+    display: inline-block;
+    background: {{ mainAccentColor }};
+    color: {{ secondaryTextColor }};
+    {{ transition('all .4s ease') }}
+    line-height: 1.5em;
+    {{ rem('margin-top','38') }}
+    {{ rem('padding','22 48') }}
+    font-family: Montserrat, sans-serif;
+    {{ rem('font-size','22') }}
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.open-subscribe:hover {
+    background-color: rgb(14,159,229);
+}
+.close-subscribe {
+    {{ position('absolute',rem('10'),rem('30')) }}
+    z-index: 2;
+    {{ rem('height','30') }}
+    {{ rem('width','30') }}
+    cursor: pointer;
+}
+.close-subscribe:before {
+    content: "";
+    display: block;
+    {{ rem('height','2') }}
+    {{ rem('width','30') }}
+    background: {{ secondaryTextColor }};
+    {{ transform('rotate(45deg)') }}
+    {{ position('absolute','50%',null,null,'0') }}
+}
+.close-subscribe:after {
+    content: "";
+    display: block;
+    {{ rem('height','2') }}
+    {{ rem('width','30') }}
+    background: {{ secondaryTextColor }};
+    {{ transform('rotate(135deg)') }}
+    {{ position('absolute','50%',null,null,'0') }}
+}
+.subscribe-form {
+    {{ position('fixed','50%','50%','50%','50%') }}
+    color: {{ secondaryTextColor }};
+    background: {{ mainAccentColor }};
+    z-index: 1;    
+    -webkit-backface-visibility: hidden;
+    visibility: hidden;
+    opacity: 0;
+    {{ transition('all .2s ease-in, visibility .2s ease-in, opacity .2s ease-in') }}
+}
+.subscribe-form.open {
+    opacity: .95;
+    visibility: visible;
+    {{ position(null,'0','0','0','0') }}
+}
+.subscribe-form .hero-subscribe {
+    opacity: 0;
+    {{ transition('all 0.4s ease-in') }}
+}
+.subscribe-form.open .hero-subscribe {
+    opacity: 1;
+}
+.subscribe-form.open .layout-widget-wrapper {
+    {{ position('absolute','0',null,null,'0') }}
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.subscribe-form.open .layout-widget-wrapper > span {
+    width: 90%;
+    {{ rem('max-width','480') }}
+}
+@media screen and (min-width: 480px) {
+    .subscribe-form.open .layout-widget-wrapper > span {
+        width: 70%;
+        {{ rem('max-width','480') }}
+    }
+}
+@media screen and (min-width: 800px) {
+    .subscribe-form.open .layout-widget-wrapper > span {
+        width: 50%;
+        {{ rem('max-width','480') }}
+    }
+}
+
+
+/* Vertically align the subscribe form */
+
+{{ verticalAndHorizontalCenter('.subscribe-form.open .layout-widget-wrapper', '.subscribe-form.open .layout-widget-wrapper > span') }}
+

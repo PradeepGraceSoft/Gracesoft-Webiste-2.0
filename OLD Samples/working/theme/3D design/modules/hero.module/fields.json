@@ -1,0 +1,125 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "HOSPITALITY PROPERTY MANAGEMENT SOFTWARE"
+  },
+  {
+    "name": "title",
+    "label": "Hero heading",
+    "type": "text",
+    "default": "Smarter hospitality"
+  },
+  {
+    "name": "accent",
+    "label": "Hero heading second line",
+    "type": "text",
+    "default": "starts here."
+  },
+  {
+    "name": "body",
+    "label": "Introduction",
+    "type": "text",
+    "default": "Less switching between systems. More time for your guests. Bring bookings, front desk operations and guest communication together with GraceSoft Easy InnKeeping."
+  },
+  {
+    "name": "demo_label",
+    "label": "Primary CTA",
+    "type": "text",
+    "default": "Book a demo"
+  },
+  {
+    "name": "demo_url",
+    "label": "Primary CTA URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/livedemo",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "explore_label",
+    "label": "Secondary CTA",
+    "type": "text",
+    "default": "Explore the platform"
+  },
+  {
+    "name": "audience",
+    "label": "Audience",
+    "type": "text",
+    "default": "For independent hotels, inns, resorts and more."
+  },
+  {
+    "name": "scene_label",
+    "label": "Scene caption",
+    "type": "text",
+    "default": "One connected view of your hospitality business."
+  },
+  {
+    "name": "illustration_note",
+    "label": "Scene description",
+    "type": "text",
+    "default": "Illustration of connected hotel operations."
+  },
+  {
+    "name": "card_one",
+    "label": "Reservation illustration label",
+    "type": "text",
+    "default": "Reservations"
+  },
+  {
+    "name": "card_one_detail",
+    "label": "Reservation illustration detail",
+    "type": "text",
+    "default": "Every stay starts here"
+  },
+  {
+    "name": "card_two",
+    "label": "Guest communication label",
+    "type": "text",
+    "default": "Guest communication"
+  },
+  {
+    "name": "card_two_detail",
+    "label": "Guest communication detail",
+    "type": "text",
+    "default": "A warmer welcome"
+  },
+  {
+    "name": "card_three",
+    "label": "Housekeeping label",
+    "type": "text",
+    "default": "Housekeeping"
+  },
+  {
+    "name": "card_three_detail",
+    "label": "Housekeeping detail",
+    "type": "text",
+    "default": "Ready for the next arrival"
+  },
+  {
+    "name": "pause_label",
+    "label": "Pause scene label",
+    "type": "text",
+    "default": "Pause animation"
+  },
+  {
+    "name": "resume_label",
+    "label": "Resume scene label",
+    "type": "text",
+    "default": "Resume animation"
+  },
+  {
+    "name": "scroll_label",
+    "label": "Scroll cue",
+    "type": "text",
+    "default": "Discover a more connected day"
+  }
+]

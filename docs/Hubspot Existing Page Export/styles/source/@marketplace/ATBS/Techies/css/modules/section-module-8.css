@@ -1,0 +1,132 @@
+.people-card {
+    padding: 30px 25px 25px 25px;
+    border-radius: 8px;
+    background-color: var(--color-background-site);
+    -webkit-box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1), 0 -6px 25px -8px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1), 0 -6px 25px -8px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.people-author__image {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+.people-card__description {
+    font-size: 1.14285714286rem;
+    line-height: 1.6;
+    color: var(--color-dark-contrast-80);
+    margin-top: 13px;
+}
+
+.people-card .stars-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 0;
+    margin-top: 2px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 83px;
+}
+.people-card .star-item {
+    color: var(--color-dark-contrast-20);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 0 !important;
+}
+.people-card .star-item:not(:last-child) {
+    margin-right: 2px;
+}
+
+.people-card .star-item svg {
+    width: 15px;
+    height: auto;
+}
+.people-card .star-item svg path  {
+    fill: var(--color-dark-contrast-20);
+}
+.people-card .star-item.star-full svg path {
+    fill: var(--color-primary);
+}
+
+
+.people-card__meta {
+    padding-top: 15px;
+    margin-top: 25px;
+    border-top: 1px solid var(--color-border-black);
+}
+
+.people-card .people-card__meta .column-right {
+    position: relative;
+}
+
+.people-author__name {
+    font-size: 1.28571428571rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--color-dark-contrast-100);
+    padding-right: 90px;
+}
+
+.people-author__regency {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-top: 2px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.list-item:hover .people-card {
+    transform: translateY(-15px);
+}
+@media (max-width: 1366px) {
+    .people-author__image {
+        height: 110px;
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 1280px) {
+    .people-say-list > * {
+        width: calc(100% / 3);
+    }
+}
+@media (max-width: 991px) {
+    .people-author__image {
+        height: 140px;
+        margin-bottom: 25px;
+    }
+    .people-say-list > * {
+        width: 50%;
+    }
+}
+@media (max-width: 575px) {
+    .people-author__image {
+        height: 140px;
+        margin-bottom: 25px;
+    }
+    .people-say-list > * {
+        width: 100%;
+    }
+}

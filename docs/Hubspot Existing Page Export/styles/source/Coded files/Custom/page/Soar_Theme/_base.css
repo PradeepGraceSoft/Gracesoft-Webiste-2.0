@@ -1,0 +1,142 @@
+{% unless macros %}{% import 'Coded files/Custom/page/Macros/_macros.css' %}{% endunless %}
+
+/* ==========================================================================
+   2. BASE STYLES                                             
+   ========================================================================== */
+
+/* =============== Base =============== */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+} 
+body { 
+  background: {{ mainBackgroundColor }};
+  color: {{ mainTextColor }};
+  font-family: {{ mainFontFamily }};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Page Center */
+.container-fluid .row-fluid .page-center {
+    float: none;
+    max-width: 1280px;
+    margin: 0 auto;
+    {{ rem('padding-left','20') }}
+    {{ rem('padding-right','20') }}
+}
+
+@media screen and (min-width: 1280px) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Highlighted Text */
+::-moz-selection {
+  color: #fff;
+  background: #333;
+  text-shadow: none;
+}
+::selection {
+  color: #fff;
+  background: #333;
+  text-shadow: none;
+}
+
+
+/* =============== Typography =============== */
+
+/* Basic text */
+p {} 
+small {}
+strong {}
+em {}
+cite {}
+code {}
+pre {}
+
+sup, sub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {}
+
+h1 {
+    {{ rem('font-size','32') }}
+    font-weight: 600;
+    line-height: 1.1;
+}
+@media screen and (min-width: 768px) {
+   h1 {
+        {{ rem('font-size','42') }}
+    } 
+}
+h2 {
+    {{ rem('font-size','26') }}
+    font-weight: 900;
+}
+h3 {
+     {{ rem('font-size','18') }}
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h4 {}
+h5 {}
+h6 {}
+
+/* Anchor Links */
+a { 
+    color: {{ mainAccentColor }}; 
+    text-decoration: none;
+}
+a:hover, a:focus { 
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {}
+ul ul, ul ol, ol ol, ol ul {}
+li {}
+
+/* Block Quotes */
+blockquote {}
+blockquote p {}
+blockquote small {}
+
+/* Horizontal Rules */
+hr {
+  color: #ccc;
+  background-color: #ccc;
+  height: 1px;
+  border: none;
+}
+
+
+/* =============== EU Cookie Confirmation Bar =============== */
+
+/* Confirmation Outer Wrapper*/
+#hs-eu-cookie-confirmation {}
+
+/* Confirmation Inner Wrapper*/
+#hs-eu-cookie-confirmation-inner {}
+#hs-eu-cookie-confirmation-inner p{}
+
+/* Confirmation Button */
+#hs-en-cookie-confirmation-buttons-area {}
+a#hs-eu-confirmation-button {}

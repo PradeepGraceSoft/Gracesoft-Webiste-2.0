@@ -1,0 +1,45 @@
+<!--
+  templateType: section
+  label: Featured Items - Three
+  description: "A list of three items with icon, heading, text, and call to action."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/featured-items-three.png
+-->
+
+{% dnd_section padding={'top': 60, 'bottom': 60} %}
+  {% dnd_module path="../modules/Feature Items",
+    heading={
+      "eyebrow": "More Benefits",
+      "heading": "A Versatile and Easy-To-Use Theme"
+    },
+    content=[
+      {
+        "icon_type": "custom",
+        "custom_icon": {
+          "src": get_asset_url("../../assets/icons/gem.svg")
+        },
+        "title": "Benefits Name",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.",
+        "add_cta": false
+      },
+      {
+        "icon_type": "custom",
+        "custom_icon": {
+          "src": get_asset_url("../../assets/icons/gem.svg")
+        },
+        "title": "Benefits Name",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.",
+        "add_cta": false
+      },
+      {
+        "icon_type": "custom",
+        "custom_icon": {
+          "src": get_asset_url("../../assets/icons/gem.svg")
+        },
+        "title": "Benefits Name",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.",
+        "add_cta": false
+      }
+    ]
+  %}{% end_dnd_module %}
+{% end_dnd_section %}

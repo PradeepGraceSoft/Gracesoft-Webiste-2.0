@@ -1,0 +1,49 @@
+{% import "../_variables.css" as var %}
+
+.blog-hero-1 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog-hero-1__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: {{ var.dark }};
+}
+
+.blog-hero-1__contents {
+  position: relative;
+}
+
+.blog-hero-1__tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: .56rem;
+}
+
+@media (max-width: {{ var.xs }}px) {
+  .blog-hero-1__tags {
+    justify-content: space-between;
+  }
+}
+
+.blog-hero-1__tag {
+  margin-bottom: .56rem;
+  margin-inline-end: .56rem;
+}
+
+.blog-hero-1__tags-list {
+  margin-bottom: .56rem;
+}
+
+.blog-hero-1__title a {
+  text-decoration: none;
+}
+
+.blog-hero-1__title a:hover {
+  text-decoration: underline;
+}

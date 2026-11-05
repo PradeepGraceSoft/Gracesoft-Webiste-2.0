@@ -1,0 +1,97 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Privacy Policy
+screenshotPath: ../images/template-previews/privacy-policy.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--terms-privacy-policy', label='Main section' %}
+
+  {# START: Basic Content #}
+  {% dnd_section
+  background_color="rgba(247, 248, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "60px",
+      "top" : "60px"
+    },
+    "mobile" : {
+      "bottom" : "40px",
+      "top" : "40px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-basic",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        heading_text="Privacy Policy",
+        styles={
+          "content_text_center" : false,
+          "heading" : {
+            "heading_type" : "<h1>"
+          }
+        },
+        tag_line=""
+      %}
+  {% module_attribute "rich_text" %}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in gravida sem enim sed. In at euismod tortor et tempor.</p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Hero 1 #}
+
+  {# START: Rich Text #}
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-basic",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        heading_text="",
+        styles={
+          "content_text_center" : false
+        },
+        tag_line=""
+      %}
+        {% module_attribute "rich_text" %}
+          <h3>Duis Fermentum Neque Hendrerit &nbsp;</h3>
+          <p>Morbi magna ante, tristique ac luctus at, elementum non mauris. Integer tincidunt dui lacus, a fermentum sem lacinia sollicitudin. Donec ullamcorper odio maximus ullamcorper tempus.</p>
+          <p>Ut mattis eget mauris a vehicula. Quisque fermentum auctor libero sed tempus. Praesent placerat enim sed est dictum, vitae condimentum orci auctor. Mauris sit amet cursus nunc, interdum pulvinar ipsum.</p>
+          <h3>Duis Posuere Risus Vitae Lorem</h3>
+          <p>Nulla tempus ut metus sit amet consectetur. Quisque convallis efficitur risus ut sollicitudin. Suspendisse vel mollis enim, vitae viverra risus. Nunc tempus quam non nunc semper, vitae imperdiet magna porttitor.</p>
+          <p>Maecenas bibendum molestie eleifend. Morbi et nunc sed massa euismod elementum. Integer pulvinar, est eget mattis laoreet, ante turpis mollis metus, in molestie ipsum dui quis ante.</p>
+          <h3>Vestibulum Mattis Nec Velit Eget Tincidunt</h3>
+          <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis mi sed tempor mattis. Curabitur in sapien tempus, dapibus lacus eget, vehicula turpis. Fusce euismod urna quis risus congue aliquam. Etiam vel pharetra felis. Quisque finibus ligula turpis, finibus sagittis mi viverra quis. Cras eu vulputate nibh.</p>
+          <p>Nulla vulputate felis quis eros dictum hendrerit. Aliquam erat volutpat. Proin viverra sapien ut gravida feugiat. Pellentesque viverra in neque eget semper. Mauris rhoncus blandit venenatis. Duis at dignissim tellus. Quisque arcu elit, aliquet pharetra tincidunt vitae, vulputate a dui.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  {# END: Rich Text #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,358 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#FAFAFA","body_border_color":"#EAF0F6","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#ffffff","use_email_client_default_settings":false,"primary_font":"Arial, sans-serif","primary_font_color":"#23496d","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"24"},"heading_two_font":{"size":"22"},"links_font":{"color":"#FFFFFF"},"user_module_defaults":{"button_email":{"background_color":"#00a4bd","corner_radius":8,"font":"Arial, sans-serif","font_size":16,"font_color":"#ffffff","font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}},"email_divider":{"height":1,"color":{"color":"#99acc2","opacity":100},"line_type":"solid"}}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body id="hs_body" bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False, body_border={
+              "start_section_index":0,
+              "end_section_index":11
+              } %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#99d1b9" %}
+                {% dnd_column width=3 %}
+                  {% dnd_module corner_radius=25, font_size=16, destination="https://www.calendar.com/gracesoftsupport/intl-demo", startPosition=-525, schema_version=2, css_class="dnd-module", path="@hubspot/button_email", background_color="#F6B26B", font_color="#ffffff", text="LIVE DEMO", alignment="center", lineNumber=55, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"0px",
+                    "padding-right":"0px",
+                    "padding-top":"50px"
+                    }, font="Arial, sans-serif" %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"25 Logo",
+                    "height":96,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Praveen/25%20Logo.png",
+                    "width":200
+                    }, alignment="center", lineNumber=45, hs_enable_module_padding=True, startPosition=-664, hs_wrapper_css={
+                    "padding-left":"0px",
+                    "padding-right":"0px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=3 %}
+                  {% dnd_module corner_radius=25, font_size=16, destination="https://www.gracesoft.com/freetrial", startPosition=-512, schema_version=2, css_class="dnd-module", path="@hubspot/button_email", background_color="#F6B26B", font_color="#ffffff", text="FREE TRIAL", alignment="center", lineNumber=65, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"0px",
+                    "padding-right":"10px",
+                    "padding-top":"50px"
+                    }, font="Arial, sans-serif" %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#ffffff" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", lineNumber=80, hs_enable_module_padding=True, startPosition=-338, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h2 style="line-height: 158%; font-size: 20px; text-align: center;"><span style="font-family: Merriweather, Georgia, sans-serif;">Serving Lodging Properties Since 1999 - Award-Winning Property Management System</span></h2>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#fafafa" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/image_email", img={
+                    "alt":"image (15)",
+                    "height":278,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/image%20(15).png",
+                    "width":558
+                    }, lineNumber=100, hs_enable_module_padding=True, startPosition=-581, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", lineNumber=108, hs_enable_module_padding=True, startPosition=-339, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 15px; line-height: 175%; text-align: center;"><span style="font-family: Merriweather, Georgia, sans-serif;">Hello {{ contact.firstname }}</span></p>
+<p style="font-size: 15px; line-height: 175%; text-align: center;">&nbsp;</p>
+<p style="font-size: 16px; line-height: 175%; text-align: center;"><span style="font-family: Merriweather, Georgia, sans-serif;">GraceSoft's Easy Innkeeping hospitality management software is the culmination of over two decades of dedicated service to the hospitality industry. Established in <span style="font-weight: bold;">1999</span> by our visionary founder and CEO, <span style="font-weight: bold;">Gideon Stanley</span>, our journey began with a clear mission: to simplify and streamline property management.&nbsp;</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#c1def5" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", lineNumber=125, hs_enable_module_padding=True, startPosition=-339, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h2 style="font-size: 16px; line-height: 175%; text-align: center;"><span style="font-family: Merriweather, Georgia, sans-serif;">MANAGE PROPERTIES OF ALL SHAPES AND SIZES WITH GRACESOFT EASY INNKEEPING</span></h2>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#c1def5" %}
+                {% dnd_column width=4 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"icons re-design home png 3-01",
+                    "height":130,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/icons%20re-design%20home%20png%203-01.png",
+                    "width":130
+                    }, link="https://www.gracesoft.com/hotel-management-software", lineNumber=145, hs_enable_module_padding=True, startPosition=-683, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"icons re-design home B&B-01",
+                    "height":130,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/icons%20re-design%20home%20B&B-01.png",
+                    "width":130
+                    }, link="https://www.gracesoft.com/bed-breakfast-reservation-software", lineNumber=160, hs_enable_module_padding=True, startPosition=-686, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"icons re-design home condo-01-1",
+                    "height":130,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/icons%20re-design%20home%20condo-01-1.png",
+                    "width":130
+                    }, link="https://www.gracesoft.com/condo-management-software", lineNumber=175, hs_enable_module_padding=True, startPosition=-685, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#c1def5" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/image_email", img={
+                    "alt":"HOME PAGE OLD IMAGE",
+                    "height":297,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/HOME%20PAGE%20OLD%20IMAGE.webp",
+                    "width":558
+                    }, lineNumber=195, hs_enable_module_padding=True, startPosition=-604, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#c1def5" %}
+                {% dnd_column width=4 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"icons re-design home vacation-01",
+                    "height":130,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/icons%20re-design%20home%20vacation-01.png",
+                    "width":130
+                    }, stretch_on_mobile=False, link="https://www.gracesoft.com/vacation-rental-management-software", lineNumber=216, hs_enable_module_padding=True, startPosition=-764, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"icons re-design home rv-01",
+                    "height":130,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/icons%20re-design%20home%20rv-01.png",
+                    "width":130
+                    }, link="https://www.gracesoft.com/campground-management-software", lineNumber=232, hs_enable_module_padding=True, startPosition=-722, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"icons re-design home inn&lodge-01",
+                    "height":130,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/icons%20re-design%20home%20inn&lodge-01.png",
+                    "width":130
+                    }, link="https://www.gracesoft.com/multi-property", lineNumber=247, hs_enable_module_padding=True, startPosition=-678, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#c1def5" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_divider", color={
+                    "color":"#c1def5",
+                    "opacity":100
+                    }, line_type="solid", lineNumber=265, hs_enable_module_padding=True, startPosition=-466, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    }, height=1 %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", lineNumber=280, hs_enable_module_padding=True, startPosition=-339, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div data-testid="conversation-turn-3">
+<div>
+<div>
+<div>
+<p style="text-align: center;"><span style="font-weight: bold; font-size: 18px; font-family: Merriweather, Georgia, sans-serif;">OUR MISSION</span><br><span style="font-family: Merriweather, Georgia, sans-serif;">Our all-inclusive offering encompasses reservation management, an online booking engine, a channel manager, email marketing, point of sale, credit card processing, and website design. These modules are elegantly unified through a single interface, ensuring smooth operation on any device. As a result, GraceSoft stands as a trusted partner for hotels and various lodging facilities within the hospitality industry, providing them with the reliability and efficiency they need to thrive in a competitive landscape.</span></p>
+</div>
+</div>
+</div>
+</div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#99d1b9" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", lineNumber=303, hs_enable_module_padding=True, startPosition=-339, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 16px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif; color: #444444;">We offer 15-30-minute walk-through sessions that can be scheduled at your convenience.</span></p>
+<p style="font-size: 16px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 16px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif; color: #444444;">Demo link: </span></p>
+<p style="font-size: 16px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif; color: #cc0201;"><a href="https://meet.goto.com/GraceSoftDemo" style="color: #cc0201;" rel="noopener">https://meet.goto.com/GraceSoftDemo</a></span></p>
+<p style="font-size: 16px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 16px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif; color: #444444;">Calendar link:</span></p>
+<p style="font-size: 16px; line-height: 125%;"><span style="color: #cc0201;"><a href="https://www.calendar.com/gracesoftsupport/demo/_date-time/?duration=30" style="color: #cc0201;" rel="noopener"><span style="font-family: Merriweather, Georgia, sans-serif;">https://www.calendar.com/gracesoftsupport/demo/_date-time/?duration=30</span></a></span></p>
+<p style="font-size: 16px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 16px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif; color: #444444;">We look forward to your participation in our upcoming demonstration.</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/follow_me_email", scale=29, lineNumber=326, hs_enable_module_padding=True, startPosition=-355, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "social" is_json=True %}[{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"whatsapp","url":"https://api.whatsapp.com/send?phone=917200423323"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc/"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"},{"network":"pinterest","url":"https://www.pinterest.com/gracesoft/"}]{% end_module_attribute %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#FFFFFF","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":14},"styles":{}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#99d1b9" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=342, hs_enable_module_padding=True, startPosition=-356, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    }, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#000000","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#000000","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":12}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!--
+  templateType: section
+  label: Testimonial
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/testimonial.png
+  description: "Testimonial section separated in three columns with slider."
+-->
+
+{# Testimonial Section Start #}
+  {% dnd_section max_width=1200, class="testimonial-area" %}
+     {% dnd_column width=12, offset=0  %}
+
+        {% dnd_row %}
+           {% dnd_module "module_16693001922547" path="../modules/Section Title", label="Section Title"  
+              layout ='with-excerpt',
+              section_subtitle = '<span>Testimonials</span>',
+              section_title = '<h2>Trusted by More Than <br>2k Clients</h2>',
+              section_excerpt = '<p>Amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore <br> dolore aliquaenim minim veniam.</p>'
+           %} 
+           {% end_dnd_module %}
+        {% end_dnd_row %} 
+
+        {% dnd_row %}
+           {% dnd_module "module_166936663511957" path="../modules/Testimonial", label="Testimonial" 
+              testimonial_item = [
+                {
+                  'testimonial_excerpt' : '<p>Lorem ipsum dolor amet consectur elit adicing elit sed do usmod tempor ux incididunt enim ad minim veniam quis nostrud exer citation laboris nis aliquip comodo perspiatix.
+                            </p>',
+                  'client_image' : { 
+                    'alt': 'Client Image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/testimonial/testimonial-1.png') 
+                  },
+                  'client_name' : '<h3>Ralph Edwards</h3>',
+                  'client_designation' : '<span>Developer</span>'
+                },
+                {
+                  'testimonial_excerpt' : '<p>Lorem ipsum dolor amet consectur elit adicing elit sed do usmod tempor ux incididunt enim ad minim veniam quis nostrud exer citation laboris nis aliquip comodo perspiatix.
+                            </p>',
+                  'client_image' : { 
+                    'alt': 'Client Image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/testimonial/testimonial-2.png') 
+                  },
+                  'client_name' : '<h3>Kathryn Murphy</h3>',
+                  'client_designation' : '<span>Designer</span>'
+                },
+                {
+                  'testimonial_excerpt' : '<p>Lorem ipsum dolor amet consectur elit adicing elit sed do usmod tempor ux incididunt enim ad minim veniam quis nostrud exer citation laboris nis aliquip comodo perspiatix.
+                            </p>',
+                  'client_image' : { 
+                    'alt': 'Client Image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/testimonial/testimonial-3.png') 
+                  },
+                  'client_name' : '<h3>Arlene McCoy</h3>',
+                  'client_designation' : '<span>Designer</span>'
+                },
+                {
+                  'testimonial_excerpt' : '<p>Lorem ipsum dolor amet consectur elit adicing elit sed do usmod tempor ux incididunt enim ad minim veniam quis nostrud exer citation laboris nis aliquip comodo perspiatix.
+                            </p>',
+                  'client_image' : { 
+                    'alt': 'Client Image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/testimonial/testimonial-2.png') 
+                  },
+                  'client_name' : '<h3>Kathryn Murphy</h3>',
+                  'client_designation' : '<span>Designer</span>'
+                }
+              ]
+           %}
+           {% end_dnd_module %}
+        {% end_dnd_row %}
+
+     {% end_dnd_column %}
+  {% end_dnd_section %}
+{# Hero Slider Section End #}
+		
+		
+	

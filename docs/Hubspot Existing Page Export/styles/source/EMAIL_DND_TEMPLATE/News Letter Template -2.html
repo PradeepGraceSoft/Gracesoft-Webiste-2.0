@@ -1,0 +1,453 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#FFFFFF","body_border_color":"#cbd6e2","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#EEEEEE","use_email_client_default_settings":false,"primary_font":"Merriweather,Georgia,sans-serif","primary_font_color":"#000000","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"24"},"heading_two_font":{"size":"22"},"links_font":{"color":"#FFFFFF"},"user_module_defaults":{}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body id="hs_body" bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "top":"5",
+                "bottom":"5"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"45px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 20px; line-height: 175%;"><span style="font-family: Georgia, serif;"><em>Monthly Insight</em></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"gracesoft logo png (1)",
+                    "height":80,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/gracesoft%20logo%20png%20(1).png",
+                    "width":160
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"45px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 20px; line-height: 175%; text-align: right;"><em><span style="font-family: Georgia, serif;">November 2023</span></em></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", width=100, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 24px; line-height: 125%;">Welcome to our</p>
+<p style="text-align: center; font-size: 30px; line-height: 125%;">Monthly Newsletter</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center;"><span style="color: #000000;"><em>Welcome to "Hospitality Insights," your trusted source for the latest trends and innovations in the world of hospitality.<br></em></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><span style="color: #000000;"><em>In the ever-evolving realm of hospitality, staying ahead of the curve is paramount. Whether you're a B&amp;B owner, hotel manager, or a tech-savvy enthusiast, there's something in this newsletter for you. Read on to discover how our industry is embracing change and how you can be a part of the innovation.</em></span></p>
+<p style="text-align: center;">&nbsp;</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", width=100, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-weight: bold; font-size: 28px; line-height: 175%; text-align: center;"><span style="color: #000000;">Table of Content</span></p>
+<ul>
+<li style="text-align: center;"><span style="color: #000000;">MBBA Conference Visit</span></li>
+<li style="text-align: center;"><span style="color: #000000;">News At GraceSoft</span></li>
+<li style="text-align: center;"><span style="color: #000000;">ChatGPT Options in Hotel Management Industry</span></li>
+<li style="text-align: center;"><span style="color: #000000;">Call for Beta Testers: Doormakaba</span></li>
+</ul>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", width=100, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h1 style="font-size: 24px; line-height: 100%; font-weight: bold;"><span style="font-size: 28px;">MBBA </span></h1>
+<h1 style="font-size: 24px; line-height: 100%; font-weight: bold;"><span style="font-size: 28px;">Conference Visit</span></h1>
+<p style="line-height: 125%;">&nbsp;</p>
+<p style="line-height: 150%;"><em><span style="font-weight: normal; font-size: 15px;">GraceSoft Easy Innkeeping had the privilege of attending the MBBA conference in Michigan, where we engaged with industry leaders and shared insights on the latest hospitality technology trends. Our team was thrilled to showcase our innovative solutions, helping attendees streamline their property management processes and enhance guest experiences. It was an inspiring event, fostering valuable connections and knowledge exchange.</span></em></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", width=100, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h1 style="line-height: 115%;">NEWS&nbsp; AT</h1>
+<h1 style="line-height: 115%;">GRACESOFT</h1>
+<pre></pre>
+<p style="font-size: 15px; line-height: 150%;"><em>Welcome to our blog, a dedicated space for all things related to the Hotel Management Software industry. Whether you are a seasoned hotelier or a budding entrepreneur looking to make your mark in the hospitality sector, this blog is your go-to resource for insights, trends, and practical information that can help you harness the power of technology to drive success in the modern hospitality landscape.</em></p>
+<pre></pre>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h1 style="font-weight: bold; font-size: 16px; line-height: 175%; text-align: center;">OUR LATEST BLOG</h1>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p><span style="color: #000000;"><a href="https://www.gracesoft.com/blog/chatgpt-and-ai-in-the-hotel-industry" style="color: #000000; font-weight: bold;" rel="noopener">ChatGPT and AI in the Hotel Industry</a></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"Chatgptbanner",
+                    "height":80,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Chatgptbanner.png",
+                    "width":160
+                    }, stretch_on_mobile=True, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="line-height: 175%;"><a href="https://www.gracesoft.com/blog/hotel-front-desk-software" style="font-weight: bold; text-decoration: underline;" rel="noopener"><span style="color: #000000; text-decoration: underline;">The Ultimate Guide to Hotel Front Desk Software</span></a></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"frontdesk",
+                    "height":86,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/frontdesk.png",
+                    "width":160
+                    }, stretch_on_mobile=True, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="line-height: 175%;"><span style="color: #000000;"><a href="https://www.gracesoft.com/blog/the-ultimate-guide-to-hotel-management-software" style="color: #000000; font-weight: bold;" rel="noopener">The Ultimate Guide to Hotel Management Software</a></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"image (22)",
+                    "height":88,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Imported%20sitepage%20images/image%20(22).png",
+                    "width":160
+                    }, stretch_on_mobile=True, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"15px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", width=100, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h1 style="line-height: 125%;"><span style="color: #000000; font-size: 24px;">ChatGPT Options in Hotel Management Industry</span></h1>
+<p>&nbsp;</p>
+<p style="line-height: 150%;"><em>Over the years, the hotel industry has undergone significant transformations, with technology playing a pivotal role in enhancing guest experiences and improving operational efficiency. Artificial Intelligence (AI) and Chatbots like ChatGPT are some of the most exciting technological advancements in recent years that have revolutionized the way hotels interact with their guests. This article explores how AI, including ChatGPT, is transforming the hotel industry and the benefits it brings to both guests and hotel management.</em></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module corner_radius=0, border_width=1, path="@hubspot/button_email", border_enabled=False, background_color="#BC8B63", make_full_width=True, destination="https://www.gracesoft.com/blog/chatgpt-and-ai-in-the-hotel-industry", text="Read More", alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#FFFCF1",
+                    "opacity":100
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"15px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module corner_radius=2, path="@hubspot/image_email", img={
+                    "alt":"image (24)",
+                    "height":462,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/image%20(24).png",
+                    "width":260
+                    }, stretch_on_mobile=True, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", width=100, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h1><strong>Call for Beta Testers: Doormakaba</strong></h1>
+<p>&nbsp;</p>
+<p style="line-height: 150%;"><em>Do you have a passion for testing cutting-edge hospitality solutions? We're looking for enthusiastic individuals to join our beta testing program for Doormakaba, a revolutionary door access management system.</em></p>
+<p style="line-height: 150%;"><em><br>As a beta tester, you'll have the opportunity to shape the future of door access management in the hospitality industry. Your feedback will be invaluable in fine-tuning this system for a seamless and secure guest experience. If you're interested in participating, Please fill out this Form</em></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module corner_radius=0, path="@hubspot/button_email", background_color="#BC8B63", make_full_width=True, destination="https://share.hsforms.com/1Ul0WA95FTuS3xcZzIGIWeA2b28", text="Click Here to Fill the Form", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/follow_me_email", scale=29, color_scheme="black", icon_shape="circle", lineNumber=11, hs_enable_module_padding=True, startPosition=-299, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "social" is_json=True %}[{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"whatsapp","url":"https://api.whatsapp.com/send?phone=917200423323"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc/"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"},{"network":"pinterest","url":"https://www.pinterest.com/gracesoft/"}]{% end_module_attribute %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#FFFFFF","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":14},"styles":{}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"10",
+                "bottom":"0"
+                }, full_width=True, background_color="#FFFCF1" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=232, hs_enable_module_padding=False, startPosition=19, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"font-weight":"normal","italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#000000","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":12},"styles":{"bold":true,"font-style":"normal","font-weight":"bold","text-decoration":"none"}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+/* Animation */
+  
+@keyframes btn_ripple {
+  0% {
+    opacity: .3;
+  }
+  30% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(4, 4);
+  }
+}
+
+/* Base */
+
+.btn {
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  border: none; /* for <button> */
+  font-family: {{ ui_font_family }};
+  font-weight: {{ ui_font_weight }};
+  font-style: {{ ui_font_style }};
+  line-height: {{ text_height }};
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  transform: scale(1); /* required for the ripple effect, otherwise it won't show on :focus */
+  transition: box-shadow, background-image, background-color, transform;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none; /* using our own styling */
+}
+
+.btn.btn--full {
+  display: block;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: scale(1.07, 1.07);
+}
+
+.btn:active {
+  transform: scale(.93, .93);
+  transition-duration: 0.05s;
+}
+
+.btn::after { /* ripple effect */
+  content: '';
+  display: block;
+  width: 2.22rem;
+  height: 2.22rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.11rem;
+  margin-left: -1.11rem;
+  z-index: -1;
+  background: currentColor;
+  border-radius: 20px;
+  color: inherit;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn:focus::after {
+  animation: .5s ease-in-out btn_ripple;
+  animation-fill-mode: forwards;
+}
+
+/* Outline */
+
+.btn--outline {
+  border: {{ btn_bd }}px solid;
+}
+
+.btn--outline:hover {
+  border: 0;
+}
+
+/* Small */
+
+.btn--small {
+  padding: {{ btn_small_ptb }}rem {{ btn_small_plr }}rem;
+  border-radius: {{ btn_small_radius }};
+  font-size: .83rem;
+}
+
+.btn--small.btn--outline:not(:hover) {
+  padding: calc({{ btn_small_ptb }}rem - {{ btn_bd }}px) calc({{ btn_small_plr }}rem - {{ btn_bd }}px);
+}
+
+/* Medium */
+
+.btn--medium {
+  padding: {{ btn_medium_ptb }}rem {{ btn_medium_plr }}rem;
+  border-radius: {{ btn_medium_radius }};
+  font-size: .89rem;
+}
+
+.btn--medium.btn--outline:not(:hover) {
+  padding: calc({{ btn_medium_ptb }}rem - {{ btn_bd }}px) calc({{ btn_medium_plr }}rem - {{ btn_bd }}px);
+}
+
+/* Large */
+
+.btn--large {
+  padding: {{ btn_large_ptb }}rem {{ btn_large_plr }}rem;
+  border-radius: {{ btn_large_radius }};
+  font-size: 1rem;
+}
+
+.btn--large.btn--outline:not(:hover) {
+  padding: calc({{ btn_large_ptb }}rem - {{ btn_bd }}px) calc({{ btn_large_plr }}rem - {{ btn_bd }}px);
+}
+
+/* Accent */
+
+.btn--accent.btn--outline {
+  border-color: {{ accent }};
+  color: {{ accent }};
+}
+
+.btn--accent.btn--fill,
+.btn--accent.btn--outline:hover {
+  background: {{ accent_bg }};
+  color: {{ white }};
+}
+
+.btn--accent:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ accent|default('#F65954')|convert_rgb }}, .15);
+}
+
+/* Dark */
+
+.btn--dark.btn--outline {
+  border-color: {{ dark }};
+  color: {{ dark }};
+}
+
+.btn--dark.btn--fill,
+.btn--dark.btn--outline:hover {
+  background: {{ dark }};
+  color: {{ white }};
+}
+
+.btn--dark:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ dark|default('#222326')|convert_rgb }}, .15);
+}
+
+/* Light */
+
+.btn--light.btn--outline {
+  border-color: {{ borders_color }};
+  color: {{ dark }};
+}
+
+.btn--light.btn--fill,
+.btn--light.btn--outline:hover {
+  background: {{ light }};
+  color: {{ dark }};
+}
+
+.btn--light:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ borders_color|default('#E3E6EC')|convert_rgb }}, .15);
+}
+
+/* Light darker */
+
+.btn--light-darker.btn--outline {
+  border-color: {{ borders_color }};
+  color: {{ dark }};
+}
+
+.btn--light-darker.btn--fill,
+.btn--light-darker.btn--outline:hover {
+  background: {{ borders_color }};
+  color: {{ dark }};
+}
+
+.btn--light-darker:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ borders_color|default('#E3E6EC')|convert_rgb }}, .15);
+}
+
+/* White */
+
+.btn--white.btn--outline {
+  border-color: {{ white }};
+  color: {{ white }};
+}
+
+.btn--white.btn--fill,
+.btn--white.btn--outline:hover {
+  background: {{ white }};
+  color: {{ dark }};
+}
+
+.btn--white:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ white|default('#ffffff')|convert_rgb }}, .15);
+}
+
+/* White with accent */
+
+.btn--white-accent.btn--outline {
+  border-color: {{ white }};
+  color: {{ accent }};
+}
+
+.btn--white-accent.btn--fill,
+.btn--white-accent.btn--outline:hover {
+  background: {{ white }};
+  color: {{ accent }};
+}
+
+.btn--white-accent:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ white|default('#ffffff')|convert_rgb }}, .15);
+}
+
+/* White with hover accent */
+
+.btn--white-hover-accent.btn--outline {
+  border-color: {{ white }};
+  color: {{ white }};
+}
+
+.btn--white-hover-accent.btn--fill {
+  background: {{ white }};
+  color: {{ dark }};
+}
+
+.btn--white-hover-accent.btn--fill:hover,
+.btn--white-hover-accent.btn--outline:hover {
+  background: {{ white }};
+  color: {{ accent }};
+}
+
+.btn--white-hover-accent:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ white|default('#ffffff')|convert_rgb }}, .15);
+}
+
+/* Ghost */
+
+.btn--ghost.btn--outline {
+  border-color: {{ white_borders }};
+  color: {{ white }};
+}
+
+.btn--ghost.btn--fill {
+  background: {{ white_borders }};
+  color: {{ white }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}
+
+.btn--ghost.btn--outline:hover,
+.btn--ghost.btn--fill:hover {
+  background: {{ white }};
+  color: {{ dark }};
+}
+
+.btn--ghost:focus-visible:not(:hover):not(:active) {
+  box-shadow: {{ btn_focus_shadow }} rgba({{ white|default('#ffffff')|convert_rgb }}, .15);
+}
+
+/* Pill */
+
+.btn--pill {
+  border-radius: 999px;
+}
+
+/* Icon */
+
+.btn__icon {
+  color: inherit;
+  line-height: 0;
+}
+
+.btn__icon--right {
+  order: 1;
+  margin-left: .4em;
+}
+
+.btn__icon--left {
+  margin-right: .4rem;
+}
+
+.btn__icon svg {
+  fill: currentColor;
+}

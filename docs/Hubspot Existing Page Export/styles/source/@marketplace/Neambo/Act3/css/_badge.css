@@ -1,0 +1,112 @@
+/* Base */
+
+.badge {
+  display: inline-block;
+  font-family: {{ ui_strong_font_family }};
+  font-weight: {{ ui_strong_font_weight }};
+  font-style: {{ ui_strong_font_style }};
+  line-height: {{ ui_height }};
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.badge,
+.badge:hover {
+  text-decoration: none;
+}
+
+/* Lowercase */
+
+.badge--lowercase {
+  text-transform: none;
+}
+
+/* Small */
+
+.badge--small {
+  padding: .11rem .22rem;
+  border-radius: {{ radius_1 }};
+  font-size: .46rem;
+}
+
+.badge--small.badge--lowercase {
+  font-size: .72rem;
+}
+
+/* Medium */
+
+.badge--medium {
+  padding: .18rem 0.36rem;
+  border-radius: {{ radius_1 }};
+  font-size: .6rem;
+}
+
+.badge--medium.badge--lowercase {
+  font-size: .78rem;
+}
+
+/* Large */
+
+.badge--large {
+  padding: .22rem .44rem;
+  border-radius: {{ radius_2 }};
+  font-size: .73rem;
+}
+
+.badge--large.badge--lowercase {
+  font-size: .89rem;
+}
+
+/* Pill */
+
+.badge--pill {
+  border-radius: 99px;
+}
+
+/* Accent */
+
+.badge--accent {
+  background: {{ accent_bg }};
+  color: {{ white }};
+}
+
+.badge--accent:hover {
+  color: {{ white }};
+}
+
+/* Dark */
+
+.badge--dark {
+  background: {{ dark }};
+  color: {{ white }};
+}
+
+.badge--dark:hover {
+  color: {{ white }};
+}
+
+/* White */
+
+.badge--white {
+  background: {{ white }};
+  color: {{ dark }};
+}
+
+.badge--white:hover {
+  color: {{ dark }};
+}
+
+/* Ghost */
+
+.badge--ghost {
+  background: {{ white_borders }};
+  color: {{ white }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}
+
+.badge--ghost:hover {
+  color: {{ white }};
+}

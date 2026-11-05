@@ -1,0 +1,72 @@
+<!--
+templateType: section
+label: Subscribe
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/subscribe.png
+description: "Section with background color containing content and form."
+-->
+
+{% dnd_section 
+  vertical_alignment="MIDDLE",
+  class="au-subscribe au-tab-full-width",
+  background_color= {{ theme.color_font_setting.global_colors.primary.color }},
+  padding= {
+        'default': {
+          'top':55,
+          'right': 30,
+          'bottom': 35,
+          'left': 30
+        },
+        'mobile': {
+          'top': 30,
+          'right': 15,
+          'bottom': 20,
+          'left': 15
+        }
+    },
+%}
+
+{% dnd_column 
+  offset=0,
+  width=5 %}
+{% dnd_row
+  padding= {
+        'default': {
+          'top':0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 20,
+          'left': 0
+        }
+    },
+%}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Subscribe to our newsletter</h2><p>Get our every news release. Receive our product recommendations, etc.</p>"
+ %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% dnd_column 
+  offset=5,
+  width=7 
+        %}
+{% dnd_row %}
+{% dnd_module
+    path='../modules/form',
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "single_field_inline_button"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

@@ -1,0 +1,206 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service
+  screenshotPath: ../images/template-previews/service.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--service service-area p-0"
+%}
+
+  {# Breadcrumb Section Start #}
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# Service Start #}
+    {% dnd_section max_width=1200, class="section service-grid" %}
+      {% dnd_column width=12, offset=0 ,
+        margin={
+          'top': '0px',
+          'bottom': '-30px',
+          'left': '0px',
+          'right': '0px'
+        }
+      %}
+
+        {% dnd_row %}
+          {% dnd_column width=4, offset=0 %} 
+            {% dnd_row , 
+              margin={
+              'top': '0px',
+              'bottom': '30px',
+              'left': '0px',
+              'right': '0px'
+              }
+            %}
+              {% dnd_module "module_16696596113052" path="../modules/Service", label="Service" 
+                layout = 'without-slider',
+                service_item_without_loop = {
+                    'service_image' : { 
+                      'alt': 'Service Image',
+                      'size_type': 'auto', 
+                      'src': get_asset_url('../images/service/service-1.png') 
+                    },
+                    'service_title' : '<h3>Business Audit <br> Services</h3>',
+                    'service_excerpt' : '<p>Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.</p>'
+                  
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %} 
+          {% end_dnd_column %}
+
+          {% dnd_column width=4, offset=4 %} 
+            {% dnd_row , 
+              margin={
+              'top': '0px', 
+              'bottom': '30px',
+              'left': '0px',
+              'right': '0px'
+              }
+            %}
+              {% dnd_module "module_16696596113052" path="../modules/Service", label="Service" 
+                layout = 'without-slider',
+                service_item_without_loop = {
+                 
+                    'service_image' : { 
+                      'alt': 'Service Image', 
+                      'size_type': 'auto', 
+                      'src': get_asset_url('../images/service/service-2.png') 
+                    },
+                    'service_title' : '<h3>Strategic Consulting <br> Services</h3>',
+                    'service_excerpt' : '<p>Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.</p>'
+                 
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %} 
+          {% end_dnd_column %}
+
+          {% dnd_column width=4, offset=8 %} 
+            {% dnd_row ,  
+              margin={
+              'top': '0px',
+              'bottom': '30px',
+              'left': '0px',
+              'right': '0px'
+              }
+            %}
+              {% dnd_module "module_16696596113052" path="../modules/Service", label="Service" 
+                layout = 'without-slider',
+                service_item_without_loop = {
+                  
+                    'service_image' : { 
+                      'alt': 'Service Image',
+                      'size_type': 'auto', 
+                      'src': get_asset_url('../images/service/service-3.png') 
+                    },
+                    'service_title' : '<h3>Best Financial <br>Advice</h3>',
+                    'service_excerpt' : '<p>Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.</p>'
+                  
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}  
+          {% end_dnd_column %} 
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+          {% dnd_column width=4, offset=0 %} 
+            {% dnd_row , 
+              margin={
+              'top': '0px',
+              'bottom': '30px',
+              'left': '0px',
+              'right': '0px'
+              }
+            %}
+              {% dnd_module "module_16696596113052" path="../modules/Service", label="Service" 
+                layout = 'without-slider',
+                service_item_without_loop = {
+                  
+                    'service_image' : { 
+                      'alt': 'Service Image',
+                      'size_type': 'auto', 
+                      'src': get_asset_url('../images/service/service-1.png') 
+                    },
+                    'service_title' : '<h3>Business Audit <br> Services</h3>',
+                    'service_excerpt' : '<p>Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.</p>'
+                  
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %} 
+          {% end_dnd_column %}
+
+          {% dnd_column width=4, offset=4 %} 
+            {% dnd_row , 
+              margin={
+              'top': '0px', 
+              'bottom': '30px',
+              'left': '0px',
+              'right': '0px'
+              }
+            %}
+              {% dnd_module "module_16696596113052" path="../modules/Service", label="Service" 
+                layout = 'without-slider',
+                service_item_without_loop = {
+                  
+                    'service_image' : { 
+                      'alt': 'Service Image',
+                      'size_type': 'auto', 
+                      'src': get_asset_url('../images/service/service-2.png') 
+                    },
+                    'service_title' : '<h3>Strategic Consulting <br> Services</h3>',
+                    'service_excerpt' : '<p>Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.</p>'
+                  
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %} 
+          {% end_dnd_column %}
+
+          {% dnd_column width=4, offset=8 %} 
+            {% dnd_row ,  
+              margin={
+              'top': '0px',
+              'bottom': '30px',
+              'left': '0px',
+              'right': '0px'
+              }
+            %}
+              {% dnd_module "module_16696596113052" path="../modules/Service", label="Service" 
+                layout = 'without-slider',
+                service_item_without_loop = {
+                  
+                    'service_image' : { 
+                      'alt': 'Service Image',
+                      'size_type': 'auto', 
+                      'src': get_asset_url('../images/service/service-3.png') 
+                    },
+                    'service_title' : '<h3>Best Financial <br>Advice</h3>',
+                    'service_excerpt' : '<p>Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.</p>'
+                  
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}  
+          {% end_dnd_column %}  
+        {% end_dnd_row %}
+
+
+      {% end_dnd_column %}
+  
+    {% end_dnd_section %}
+    {# Service Section End #}
+
+  {# Newsletter Section Start #}   
+  {% include_dnd_partial path='../sections/newsletter.html' %}
+  {# Newsletter Section End #} 
+
+{% end_dnd_area %}
+{% endblock body %}

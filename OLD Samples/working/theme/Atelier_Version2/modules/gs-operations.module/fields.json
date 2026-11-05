@@ -1,0 +1,365 @@
+[
+  {
+    "name": "category",
+    "label": "Category",
+    "type": "text",
+    "default": "Manage operations"
+  },
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "From the reservation calendar to the final bill"
+  },
+  {
+    "name": "intro",
+    "label": "Intro",
+    "type": "text",
+    "default": "Start with today’s arrivals. See which rooms are ready, find the reservation you need and review charges before checkout."
+  },
+  {
+    "name": "screen_1",
+    "label": "Screen 1",
+    "type": "text",
+    "default": "Reservations"
+  },
+  {
+    "name": "screen_1_image",
+    "label": "Calendar screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Easy InnKeeping reservation calendar showing stays by room and date"
+    }
+  },
+  {
+    "name": "screen_1_caption",
+    "label": "Screen 1 caption",
+    "type": "text",
+    "default": "Check which rooms are available before assigning an arrival."
+  },
+  {
+    "name": "screen_2",
+    "label": "Screen 2",
+    "type": "text",
+    "default": "Front desk"
+  },
+  {
+    "name": "screen_2_image",
+    "label": "Dashboard screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Easy InnKeeping dashboard showing property operations and performance information"
+    }
+  },
+  {
+    "name": "screen_2_caption",
+    "label": "Screen 2 caption",
+    "type": "text",
+    "default": "Review the property dashboard for an overview of daily operations."
+  },
+  {
+    "name": "viewer_title",
+    "label": "Viewer title",
+    "type": "text",
+    "default": "Follow a stay"
+  },
+  {
+    "name": "feature_1",
+    "label": "Feature 1",
+    "type": "text",
+    "default": "Reservations"
+  },
+  {
+    "name": "feature_1_description",
+    "label": "Feature 1 description",
+    "type": "text",
+    "default": "See bookings and room availability on the reservation calendar."
+  },
+  {
+    "name": "feature_2",
+    "label": "Feature 2",
+    "type": "text",
+    "default": "Front desk"
+  },
+  {
+    "name": "feature_2_description",
+    "label": "Feature 2 description",
+    "type": "text",
+    "default": "Review arrivals, assign rooms and manage departures."
+  },
+  {
+    "name": "feature_3",
+    "label": "Feature 3",
+    "type": "text",
+    "default": "Housekeeping"
+  },
+  {
+    "name": "feature_3_description",
+    "label": "Feature 3 description",
+    "type": "text",
+    "default": "Check room status as your team prepares for the next arrival."
+  },
+  {
+    "name": "feature_4",
+    "label": "Feature 4",
+    "type": "text",
+    "default": "Billing and payments"
+  },
+  {
+    "name": "feature_4_description",
+    "label": "Feature 4 description",
+    "type": "text",
+    "default": "Review a guest’s folio and process payments through a supported provider."
+  },
+  {
+    "name": "feature_5",
+    "label": "Feature 5",
+    "type": "text",
+    "default": "Point of sale"
+  },
+  {
+    "name": "feature_5_description",
+    "label": "Feature 5 description",
+    "type": "text",
+    "default": "Explore tools for purchases guests make during their stay."
+  },
+  {
+    "name": "feature_6",
+    "label": "Feature 6",
+    "type": "text",
+    "default": "Reporting"
+  },
+  {
+    "name": "feature_6_description",
+    "label": "Feature 6 description",
+    "type": "text",
+    "default": "Review occupancy and revenue reports for your property."
+  },
+  {
+    "name": "pms_url",
+    "label": "Pms url",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "pms_label",
+    "label": "Pms label",
+    "type": "text",
+    "default": "Explore the Property Management System"
+  },
+  {
+    "name": "screen_3",
+    "label": "Screen 3 label",
+    "type": "text",
+    "default": "Housekeeping"
+  },
+  {
+    "name": "screen_3_image",
+    "label": "Housekeeping screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Housekeeping screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_3_caption",
+    "label": "Screen 3 caption",
+    "type": "text",
+    "default": "Housekeeping preview — product screenshot coming soon."
+  },
+  {
+    "name": "screen_4",
+    "label": "Screen 4 label",
+    "type": "text",
+    "default": "Billing and payments"
+  },
+  {
+    "name": "screen_4_image",
+    "label": "Billing and payments screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Billing and payments screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_4_caption",
+    "label": "Screen 4 caption",
+    "type": "text",
+    "default": "Billing and payments preview — product screenshot coming soon."
+  },
+  {
+    "name": "screen_5",
+    "label": "Screen 5 label",
+    "type": "text",
+    "default": "Point of sale"
+  },
+  {
+    "name": "screen_5_image",
+    "label": "Point of sale screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Point of sale screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_5_caption",
+    "label": "Screen 5 caption",
+    "type": "text",
+    "default": "Point of sale preview — product screenshot coming soon."
+  },
+  {
+    "name": "screen_6",
+    "label": "Screen 6 label",
+    "type": "text",
+    "default": "Reporting"
+  },
+  {
+    "name": "screen_6_image",
+    "label": "Reporting screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Reporting screenshot placeholder; not a product screen"
+    }
+  },
+  {
+    "name": "screen_6_caption",
+    "label": "Screen 6 caption",
+    "type": "text",
+    "default": "Reporting preview — product screenshot coming soon."
+  },
+  {
+    "name": "feature_1_url",
+    "label": "Feature 1 URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "feature_1_label",
+    "label": "Feature 1 CTA label",
+    "type": "text",
+    "default": "Explore reservations"
+  },
+  {
+    "name": "feature_2_url",
+    "label": "Feature 2 URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "feature_2_label",
+    "label": "Feature 2 CTA label",
+    "type": "text",
+    "default": "Explore front desk tools"
+  },
+  {
+    "name": "feature_3_url",
+    "label": "Feature 3 URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/feature-listing"
+    }
+  },
+  {
+    "name": "feature_3_label",
+    "label": "Feature 3 CTA label",
+    "type": "text",
+    "default": "Explore housekeeping"
+  },
+  {
+    "name": "feature_4_url",
+    "label": "Feature 4 URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/payments"
+    }
+  },
+  {
+    "name": "feature_4_label",
+    "label": "Feature 4 CTA label",
+    "type": "text",
+    "default": "Explore payments"
+  },
+  {
+    "name": "feature_5_url",
+    "label": "Feature 5 URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/point-of-sale-system"
+    }
+  },
+  {
+    "name": "feature_5_label",
+    "label": "Feature 5 CTA label",
+    "type": "text",
+    "default": "Explore point of sale"
+  },
+  {
+    "name": "feature_6_url",
+    "label": "Feature 6 URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/feature-listing"
+    }
+  },
+  {
+    "name": "feature_6_label",
+    "label": "Feature 6 CTA label",
+    "type": "text",
+    "default": "Explore reporting"
+  },
+  {
+    "name": "screen_1_heading",
+    "label": "Screen 1 benefit heading",
+    "type": "text",
+    "default": "See availability at a glance"
+  },
+  {
+    "name": "screen_2_heading",
+    "label": "Screen 2 benefit heading",
+    "type": "text",
+    "default": "Keep the front desk informed"
+  },
+  {
+    "name": "screen_3_heading",
+    "label": "Screen 3 benefit heading",
+    "type": "text",
+    "default": "Prepare for the next arrival"
+  },
+  {
+    "name": "screen_4_heading",
+    "label": "Screen 4 benefit heading",
+    "type": "text",
+    "default": "Review charges and payments"
+  },
+  {
+    "name": "screen_5_heading",
+    "label": "Screen 5 benefit heading",
+    "type": "text",
+    "default": "Connect on-property purchases"
+  },
+  {
+    "name": "screen_6_heading",
+    "label": "Screen 6 benefit heading",
+    "type": "text",
+    "default": "Review property performance"
+  }
+]

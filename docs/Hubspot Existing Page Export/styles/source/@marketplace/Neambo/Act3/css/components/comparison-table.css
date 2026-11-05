@@ -1,0 +1,329 @@
+{% import "../_variables.css" as var %}
+
+/* Container */
+
+.comptab {
+  position: relative;
+  --comptab-radius: {{ var.radius_7 }};
+  border-radius: var(--comptab-radius);
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .comptab {
+    --comptab-radius: {{ var.radius_6 }};
+  }
+}
+
+@media (max-width: {{ var.xs }}px) {
+  .comptab {
+    --comptab-radius: {{ var.radius_5 }};
+  }
+}
+
+/* Head */
+
+.comptab--hide-header .comptab__head {
+  display: none;
+}
+
+/* Body */
+
+.comptab--shadow .comptab__body {
+  box-shadow: {{ var.large_shadow }};
+  border-radius: var(--comptab-radius);
+}
+
+/* Scroller */
+
+.comptab__scroller {
+  overflow-x: auto;
+}
+
+.comptab__scroller--head {
+  overflow-x: hidden;
+}
+
+.comptab--clip-corners .comptab__scroller--head {
+  border-radius: var(--comptab-radius) var(--comptab-radius) 0 0;
+}
+
+.comptab--clip-corners .comptab__scroller--body {
+  border-radius: 0 0 var(--comptab-radius) var(--comptab-radius);
+}
+
+.comptab--clip-corners.comptab--hide-header .comptab__scroller--body {
+  border-radius: var(--comptab-radius);
+}
+
+/* Scrollbar */
+
+.comptab__scroller::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+ 
+.comptab__scroller::-webkit-scrollbar-track,
+.comptab__scroller::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+}
+
+/* Track */
+
+.comptab__track {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--comptab-radius);
+}
+
+/* Rows */
+
+.comptab__row {
+  display: flex;
+}
+
+/* Cols */
+
+.comptab__col {
+  flex-grow: 0;
+  flex-shrink: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  border-left: var(--comptab-bdw) solid;
+}
+
+.comptab__body .comptab__col {
+  border-bottom: var(--comptab-bdw) solid;
+}
+
+.comptab__row--1 .comptab__col {
+  border-top: var(--comptab-bdw) solid;
+}
+
+.comptab__col:last-child {
+  border-right: var(--comptab-bdw) solid;
+}
+
+.comptab__row--first .comptab__col--regular {
+  border-top: var(--comptab-bdw) solid;
+}
+
+.comptab__row--first .comptab__col--1,
+.comptab__row--1 .comptab__col--first {
+  border-top-left-radius: var(--comptab-radius);
+}
+
+.comptab--scrolled .comptab__row--first .comptab__col--1,
+.comptab--scrolled .comptab__row--1 .comptab__col--first {
+  border-top-left-radius: 0;
+}
+
+.comptab__row--first .comptab__col:last-child,
+.comptab--hide-header .comptab__row--1 .comptab__col:last-child {
+  border-top-right-radius: var(--comptab-radius);
+}
+
+.comptab__body .comptab__row:last-child .comptab__col--first {
+  border-bottom-left-radius: var(--comptab-radius);
+}
+
+.comptab__body .comptab__row:last-child .comptab__col:last-child {
+  border-bottom-right-radius: var(--comptab-radius);
+}
+
+.comptab__col--first {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.comptab__row--first .comptab__col--first {
+  border-top-left-radius: var(--comptab-radius);
+}
+
+.comptab .comptab__row--first .comptab__col--first {
+  border-left-color: transparent;
+}
+
+.comptab--scrolled .comptab__row--first .comptab__col--first {
+  border-top-left-radius: 0;
+}
+
+.comptab--scrolled .comptab__col--first {
+  box-shadow: {{ var.small_shadow }};
+}
+
+.comptab--center-content .comptab__col--regular {
+  text-align: center;
+}
+
+/* Content */
+
+.comptab__box {
+  width: 100%;
+  padding: {{ (var.gutter / 2)|round(0) }}px {{ var.gutter }}px;
+}
+
+/* Sticky header */
+
+.comptab__sticky-header-observer {
+  position: relative;
+  z-index: -1;
+  top: -{{ var.scroll_offset_lg }}px;
+}
+
+.comptab--sticky-header .comptab__head {
+  position: sticky;
+  top: {{ var.scroll_offset_lg }}px;
+  z-index: 2;
+}
+
+.comptab__sticky-header-bg {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--vw) * 100); /* 1 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* NOTE:
+   1) Because 100vw width makes the horizontal scrollbar to appear.
+      See this issue: https://stackoverflow.com/questions/23367345/100vw-causing-horizontal-overflow-but-only-if-more-than-one.
+      We added the script in the main.js and the --vw variable in the _base.css defined with the html element.
+*/
+
+.comptab--sticky-header-on .comptab__sticky-header-bg {
+  box-shadow: {{ var.small_shadow }};
+}
+
+.comptab--sticky-header-on .comptab__row--first .comptab__col:last-child,
+.comptab--sticky-header-on .comptab__row--first .comptab__col--1 {
+  border-radius: 0;
+}
+
+.comptab--sticky-header-on .comptab__head .comptab__col {
+  border-bottom-color: transparent;
+}
+
+.comptab--sticky-header-on .comptab__row--first .comptab__col--regular {
+  border-top-color: transparent;
+}
+
+.comptab--sticky-header-on .comptab__row--first .comptab__col--first {
+  border-top-left-radius: 0;
+}
+
+/* Square corners */
+
+.comptab--square-corners,
+.comptab--square-corners .comptab__head,
+.comptab--square-corners .comptab__body,
+.comptab--square-corners .comptab__scroller,
+.comptab--square-corners .comptab__track,
+.comptab--square-corners .comptab__row,
+.comptab--square-corners .comptab__col {
+  border-radius: 0 !important;
+}
+
+/* Legend */
+
+.comptab-legend {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: {{ var.gutter }}px;
+}
+
+.comptab-legend--left {
+  justify-content: left;
+}
+
+.comptab-legend--center {
+  justify-content: center;
+}
+
+.comptab-legend--right {
+  justify-content: right;
+}
+
+.comptab-legend__item {
+  padding-inline: {{ (var.gutter / 2)|round(0) }}px;
+}
+
+.comptab-legend__icon {
+  margin-right: 5px;
+}
+
+/* Light scheme */
+
+.comptab--light,
+.comptab--light .comptab__track,
+.comptab--light .comptab__col {
+  background-color: {{ var.white }};
+}
+
+.comptab--light .comptab__col {
+  border-color: {{ var.borders_color }};
+}
+
+.comptab--light .comptab__body .comptab__row:nth-child(odd) .comptab__col {
+  background-color: {{ var.light }};
+}
+
+.comptab--light.comptab--sticky-header-on .comptab__sticky-header-bg {
+  background-color: {{ var.white }};
+}
+
+.comptab--light.comptab--sticky-header-on .comptab__row--first .comptab__col--first {
+  border-left-color: {{ var.borders_color }};
+}
+
+.comptab--light .comptab__scroller::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .05);
+}
+ 
+.comptab--light .comptab__scroller::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .1);
+}
+
+.comptab--light .comptab__scroller::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, .2);
+}
+
+/* Dark scheme */
+
+.comptab--dark,
+.comptab--dark .comptab__track,
+.comptab--dark .comptab__col {
+  background-color: {{ var.dark }};
+}
+
+.comptab--dark .comptab__col {
+  border-color: {{ var.white_borders }};
+}
+
+.comptab--dark .comptab__body .comptab__row:nth-child(odd) .comptab__col {
+  background-color: {{ color_variant(var.dark, 10) }};
+}
+
+.comptab--dark.comptab--sticky-header-on .comptab__sticky-header-bg {
+  background-color: {{ var.dark }};
+}
+
+.comptab--dark.comptab--sticky-header-on .comptab__row--first .comptab__col--first {
+  border-left-color: {{ var.white_borders }};
+}
+
+.comptab--dark .comptab__scroller::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, .05);
+}
+ 
+.comptab--dark .comptab__scroller::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .1);
+}
+
+.comptab--dark .comptab__scroller::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, .2);
+}

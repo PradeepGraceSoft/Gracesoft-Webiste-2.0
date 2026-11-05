@@ -1,0 +1,105 @@
+.contact-paragraph__heading {
+    font-size: 1.42857142857rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--color-dark-primary-100);
+    margin-bottom: 8px;
+}
+.contact-paragraph__wrapper:not(:last-child) {
+    margin-bottom: 35px;
+}
+.contact-paragraph__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.contact-paragraph__icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.contact-paragraph__icon:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-primary);
+    z-index: -1;
+    opacity: 0.1;
+}
+.contact-paragraph__icon svg *[stroke] {
+    stroke: var(--color-dark-contrast-100);
+}
+.contact-paragraph__icon svg *[fill] {
+    fill: var(--color-dark-contrast-100);
+}
+
+.contact-paragraph__text {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+
+.contact-paragraph__info {
+    font-size: 1.28571428571rem;
+    line-height: 1.5;
+    color: var(--color-dark-contrast-80);
+}
+.contact-paragraph__info > *:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+
+.inverse-text .contact-paragraph__heading {
+    color: var(--color-white-contrast-100);
+}
+.inverse-text .contact-paragraph__info {
+    color: var(--color-white-contrast-60);
+}
+
+@media (max-width: 575px) {
+    .contact-paragraph__wrapper:not(:last-child) {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid var(--color-border-black);
+    }
+
+    .contact-paragraph__icon {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-paragraph__icon:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .contact-paragraph__text {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 100%;
+    }
+}
+.section-module-12 form fieldset,
+.section-module-9 .contact-form__module form fieldset {
+    max-width: 100% !important;
+}
+.section-module-12 form fieldset.form-columns-1 .hs-input,
+.section-module-9 .contact-form__module form fieldset.form-columns-1 .hs-input {
+    width: 100% !important;
+}

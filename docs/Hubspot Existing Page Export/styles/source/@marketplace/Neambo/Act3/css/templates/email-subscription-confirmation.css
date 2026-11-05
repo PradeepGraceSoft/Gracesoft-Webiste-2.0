@@ -1,0 +1,5 @@
+{% import '../_variables.css' as var %}
+
+#email-prefs-form .page-header {
+  margin-bottom: {{ var.gutter }}px;
+}

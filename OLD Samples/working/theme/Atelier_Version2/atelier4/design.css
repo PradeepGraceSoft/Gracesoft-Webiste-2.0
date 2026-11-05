@@ -1,0 +1,202 @@
+@font-face {font-family:Sora;src:url("Sora.ttf") format("truetype");font-weight:100 800;font-display:swap}
+@font-face {font-family:Manrope;src:url("Manrope.ttf") format("truetype");font-weight:200 800;font-display:swap}
+.v4 {
+  --ink:#211f32; --blue:#4f4690; --teal:#47415e; --mist:#fffdf8;
+  --edge:#e6e2fa; --lift:0 20px 54px -32px #47415e80;
+  --display:Sora,system-ui,sans-serif; --body:Manrope,system-ui,sans-serif;
+  font-family:var(--body);color:var(--ink);background:white;
+}
+.v4 main :is(h1,h2,h3,.gs-title,.chapter-subtitle,.outcome-number),.v4 .footer-contact h2 {font-family:var(--display);text-wrap:balance;letter-spacing:-.045em}
+.v4 main :is(p:not(.outcome-number),button,a,summary,figcaption,blockquote),.v4 header nav,.v4 footer {font-family:var(--body)}
+.v4 .gs-header .gs-nav {background:transparent}
+.v4 .gs-header {background:#f5f3fa;border-bottom:1px solid var(--edge);transition:box-shadow .25s}
+.v4.scrolled .gs-header {box-shadow:0 5px 26px #302c4816}
+.v4 .atelier-product-panel {background:white;border-color:var(--edge);border-radius:16px;box-shadow:var(--lift)}
+.v4 .gs-content-refresh .gs-hero {
+  isolation:isolate;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 90% 4%,#e6e2fa,transparent 55%),linear-gradient(115deg,#fffdf8 3%,#fffdf8 52%,#e6e2fa);color:var(--ink);
+}
+.v4 .gs-hero:after {content:"";position:absolute;pointer-events:none;z-index:-1;inset:12% -15% -45% 52%;border:1px solid #9991b966;border-radius:50%;box-shadow:0 0 0 50px #ffffff36,0 0 0 100px #ffffff29}
+.v4 .gs-hero-layout {padding-block:clamp(46px,6.8vw,104px)}
+.v4 .gs-content-refresh .gs-hero h1 {font:620 clamp(40px,4.8vw,80px)/1.04 var(--display);letter-spacing:-.065em;max-width:17ch;color:var(--ink)}
+.v4 .gs-content-refresh .gs-hero h1 em {font:inherit;letter-spacing:inherit;color:var(--blue)}
+.v4 .gs-hero .gs-lead {font-size:clamp(16px,1.25vw,20px);line-height:1.6;max-width:53ch;color:#47415e}
+.v4 .gs-kicker,.v4 .chapter-number {color:var(--teal);font:700 12px/1.5 var(--body);letter-spacing:.1em}
+.v4 .gs-content-refresh .gs-hero .gs-product-art {min-height:0;border-radius:26px;padding:clamp(16px,2.7vw,44px);background:linear-gradient(135deg,#47415e,#47415e 70%,#c5bfdc);box-shadow:0 28px 65px -30px #47415e99}
+.v4 .gs-content-refresh .gs-product-art figure {margin:0;transform:none;background:white;border-radius:12px;overflow:hidden;box-shadow:0 8px 28px #302c4845}
+.v4 .gs-content-refresh .gs-product-art figcaption {margin:0;padding:10px 14px;text-align:left;color:#4f4690;font-size:12px}
+.v4 .gs-content-refresh .gs-product-art img {border-radius:0}
+.v4 :is(.gs-button,.atelier-demo) {border-radius:999px}
+.v4 :is(.gs-button--primary,.atelier-navigation .atelier-demo,.desk-bar nav a:last-child) {color:white;background:linear-gradient(110deg,#4f4690,#47415e);border-color:transparent;box-shadow:0 7px 18px -8px #4f4690}
+.v4 .gs-hero .gs-button--secondary {color:var(--ink);background:white;border:1px solid #c5bfdc}
+.v4 .outcome-section {background:white}
+.v4 .outcome-card {border:0;border-top:3px solid #686080;background:linear-gradient(155deg,#f5f3fa,#fffdf8);border-radius:4px 4px 18px 18px;box-shadow:var(--lift)}
+.v4 .outcome-card:nth-child(2) {background:linear-gradient(155deg,#f5f3fa,#fffdf8);border-color:#4f4690}
+.v4 .outcome-card:nth-child(3) {background:linear-gradient(155deg,#f5f3fa,#fffdf8);border-color:#9991b9}
+.v4 .outcome-card .outcome-number {color:#47415e}
+.v4 .tour-operations {background:#f5f3fa}
+.v4 .tour-distribution {background:#fffdf8}
+.v4 .tour-guest-journey {background:#f5f3fa}
+.v4 .gs-tour .tour-widget {background:radial-gradient(ellipse at top right,#47415e,transparent 65%),#302c48;border:1px solid #4f4690;border-radius:22px;box-shadow:var(--lift)}
+.v4 .tour-head h2,.v4 .gs-title {font-weight:580}
+.v4 .property-directory {background:white}
+.v4 .property-arches .property-arch {border-radius:20px;background:#f5f3fa;color:var(--ink)}
+.v4 .property-arches li:nth-child(even) .property-arch {background:#f5f3fa}
+.v4 .property-arch svg {stroke:var(--teal)}
+.v4 .customer-voices {background:radial-gradient(ellipse at top right,#47415e,transparent 70%),var(--ink);color:white}
+.v4 .customer-voices .voice-card {border-radius:16px;background:#fffdf8;color:var(--ink)}
+.v4 .voice-card blockquote {font-weight:500;letter-spacing:-.025em}
+.v4 .gs-awards,.v4 #faq {background:#fffdf8}
+.v4 .gs-faq details {background:white;border:1px solid var(--edge);border-radius:14px;margin:10px 0;padding-inline:20px}
+.v4 .reading-section {background:white}
+.v4 .reading-grid img {border-radius:14px}
+.v4 .gs-cta {background:linear-gradient(115deg,#302c48,#47415e 60%,#47415e);color:white}
+.v4 .gs-cta :is(.gs-title,.gs-lead,p) {color:white}
+.v4 .atelier-footer {background:#302c48}
+.v4 .desk-strip {background:#fffdf8;border-color:#9991b9}
+.v4 :focus-visible {outline:3px solid #4f4690;outline-offset:3px}
+@media(min-width:1000px){.v4 .outcome-section header {max-width:76ch}.v4 .voice-grid {gap:24px}}
+@media(max-width:700px){.v4 .gs-hero-layout {padding-block:32px}.v4 .gs-content-refresh .gs-hero h1 {font-size:clamp(38px,8.8vw,56px)}}
+@media(prefers-reduced-motion:no-preference){
+  .v4 .gs-product-art {animation:screen-lift 1s cubic-bezier(.16,.78,.25,1) both}
+  .v4 .gs-hero:after {animation:light-drift 4s ease-out both}
+  .v4 .in-frame {animation:section-lift .75s cubic-bezier(.16,.76,.2,1) backwards;animation-delay:var(--delay,0ms)}
+  .v4 .in-frame:focus-within {animation:none}
+  .v4 :is(.gs-button,.property-arch,.arch-arrow,.reading-grid img) {transition:translate .22s,scale .3s,box-shadow .22s}
+  .v4 :is(.gs-button,.property-arch):hover {translate:0 -3px;box-shadow:var(--lift)}
+  .v4 .gs-button:active {translate:0 1px}
+  .v4 .property-arch:hover .arch-arrow {translate:3px 0}
+  .v4 .reading-grid a:hover img {scale:1.02}
+  @keyframes section-lift {from{opacity:.12;translate:0 25px}to{opacity:1;translate:0 0}}
+  @keyframes screen-lift {from{opacity:.4;transform:perspective(1100px) rotateY(-7deg) translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes light-drift {from{translate:4% 8%}to{translate:0 0}}
+}
+
+
+/* Illustrated front desk hero */
+.v4 .opening {background:linear-gradient(115deg,var(--mist),#f5f3fa 55%,var(--edge));color:var(--ink)}
+.v4 .opening-inner {display:grid;width:min(100%,1580px);padding-inline:clamp(18px,5vw,84px);grid-template-columns:.94fr 1.06fr;gap:3vw;align-items:center;padding-block:clamp(36px,6vw,90px)}
+.v4 .opening .brandline {display:flex;align-items:center;gap:9px;color:var(--blue);font:650 12px/1.5 var(--body);letter-spacing:.09em;text-transform:uppercase}
+.v4 .brandline i {flex:0 0 13px;width:13px;height:13px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px #e6e2f0}
+.v4 .opening h1 {font:560 clamp(45px,5.1vw,84px)/1.03 var(--display) !important;letter-spacing:-.072em !important;text-wrap:initial;margin:25px 0 20px}
+.v4 .opening h1 em {font:inherit;letter-spacing:-.05em;color:var(--blue)}
+.v4 .opening-lead {max-width:46ch;font-size:clamp(16px,1.23vw,20px);color:var(--teal)}
+.v4 .opening .gs-actions {justify-content:flex-start;flex-wrap:wrap}
+.v4 .opening .gs-button--primary {background:var(--blue);color:white}
+.v4 .opening .gs-button--secondary {color:var(--blue);background:var(--mist);border-color:var(--blue)}
+.v4 .opening figure {margin:0;position:relative;isolation:isolate}
+.v4 .opening .terrain {position:absolute;inset:0;background:url("../assets/terrain.svg") center/contain no-repeat;opacity:.4;z-index:-1}
+.v4 .opening img {display:block;width:100%;height:auto}
+@media(max-width:780px){.v4 .opening h1{font-size:clamp(43px,8.8vw,66px) !important;max-width:20ch;margin:18px 0 14px}.v4 .opening-inner{grid-template-columns:minmax(0,1fr)}.v4 .opening .exhibit{width:min(100%,500px);margin:auto}}
+
+/* HTML6 typography, scoped to the Version 2 page. */
+body.v4 { font: 500 16px/1.56 var(--body) !important; }
+.v4 button, .v4 summary { font: inherit !important; }
+.v4 h1, .v4 h2, .v4 h3 { font-family: var(--display) !important; line-height: 1.12 !important; letter-spacing: -0.05em !important; }
+.v4 h2 { font-size: clamp(30px, 3.5vw, 54px) !important; font-weight: 550 !important; }
+.v4 h3 { font-size: clamp(18px, 1.6vw, 25px) !important; font-weight: 570 !important; }
+.v4 .atelier-navigation { font-size: 14px !important; font-weight: 700 !important; }
+.v4 .atelier-product-panel strong { font-size: 12px !important; }
+.v4 .atelier-demo, .v4 .gs-button, .v4 .desk-bar nav a:last-child { font-weight: 750 !important; }
+.v4 .exhibit-label, .v4 .kicker, .v4 .chapter-number, .v4 .voice-topic, .v4 .outcome-label, .v4 .reading-grid a > span { font: 650 11px/1.5 var(--body) !important; letter-spacing: 0.11em !important; text-transform: uppercase !important; }
+.v4 .kicker { letter-spacing: 0.04em !important; text-transform: none !important; font-size: 14px !important; }
+.v4 .opening-lead { font-size: clamp(16px, 1.23vw, 20px) !important; }
+.v4 .exhibit-label span:last-child { font-family: monospace !important; font-size: 12px !important; }
+.v4 #plate { font: 12px / 1.4 monospace !important; }
+.v4 #plate b { font: 650 16px/1.5 var(--body) !important; }
+.v4 .view-buttons button { font-size: 13px !important; font-weight: 650 !important; }
+.v4 .routebar a { font-weight: 720 !important; }
+.v4 .routebar small, .v4 .chapter-number { font-family: monospace !important; }
+.v4 .outcome-section h2 { font-size: clamp(28px, 2.7vw, 43px) !important; }
+.v4 .outcome-number { font: 510 clamp(40px,4.3vw,68px)/1.05 var(--display) !important; letter-spacing: -0.07em !important; }
+.v4 .outcome-number small { font-size: 0.42em !important; letter-spacing: 0px !important; }
+.v4 .outcome-card h3 { font-size: 18px !important; }
+.v4 .outcome-card p:last-child { font-size: 14px !important; }
+.v4 .chapter-subtitle { font-weight: 720 !important; }
+.v4 .tour-link, .v4 .reading-all, .v4 .voice-links a, .v4 .gs-awards a { font-weight: 720 !important; }
+.v4 .tour-controls h3 { font-size: 18px !important; }
+.v4 .tour-controls button, .v4 .pause-tour { font: 650 14px/1.4 var(--body) !important; }
+.v4 .tour-panels figcaption { font-size: 14px !important; }
+.v4 .pause-tour { font-size: 12px !important; }
+.v4 .property-arch h3 { font-size: 19px !important; }
+.v4 .property-arch p { font-size: 14px !important; }
+.v4 .voice-card blockquote { font: 400 clamp(18px, 1.55vw, 25px) / 1.48 Georgia, serif !important; }
+.v4 .voice-card figcaption span { font-size: 14px !important; }
+.v4 .gs-awards h2 { font-size: clamp(28px, 3vw, 43px) !important; }
+.v4 .gs-faq summary { font-weight: 700 !important; }
+.v4 .reading-grid h3 { font-size: clamp(19px, 1.7vw, 27px) !important; }
+.v4 .atelier-footer { font-size: 14px !important; }
+.v4 .footer-contact h2, .v4 .footer-apps h2, .v4 .footer-groups summary { font: 720 15px/1.4 var(--body) !important; letter-spacing: 0px !important; }
+.v4 .footer-contact address { font-style: normal !important; }
+@media (max-width: 780px) {
+.v4 .routebar a { font-size: 14px !important; }
+}
+@media (max-width: 530px) {
+.v4 .routebar a { font-size: 12px !important; line-height: 1.35 !important; }
+}
+.v4 .map-pins span { font: 700 11px / 1 monospace !important; }
+.v4 .map-pins b { font: 600 12px/1.4 var(--body) !important; }
+.v4 .inspect-screen { font-size: 13px !important; }
+@media (max-width: 530px) {
+.v4 .map-pins span { font-size: 10px !important; }
+}
+
+/* HTML9 masthead and illustrated opening */
+.v4 .gs-header {background:#fcfefaee;backdrop-filter:blur(14px);border-color:#d1dfe0;color:#102d3b}
+.v4 .gs-header .gs-nav {width:min(100%,1580px);padding:0 clamp(18px,5vw,84px);min-height:67px}
+.v4 .gs-header .gs-brand,.v4 .gs-header .gs-brand img {width:140px}
+.v4 .gs-header .atelier-navigation {color:#102d3b}
+.v4 .gs-header .atelier-demo {background:#143d49;color:white;padding:12px 18px;border-radius:5px;box-shadow:none}
+.v4 .gs-header .atelier-products summary {display:inline-flex;align-items:center;gap:10px;list-style:none;white-space:nowrap;padding:8px 10px}
+.v4 .gs-header .atelier-products summary::-webkit-details-marker {display:none}
+.v4 .gs-header .atelier-products summary::after {content:"";display:block;box-sizing:border-box;flex:0 0 9px;width:9px;height:9px;margin-inline-start:2px;border:solid currentColor;border-width:0 1.7px 1.7px 0;border-radius:1px;transform:translateY(-2px) rotate(45deg);transition:transform .24s cubic-bezier(.2,.75,.25,1)}
+.v4 .gs-header .atelier-products[open] summary::after {transform:translateY(2px) rotate(225deg)}
+.v4 .opening {position:relative;isolation:isolate;overflow:hidden;color:#102d3b;background:linear-gradient(112deg,#f8fcf8 1%,#edf7f6 44%,#c8e5fa 82%,#e8e4ff)}
+.v4 .opening::before {content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 83% 36%,#ffffffca,transparent 35%),radial-gradient(ellipse at 65% 100%,#98dbd998,transparent 45%)}
+.v4 .opening-inner {padding-block:clamp(48px,5.2vw,86px)}
+.v4 .opening .brandline {color:#215f65}
+.v4 .opening .brandline i {background:#197e79;box-shadow:0 0 0 4px #b8e3d9}
+.v4 .opening h1 {color:#102d3b}
+.v4 .opening h1 em {background:linear-gradient(110deg,#12697a,#395e9c);background-clip:text;color:transparent}
+.v4 .opening-lead {color:#385360}
+.v4 .opening .gs-actions {gap:12px 22px;margin-top:23px}
+.v4 .opening .gs-button {gap:22px}
+.v4 .opening .gs-button--primary {background:#153f4b;color:white;padding:12px 18px;border:0;border-radius:30px;box-shadow:0 9px 20px -11px #133e57 !important}
+.v4 .opening .gs-button--secondary {background:transparent;border:0;padding:8px 0;color:#174b5a;text-decoration:underline;text-underline-offset:5px}
+.v4 .opening .exhibit {padding:14px clamp(12px,1.6vw,24px);min-width:0}
+.v4 .opening .scene {position:relative;display:grid;align-items:center;aspect-ratio:1.52}
+.v4 .opening .terrain {inset:-16% -13% -21%;background-size:100% 100%;opacity:1;mask-image:radial-gradient(ellipse at 53% 54%,#000 25%,transparent 70%)}
+.v4 .opening #view-property img {width:87%;margin:auto;object-fit:contain;filter:drop-shadow(0 13px 10px #315a761f)}
+@media(max-width:780px){
+  .v4 .opening-inner {gap:18px;padding-block:30px}
+  .v4 .opening .exhibit {width:100%;padding:8px 0}
+  .v4 .opening .scene {aspect-ratio:1.9}
+  .v4 .opening #view-property img {height:clamp(170px,47vw,270px)}
+}
+@media(forced-colors:active){.v4 .opening h1 em {color:CanvasText}}
+
+/* Carry the hero accent through the workflow overview and closing invitation. */
+.v4 .outcome-section {background:linear-gradient(180deg,#eff7f6,white 72%)}
+.v4 .outcome-card {border:1px solid #d4e2e3;border-top:3px solid #197e79;background:white;border-radius:14px;box-shadow:0 12px 30px -22px #174b5a66}
+.v4 .outcome-card:nth-child(2) {background:white;border-top-color:#395e9c}
+.v4 .outcome-card:nth-child(3) {background:white;border-top-color:#665695}
+.v4 .outcome-card .outcome-label {margin-bottom:12px;color:#374c60}
+.v4 .gs-cta {background:linear-gradient(115deg,#153f4b,#302c48 78%)}
+.v4 .gs-cta .gs-button--primary {background:#fff;color:#153f4b}
+.v4 :is(.gs-cta,.customer-voices,.tour-widget,.atelier-footer) :focus-visible {outline:3px solid #94dcd9;box-shadow:0 0 0 3px #153f4b}
+
+
+/* A quiet, connected palette across the homepage. */
+.v4 .outcome-section {background:#f1f7f5}
+.v4 .tour-operations {background:#edf4f3}
+.v4 .tour-distribution {background:#f8f7f2}
+.v4 .tour-guest-journey {background:#edf4f1}
+.v4 .property-directory {background:#f8faf7}
+.v4 #faq,.v4 .gs-awards {background:#f5f7f3}
+.v4 .reading-section {background:#fbfaf7}
+.v4 .customer-voices {background:radial-gradient(ellipse at top right,#456c70,transparent 70%),#243f46}
+.v4 .gs-cta {background:linear-gradient(115deg,#204b50,#374b5a)}
+.v4 .outcome-card,.v4 .outcome-card:nth-child(2),.v4 .outcome-card:nth-child(3) {background:#fffefa;border-color:#8ab3a8}
+.v4 .property-arches .property-arch,.v4 .property-arches li:nth-child(even) .property-arch {background:#eaf2ee;color:#243f46}
+.v4 .gs-tour .tour-widget {background:radial-gradient(ellipse at top right,#4c6e73,transparent 65%),#243f46;border-color:#6a9393}
+.v4 .atelier-footer {background:#243f46}

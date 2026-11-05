@@ -1,0 +1,236 @@
+{% import '../_variables.css' as var %}
+
+.timeline {
+  position: relative;
+  padding: {{ var.gutter * 2 }}px 0;
+}
+
+.timeline__bar {
+  position: absolute;
+  top: {{ var.gutter }}px;
+  bottom: {{ var.gutter }}px;
+  left: 50%;
+  width: 4px;
+  margin-left: -2px;
+  border-radius: {{ var.radius_1 }};
+  background: {{ var.borders_color }};
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__box {
+  position: relative;
+  max-width: calc(50% - {{ var.gutter * 2 }}px);
+  padding: {{ var.gutter }}px;
+  background: {{ var.white }};
+  border-radius: {{ var.radius_7 }};
+  box-shadow: {{ var.large_shadow }};
+}
+
+.timeline__item--right .timeline__box {
+  float: right;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .timeline__item--right .timeline__box {
+    float: left;
+  }
+{% endif %}
+
+.timeline__box:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: {{ var.white }};
+  border-radius: {{ var.radius_1 }};
+  transform: rotate(45deg);
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.timeline--valign-top .timeline__box:after {
+  top: {{ var.gutter * 2 }}px;
+  margin-top: 0;
+}
+
+.timeline__item--right .timeline__box:after {
+  right: 0;
+  left: -10px;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .timeline__box:after {
+    right: auto;
+    left: -10px;
+  }
+  
+  [dir="rtl"] .timeline__item--right .timeline__box:after {
+    left: 0;
+    right: -10px;
+  }
+{% endif %}
+
+.timeline__dot {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: 50%;
+  margin-left: -15px;
+  background: {{ var.white }};
+  border-radius: 100%;
+  box-shadow: {{ var.small_shadow }};
+}
+
+.timeline--valign-top .timeline__dot {
+  top: {{ var.gutter * 2 }}px;
+  margin-top: 0;
+}
+
+.timeline__dot:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: {{ var.accent_bg }};
+  border-radius: 100%;
+}
+
+.timeline__dot:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: {{ var.white }};
+  border-radius: 100%;
+}
+
+.timeline__dot .ttip-holder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -16px;
+  right: -16px;
+}
+
+.timeline__badge {
+  margin-bottom: .56rem;
+}
+
+.timeline__text > *:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__img-tag {
+  border-radius: {{ var.radius_6 }};
+}
+
+/* Dark */
+
+.timeline--dark .timeline__bar {
+  background: {{ var.white_borders }};
+}
+
+.timeline--dark .timeline__box,
+.timeline--dark .timeline__box:after,
+.timeline--dark .timeline__dot,
+.timeline--dark .timeline__dot:after {
+  background: {{ var.dark }};
+}
+
+/* Responsive */
+
+@media (min-width: {{ var.sm + 1 }}px) {
+  .timeline__badge {
+    display: none;
+  }
+}
+
+@media (min-width: {{ var.md }}px) {
+  .timeline__content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .timeline--valign-top .timeline__content {
+    align-items: flex-start;
+  }
+  
+  .timeline__text {
+    width: 70%;
+    padding: .56rem;
+  }
+  
+  .timeline__item--no-img .timeline__text {
+    width: 100%;
+  }
+  
+  .timeline__item--left .timeline__text {
+    padding-inline-end: {{ var.gutter }}px;
+  }
+  
+  .timeline__item--right .timeline__text {
+    order: 2;
+    padding-inline-start: {{ var.gutter }}px;
+  }
+  
+  .timeline__item--no-img .timeline__text {
+    padding-inline-end: .56rem;
+    padding-inline-start: .56rem;
+  }
+  
+  .timeline__img {
+    width: 30%;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .timeline__img-tag {
+    width: 100%;
+  }
+}
+
+@media (max-width: {{ var.md }}px) {
+  .timeline__img {
+    margin-top: {{ var.gutter }}px;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+
+  .timeline {
+    padding: 0;
+  }
+
+  .timeline__item {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .timeline__box {
+    max-width: 100%;
+    padding-bottom: {{ var.gutter * 1.3 }}px;
+  }
+  
+  .timeline__item + .timeline__item .timeline__box {
+    margin-top: {{ var.gutter }}px;
+  }
+
+  .timeline__bar,
+  .timeline__dot,
+  .timeline__box:after {
+    display: none;
+  }
+}

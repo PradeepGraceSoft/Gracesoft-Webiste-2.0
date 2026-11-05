@@ -1,0 +1,177 @@
+<!--
+ templateType: section
+ label: Proof of success
+ description: "A section with a video background and logo carousel. You may need to save and reload the editor."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/proof-of-success.jpg
+-->
+{% dnd_section
+  full_width=true,
+  padding={
+    'default': {
+      'bottom': 0,
+      'left': 0,
+      'right': 0
+    }
+  }
+%}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-extra-settings',
+        bg_color='dark',
+        bg_media='video',
+        bg_video='https://f.hubspotusercontent20.net/hubfs/273774/act3/videos/video-xasc3.mp4',
+        bg_video_poster={
+          'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/videos/video-xasc3.jpg',
+          'alt': 'Describe your video'
+        },
+        overlay='dark',
+        overlay_opacity=60
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row
+      padding={
+        'default': {
+          'bottom': theme.layout.vspace_lg - theme.layout.gutter,
+          'left': theme.layout.gutter,
+          'right': theme.layout.gutter
+        },
+        'mobile': {
+          'bottom': theme.layout.vspace_sm
+        }
+      }
+    %}
+      {% dnd_module path='../modules/section-intro',
+        overline='',
+        title='Above and Beyond Since Day One',
+        desc='',
+        settings={
+          'color_scheme': 'dark',
+          'title_tag': 'h1',
+          'title_looks_like': 'display',
+          'divider': 'accent'
+        },
+        wrapper={
+          'max_width': {
+            'lg': '800',
+            'md': '600',
+            'sm': '400'
+          },
+          'margin': {
+            'bottom': {
+              'lg': ''
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row
+      padding={
+        'default': {
+          'top': (theme.layout.vspace_lg / 2)|round(0),
+          'bottom': (theme.layout.vspace_lg / 2)|round(0),
+          'left': theme.layout.gutter,
+          'right': theme.layout.gutter
+        },
+        'mobile': {
+          'top': theme.layout.gutter,
+          'bottom': theme.layout.gutter
+        }
+      },
+      background_color='rgba(255, 255, 255, 0.1)'
+    %}
+      {% dnd_module path='../modules/logos',
+        items=[
+          {
+            'internal_name': 'HubSpot',
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/HubSpot_Logo_White.svg',
+              'alt': 'HubSpot logo',
+              'width': 96,
+              'height': 28,
+              'loading': 'lazy'
+            }
+          },
+          {
+            'internal_name': 'Spotify',
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Spotify_Logo_White.svg',
+              'alt': 'Spotify logo',
+              'width': 114,
+              'height': 34,
+              'loading': 'lazy'
+            }
+          },
+          {
+            'internal_name': 'GrowthHub',
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/GrowthHub_Logo_White.svg',
+              'alt': 'GrowthHub logo',
+              'width': 132,
+              'height': 26,
+              'loading': 'lazy'
+            }
+          },
+          {
+            'internal_name': 'Google',
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Google_Logo_White.svg',
+              'alt': 'Google logo',
+              'width': 97,
+              'height': 33,
+              'loading': 'lazy'
+            }
+          },
+          {
+            'internal_name': 'YouTube',
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/YouTube_Logo_White.svg',
+              'alt': 'YouTube logo',
+              'width': 112,
+              'height': 25,
+              'loading': 'lazy'
+            }
+          },
+          {
+            'internal_name': 'Sony',
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Sony_Logo_White.svg',
+              'alt': 'Sony logo',
+              'width': 95,
+              'height': 17,
+              'loading': 'lazy'
+            }
+          }
+        ],
+        settings={
+          'slider': true,
+          'slider_settings': {
+            'arrows': {
+              'lg': true,
+              'md': true,
+              'sm': true,
+              'white': true
+            },
+            'dots': {
+              'lg': false,
+              'md': false,
+              'sm': false,
+              'white': true
+            }
+          }
+        },
+        wrapper={
+          'max_width': {
+            'lg': '1280'
+          },
+          'block_align': {
+            'lg': 'center'
+          },
+          'text_align': {
+            'lg': 'center'
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

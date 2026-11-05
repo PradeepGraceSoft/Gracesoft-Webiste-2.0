@@ -1,0 +1,40 @@
+<!--
+  templateType: section
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+{% dnd_section padding={
+  "top":"0",
+  "bottom":"0"
+  }, full_width=True %}
+  {% dnd_column width=6 %}
+    {% dnd_module path="@hubspot/image_email", img={
+      "alt":"Hillsdale",
+      "height":173,
+      "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Hillsdale.jpg",
+      "width":260
+      }, link="https://www.gracesoft.com/blog/what-made-hillsdale-choose-gracesoft-innkeeping", hs_enable_module_padding=True, hs_wrapper_css={
+      "padding-bottom":"10px",
+      "padding-left":"20px",
+      "padding-right":"20px",
+      "padding-top":"10px"
+      } %}
+
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+  {% dnd_column width=6 %}
+    {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+      "padding-bottom":"10px",
+      "padding-left":"20px",
+      "padding-right":"20px",
+      "padding-top":"10px"
+      } %}
+      {% module_attribute "html" %}<p style="font-weight: normal; font-size: 14px; line-height: 150%;">"We’ve been using GraceSoft for just over two years and have had a fantastic experience. It’s easy-to-use, easy to learn, and everything we need"</p>
+<p style="font-weight: normal; font-size: 14px; line-height: 150%;">&nbsp;</p>
+<div>
+<div style="font-size: 14px; line-height: 150%;"><a href="https://www.gracesoft.com/blog/what-made-hillsdale-choose-gracesoft-innkeeping" rel="noopener"><span style="color: #000000;">Hospitality manager (Dow hotel and conference center)</span></a></div>
+<div style="font-size: 14px; line-height: 150%;">Aaron Tracey</div>
+</div>{% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

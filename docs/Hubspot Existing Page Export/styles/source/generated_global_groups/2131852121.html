@@ -1,0 +1,35 @@
+<div class=''>        <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+        <div class="row-fluid ">
+            <div class="span12 widget-span widget-type-classic_links " style="" data-widget-type="classic_links" data-x="0" data-w="12">
+                <div class="cell-wrapper layout-widget-wrapper">
+                    {% classic_links "dnn_links" site_map_name='migrated-classic-cms-sitemap', overrideable=False, label='Footer links' %}
+                </div><!--end layout-widget-wrapper -->
+            </div><!--end widget-span -->
+        </div><!--end row-->
+        </div><!--end row-wrapper -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+        <div class="row-fluid ">
+            <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+                <div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+                <div class="row-fluid ">
+                    <div class="span12 widget-span widget-type-raw_html " style="" data-widget-type="raw_html" data-x="0" data-w="12">
+                        <div class="cell-wrapper layout-widget-wrapper">
+                            {% widget_block raw_html "footer_itms" overrideable=False, label='Footer Content'  %}
+                                {% widget_attribute "value" %}<div class="new-iefix"><a href="/get-support">Get Support</a>&nbsp;  |&nbsp;  <a href="/aboutus">About Us</a></div>{% end_widget_attribute %}
+                            {% end_widget_block %}
+                        </div><!--end layout-widget-wrapper -->
+                    </div><!--end widget-span -->
+                </div><!--end row-->
+                </div><!--end row-wrapper -->
+            </div><!--end widget-span -->
+    </div><!--end row-->
+    </div><!--end row-wrapper -->
+    <div class="row-fluid-wrapper row-depth-0 row-number-1 ">
+    <div class="row-fluid ">
+        <div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+&copy; {{ year }} {{ site_settings.company_name }}</div><!--end widget-span -->
+
+    </div><!--end row-->
+    </div><!--end row-wrapper -->
+</div>

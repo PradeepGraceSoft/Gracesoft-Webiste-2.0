@@ -1,0 +1,264 @@
+<!--
+templateType: blog_post
+isAvailableForNewContent: true
+label: Blog Post Lite
+screenshotPath: ../Images/Page Preview/Blog Single.png
+-->
+{% set template_css = '../../css/templates/blog.css' %}
+{% extends './layouts/base.html' %}
+
+{% block body %}
+
+<div class="row-fluid">
+	<div class="blog-banner span12">
+		<div class="wrapper equal-height-container">
+			<div class="row-fluid-wrapper">
+				{% if theme.blog_group.blog_post.show_navigation_bar == "true" %}
+				<div class="row-fluid navigation-bar">
+					<div class="row-fluid">
+						<div class="breadcrumb-menu">
+							<div class="fx fx-center">
+								<div class="hs-menu-wrapper">
+									<ul>
+										<li><a href="/{{ group.slug }}"> BLOG</a></li>
+										<li>
+											{% for topic in content.topic_list|first %}
+											<a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+											{% endfor %}
+										</li>
+										<li class="trim">{{ content.name }}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endif %}
+				<div class="row-fluid main-section">
+					<div class="left-col span6 vertical-center">
+						<div class="row-fluid">
+							<div class="blog-post__tags">
+								{% for tag in content.tag_list %}
+								<a class="blog-post__tag no-style-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="author-info">
+								{% if content.blog_author.avatar %}
+								<div class="blog-author__image">
+									<img src="{{ content.blog_author.avatar }}" height="60" loading="eager" alt="Image of {{ content.blog_author.display_name }}">
+								</div>
+								{% endif %}
+								<div class="blog-author__name">
+									<a class="author-link date-link no-style-link" href="{{ blog_author_url (group.id , content.blog_post_author.slug ) }}"><h6>BY {{ content.blog_post_author.display_name }}</h6></a>
+								</div>
+								<div class="post-read">
+									<ul>
+										<li>
+											{% set number = content.post_body|wordcount|divide(200) %}
+											{% if number < 1 %}
+											<span></span>
+											{% else %}
+											<h6> {{ content.post_body|wordcount|divide(200) }} min read</h6>
+											{% endif %}
+										</li>
+									</ul>
+								</div>
+								<div class="date-conta">
+									<ul>
+										<li><h6>{{ content.publish_date_localized }}</h6>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="blog-title">
+								<h1 class="blog-post__title">{{ content.name }}</h1>
+							</div>
+						</div>
+					</div>
+					<div class="right-col span6 vertical-center">
+						{% if content.featured_image %}
+						<div class="blog-post__image-wrapper">
+							<img class="blog-post__image" src="{{ content.featured_image }}" height="420" loading="eager" alt="{{ content.featured_image_alt_text }}">
+						</div>
+						{% endif %}
+					</div>
+				</div>
+				<div id="sticky-anchor"class="row-fluid content-section">
+					<div class="left-col span8">
+						<div class="social-icons">
+							<div id="sticky" class="blog-post_social-sharing left_side_cont">
+								<h6 class="share-title">Share On:</h6>
+								<div class="social-links">
+									{% if group.show_social_link_facebook %}
+									<a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-links__icon">
+										{% module "author_fb_img" path='@hubspot/linked_image',
+                       img={
+                      'alt': ' Author Facebook ',
+                      'src': get_asset_url('../Images/icon/facebook green.svg'),
+                      'width': 24
+                      }
+                   %}
+									</a>
+									{% endif %}
+									{% if group.show_social_link_linkedin %}
+									<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-links__icon">
+										{% module "author_linkedin_img" path='@hubspot/linked_image',
+                       img={
+                       'alt': 'Author Linkedin',
+                       'src': get_asset_url('../Images/icon/linkedin green.svg'),
+                       'width': 21
+                      }
+                   %}
+									</a>
+									{% endif %}
+									{% if group.show_social_link_twitter %}
+									<a href="https://twitter.com/intent/tweet?text=I+found+this+interesting+blog+post&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-links__icon">
+										{% module "author_twitter_img" path='@hubspot/linked_image',
+                       img={
+                      'alt': 'Author Twitter',
+                      'src': get_asset_url('../Images/icon/Twitter green.svg'),
+                      'width': 24
+                      }
+                    %}
+									</a>
+									{% endif %}
+									<a href="mailto:?subject=Check out {{ content.absolute_url }} &body=Check out {{ content.absolute_url }}&media={{ content.featured_image }}" target="_blank" rel="noopener" class="social-links__icon">
+										{% module "author_email_img" path='@hubspot/linked_image',
+                       img={
+                       'alt': 'Author Email',
+                       'src': get_asset_url('../Images/icon/Email envelop green.svg'),
+                       'width': 24
+                      }
+                   %}
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="content-body">
+							<div class="blog-post__body">
+								{{ content.post_body }}
+							</div>
+							<div class="author-card-heading">
+								<h3>About Author</h3>
+							</div>
+							<div class="author-container span12">
+								<div class="equal-height-continer">
+									<div class="row-fluid-wrapper">
+										<div class="row-fluid">
+											<div class="span3 left-col align-center">
+												{% if content.blog_author.avatar %}
+												<div class="blog-author_image">
+													<img src="{{ content.blog_author.avatar }}" height="60" loading="eager" alt="Image of {{ content.blog_author.display_name }}">
+												</div>
+												{% endif %}
+												<div class="author-details">
+													<div class="blog-author__name text-margin-zero">
+														<h4>{{ content.blog_post_author.display_name }}</h4>
+													</div>
+													<div class="design-conta">
+														<p>{{ content.blog_post_author.designation }}</p>
+													</div>
+												</div>
+											</div>
+											<div class="span9 right-col">
+												<div class="description-conta">
+													<p class="blog-header__subtitle">{{ content.blog_post_author.bio }}</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="comment-form-section span12">
+								{% if content_group.allow_comments %}
+								<div class="elements-bebold-comments">                                          
+									<h3>
+										Comments
+									</h3>
+									{% blog_comments "blog_comments" limit=10000 %}
+								</div>
+								{% endif %}
+							</div>
+
+						</div>
+					</div>
+					<div class="right-col span4">
+						<div class="right-content">
+							<div class="row-fluid">
+								{% module "module_16877903486341" path='../modules/Recent_Blogs', label="Recent_Blogs" 
+												"check_to_show_subscription_email" = true,
+												"choose_recent_blog_layout" = "layout2"
+												%}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div  id="footer_stop"class="stopper"></div>
+			</div>
+		</div>
+	</div>
+</div>
+{% if theme.blog_group.blog_post.show_related_posts == "true" %}
+<div class="row-fluid">
+	<div class="related-blog">
+		<div class="wrapper">
+			<div class="row-fluid-wrapper">
+				<div class="row-fluid">
+					<div class="related-blog-heading align-center">
+						<h2>Related Posts</h2>
+						<p>Join over 25,000 in beating the failure of strategies by following our blog.</p>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="related-blog-post">
+						{% module "module_168434338078992" path='../modules/Related_Blogs', label="Related Blogs" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
+
+
+<script>
+	function sticky_relocate() {
+		var window_top = $(window).scrollTop();
+		var footer_top = $("#footer_stop").offset().top - 200;
+		var div_top = $('#sticky-anchor').offset().top - 50;
+		var div_height = $("#sticky").height();
+
+		if (window_top + div_height > footer_top)
+			$('#sticky').removeClass('stick');    
+		else if (window_top > div_top) {
+			$('#sticky').addClass('stick');
+		} else {
+			$('#sticky').removeClass('stick');
+		}
+	}
+
+	$(function () {
+		$(window).scroll(sticky_relocate);
+		sticky_relocate();
+	});
+
+</script>
+<style>
+	@media(min-width:1421px){
+		.blog-post_social-sharing.left_side_cont.stick{
+			position:fixed;
+			top:26%;
+		}
+	}
+</style>
+<script>
+	$(function() {
+		$("#comments-listing").append("<h3>Leave a Comment </h3>")
+	});
+
+</script>
+{% endblock body %}

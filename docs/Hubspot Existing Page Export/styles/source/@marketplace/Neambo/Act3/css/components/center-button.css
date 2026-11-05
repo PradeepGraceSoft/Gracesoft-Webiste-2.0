@@ -1,0 +1,35 @@
+{% import "../_variables.css" as var %}
+
+.center-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.center-btn:before,
+.center-btn:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: {{ var.borders_color }};
+}
+
+.center-btn__btn {
+  flex-shrink: 0;
+  margin: {{ var.gutter }}px;
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .center-btn:before,
+  .center-btn:after {
+    display: none;
+  }
+  
+  .center-btn__btn {
+    flex-shrink: 1;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

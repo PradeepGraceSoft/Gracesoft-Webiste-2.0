@@ -1,0 +1,150 @@
+<!--
+ templateType: section
+ label: Full screen hero slider
+ description: "A large slider that covers the entire viewport. Works great with the overlapping header if placed at the top of the page. You may need to save and reload the editor."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/full-screen-hero-slider.jpg
+-->
+{% dnd_section
+  full_width=true,
+  padding={
+    'default': {
+      'top': 0,
+      'bottom': 0,
+      'left': 0,
+      'right': 0
+    }
+  }
+%}
+  {% dnd_module path='../modules/hero-slider',
+    slides=[
+      {
+        'internal_name': 'Slide 1',
+        'title': 'Everything You Need',
+        'title_tag': 'h1',
+        'title_looks_like': '',
+        'title_remove_space': false,
+        'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus augue nec hendrerit consectetur. Suspendisse posuere lacus id porta pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
+        'button': [
+          {
+            'internal_name': 'Get Started',
+            'type': 'link',
+            'text': 'Get Started',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': false,
+              'no_follow': false
+            },
+            'color': 'white',
+            'fill': 'outline',
+            'size': 'large',
+            'shape': 'default',
+            'add_icon': false
+          }
+        ],
+        'color_scheme': 'dark',
+        'bg': {
+          'color': 'none',
+          'custom_color': {
+            'color': '#ffffff',
+            'opacity': 100
+          },
+          'image': {
+            'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-bg9k.jpg',
+            'width': 1440,
+            'height': 810,
+            'alt': 'Describe your image'
+          },
+          'overlay': 'dark',
+          'overlay_opacity': 50
+        },
+        'max_width': {
+          'lg': '600'
+        },
+        'horizontal_align': {
+          'lg': 'items-center'
+        },
+        'vertical_align': {
+          'lg': 'justify-center'
+        },
+        'text_align': {
+          'lg': 'center'
+        },
+        'top_padding': {
+          'lg': '100'
+        },
+        'bottom_padding': {
+          'lg': '100'
+        }
+      },
+      {
+        'internal_name': 'Slide 2',
+        'title': 'It’s all about you',
+        'title_tag': 'h2',
+        'title_looks_like': 'h1',
+        'title_remove_space': false,
+        'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus augue nec hendrerit consectetur. Suspendisse posuere lacus id porta pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
+        'button': [
+          {
+            'internal_name': 'Get Started',
+            'type': 'link',
+            'text': 'Get Started',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': false,
+              'no_follow': false
+            },
+            'color': 'white',
+            'fill': 'outline',
+            'size': 'large',
+            'shape': 'default',
+            'add_icon': false
+          }
+        ],
+        'color_scheme': 'dark',
+        'bg': {
+          'color': 'none',
+          'custom_color': {
+            'color': '#ffffff',
+            'opacity': 100
+          },
+          'image': {
+            'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-bg10k.jpg',
+            'width': 1440,
+            'height': 810,
+            'alt': 'Describe your image'
+          },
+          'overlay': 'dark',
+          'overlay_opacity': 50
+        },
+        'max_width': {
+          'lg': '600'
+        },
+        'horizontal_align': {
+          'lg': 'items-center'
+        },
+        'vertical_align': {
+          'lg': 'justify-center'
+        },
+        'text_align': {
+          'lg': 'center'
+        },
+        'top_padding': {
+          'lg': '100'
+        },
+        'bottom_padding': {
+          'lg': '100'
+        }
+      }
+    ],
+    settings={
+      'height': 'full'
+    }
+  %}{% end_dnd_module %}
+{% end_dnd_section %}

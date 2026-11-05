@@ -1,0 +1,193 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Section label",
+    "type": "text",
+    "default": "THE GRACESOFT ECOSYSTEM"
+  },
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "One platform.\nA better flow."
+  },
+  {
+    "name": "intro",
+    "label": "Introduction",
+    "type": "text",
+    "default": "From the first inquiry to the final check-out, find the tools that keep your property moving."
+  },
+  {
+    "name": "products",
+    "label": "Product capabilities",
+    "type": "group",
+    "children": [
+      {
+        "name": "name",
+        "label": "Product name",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "heading",
+        "label": "Benefit heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "body",
+        "label": "Description",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "url",
+        "label": "Product URL",
+        "type": "url",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS"
+        ],
+        "default": {
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "name": "features",
+        "label": "Key workflows",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "number",
+        "label": "Display number",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "link_label",
+        "label": "Link text",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 9
+    },
+    "default": [
+      {
+        "name": "Property management",
+        "heading": "A calmer front desk.",
+        "body": "See reservations, room availability and guest details in one workspace. Coordinate arrivals and departures with Easy InnKeeping.",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        },
+        "features": "Reservations · Room inventory · Guest profiles",
+        "number": "01",
+        "link_label": "Explore property management"
+      },
+      {
+        "name": "Booking engine",
+        "heading": "Your website. Their next stay.",
+        "body": "Give guests a direct path from browsing your rooms to making a reservation on your property website.",
+        "url": {
+          "href": "https://www.gracesoft.com/online-booking-engine",
+          "type": "EXTERNAL"
+        },
+        "features": "Direct reservations · Room selection · Website bookings",
+        "number": "02",
+        "link_label": "Explore booking engine"
+      },
+      {
+        "name": "Channel manager",
+        "heading": "Keep your distribution connected.",
+        "body": "Explore availability and rate management across supported online travel agency (OTA) channels. Confirm connections for your property.",
+        "url": {
+          "href": "https://www.gracesoft.com/channel-manager",
+          "type": "EXTERNAL"
+        },
+        "features": "Channel connections · Availability · Rate management",
+        "number": "03",
+        "link_label": "Explore channel manager"
+      },
+      {
+        "name": "Housekeeping",
+        "heading": "A clear view of room readiness.",
+        "body": "Keep room status and housekeeping tasks visible as your team prepares for the next arrival.",
+        "url": {
+          "href": "https://www.gracesoft.com/housekeeping",
+          "type": "EXTERNAL"
+        },
+        "features": "Room status · Housekeeping tasks · Team coordination",
+        "number": "04",
+        "link_label": "Explore housekeeping"
+      },
+      {
+        "name": "Payments",
+        "heading": "Bring billing into the picture.",
+        "body": "Explore guest billing and payment processing options that fit your property’s setup.",
+        "url": {
+          "href": "https://www.gracesoft.com/payments",
+          "type": "EXTERNAL"
+        },
+        "features": "Guest billing · Payment options · Transaction records",
+        "number": "05",
+        "link_label": "Explore payments"
+      },
+      {
+        "name": "Point of sale",
+        "heading": "Beyond the front desk.",
+        "body": "Connect on-property sales workflows with the hospitality operation. Explore point of sale for your property.",
+        "url": {
+          "href": "https://www.gracesoft.com/point-of-sale-system",
+          "type": "EXTERNAL"
+        },
+        "features": "On-property sales · Guest charges · Sales reporting",
+        "number": "06",
+        "link_label": "Explore point of sale"
+      },
+      {
+        "name": "Guest CRM",
+        "heading": "Know the guest behind the booking.",
+        "body": "Organize guest profiles and stay history to support more informed guest relationships.",
+        "url": {
+          "href": "https://www.gracesoft.com/crm-software",
+          "type": "EXTERNAL"
+        },
+        "features": "Guest profiles · Stay history · Follow-up",
+        "number": "07",
+        "link_label": "Explore guest crm"
+      },
+      {
+        "name": "Unified inbox",
+        "heading": "Keep conversations in view.",
+        "body": "Explore tools for bringing guest communication into one place, with channels configured for your property.",
+        "url": {
+          "href": "https://www.gracesoft.com/unified-inbox",
+          "type": "EXTERNAL"
+        },
+        "features": "Guest messages · Conversations · Team visibility",
+        "number": "08",
+        "link_label": "Explore unified inbox"
+      },
+      {
+        "name": "AI voice & chat",
+        "heading": "A new way to welcome questions.",
+        "body": "Explore voice and chat options for guest inquiries, availability questions and reservation assistance.",
+        "url": {
+          "href": "https://www.gracesoft.com/gracesoft-ai",
+          "type": "EXTERNAL"
+        },
+        "features": "Guest questions · Voice and chat · Reservation inquiries",
+        "number": "09",
+        "link_label": "Explore ai voice & chat"
+      }
+    ]
+  }
+]

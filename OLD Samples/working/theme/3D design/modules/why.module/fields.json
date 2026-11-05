@@ -1,0 +1,77 @@
+[
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Powerful technology.\nRoom for the human touch."
+  },
+  {
+    "name": "body",
+    "label": "Introduction",
+    "type": "text",
+    "default": "Your software should support the way you welcome guests. Start with your daily work, then explore the connections that matter to your team."
+  },
+  {
+    "name": "benefits",
+    "label": "Benefits",
+    "type": "group",
+    "children": [
+      {
+        "name": "title",
+        "label": "Heading",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "body",
+        "label": "Description",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 4
+    },
+    "default": [
+      {
+        "title": "A connected working day",
+        "body": "Explore reservations, operations and guest tools in one product ecosystem."
+      },
+      {
+        "title": "Access through the cloud",
+        "body": "Bring your team’s work into a cloud-based property management system (PMS)."
+      },
+      {
+        "title": "A setup for your property",
+        "body": "Talk through your channels, payment needs and operating model with GraceSoft."
+      },
+      {
+        "title": "People to talk to",
+        "body": "Ask about onboarding, training and support arrangements for your chosen plan."
+      }
+    ]
+  },
+  {
+    "name": "label",
+    "label": "CTA",
+    "type": "text",
+    "default": "Meet GraceSoft"
+  },
+  {
+    "name": "url",
+    "label": "CTA URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/about",
+      "type": "EXTERNAL"
+    }
+  }
+]

@@ -1,0 +1,163 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#EAF0F6","body_border_color":"#EAF0F6","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#ffffff","use_email_client_default_settings":false,"primary_font":"Arial, sans-serif","primary_font_color":"#23496d","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"28"},"heading_two_font":{"size":"22"},"links_font":{"color":"#00a4bd","underline":true,"bold":false,"italic":false},"user_module_defaults":{"button_email":{"background_color":"#00a4bd","corner_radius":8,"font":"Arial, sans-serif","font_size":16,"font_color":"#ffffff","font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}},"email_divider":{"height":1,"color":{"color":"#23496d","opacity":100},"line_type":"solid"}}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "top":"10",
+                "bottom":"10"
+                }, full_width=False, background_color="#eaf0f6" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/image_email", img={
+                    "alt":"45_gslogo-_1_",
+                    "height":38,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/45_gslogo-_1_.jpg",
+                    "width":150
+                    }, alignment="left", hs_enable_module_padding=True %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"20px",
+                    "padding-bottom":"20px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 22px; line-height: 175%;"><strong>WEBINAR ON HOW TO USE OTAS EFFECTIVELY</strong>&nbsp;</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/My%20project-1%20(1)_adobe_express.png",
+                    "alt":"My project-1 (1)_adobe_express",
+                    "size_type":None,
+                    "width":560,
+                    "height":280,
+                    "loading":"disabled"
+                    }, stretch_on_mobile=False, alignment="left", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 14px; line-height: 219%;">Please join us for an upcoming webinar on how to use OTAs Effectively, which is scheduled for <span style="font-weight: bold;">23rd March at 12 pm CST</span>. During this session, we will demonstrate the effectiveness of OTAs and the new interfaces.</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"30",
+                "bottom":"30"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", hs_enable_module_padding=True %}
+                    {% module_attribute "html" %}<p style="font-size: 14px; line-height: 125%;">Attendees can expect to gain a thorough understanding of the following:</p>
+<p style="font-size: 14px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 14px; line-height: 125%; font-weight: bold;"><span style="font-size: 15px;">1. How to effectively use OTAs such as Google Hotels, Airbnb, and VRBO</span></p>
+<p style="font-size: 14px; line-height: 125%; font-weight: bold;"><span style="font-size: 15px;">2. Commission-free bookings&nbsp;</span></p>
+<p style="font-size: 14px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 14px; line-height: 125%;">We welcome your feedback and any feature requests you may have.</p>
+<p style="font-size: 14px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 14px; line-height: 125%;">We also encourage you to refer your friends who may be interested in GraceSoft's Reservation Software to us. For more information, please visit</p>
+<p style="font-size: 14px; line-height: 125%;"><a href="https://www.gracesoft.com/referral">https://www.gracesoft.com/referral</a>.</p>
+<p style="font-size: 14px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 14px; line-height: 125%;">To join the webinar, click on the following link:</p>
+<p style="font-size: 14px; line-height: 125%;"><a href="https://global.gotomeeting.com/join/310488373">https://global.gotomeeting.com/join/310488373</a>.</p>
+<p style="font-size: 14px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 14px; line-height: 125%;">We are looking forward to seeing you on <span style="font-weight: bold;">23rd March at 12 pm CST</span>.</p>
+<p style="font-size: 14px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 14px; line-height: 125%;">Best regards,</p>
+<p style="font-size: 14px; line-height: 125%;">GraceSoft Team.</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_footer", display="default", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    }, unsubscribe_link_type="unsubscribe" %}
+                    {% module_attribute "footer_html" %}<p>&nbsp;{{ site_settings.company_street_address_1 }}{{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }},{{ site_settings.company_state }},{{ site_settings.company_zip }},{{ site_settings.company_country }},{{ site_settings.company_phone }}</p>
+<p><a href="{{ unsubscribe_link_all }}" data-unsubscribe="true">Unsubscribe</a> <a href="{{ unsubscribe_link }}" data-unsubscribe="true">Manage Preferences</a></p>{% end_module_attribute %}
+                    {% module_attribute "link_font" is_json=True %}{"size":{"value":10,"units":"px"},"color":"#00a4bd","styles":{"bold":false,"italic":false,"underline":true},"font":"Helvetica,Arial,sans-serif"}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"size":{"value":13,"units":"px"},"color":"#23496d","styles":{"bold":false,"italic":false,"underline":false},"font":"Arial, sans-serif"}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/follow_me_email", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "social" is_json=True %}[{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"}]{% end_module_attribute %}
+                    {% module_attribute "font_style" is_json=True %}{"size":{"value":14,"units":"px"},"color":"#00a4bd","styles":{"italic":false,"bold":false,"underline":true},"font":"Helvetica,Arial,sans-serif"}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

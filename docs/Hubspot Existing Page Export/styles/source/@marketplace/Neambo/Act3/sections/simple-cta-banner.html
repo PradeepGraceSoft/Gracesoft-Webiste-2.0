@@ -1,0 +1,65 @@
+<!--
+ templateType: section
+ label: Simple call to action banner
+ description: "A banner typically used at the bottom of a page or in-between sections, calling to action with a simple title and a button."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/simple-call-to-action-banner.jpg
+-->
+{% dnd_section %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-extra-settings',
+        bg_color='accent'
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-intro',
+        overline='Ready to Install',
+        title='Available now on the official HubSpot Marketplace',
+        desc='',
+        settings={
+          'color_scheme': 'dark',
+          'divider': ''
+        },
+        wrapper={
+          'max_width': {
+            'lg': '700'
+          },
+          'margin': {
+            'bottom': {
+              'lg': (theme.layout.gutter / 3)|round(0)|string,
+              'sm': '0'
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/button',
+        button=[
+          {
+            'internal_name': 'Button 1',
+            'type': 'link',
+            'text': 'Get Started',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true
+            },
+            'color': 'white',
+            'fill': 'outline',
+            'size': 'large',
+            'shape': 'default'
+          }
+        ],
+        wrapper={
+          'text_align': {
+            'lg': 'center'
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

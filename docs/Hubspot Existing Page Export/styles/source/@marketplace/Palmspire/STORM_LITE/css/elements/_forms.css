@@ -1,0 +1,1502 @@
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+{% set whiteColor =  "#ffffff" %}
+{% set form_max_width = theme.form_group.form_max_width ~ 'px' %}
+
+{% set form_description_color = '#333e63' %}
+{% set form_error_border_color = '#333e63' %}
+{% set form_error_focus_border_color = '#6315ff' %}
+
+/*=========================================================================
+form styling
+==========================================================================*/
+
+form legend {
+	font-size: 0.875rem;
+}
+
+/* Inputs */
+
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=tel],
+form input[type=number],
+form input[type=file],
+form select,
+form textarea {
+	display: inline-block;
+	font-size: 0.875rem;
+	padding: 0.7rem;
+	width: 100%;
+}
+
+form fieldset {
+	max-width: 100% !important;
+}
+
+/* Inputs - checkbox/radio */
+
+form .inputs-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+form .inputs-list > li {
+	display: block;
+	margin: 0.7rem 0;
+}
+
+form .inputs-list input,
+form .inputs-list span {
+	vertical-align: middle;
+}
+
+form .hs-input{
+	margin-bottom:19px;
+}
+
+form input[type=checkbox],
+form input[type=radio] {
+	cursor: pointer;
+	margin-right: 0.35rem;
+}
+
+/* Inputs - date picker */
+.hs-dateinput {
+	position: relative;
+}
+
+.hs-dateinput:before {
+	content:'\01F4C5';
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.fn-date-picker .pika-table thead th {
+	color: #FFF;
+}
+
+.fn-date-picker td.is-selected .pika-button {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.fn-date-picker td .pika-button:hover,
+.fn-date-picker td .pika-button:focus {
+	border-radius: 0 !important;
+	color: #FFF;
+}
+
+form .hs-richtext img {
+	max-width: 100% !important;
+}
+
+
+.hs-error-msg {
+	color: #EF6B51;
+	margin-top: 0.35rem;
+}
+
+/*======= Placeholder Color ====*/
+
+body .row-fluid .hs-input::-moz-placeholder,
+body .row-fluid .hs-input::-ms-input-placeholder,
+body .row-fluid .hs-input::-webkit-input-placeholder {
+	font-size: {{ theme.form_group.form_input_group.form_placeholder_font.size.value ~ 'px' }};
+	font-family: {{ theme.form_group.form_input_group.form_placeholder_font.font }};
+	color: {{ theme.form_group.form_input_group.form_placeholder_font.color }};
+	text-transform: {{ theme.form_group.form_input_group.form_input_transform }};
+	font-style: {{  theme.form_group.form_input_group.form_placeholder_font.styles|attr('font-style') }};
+	font-weight: {{ theme.form_group.form_input_group.form_placeholder_font.styles|attr('font-weight')  }};
+	line-height: 1.75;
+}
+
+.email-prefs .item .item-inner span {
+	font-size: {{ theme.typography_group.typography.h5_font.h5_font_style.size }}px;
+	color: {{ theme.typography_group.typography.h4_font.h4_font_style.color }};
+	font-weight: {{ theme.typography_group.typography.h5_font.h5_font_style.styles|attr('font-weight') }};
+	line-height: {{ theme.typography_group.typography.h5_font.heading_5_lineheight }};
+	letter-spacing: {{ theme.typography_group.typography.h5_font.heading_5_letterspacing }}px;
+}
+
+.email-prefs .item .item-inner p {
+	font-size: {{ theme.typography_group.typography.p_font.p_font_style.size }}px;
+	color: {{ theme.typography_group.typography.p_font.p_font_style.color }};
+	font-weight: {{ theme.typography_group.typography.p_font.p_font_style.styles|attr('font-weight') }};
+	line-height: {{ theme.typography_group.typography.p_font.p_lineheight }};
+	letter-spacing: -{{ theme.typography_group.typography.p_font.p_letterspacing }}px;
+}
+
+input:focus{
+	outline: none;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	-webkit-appearance: none;
+	border: 0;
+	border-radius: 2.5px;
+	background: rgba({{ theme.colors_group.hubspot_default.hubspot_forms_module.file_upload_button_background_color.color|convert_rgb }}, {{ theme.colors_group.hubspot_default.hubspot_forms_module.file_upload_button_background_color.opacity / 100 }} );
+	color: {{ theme.colors_group.hubspot_default.hubspot_forms_module.file_upload_button_text_color.color }};
+	position: absolute;
+	bottom: 25%;
+	right: 2%;
+	width: 143px;
+	height: 33px;
+	font-size: 14px;
+	font-weight:500;
+}
+
+
+form {
+	padding: {{ theme.styling_group.spacing.forms.form.vertical_spacing ~ 'px' }} {{ theme.styling_group.spacing.forms.form.horizontal_spacing ~ 'px' }};
+	background:rgba({{ theme.colors_group.hubspot_default.hubspot_forms_module.background_color.color|convert_rgb }}, {{ theme.colors_group.hubspot_default.hubspot_forms_module.background_color.opacity/100 }});
+	border: {{ theme.styling_group.border.forms.form_border_width ~ 'px' }} solid {{ theme.colors_group.hubspot_default.hubspot_forms_module.border_color.color}};
+	border-radius: {{ theme.styling_group.corners.overwrite_for_form ~ 'px' }};
+}
+
+
+body.dark_scheme form {
+	background: rgba({{ theme.colors_group.growthkit_colors.dark_scheme.forms.form_background_color.color|convert_rgb }}, {{ theme.colors_group.growthkit_colors.dark_scheme.forms.form_background_color.opacity/100 }}) !important;
+}
+
+.form-title{
+	color: {{ theme.colors_group.hubspot_default.hubspot_forms_module.title_text_color.color }};
+	background: rgba({{ theme.colors_group.hubspot_default.hubspot_forms_module.title_background_color.color|convert_rgb }}, {{ theme.colors_group.hubspot_default.hubspot_forms_module.title_background_color.opacity/100 }});
+	padding:20px;
+	margin:0;
+}
+
+{% set isActive = true %}
+.form-cm .form-title{
+	{% if isActive is boolean %}
+	padding:0px;
+	{% endif %}
+}
+
+body .row-fluid .hs-button {  
+	{% if theme.fonts_group.formatting.form.form_submit_button.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.form.form_submit_button.font_size }}px;
+	{% if theme.fonts_group.formatting.form.form_submit_button.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "medium_500" %}
+	font-weight: 500;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.form_submit_button.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}	
+	letter-spacing: {{ theme.fonts_group.formatting.form.form_submit_button.letter_spacing }}px;
+	line-height: {{ theme.fonts_group.formatting.form.form_submit_button.line_height }}px;
+	padding: {{ theme.styling_group.spacing.forms.form_submit_button.vertical_spacing ~ 'px' }} {{ theme.styling_group.spacing.forms.form_submit_button.horizontal_spacing ~ 'px' }};
+	color: {{ theme.colors_group.hubspot_default.submit_button.text_color.color }};
+	background: rgba({{ theme.colors_group.hubspot_default.submit_button.background_color.color|convert_rgb }}, {{ theme.colors_group.hubspot_default.submit_button.background_color.opacity/100 }});;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	transition: all .5s ease-in-out;
+	top: 0;
+	border:none;
+	width:100%;
+	border-radius: {{ theme.styling_group.corners.overwrite_for_buttons ~ 'px'}};
+	text-shadow: 0 1px 3px rgb(36 180 126 / 40%);
+	text-transform: {{ theme.form_group.form_button.button_groups.form_text_transform }};
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+body .row-fluid .hs-button:hover{ 
+	border-color:{{ theme.form_group.form_button.button_hover_groups.form_button_hoverborder_color.color }};
+	color: {{ theme.colors_group.hubspot_default.submit_button.text_color_hover.color }};
+	background:rgba({{ theme.colors_group.hubspot_default.submit_button.background_color_hover.color|convert_rgb }}, {{ theme.colors_group.hubspot_default.submit_button.background_color_hover.opacity/100 }});
+	box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+	border-radius:45px;
+	transition:all 0.5s ease-in-out;
+	text-decoration:none;
+} 
+
+body .row-fluid .hs-button:focus,
+body .row-fluid .hs-button:active{
+	background-color: {{ theme.form_group.form_button.button_groups.form_button_bg_color.color }};
+	border: 1px solid {{ theme.form_group.form_button.button_groups.form_button_border_color.color}};
+	border-radius: {{ theme.form_group.form_button.button_groups.form_border_radius ~ 'px'}};
+	color: {{ theme.form_group.form_button.button_groups.form_button_font_style.color }};
+	outline: none;
+}
+
+.hs-form label {
+	{% if theme.fonts_group.formatting.form.labels.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.form.labels.font_size }}px;
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "medium_500" %}
+	font-weight: 500;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}
+	line-height: {{ theme.fonts_group.formatting.form.labels.line_height }}px;
+	letter-spacing: {{ theme.fonts_group.formatting.form.labels.letter_spacing }}px;
+	text-transform: capitalise;
+	text-decoration: none;
+	text-transform: {{ theme.form_group.form_label_group.form_label_text_transform }};
+	color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.field_label_color.color }};
+	text-align: left;
+	padding-top: 0;
+	margin-bottom: 10px;
+	margin-top: 11px;
+	display: block;
+	float: none;
+	width: auto;
+}
+
+body .container-fluid .row-fluid .hs-error-msgs label {
+	{% if theme.fonts_group.formatting.form.error_texts.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.form.error_texts.font_size }}px;
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "medium_500" %}
+	font-weight: 500;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.form.error_texts.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}
+	line-height: {{ theme.fonts_group.formatting.form.error_texts.line_height }}px;
+	letter-spacing: {{ theme.fonts_group.formatting.form.error_texts.letter_spacing }}px;
+	text-decoration: none;
+	text-transform: {{ theme.form_group.form_label_group.form_label_text_transform }};
+	color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.error_color.color }};
+	margin-top: 0px;
+}
+
+body .row-fluid .hs-input.invalid.error {
+	border-color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.error_color.color }};
+}
+body .container-fluid .row-fluid .hs-field-desc {  
+	margin-top: 0px;
+	font-size: {{  theme.form_group.form_helptext_msg_group.form_helptext_font.size.value }}px;
+	font-family: {{  theme.form_group.form_helptext_msg_group.form_helptext_font.font }};
+	color: {{  theme.form_group.form_helptext_msg_group.form_helptext_font.color }};
+	text-decoration: none;
+	font-style: {{  theme.form_group.form_helptext_msg_group.form_helptext_font.styles|attr('font-style') }};
+	font-weight: {{ theme.form_group.form_helptext_msg_group.form_helptext_font.styles|attr('font-weight')  }};
+	text-transform: {{ theme.form_group.form_helptext_msg_group.form_helptext_text_transform }};
+}
+
+form .hs-richtext p,
+.hs-form-booleancheckbox-display p,
+.legal-consent-container .hs-form-booleancheckbox-display{
+	font-size: {{  theme.form_group.form_gdpr_msg_group.form_gdpr_font.size.value ~ 'px' }} ! important;
+	font-family: {{  theme.form_group.form_gdpr_msg_group.form_gdpr_font.font }};
+	color: {{  theme.form_group.form_gdpr_msg_group.form_gdpr_font.color }};
+	text-decoration: initial;
+	font-style: {{  theme.form_group.form_gdpr_msg_group.form_gdpr_font.styles|attr('font-style') }};
+	font-weight: {{ theme.form_group.form_gdpr_msg_group.form_gdpr_font.styles|attr('font-weight')  }};
+	text-transform: {{ theme.form_group.form_gdpr_msg_group.form_gdpr_text_transform }};
+	text-align: left;
+}
+
+.legal-consent-container .hs-input[type="checkbox"] {
+	margin: 0 7px 0px 0px !important;
+	top: 2px !important;
+}
+
+.legal-consent-container .hs-form-booleancheckbox-display p {
+	vertical-align: middle;
+}
+
+body .row-fluid .hs-input,
+.systems-page-psw input#hs-pwd-widget-password{
+	{% if theme.fonts_group.formatting.form.inputs.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% elif theme.fonts_group.formatting.form.inputs.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.form.inputs.font_size }}px;
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "medium_500" %}
+	font-weight: 500;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}
+	line-height: {{ theme.fonts_group.formatting.form.inputs.line_height }}px;
+	letter-spacing: {{ theme.fonts_group.formatting.form.inputs.letter_spacing }}px;
+	color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.form_input_color.color }};
+
+	display: inline-block;
+	width: 100%;
+	text-transform: ;
+	height:{{ theme.form_group.form_input_group.input_height }}px;
+	padding: {{ theme.styling_group.spacing.forms.input_fields.vertical_spacing ~ 'px' }} {{ theme.styling_group.spacing.forms.input_fields.horizontal_spacing ~ 'px' }};
+	background-color:{{ theme.form_group.form_input_group.form_inputbg_color.color }};
+	border: {{ theme.styling_group.border.forms.field_border_width ~ 'px' }} solid {{ theme.colors_group.hubspot_default.hubspot_forms_module.field_border_color.color}};
+	box-sizing: border-box;
+	-webkit-border-radius: {{ theme.styling_group.corners.overwrite_for_inputs ~ 'px' }};
+	-moz-border-radius: {{ theme.styling_group.corners.overwrite_for_inputs ~ 'px' }};
+	-ms-border-radius: {{ theme.styling_group.corners.overwrite_for_inputs ~ 'px' }};
+	border-radius: {{ theme.styling_group.corners.overwrite_for_inputs ~ 'px' }};
+	margin-bottom: 6px;
+}
+
+.body-container-wrapper .hs-error-msgs,
+.hs-error-msg{
+	margin:0;
+}
+
+.submitted-message {
+	text-align: center;
+}
+
+/*=======================================================
+CHECKBOX AND RADIO BUTTONS STYLING
+=======================================================*/            
+
+.row-fluid .hs-form .field .input input[type="checkbox"],
+.row-fluid .hs-form .field .input  input[type="radio"]{
+	width:auto;
+}
+
+.row-fluid .hs-form .field .input input[type="checkbox"],
+.row-fluid .hs-form .field .input  input[type="radio"]{
+	padding: 0;
+	background: ;
+	margin-left: 0;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	color: {{ theme.form_group.form_checkboxradio_group.checkbox_text_color.color }};
+-webkit-appearance: none;
+border: ;
+margin-right: 8px;
+top: 4px;
+width: 18px;
+height: 18px;
+}
+
+.row-fluid .hs-form .field .input input[type="radio"]:checked:after {
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	top: 2px;
+	background-color: {{ theme.form_group.form_checkboxradio_group.checkbox_tick_color.color }};
+	left: 2px;
+	border-radius: 50%;
+}
+
+body .row-fluid textarea.hs-input {
+	height: 179px;
+	resize: none; 
+}
+
+.two-col-form-section textarea.hs-input {
+	height: 122px;
+}
+
+.inputs-list label>input, .inputs-list label>span {
+	vertical-align: middle;
+}
+
+.row-fluid .hs-form .field .input input[type="checkbox"]:checked:after {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 6px;
+	top: 4px;
+	left: 2px;
+	border: 2px solid {{  theme.colors_group.hubspot_default.hubspot_forms_module.checkbox_checkmark_color.color }};
+	border-top: 0;
+	border-right: 0;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+.row-fluid .hs-form .field .input input[type="checkbox"]:checked:after {
+	display:transparent;
+}
+
+body .row-fluid .hs-form .field .input input[type="checkbox"] {
+	padding: 0; 
+	border: {{ theme.styling_group.border.forms.checkbox_border_width ~ 'px' }} solid {{  theme.colors_group.hubspot_default.hubspot_forms_module.checkbox_border_color.color }};
+	background: {{  theme.colors_group.hubspot_default.hubspot_forms_module.checkbox_background_color.color }};
+	margin-left: 0;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	margin-bottom: 4px;
+	-webkit-appearance: none;
+	border:;
+	margin-right: 8px;
+	top: 3px;
+	width: 18px!important;
+	height: 18px;
+	border-radius:2px;
+}
+
+.row-fluid .hs-form .field .input input[type="checkbox"]:checked{
+	background: {{  theme.colors_group.hubspot_default.hubspot_forms_module.checkbox_background_color_on_checked.color }};
+}
+
+.row-fluid .hs-form .field .input input[type="radio"]{
+	border-radius: 50%;
+	margin-bottom: 4px;
+	height: auto;
+	overflow: unset;
+}
+
+.row-fluid .hs-form .field .input input[type="radio"]::before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: {{ theme.styling_group.border.forms.radio_border_width ~ 'px' }} solid {{  theme.colors_group.hubspot_default.hubspot_forms_module.radio_border_color.color }};
+	background: {{  theme.colors_group.hubspot_default.hubspot_forms_module.radio_background_color.color }};
+	border-radius: 50%;
+	position: absolute;
+	left: -22px;
+	bottom: -10px;
+	opacity: 1;
+	transition: all 0.3s;
+	padding: 4px;
+}
+
+.row-fluid .hs-form .field .input input[type="radio"]:checked::after {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: {{ theme.styling_group.border.forms.radio_border_width ~ 'px' }} solid {{  theme.colors_group.hubspot_default.hubspot_forms_module.radio_selected_color.color }};
+	background: {{  theme.colors_group.hubspot_default.hubspot_forms_module.radio_selected_color.color }};
+	border-radius: 50%;
+	position: absolute;
+	left: -18px;
+	bottom: -6px;
+	opacity: 1;
+	transition: all 0.3s;
+}
+
+.row-fluid .hs-form .field .input input[type="radio"]:checked::before{
+	border: ;
+}
+
+.row-fluid .hs-form .field .input input[type="radio"] {
+	appearance: none;
+	margin: 0;
+}
+
+.row-fluid .hs-form .field .input .hs-form-radio-display {
+	margin-left: 20px;
+}
+
+
+form .file-upload-button-label {
+	border: ;
+	position: absolute;
+	left: 11px;
+	top: 7.5px;
+	border-radius: 4px;
+	padding: 0px 10px;
+	color: {{ theme.form_group.form_label_group.form_label_font.color }};
+	font-size: 14px;
+	line-height: 29px;
+	letter-spacing: 0px;
+	width: auto;
+	height: 0;
+	display: flex;
+	cursor: pointer;
+	display: flex;
+	cursor: pointer;
+	max-width: 100%;
+	margin-bottom: 0px;
+	height: 30px;
+}
+
+form .file-upload-file-name {
+	height: 45px;
+	color: {{ theme.form_group.form_label_group.form_label_font.color }};
+	line-height: normal;
+	display: flex;
+	border: ;
+	border-radius: 6px;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 16px;
+	font-weight: normal;
+	position: relative;
+	right: 0;
+	width: 100%;
+	top: 0px;
+	padding: 0 10px;
+	cursor: pointer;
+	max-width: 100%;
+	margin-bottom: 20px;
+	box-sizing:border-box;
+	padding-left:134px;
+}
+
+form .file-upload-file-name:focus{
+	border: 1px solid #64ee85;
+}
+
+form .input {
+	display: block;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+body .row-fluid select.hs-input{
+	position:relative;
+	background-color: {{ theme.colors_group.growthkit_colors.light_scheme.forms.form_background_color.color}};
+}
+
+body.dark_theme select.hs-input{
+	background-color: {{ theme.colors_group.growthkit_colors.dark_scheme.forms.form_background_color.color}} !important;
+}
+
+body .row-fluid select{
+	background-position: 92.5% 54% !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	cursor: pointer;
+	background-size: 11px !important;
+	background: url(https://3842749.fs1.hubspotusercontent-na1.net/hubfs/3842749/angle-down.svg);
+	background-repeat: no-repeat;
+}
+
+body .row-fluid .hs-form fieldset.form-columns-2 .hs-form-field {
+	width: 47%;
+	margin-right: 6%;
+}
+
+body .row-fluid .hs-form fieldset .hs-form-field:last-child{
+	margin-right:0;
+}
+
+body .row-fluid .hs-form fieldset.form-columns-2 .input,
+body .row-fluid .hs-form fieldset.form-columns-3 .input {
+	margin-right:0px;
+}
+
+body .container-fluid .row-fluid .hs-form fieldset .field:last-child .input{
+	margin-right:0;
+}
+
+@media(max-width:480px){
+	body form.hs-form .form-columns-2 .hs-form-field .hs-input,body form.hs-form .form-columns-3 .hs-form-field .hs-input{
+		width:100%;
+	}
+
+	body .row-fluid .hs-form fieldset .input{
+		margin:0;
+	}
+
+	body .row-fluid .hs-form fieldset.form-columns-3 .hs-form-field {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.row-fluid form .hs_submit .actions{
+		text-align:center;
+	}
+
+	body .row-fluid .hs-form fieldset.form-columns-2 .hs-form-field {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	form .file-upload-button-label{
+		font-size:12px;
+	}
+
+	form .file-upload-file-name{
+		font-size:12px;
+		padding-left: 102px;
+	}
+
+}
+
+.hs-input input,
+.hs-input textarea {
+	transition: border 0.2s linear;
+}
+
+body .hs-input:focus {
+	outline: 0;
+	border: 1px solid #ff2121;
+}
+
+select[multiple].hs-input {
+	height: inherit;
+}
+
+fieldset.form-columns-1 .hs-input:not([type=radio]):not([type=checkbox]) {
+	width: 100% !important;
+}
+
+body .row-fluid fieldset {
+	max-width: 100%;
+}
+
+input.hs-input.error,
+div.field.error input,
+div.field.error textarea,
+div.field.error .chzn-choices,
+textarea.hs-input.error,
+select.hs-input.error {
+	border-color: {{ form_error_border_color }};
+}
+
+input.hs-input.error:focus,
+div.field.error input:focus,
+div.field.error textarea:focus,
+div.field.error .chzn-choices:focus,
+textarea.hs-input.error:focus,
+select.hs-input.error:focus {
+	border-color: {{ form_error_focus_border_color }};
+}
+
+.actions {
+	padding: 0;
+	text-align:center
+}
+
+.inputs-list {
+	margin: 0 0 5px;
+	width: 100%;
+	padding-left: 0;
+}
+.inputs-list > li {
+	display: block;
+	padding: 0;
+	width: 100%;
+	padding-top: 0;
+	margin-left:0;
+}
+form .inputs-list label {
+	{% if theme.fonts_group.formatting.form.inputs.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% elif theme.fonts_group.formatting.form.inputs.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.form.inputs.font_size }}px;
+	{% if theme.fonts_group.formatting.form.labels.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "medium_500" %}
+	font-weight: 500;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% elif theme.fonts_group.formatting.form.inputs.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}
+	line-height: {{ theme.fonts_group.formatting.form.inputs.line_height }}px;
+	letter-spacing: {{ theme.fonts_group.formatting.form.inputs.letter_spacing }}px;
+	color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.form_input_color.color }};
+	color: {{ theme.form_group.form_checkboxradio_group.checkbox_text_color.color }};
+	display: block;
+	float: none;
+	width: auto;
+	padding: 0;
+	margin:2px 0;
+	text-align: left;
+	white-space: normal;
+	text-transform: {{ theme.form_group.form_checkboxradio_group.form_checkbox_text_transform }};
+}
+.inputs-list:first-child {
+	padding-top: 6px;
+	margin-bottom: 18px;
+}
+.inputs-list > li + li {
+	padding-top: 2px;
+}
+
+
+ul.no-list {
+	list-style: none;
+}
+
+.hs-field-desc {
+	color: {{ form_description_color }};
+	margin: 0px 0px 6px;
+	font-size: 14px;
+}
+
+.hs-form-required {
+	color: red;
+}
+
+.hs-richtext {
+	margin-bottom: 3px;
+	line-height: 1.2;
+	font-size: {{ body_font_size }};
+	color: {{ body_color }};
+}
+.hs-richtext hr {
+	text-align: left;
+	margin-left: 0;
+	width: 91%;
+}
+
+/* Captcha */
+
+.grecaptcha-badge {
+	margin: 0 auto;
+}
+
+.email-correction, .email-validation {
+	padding-top: 3px;
+	font-size: 12px;
+}
+
+.email-correction a,
+.email-validation a {
+	cursor: pointer;
+}
+
+@media(max-width:767px){
+
+	body .row-fluid form .form-columns-2 .hs-form-field .hs-input {
+		width: 100%!important;
+	}
+	form{
+		padding:25px 25px;
+	}
+
+}
+
+@media(max-width:400px){
+	form .input{
+		margin-right:0px!important;
+	}
+}
+
+@media (max-width: 400px),
+	(min-device-width: 320px) and (max-device-width: 480px) {
+		.email-correction form .form-columns-2 .hs-form-field,
+		.email-correction form .form-columns-3 .hs-form-field,
+		.email-validation form .form-columns-2 .hs-form-field,
+		.email-validation form .form-columns-3 .hs-form-field {
+			float: none;
+			width: 100%;
+		}
+		.email-correction form .form-columns-2 .hs-form-field .hs-input,
+		.email-correction form .form-columns-3 .hs-form-field .hs-input,
+		.email-validation form .form-columns-2 .hs-form-field .hs-input,
+		.email-validation form .form-columns-3 .hs-form-field .hs-input {
+			width: 100%;
+		}
+		.email-correction form .form-columns-2 .hs-form-field input[type=checkbox],
+		.email-correction form .form-columns-2 .hs-form-field input[type=radio],
+		.email-correction form .form-columns-3 .hs-form-field input[type=checkbox],
+		.email-correction form .form-columns-3 .hs-form-field input[type=radio],
+		.email-validation form .form-columns-2 .hs-form-field input[type=checkbox],
+		.email-validation form .form-columns-2 .hs-form-field input[type=radio],
+		.email-validation form .form-columns-3 .hs-form-field input[type=checkbox],
+		.email-validation form .form-columns-3 .hs-form-field input[type=radio] {
+			width: 24px;
+		}
+
+}
+
+.hs-button,
+.hs-form-field input[type=text],
+.hs-form-field input[type=email],
+.hs-form-field input[type=phone],
+.hs-form-field input[type=number],
+.hs-form-field input[type=tel],
+.hs-form-field input[type=date],
+.hs-form-field textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.hs-default-font-element,
+.hs-main-font-element {
+	font-family: {{  theme.form_group.form_input_font.font }};
+}
+
+
+
+/* Subscribe Form Stylings Here */
+
+
+
+/*======= Placeholder Color ====*/
+
+body .row-fluid .sub-form .hs-input::-webkit-input-placeholder {
+	font-size: {{ theme.subscribe_form.form_input_group.form_placeholder_font.size.value ~ 'px' }};
+	font-family: {{ theme.subscribe_form.form_input_group.form_placeholder_font.font }};
+	color: {{ theme.subscribe_form.form_input_group.form_placeholder_font.color }};
+	text-transform: {{ theme.subscribe_form.form_input_group.form_input_transform }};
+	font-style: {{  theme.subscribe_form.form_input_group.form_placeholder_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_input_group.form_placeholder_font.styles|attr('font-weight')  }};
+	line-height: 1.75;
+}
+
+body .row-fluid .sub-form .hs-input::-moz-placeholder {
+	font-size: {{ theme.subscribe_form.form_input_group.form_placeholder_font.size.value ~ 'px' }};
+	font-family: {{ theme.subscribe_form.form_input_group.form_placeholder_font.font }};
+	color: {{ theme.subscribe_form.form_input_group.form_placeholder_font.color }};
+	text-transform: {{ theme.subscribe_form.form_input_group.form_input_transform }};
+	font-style: {{  theme.subscribe_form.form_input_group.form_placeholder_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_input_group.form_placeholder_font.styles|attr('font-weight')  }};
+	line-height: 1.75;
+}
+
+body .row-fluid .sub-form .hs-input::-ms-input-placeholder {  
+	font-size: {{ theme.subscribe_form.form_input_group.form_placeholder_font.size.value ~ 'px' }};
+	font-family: {{ theme.subscribe_form.form_input_group.form_placeholder_font.font }};
+	color: {{ theme.subscribe_form.form_input_group.form_placeholder_font.color }};
+	text-transform: {{ theme.subscribe_form.form_input_group.form_input_transform }};
+	font-style: {{  theme.subscribe_form.form_input_group.form_placeholder_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_input_group.form_placeholder_font.styles|attr('font-weight')  }};
+	line-height: 1.75;
+}
+
+.sub-form .email-prefs .item .item-inner span {
+	font-size: {{ theme.typography_group.typography.h5_font.h5_font_style.size }}px;
+	color: {{ theme.typography_group.typography.h4_font.h4_font_style.color }};
+	font-weight: {{ theme.typography_group.typography.h5_font.h5_font_style.styles|attr('font-weight') }};
+	line-height: {{ theme.typography_group.typography.h5_font.heading_5_lineheight }};
+	letter-spacing: {{ theme.typography_group.typography.h5_font.heading_5_letterspacing }}px;
+}
+
+
+.sub-form input[type="file"]::-webkit-file-upload-button {
+	-webkit-appearance:none;
+	border:0;
+	background:{{ theme_color  }};
+	color:{{ whiteColor }};
+	position:absolute;
+	bottom:40%;
+	left:40%;
+	width:100px;
+	height:24px;
+	font-size:16px;
+	border-radius:4px;
+}
+
+.sub-form form {
+	padding: {{ theme.styling_group.spacing.forms.form.vertical_spacing ~ 'px' }} {{ theme.styling_group.spacing.forms.form.horizontal_spacing ~ 'px' }};
+	background: ;
+	border: ;
+	border-radius: {{ theme.subscribe_form.form_basic_group.form_border_radius ~ 'px' }};
+	max-width: {{ theme.subscribe_form.form_basic_group.form_max_width ~ 'px'}};
+	margin: 0 auto;
+}
+
+
+.sub-form .form-title{
+	margin: 0;
+	max-width: {{ theme.subscribe_form.form_basic_group.form_max_width ~ 'px'}};
+	color: {{ theme.subscribe_form.form_basic_group.form_title_color.color }};
+	background: ;
+	padding:20px 20px 0;
+	margin:0 auto;
+}
+
+body .row-fluid .sub-form .hs-button {  
+	font-size: {{ theme.subscribe_form.form_button.button_groups.form_button_font_style.size ~ 'px' }};
+	line-height: {{ theme.subscribe_form.form_button.button_groups.form_button_lineheight ~ 'px' }};
+	padding: {{ theme.subscribe_form.form_button.button_groups.form_menu_button_vertical_spacing }}px {{ theme.subscribe_form.form_button.button_groups.form_menu_button_horizontal_spacing }}px;
+	font-family: {{ theme.subscribe_form.form_button.button_groups.form_button_font_style.font }};
+	color: {{ theme.subscribe_form.form_button.button_groups.form_button_font_style.color }};
+	font-style: {{ theme.subscribe_form.form_button.button_groups.form_button_font_style.styles|attr('font-style') }};
+	letter-spacing: {{ theme.subscribe_form.form_button.button_groups.form_button_letterspacing ~ 'px' }};
+	background-color: ;
+	border: ;
+	border-radius: {{ theme.subscribe_form.form_button.button_groups.form_border_radius ~ 'px'}};
+	text-transform: {{ theme.subscribe_form.form_button.button_groups.form_text_transform }};
+	font-weight: {{theme.subscribe_form.form_button.button_groups.form_button_font_style.styles|attr('font-weight') }};
+
+}
+
+body .row-fluid .sub-form .hs-button:hover{ 
+	background: ;
+	border-color:{{ theme.subscribe_form.form_button.button_hover_groups.form_button_hoverborder_color.color }};
+	color:{{ theme.subscribe_form.form_button.button_hover_groups.form_button_hovertext_color.color }};
+} 
+
+body .row-fluid .sub-form .hs-button:focus,
+body .row-fluid .sub-form .hs-button:active{
+	background-color: {{ theme.subscribe_form.form_button.button_groups.form_button_bg_color.color }};
+	border: 1px solid {{ theme.subscribe_form.form_button.button_groups.form_button_border_color.color }};
+	border-radius: {{ theme.subscribe_form.form_button.button_groups.form_border_radius ~ 'px'}};
+	color: {{ theme.subscribe_form.form_button.button_groups.form_button_font_style.color }};
+}
+
+.sub-form .hs-form label {
+	font-size: {{  theme.subscribe_form.form_label_group.form_label_font.size.value }}px;
+	font-family: {{  theme.subscribe_form.form_label_group.form_label_font.font }};
+	color: {{  theme.subscribe_form.form_label_group.form_label_font.color }};
+	text-decoration: initial;
+	font-style: {{  theme.subscribe_form.form_label_group.form_label_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_label_group.form_label_font.styles|attr('font-weight')  }};
+	text-transform: {{ theme.subscribe_form.form_label_group.form_label_text_transform }};
+}
+
+body .container-fluid .row-fluid .sub-form .hs-error-msgs label {
+	font-size: {{  theme.subscribe_form.form_error_msg_group.form_error_font.size.value }}px;
+	font-family: {{  theme.subscribe_form.form_error_msg_group.form_error_font.font }};
+	color: {{  theme.subscribe_form.form_error_msg_group.form_error_font.color }};
+	text-decoration: initial;
+	font-style: {{  theme.subscribe_form.form_error_msg_group.form_error_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_error_msg_group.form_error_font.styles|attr('font-weight')  }};
+	text-transform: {{ theme.subscribe_form.form_error_msg_group.form_error_text_transform }};
+}
+
+body .container-fluid .row-fluid .sub-form .hs-field-desc {  
+	font-size: {{  theme.subscribe_form.form_helptext_msg_group.form_helptext_font.size.value }}px;
+	font-family: {{  theme.subscribe_form.form_helptext_msg_group.form_helptext_font.font }};
+	color: {{  theme.subscribe_form.form_helptext_msg_group.form_helptext_font.color }};
+	text-decoration: initial;
+	font-style: {{  theme.subscribe_form.form_helptext_msg_group.form_helptext_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_helptext_msg_group.form_helptext_font.styles|attr('font-weight')  }};
+	text-transform: {{ theme.subscribe_form.form_helptext_msg_group.form_helptext_text_transform }};
+}
+
+.sub-form form .hs-richtext p,
+.sub-form .hs-form-booleancheckbox-display p,
+.sub-form .legal-consent-container .hs-form-booleancheckbox-display{
+	font-size: {{  theme.subscribe_form.form_gdpr_msg_group.form_gdpr_font.size.value ~ 'px' }} ! important;
+	font-family: {{  theme.subscribe_form.form_gdpr_msg_group.form_gdpr_font.font }};
+	color: {{  theme.subscribe_form.form_gdpr_msg_group.form_gdpr_font.color }};
+	text-decoration: initial;
+	font-style: {{  theme.subscribe_form.form_gdpr_msg_group.form_gdpr_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_gdpr_msg_group.form_gdpr_font.styles|attr('font-weight')  }};
+	text-transform: {{ theme.subscribe_form.form_gdpr_msg_group.form_gdpr_text_transform }};
+}
+
+body .row-fluid .sub-form .hs-input,
+.sub-form .systems-page-psw input#hs-pwd-widget-password{
+	height:{{ theme.subscribe_form.form_input_group.input_height }}px;
+	padding: {{ theme.subscribe_form.form_input_group.input_padding_topbottom ~ 'px' }} {{ theme.subscribe_form.form_input_group.input_padding_leftright ~ 'px' }};
+	font-size: {{ theme.subscribe_form.form_input_group.form_input_font.size.value ~ 'px' }};
+	font-family: {{ theme.subscribe_form.form_input_group.form_input_font.font }};
+	color: {{ theme.subscribe_form.form_input_group.form_input_font.color }};
+	text-transform: {{ theme.subscribe_form.form_input_group.form_input_transform }};
+	font-style: {{ theme.subscribe_form.form_input_group.form_input_font.styles|attr('font-style') }};
+	font-weight: {{ theme.subscribe_form.form_input_group.form_input_font.styles|attr('font-weight')  }};
+	background: {{ theme.subscribe_form.form_input_group.form_inputbg_color.color  }};
+	border: {{ theme.subscribe_form.form_input_group.border_width ~ 'px' }} {{ theme.subscribe_form.form_input_group.border }} {{ theme.subscribe_form.form_input_group.input_border_color.color }};
+	-webkit-border-radius: {{ theme.subscribe_form.form_input_group.input_border_radius ~ 'px' }};
+	-moz-border-radius: {{ theme.subscribe_form.form_input_group.input_border_radius ~ 'px' }};
+	-ms-border-radius: {{ theme.subscribe_form.form_input_group.input_border_radius ~ 'px' }};
+	border-radius: {{ theme.subscribe_form.form_input_group.input_border_radius ~ 'px' }};
+
+}
+
+/*=======================================================
+CHECKBOX AND RADIO BUTTONS STYLING
+=======================================================*/            
+
+{#
+.row-fluid .sub-form .hs-form .field .input input[type="checkbox"],
+.row-fluid .sub-form .hs-form .field .input  input[type="radio"]{
+	background:;
+	color: {{ theme.subscribe_form.form_checkboxradio_group.checkbox_text_color.color }};}
+border:;
+
+}
+
+.row-fluid .sub-form .hs-form .field .input input[type="radio"]:checked:after {
+  background-color: {{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.color }};
+
+}
+
+
+.row-fluid .sub-form .hs-form .field .input input[type="checkbox"]:checked:after {
+	border: 2px solid rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.color|convert_rgb }},{{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.opacity / 100 }});
+}
+
+
+body .row-fluid .sub-form .hs-form .field .input input[type="checkbox"] {
+ background: rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_background_color.color|convert_rgb }}, {{  theme.subscribe_form.form_checkboxradio_group.checkbox_background_color.opacity / 100}});
+  border: 1px solid rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_border_color.color|convert_rgb }}, {{  theme.subscribe_form.form_checkboxradio_group.checkbox_border_color.opacity / 100}});
+
+}
+
+.row-fluid .sub-form .hs-form .field .input input[type="checkbox"]:checked{
+
+  border: 1px solid rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.color|convert_rgb }},{{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.opacity / 100 }});
+
+}
+
+
+
+.row-fluid .sub-form .hs-form .field .input input[type="radio"]::before {
+
+  border: 1px solid rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_border_color.color|convert_rgb }}, {{  theme.subscribe_form.form_checkboxradio_group.checkbox_border_color.opacity / 100}});
+  background: rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_background_color.color|convert_rgb }}, {{  theme.subscribe_form.form_checkboxradio_group.checkbox_background_color.opacity / 100}});
+
+}
+
+.row-fluid .sub-form .hs-form .field .input input[type="radio"]:checked::after {
+  border: 1px solid rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.color|convert_rgb }},{{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.opacity / 100 }});
+  background: rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.color|convert_rgb }},{{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.opacity / 100 }});
+
+}
+
+.row-fluid .sub-form .hs-form .field .input input[type="radio"]:checked::before{
+  border: 1px solid rgba({{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.color|convert_rgb }},{{ theme.subscribe_form.form_checkboxradio_group.checkbox_tick_color.opacity / 100 }});
+}
+
+
+.sub-form .hs-input[type=file] {
+  background-color: {{ theme.subscribe_form.form_bg.form_inputbg_color.color  }};
+	cursor: pointer;
+}
+
+.sub-form form .file-upload-button-label {
+  border: {{ theme.subscribe_form.form_input_group.border_width ~ 'px' }} {{ theme.subscribe_form.form_input_group.border }} {{ theme.subscribe_form.form_input_group.input_border_color.color }};
+  color: {{ theme.subscribe_form.form_label_group.form_label_font.color }};
+}
+
+.sub-form form .file-upload-file-name {
+  color: {{ theme.subscribe_form.form_label_group.form_label_font.color }};
+  border: {{ theme.subscribe_form.form_input_group.border_width ~ 'px' }} {{ theme.subscribe_form.form_input_group.border }} {{ theme.subscribe_form.form_input_group.input_border_color.color }};
+}
+
+#}
+.sub-form input.hs-input.error,
+.sub-form div.field.error input,
+.sub-form div.field.error textarea,
+.sub-form div.field.error .chzn-choices,
+.sub-form textarea.hs-input.error,
+.sub-form select.hs-input.error {
+	border-color: {{ form_error_border_color }};
+}
+
+.sub-form input.hs-input.error:focus,
+.sub-form div.field.error input:focus,
+.sub-form div.field.error textarea:focus,
+.sub-form div.field.error .chzn-choices:focus,
+.sub-form textarea.hs-input.error:focus,
+.sub-form select.hs-input.error:focus {
+	border-color: {{ form_error_focus_border_color }};
+}
+.sub-form .sub-form .hs-field-desc {
+	color: {{ form_description_color }};
+}
+
+
+.sub-form .hs-richtext {
+	font-size: {{ body_font_size }};
+}
+
+
+
+
+/*=========================== Light scheme Colors ==========================================*/
+
+.submitted-message.hs-main-font-element {
+	min-height: 300px;
+	border: 1px solid #101a29;
+	border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #101a29;
+	background: #ffffff;
+}
+
+.hs-form label {
+	color: {{  theme.colors_group.growthkit_colors.light_scheme.forms.field_label_color.color }};
+}
+body .row-fluid .hs-input,
+.systems-page-psw input#hs-pwd-widget-password{
+	color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.form_input_color.color }};
+}
+
+body .row-fluid .hs-input,
+.systems-page-psw input#hs-pwd-widget-password{
+		border: {{ theme.styling_group.border.forms.field_border_width ~ 'px' }} solid {{ theme.colors_group.hubspot_default.hubspot_forms_module.field_border_color.color }};;
+}
+
+body .container-fluid .row-fluid .hs-error-msgs label {
+	color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.error_color.color }};
+}
+
+/*=========================== Light scheme Colors ends ==========================================*/
+
+/*=========================== Dark scheme Colors ==========================================*/
+
+
+.dark_theme .hs-form label {
+	color: {{  theme.colors_group.growthkit_colors.dark_scheme.forms.field_label_color.color }};
+}
+
+body .row-fluid .hs-input,
+.systems-page-psw input#hs-pwd-widget-password{
+	color: {{  theme.colors_group.hubspot_default.hubspot_forms_module.form_input_color.color }};
+}
+
+body.dark_theme .row-fluid .hs-input,
+body.dark_theme .row-fluid .hs-input ::-webkit-input-placeholder,
+body.dark_theme .row-fluid ::-webkit-input-placeholder{
+	color:white;
+}
+
+body.dark_theme .row-fluid .hs-input,
+.dark_theme .systems-page-psw input#hs-pwd-widget-password{
+	border: {{ theme.styling_group.border.forms.field_border_width ~ 'px' }} solid {{  theme.colors_group.growthkit_colors.dark_scheme.forms.field_border_color.color }};
+}
+
+body.dark_theme .container-fluid .row-fluid .hs-error-msgs label {
+	color: {{  theme.colors_group.growthkit_colors.dark_scheme.forms.error_color.color }};
+}
+
+body.dark_theme .submitted-message.hs-main-font-element {
+	min-height: 300px;
+	border: 1px solid #ffffff;
+	border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	background: #101a29;
+	font-size:22px;
+}
+
+@media(min-width:768px){
+	.body-container-event_single .form-cm form{
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	.body-container-event_single .form-cm form .hs_email{
+		width:71.5%;
+	}
+
+	.body-container-event_single .form-cm form .hs-input{
+		margin-bottom: 0px !important;
+	}
+
+	.body-container-event_single .form-cm form .hs_submit{
+		width:23.5%
+	}
+}
+
+.body-container-event_single .form-cm .hs-form label span{
+	color: #fff !important;
+}
+
+.body-container-event_single .form-cm form .hs-button{
+	background-color: #101A29 !important;
+}
+
+/* Styling the file input container */
+.hs_file_upload .input {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+

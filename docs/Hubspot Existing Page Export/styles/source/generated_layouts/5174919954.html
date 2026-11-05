@@ -1,0 +1,675 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="{{ meta_author }}">
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <meta name="generator" content="HubSpot">
+    <title>{{ page_meta.html_title }}</title>
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    
+{{ required_head_tags }}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.gracesoft.com/hubfs/anew/css/icofont.css" >
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<style>
+  .footer-container-wrapper{
+    padding: 0px !important;
+  }
+  header {
+    background-color: #4e88bb !important;
+}
+    .foot-div h4 {
+    font-size: 21px;
+    line-height: 43px;
+    color:#fff;
+    font-weight: bold;
+}
+  .col-des{
+height:21em;
+background-color: #f5f5f5;
+    border-radius: 7px;
+        padding: 14px 4px 0 39px;
+}
+  .row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+  html{
+    
+        overflow-x: hidden !important;
+  }
+  .body-container-wrapper{
+   background-color:#fff !important;
+  }
+  .container-fluid.footer-container .row-depth-1.row-number-2{
+    background-color:#fff !important;
+  }
+  .container-fluid {
+    padding-right: 0px !important; 
+    padding-left: 0px !important; 
+  }
+  @import url('https://fonts.googleapis.com/css?family=Nunito');
+    h1, h2, h3, h4, h5, h6, p, li, ul, a, label, button {
+    font-family: 'Nunito', sans-serif !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000 !important;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: #4e88bb !important;
+    color: #fff !important;
+    background-image: linear-gradient(to bottom, #113452 0, #4e88bb 100%) !important;
+}
+.dropdown-menu>li>a {
+    font-size: 14px;
+}
+.navbar-toggle .icon-bar {
+    color: #fff;
+    background-color: #fff;
+}
+.dropdown-menu {
+    padding: 0;
+    border: 2px solid #4e88bb !important;
+    border-radius: 3px !important;
+    margin-top: 6px !important;
+}
+.tel-con {
+    border: 2px solid #08415d;
+    position: fixed;
+    background-color: #08415d;
+    padding: 7px 12px;
+    z-index: 999;
+    border-radius: 24px;
+    color: #fff !important;
+    font-size: 21px;
+    bottom: 36px;
+    right: 40px;
+    display: none;
+}
+.tel-con:hover {
+    box-shadow: 10px 10px 101px -13px rgba(0, 0, 0, 0.75);
+}
+.atf-body {
+    background-image: url(https://cdn2.hubspot.net/hubfs/107648/dfdg.jpg);
+    background-size: contain;
+ }
+.bran {
+    width: 60%;
+    height: auto;
+}
+.navbar-toggle {
+    background-color: #174d68;
+}
+.head-top {
+    display: block;
+    top: 0px;
+    position: sticky;
+    z-index: 999;
+    border-bottom: 1px solid #fff;
+}
+@media(min-width:320px) and (max-width:480px) {
+    .navbar-nav {
+    text-align: center;
+}
+.navbar-nav .open .dropdown-menu>li>a {
+    text-align: center;
+}
+.navbar {
+    background-color: #fff;
+}
+.tel-con {
+    display: block;
+}
+.bran {
+    width: 100%;
+    height: auto;
+}
+.navbar {
+    padding: 10px 20px;
+}
+.atf-body {
+    background-size: auto;
+}
+.head-top {
+    display: none;
+}
+}.navvv {
+    padding: 10px 0px;
+}
+.nav>li>a:hover {
+    background-color: #4e88bbe6 !important;
+    color: #fff !important;
+    border-radius: 8px;
+}
+.navbar {
+    margin-bottom: 0px !important;
+}
+.foot-div h3 {
+    font-size: 21px;
+    line-height: 43px;
+    color: #fff;
+    font-weight: bold;
+}
+.foot-div p {
+    font-size: 15px;
+    line-height: 27px;
+    color: #a1c8f5;
+}
+.foot-div p a {
+    line-height: 22px;
+    color: #a1c8f5 !important;
+}
+header {
+    background-color: #4e88bb;
+}
+.fa1 {
+    font-size: 16px !important;
+}
+.table>tbody>tr>td {
+    border: 0px solid !important;
+}
+.logo-dic div {
+    padding: 12px 0px;
+}
+.header-span1 p {
+    color: #fff;
+    padding: 11px 0 0 0;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px !important;
+}
+.btn-head1 {
+    width: 35px;
+    color: #fff;
+    padding: 7px 13px 5px 9px;
+    margin-top: 3px;
+    background-color: #08415d;
+    border-radius: 17px;
+    border: 1px solid #08415d;
+    overflow: hidden;
+    transition: width .55s ease;
+}
+.btn-head {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 7px 13px 6px 13px;
+    margin-top: 3px;
+    font-size: 15px;
+    border-radius: 22px;
+      background-color: #422d2d00;
+}
+.btn-head:hover {
+    background-color: #08415d;
+    color: #fff;
+    border: 1px solid #08415d;
+}
+.btn-head1:hover {
+    background-color: #08415d;
+    color: #fff;
+    width: 207px;
+    border: 1px solid #08415d;
+}
+.navbar-nav>li>a {
+    font-size: 17px;
+    color: #08415d;
+    font-weight: 600;
+}
+.res-btn {
+    background-color: #08415d;
+    color: #fff;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif !important;
+    border: 2px solid #08415d;
+    margin-top: 10px;
+}
+.res-btn:hover {
+    background-color: #4e88bb;
+    color: #fff;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif !important;
+    border: 2px solid #4e88bb;
+}
+.bd-box {
+    border: 1px solid #ccc;
+    padding: 1px 10px 1px 10px;
+    margin: 20px 0;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.13);
+}
+.bd-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.bd-box p {
+    font-size: 15px;
+    line-height: 26px;
+    color: #828282;
+}
+.bd-before-box p {
+    padding-top: 37px;
+}
+.bd-before-box span {
+    font-size: 60px;
+}
+.bg-st {
+    background-color: #00000061;
+    padding: 12px 13px 22px 18px;
+    color: #fff;
+    border-radius: 6px;
+}
+.fa-ul>li {
+    font-size: 17px;
+    line-height: 28px;
+    color: #fff;
+}
+.fa-ul li::before {
+    content: "\2022";
+    color: #00c4ff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.bd-bottom {
+    border: 1px solid #ccc;
+    padding: 1px 17px 3px 14px;
+    min-height: 178px;
+    margin: 12px 0;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.13);
+}
+.fa {
+    font-size: 35px;
+}
+.brand-logo span {
+    padding: 0 22px;
+}
+  .hs-input{
+        display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  }  
+  .hs-button{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .form-columns-2 {
+        max-width: none !important; 
+  }
+  #hs_form_target_module_155075038857241{
+    margin: auto;
+    width: 50%;
+  }
+  .form-title{
+    text-align:center;
+  }
+  .hs-button{
+    margin: auto;
+    display: block;
+  }
+  .hs-submit{
+        margin: 19px 0 0px 0;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    header {
+    display: none;
+}
+    #hs_form_target_module_155075038857241{
+          margin: auto;
+    width: 90%;
+    }
+}
+  @media (min-width: 320px) and (max-width: 480px) {
+    header {
+    display: none;
+}
+     #hs_form_target_module_155075038857241{
+          margin: auto;
+    width: 90%;
+    }
+}
+  #atf-section{
+      background-image: url(https://cdn2.hubspot.net/hubfs/107648/pillow-1890940_1920.jpg);
+    background-position: center;
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  }
+ 
+</style>
+    {{ user_head_overrides }}
+
+</head>
+<body class=" {{ builtin_body_classes }}" style="">
+    <div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+{% module_block module "module_155800710347360" module_id=7748026, overrideable=True, path='/Global content/Global modules/menu_nav_new', per_widget_wrapper_html='', widget_name='menu_nav_new', wrapping_html='', label='menu_nav_new' %}
+{% end_module_block %}
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+{% unless blog_author %}
+<div class="span12 widget-span widget-type-cell blog-hero" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell hero-content" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-header " style="" data-widget-type="header" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% header "module_1489761027275484" header_tag='h1', overrideable=True, value='{{ group.public_title }}', label='Heading' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-header " style="" data-widget-type="header" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% header "module_1489761069443498" header_tag='h3', overrideable=True, value='', label='[ Add a blog sub heading here ]' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="subscribe-form">
+    
+<div class="span12 widget-span widget-type-blog_subscribe hero-subscribe" style="" data-widget-type="blog_subscribe" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% blog_subscribe "module_1490201515445459" overrideable=False, response_message='Thanks for Subscribing!', select_blog='default', title='Subscribe to Email Updates', wrapping_html='<div class="subscribe-form">\n    {{ html }}\n    <div class="close-subscribe"></div>\n</div>\n<div class="open-subscribe">Subscribe</div>\n', label='Blog Email Subscription' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+
+    <div class="close-subscribe"></div>
+</div>
+<div class="open-subscribe">Subscribe</div>
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+{% endunless %}
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_content " style="" data-widget-type="blog_content" data-x="0" data-w="12">
+{% if is_listing_view %}{# Show Blog Author Page #}   
+{% if blog_author %}
+
+<div class="blog-section author-page">
+    <div class="row-fluid">
+        <div class="span8">
+            <div class="hs-author-profile">
+            {% if blog_author.avatar %}<div class="hs-author-avatar"><img src="{{ blog_author.avatar }}" alt="{{ blog_author.display_name }}"></div>{% endif %}
+                <div class="author-info">
+                    <h2 class="hs-author-name">{{ blog_author.display_name }}</h2>
+                    {% if blog_author.has_social_profiles %}
+                        <div class="hs-author-social-links">
+                          {% if blog_author.facebook %}
+                            <a href="{{ blog_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                          {% endif %}
+                          {% if blog_author.linkedin %}
+                            <a href="{{ blog_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                          {% endif %}
+                          {% if blog_author.twitter %}
+                            <a href="{{ blog_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                          {% endif %}
+                          {% if blog_author.google_plus %}
+                            <a href="{{ blog_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                          {% endif %}
+                          {% if blog_author.website %}
+                            <a href="{{ blog_author.website }}" target="_blank" class="hs-author-social-link hs-social-website"><i class="fa fa-link" aria-hidden="true"></i></a>
+                          {% endif %}
+                        </div>
+                    {% endif %}
+                </div> 
+            </div>
+            <div class="hs-author-bio">{{ blog_author.bio }}</div>
+        </div>
+        <div class="span4">
+            <h3 class="recent-posts-title">RECENT POSTS BY {{ blog_author.display_name }}</h3>
+  
+            <div class="blog-listing-wrapper cell-wrapper">
+                {# simple_list_page indicates the "blog/all" page, which is a list of links to every blog post #}
+                <div class="post-listing{% if simple_list_page %}-simple{% endif %}{% if blog_author %}-author{% endif %}"> 
+                    {% for content in contents %}
+                        {% if loop.index < 5 %}
+                            <div class="post-item">
+                  
+                                {% if content.post_list_summary_featured_image %}
+                                    <div class="hs-featured-image-wrapper">
+                                        <a href="{{content.absolute_url}}" title="" class="hs-featured-image-link"  style="background-image: url({{ content.post_list_summary_featured_image }})"></a>
+                                    </div>
+                                {% endif %}
+        
+                                <div class="post-content clearfix">
+                                    <!--post summary-->
+                                    <div class="post-body"><a href="{{content.absolute_url}}">{{ content.name }}</a></div>
+                                </div>
+        
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Show All Other Blog Pages #}
+{% else %}
+
+<div class="blog-section">
+    {% if topic %}
+        <div class="topic-title">
+            Entries related to: <span>{{ topic }}</span>
+        </div>
+    {% endif %}
+    
+    <div class="blog-listing-wrapper cell-wrapper">
+        {# simple_list_page indicates the "blog/all" page, which is a list of links to every blog post #}
+        <div class="post-listing{% if simple_list_page %}-simple{% endif %}{% if blog_author %}-author{% endif %}">
+            {% for content in contents %}
+                <div class="post-item">
+                    {% if not simple_list_page %}
+                        {% if content.post_list_summary_featured_image %}
+                            <div class="hs-featured-image-wrapper">
+                                <a href="{{content.absolute_url}}" title="" class="hs-featured-image-link"  style="background-image: url({{ content.post_list_summary_featured_image }})"></a>
+                            </div>
+                        {% endif %}
+                        
+                        <div class="post-content clearfix">
+                            <div class="post-header">
+                                <div class="post-date">{{ content.publish_date_localized }}</div>
+                                <h2><a href="{{content.absolute_url}}">{{ content.name }}</a></h2>
+                                <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                                    {%if content.blog_post_author %}
+                                        By <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        
+                            <!--post summary-->
+                            <div class="post-body">{{ content.post_list_content|striptags }}</div>
+                        </div>
+                        {% if content_group.show_summary_in_listing %}
+                            <a class="more-link" href="{{ content.absolute_url }}">Read More</a>
+                        {% endif %}
+
+                    {# Show All Posts List #}
+                    {% else %}
+                        <div class="post-date">{{ content.publish_date_localized }}</div>
+                        <h2 class="post-listing-simple"><a href="{{content.absolute_url}}">{{ content.name }}</a></h2>
+                        <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                            {%if content.blog_post_author %}
+                                By <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        {% if not simple_list_page %}
+        
+        <div class="blog-pagination">
+            {% set page_list = [-2, -1, 0, 1, 2] %}
+            {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+            {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+            {% elif current_page_num == 2 %}{% set offset = 1 %}
+            {% elif current_page_num == 1 %}{% set offset = 2 %}
+            {% else %}{% set offset = 0 %}{% endif %}
+        
+                {% if last_page_num %}<a class="prev-link" href="{{ blog_page_link(last_page_num) }}">&#10094;</a>{% endif %}
+                {% if contents.total_page_count > 5 %}
+                    {% if current_page_num >= 4 %}
+                        <a href="{{ blog_page_link(1) }}">1</a>
+                        <a class="elipses" href="{% if current_page_num <= 5 %}{{ blog_page_link(1) }}{% else %}{{ blog_page_link(current_page_num - 5) }}{% endif %}">...</a>
+                    {% endif %}
+                {% endif %}
+                {% for page in page_list %}
+                    {% set this_page = current_page_num + page + offset %}
+                    {% if this_page > 0 and this_page <= contents.total_page_count %}
+                        <a {% if this_page == current_page_num %}class="active"{% endif %} href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+                    {% endif %}
+                {% endfor %}
+                {% if contents.total_page_count > 5 %}
+                    {% if contents.total_page_count - current_page_num > 2 %}
+                        <a class="elipses" href="{% if contents.total_page_count - current_page_num <= 5 %}{{ contents.total_page_count }}{% else %}{{ blog_page_link(current_page_num + 5) }}{% endif %}">...</a>
+                        <a href="{{ blog_page_link(contents.total_page_count) }}">{{ contents.total_page_count }}</a>
+                    {% endif %}
+                {% endif %}   
+                {% if next_page_num %}<a class="next-link" href="{{ blog_page_link(current_page_num + 1) }}">&#10095;</a>{% endif %}
+                
+
+
+            <div class="all-posts-link">
+                <a href="{{ group.absolute_url }}/all">All posts</a>
+            </div>
+        </div>
+
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+{% else %}{# No blog post template here! Use the 'Soar Blog Post' template #}{% endif %}</div>
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_comments " style="" data-widget-type="blog_comments" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% blog_comments "blog_comments" overrideable=False, label='Blog Comments' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+{% module_block module "module_155800800819977" module_id=6368678, overrideable=True, path='/FooterNewUi', per_widget_wrapper_html='', widget_name='FooterNewUi', wrapping_html='', label='FooterNewUi' %}
+{% end_module_block %}
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    {{ standard_footer_includes }}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+</body>
+</html>

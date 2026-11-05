@@ -1,0 +1,45 @@
+{% import '../_variables.css' as var %}
+
+/* Main section */
+
+.header__section--main {
+  padding-top: 1.11rem;
+  padding-bottom: 1.11rem;
+}
+
+/* Elements */
+
+.header:not(.header--overlap) .header__logo__overlap,
+.header--overlap .header__logo__static,
+.header:not(.header--overlap) .header__icons__overlap,
+.header--overlap .header__icons__static,
+.header:not(.header--overlap) .header__buttons__overlap,
+.header--overlap .header__buttons__static {
+  display: none;
+}
+
+.header--wo-lang .header__lang {
+  display: none;
+}
+
+.header__buttons .inline-items > *:first-child {
+  margin-inline-start: 1rem;
+}
+
+/* Dark scheme */
+
+{% if theme.components.header.scheme == 'dark' %}
+
+  .header {
+    background: {{ var.dark }};
+  }
+
+/* Light scheme */
+
+{% else %}
+
+  .header {
+    background: {{ var.white }};
+  }
+
+{% endif %}

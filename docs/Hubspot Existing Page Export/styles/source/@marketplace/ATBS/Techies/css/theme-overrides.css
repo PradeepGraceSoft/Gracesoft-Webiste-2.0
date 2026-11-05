@@ -1,0 +1,221 @@
+{% import './tools/_macros.css' %}
+{% set body_font = theme.global_typography.global_fonts.body_font %}
+{% set heading_one = theme.global_typography.typography.heading_one %}
+{% set heading_two = theme.global_typography.typography.heading_two %}
+{% set heading_three = theme.global_typography.typography.heading_three %}
+{% set heading_four = theme.global_typography.typography.heading_four %}
+{% set heading_five = theme.global_typography.typography.heading_five %}
+{% set heading_six = theme.global_typography.typography.heading_six %}
+
+/* Containers */
+{% set container_width = 1170 ~ 'px' %}
+
+/* Colors */
+{% set primary_color = theme.global_colors.primary_color.color  %}
+
+.content-wrapper {
+  max-width: {{ container_width }};
+}
+
+.dnd-section > .row-fluid {
+  max-width: {{ container_width }};
+}
+
+{% set anchor_font = theme.global_typography.typography.links.normal.font %}
+{% set anchor_hover_font = theme.global_typography.typography.links.hover.font %}
+
+.widget-type-rich_text a,
+a {
+  color: {{ anchor_font.color }};
+  {{anchor_font.style}}
+}
+.widget-type-rich_text a:hover,
+.widget-type-rich_text a:focus,
+a:hover,
+a:focus {
+  color: {{ color_variant(anchor_hover_font.color, -40) }};
+  {{anchor_hover_font.style}}
+}
+.widget-type-rich_text a:active,
+a:active {
+  color: {{ color_variant(anchor_hover_font.color, 40) }};
+  {{anchor_hover_font.style}}
+}
+
+{###########################################################################}
+{###########################   3. Typography   #############################}
+{###########################################################################}
+
+:root {
+    --color-primary: {{ primary_color }};
+}
+html {
+  font-size: {{ body_font.size ~ body_font.size_unit }} !important;
+}
+
+body {
+  {{ body_font.style }};
+}
+
+/* Paragraphs */
+
+p {
+  {{ body_font.style }};
+}
+
+
+/* Headings */
+/* Headings */
+.atbs-home-design h1:not(.atbs-exclude), 
+.widget-type-rich_text h1,
+.single-body.entry-content h1:not(.post-title ):not(.blog-list-header__title) {
+  {{ heading_one.style }};
+  font-size: {{ heading_one.size ~ heading_one.size_unit }};
+      --color-dark-contrast-100: {{ heading_one.color }};
+  color: var(--color-dark-contrast-100);
+}
+.atbs-home-design h2:not(.atbs-exclude), 
+.widget-type-rich_text h2,
+.single-body.entry-content h2 {
+  {{ heading_two.style }};
+  font-size: {{ heading_two.size ~ heading_two.size_unit }};
+  --color-dark-contrast-100: {{ heading_two.color }}; 
+  color: var(--color-dark-contrast-100);
+}
+.widget-type-rich_text h3,
+.atbs-home-design h3:not(.post__title):not(.atbs-exclude), 
+.single-body.entry-content h3:not(.post__title ){
+  {{ heading_three.style }};
+  font-size: {{ heading_three.size ~ heading_three.size_unit }};
+  --color-dark-contrast-100: {{ heading_three.color }}; 
+  color: var(--color-dark-contrast-100);
+}
+.widget-type-rich_text h4,
+.atbs-home-design h4:not(.inside__title):not(.block-heading__title):not(.widget__title-text):not(.atbs-exclude), 
+.single-body.entry-content h4 {
+  {{ heading_four.style }};
+  font-size: {{ heading_four.size ~ heading_four.size_unit }};
+  --color-dark-contrast-100: {{ heading_four.color }}; 
+  color: var(--color-dark-contrast-100);
+}
+.widget-type-rich_text h5,
+.atbs-home-design h5:not(.atbs-exclude), 
+.single-body.entry-content h5 {
+  {{ heading_five.style }};
+  font-size: {{ heading_five.size ~ heading_five.size_unit }};
+  --color-dark-contrast-100: {{ heading_five.color }}; 
+  color: var(--color-dark-contrast-100);
+}
+.widget-type-rich_text h6,
+.atbs-home-design h6:not(.atbs-exclude), 
+.single-body.entry-content h6 {
+  {{ heading_six.style }};
+  font-size: {{ heading_six.size ~ heading_six.size_unit }};
+  --color-dark-contrast-100: {{ heading_six.color }}; 
+  color: var(--color-dark-contrast-100);
+}
+
+
+/* Form placeholder text */
+
+::-webkit-input-placeholder {
+  color: {{ body_font.color }};
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::placeholder,
+.hs-fieldtype-date .input .hs-dateinput:before {
+  color: {{ body_font.color }};
+}
+
+/* Date picker */
+
+.fn-date-picker td.is-selected .pika-button {
+  background: {{ primary_color }};
+}
+
+.fn-date-picker td .pika-button:hover {
+  background-color: {{ primary_color }} !important;
+}
+
+.fn-date-picker td.is-today .pika-button {
+  color: {{ primary_color }};
+}
+
+/* Submit button */
+
+
+body .navigation-primary a,
+.header__logo .logo-company-name {
+  color: {{ header_nav_link_color }};
+  font-family: {{ body_font.font }}, {{ body_font.fallback }};
+}
+
+.header__language-switcher-label-current:after {
+  border-top-color: {{ header_nav_link_color }};
+}
+@media(max-width: 767px) {
+  .header__navigation {
+    background-color: {{ header_bg_color }};
+  }
+  .header__navigation-toggle svg,
+  .menu-arrow svg {
+    fill: {{ header_nav_link_color }};
+  }
+}
+.blog-index,
+.blog-post,
+.blog-header__inner,
+.blog-related-posts {
+  padding: 60px 0;
+}
+.blog-post__date {
+  border-color: {{ body_font.color }};
+}
+
+.blog-post__tag-link {
+  color: {{ body_font.color }};
+}
+
+.blog-pagination__link {
+  color: {{ body_font.color }};
+}
+
+.blog-pagination__link--active:after,
+.blog-pagination__prev-link:after,
+.blog-pagination__next-link:after {
+  background-color: {{ primary_color }};
+}
+.card__price {
+  {{ heading_three.style }};
+  color: {{ heading_three.color }};
+  font-size: {{ heading_three.size ~ heading_three.size_unit }};
+}
+
+/*Module*/
+.error-page__heading {
+    color: var(--color-primary);
+}
+.contact-form .hs-button {
+    color: #ffffff;
+    background-color: var(--color-primary);
+}
+/*System*/
+.box-wrapper__inner {
+    border: 1px solid var(--color-border-white);
+    border-top: 5px solid var(--color-primary);
+}
+.box-wrapper input[type="submit"] {
+    background-color: var(--color-primary);
+}
+.box-search-results .hs-search-results__description {
+    border-left: 4px solid var(--color-primary);
+}
+.page-404-text a,
+.error-page-wrapper .error-button {
+    color: var(--color-primary);
+    text-decoration: none;
+}

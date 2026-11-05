@@ -1,0 +1,21 @@
+<!--
+  templateType: section
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+{% dnd_section padding={
+  "top":"5",
+  "bottom":"5"
+  }, full_width=False, background_color="#000000" %}
+  {% dnd_column width=12 %}
+    {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/follow_me_email", spacing=10, scale=37, color_scheme="white", icon_shape="original", lineNumber=104, startPosition=-412, hs_enable_module_padding=True, hs_wrapper_css={
+      "padding-bottom":"10px",
+      "padding-left":"20px",
+      "padding-right":"20px",
+      "padding-top":"10px"
+      } %}
+      {% module_attribute "social" is_json=True %}[{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc/"},{"network":"whatsapp","url":"https://api.whatsapp.com/send?phone=917200423323"},{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"},{"network":"pinterest","url":"https://www.pinterest.com/gracesoft/"}]{% end_module_attribute %}
+      {% module_attribute "font_style" is_json=True %}{"color":"#FFFFFF","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":14},"styles":{}}{% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

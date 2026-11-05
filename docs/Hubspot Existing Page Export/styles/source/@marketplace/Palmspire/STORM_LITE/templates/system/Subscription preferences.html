@@ -1,0 +1,100 @@
+<!--
+templateType: email_subscription_preferences_page
+isAvailableForNewContent: true
+label: Subscription preferences 
+screenshotPath: ../Images/Page Preview/Subscription preferences.png
+-->
+
+{% extends "../layouts/base.html" %}
+{% block body %}
+
+<div class="row-fluid">
+	<div class="pref-header">
+		<main id="email-preferences" class="body-container-wrapper">
+			<div class="row-fluid">
+				<div class="subscription_preference_banner span12">
+					<div class="wrapper equal-height-container">
+						<div class="row-fluid-wrapper">
+							<div class="row-fluid">
+								<div class="span6 left-col vertical-center">
+									{% module 'subscription_preferences'
+										path='@hubspot/email_subscriptions',
+										header="Update Your<br> Email Subscription Preferance Here",
+										subheader_text="<p>Uncheck the types of emails you do not want to receive:</p>"
+									%}
+								</div>
+								<div class="span6 right-col vertical-center">
+									<div class="image-container align-center">
+										<img src="https://3842749.fs1.hubspotusercontent-na1.net/hubfs/3842749/Updated%20Growthkit%20Pack/Column%20Images%20With%20Vector/Column_image_24.png" alt="Password">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="subscription_preference">
+					<div class="wrapper">
+						<div class="row-fluid-wrapper">
+							<div class="row-fluid">
+								{% module 'subscription_preferences'
+								path='@hubspot/email_subscriptions',
+								unsubscribe_all_text = "Or check here to never receive any emails",
+								unsubscribe_all_option = "Unsubscribe me from all mailing lists.",
+								button_text ="Update Email Preferences",
+								<input type="submit" class="hs-button primary" id="submitbutton" value="Update Email Preferences">
+							%}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="system_recent_blogs">
+		<div class="wrapper">
+			<div class="row-fluid-wrapper">
+				<div class="row-fluid">
+					{% module "rich_text_1" path='@hubspot/rich_text', label="Heading Text and Description"
+            html="
+              <div style='text-align:center;'>
+                <h2>Heading Text</h2>
+                <p>Join over 25,000 in beating the failure of strategies by following our blog.</p>'
+              </div>"
+							%}
+				</div>
+				<div class="row-fluid">
+					<div class="span12 recent-blog">
+						{% module "module_167034874178116" path='../../modules/Recent_Blogs', label="Recent Blogs" %}
+					</div>
+
+				</div>
+				<div class="row-fluid">
+					{% module "sys_404_error" path='/Storm Lite/modules/Buttons', label="Buttons",
+					choose_number_of_cta="single",
+					single_cta_group={
+					"choose_type_of_cta":"primary-cta",
+					primary_cta_group:{
+					"choose_cta_type_here":"solid-cta"
+					}
+					},
+					styles={
+					  'alignment_field':{
+					  'horizontal_align' : 'CENTER'
+					  },
+					  'single_cta_alignment':{
+					  'horizontal_align' : 'CENTER'
+					  }
+					}
+				 %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock body %}

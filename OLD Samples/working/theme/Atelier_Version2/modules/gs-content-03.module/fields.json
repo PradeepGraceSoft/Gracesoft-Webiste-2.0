@@ -1,0 +1,59 @@
+[
+  {
+    "name": "text_1",
+    "label": "Make Every Guest Interaction an Opportunity",
+    "type": "text",
+    "default": "Make Every Guest Interaction an Opportunity"
+  },
+  {
+    "name": "text_2",
+    "label": "AI Voice and Chat Assistants",
+    "type": "text",
+    "default": "Unify front desk workflows, bookings and payments on one connected platform. Explore AI voice and chat assistants for guest inquiries; availability and setup depend on your configuration."
+  },
+  {
+    "name": "text_3",
+    "label": "AI Voice Assistant",
+    "type": "text",
+    "default": "AI Voice Assistant"
+  },
+  {
+    "name": "text_4",
+    "label": "Handle calls about your property, room availability and rates, in",
+    "type": "text",
+    "default": "Handle calls about your property, room availability and rates, including after-hours inquiries."
+  },
+  {
+    "name": "text_5",
+    "label": "AI Chat Assistant",
+    "type": "text",
+    "default": "AI Chat Assistant"
+  },
+  {
+    "name": "text_6",
+    "label": "Respond to website questions and guide interested guests toward a",
+    "type": "text",
+    "default": "Respond to website questions and guide interested guests toward a reservation."
+  },
+  {
+    "name": "text_7",
+    "label": "Designed for 24/7 inquiry handling with your property information",
+    "type": "text",
+    "default": "Designed for 24/7 inquiry handling with your property information and connected PMS data. Confirm supported channels and setup with GraceSoft."
+  },
+  {
+    "name": "link_8",
+    "label": "Explore AI Solutions",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/gracesoft-ai"
+    }
+  },
+  {
+    "name": "link_8_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore AI Solutions"
+  }
+]

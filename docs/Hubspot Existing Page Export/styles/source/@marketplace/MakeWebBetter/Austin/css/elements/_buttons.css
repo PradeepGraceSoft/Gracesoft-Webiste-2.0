@@ -1,0 +1,225 @@
+/****************************************/
+/*            Global Button CSS         */
+/****************************************/
+
+{% if theme.layout_setting.buttons.button.hover_effect.enable_hover_effect %} 
+
+{% if theme.layout_setting.buttons.button.hover_effect.hover_options.choice == 'pulse' %}
+
+.au-button {
+    transition: transform .3s ease;
+}
+
+.au-button:hover {
+  transform: translateY(-10%);
+  transition: transform .3s ease;
+}
+
+{% else theme.layout_setting.buttons.button.hover_effect.hover_options.choice == 'scale' %}
+
+.au-button {
+    transition: transform .3s ease;
+}
+
+.au-button:hover {
+  transform: scale(1.1);
+  transition: transform .3s ease;
+}
+{% endif %}
+{% endif %}
+
+.au-button {
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  height: auto;
+  line-height: 24px;
+  margin: 0;
+  padding: 10px 20px;  
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  width: auto;
+  word-break: break-word;
+}
+
+/****************************************/
+/*            Filled Button            */
+/****************************************/
+
+.au-button--filled {
+  background: #6E41E2;
+  border: 2px solid #6E41E2;
+  color: #ffffff;
+}
+
+.au-button--filled:hover {
+  background: #5835B0;
+  border-color: #5835B0;
+}
+
+.au-button--filled:active {
+  background: #472C8A;
+  border-color: #472C8A;
+}
+
+.au-button--filled:disabled {
+  background: #E3DAF9;
+}
+
+.au-button--filled:focus {
+  background: #6E41E2;
+  border-color: #6E41E2;
+}
+
+/****************************************/
+/*            Outlined Button           */
+/****************************************/
+
+.au-button--outlined {
+  background: transparent;
+  border: 2px solid #6E41E2;
+  color: #6E41E2;
+}
+
+.au-button--outlined:hover {
+  background: rgba(110,65,226,0.04);
+}
+
+.au-button--outlined:active {
+  background: rgba(110,65,226,0.16);
+}
+
+.au-button--outlined:disabled {
+  opacity: 0.56;
+}
+
+.au-button--outlined:focus {
+  border-color: rgba(17,17,17,0.48);
+}
+
+/****************************************/
+/*            Filled Button Dark         */
+/****************************************/
+
+.au-button--filled-dark {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #6E41E2;
+}
+
+.au-button--filled-dark:hover {
+  background: #ffffff;
+}
+
+.au-button--filled-dark:active {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.au-button--filled-dark:disabled {
+  background: #fff;
+}
+
+.au-button--filled-dark:focus {
+  background: #fff;
+  border-color: #fff;
+}
+
+/****************************************/
+/*            Outlined Button Dark       */
+/****************************************/
+
+.au-button--outlined-dark {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.au-button--outlined-dark:hover {
+  background: rgba(110,65,226,0.04);
+}
+
+.au-button--outlined-dark:active {
+  background: rgba(110,65,226,0.16);
+}
+
+.au-button--outlined-dark:disabled {
+  opacity: 0.56;
+}
+
+.au-button--outlined-dark:focus {
+  border-color: rgba(17,17,17,0.48);
+}
+
+/****************************************/
+/*           Arrow Light                */
+/****************************************/
+
+.au-button--arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  transition: none;
+}
+
+.au-button--arrow:after {
+  content: url("data:image/svg+xml,%3Csvg width='28' height='14' viewBox='0 0 56 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.0607 13.0607C55.6465 12.4749 55.6465 11.5251 55.0607 10.9393L45.5147 1.3934C44.9289 0.807612 43.9792 0.807612 43.3934 1.3934C42.8076 1.97918 42.8076 2.92893 43.3934 3.51472L51.8787 12L43.3934 20.4853C42.8076 21.0711 42.8076 22.0208 43.3934 22.6066C43.9792 23.1924 44.9289 23.1924 45.5147 22.6066L55.0607 13.0607ZM0 13.5H54V10.5H0V13.5Z' fill='%23{{ theme.layout_setting.buttons.arrow.light.normal.text.font.color[1:] }}'/%3E%3C/svg%3E");
+    width: 28px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+.au-button--arrow:hover, 
+.au-button--arrow:focus, 
+.au-button--arrow:active {
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+
+.au-button--arrow:hover:after, 
+.au-button--arrow:focus:after, 
+.au-button--arrow:active:after {
+  content: url("data:image/svg+xml,%3Csvg width='28' height='14' viewBox='0 0 56 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.0607 13.0607C55.6465 12.4749 55.6465 11.5251 55.0607 10.9393L45.5147 1.3934C44.9289 0.807612 43.9792 0.807612 43.3934 1.3934C42.8076 1.97918 42.8076 2.92893 43.3934 3.51472L51.8787 12L43.3934 20.4853C42.8076 21.0711 42.8076 22.0208 43.3934 22.6066C43.9792 23.1924 44.9289 23.1924 45.5147 22.6066L55.0607 13.0607ZM0 13.5H54V10.5H0V13.5Z' fill='%23{{ theme.layout_setting.buttons.arrow.light.hover.text.font.color[1:] }}'/%3E%3C/svg%3E");
+    } 
+
+/****************************************/
+/*           Arrow Dark                 */
+/****************************************/
+
+.au-button--arrow-dark {
+  background: none;
+  border: none;
+  padding: 0;
+  transition: none;
+}
+
+.au-button--arrow-dark:after {
+  content: url("data:image/svg+xml,%3Csvg width='28' height='14' viewBox='0 0 56 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.0607 13.0607C55.6465 12.4749 55.6465 11.5251 55.0607 10.9393L45.5147 1.3934C44.9289 0.807612 43.9792 0.807612 43.3934 1.3934C42.8076 1.97918 42.8076 2.92893 43.3934 3.51472L51.8787 12L43.3934 20.4853C42.8076 21.0711 42.8076 22.0208 43.3934 22.6066C43.9792 23.1924 44.9289 23.1924 45.5147 22.6066L55.0607 13.0607ZM0 13.5H54V10.5H0V13.5Z' fill='%23{{ theme.layout_setting.buttons.arrow.dark.normal.text.font.color[1:] }}'/%3E%3C/svg%3E");
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 28px;
+    }
+
+.au-button--arrow-dark:hover, 
+.au-button--arrow-dark:focus, 
+.au-button--arrow-dark:active {
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+
+.au-button--arrow-dark:hover:after, 
+.au-button--arrow-dark:focus:after, 
+.au-button--arrow-dark:active:after {
+  content: url("data:image/svg+xml,%3Csvg width='28' height='14' viewBox='0 0 56 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55.0607 13.0607C55.6465 12.4749 55.6465 11.5251 55.0607 10.9393L45.5147 1.3934C44.9289 0.807612 43.9792 0.807612 43.3934 1.3934C42.8076 1.97918 42.8076 2.92893 43.3934 3.51472L51.8787 12L43.3934 20.4853C42.8076 21.0711 42.8076 22.0208 43.3934 22.6066C43.9792 23.1924 44.9289 23.1924 45.5147 22.6066L55.0607 13.0607ZM0 13.5H54V10.5H0V13.5Z' fill='%23{{ theme.layout_setting.buttons.arrow.dark.hover.text.font.color[1:] }}'/%3E%3C/svg%3E");
+    } 
+
+
+
+

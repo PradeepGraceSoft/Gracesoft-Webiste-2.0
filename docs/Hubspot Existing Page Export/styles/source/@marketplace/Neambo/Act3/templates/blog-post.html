@@ -1,0 +1,821 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Blog post
+  screenshotPath: ../images/template-previews/blog-1-post.jpg
+-->
+
+{%- extends "./_base.html" -%}
+
+{%- block settings -%}
+
+  {% from '../css/_variables.css' import sm %}
+
+  {# Get blog template configuration from the listing page #}
+
+  {%- set listing_page = content_by_id(group.listingPageId) -%}
+  {%- set b = listing_page.widgets.blog_config.body -%}
+  {%- set b = {
+    "hero": {
+      "post_hero": b.hero.post_hero|default(true),
+      "hero_height": b.hero.hero_height|default("full"),
+      "hero_vertical_alignment": b.hero.hero_vertical_alignment|default("end"),
+      "hero_top_padding_lg": b.hero.hero_top_padding_lg|default(96),
+      "hero_top_padding_sm": b.hero.hero_top_padding_sm|default(48),
+      "hero_bottom_padding_lg": b.hero.hero_bottom_padding_lg|default(96),
+      "hero_bottom_padding_sm": b.hero.hero_bottom_padding_sm|default(48),
+    },
+    "header": {
+      "post_header_overlap": b.header.post_header_overlap|default(true)
+    },
+    "toolbar": {
+      "post_toolbar": b.toolbar.post_toolbar|default("none"),
+      "post_toolbar_alignment": b.toolbar.post_toolbar_alignment|default("justified"),
+      "topics_button_shape": b.toolbar.topics_button_shape|default("pill"),
+      "padding": b.toolbar.padding|default("default"),
+      "top_padding_lg": b.toolbar.top_padding_lg,
+      "top_padding_sm": b.toolbar.top_padding_lg,
+      "bottom_padding_lg": b.toolbar.bottom_padding_lg,
+      "bottom_padding_sm": b.toolbar.bottom_padding_lg,
+      "color_scheme": b.toolbar.color_scheme|default("light"),
+      "bg": b.toolbar.bg|default("default"),
+      "custom_bg_color": b.toolbar.custom_bg_color,
+    },
+    "post_body": {
+      "show_image_at_the_top": b.post_body.show_image_at_the_top|default(true),
+      "show_topics_at_the_bottom": b.post_body.show_topics_at_the_bottom|default(false),
+      "post_narration": b.post_body.post_narration|default(true),
+      "show_last_update_notice": b.post_body.show_last_update_notice|default(false),
+      "padding": b.post_body.padding|default("default"),
+      "top_padding_lg": b.post_body.top_padding_lg,
+      "top_padding_sm": b.post_body.top_padding_sm,
+      "bottom_padding_lg": b.post_body.bottom_padding_lg,
+      "bottom_padding_sm": b.post_body.bottom_padding_sm
+    },
+    "sharing": {
+      "sharing_type": b.sharing.sharing_type|default("default"),
+      "x": b.sharing.x|default(true),
+      "facebook": b.sharing.facebook|default(true),
+      "linkedin": b.sharing.linkedin|default(true),
+      "js": b.sharing.js,
+      "html": b.sharing.html|default("<!-- Example --><!-- AddToAny BEGIN --><div class=\"a2a_kit a2a_kit_size_32 a2a_default_style\"><a class=\"a2a_button_x\"></a><a class=\"a2a_button_linkedin\"></a><a class=\"a2a_button_facebook\"></a><a class=\"a2a_button_email\"></a><a class=\"a2a_button_copy_link\"></a></div><script async src=\"https://static.addtoany.com/menu/page.js\"></script><!-- AddToAny END --><style>.a2a_kit {display:flex;gap:8px;flex-wrap:wrap;padding-right:24px;}</style>")
+    },
+    "sidebar": {
+      "post_sidebar": b.sidebar.post_sidebar|default("post_rich_text"),
+      "post_sidebar_partial": b.sidebar.post_sidebar_partial|default("blog-sidebar.html"),
+      "classic": {
+        "recent_posts": b.sidebar.classic.recent_posts|default(true),
+        "topics": b.sidebar.classic.topics|default(true),
+        "archive": b.sidebar.classic.archive|default(true),
+        "subscription": b.sidebar.classic.subscription|default(true)
+      }
+    },
+    "post_navigation": {
+      "enable_post_navigation": b.post_navigation.enable_post_navigation|default(true),
+      "padding": b.post_navigation.padding|default("default"),
+      "top_padding_lg": b.post_navigation.top_padding_lg,
+      "top_padding_sm": b.post_navigation.top_padding_sm,
+      "bottom_padding_lg": b.post_navigation.bottom_padding_lg,
+      "bottom_padding_sm": b.post_navigation.bottom_padding_sm
+    },
+    "related_posts": {
+      "show_related_posts": b.related_posts.show_related_posts|default(true),
+      "summary_type": b.related_posts.summary_type|default("default"),
+      "summary_length": b.related_posts.summary_length|default(0),
+      "show_tag": b.related_posts.show_tag|default(true),
+      "padding": b.related_posts.padding|default("default"),
+      "top_padding_lg": b.related_posts.top_padding_lg,
+      "top_padding_sm": b.related_posts.top_padding_sm,
+      "bottom_padding_lg": b.related_posts.bottom_padding_lg,
+      "bottom_padding_sm": b.related_posts.bottom_padding_sm
+    },
+    "subscription_section": {
+      "post_subscription_section": b.subscription_section.post_subscription_section|default(true),
+      "one_field_subscription_form": b.subscription_section.one_field_subscription_form|default(true),
+      "padding": b.subscription_section.padding|default("default"),
+      "top_padding_lg": b.subscription_section.top_padding_lg,
+      "top_padding_sm": b.subscription_section.top_padding_sm,
+      "bottom_padding_lg": b.subscription_section.bottom_padding_lg,
+      "bottom_padding_sm": b.subscription_section.bottom_padding_sm
+    },
+    "author": {
+      "show_author": b.author.show_author|default(true)
+    },
+    "read_time": {
+      "show_read_time": b.read_time.show_read_time|default(true)
+    },
+    "date": {
+      "show_date": b.date.show_date|default(true)
+    },
+    "tags": {
+      "show_tags": b.tags.show_tags|default(true)
+    },
+    "text": {
+      "by": b.text.by|default("by [author]"),
+      "min_read": b.text.min_read|default("[minutes] min read"),
+      "share_this": b.text.share_this|default("Share this"),
+      "share_on": b.text.share_on|default("Share on [network]"),
+      "you_may_also_like": b.text.you_may_also_like|default("You May Also Like"),
+      "these_related_stories": b.text.these_related_stories|default("These Related Stories"),
+      "previous_story": b.text.previous_story|default("Previous story"),
+      "next_story": b.text.next_story|default("Next story"),
+      "get_email_notifications": b.text.get_email_notifications|default("Get Email Notifications"),
+      "no_comments_yet": b.text.no_comments_yet|default("No Comments Yet"),
+      "comments": b.text.comments|default("Comments"),
+      "let_us_know_what_you_think": b.text.let_us_know_what_you_think|default("Let us know what you think"),
+      "all_topics": b.text.all_topics|default("All Topics"),
+      "search_the_blog": b.text.search_the_blog|default("Search the blog"),
+      "sorry_no_results_found": b.text.sorry_no_results_found|default("Sorry, no results found"),
+      "close_search_window": b.text.close_search_window|default("Close search window"),
+      "read_story": b.text.read_story|default("Read Story"),
+      "load_more_stories": b.text.load_more_stories|default("Load More Stories"),
+      "posts_by": b.text.posts_by|default("Posts by [author]"),
+      "recent_stories": b.text.recent_stories|default("Recent stories"),
+      "more_stories": b.text.more_stories|default("More stories"),
+      "by_on": b.text.by_on|default("By [author] on [date]"),
+      "last_updated_on": b.text.last_updated_on|default("Last updated on [date]"),
+      "topics": b.text.topics|default("Topics"),
+      "see_all": b.text.see_all|default("See all"),
+      "recent": b.text.recent|default("Recent"),
+      "archive": b.text.archive|default("Archive"),
+      "subscribe_by_email": b.text.subscribe_by_email|default("Subscribe by email")
+    }
+  } -%}
+
+  {# Template classes #}
+
+  {%- set template_class = "blog-post" -%}
+    
+  {# Hero/header settings #}
+
+  {%- set lp = false -%}
+  {%- set header_overlap = false -%}
+  {%- if b.hero.post_hero and b.header.post_header_overlap -%}
+    {%- set header_overlap = true -%}
+  {%- endif -%}
+
+{%- endblock settings -%}
+
+{%- block body -%}
+
+  {# Import variables and macros #}
+
+  {%- from "../css/_variables.css" import sm, md, rtl_ready, light, dark, gutter -%}
+  {%- from "../macros/utility.html" import read_time, image_srcset, image_tag -%}
+
+  {# Optional images #}
+
+  {%- if b.hero.homepage_hero in ['latest_post', 'featured_post'] or b.hero.post_hero -%}
+    {%- image_src 'post_background' label='Hero image (large screens)' export_to_template_context=True -%}
+    {%- image_src 'post_background_sm' label='Hero image (small screens)' export_to_template_context=True -%}
+    {%- text 'hero_overlay_opacity', label='Hero overlay opacity (fractional number, from 0 to 1. Default: 0.3)', value='0.3', export_to_template_context=True -%}
+  {%- endif -%}
+  {%- image 'post_banner' label='Listing image', export_to_template_context=True -%}
+  {%- if not b.hero.post_hero and b.post_body.show_image_at_the_top -%}
+    {%- image 'post_image' label='Post image', export_to_template_context=True -%}
+  {%- endif -%}
+  
+  {# Hero #}
+
+  {%- if b.hero.post_hero -%}
+    {# Hero #}
+    {{ require_css(get_asset_url('../css/components/blog-hero-1.css')) }}
+    <div class="blog-hero-1 section{% if b.hero.hero_height == 'full' %} minh-full{% elif b.hero.hero_height == 'half' %} minh-half{% endif %} justify-{{ b.hero.hero_vertical_alignment }}">
+      {%- require_css -%}
+        <style>
+          {%- if content.widgets.post_background.body.src -%}
+            @media (min-width: {{ sm + 1 }}px) {
+              .blog-hero-1 {
+                background-image: url({{ content.widgets.post_background.body.src }});
+              }
+            }
+          {%- elif content.featured_image -%}
+            @media (min-width: {{ sm + 1 }}px) {
+              .blog-hero-1 {
+                background-image: url({{ content.featured_image }});
+              }
+            }
+          {%- endif -%}
+          {%- if content.widgets.post_background_sm.body.src -%}
+            @media (max-width: {{ sm }}px) {
+              .blog-hero-1 {
+                background-image: url({{ content.widgets.post_background_sm.body.src }});
+              }
+            }
+          {%- elif content.widgets.post_background.body.src -%}
+            @media (max-width: {{ sm }}px) {
+              .blog-hero-1 {
+                background-image: url({{ resize_image_url(content.widgets.post_background.body.src, sm, 0, 0) }});
+              }
+            }
+          {%- elif content.featured_image -%}
+            @media (max-width: {{ sm }}px) {
+              .blog-hero-1 {
+                background-image: url({{ resize_image_url(content.featured_image, sm, 0, 0) }});
+              }
+            }
+          {%- endif -%}
+          .blog-hero-1 {
+            padding-top: {{ b.hero.hero_top_padding_lg }}px;
+            padding-bottom: {{ b.hero.hero_bottom_padding_lg }}px;
+          }
+          @media (max-width: {{ sm }}px) {
+            .blog-hero-1 {
+              padding-top: {{ b.hero.hero_top_padding_sm }}px;
+              padding-bottom: {{ b.hero.hero_bottom_padding_lg }}px;
+            }
+          }
+        </style>
+      {%- end_require_css -%}
+      <div class="blog-hero-1__center container">
+        <div class="row">
+          <div class="col s12">
+            <div class="blog-hero-1__overlay" style="opacity: {{ content.widgets.hero_overlay_opacity.body.value|default('0.3') }}"></div>
+            <div class="blog-hero-1__contents">
+              {%- if b.tags.show_tags -%}
+                <div class="blog-hero-1__tags">
+                  <div class="blog-hero-1__tags-visible">
+                    {%- if content.tag_list[0] -%}
+                      <a href="{{ blog_tag_url(group.id, content.tag_list[0].slug) }}" class="blog-hero-1__tag badge badge--medium badge--{% if content.tag_list[1] %}white{% else %}accent{% endif %} badge--lowercase">{{ content.tag_list[0].name }}</a>
+                    {%- endif -%}
+                    {%- if content.tag_list[1] -%}
+                      <a href="{{ blog_tag_url(group.id, content.tag_list[1].slug) }}" class="blog-hero-1__tag badge badge--medium badge--accent badge--lowercase">{{ content.tag_list[1].name }}</a>
+                    {%- endif -%}
+                  </div>
+                  {%- if content.tag_list[2] -%}
+                    {{ require_css(get_asset_url('../css/components/tag-list.css')) }}
+                    {{ require_js(get_asset_url('../js/components/tag-list.js'), { position: 'footer', defer:true }) }}
+                    <div class="blog-hero-1__tags-list tags-list">
+                      <a href="javascript:;" class="tags-list__btn tags-list__open-list tags-list__btn--ghost" aria-label="{{ b.text.all_topics }}">
+                        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 10C3.89543 10 3 10.8954 3 12C3 13.1046 3.89543 14 5 14C6.10457 14 7 13.1046 7 12C7 10.8954 6.10457 10 5 10ZM12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10ZM17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12Z" fill="currentColor"/>
+                        </svg>
+                      </a>
+                      <div class="tags-list__list">
+                        {%- for tag in content.tag_list -%}
+                          {%- if loop.index > 2 -%}
+                            <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="tags-list__item">{{ tag.name }}</a>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              <div class="blog-hero-1__title txt--dark">
+                <h1 class="display">{{ content.name }}</h1>
+              </div>
+              {%- if true in [b.author.show_author, b.read_time.show_read_time, b.date.show_date] -%}
+                {{ require_css(get_asset_url('../css/components/blog-infobar.css')) }}
+                <div class="blog-hero-1__infobar blog-infobar blog-infobar--dark">
+                  {%- if b.author.show_author -%}
+                    <div class="blog-infobar__author">
+                      {%- if content.blog_post_author.avatar -%}
+                        <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}"><img src="{{ content.blog_post_author.avatar }}" {{ image_srcset(content.blog_post_author.avatar, 40) }} alt="{{ content.blog_post_author.display_name }}" width="40" height="40"></a>
+                      {%- endif -%}  
+                      <div class="blog-hero-1__author-name">{{ b.text.by|replace('[author]', '<a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">{{ content.blog_post_author.display_name }}</a>') }}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if b.read_time.show_read_time -%}
+                    <div class="blog-infobar__time">
+                      <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg> {{ b.text.min_read|replace('[minutes]', read_time(content.post_body)) }}
+                    </div>
+                  {%- endif -%}
+                  {%- if b.date.show_date -%}
+                    <div class="blog-infobar__date">
+                      <svg width="13" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"></path></svg> {{ content.publish_date_localized }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {# Toolbar #}
+
+  {%- if b.toolbar.post_toolbar != 'none' -%}
+    <div class="blog-toolbar-1 section{{ ' bg-dark' if b.toolbar.bg != 'custom' and b.toolbar.color_scheme == 'dark' }}{{ ' bg-light' if b.toolbar.bg != 'custom' and b.toolbar.color_scheme != 'dark' }}"{{ ' style="background-color: ' ~ b.toolbar.custom_bg_color.color ~ ';"' if b.toolbar.bg == 'custom' }}>
+      <div class="blog-toolbar-1__center container">
+        <div class="row">
+          <div class="col s12">
+            <div class="flex flex-row items-center {% if b.toolbar.post_toolbar_alignment == 'left' %}justify-start{% elif b.toolbar.post_toolbar_alignment == 'center'%}justify-center{% elif b.toolbar.post_toolbar_alignment == 'right' %}justify-end{% else %}justify-between{% endif %} sm-flex-col sm-items-stretch">
+              {# Title #}
+              {%- if b.toolbar.post_toolbar in ['title_and_search', 'title'] -%}
+                <div class="blog-toolbar-1__title-wrapper txt--{{ 'dark' if b.toolbar.color_scheme == 'dark' else 'light' }}">
+                  <span class="blog-toolbar-1__title blog-toolbar-1__title--blog-title h3">
+                    <span class="blog-toolbar-1__title-icon">
+                      <a href="/{{ group.slug }}" class="ui-icon">
+                        <svg width="24" height="21" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                          <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+                        </svg>
+                      </a>
+                    </span>
+                    <span class="blog-toolbar-1__title-text">{{ group.public_title }}</span>
+                  </span>
+                </div>
+              {# Topics #}
+              {%- elif b.toolbar.post_toolbar in ['topics_and_search', 'topics'] -%}
+                <div class="blog-toolbar-1__topics">
+                  <div class="drop-down drop-down--light">
+                    <button class="drop-down__btn btn btn--large btn--fill btn--accent{% if b.toolbar.topics_button_shape == 'pill' %} btn--pill{% endif %}" aria-label="{{ b.text.all_topics }}">
+                      <span class="drop-down__btn-text">{{ b.text.all_topics }}</span>
+                      <span class="drop-down__btn-arrow">
+                        <svg width="16" height="16" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.60311 4.14644C3.40785 4.34171 3.40785 4.65829 3.60311 4.85356L6.60312 7.85355C6.79837 8.0488 7.11497 8.0488 7.31022 7.85355L10.3102 4.85356C10.5055 4.65829 10.5055 4.34171 10.3102 4.14644C10.115 3.95119 9.79837 3.95119 9.60312 4.14644L6.95667 6.7929L4.31022 4.14644C4.11496 3.95119 3.79838 3.95119 3.60311 4.14644Z" fill="currentColor"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="drop-down__list">
+                      <a class="drop-down__option drop-down__option--nonitem drop-down__option--active" href="{{ group.absolute_url }}">{{ b.text.all_topics }}</a>
+                      {%- for btag in blog_tags(group.id, 250) -%}
+                        <a class="drop-down__option{% if btag.slug == tag %} drop-down__option--active{% endif %}" href="{{ blog_tag_url(group.id, btag.slug) }}">{{ btag.name }}</a>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+                {{ require_css(get_asset_url('../css/components/drop-down.css')) }}
+                {{ require_js(get_asset_url('../js/components/drop-down.js'), { position: 'footer', defer: true }) }}
+              {%- endif -%}
+              {# Search #}
+              {%- if b.toolbar.post_toolbar in ['topics_and_search', 'title_and_search', 'search'] -%}
+                {{ require_css(get_asset_url('../css/components/search-box.css')) }}
+                {{ require_css(get_asset_url('../css/components/blog-search.css')) }}
+                {{ require_js(get_asset_url('../js/components/blog-search.js'), { position: 'footer', defer: true }) }}
+                <div class="blog-toolbar-1__search blog-search">
+                  <div class="search-box search-box--{{ 'dark' if b.toolbar.color_scheme == 'dark' else 'light' }}">
+                    <form class="blog-search__form" onsubmit="do_blog_search(event);" autocomplete="off" results-zero-text="{{ b.text.sorry_no_results_found|escape }}">
+                      <input name="term" class="search-box__input blog-search__input" type="text" placeholder="{{ b.text.search_the_blog }}">
+                      <input name="groupId" type="hidden" value="{{ group.id }}">
+                      <input name="language" type="hidden" value="{{ group.language.languageTag }}">
+                      <input name="limit" type="hidden" value="20">
+                      <input name="offset" type="hidden" value="0">
+                      <input name="length" type="hidden" value="SHORT">
+                      <button class="search-box__btn blog-search__search-icon ui-icon" type="submit" value="{{ b.text.search_the_blog }}" aria-label="{{ b.text.search_the_blog }}">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.71 19.29L17.31 15.9C18.407 14.5025 19.0022 12.7767 19 11C19 9.41775 18.5308 7.87103 17.6518 6.55544C16.7727 5.23984 15.5233 4.21446 14.0615 3.60896C12.5997 3.00346 10.9911 2.84504 9.43928 3.15372C7.88743 3.4624 6.46197 4.22433 5.34315 5.34315C4.22433 6.46197 3.4624 7.88743 3.15372 9.43928C2.84504 10.9911 3.00347 12.5997 3.60897 14.0615C4.21447 15.5233 5.23985 16.7727 6.55544 17.6518C7.87103 18.5308 9.41775 19 11 19C12.7767 19.0022 14.5025 18.407 15.9 17.31L19.29 20.71C19.383 20.8037 19.4936 20.8781 19.6154 20.9289C19.7373 20.9797 19.868 21.0058 20 21.0058C20.132 21.0058 20.2627 20.9797 20.3846 20.9289C20.5064 20.8781 20.617 20.8037 20.71 20.71C20.8037 20.617 20.8781 20.5064 20.9289 20.3846C20.9797 20.2627 21.0058 20.132 21.0058 20C21.0058 19.868 20.9797 19.7373 20.9289 19.6154C20.8781 19.4936 20.8037 19.383 20.71 19.29ZM5 11C5 9.81331 5.3519 8.65327 6.01119 7.66658C6.67047 6.67988 7.60755 5.91085 8.7039 5.45672C9.80026 5.0026 11.0067 4.88378 12.1705 5.11529C13.3344 5.3468 14.4035 5.91824 15.2426 6.75736C16.0818 7.59647 16.6532 8.66557 16.8847 9.82946C17.1162 10.9933 16.9974 12.1997 16.5433 13.2961C16.0892 14.3925 15.3201 15.3295 14.3334 15.9888C13.3467 16.6481 12.1867 17 11 17C9.4087 17 7.88258 16.3679 6.75736 15.2426C5.63214 14.1174 5 12.5913 5 11Z" fill="currentColor"></path>
+                        </svg>
+                      </button>
+                      <button class="search-box__btn blog-search__cancel-icon blog-search__reset ui-icon" type="reset" aria-label="{{ b.text.close_search_window }}">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.707 4.707a1 1 0 0 0-1.414-1.414L12 10.586 4.707 3.293a1 1 0 0 0-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 1 0 1.414 1.414L12 13.414l7.293 7.293a1 1 0 0 0 1.414-1.414L13.414 12l7.293-7.293z" fill="currentColor"></path>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="blog-search__results-overlay blog-search__reset"></div>
+                  <div class="blog-search__results-wrapper">
+                    <div class="blog-search__results"></div>
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ require_css(get_asset_url('../css/components/blog-toolbar-1.css')) }}
+
+    {%- if b.toolbar.padding == 'custom' -%}
+      {%- set lg_css = '' -%}
+      {%- set sm_css = '' -%}
+      {%- if b.toolbar.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.toolbar.top_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if b.toolbar.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.toolbar.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if lg_css -%}{% set lg_css = '.blog-toolbar-1 {' ~ lg_css ~ '}' %}{%- endif -%}
+      {%- if b.toolbar.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.toolbar.top_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if b.toolbar.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.toolbar.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-toolbar-1 {' ~ sm_css ~ '}}' %}{%- endif -%}
+      {%- if lg_css or sm_css -%}
+        {%- require_css -%}
+          <style>{{ lg_css ~ sm_css }}</style>
+        {%- end_require_css -%}
+      {%- endif -%}
+    {%- endif -%}
+
+  {%- endif -%}
+
+  {# Body #}
+
+  {{ require_css(get_asset_url('../css/components/blog-body-1.css')) }}
+  <div class="blog-body-1 blog-body-1--extended{{ ' blog-body-1--wo-sidebar' if b.sidebar.post_sidebar == 'none' }} section">
+    <div class="blog-body__center container">
+      <div class="row">
+        {%- if b.sharing.sharing_type == 'none' -%}
+          {%- if b.sidebar.post_sidebar == 'none' -%}
+            {%- set main_class = 's12' -%}
+          {%- else -%}
+            {%- set main_class = 's9 md-s12' -%}
+            {%- set sidebar_class = 's3 md-s12' -%}
+          {% endif %}
+        {%- else -%}
+          {%- if b.sidebar.post_sidebar == 'none' -%}
+            {%- set main_class = 's10' -%}
+          {%- else -%}
+            {%- set main_class = 's7 md-s10' -%}
+            {%- set sidebar_class = 's3 md-s10' -%}
+          {% endif %}
+        {% endif %}
+        <div class="blog-body-1__main col {{ main_class }}">
+          <div class="blog-body-1__content">
+            {%- if not b.hero.post_hero -%}
+              <h1 class="blog-body-1__title">{{ content.name }}</h1>
+              {%- if b.author.show_author or b.date.show_date -%}
+                <p class="blog-body-1__info small-text">{{ b.text.by_on|replace('[author]', '<a href="' ~ blog_author_url(group.id, content.blog_post_author.slug) ~ '"><strong>'~ content.blog_post_author.display_name ~'</strong></a>')|replace('[date]', content.publish_date_localized) }}
+                {%- if b.post_body.show_last_update_notice -%}
+                  {%- set updated_date_string = content.updated|format_datetime(group.publish_date_format, local_time_zone, group.language.languageTag) -%}
+                  {%- if content.publish_date_localized != updated_date_string -%}
+                    <br><span class="blog-body-1__update blog-body-1__update--wohero">{{ b.text.last_updated_on|replace('[date]', updated_date_string) }}</span>
+                  {%- endif -%}
+                {%- endif -%}
+                </p>
+              {%- endif -%}
+            {%- endif -%}
+            {%- if not b.hero.post_hero and b.post_body.show_image_at_the_top -%}
+              <p>
+                {%- if content.widgets.post_image.body.src -%}
+                  {# Use Listing image if available #}
+                  {{ image_tag(content.widgets.post_image.body, 'blog-body-1__top-image img--radius') }}
+                {%- else -%}
+                  {# Otherwise, use Featured image #}
+                  <img class="blog-body-1__top-image img--radius" src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text|default(content.name|escape_attr, true) }}" {% if content.featured_image|split(".")|last|lower != 'svg' %}{{ image_srcset(content.featured_image, sm) }}{% endif %} loading="lazy">
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+            {%- if b.hero.post_hero and b.post_body.show_last_update_notice -%}
+              {%- set updated_date_string = content.updated|format_datetime(group.publish_date_format, local_time_zone, group.language.languageTag) -%}
+              {%- if content.publish_date_localized != updated_date_string -%}
+                <div class="blog-body-1__update blog-body-1__update--whero p important-text small-text">{{ b.text.last_updated_on|replace('[date]', updated_date_string) }}</div>
+              {%- endif -%}
+            {%- endif -%}
+            {%- if b.post_body.post_narration -%}
+              {{ '<div class="blog-body-1__narration">' if content.text_to_audio_file_id }}
+                {%- module "narration" path="@hubspot/blog_audio", overrideable=False -%}
+              {{ '</div>' if content.text_to_audio_file_id }}
+            {%- endif -%}
+            {{ content.post_body }}
+            {% if b.tags.show_tags and content.tag_list[0] and b.post_body.show_topics_at_the_bottom %}
+              <div class="blog-body-1__tags small-text">
+                <span class="blog-body-1__tags-label">{{ b.text.topics }}:</span>
+                {% for tag in content.tag_list %}
+                  <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="blog-body-1__tag">{{ tag.name }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        {# Sharing spacer #}
+        {%- if b.sharing.sharing_type != 'none' -%}
+          <div class="blog-body-1__spacer col s2 lg-hidden sm-hidden" style="order: 3;"></div>
+        {%- endif -%}
+        {# Sidebar #}
+        {%- if b.sidebar.post_sidebar != 'none' -%}
+          <div class="blog-body-1__aside-2 col {{ sidebar_class }}">
+            {# Rich text #}
+            {%- if b.sidebar.post_sidebar == 'post_rich_text' -%}
+              <div class="blog-body-1__sticky-rich-text">
+                {%- module 'aside_2', path='../modules/rich-text', label='Post aside',
+                  text='',
+                  settings={
+                    'img_radius': true
+                  },
+                  wrapper={
+                    'margin': {
+                      'bottom': {
+                        'lg': gutter|string
+                      }
+                    }
+                  }
+                -%}
+              </div>
+            {%- endif -%}
+            {# Classic sidebar #}
+            {%- if b.sidebar.post_sidebar == 'classic' -%}
+              {%- if b.sidebar.classic.recent_posts or b.sidebar.classic.topics or b.sidebar.classic.archive -%}
+                {{ require_css(get_asset_url('../css/components/tabs.css')) }}
+                {{ require_js(get_asset_url('../js/components/tabs.js'), { position: 'footer', defer:true }) }}
+                <div class="blog-classic-sidebar__tabs tabs tabs--light tabs--buttons-small tabs--indent" data-tabs-inactive="btn--light btn--outline" data-tabs-active="btn--accent btn--fill">
+                  <ul class="tabs__nav justify-start">
+                    {%- if b.sidebar.classic.recent_posts -%}
+                      <li class="tabs__nav-item">
+                        <button class="tabs__btn btn btn--small btn--pill btn--accent btn--fill tabs__btn--active" go-to-tab="blog-recent-posts">{{ b.text.recent }}</button>
+                      </li>
+                    {%- endif -%}
+                    {%- if b.sidebar.classic.topics -%}
+                      <li class="tabs__nav-item">
+                        <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts else 'btn--light btn--outline' }}" go-to-tab="blog-topics">{{ b.text.topics }}</button>
+                      </li>
+                    {%- endif -%}
+                    {%- if b.sidebar.classic.archive -%}
+                      <li class="tabs__nav-item">
+                        <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts and not b.sidebar.classic.topics else 'btn--light btn--outline' }}" go-to-tab="blog-archive">{{ b.text.archive }}</button>
+                      </li>
+                    {%- endif -%}
+                  </ul>
+                  <div class="tabs__content">
+                    {# Recent #}
+                    {%- if b.sidebar.classic.recent_posts -%}
+                      <button class="tabs__btn btn btn--small btn--pill btn--accent btn--fill tabs__btn--active" go-to-tab="blog-recent-posts">{{ b.text.recent }}</button>
+                      <div class="tabs__tab tabs__tab--active txt--light txt--unstyle-lists txt--unstyle-links important-text small-text" id="blog-recent-posts">
+                        {% post_listing 'blog_recent_posts', label='Recent', select_blog='{{ group.id }}', list_title='', listing_type='recent', max_links=3, overrideable=False %}
+                      </div>
+                      {% set see_all = '<span class="btn btn--small btn--outline btb--pill btn--light">'~ b.text.see_all ~'</span>' %}
+                    {%- endif -%}
+                    {# Topics #}
+                    {%- if b.sidebar.classic.topics -%}
+                      <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts else 'btn--light btn--outline' }}" go-to-tab="blog-topics">{{ b.text.topics }}</button>
+                      <div class="tabs__tab{{ ' tabs__tab--active' if not b.sidebar.classic.recent_posts }} txt--light txt--unstyle-lists txt--unstyle-links important-text small-text" id="blog-topics">
+                        {% post_filter 'blog_topics', label='Topics', select_blog='{{ group.id }}', expand_link_text='{{ see_all }}', list_title='', max_links=5, filter_type='topic', overrideable=False %}
+                      </div>
+                    {%- endif -%}
+                    {# Archive #}
+                    {%- if b.sidebar.classic.archive -%}
+                      <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts and not b.sidebar.classic.topics else 'btn--light btn--outline' }}" go-to-tab="blog-archive">{{ b.text.archive }}</button>
+                      <div class="tabs__tab{{ ' tabs__tab--active' if not b.sidebar.classic.recent_posts and not b.sidebar.classic.topics }} txt--light txt--unstyle-lists txt--unstyle-links important-text small-text" id="blog-archive">
+                        {% post_filter 'blog_archive', label='Archive', select_blog='{{ group.id }}', expand_link_text='{{ see_all }}', list_title='', max_links=5, filter_type='month', overrideable=False %}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+              {# Subscription #}
+              {% if b.sidebar.classic.subscription %}
+                {{ require_css(get_asset_url('../css/components/form.css')) }}
+                {{ require_css(get_asset_url('../css/components/form-dark.css')) }}
+                <div class="blog-classic-sidebar__subscription form form--dark form--dark-no-accent txt--dark form--btn-white form--btn-large form--btn-outline form--hidden-labels form--box form--box-accent">
+                  <h3 class="h4">{{ b.text.subscribe_by_email }}</h3>
+                  {% blog_subscribe 'blog_sub_form', label='Blog subscription',
+                    select_blog='{{ group.id }}',
+                    title='',
+                    overrideable=True
+                  %}
+                </div>
+              {% endif %}
+              {{ require_css(get_asset_url('../css/components/blog-classic-sidebar.css')) }}
+            {# Global sidebar #}
+            {%- elif b.sidebar.post_sidebar == 'global' and b.sidebar.post_sidebar_partial|trim -%}
+              {%- set sidebar_partial = '../partials/' ~ b.sidebar.post_sidebar_partial|trim|replace('.html', '') ~ '.html' -%}
+              {%- include sidebar_partial -%}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {# Sharing #}
+        {%- if b.sharing.sharing_type != 'none' -%}
+          <div class="blog-body-1__aside-1 col s2">
+            <div class="blog-body-1__sharing">
+              <div class="blog-body-1__sharing-title h4">{{ b.text.share_this }}</div>
+              <div class="clear">
+                {%- if b.sharing.sharing_type == 'third_party' -%}
+                  {# Third-party sharing widget #}
+                  {{ b.sharing.html }}
+                  {%- require_js position="footer" %}{{ b.sharing.js }}{% end_require_js -%}
+                {%- else -%}
+                  {# Default sharing widget #}
+                  {%- module 'sharing', path='../modules/sharing', label='Sharing', overrideable=False,
+                    intro='',
+                    twitter={{ b.sharing.x }},
+                    facebook={{ b.sharing.facebook }},
+                    linkedin={{ b.sharing.linkedin }},
+                    text_label='{{ b.text.share_on }}'
+                  -%}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- if b.post_body.padding == 'custom' -%}
+    {%- set lg_css = '' -%}
+    {%- set sm_css = '' -%}
+    {%- if b.post_body.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.post_body.top_padding_lg ~ 'px;' %}{%- endif -%}
+    {%- if b.post_body.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.post_body.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+    {%- if lg_css -%}{% set lg_css = '.blog-body-1 {' ~ lg_css ~ '}' %}{%- endif -%}
+    {%- if b.post_body.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.post_body.top_padding_sm ~ 'px;' %}{%- endif -%}
+    {%- if b.post_body.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.post_body.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+    {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-body-1 {' ~ sm_css ~ '}}' %}{%- endif -%}
+    {%- if lg_css or sm_css -%}
+      {%- require_css -%}
+        <style>{{ lg_css ~ sm_css }}</style>
+      {%- end_require_css -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {# Post navigation #}
+
+  {%- if b.post_navigation.enable_post_navigation -%}
+    {{ require_css(get_asset_url('../css/components/blog-nav.css')) }}
+    <div class="blog-nav section hs-search-hidden">
+      <div class="blog-nav__center container">
+        <div class="row items-stretch">
+          <div class="blog-nav__prev col s5 justify-center">
+            {%- if content.previous_post_name -%}
+              <div class="blog-nav__label blog-nav__label--prev">{{ b.text.previous_story }}</div>
+              <a class="blog-nav__link blog-nav__link--prev" href="/{{ content.previous_post_slug }}">{% if rtl_ready and content.language.textDirection.value == 'rtl' %}→ {{ content.previous_post_name }}{% else %}← {{ content.previous_post_name }}{% endif %}</a>
+            {%- endif -%}
+          </div>
+          <div class="blog-nav__home col s2 justify-center">
+            <a class="blog-nav__link blog-nav__link--home" href="/{{ group.slug }}" aria-label="{{ group.public_title|escape_attr }}">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7858 7.08301L13.8102 2.59727C12.7148 1.77495 11.2099 1.80445 10.1467 2.6691L4.12227 7.5684C3.41279 8.14537 3 9.01739 3 9.93921V18.9601C3 20.639 4.34315 22 6 22L8 22H10H14H16L18 22C19.6569 22 21 20.639 21 18.9601V9.52566C21 8.56251 20.5496 7.65634 19.7858 7.08301ZM16 19.9734H18C18.5523 19.9734 19 19.5197 19 18.9601V9.52566C19 9.20461 18.8499 8.90255 18.5953 8.71144L12.6197 4.2257C12.2546 3.95159 11.7529 3.96143 11.3985 4.24965L5.37409 9.14894C5.1376 9.34126 5 9.63194 5 9.93921V18.9601C5 19.5197 5.44772 19.9734 6 19.9734H8V16.9335C8 14.6949 9.79086 12.8803 12 12.8803C14.2091 12.8803 16 14.6949 16 16.9335V19.9734ZM10 19.9734H14V16.9335C14 15.8142 13.1046 14.9069 12 14.9069C10.8954 14.9069 10 15.8142 10 16.9335V19.9734Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+          <div class="blog-nav__next col s5 justify-center">
+            {%- if content.next_post_name -%}
+              <div class="blog-nav__label blog-nav__label--next">{{ b.text.next_story }}</div>
+              <a class="blog-nav__link blog-nav__link--next" href="/{{ content.next_post_slug }}">{% if rtl_ready and content.language.textDirection.value == 'rtl' %}{{ content.next_post_name }} ←{% else %}{{ content.next_post_name }} →{% endif %}</a>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {%- if b.post_navigation.padding == 'custom' -%}
+      {%- set lg_css = '' -%}
+      {%- set sm_css = '' -%}
+      {%- if b.post_navigation.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.post_navigation.top_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if b.post_navigation.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.post_navigation.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if lg_css -%}{% set lg_css = '.blog-nav {' ~ lg_css ~ '}' %}{%- endif -%}
+      {%- if b.post_navigation.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.post_navigation.top_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if b.post_navigation.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.post_navigation.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-nav {' ~ sm_css ~ '}}' %}{%- endif -%}
+      {%- if lg_css or sm_css -%}
+        {%- require_css -%}
+          <style>{{ lg_css ~ sm_css }}</style>
+        {%- end_require_css -%}
+      {%- endif -%}
+    {%- endif -%}
+
+  {%- endif -%}
+
+  {# Related posts #}
+
+  {%- if b.related_posts.show_related_posts -%}
+    <div class="blog-related section bg-light hs-search-hidden">
+      <div class="blog-related__center container">
+        <div class="row items-stretch justify-center">
+        {%- macro blog_post_formatter(post, index, total) -%}
+          {%- if index == 1 -%}
+            {{ require_css(get_asset_url('../css/components/blog-card.css')) }}
+            <div class="col s12">
+              {%- module 'related_posts_title', path='../modules/section-intro', label='Related posts',
+                overline='',
+                title='{{ b.text.you_may_also_like }}',
+                desc='<p>{{ b.text.these_related_stories }}</p>',
+                settings={
+                  'title_tag': 'h2',
+                  'title_looks_like': '',
+                  'remove_title_space': true
+                },
+                overrideable=False
+              -%}
+            </div>
+          {%- endif -%}
+          <div class="col s4 md-s6 sm-s12 flex-row">
+            <div class="blog-card blog-card--white blog-card--shadow{% if post.widgets.post_banner.body.src or post.featured_image %} blog-card--with-img{% endif %}{{ ' blog-card--with-summary' if (b.related_posts.summary_length > 0 and b.related_posts.summary_type != 'meta_description') or b.related_posts.summary_type == 'meta_description' }}{{ ' blog-card--no-read-time' if not b.read_time.show_read_time }}{{ ' blog-card--title-half-space' if b.tags.show_tags and content.tag_list[0] and not b.read_time.show_read_time and not b.date.show_date and not (b.related_posts.summary_length == 'meta_description' or b.related_posts.summary_length > 0) and b.related_posts.show_tag }}">
+              <a class="blog-card__link" href="{{ post.absolute_url }}"><span class="screen-reader-text">{{ post.name }}</span></a>
+              <div class="blog-card__content">
+                {%- if post.widgets.post_banner.body.src -%}
+                  <div class="blog-card__img">{{ image_tag(post.widgets.post_banner.body) }}</div>
+                {%- else -%}
+                  <div class="blog-card__img"><img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text|default(post.name) }}" {{ image_srcset(post.featured_image, md) }} loading="lazy"></div>
+                {%- endif -%}
+                <div class="blog-card__body">
+                  <div class="blog-card__text">
+                    {%- if b.tags.show_tags and post.tag_list[0] and b.related_posts.show_tag -%}
+                      <div class="blog-card__tags">
+                        <a href="{{ blog_tag_url(group.id, post.tag_list[0].slug) }}"><span class="badge badge--medium badge--accent badge--lowercase">{{ post.tag_list[0] }}</span></a>
+                      </div>
+                    {%- endif -%}
+                    <h3 class="blog-card__title h4">{{ post.name }}</h3>
+                    {%- if b.related_posts.summary_type == 'meta_description' -%}
+                      <p class="blog-card__summary">{{ post.meta_description }}</p>
+                    {%- elif b.related_posts.summary_length > 0 -%}
+                      <p class="blog-card__summary">{{ post.post_list_content|striptags|truncate(b.related_posts.summary_length, true, ' &hellip;') }}</p>
+                    {%- endif -%}
+                  </div>
+                  {%- if b.date.show_date or b.read_time.show_read_time -%}
+                    <div class="blog-card__info small-text">
+                      {%- if b.date.show_date -%}
+                        <span class="blog-card__date">{{ post.publish_date_localized }}</span>
+                      {%- endif -%}
+                      {%- if b.read_time.show_read_time -%}
+                        <span class="blog-card__readtime">{{ b.text.min_read|replace('[minutes]', read_time(post.post_body)) }}</span>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endmacro -%}
+        {%- text "related_posts_tags" label="Related posts tags (comma separated)", value="", export_to_template_context=True, no_wrapper=True -%}
+        {%- text "related_posts_ids" label="Related posts ids (comma separated)", value="", export_to_template_context=True, no_wrapper=True -%}
+        {%- related_blog_posts limit=3, post_formatter="blog_post_formatter", tags="{{ widget_data.related_posts_tags.body.value|regex_replace(' *, *', ',') }}", blog_post_override="{{ widget_data.related_posts_ids.body.value|regex_replace(' *, *', ',') }}", no_wrapper=True -%}
+        </div>
+      </div>
+    </div>
+
+    {%- if b.related_posts.padding == 'custom' -%}
+      {%- set lg_css = '' -%}
+      {%- set sm_css = '' -%}
+      {%- if b.related_posts.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.related_posts.top_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if b.related_posts.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.related_posts.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if lg_css -%}{% set lg_css = '.blog-related {' ~ lg_css ~ '}' %}{%- endif -%}
+      {%- if b.related_posts.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.related_posts.top_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if b.related_posts.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.related_posts.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-related {' ~ sm_css ~ '}}' %}{%- endif -%}
+      {%- if lg_css or sm_css -%}
+        {%- require_css -%}
+          <style>{{ lg_css ~ sm_css }}</style>
+        {%- end_require_css -%}
+      {%- endif -%}
+    {%- endif -%}
+
+  {%- endif -%}
+
+  {# Subscription section #}
+
+  {%- if b.subscription_section.post_subscription_section -%}
+    <div class="blog-sub section hs-search-hidden">
+      <div class="blog-sub__center container">
+        <div class="row">
+          <div class="col s12">
+            <div class="blog-sub__icon">
+              <figure class="icon icon--large icon--disc icon--fill icon--white-accent">
+                <div class="icon__glyph">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.8954 2 10 2.89543 10 4V4.34141C7.66961 5.16508 6 7.38756 6 10L6 11.5L6 13.5996L4.38253 15.8237C3.94008 16.432 3.87642 17.2372 4.21777 17.9076C4.55913 18.5779 5.24775 19 6 19H9C9 20.6569 10.3431 22 12 22C13.6569 22 15 20.6569 15 19H18C18.7522 19 19.4409 18.5779 19.7822 17.9076C20.1236 17.2372 20.0599 16.432 19.6175 15.8237L18 13.5996L18 11.5V10C18 7.38756 16.3304 5.16508 14 4.34141V4C14 2.89543 13.1046 2 12 2ZM13.0012 17H13H11L8.47299 17H6L7.45455 15L7.61747 14.776C7.86608 14.4341 8 14.0223 8 13.5996V11.5V10C8 7.79086 9.79086 6 12 6C14.2091 6 16 7.79086 16 10L16 11.5V13.5996C16 14.0223 16.1339 14.4341 16.3825 14.776L16.5455 15L18 17H15.527H13.0012ZM12 20C11.4477 20 11 19.5523 11 19H13C13 19.5523 12.5523 20 12 20ZM17.0715 3.62861C17.2766 3.11583 17.8586 2.86641 18.3714 3.07152L18 4C18.3714 3.07152 18.372 3.07178 18.3727 3.07203L18.374 3.07257L18.3768 3.0737L18.3829 3.07622L18.3975 3.08233C18.4082 3.08688 18.4209 3.09242 18.4353 3.09898C18.4643 3.11211 18.5006 3.12941 18.5433 3.15134C18.6285 3.19515 18.7394 3.25776 18.8672 3.34295C19.1227 3.51327 19.448 3.77557 19.7682 4.15982C20.4219 4.94424 21 6.17226 21 8C21 8.55228 20.5523 9 20 9C19.4477 9 19 8.55228 19 8C19 6.62774 18.5781 5.85576 18.2318 5.44018C18.052 5.22443 17.8773 5.08673 17.7578 5.00705C17.6981 4.96724 17.6528 4.94235 17.6286 4.92991C17.6203 4.92565 17.6146 4.9229 17.6117 4.92154C17.1104 4.71051 16.8687 4.13573 17.0715 3.62861ZM5.62861 3.07152C6.14139 2.86641 6.72336 3.11583 6.92848 3.62861C7.13132 4.13573 6.88963 4.71051 6.38829 4.92154C6.38542 4.9229 6.37969 4.92565 6.37141 4.92991C6.34722 4.94235 6.30191 4.96724 6.2422 5.00705C6.12268 5.08673 5.94802 5.22443 5.76822 5.44018C5.4219 5.85576 5 6.62774 5 8C5 8.55228 4.55228 9 4 9C3.44772 9 3 8.55228 3 8C3 6.17226 3.5781 4.94424 4.23178 4.15982C4.55198 3.77557 4.87732 3.51327 5.1328 3.34295C5.26059 3.25776 5.37153 3.19515 5.45671 3.15134C5.49935 3.12941 5.53569 3.11211 5.56465 3.09898C5.57914 3.09242 5.5918 3.08688 5.60249 3.08233L5.61706 3.07622L5.62322 3.0737L5.62601 3.07257L5.62733 3.07203C5.62798 3.07178 5.62861 3.07152 6 4L5.62861 3.07152Z" fill="currentColor"/>
+                  </svg>
+                </div>
+              </figure>
+            </div>
+            {%- if b.subscription_section.one_field_subscription_form -%}
+              {{ require_css(get_asset_url('../css/components/form.css')) }}
+              {{ require_css(get_asset_url('../css/components/one-field-form.css')) }}
+              {%- set blog_sub_form_classes = ' blog-sub__form--one form form--one-field' -%}
+            {%- else -%}
+              {%- set blog_sub_form_classes = ' blog-sub__form--multi' -%}
+            {%- endif -%}
+            {{ require_css(get_asset_url('../css/components/blog-sub.css')) }}
+            <div class="blog-sub__form{{ blog_sub_form_classes }}">
+              {%- blog_subscribe 'blog_sub_form', label='Blog subscription',
+                select_blog='{{ group.id }}',
+                title='{{ b.text.get_email_notifications }}',
+                overrideable=False
+              -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {%- if b.subscription_section.padding == 'custom' -%}
+      {%- set lg_css = '' -%}
+      {%- set sm_css = '' -%}
+      {%- if b.subscription_section.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.subscription_section.top_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if b.subscription_section.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.subscription_section.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+      {%- if lg_css -%}{% set lg_css = '.blog-sub {' ~ lg_css ~ '}' %}{%- endif -%}
+      {%- if b.subscription_section.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.subscription_section.top_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if b.subscription_section.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.subscription_section.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+      {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-sub {' ~ sm_css ~ '}}' %}{%- endif -%}
+      {%- if lg_css or sm_css -%}
+        {%- require_css -%}
+          <style>{{ lg_css ~ sm_css }}</style>
+        {%- end_require_css -%}
+      {%- endif -%}
+    {%- endif -%}
+
+  {%- endif -%}
+
+  {# Comments #}
+
+  {%- if group.allow_comments -%}
+    {{ require_css(get_asset_url('../css/components/blog-comments.css')) }}
+    <div class="blog-comments section">
+      <div class="blog-comments__center container">
+        <div class="row">
+          <div class="col s12">
+            <div class="blog-comments__intro">
+              {%- if not content.comment_list[0] -%}
+                <h3>{{ b.text.no_comments_yet }}</h3>
+                <p>{{ b.text.let_us_know_what_you_think }}</p>
+              {%- else -%}
+                <h3>{{ b.text.comments }} ({{ content.comment_list|length }})</h3>
+              {%- endif -%}
+            </div>
+            <div class="blog-comments__form">
+              {%- blog_comments 'blog_comments', label='Blog comments', select_blog='{{ group.id }}', overrideable=False, no_wrapper=True -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+{%- endblock body -%}

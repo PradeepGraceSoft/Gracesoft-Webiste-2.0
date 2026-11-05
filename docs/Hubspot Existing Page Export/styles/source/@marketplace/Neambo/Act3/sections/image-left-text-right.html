@@ -1,0 +1,57 @@
+<!--
+ templateType: section
+ label: Image left, text right
+ description: "Highlight an important benefit, feature, product or service with a large image that can exceed the page center."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/image-left-text-right.jpg
+-->
+{% dnd_section full_width=true %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/image-plus-text',
+        text='
+          <h2>Make layout changes directly on your page.</h2>
+          <p>You no longer need to edit your template to add sections and modules, or make layout changes.</p>
+        ',
+        image={
+          'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-iv3ks.jpg',
+          'alt': 'Describe your image',
+          'width': 850,
+          'height': 574,
+          'loading': 'lazy'
+        },
+        img_radius=true,
+        button=[
+          {
+            'internal_name': 'Button 1',
+            'type': 'link',
+            'text': 'Learn More',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true
+            },
+            'color': 'light',
+            'fill': 'outline',
+            'size': 'large',
+            'shape': 'default'
+          }
+        ],
+        settings={
+          'order': 'it',
+          'stack_order': 'sit',
+          'stack_txt_max_width': 500,
+          'stack_txt_center': true,
+          'stack_img_center': true
+        },
+        wrapper={
+          'text_align': {
+            'md': 'center'
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

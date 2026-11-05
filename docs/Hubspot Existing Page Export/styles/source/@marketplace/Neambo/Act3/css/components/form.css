@@ -1,0 +1,238 @@
+{% import "../_variables.css" as var %}
+   
+.txt--dark .hs-form-field > label {
+  color: {{ var.white }};
+}
+
+.txt--dark .hs_error_rollup {
+  color: {{ var.white }};
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/* Full */
+
+.form--btn-full .hs-button {
+  width: 100%;
+}
+
+/* Outline */
+
+.form--btn-outline .hs-button {
+  background: none;
+  border: {{ var.btn_bd }}px solid {{ var.accent }};
+  color: {{ var.accent }};
+}
+
+.form--btn-outline .hs-button:hover {
+  border: 0;
+  background: {{ var.accent_bg }};
+  color: {{ var.white }};
+}
+
+/* Small */
+
+.form--btn-small .hs-button {
+  padding: {{ var.btn_small_ptb }}rem {{ var.btn_small_plr }}rem;
+  border-radius: {{ var.btn_small_radius }};
+  font-size: .83rem;
+}
+
+.form--btn-small.form--btn-outline .hs-button:not(:hover) {
+  padding: calc({{ var.btn_small_ptb }}rem - {{ var.btn_bd }}px) calc({{ var.btn_small_plr }}rem - {{ var.btn_bd }}px);
+}
+
+/* Medium */
+
+.form--btn-medium .hs-button {
+  padding: {{ var.btn_medium_ptb }}rem {{ var.btn_medium_plr }}rem;
+  border-radius: {{ var.btn_medium_radius }};
+  font-size: .89rem;
+}
+
+.form--btn-medium.form--btn-outline .hs-button:not(:hover) {
+  padding: calc({{ var.btn_medium_ptb }}rem - {{ var.btn_bd }}px) calc({{ var.btn_medium_plr }}rem - {{ var.btn_bd }}px);
+}
+
+/* Large */
+
+.form--btn-large .hs-button {
+  padding: {{ var.btn_large_ptb }}rem {{ var.btn_large_plr }}rem;
+  border-radius: {{ var.btn_large_radius }};
+  font-size: 1rem;
+}
+
+.form--btn-large.form--btn-outline .hs-button:not(:hover) {
+  padding: calc({{ var.btn_large_ptb }}rem - {{ var.btn_bd }}px) calc({{ var.btn_large_plr }}rem - {{ var.btn_bd }}px);
+}
+
+/* Dark */
+
+.form--btn-dark.form--btn-outline .hs-button {
+  border-color: {{ var.dark }};
+  color: {{ var.dark }};
+}
+
+.form--btn-dark.form--btn-fill .hs-button,
+.form--btn-dark.form--btn-outline .hs-button:hover {
+  background: {{ var.dark }};
+  color: {{ var.white }};
+}
+
+.form--btn-dark .hs-button:focus:not(:hover):not(:active) {
+  box-shadow: {{ var.btn_focus_shadow }} rgba({{ var.dark|default('#222326')|convert_rgb }}, .15);
+}
+
+/* Light */
+
+.form--btn-light.form--btn-outline .hs-button {
+  border-color: {{ var.borders_color }};
+  color: {{ var.dark }};
+}
+
+.form--btn-light.form--btn-fill .hs-button,
+.form--btn-light.form--btn-outline .hs-button:hover {
+  background: {{ var.light }};
+  color: {{ var.dark }};
+}
+
+.form--btn-light .hs-button:focus:not(:hover):not(:active) {
+  box-shadow: {{ var.btn_focus_shadow }} rgba({{ var.borders_color|default('#E3E6EC')|convert_rgb }}, .15);
+}
+
+/* White */
+
+.form--btn-white.form--btn-outline .hs-button {
+  border-color: {{ var.white }};
+  color: {{ var.white }};
+}
+
+.form--btn-white.form--btn-fill .hs-button,
+.form--btn-white.form--btn-outline .hs-button:hover {
+  background: {{ var.white }};
+  color: {{ var.dark }};
+}
+
+.form--btn-white .hs-button:focus:not(:hover):not(:active) {
+  box-shadow: {{ var.btn_focus_shadow }} rgba({{ var.white|default('#ffffff')|convert_rgb }}, .15);
+}
+
+/* Ghost */
+
+.form--btn-ghost.form--btn-outline .hs-button {
+  border-color: {{ var.white_borders }};
+  color: {{ var.white }};
+}
+
+.form--btn-ghost.form--btn-fill .hs-button {
+  background: {{ var.white_borders }};
+  color: {{ var.white }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}
+
+.form--btn-ghost.form--btn-outline .hs-button:hover,
+.form--btn-ghost.form--btn-fill .hs-button:hover {
+  background: {{ var.white }};
+  color: {{ var.dark }};
+}
+
+.form--btn-ghost .hs-button:focus:not(:hover):not(:active) {
+  box-shadow: {{ var.btn_focus_shadow }} rgba({{ var.white|default('#ffffff')|convert_rgb }}, .15);
+}
+
+/* Pill */
+
+.form--btn-pill .hs-button {
+  border-radius: 999px;
+}
+
+/* ==========================================================================
+   Hidden labels
+   ========================================================================== */
+
+/* For compact forms that use placeholders instead of labels, though, for the
+best user experience labels are recommended. */
+
+.form--hidden-labels .field:not(.hs-fieldtype-checkbox):not(.hs-fieldtype-radio):not(.hs-fieldtype-file):not(.hs-fieldtype-date) > label,
+.form--hidden-labels .field:not(.hs-fieldtype-checkbox):not(.hs-fieldtype-radio):not(.hs-fieldtype-file):not(.hs-fieldtype-date) > legend {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+/* ==========================================================================
+   Box
+   ========================================================================== */
+
+.form--box {
+  margin-bottom: {{ var.gutter }}px;
+  padding: {{ var.gutter }}px;
+  border-radius: {{ var.radius_7 }};
+}
+
+.form--box-border {
+  border: 2px solid;
+}
+
+.form--box-border.form--light {
+  border-color: {{ var.borders_color }};
+}
+
+.form--box-border.form--dark {
+  border-color: {{ var.white_borders }};
+}
+
+.form--box-accent {
+  background: {{ var.accent_bg }};
+  box-shadow: {{ var.accent_medium_shadow }};
+}
+
+.form--box-dark {
+  background: {{ var.dark }};
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.form--box-light {
+  background: {{ var.light }};
+}
+
+.form--box-white {
+  background: {{ var.white }};
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.form--box-ghost {
+  background: {{ var.white_bg }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}
+
+.form__box-content {
+  margin: 0 auto;
+}
+
+@media (max-width: {{ var.xs }}px) {
+  .form--box {
+    padding: {{ var.gutter }}px;
+  }
+}
+
+/* Fixes Safari bug where 'ghost' fields in 'ghost' box render with a white background. */
+
+{% if theme.miscellaneous.ghost_blur %}
+  .is-safari .form--box-ghost.form--ghost .hs-input,
+  .is-safari .form--box-ghost.form--ghost #hs-pwd-widget-password,
+  .is-safari .form--box-ghost.form--btn-ghost.form--btn-fill .hs-button {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+{% endif %}

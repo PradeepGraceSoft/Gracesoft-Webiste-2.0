@@ -1,0 +1,53 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Edumind - 404 error
+  screenshotPath: ../../images/template-previews/404.png
+-->
+{% extends "../layouts/base.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Error 404 | Page not found" %}
+
+{% block body %}
+  {# Breadcrumb Section Start #}
+  {% module "module_16607567970425" path="../../modules/Breadcrumb", label="Breadcrumb"
+  layout = 'with-image',
+  extra_class = '',
+  page_title = '<h1>Error 404</h1>',
+  breadcrumb_item = [
+            {
+            'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+            'breadcrumb_text' :  'Home'
+            },
+            {
+              'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+              'breadcrumb_text' :  'Error 404'
+            }
+          ]
+
+
+  %}
+  {# Breadcrumb Section End #}
+
+  <section class="content-wrapper error-page section-padding">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-lg-8 ms-auto me-auto">
+          {% module 'content'
+            path='@hubspot/rich_text', 
+            html='<h1 class="title">   
+              Error 404</h1>
+              <h2>Oops! Page not found.</h2>
+              <p>Let’s get you to where you need to be.</p>'
+          %}
+          {% module "module_16683569792711" path="../../modules/Button With Link", label="Button With Link" 
+            button_class = 'error-page-btn mt-20'
+            button_link={ 'url': { 'type': 'CONTENT', 'href': '../edumind-home'}, 'open_in_new_tab': false, 'no_follow': false },
+            button_text = 'Go Back Home'
+          %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}

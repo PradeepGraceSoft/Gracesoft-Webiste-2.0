@@ -1,0 +1,179 @@
+<!--
+ templateType: section
+ label: Encourage exploration
+ description: "Make it easy for the visitor to access some of your most important pages, with a quick intro and simple cards."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/encourage-exploration.jpg
+-->
+{% dnd_section max_width=1600 %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-intro',
+        overline='Everything You Need',
+        title='Design. Results. Growth.',
+        desc='<p>Help visitors get the basic idea within a few seconds, so they understand what this section is about.</p>',
+        settings={
+          'title_tag': 'h1',
+          'title_looks_like': 'display',
+          'text_max_width': '420'
+        },
+        wrapper={
+          'max_width': {
+            'lg': theme.layout.content_width|string
+          },
+          'margin': {
+            'bottom': {
+              'lg': ''
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/go-card',
+        items=[
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-suzpg.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mcqne.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-cwfdn.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-s01l8.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-flte8.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          }
+        ],
+        settings={
+          'col': {
+            'lg': '3',
+            'md': '2'
+          },
+          'slider': true,
+          'slider_settings': {
+            'arrows': {
+              'lg': true,
+              'md': true,
+              'sm': false,
+              'white': false
+            },
+            'dots': {
+              'lg': true,
+              'md': true,
+              'sm': true,
+              'white': false
+            },
+            'center_mode': true
+          }
+        },
+        wrapper={
+          'max_width': {
+            'sm': '550'
+          },
+          'block_align': {
+            'sm': 'center'
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

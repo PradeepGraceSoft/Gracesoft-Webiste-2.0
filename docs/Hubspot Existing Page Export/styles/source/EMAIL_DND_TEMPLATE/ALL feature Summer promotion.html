@@ -1,0 +1,270 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#f2f2f2","body_border_color":"#cccccc","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#ffffff","use_email_client_default_settings":false,"primary_font":"Arial, sans-serif","primary_font_color":"#444444","primary_font_size":"15","heading_one_font":{"font":"Arial, sans-serif","size":"24"},"heading_two_font":{"size":"22"},"links_font":{},"user_module_defaults":{}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False, body_border={
+              "start_section_index":0,
+              "end_section_index":1
+              } %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True %}
+                    {% module_attribute "html" %}<p style="text-align: center;"><span style="font-family: Arial, Helvetica, sans-serif;">Hello {{ personalization_token('contact.property_compnay_name', 'Valued client') }}</span></p>
+<p style="text-align: center;"><span style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 18px; font-family: arial, helvetica, sans-serif; color: #000000;"><span style="font-size: 14px;">Greetings from GraceSoft Property Management System Providers!<br></span></span><strong><span style="font-size: 18px; font-family: arial, helvetica, sans-serif; color: #000000;"><span style="font-size: 14px;">STILL, LOOKING FOR A HOSPITALITY MANAGEMENT SOFTWARE? </span></span></strong><span style="font-size: 18px; font-family: arial, helvetica, sans-serif; color: #000000;"><span style="font-size: 14px;">We are excited to offer you a 50% discount on the yearly subscription of EasyInnkeeping where you pay for 6 months and get 6 months free. GraceSoft is a <strong>one-stop&nbsp;shop</strong> for all your lodging needs.&nbsp;<br></span></span><strong><span style="font-size: 18px; font-family: arial, helvetica, sans-serif; color: #000000;"><span style="font-size: 14px;">*NO SETUP FEE </span></span></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: 18px; font-family: arial, helvetica, sans-serif; color: #000000;"><span style="font-size: 14px;">*DEDICATED TRAINING</span></span></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: 18px; font-family: arial, helvetica, sans-serif; color: #000000;"><span style="font-size: 14px;"> </span></span></strong><strong><span style="font-size: 18px; font-family: arial, helvetica, sans-serif; color: #000000;"><span style="font-size: 14px;">*24/7 LIVE SUPPORT</span></span></strong></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"home-page-1st-section-imagesreservation-calendar-2",
+                    "height":362,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/home-page-1st-section-imagesreservation-calendar-2.webp",
+                    "width":558
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text" %}
+                    {% module_attribute "html" %}<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><span style="font-weight: normal;">This walkthrough will&nbsp;give you knowledge of all types of services we provide. Whether you have a hotel, condo, vacation rental, or campground, we provide all kinds of services with appropriate software, including secure payments.&nbsp;</span></span></p>
+<p style="line-height:1;text-align:right;"><br></p>
+<p style="line-height:1;text-align:right;">&nbsp;</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"devices booking engine-min",
+                    "height":225,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/devices%20booking%20engine-min.webp",
+                    "width":300
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text" %}
+                    {% module_attribute "html" %}<p style="line-height:1;text-align:center;"><span style="font-size:20px;font-family:Arial, Helvetica, sans-serif;"><strong>Booking engine&nbsp;&nbsp;</strong></span></p>
+<p style="line-height:1.15;text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><br></span></p>
+<p style="line-height:1.15;text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><span style="font-size: 20px;"><span style="font-size: 16px; font-weight: normal;">Set up an Online Booking Page and </span></span><span style="font-size: 16px; color: inherit;">Showcase Rooms without the cost of hiring <span style="font-size: 20px;"><span style="font-size: 16px; font-weight: normal;">web developers. Sync Rates and Room availability in real time between your PMS </span></span>and Online Booking Engine<strong style="font-size: 20px; color: inherit;">.</strong></span><span style="color: inherit; font-size: inherit; text-align: left;">&nbsp;</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"easy-online-payment",
+                    "height":169,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/anew/Images/easy-online-payment.png",
+                    "width":300
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 20px; line-height: 175%;"><span style="font-family: Arial, Helvetica, sans-serif;"><strong>Payments</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px; font-family: Arial, Helvetica, sans-serif;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 16px; font-family: Arial, Helvetica, sans-serif;">Integrate Easy Innkeeping PMS with our secure payment provider. Provide a secure payment experience for Online Reserving guests. So get started with one simple integration!</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"channel manager blog post-01-min",
+                    "height":183,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/channel%20manager%20blog%20post-01-min.png",
+                    "width":400
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 20px; line-height: 164%;"><span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;<strong>Channel Manager</strong><span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;</span></span></p>
+<p style="text-align: center;"><span style="font-size: 16px; font-family: Arial, Helvetica, sans-serif;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 16px; font-family: Arial, Helvetica, sans-serif;">Easy InnKeeping channel manager integrates with world-class distribution channels to&nbsp;make your property get the highest reach. In addition, they help your property get located in a sea of competitors!<span style="text-align: center; color: inherit; font-size: inherit;">&nbsp;</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"45_google airbnb icon_Mesa de trabajo 1",
+                    "height":None,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/45_google%20airbnb%20icon_Mesa%20de%20trabajo%201.png",
+                    "width":250
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text" %}
+                    {% module_attribute "html" %}<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><strong>Airbnb and Google integration</strong></span></p>
+<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><br></span></p>
+<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><span style="font-size: 16px;">&nbsp;Hoteliers can now use free booking links in Google Hotel Search to drive more direct bookings on their website. Easy Innkeeping’s&nbsp;</span><span style="font-size: 16px;">integration with Airbnb will not only streamline&nbsp;</span><span style="font-size: 16px;">things but also allow you to reach new heights!</span><span style="color: inherit; font-size: inherit;">&nbsp;</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"blog websites-png-1",
+                    "height":191,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/blog%20websites-png-1.png",
+                    "width":300
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True %}
+                    {% module_attribute "html" %}<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><strong style="color: inherit; font-size: inherit; text-align: right;"><span style="font-size: 20px;">Custom Websites&nbsp;&nbsp;</span></strong></span></p>
+<p style="text-align:center;"><span style="font-weight:normal;font-family:Arial, Helvetica, sans-serif;"><br></span></p>
+<p style="text-align:center;"><span style="font-weight:normal;font-family:Arial, Helvetica, sans-serif;"><span style="font-size: 16px;">Give your guests the best booking experience by making bookings and reservations on mobile, tablet, and desktop, and increase your revenue by building up your website. </span><span style="color: inherit; font-size: inherit;">&nbsp;</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"campground rv",
+                    "height":233,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/campground%20rv.jpg",
+                    "width":300
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 20px; line-height: 175%;"><span style="font-family: Arial, Helvetica, sans-serif;"><strong>Campgrounds &amp; RV</strong></span></p>
+<p style="text-align: center;"><span style="font-weight: normal; font-size: 16px; font-family: Arial, Helvetica, sans-serif;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-weight: normal; font-size: 16px; font-family: Arial, Helvetica, sans-serif;">All-in-one campground management software to manage your campsites easier, it delivers the best user experience for your guests to make reservations easily.</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"vacation",
+                    "height":250,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/vacation.png",
+                    "width":250
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text" %}
+                    {% module_attribute "html" %}<p style="text-align:center;"><span style="font-weight:bold;font-size:20px;font-family:Arial, Helvetica, sans-serif;">Vacation Rentals</span></p>
+<p style="text-align:center;"><span style="font-size:16px;font-family:Arial, Helvetica, sans-serif;"><br></span></p>
+<p style="text-align:center;"><span style="font-size:16px;font-family:Arial, Helvetica, sans-serif;">If you are a vacation rental owner or new to the business, GraceSoft's Easy Innkeeping vacation rental management software provides every necessary feature to increase your reservations and revenue.<span style="color: inherit; font-size: inherit;">&nbsp;</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"home page 1st section images pos",
+                    "height":194,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/home%20page%201st%20section%20images%20pos.jpg",
+                    "width":300
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text" %}
+                    {% module_attribute "html" %}<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><strong><span style="font-size: 20px;">Point of sale</span> &nbsp;</strong></span></p>
+<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><br></span></p>
+<p style="text-align:center;"><span style="font-family:Arial, Helvetica, sans-serif;"><strong>&nbsp;</strong>Manage your gift shops, café, bar, room service, retail shops, and other beverage operations. Easy WebPOS offers you a comprehensive solution. From setting the tables and taking orders, Integrate with our PMS system, and sales will be reflected in the Room Invoice.<span style="color: inherit; font-size: inherit;">&nbsp;</span><span style="color: inherit; font-size: inherit;">&nbsp;</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"Condo (1) (1)",
+                    "height":249,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Condo%20(1)%20(1).png",
+                    "width":250
+                    }, alignment="center", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True %}
+                    {% module_attribute "html" %}<p style="text-align: center;"><span style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;"><strong>Condo software</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 16px; color: inherit;">The Easy Innkeeping condo manager is a more straightforward way to keep track of your serviced apartments, and condominiums. You can use it for any size property and find out the status anytime anywhere in seconds!</span><span style="color: inherit;">&nbsp;</span></span></p>
+<p><span style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">&nbsp;</span></p>
+<div><span style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;"><span style="font-family: Arial, Helvetica, sans-serif;">Please <a href="https://www.youtube.com/watch?v=nehCcnj-Zcw&amp;t=50s" style="font-weight: normal;"><span style="color: #1d88e6;">Click Here</span>&nbsp;</a>to learn more about our software.</span></span></div>
+<div>&nbsp;</div>
+<p>We invite you to join us for live demonstrations on Tuesdays, Wednesdays, Thursdays, and Fridays at 10:00 AM Central Standard Time (4:00 PM Greenwich Mean Time, 1:00 PM Indian Standard Time, and 6:30 PM Sydney Time).&nbsp;</p>
+<div>
+<p>&nbsp;</p>
+<p>For those unable to participate at this time, we offer 15-30 minute walk-through sessions that can be scheduled at your convenience. Please click on the links provided to do so.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Demo link</span>: <a href="https://global.gotomeeting.com/join/310488373" rel="noopener">https://global.gotomeeting.com/join/310488373&nbsp;</a><br><span style="font-weight: bold;">Calendar link</span>: <a href="https://www.calendar.com/gracesoftsupport/intl-demo/_date-time/?duration=30" rel="noopener">https://www.calendar.com/gracesoftsupport/intl-demo/_date-time/?duration=30.</a></p>
+</div>
+<div><span style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;"><span style="font-family: Arial, Helvetica, sans-serif;">Click to CHAT: <span style="color: #1d88e6;"><a href="https://direct.lc.chat/5426201/" style="color: #1d88e6;">https://direct.lc.chat/5426201/</a><br></span></span><br></span></div>
+<div><span style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">For more details, visit us at </span></div>
+<div><span style="color: #1d88e6; font-family: Arial, Helvetica, sans-serif;"><a href="http://www.gracesoft.com" style="font-weight: bold; color: #1d88e6;">www.gracesoft.com</a></span></div>
+<div><span style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Contact us at</span></div>
+<div><strong><span style="font-size: 18px; font-family: arial, helvetica, sans-serif;"><span style="color: #000000;"><span style="font-size: 14px;">+91 7200423323</span></span></span></strong></div>
+<div><span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: #1d88e6;"><a href="mailto:sales@gracesoft.com" style="font-weight: bold; color: #1d88e6;">sales@gracesoft.com</a><br></span></span><span style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Regards </span></div>
+<div><span style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">GraceSoft Sales Team.</span></div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/follow_me_email", spacing=10, display="icon", scale=30, color_scheme="color", alignment="center", icon_shape="circle", hs_enable_module_padding=True %}
+                    {% module_attribute "social" is_json=True %}[{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"}]{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"10",
+                "bottom":"10"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_footer", align="center", hs_enable_module_padding=False %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

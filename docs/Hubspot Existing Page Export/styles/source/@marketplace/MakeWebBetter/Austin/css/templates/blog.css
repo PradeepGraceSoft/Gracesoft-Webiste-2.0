@@ -1,0 +1,375 @@
+/* Blog post */
+
+.blog-post {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.au-blog-post {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.au-blog-post .blog-post__body,
+.blog-post__social-sharing {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.blog-post strong,
+.blog-post b {
+  color: #000000;
+}
+
+.blog-post p {
+  margin: 0 0 25px;
+}
+
+.blog-post__title {
+  margin-bottom: 10px;
+  margin-top: 16px;
+}
+
+.blog-post__header {
+  padding-top: 40px;
+}
+
+.blog-post__meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.blog-post__featured-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+  margin: 40px 0;
+}
+
+.blog-post__meta-time {
+  flex: 0 0 100%;
+  max-width: calc(100% - 65px);
+}
+
+.blog-post__meta img {
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+
+.blog-post__timestamp {
+  display: block;
+}
+
+.blog-post__tags svg {
+  height: auto;
+  margin-right: 0.35rem;
+  width: 15px;
+}
+
+.blog-post__tag-link.au-button--outlined {
+  border-radius: 8px;
+  border-width: 1px !important;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 10px;
+  padding: 4px 10px;
+  text-transform: capitalize;
+}
+
+.blog-post ul,
+.blog-post ol {
+  padding: 0 0 20px 30px;
+}
+
+.blog-post ul li,
+.blog-post ol li {
+  margin-bottom: 10px;
+}
+
+.post-pagination .nav-text a {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.post-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.post-pagination .prev-post,
+.post-pagination .next-post {
+  flex: 0 0 48%;
+  max-width: 48%;
+}
+
+.post-pagination .next-post {
+  text-align: right;
+}
+
+.body-container--blog-post {
+  padding-bottom: 30px;
+}
+
+.post-footer .comment-from h4 {
+  line-height: inherit;
+  margin-bottom: 0;
+}
+
+.post-footer .comment {
+  margin-bottom: 20px;
+}
+
+#comments-listing {
+  margin-bottom: 50px;
+}
+
+/* Blog related posts */
+
+.blog-related-posts {
+  background-color: #fafafa;
+  display: block;
+  padding: 40px 0 20px;
+}
+
+.blog-related-posts h2 {
+  text-align: left;
+}
+
+.blog-related-posts__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-related-posts__post {
+  background-color: #ffffff;
+  border-radius: 8px;
+  flex: 0 0 100%;
+  margin-bottom: 20px;
+  max-width: 100%;
+  padding: 8px;
+}
+
+.blog-comments form {
+  padding: 0;
+}
+
+.blog-related-posts h3 {
+  margin-bottom: 40px;
+}
+
+/* Sidebar CSS */
+.au-blog__sidebar,
+.au-blog__wrapper-sidebar {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.au-blog__wrapper-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.au-blog__widget {
+  margin-bottom: 40px;
+}
+
+.au-blog__widget-title {
+  margin-bottom: 20px;
+}
+
+.au-blog__widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.au-blog__widget ul li {
+  margin-bottom: 0;
+}
+
+.au-blog__widget ul li a {
+  color: #6B6B6B;
+  display: inline-block;
+  padding: 6px 0;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.au-blog__widget ul li a:hover {
+  color: #111111;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .blog-related-posts__post {
+    flex: 0 0 calc(100% / 2);
+    margin-right: 30px;
+    max-width: calc(100% / 2 - 15px);
+  }
+
+  .blog-related-posts__post:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .post-pagination {
+    margin-top: 50px;
+  }
+
+  .blog-post__featured-img {
+    margin: 70px 0;
+  }
+
+  .au-blog-post--featured-img-fixed {
+    background-attachment: fixed;  
+  }
+
+  .au-blog-post--featured-img-scroll {
+    background-attachment: scroll;  
+  }
+
+  .au-blog-post--featured-img-top {
+    background-position: top;
+  }
+
+  .au-blog-post--featured-img-center {
+    background-position: center;
+  }
+
+  .au-blog-post--featured-img-bottom {
+    background-position: bottom;
+  }
+
+  .blog-post__header {
+    padding-top: 70px;
+  }
+
+  .body-container--blog-post {
+    padding-bottom: 80px;
+  }
+
+  .blog-related-posts {
+    padding: 80px 0 60px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .blog-related-posts__post {
+    flex: 0 0 calc(100% / 3);
+    margin-right: 30px;
+    max-width: calc(100% / 3 - 20px);
+  }
+
+  .blog-related-posts__post:nth-child(2n) {
+    margin-right: 30px;
+  }
+
+  .blog-related-posts__post:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .blog-post__social-sharing {
+    max-width: 30px;
+    position: sticky;
+    top: 20px;
+  }
+
+  .blog-post--social-link .blog-post__body {
+    max-width: calc(100% - 30px);
+    padding-left: 30px;
+  }
+
+  .au-blog-post--sidebar .blog-post__body {
+    max-width: calc(70% - 30px);
+    padding-right: 30px;
+  }
+
+  .au-blog__sidebar {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .au-blog__sidebar {
+    position: sticky;
+    top: 20px;
+  }
+
+  .au-blog-post--sidebar-left .blog-post__social-sharing {
+    order: 3;
+  }
+
+  .au-blog-post--sidebar-left .blog-post__body {
+    order: 2;
+  }
+
+  .au-blog-post--sidebar-left .au-blog__sidebar {
+    order: 1;
+  }
+}
+
+.blog-related-posts__post-image-wrapper,
+.blog-related-posts__image {
+  display: block;
+}
+
+.blog-related-posts__image {
+  border-radius: 8px;
+  height: 240px;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blog-related-posts__title {
+  margin: 10px 0;
+}
+
+.blog-related-posts__title a,
+.blog-related-posts__title a:hover,
+.blog-related-posts__title a:focus,
+.blog-related-posts__title a:active {
+  color: inherit;
+  font-weight: inherit;
+}
+
+
+/* Blog comments */
+
+.blog-comments {
+  margin: 0 auto;
+  max-width: 680px;
+  padding-top: 40px;
+}
+
+.blog-comments .hs-submit {
+  text-align: center;
+}
+
+.blog-comments .comment-reply-to {
+  border: 0 none;
+}
+
+.blog-comments .comment-reply-to:hover,
+.blog-comments .comment-reply-to:focus {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-post__featured-img {
+    height: 220px;
+  }
+}
+
+@media only screen and (pointer: coarse) {
+  .blog-post__featured-img {
+    background-attachment: scroll;
+  }
+}
+

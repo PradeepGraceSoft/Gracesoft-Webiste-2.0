@@ -1,0 +1,727 @@
+<!--
+  templateType: section
+  label: Pricing cards
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/pricing-cards.jpg
+  description: "Pricing cards."
+-->
+
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "top" : "20px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=4,
+    margin={
+      "mobile" : {
+        "bottom" : "20px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/pricing-card",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Get Starter"
+        },
+        heading={
+          "heading" : "<h3 style='text-align: center;'><span style='color: #ffffff;'>Starter</span></h3>"
+        },
+        list={
+          "list_items" : [ {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          }, {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          }, {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          } ],
+          "use_custom_bullet_points" : true
+        },
+        price={
+          "price" : "<h4 style='text-align: center;'><span style='color: #544fff;'>$50/month</span><span style='color: #544fff;'></span></h4>"
+        },
+        styles={
+          "button" : {
+            "alignment" : {
+              "alignment" : {
+                "horizontal_align" : "CENTER"
+              }
+            },
+            "presets" : {
+              "button_style" : "secondary"
+            },
+            "spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : { },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 30
+                  }
+                }
+              }
+            }
+          },
+          "card" : {
+            "background" : {
+              "color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              }
+            },
+            "border" : {
+              "border" : {
+                "bottom" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "left" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "right" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "top" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                }
+              }
+            },
+            "spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : { },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 40
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 20
+                  }
+                }
+              }
+            }
+          },
+          "heading" : {
+            "background" : {
+              "color" : {
+                "color" : "#544fff",
+                "opacity" : 30
+              }
+            },
+            "spacing" : {
+              "spacing" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 30
+                  }
+                }
+              }
+            }
+          },
+          "list" : {
+            "icons" : {
+              "fill" : {
+                "color" : {
+                  "color" : "#000000",
+                  "opacity" : 100
+                }
+              },
+              "presets" : {
+                "icon_color" : "light"
+              },
+              "size" : {
+                "size" : 15
+              },
+              "spacing" : {
+                "spacing" : {
+                  "padding" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "left" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "right" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 8
+                    }
+                  }
+                }
+              }
+            },
+            "list_items" : {
+              "spacing" : {
+                "between_list_items" : {
+                  "margin" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 20
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        subheading={
+          "subheading" : "<div style='font-size: 16px; text-align: center;'>Here is where you can highlight the features of your product.</div><br><div style='text-align: center;'>&nbsp;</div>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=4,
+    width=4,
+    margin={
+      "mobile" : {
+        "bottom" : "20px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/pricing-card",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Get Business"
+        },
+        heading={
+          "heading" : "<h3 style='text-align: center;'><span style='color: #ffffff;'>Business</span></h3>"
+        },
+        list={
+          "list_items" : [ {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          }, {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          }, {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          }, {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          } ],
+          "use_custom_bullet_points" : true
+        },
+        price={
+          "price" : "<h4 style='text-align: center;'><span style='color: #544fff;'>$100/month</span><span style='color: #544fff;'></span></h4>"
+        },
+        styles={
+          "button" : {
+            "alignment" : {
+              "alignment" : {
+                "horizontal_align" : "CENTER"
+              }
+            },
+            "presets" : {
+              "button_style" : "primary"
+            },
+            "spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : { },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 30
+                  }
+                }
+              }
+            }
+          },
+          "card" : {
+            "background" : {
+              "color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              }
+            },
+            "border" : {
+              "border" : {
+                "bottom" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "left" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "right" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "top" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                }
+              }
+            },
+            "spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : { },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 40
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 20
+                  }
+                }
+              }
+            }
+          },
+          "heading" : {
+            "background" : {
+              "color" : {
+                "color" : "#544fff",
+                "opacity" : 100
+              }
+            },
+            "spacing" : {
+              "spacing" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 30
+                  }
+                }
+              }
+            }
+          },
+          "list" : {
+            "icons" : {
+              "fill" : {
+                "color" : {
+                  "color" : "#000000",
+                  "opacity" : 100
+                }
+              },
+              "presets" : {
+                "icon_color" : "light"
+              },
+              "size" : {
+                "size" : 15
+              },
+              "spacing" : {
+                "spacing" : {
+                  "padding" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "left" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "right" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 8
+                    }
+                  }
+                }
+              }
+            },
+            "list_items" : {
+              "spacing" : {
+                "between_list_items" : {
+                  "margin" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 20
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        subheading={
+          "subheading" : "<div style='font-size: 16px; text-align: center;'>Here is where you can highlight the features of your product.</div><br><div style='text-align: center;'>&nbsp;</div>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=8,
+    width=4
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/pricing-card",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Get Enterprise"
+        },
+        heading={
+          "heading" : "<h3 style='text-align: center;'><span style='color: #ffffff;'>Enterprise</span></h3>"
+        },
+        list={
+          "list_items" : [ {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          }, {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          }, {
+            "content" : "Lorem ipsum dolor&nbsp;",
+            "icon" : {
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            }
+          } ],
+          "use_custom_bullet_points" : true
+        },
+        price={
+          "price" : "<h4 style='text-align: center;'><span style='color: #544fff;'>$125/month</span><span style='color: #544fff;'></span></h4>"
+        },
+        styles={
+          "button" : {
+            "alignment" : {
+              "alignment" : {
+                "horizontal_align" : "CENTER"
+              }
+            },
+            "presets" : {
+              "button_style" : "secondary"
+            },
+            "spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : { },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 30
+                  }
+                }
+              }
+            }
+          },
+          "card" : {
+            "background" : {
+              "color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              }
+            },
+            "border" : {
+              "border" : {
+                "bottom" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "left" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "right" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                },
+                "top" : {
+                  "color" : "#000000",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 3
+                  }
+                }
+              }
+            },
+            "spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : { },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 40
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 20
+                  }
+                }
+              }
+            }
+          },
+          "heading" : {
+            "background" : {
+              "color" : {
+                "color" : "#544fff",
+                "opacity" : 30
+              }
+            },
+            "spacing" : {
+              "spacing" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 30
+                  }
+                }
+              }
+            }
+          },
+          "list" : {
+            "icons" : {
+              "fill" : {
+                "color" : {
+                  "color" : "#000000",
+                  "opacity" : 100
+                }
+              },
+              "presets" : {
+                "icon_color" : "light"
+              },
+              "size" : {
+                "size" : 15
+              },
+              "spacing" : {
+                "spacing" : {
+                  "padding" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "left" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "right" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 8
+                    }
+                  }
+                }
+              }
+            },
+            "list_items" : {
+              "spacing" : {
+                "between_list_items" : {
+                  "margin" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 20
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        subheading={
+          "subheading" : "<div style='font-size: 16px; text-align: center;'>Here is where you can highlight the features of your product.</div><br><div style='text-align: center;'>&nbsp;</div>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

@@ -1,0 +1,697 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pillar
+  screenshotPath: ../images/template-previews/pillar.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter, content_width %}
+
+  {# AREA: Intro #}
+
+  {% dnd_area 'pillar_intro', label='Above the fold', class='pillar-intro' %}
+
+    {# SECTION: Intro #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='accent'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/icon',
+            icon=[
+              {
+                'internal_name': 'Icon',
+                'type': 'code',
+                'code': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.86667 8.35219C3.55429 7.87921 4.46332 7.88293 5.14704 8.36154L8.08016 10.4147L10.1432 5.25722C10.4469 4.4979 11.1823 4 12.0001 4C12.8179 4 13.5533 4.4979 13.8571 5.25722L15.9201 10.4147L18.8532 8.36154C19.5369 7.88293 20.4459 7.87921 21.1336 8.35219C21.8212 8.82516 22.1428 9.6754 21.9404 10.4851L19.9404 18.4851C19.7178 19.3754 18.9179 20 18.0001 20H6.00011C5.08238 20 4.28241 19.3754 4.05983 18.4851L2.05983 10.4851C1.85741 9.6754 2.17904 8.82516 2.86667 8.35219ZM18.0001 18H6.00011L4.00011 10L8.4834 13.1383C8.74739 13.3231 9.11469 13.2136 9.23436 12.9144L12.0001 6L14.7659 12.9144C14.8855 13.2136 15.2528 13.3231 15.5168 13.1383L20.0001 10L18.0001 18Z" fill="currentColor"/></svg>',
+                'color': 'white-accent'
+              }
+            ],
+            settings={
+              'shape': 'disc',
+              'fill': 'fill',
+              'size': 'extra-large',
+              'space': 30
+            },
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Pillar Page',
+            title='Cover all aspects of the topic on this page.',
+            desc='',
+            settings={
+              'color_scheme': 'dark',
+              'title_tag': 'h1',
+              'title_looks_like': '',
+              'remove_title_space': false,
+              'divider': ''
+            },
+            wrapper={
+              'max_width': {
+                'lg': '700',
+                'md': '500',
+                'sm': '400'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': ''
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+
+  {# Nav & Chapters #}
+  
+  <div class="pillar-body">
+
+    {# Nav #}
+
+    {% module 'pillar_nav', path='../modules/pillar-nav', no_wrapper=True %}
+    
+    {# AREA: Chapters #}
+  
+    {% dnd_area 'pillar_content', label='Chapters', class='pillar-content' %}
+
+      {# SECTION: Chapter I #}
+
+      {% dnd_section
+        padding={
+          'default': {
+            'bottom': (vspace_lg / 2)|round(0)
+          },
+          'mobile': {
+            'bottom': vspace_sm
+          }
+        } 
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/rich-text',
+              text='<div><a id="chapter-1" data-hs-anchor="true">&nbsp;</a>&nbsp;</div>'
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/section-intro',
+              overline='Chapter I',
+              title="Introduction",
+              desc='',
+              settings={
+                'title_tag': 'h2'
+              },
+              wrapper={
+                'max_width': {
+                  'lg': '500',
+                },
+                'block_align': {
+                  'lg': ''
+                },
+                'text_align': {
+                  'lg': 'left'
+                }
+              }
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column offset=0, width=9,
+              padding={
+                'mobile': {
+                  'bottom': gutter
+                }
+              }
+            %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of <a href="#" rel="noopener">Alphabet Village</a> and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+                    <p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the <a href="#" rel="noopener">Little Blind Text</a> should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.</p>
+                  ',
+                  wrapper={
+                    'max_width': {
+                      'lg': '770'
+                    }
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column offset=9, width=3 %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <h4>Supporting content</h4>
+                    <ul>
+                      <li><a href="#" rel="noopener" target="_blank">Page about a subtopic</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Another page</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Yet another page</a></li>
+                    </ul>
+                  ',
+                  settings={
+                    'box': 'border',
+                    'unstyle_lists': true
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {# SECTION: Chapter II #}
+
+      {% dnd_section
+        padding={
+          'default': {
+            'top': (vspace_lg / 2)|round(0),
+            'bottom': (vspace_lg / 2)|round(0)
+          },
+          'mobile': {
+            'top': vspace_sm,
+            'bottom': vspace_sm
+          }
+        } 
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/rich-text',
+              text='<div><a id="chapter-2" data-hs-anchor="true">&nbsp;</a>&nbsp;</div>'
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/section-intro',
+              overline='Chapter II',
+              title="How to create amazing Pillar pages",
+              desc='',
+              settings={
+                'title_tag': 'h2'
+              },
+              wrapper={
+                'max_width': {
+                  'lg': '500',
+                },
+                'block_align': {
+                  'lg': ''
+                },
+                'text_align': {
+                  'lg': 'left'
+                }
+              }
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column offset=0, width=9,
+              padding={
+                'mobile': {
+                  'bottom': gutter
+                }
+              }
+            %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of <a href="#" rel="noopener">Alphabet Village</a> and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+                    <p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the <a href="#" rel="noopener">Little Blind Text</a> should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.</p>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of <a href="#" rel="noopener">Alphabet Village</a> and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+                    <p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the <a href="#" rel="noopener">Little Blind Text</a> should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.</p>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of <a href="#" rel="noopener">Alphabet Village</a> and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+                    <p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the <a href="#" rel="noopener">Little Blind Text</a> should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.</p>
+                  ',
+                  wrapper={
+                    'max_width': {
+                      'lg': '770'
+                    }
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column offset=9, width=3 %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <h4>Supporting content</h4>
+                    <ul>
+                      <li><a href="#" rel="noopener" target="_blank">Page about a subtopic</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Another page</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Yet another page</a></li>
+                    </ul>
+                  ',
+                  settings={
+                    'box': 'border',
+                    'unstyle_lists': true
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {# SECTION: Chapter III #}
+
+      {% dnd_section
+        padding={
+          'default': {
+            'top': (vspace_lg / 2)|round(0),
+            'bottom': (vspace_lg / 2)|round(0)
+          },
+          'mobile': {
+            'top': vspace_sm,
+            'bottom': vspace_sm
+          }
+        } 
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/rich-text',
+              text='<div><a id="chapter-3" data-hs-anchor="true">&nbsp;</a>&nbsp;</div>'
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/section-intro',
+              overline='Chapter III',
+              title="How to promote your Pillar page",
+              desc='',
+              settings={
+                'title_tag': 'h2'
+              },
+              wrapper={
+                'max_width': {
+                  'lg': '500',
+                },
+                'block_align': {
+                  'lg': ''
+                },
+                'text_align': {
+                  'lg': 'left'
+                }
+              }
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column offset=0, width=9,
+              padding={
+                'mobile': {
+                  'bottom': gutter
+                }
+              }
+            %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of <a href="#" rel="noopener">Alphabet Village</a> and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+                    <p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the <a href="#" rel="noopener">Little Blind Text</a> should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.</p>
+                  ',
+                  wrapper={
+                    'max_width': {
+                      'lg': '770'
+                    }
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column offset=9, width=3 %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <h4>Supporting content</h4>
+                    <ul>
+                      <li><a href="#" rel="noopener" target="_blank">Page about a subtopic</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Another page</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Yet another page</a></li>
+                    </ul>
+                  ',
+                  settings={
+                    'box': 'border',
+                    'unstyle_lists': true
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {# SECTION: Chapter IV #}
+
+      {% dnd_section
+        padding={
+          'default': {
+            'top': (vspace_lg / 2)|round(0),
+            'bottom': (vspace_lg / 2)|round(0)
+          },
+          'mobile': {
+            'top': vspace_sm,
+            'bottom': vspace_sm
+          }
+        } 
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/rich-text',
+              text='<div><a id="chapter-4" data-hs-anchor="true">&nbsp;</a>&nbsp;</div>'
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/section-intro',
+              overline='Chapter IV',
+              title="How to optimize your Pillar page",
+              desc='',
+              settings={
+                'title_tag': 'h2'
+              },
+              wrapper={
+                'max_width': {
+                  'lg': '500',
+                },
+                'block_align': {
+                  'lg': ''
+                },
+                'text_align': {
+                  'lg': 'left'
+                }
+              }
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column offset=0, width=9,
+              padding={
+                'mobile': {
+                  'bottom': gutter
+                }
+              }
+            %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of <a href="#" rel="noopener">Alphabet Village</a> and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+                    <p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the <a href="#" rel="noopener">Little Blind Text</a> should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.</p>
+                  ',
+                  wrapper={
+                    'max_width': {
+                      'lg': '770'
+                    }
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column offset=9, width=3 %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <h4>Supporting content</h4>
+                    <ul>
+                      <li><a href="#" rel="noopener" target="_blank">Page about a subtopic</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Another page</a></li>
+                      <li><a href="#" rel="noopener" target="_blank">Yet another page</a></li>
+                    </ul>
+                  ',
+                  settings={
+                    'box': 'border',
+                    'unstyle_lists': true
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {# SECTION: Chapter V #}
+
+      {% dnd_section
+        padding={
+          'default': {
+            'top': (vspace_lg / 2)|round(0),
+            'bottom': (vspace_lg / 2)|round(0)
+          },
+          'mobile': {
+            'top': vspace_sm,
+            'bottom': vspace_sm
+          }
+        } 
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/rich-text',
+              text='<div><a id="chapter-5" data-hs-anchor="true">&nbsp;</a>&nbsp;</div>'
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/section-intro',
+              overline='Chapter V',
+              title="Conclusions",
+              desc='',
+              settings={
+                'title_tag': 'h2'
+              },
+              wrapper={
+                'max_width': {
+                  'lg': '500',
+                },
+                'block_align': {
+                  'lg': ''
+                },
+                'text_align': {
+                  'lg': 'left'
+                }
+              }
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column offset=0, width=9,
+              padding={
+                'mobile': {
+                  'bottom': gutter
+                }
+              }
+            %}
+              {% dnd_row %}
+                {% dnd_module path='../modules/rich-text',
+                  text='
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                  ',
+                  wrapper={
+                    'max_width': {
+                      'lg': '770'
+                    }
+                  }
+                %}{% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column offset=9, width=3 %}
+              {% dnd_row %}
+                
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+    {% end_dnd_area %}
+
+  </div>
+
+  {# AREA: Extra #}
+
+  {% dnd_area 'pillar_extra', label='Below chapters', class='pillar-extra' %}
+
+    {# SECTION: Contributors, Sources #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/heading',
+            text='Contributors:',
+            html_tag='h3',
+            looks_like='h4'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/compact-card',
+            items=[
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg',
+                  'alt': 'Describe your image',
+                  'width': 50,
+                  'height': 50,
+                  'loading': 'lazy'
+                },
+                'title': 'Anthony Grower',
+                'desc': 'Topic Specialist',
+                'arrow': false,
+                'color': 'white',
+                'title_tag': 'h4'
+              },
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-b8etd.jpg',
+                  'alt': 'Describe your image',
+                  'width': 50,
+                  'height': 50,
+                  'loading': 'lazy'
+                },
+                'title': 'Kelly Brighton',
+                'desc': 'Topic Specialist',
+                'arrow': false,
+                'color': 'white',
+                'title_tag': 'h4'
+              },
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-team03.jpg',
+                  'alt': 'Describe your image',
+                  'width': 50,
+                  'height': 50,
+                  'loading': 'lazy'
+                },
+                'title': 'Richard Peace',
+                'desc': 'Topic Specialist',
+                'arrow': false,
+                'color': 'white',
+                'title_tag': 'h4'
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '3',
+                'md': '2'
+              },
+              'col_align': 'justify-start'
+            },
+            wrapper={
+              'margin': {
+                'bottom': {
+                  'lg': (gutter * 2)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/heading',
+            text='Sources:',
+            html_tag='h3',
+            looks_like='h4'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='
+              <div>1) <em>Even the all-powerful Pointing:</em> <a href="#" rel="noopener" target="_blank">Almost Unorthographic.</a></div>
+              <div>2) <em>Far far away</em>, behind the word mountains: <a href="#" rel="noopener" target="_blank">www.vokalia-and-consonantia.com</a></div>
+              <div>3) <em>The copy warned</em>: <a href="#" rel="noopener">The Little Blind Text</a></div>
+            ',
+            settings={
+              'text_size': 'small'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Blog articles #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Related Articles',
+            title='From Our Blog',
+            desc='<p>Stay up to date with what is new in our industry, learn more about the upcoming products and events.</p>'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/blog-card'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button',
+                'type': 'link',
+                'text': "Subscribe to Our Blog",
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color': 'accent',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'top': {
+                  'lg': (gutter * 2)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+
+{% endblock body %}

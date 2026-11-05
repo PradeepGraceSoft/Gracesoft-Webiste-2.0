@@ -1,0 +1,62 @@
+<!--
+  templateType: section
+  label: Call to action
+  isAvailableForNewContent: true
+  screenshotPath: ../Images/Page Preview/Call To Action.png
+  description: "Button Module which have oprions for diffrent types of Button's."
+-->
+{% dnd_section,
+  max_width={{ context.max_width or 700 }},
+  padding={
+    "default": {
+      "top": 140,
+      "right": 20,
+      "bottom": 160,
+      "left": 20
+    },
+    "mobile": {
+      "top": 80,
+      "right": 20,
+      "bottom": 80,
+      "left": 20
+    }
+  },
+  vertical_alignment="MIDDLE"
+%}
+  {% dnd_column %}
+    {% dnd_row %}
+       {% dnd_module path='../modules/Buttons', label="Buttons"
+					choose_number_of_cta="double",
+					first_cta_group={
+					choose_type_of_cta:"primary-cta",
+					primary_cta_group:{
+					choose_style_of_cta:"solid-cta"
+					}
+				  },
+					second_cta_group={
+					choose_type_of_cta:"video-cta",
+					video_cta_group:{
+					choose_style_of_cta:"transparent-cta",
+					choose_video_type:"wistia",
+					add_wistia_video_id:"pukozq6xf0",
+					add_video_title_here:"Watch video",
+					add_play_icon_here:{
+					'src': get_asset_url('../Images/Resized Image/Play Icon Black.svg'),
+					'width':auto,
+					'height':auto
+				   }
+					 }
+				   },
+					 styles={
+            'alignment_field':{
+              'horizontal_align' : 'LEFT'
+             },
+				     'single_cta_alignment':{
+						   'horizontal_align' : 'LEFT'
+						 }
+           }
+			%}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

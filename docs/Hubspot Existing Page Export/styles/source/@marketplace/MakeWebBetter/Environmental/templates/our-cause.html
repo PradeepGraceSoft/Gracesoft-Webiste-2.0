@@ -1,0 +1,1357 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Our Cause
+  screenshotPath: ../images/template-previews/our-cause.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--home'
+%}
+{# Banner Section #}
+{% dnd_section
+  full_width=true,
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12,
+    padding={
+      "default" : {
+        "left" : "0px",
+        "right" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/hero",
+        offset=0,
+        width=12,
+        breadcumbs={
+          "current_page_name" : "Our Cause",
+          "parent_data" : [ {
+            "parent_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://makewebbetter-5145589.hs-sites.com/en/homepage",
+                "type" : "EXTERNAL"
+              }
+            },
+            "parent_page_name" : "Home"
+          } ]
+        },
+        primary_cta={
+          "text" : "Donate Now"
+        },
+        secondary_cta={
+          "layout" : "secondary",
+          "text" : "Contact Us"
+        },
+        select_action="breadcumb",
+        style_1={
+          "banner_content_alignment" : { },
+          "image" : {
+            "alt" : "banner",
+            "height" : 556,
+            "max_height" : 556,
+            "max_width" : 1366,
+            "src" : get_asset_url('../images/multipurpose/banner-two.png'),
+            "width" : 1366
+          },
+          "max_width" : {
+            "enable" : true,
+            "value" : 800
+          },
+          "overlay" : {
+            "enable_banner_overlay" : true,
+            "overlay_color" : {
+              "color" : "#000000",
+              "opacity" : 40
+            }
+          },
+          "spacing" : {
+            "desktop" : {
+              "spacing" : {
+                "css" : "padding-top: 150px;padding-right: 0px;padding-bottom: 150px;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;",
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 80
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 80
+                  }
+                }
+              }
+            },
+            "mobile" : {
+              "spacing_mobile_" : {
+                "css" : "padding-top: 50px;padding-right: 0px;padding-bottom: 50px;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;",
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 50
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 50
+                  }
+                }
+              }
+            }
+          }
+        }
+      %}
+        {% module_attribute "content" %}
+          <h2><span style="color: #a3da8d;"><strong>Who</strong></span> <span style="color: #ffffff;">We Are</span></h2>
+          <h1><span style="color: #ffffff;"><span style="color: #ffa17a;">What</span> We Do</span></h1>
+          <p><span style="color: #ffffff;">Leaders across the country are tackling the most challenging and pressing issues of our time. Earth Let us all join to deal with unprecedented threats to Earth's life.</span></p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Story Section #}
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "80px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        enable_mini_title=true,
+        mini_title="WHO WE ARE",
+        style={
+          "title_content" : {
+            "mini_title" : {
+              "spacing" : 2
+            }
+          }
+        },
+        title_content={
+          "content" : "<h2>Our Story</h2><p>Realizing the risk that environmental threats pose to humankind and the planet itself, we took this step to save ourselves and the planet. We reached our green goals by starting with a minimum number of volunteers, and now we are a massive family of volunteers.</p>",
+          "enable_mini_title" : true,
+          "mini_title" : "WHO WE ARE"
+        }
+      %}
+        {% module_attribute "content" %}
+          <h2>Our Story</h2>
+          <p>Realizing the risk that environmental threats pose to humankind and the planet itself, we took this step to save ourselves and the planet. We reached our green goals by starting with a minimum number of volunteers, and now we are a massive family of volunteers.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 60,
+          "height_mobile_" : 30,
+          "height_tablet_" : 40
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-box",
+        offset=0,
+        width=12,
+        column_cout_choice={
+          "column_count" : "one_column"
+        },
+        icon_box_repeater=[ {
+          "description_content" : "<p>Identifying all pertinent issues and factors of issues.</p>",
+          "enable_text" : true,
+          "enable_title" : false,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Cube",
+              "type" : "SOLID",
+              "unicode" : "f1b2"
+            },
+            "icon_image" : {
+              "alt" : "Cube",
+              "height" : 32,
+              "loading" : "lazy",
+              "max_height" : 32,
+              "max_width" : 32,
+              "size_type" : "exact",
+              "src" : get_asset_url('../images/icons/cube.svg'),
+              "width" : 32
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : ""
+        }, {
+          "description_content" : "<p>Facilitating meaningful public participation and review.</p>",
+          "enable_text" : true,
+          "enable_title" : false,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Cube",
+              "type" : "SOLID",
+              "unicode" : "f1b2"
+            },
+            "icon_image" : {
+              "alt" : "Cube",
+              "height" : 32,
+              "loading" : "lazy",
+              "max_height" : 32,
+              "max_width" : 32,
+              "size_type" : "auto",
+              "src" : get_asset_url('../images/icons/cube.svg'),
+              "width" : 32
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : ""
+        }, {
+          "description_content" : "<p>Facilitating meaningful public participation and review.</p>",
+          "enable_text" : true,
+          "enable_title" : false,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Cube",
+              "type" : "SOLID",
+              "unicode" : "f1b2"
+            },
+            "icon_image" : {
+              "alt" : "Cube",
+              "height" : 32,
+              "loading" : "lazy",
+              "max_height" : 32,
+              "max_width" : 32,
+              "size_type" : "auto",
+              "src" : get_asset_url('../images/icons/cube.svg'),
+              "width" : 32
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : ""
+        } ],
+        icon_image_selection="icon",
+        layout_choice_group={
+          "icon_box_layout" : "compact_layout"
+        },
+        style={
+          "box_inner_spacing" : {
+            "desktop_spacing" : {
+              "horizontal_spacing" : 0,
+              "spacing_field" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 10
+                  },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 10
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 10
+                  }
+                }
+              },
+              "vertical_spacing" : 0
+            },
+            "mobile_spacing" : {
+              "horizontal_spacing" : 0,
+              "spacing" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 10
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 10
+                  }
+                }
+              },
+              "vertical_spacing" : 0
+            }
+          },
+          "colors" : {
+            "box_background_color" : {
+              "color" : "#ffffff",
+              "opacity" : 100
+            },
+            "content_color" : {
+              "color" : "#0e0e0e",
+              "opacity" : 100
+            }
+          },
+          "enable_box_shadow" : false,
+          "overwrite" : true
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_mobile_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/image",
+        offset=0,
+        width=12,
+        image={
+          "image" : {
+            "alt" : "Flower Pot",
+            "height" : 591,
+            "loading" : "lazy",
+            "max_height" : 591,
+            "max_width" : 459,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/flower-pot.png'),
+            "width" : 459
+          }
+        },
+        style={
+          "image_alignment" : {
+            "alignment_desktop" : "right"
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Two Column Video and Content Section #}
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/video",
+        offset=0,
+        width=12,
+        image={
+          "alt" : "Video Poster",
+          "height" : 640,
+          "loading" : "lazy",
+          "max_height" : 640,
+          "max_width" : 780,
+          "size_type" : "auto_custom_max",
+          "src" : get_asset_url('../images/multipurpose/video-poster-two.png'),
+          "width" : 780
+        },
+        style={
+          "overlay" : {
+            "enable_overlay" : false
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        enable_mini_title=true,
+        mini_title="HOW WE WORK",
+        title_content={
+          "content" : "<h3>Sustainability &amp; Climate Change Concerns</h3><p>Scoping identifies the issues that will be most important during the Environment Impact Assessment and eliminates those that will be of little concern.</p>",
+          "enable_mini_title" : true,
+          "mini_title" : "HOW WE WORK"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 30,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/button",
+        offset=0,
+        width=12,
+        button={
+          "text" : "Get Started",
+          "type" : "outline"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Misson Section #}
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        enable_mini_title=true,
+        mini_title="OUR MISSION",
+        style={
+          "title_content" : {
+            "alignment" : {
+              "alignment_desktop" : "center"
+            },
+            "max_width" : {
+              "enable_max_width" : true
+            }
+          }
+        },
+        title_content={
+          "content" : "<h2>Our Green Wonders</h2>",
+          "enable_mini_title" : true,
+          "mini_title" : "OUR MISSION"
+        }
+      %}
+        {% module_attribute "content" %}
+          <h2>Our Green Wonders</h2>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 30,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/feature-card",
+        offset=0,
+        width=12,
+        card=[ {
+          "content" : {
+            "button" : {
+              "button_layout" : "filled",
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Collaborating with local partners to implement community-owned clean drinking water projects in remote communities.</p>",
+            "image" : {
+              "alt" : "air",
+              "height" : 215,
+              "loading" : "lazy",
+              "max_height" : 215,
+              "max_width" : 380,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/card-one.png'),
+              "width" : 380
+            },
+            "sub_title" : "Pollution",
+            "title" : "Carbon Monoxide Released Indicates Massive Fossil Fuel Burning."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        }, {
+          "content" : {
+            "button" : {
+              "button_layout" : "filled",
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Collaborating with local partners to implement community-owned clean drinking water projects in remote communities.</p>",
+            "image" : {
+              "alt" : "defo",
+              "height" : 215,
+              "loading" : "lazy",
+              "max_height" : 215,
+              "max_width" : 380,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/card-two.png'),
+              "width" : 380
+            },
+            "sub_title" : "Deforestation ",
+            "title" : "Burning stubble & farm residue contributes significantly to wildfires."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        }, {
+          "content" : {
+            "button" : {
+              "button_layout" : "filled",
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Collaborating with local partners to implement community-owned clean drinking water projects in remote communities.</p>",
+            "image" : {
+              "alt" : "ice",
+              "height" : 215,
+              "loading" : "lazy",
+              "max_height" : 215,
+              "max_width" : 380,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/card-three.png'),
+              "width" : 380
+            },
+            "sub_title" : "Population",
+            "title" : "How Harmful are Volatile Organic Compounds for  Us?"
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        } ],
+        layout="card"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 50,
+          "height_mobile_" : 30,
+          "height_tablet_" : 40
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/button",
+        offset=0,
+        width=12,
+        style={
+          "button_alignment" : {
+            "desktop" : "center"
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Team Section #}
+{% dnd_section
+  background_color="rgba(20, 99, 86, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/team",
+        offset=0,
+        width=12,
+        team_list=[ {
+          "name_profile" : "Crystal Logan",
+          "profile" : "Project Management Specialist",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 277,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/logan.png'),
+            "width" : 277
+          }
+        }, {
+          "name_profile" : "Esther Howard",
+          "profile" : "Frontend Developer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 278,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/howard.png'),
+            "width" : 278
+          }
+        }, {
+          "name_profile" : "Ted Horton",
+          "profile" : "Gaming Director",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 300,
+            "loading" : "lazy",
+            "max_height" : 300,
+            "max_width" : 228,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/horton.png'),
+            "width" : 228
+          }
+        }, {
+          "name_profile" : "Esther Howard",
+          "profile" : "Frontend Developer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 278,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/howard.png'),
+            "width" : 278
+          }
+        } ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Get in Touch Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        style={
+          "title_content" : {
+            "alignment" : {
+              "alignment_desktop" : "center"
+            },
+            "max_width" : {
+              "enable_max_width" : true,
+              "value" : 600
+            }
+          }
+        },
+        title_content={
+          "content" : "<h3>Interested? Let's get in touch!</h3><p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "background_color" : {
+            "color" : "#fafafa",
+            "opacity" : 100
+          },
+          "height_desktop_" : 40,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/button",
+        offset=0,
+        width=12,
+        style={
+          "button_alignment" : {
+            "desktop" : "center"
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Counter Section #}
+{% dnd_section
+  vertical_alignment=MIDDLE,
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        title_content={
+          "content" : "<h4>Some Compulsive Facts</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum neque ligula elementum convallis cursus. Nunc dignissim mi pellentesque mattis posuere faucibus.</p>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_mobile_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/counter",
+        offset=0,
+        width=12,
+        column_choice="two_column",
+        counter=[ {
+          "counter_text" : "Trees Planted",
+          "counter_unit" : "+",
+          "counter_value" : "5898",
+          "enable_counter_unit" : false,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "planted",
+            "height" : 80,
+            "loading" : "lazy",
+            "max_height" : 80,
+            "max_width" : 80,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/tree-without-circle.png'),
+            "width" : 80
+          }
+        }, {
+          "counter_text" : "OUR PARTNERS",
+          "counter_unit" : "+",
+          "counter_value" : "21",
+          "enable_counter_unit" : true,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "partner-outline",
+            "height" : 80,
+            "loading" : "lazy",
+            "max_height" : 81,
+            "max_width" : 119,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/partner-without-circle.png'),
+            "width" : 118
+          }
+        }, {
+          "counter_text" : "Changing Life Since",
+          "counter_unit" : "+",
+          "counter_value" : "1994",
+          "enable_counter_unit" : false,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "people-outline",
+            "height" : 80,
+            "loading" : "lazy",
+            "max_height" : 80,
+            "max_width" : 110,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/life-without-circle.png'),
+            "width" : 110
+          }
+        }, {
+          "counter_text" : "VOLUNTEERS",
+          "counter_unit" : "+",
+          "counter_value" : "5898",
+          "enable_counter_unit" : false,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "hand-outline",
+            "height" : 80,
+            "loading" : "lazy",
+            "max_height" : 80,
+            "max_width" : 81,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/volunteer-without-circle.png'),
+            "width" : 81
+          }
+        } ],
+        style={
+          "content_alignment" : {
+            "alignment_desktop" : "right"
+          },
+          "counter" : {
+            "counter_text" : {
+              "desktop" : {
+                "font" : {
+                  "color" : "#0e0e0e",
+                  "fallback" : "sans-serif",
+                  "font" : "Roboto",
+                  "font_set" : "GOOGLE",
+                  "size" : 20,
+                  "styles" : { },
+                  "variant" : "700"
+                }
+              }
+            },
+            "counter_value" : {
+              "desktop" : {
+                "font" : {
+                  "color" : "#146356",
+                  "fallback" : "sans-serif",
+                  "font" : "Manrope",
+                  "font_set" : "GOOGLE",
+                  "size" : 56,
+                  "styles" : { },
+                  "variant" : "700"
+                }
+              }
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Review Section #}
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        style={
+          "title_content" : {
+            "alignment" : {
+              "alignment_desktop" : "center"
+            }
+          }
+        },
+        title_content={
+          "content" : "<h2>Word Around</h2>",
+          "enable_mini_title" : true,
+          "mini_title" : "WHAT THEY SAY"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 40,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/review",
+        offset=0,
+        width=12,
+        review=[ {
+          "name_review" : "Jack McKinney",
+          "profile" : "Investor",
+          "profile_image" : {
+            "alt" : "jack",
+            "height" : 56,
+            "loading" : "lazy",
+            "max_height" : 56,
+            "max_width" : 56,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/jack.png'),
+            "width" : 56
+          },
+          "review_text" : "<p>“In the eighteenth century the German philosopher Immanuel Kant developed a theory of knowledge in which knowledge about space can be both a priori and synthetic.”</p>"
+        }, {
+          "name_review" : "John Doe",
+          "profile" : "Marvin McKinney",
+          "profile_image" : {
+            "alt" : "profile-3",
+            "height" : 51,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 49,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/goldie.png'),
+            "width" : 50
+          },
+          "review_text" : "<p>“As quantum mechanics developed further, it turned out that there were a large number of things which were not directly encompassed in the Schrödinger equation—such as the spin of the electron, and various relativistic phenomena. The mathematics that is involved is particularly simple, involving simple algebraic operations and no differential equations or at most only very simple ones. But they are, we assure you, by all odds the simplest parts—in a deep sense of the word—as well as the most basic parts. This is frankly a pedagogical experiment; it has never been done before, as far as we know.”</p>"
+        }, {
+          "name_review" : "Sarah Joses",
+          "profile" : "Investor",
+          "profile_image" : {
+            "alt" : "karen",
+            "height" : 51,
+            "loading" : "lazy",
+            "max_height" : 51,
+            "max_width" : 50,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/karen.png'),
+            "width" : 50
+          },
+          "review_text" : "<p>“As quantum mechanics developed further, it turned out that there were a large number of things which were not directly encompassed in the Schrödinger equation—such as the spin of the electron, and various relativistic phenomena. The mathematics that is involved is particularly simple, involving simple algebraic operations and no differential equations or at most only very simple ones.”</p>"
+        }, {
+          "name_review" : "Jack McKinney",
+          "profile" : "Investor",
+          "profile_image" : {
+            "alt" : "charles",
+            "height" : 51,
+            "loading" : "lazy",
+            "max_height" : 51,
+            "max_width" : 50,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/charles.png'),
+            "width" : 50
+          },
+          "review_text" : "<p>“But they are, we assure you, by all odds the simplest parts—in a deep sense of the word—as well as the most basic parts. This is frankly a pedagogical experiment; it has never been done before, as far as we know.The mathematics that is involved is particularly simple, involving simple algebraic operations and no differential equations or at most only very simple ones.”</p>"
+        } ],
+        select_layout="masonry"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Video and Form Section #}
+{% dnd_section
+  vertical_alignment=MIDDLE,
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        title_content={
+          "content" : "<h3>Interested? Let's get in touch!</h3><p>We are bringing worldwide concerns and solutions fresh to your emails. As opposed to what others do, we make our contributions timely.</p>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/form",
+        offset=0,
+        width=12,
+        style={
+          "form_alignment" : {
+            "max_width" : 480
+          },
+          "input_field" : {
+            "border_color" : {
+              "color" : "#B9D1CD",
+              "opacity" : 100
+            },
+            "enable" : true
+          },
+          "spacing" : {
+            "desktop_spacing" : {
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 20
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 10
+                }
+              }
+            },
+            "mobile_spacing" : {
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 15
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 10
+                }
+              }
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_mobile_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/video",
+        offset=0,
+        width=12,
+        image={
+          "alt" : "video-poster",
+          "height" : 525,
+          "loading" : "lazy",
+          "max_height" : 525,
+          "max_width" : 587,
+          "size_type" : "auto_custom_max",
+          "src" : get_asset_url('../images/multipurpose/video-poster.png'),
+          "width" : 587
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+
+
+{% end_dnd_area %}
+{% endblock body %}

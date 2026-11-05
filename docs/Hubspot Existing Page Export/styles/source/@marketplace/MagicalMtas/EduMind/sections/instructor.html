@@ -1,0 +1,118 @@
+<!--
+  templateType: section
+  label: Instructor
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/instructor.png
+  description: "Instructor section separated in three columns."
+-->
+{% dnd_section max_width=1200, class="instructor-area" %} 
+
+  {% dnd_column %}
+
+    {% dnd_row %} 
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module "module_16675429389378" path="../modules/Section Title", label="Section Title" 
+            layout = 'without-excerpt',
+            section_subtitle = '<span>Instructors</span>',
+            section_title = '<h2>Course Instructors</h2>',
+            section_shape = { 
+              'alt': 'Section Shape Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/svg/section-title-shape.svg')  
+            }
+          %}
+          {% end_dnd_module %} 
+        {% end_dnd_row %} 
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_column width=3, offset=0 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754430141518" path="../modules/Instructor", label="Instructor" 
+            instructor_image = { 
+              'alt': 'Instructor Image',    
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/instructor/instructor-1.png')  
+            },
+            instructor_title = '<h3>Jane Seymour</h3>',
+            instructor_designation = '<span>Teacher</span>'
+          %}
+        {% end_dnd_module %} 
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=3, offset=3 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754430141518" path="../modules/Instructor", label="Instructor" 
+            instructor_image = { 
+              'alt': 'Instructor Image',    
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/instructor/instructor-2.png')  
+            },
+            instructor_title = '<h3>Edward Norton</h3>',
+            instructor_designation = '<span>Teacher</span>'
+          %}
+        {% end_dnd_module %} 
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=3, offset=6 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754430141518" path="../modules/Instructor", label="Instructor" 
+            instructor_image = { 
+              'alt': 'Instructor Image',    
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/instructor/instructor-3.png')  
+            },
+            instructor_title = '<h3>Penelope Cruz</h3>',
+            instructor_designation = '<span>Teacher</span>'
+          %}
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=3, offset=9 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754430141518" path="../modules/Instructor", label="Instructor" 
+            instructor_image = { 
+              'alt': 'Instructor Image',    
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/instructor/instructor-4.png')  
+            },
+            instructor_title = '<h3>Ronald Rechards</h3>',
+            instructor_designation = '<span>Teacher</span>'
+          %}
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+    {% end_dnd_row %} 
+
+  {% end_dnd_column %}
+{% end_dnd_section %}

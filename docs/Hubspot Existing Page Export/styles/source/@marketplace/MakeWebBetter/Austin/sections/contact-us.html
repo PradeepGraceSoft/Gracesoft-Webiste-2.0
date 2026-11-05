@@ -1,0 +1,98 @@
+<!--
+templateType: section
+label: Contact Us
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/contact-us.png
+description: "Two column with content on left side and form on right side."
+-->
+
+{% dnd_section 
+  vertical_alignment='MIDDLE',
+  class="au-tab-full-width"
+%}
+{% dnd_column 
+   offset=0,
+   width=7 %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>We Are Always There For You</h2><p>Get full assistance. Never stay in a doubt. Our team is always ready to resolve your queries. Never delay to contact or chat with us.</p>",
+        style_1= {
+          'max_width': {enable: true, value: 500}
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+
+{% dnd_column 
+  offset=7,
+  width=5 %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/form'
+        "form_title" = Contact Us,
+        "enable_form_box_shadow" = True,
+         style={
+          'form_background_color':{ enable: true },
+          'form_max_width': { enable: true, form_max_width: 475 },
+           'form_spacing': {
+            'desktop': {
+              'spacing': {
+                      'padding': {
+                        'top': {
+                          'value': 30,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 50,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+              },
+              'mobile': {
+                'spacing_mobile_': {
+                        'padding': {
+                          'top': {
+                            'value': 30,
+                            'units': 'px'
+                          },
+                          'bottom': {
+                            'value': 30,
+                            'units': 'px'
+                          },
+                          'left': {
+                            'value': 15,
+                            'units': 'px'
+                          },
+                          'right': {
+                            'value': 15,
+                            'units': 'px'
+                          }
+                        }
+                    }
+              }
+        },
+        }
+        %}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "multiple_field_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+
+{% end_dnd_column %}
+
+{% end_dnd_section %}

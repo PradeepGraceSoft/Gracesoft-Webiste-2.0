@@ -1,0 +1,45 @@
+<!--
+  templateType: section
+  label: Hero - Overhanging Pricing
+  description: "A full width hero with just text and pricing boxes overhanging it."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/hero-overhang-pricing.png
+-->
+
+{% dnd_section
+  padding={'top': 120, 'bottom': 60},
+  background_image={
+    "backgroundPosition": "MIDDLE_CENTER",
+    "backgroundSize": "cover",
+    "imageUrl": get_asset_url('../../assets/images/gradient-bg.png')
+} %}
+  {% dnd_column %}
+    {% dnd_row padding={'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text",
+        eyebrow="",
+        heading="Vertical Pricing",
+        heading_level="h1",
+        subheading="Choose a plan that's right for you."
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_module path="../modules/Pricing Boxes"
+        styles={
+          "module": {
+            "add_overlap": {
+              "overlap":"below"
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

@@ -1,0 +1,49 @@
+<!--
+  templateType: section
+  label: Feature
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/feature.png
+  description: "Feature section separated in three columns."
+-->
+
+{# Feature Section Start #}
+  {% dnd_section max_width=1200, class="feature-area" %}
+    {% dnd_module "module_166920306334546" path="../modules/Feature", label="Feature"  
+       extra_class = '',
+       feature_item = [
+            {
+              'feature_image' : { 
+                'alt': 'Feature Image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/feature/feature-1.png') 
+              },
+              'feature_title' : '<h3>Business Analysis</h3>',
+              'feature_excerpt' : '<p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed.</p>'
+            },
+            {
+              'feature_image' : { 
+                'alt': 'Feature Image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/feature/feature-2.png') 
+              },
+              'feature_title' : '<h3>Investment Trading</h3>',
+              'feature_excerpt' : '<p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed.</p>'
+            },
+            {
+              'feature_image' : { 
+                'alt': 'Feature Image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/feature/feature-3.png') 
+              },
+              'feature_title' : '<h3>Target Marketing</h3>',
+              'feature_excerpt' : '<p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed.</p>'
+            }
+        ]
+     
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+{# Hero Slider Section End #}
+		
+		
+	

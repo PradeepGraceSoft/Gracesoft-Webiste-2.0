@@ -1,0 +1,2 @@
+const page_reload_btn=document.querySelector(".btn--500-error-reload");page_reload_btn.addEventListener("click",function(){window.location.reload()});
+//# sourceURL=https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/hub_generated/template_assets/1/186085657924/1792753259811/template_system-500-error.js

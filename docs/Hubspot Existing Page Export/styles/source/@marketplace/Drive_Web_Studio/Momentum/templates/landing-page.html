@@ -1,0 +1,188 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing Page
+  screenshotPath: ../images/template-previews/landing-page.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+  {% dnd_area 'dnd_area' label='Main section' %}
+
+  {% dnd_section
+    background_image={
+      "background_position" : "MIDDLE_CENTER",
+      "background_size" : "cover",
+      "image_url" : get_asset_url('../images/bg-top-right-corner-blob.png')
+    },
+    padding={
+      "default" : {
+        "bottom" : "40px",
+        "top" : "100px"
+      },
+      "mobile" : {
+        "bottom" : "60px",
+        "top" : "60px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=6
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <div style="text-transform: uppercase; letter-spacing: 3px; text-align: left;"><strong>Landing Page Template</strong></div>
+            <h1 style="text-align: left; font-size: 48px;">This is a landing page template</h1>
+            <div style="font-size: 20px; line-height: 1.5; text-align: left;">Momentum is a website theme for tech companies, startups and product-focused businesses who want to build a website, landing pages and blog on HubSpot without code.</div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/list",
+          offset=0,
+          width=12,
+          styles={
+            "icons" : {
+              "fill" : {
+                "color" : {
+                  "color" : "#000000",
+                  "opacity" : 100
+                }
+              },
+              "presets" : {
+                "icon_color" : "light"
+              }
+            }
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column
+      offset=6,
+      width=6,
+      padding={
+        "default" : {
+          "left" : "40px"
+        },
+        "mobile" : {
+          "left" : "0px"
+        }
+      }
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/form",
+          offset=0,
+          width=12
+
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section
+    padding={
+      "default" : {
+        "bottom" : "30px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=12
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/logo-slider",
+          offset=0,
+          width=12
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section
+    padding={
+      "default" : {
+        "bottom" : "100px",
+        "top" : "100px"
+      },
+      "mobile" : {
+        "bottom" : "40px",
+        "top" : "0px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=6,
+      padding={
+        "default" : {
+          "right" : "40px"
+        },
+        "mobile" : {
+          "bottom" : "60px",
+          "right" : "0px"
+        }
+      }
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/image-plus",
+          offset=0,
+          width=12,
+          image_field={
+            "alt" : "626a90bd762367402fd2f9ea_Feature-p-500",
+            "height" : 500,
+            "loading" : "lazy",
+            "max_height" : 500,
+            "max_width" : 500,
+            "size_type" : "auto",
+            "src" : "../images/img-stats.png",
+            "width" : 500
+          },
+          styles={
+            "animation" : {
+              "animation" : "fade_right"
+            },
+            "shadow" : {
+              "shadow" : "no_shadow"
+            }
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column
+      offset=6,
+      width=6
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <div style="text-transform: uppercase; letter-spacing: 3px; text-align: left;"><strong>HubSPot CMS</strong></div>
+            <h2>Build your company website using drag-and-drop.</h2>
+            <p style="font-size: 18px; line-height: 1.5;">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+            <p style="font-size: 18px; line-height: 1.5;">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

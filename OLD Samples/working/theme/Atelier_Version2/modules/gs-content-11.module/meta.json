@@ -1,0 +1,8 @@
+{
+  "label": "FAQ",
+  "is_available_for_new_content": true,
+  "global": false,
+  "content_types": [
+    "SITE_PAGE"
+  ]
+}

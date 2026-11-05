@@ -1,0 +1,361 @@
+{# ==========================================================================
+   Color
+   ========================================================================== #}
+
+{% if theme.color.accent_color == "gradient" %}
+  {% set accent = theme.color.gradient_fallback.color %}
+  {% set accent_bg = 'linear-gradient(111.02deg, '~ theme.color.gradient_start.color ~' 0%, '~ theme.color.gradient_end.color ~' 100%)' %}
+  {% set accent_start = theme.color.gradient_start.color %}
+  {% set accent_end = theme.color.gradient_end.color %}
+  {% set links_color = theme.color.links_if_accent_gradient.color %}
+  {% set links_hover_color = theme.color.links_hover_if_accent_gradient.color %}
+{% else %}
+  {% set accent = theme.color.accent.color %}
+  {% set accent_bg = accent %}
+  {% set accent_start = accent %}
+  {% set accent_end = accent %}
+  {% set links_color = theme.color.links_if_accent_solid.color %}
+  {% set links_hover_color = theme.color.links_hover_if_accent_solid.color %}
+{% endif %}
+
+{% set dark = theme.color.dark.color %}
+{% set light = theme.color.light.color %}
+{% set borders_color = theme.color.borders.color %}
+{% set text_color = theme.color.text.color %}
+{% set headings_color = theme.color.headings.color %}
+
+{% set white = "#fff" %}
+{% set white_text = "rgba(255, 255, 255, {{ (theme.color.white_text_opacity / 100)|round(2) }})" %}
+{% set white_text_hex = "#ffffff" %}
+{% set white_text_opacity = (theme.color.white_text_opacity / 100)|round(2) %}
+
+{% set white_borders = "rgba(255, 255, 255, .2)" %}
+{% set white_borders_hex = "#ffffff" %}
+{% set white_borders_opacity = "0.2" %}
+
+{% set white_bg = "rgba(255, 255, 255, .1)" %}
+{% set white_bg_hex = "#ffffff" %}
+{% set white_bg_opacity = "0.1" %}
+
+{# ==========================================================================
+   Typography
+   ========================================================================== #}
+
+{# Fonts
+   ========================================================================== #}
+
+{% macro set_font_family(font_field) %}
+  {% if font_field.font_set == 'GOOGLE' and font_field.fallback %}
+    {{ "'" ~ font_field.font ~ "', " ~ font_field.fallback }}
+  {% else %}
+    {{ font_field.font }}
+  {% endif %}
+{% endmacro %}
+
+{% if theme.typography.fonts.external_fonts %}
+  {% set text_font_family = 'var(--text-font-family)' %}
+  {% set text_font_weight = 'var(--text-font-weight)' %}
+  {% set text_font_style = 'var(--text-font-style)' %}
+  {% set strong_font_family = 'var(--strong-font-family)' %}
+  {% set strong_font_weight = 'var(--strong-font-weight)' %}
+  {% set strong_font_style = 'var(--strong-font-style)' %}
+
+  {% set headings_font_family = 'var(--headings-font-family)' %}
+  {% set headings_font_weight = 'var(--headings-font-weight)' %}
+  {% set headings_font_style = 'var(--headings-font-style)' %}
+  {% set headings_strong_font_family = 'var(--headings-strong-font-family)' %}
+  {% set headings_strong_font_weight = 'var(--headings-strong-font-weight)' %}
+  {% set headings_strong_font_style = 'var(--headings-strong-font-style)' %}
+
+  {% set ui_font_family = 'var(--ui-font-family)' %}
+  {% set ui_font_weight = 'var(--ui-font-weight)' %}
+  {% set ui_font_style = 'var(--ui-font-style)' %}
+  {% set ui_strong_font_family = 'var(--ui-strong-font-family)' %}
+  {% set ui_strong_font_weight = 'var(--ui-strong-font-weight)' %}
+  {% set ui_strong_font_style = 'var(--ui-strong-font-style)' %}
+{% else %}
+  {% set text_font_family = set_font_family(theme.typography.fonts.text_font) %}
+  {% set text_font_weight = theme.typography.fonts.text_font.styles["font-weight"] %}
+  {% set text_font_style = theme.typography.fonts.text_font.styles["font-style"] %}
+  {% set strong_font_family = set_font_family(theme.typography.fonts.strong_font) %}
+  {% set strong_font_weight = theme.typography.fonts.strong_font.styles["font-weight"] %}
+  {% set strong_font_style = theme.typography.fonts.strong_font.styles["font-style"] %}
+  
+  {% set headings_font_family = set_font_family(theme.typography.fonts.headings_font) %}
+  {% set headings_font_weight = theme.typography.fonts.headings_font.styles["font-weight"] %}
+  {% set headings_font_style = theme.typography.fonts.headings_font.styles["font-style"] %}
+  {% set headings_strong_font_family = set_font_family(theme.typography.fonts.headings_strong_font) %}
+  {% set headings_strong_font_weight = theme.typography.fonts.headings_strong_font.styles["font-weight"] %}
+  {% set headings_strong_font_style = theme.typography.fonts.headings_strong_font.styles["font-style"] %}
+  
+  {% set ui_font_family = set_font_family(theme.typography.fonts.ui_font) %}
+  {% set ui_font_weight = theme.typography.fonts.ui_font.styles["font-weight"] %}
+  {% set ui_font_style = theme.typography.fonts.ui_font.styles["font-style"] %}
+  {% set ui_strong_font_family = set_font_family(theme.typography.fonts.ui_strong_font) %}
+  {% set ui_strong_font_weight = theme.typography.fonts.ui_strong_font.styles["font-weight"] %}
+  {% set ui_strong_font_style = theme.typography.fonts.ui_strong_font.styles["font-style"] %}
+{% endif %}
+
+{% set ui_height = 1.28 %}
+
+{# Text
+   ========================================================================== #}
+
+{% set text_size_lg = ((theme.typography.text.size.lg / 16) * 100)|round(2) %}
+{% set text_size_md = ((theme.typography.text.size.md / 16) * 100)|round(2) %}
+{% set text_size_sm = ((theme.typography.text.size.sm / 16) * 100)|round(2) %}
+{% set text_height = (theme.typography.text.height / 100)|round(2) %}
+{% set large_text = (theme.typography.text.large_text / 100)|round(2) %}
+{% set small_text = (theme.typography.text.small_text / 100)|round(2) %}
+
+{# Headings
+   ========================================================================== #}
+
+{% set h1_font_family = headings_font_family %}
+{% set h1_font_weight = headings_font_weight %}
+{% set h1_font_style = headings_font_style %}
+{% set h1_size_lg = (theme.typography.headings.h1.size.lg / theme.typography.text.size.lg)|round(2) %}
+{% set h1_size_md = (theme.typography.headings.h1.size.md / theme.typography.text.size.md)|round(2) %}
+{% set h1_size_sm = (theme.typography.headings.h1.size.sm / theme.typography.text.size.sm)|round(2) %}
+{% set h1_height = (theme.typography.headings.h1.height / 100)|round(2) %}
+
+{% set h2_font_family = headings_font_family %}
+{% set h2_font_weight = headings_font_weight %}
+{% set h2_font_style = headings_font_style %}
+{% set h2_size_lg = (theme.typography.headings.h2.size.lg / theme.typography.text.size.lg)|round(2) %}
+{% set h2_size_md = (theme.typography.headings.h2.size.md / theme.typography.text.size.md)|round(2) %}
+{% set h2_size_sm = (theme.typography.headings.h2.size.sm / theme.typography.text.size.sm)|round(2) %}
+{% set h2_height = (theme.typography.headings.h2.height / 100)|round(2) %}
+
+{% set h3_font_family = headings_font_family %}
+{% set h3_font_weight = headings_font_weight %}
+{% set h3_font_style = headings_font_style %}
+{% set h3_size_lg = (theme.typography.headings.h3.size.lg / theme.typography.text.size.lg)|round(2) %}
+{% set h3_size_md = (theme.typography.headings.h3.size.md / theme.typography.text.size.md)|round(2) %}
+{% set h3_size_sm = (theme.typography.headings.h3.size.sm / theme.typography.text.size.sm)|round(2) %}
+{% set h3_height = (theme.typography.headings.h3.height / 100)|round(2) %}
+
+{% set h4_font_family = headings_font_family %}
+{% set h4_font_weight = headings_font_weight %}
+{% set h4_font_style = headings_font_style %}
+{% set h4_size_lg = (theme.typography.headings.h4.size.lg / theme.typography.text.size.lg)|round(2) %}
+{% set h4_size_md = (theme.typography.headings.h4.size.md / theme.typography.text.size.md)|round(2) %}
+{% set h4_size_sm = (theme.typography.headings.h4.size.sm / theme.typography.text.size.sm)|round(2) %}
+{% set h4_height = (theme.typography.headings.h4.height / 100)|round(2) %}
+
+{% set h5_font_family = headings_font_family %}
+{% set h5_font_weight = headings_font_weight %}
+{% set h5_font_style = headings_font_style %}
+{% set h5_size_lg = (theme.typography.headings.h5.size.lg / theme.typography.text.size.lg)|round(2) %}
+{% set h5_size_md = (theme.typography.headings.h5.size.md / theme.typography.text.size.md)|round(2) %}
+{% set h5_size_sm = (theme.typography.headings.h5.size.sm / theme.typography.text.size.sm)|round(2) %}
+{% set h5_height = (theme.typography.headings.h5.height / 100)|round(2) %}
+
+{% set h6_font_family = headings_font_family %}
+{% set h6_font_weight = headings_font_weight %}
+{% set h6_font_style = headings_font_style %}
+{% set h6_size_lg = (theme.typography.headings.h6.size.lg / theme.typography.text.size.lg)|round(2) %}
+{% set h6_size_md = (theme.typography.headings.h6.size.md / theme.typography.text.size.md)|round(2) %}
+{% set h6_size_sm = (theme.typography.headings.h6.size.sm / theme.typography.text.size.sm)|round(2) %}
+{% set h6_height = (theme.typography.headings.h6.height / 100)|round(2) %}
+
+{% set display_font_family = headings_font_family %}
+{% set display_font_weight = headings_font_weight %}
+{% set display_font_style = headings_font_style %}
+{% set display_size_lg = (theme.typography.headings.display.size.lg / theme.typography.text.size.lg)|round(2) %}
+{% set display_size_md = (theme.typography.headings.display.size.md / theme.typography.text.size.md)|round(2) %}
+{% set display_size_sm = (theme.typography.headings.display.size.sm / theme.typography.text.size.sm)|round(2) %}
+{% set display_height = (theme.typography.headings.display.height / 100)|round(2) %}
+
+{# Links
+   ========================================================================== #}
+
+{% set links_underline = theme.typography.links.links_underline %}
+
+{% if links_underline %}
+  {% set links_underline_value = "underline" %}
+{% else %}
+  {% set links_underline_value = "none" %}
+{% endif %}
+
+{% set links_hover_underline = theme.typography.links.links_hover_underline %}
+
+{% if links_hover_underline %}
+  {% set links_hover_underline_value = "underline" %}
+{% else %}
+  {% set links_hover_underline_value = "none" %}
+{% endif %}
+
+{# Word breaking
+  ========================================================================== #}
+
+{% set overflow_wrap = theme.typography.word_breaking.overflow_wrap %}
+{% set hyphens = theme.typography.word_breaking.hyphens %}
+
+{# ==========================================================================
+   Layout
+   ========================================================================== #}
+
+{% set content_width = theme.layout.content_width %}
+{% set vspace_lg = theme.layout.vspace_lg %}
+{% set vspace_sm = theme.layout.vspace_sm %}
+{% set gutter = theme.layout.gutter %}
+
+{% set scroll_offset_lg = "0" %}
+{% set scroll_offset_md = "0" %}
+{% set scroll_offset_sm = "0" %}
+
+{% if theme.components.header.sticky_header %}
+  {% set scroll_offset_lg = theme.layout.scroll_offset_lg %}
+  {% set scroll_offset_md = theme.layout.scroll_offset_md %}
+  {% set scroll_offset_sm = theme.layout.scroll_offset_sm %}
+{% endif %}
+
+{# ==========================================================================
+   Corners
+   ========================================================================== #}
+
+{% if theme.corners.global_radius == 'small' %}
+  {% set radius_1 = '3px' %}
+  {% set radius_2 = '4px' %}
+  {% set radius_3 = '5px' %}
+  {% set radius_4 = '6px' %}
+  {% set radius_5 = '8px' %}
+  {% set radius_6 = '10px' %}
+  {% set radius_7 = '12px' %}
+  {% set btn_small_radius = radius_3 %}
+  {% set btn_medium_radius = radius_4 %}
+  {% set btn_large_radius = radius_5 %}
+  {% set input_radius = radius_5 %}
+  {% set textarea_radius = radius_5 %}
+  {% set search_box_radius = radius_5 %}
+{% elif theme.corners.global_radius == 'medium' %}
+  {% set radius_1 = '4px' %}
+  {% set radius_2 = '6px' %}
+  {% set radius_3 = '8px' %}
+  {% set radius_4 = '10px' %}
+  {% set radius_5 = '12px' %}
+  {% set radius_6 = '16px' %}
+  {% set radius_7 = '24px' %}
+  {% set btn_small_radius = radius_3 %}
+  {% set btn_medium_radius = radius_4 %}
+  {% set btn_large_radius = radius_5 %}
+  {% set input_radius = radius_5 %}
+  {% set textarea_radius = radius_5 %}
+  {% set search_box_radius = radius_5 %}
+{% elif theme.corners.global_radius == 'large' %}
+  {% set radius_1 = '4px' %}
+  {% set radius_2 = '8px' %}
+  {% set radius_3 = '10px' %}
+  {% set radius_4 = '12px' %}
+  {% set radius_5 = '16px' %}
+  {% set radius_6 = '24px' %}
+  {% set radius_7 = '32px' %}
+  {% set btn_small_radius = '999px' %}
+  {% set btn_medium_radius = '999px' %}
+  {% set btn_large_radius = '999px' %}
+  {% set input_radius = '999px' %}
+  {% set textarea_radius = radius_7 %}
+  {% set search_box_radius = '999px' %}
+{% else %}
+  {% set radius_1 = '0' %}
+  {% set radius_2 = '0' %}
+  {% set radius_3 = '0' %}
+  {% set radius_4 = '0' %}
+  {% set radius_5 = '0' %}
+  {% set radius_6 = '0' %}
+  {% set radius_7 = '0' %}
+  {% set btn_small_radius = '0' %}
+  {% set btn_medium_radius = '0' %}
+  {% set btn_large_radius = '0' %}
+  {% set input_radius = '0' %}
+  {% set textarea_radius = '0' %}
+  {% set search_box_radius = '0' %}
+{% endif %}
+
+{% if theme.corners.button_radius == 'small' %}
+  {% set btn_small_radius = '4px' %}
+  {% set btn_medium_radius = '6px' %}
+  {% set btn_large_radius = '8px' %}
+{% elif theme.corners.button_radius == 'medium' %}
+  {% set btn_small_radius = '8px' %}
+  {% set btn_medium_radius = '10px' %}
+  {% set btn_large_radius = '12px' %}
+{% elif theme.corners.button_radius == 'large' %}
+  {% set btn_small_radius = '999px' %}
+  {% set btn_medium_radius = '999px' %}
+  {% set btn_large_radius = '999px' %}
+{% elif theme.corners.button_radius == 'square' %}
+  {% set btn_small_radius = '0' %}
+  {% set btn_medium_radius = '0' %}
+  {% set btn_large_radius = '0' %}
+{% endif %}
+
+{% if theme.corners.input_radius == 'small' %}
+  {% set input_radius = '8px' %}
+  {% set textarea_radius = '8px' %}
+{% elif theme.corners.input_radius == 'medium' %}
+  {% set input_radius = '12px' %}
+  {% set textarea_radius = '12px' %}
+{% elif theme.corners.input_radius == 'large' %}
+  {% set input_radius = '999px' %}
+  {% set textarea_radius = '32px' %}
+{% elif theme.corners.input_radius == 'square' %}
+  {% set input_radius = '0' %}
+  {% set textarea_radius = '0' %}
+{% endif %}
+
+{% if theme.corners.search_box_radius == 'small' %}
+  {% set search_box_radius = '8px' %}
+{% elif theme.corners.search_box_radius == 'medium' %}
+  {% set search_box_radius = '12px' %}
+{% elif theme.corners.search_box_radius == 'large' %}
+  {% set search_box_radius = '999px' %}
+{% elif theme.corners.search_box_radius == 'square' %}
+  {% set search_box_radius = '0' %}
+{% endif %}
+
+{# ==========================================================================
+   Components
+   ========================================================================== #}
+
+{# UI icon size #}
+
+{% set ui_icon_size = (theme.components.ui_icon_size / theme.typography.text.size.lg)|round(2) %}
+
+{# ==========================================================================
+   Other
+   ========================================================================== #}
+
+{# Shadows #}
+
+{% set small_shadow = "0px 8px 16px rgba("~ dark|default('#222326')|convert_rgb ~", 0.05), 0px 4px 8px rgba("~ dark|default('#222326')|convert_rgb ~", 0.05)" %}
+{% set medium_shadow = "0px 16px 32px rgba("~ dark|default('#222326')|convert_rgb ~", 0.05), 0px 8px 16px rgba("~ dark|default('#222326')|convert_rgb ~", 0.05)" %}
+{% set large_shadow = "0px 32px 64px rgba("~ dark|default('#222326')|convert_rgb ~", 0.05), 0px 16px 32px rgba("~ dark|default('#222326')|convert_rgb ~", 0.05)" %}
+
+{% set accent_small_shadow = "0px 8px 16px rgba("~ accent|default('#F65954')|convert_rgb ~", 0.2), 0px 4px 8px rgba("~ accent|default('#F65954')|convert_rgb ~", 0.2)" %}
+{% set accent_medium_shadow = "0px 16px 32px rgba("~ accent|default('#F65954')|convert_rgb ~", 0.2), 0px 8px 16px rgba("~ accent|default('#F65954')|convert_rgb ~", 0.2)" %}
+{% set accent_large_shadow = "0px 32px 64px rgba("~ accent|default('#F65954')|convert_rgb ~", 0.2), 0px 16px 32px rgba("~ accent|default('#F65954')|convert_rgb ~", 0.2)" %}
+
+{# Buttons #}
+
+{% set btn_small_ptb = .45 %}
+{% set btn_small_plr = .68 %}
+{% set btn_medium_ptb = .64 %}
+{% set btn_medium_plr = .91 %}
+{% set btn_large_ptb = .91 %}
+{% set btn_large_plr = 1.36 %}
+{% set btn_bd = 2 %}
+{% set btn_focus_shadow = "0 0 0 3px" %}
+
+{# Responsive breakpoints (desktop-first) #}
+
+{% set md = 1139 %}
+{% set sm = 767 %}
+{% set xs = 479 %}
+
+{# ==========================================================================
+  Miscellaneous
+  ========================================================================== #}
+
+{% set rtl_ready = theme.miscellaneous.rtl_ready %}

@@ -1,0 +1,116 @@
+[
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Hospitality is personal.\nSo are their stories."
+  },
+  {
+    "name": "intro",
+    "label": "Introduction",
+    "type": "text",
+    "default": "Hear from lodging teams about their experience with GraceSoft."
+  },
+  {
+    "name": "link_label",
+    "label": "CTA",
+    "type": "text",
+    "default": "Explore customer stories"
+  },
+  {
+    "name": "url",
+    "label": "CTA URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/testimonials",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "stories",
+    "label": "Customer stories",
+    "type": "group",
+    "children": [
+      {
+        "name": "property",
+        "label": "Property name",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "type",
+        "label": "Property description",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "quote",
+        "label": "Approved quote",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "approved",
+        "label": "Permission confirmed: display quote",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "name": "url",
+        "label": "Published source",
+        "type": "url",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS"
+        ],
+        "default": {
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "name": "label",
+        "label": "Link label",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 2
+    },
+    "default": [
+      {
+        "property": "Dow Hotel and Conference Center",
+        "type": "Hotel & conference center",
+        "quote": "It’s easy to use, easy to learn, and everything we need.",
+        "approved": false,
+        "url": {
+          "href": "https://www.gracesoft.com/testimonials",
+          "type": "EXTERNAL"
+        },
+        "label": "Read their GraceSoft experience"
+      },
+      {
+        "property": "The Branson Hotel",
+        "type": "Independent hospitality",
+        "quote": "The system is very easy to train new staff on.",
+        "approved": false,
+        "url": {
+          "href": "https://www.gracesoft.com/testimonials",
+          "type": "EXTERNAL"
+        },
+        "label": "Read their GraceSoft experience"
+      }
+    ]
+  }
+]

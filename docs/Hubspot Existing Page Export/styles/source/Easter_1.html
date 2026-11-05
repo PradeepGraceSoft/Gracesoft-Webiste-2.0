@@ -1,0 +1,42 @@
+<!--
+  templateType: "drag_drop_email"
+  isAvailableForNewContent: false
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{{content.html_title}}</title>
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% style_settings is_json=True %}
+      {"background_color":"#ffffff","background_image":"https://static.hsappstatic.net/TemplateAssets/static-1.32/img/hs_default_template_images/email_dnd_background_images/easterpattern.png","background_image_type":"REPEAT","body_border_color":"#EAF0F6","body_border_color_choice":"BORDER_MANUAL","body_border_width":"1","body_color":"#ffffff","color_picker_favorite1":null,"color_picker_favorite2":null,"color_picker_favorite3":null,"color_picker_favorite4":null,"color_picker_favorite5":null,"color_picker_favorite6":null,"email_body_padding":null,"email_body_width":null,"heading_one_font":{"bold":null,"color":"#f95487","font":null,"font_style":{},"italic":null,"size":"72","underline":null},"heading_two_font":{"bold":null,"color":null,"font":null,"font_style":{},"italic":null,"size":"20","underline":null},"links_font":{"bold":false,"color":"#f95487","font":null,"font_style":{},"italic":false,"size":null,"underline":true},"primary_accent_color":null,"primary_font":"Lato,Tahoma,sans-serif","primary_font_color":"#23496d","primary_font_line_height":null,"primary_font_size":"16","secondary_accent_color":null,"secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_line_height":null,"secondary_font_size":"12","user_module_defaults":{"button_email":{"background_color":"#f95487","corner_radius":8,"font":"Lato,Tahoma,sans-serif","font_color":"#FFFFFF","font_size":24,"font_style":{"color":"#FFFFFF","font":"Lato,Tahoma,sans-serif","size":{"units":"px","value":24},"styles":{"bold":true,"font-weight":"bold","italic":false,"underline":false}}},"email_divider":{"color":{"color":"#f95487","opacity":100},"height":1,"line_type":"dashed"}}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes}}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }} 
+  </head>
+  <body bgcolor="{{style_settings.background_color}}">
+  {{ preview_snippet }}
+  {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% widget_block email_flex_area "main" overrideable=True %}
+            {% widget_attribute "default_layout" is_json=True %}
+              {"boxFirstElementIndex":0,"boxLastElementIndex":0,"boxed":false,"isSingleColumnFullWidth":false,"sections":[{"columns":[{"id":"builtin_column_0-0","widgets":["module_155198989664913"],"width":12}],"id":"builtin_section-0","style":{"backgroundColor":"","backgroundType":"CONTENT","paddingBottom":"0px","paddingTop":"0px"}},{"columns":[{"id":"builtin_column_1-0","widgets":["module_155199029886998","module_155199021254741"],"width":12}],"id":"builtin_section-1","style":{"backgroundType":"CONTENT","paddingBottom":"0px","paddingTop":"0px"}},{"columns":[{"id":"column_1551990634546_0","widgets":["builtin_module_1_0_0"],"width":12}],"id":"section_1551990634546","style":{"backgroundType":"CONTENT","paddingBottom":"20px","paddingTop":"20px"}},{"columns":[{"id":"column_1551990586715_0","widgets":["module_153968767366935"],"width":12}],"id":"section_1551990586715","style":{"backgroundType":"CONTENT","paddingBottom":"0px","paddingTop":"0px"}},{"columns":[{"id":"builtin_column_3-0","widgets":["builtin_module_3_0_1"],"width":12}],"id":"builtin_section-3","style":{"backgroundColor":"#FFFFFF","backgroundType":"CONTENT","paddingBottom":"20px","paddingTop":"30px"}}]}
+            {% end_widget_attribute %}
+            {% widget_attribute "default_widgets" %}
+              {"builtin_module_1_0_0":{"body":{"html":"<p style=\"text-align: center; line-height: 200%;\">Make this year’s Easter celebrations even more special with delightful deals on our holiday arrivals. Choose from springtime decor and dinnerware for your home, to Easter eggs, sweets, and treats for the little ones in your life.</p>","module_id":1155639},"id":"builtin_module_1_0_0","module_id":1155639,"name":"builtin_module_1_0_0","order":3,"smart_type":null,"type":"module"},"builtin_module_3_0_1":{"body":{"align":"center","font":{"color":"#23496d","fallback":null,"font":"Lato,Tahoma,sans-serif","fontSet":"DEFAULT","size":{"units":"px","value":12},"styles":{},"variant":null},"hs_enable_module_padding":false,"link_font":{"color":"#f95487","fallback":null,"font":"Lato,Tahoma,sans-serif","fontSet":"DEFAULT","size":{"units":"px","value":12},"styles":{"text-decoration":"underline","font-weight":"normal","font-style":"normal"},"variant":null},"module_id":2869621,"unsubscribe_link_type":"unsubscribe"},"id":"builtin_module_3_0_1","module_id":2869621,"name":"builtin_module_3_0_1","order":7,"smart_type":null,"type":"module"},"module_153968767366935":{"body":{"alignment":"center","background_color":"#F95487","corner_radius":8,"cta_field":null,"destination":"","font_style":{"color":"#FFFFFF","fallback":null,"font":"Lato,Tahoma,sans-serif","fontSet":"DEFAULT","size":{"units":"px","value":24},"styles":{"bold":true,"font-weight":"bold","italic":false,"underline":false},"variant":null},"make_full_width":true,"module_id":1976948,"text":"Shop Easter deals"},"id":"module_153968767366935","module_id":1976948,"name":"module_153968767366935","order":4,"smart_type":null,"type":"module"},"module_155198989664913":{"body":{"alignment":"center","css":{},"hs_enable_module_padding":false,"img":{"alt":"EggPattern","height":449,"src":"email_dnd_template_images/EggPattern.png","width":600},"link":null,"module_id":1367093},"id":"module_155198989664913","module_id":1367093,"name":"module_155198989664913","order":1,"smart_type":null,"type":"module"},"module_155199021254741":{"body":{"html":"<h1 style=\"line-height: 100%; text-align: center;\">HOP TO IT AND SAVE</h1>","module_id":1155639},"id":"module_155199021254741","module_id":1155639,"name":"module_155199021254741","order":3,"smart_type":null,"type":"module"},"module_155199029886998":{"body":{"html":"<h2 style=\"text-align: center;\">HAPPY EASTER</h2>","module_id":1155639},"id":"module_155199029886998","module_id":1155639,"name":"module_155199029886998","order":3,"smart_type":null,"type":"module"}}
+            {% end_widget_attribute %}
+            {% end_widget_block %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

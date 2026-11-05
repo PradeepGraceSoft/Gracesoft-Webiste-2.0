@@ -1,0 +1,152 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: LP Get a quote
+  screenshotPath: ../images/template-previews/lp-get-a-quote.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=true, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0)
+        },
+        'mobile': {
+          'top': vspace_sm
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='accent',
+            top_deco={
+              'type': 'waves',
+              'color': 'white',
+              'waves_height_lg': 800,
+              'waves_height_md': 850,
+              'waves_height_sm': 900
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_column offset=0, width=6,
+            padding={
+              'default': {
+                'right': gutter * 2
+              },
+              'mobile': {
+                'right': 0,
+                'bottom': gutter
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/section-intro',
+                overline='Get a quote',
+                title='Choose exactly what you need. Pay less.',
+                desc='<p>It takes just a couple of minutes to request a free personalized quote for your exact business needs.</p>',
+                settings={
+                  'title_tag': 'h1',
+                  'title_looks_like': 'h2',
+                  'divider': ''
+                },
+                wrapper={
+                  'max_width': {
+                    'lg': ''
+                  },
+                  'block_align': {
+                    'lg': ''
+                  },
+                  'text_align': {
+                    'lg': ''
+                  },
+                  'margin': {
+                    'bottom': {
+                      'lg': ''
+                    }
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/steps',
+                items=[
+                  {
+                    'title': 'Configure your project',
+                    'desc': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor dui non accumsan.</p>',
+                    'icon': {
+                      'type': 'number',
+                      'number': 1
+                    },
+                    'tooltip': 'Send details'
+                  },
+                  {
+                    'title': 'Get a personalized quote',
+                    'desc': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor dui non accumsan.</p>',
+                    'icon': {
+                      'type': 'number',
+                      'number': 2
+                    },
+                    'tooltip': 'Get free quote'
+                  },
+                  {
+                    'title': 'Place your order with a click of a button',
+                    'desc': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor dui non accumsan.</p>',
+                    'icon': {
+                      'type': 'number',
+                      'number': 3
+                    },
+                    'tooltip': 'Place order'
+                  }
+                ],
+                wrapper={
+                  'margin': {
+                    'top': {
+                      'lg': (gutter * 2)|string
+                    }
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column offset=6, width=6 %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/form',
+                form_title='Get Started Now',
+                one_field_form=false,
+                form={
+                  'form_id': ''
+                },
+                settings={
+                  'form_title_tag': 'h3',
+                  'hide_labels': false,
+                  'box': 'white',
+                  'box_padding': {
+                    'lg': (gutter * 2)|string,
+                    'md': gutter|string,
+                    'sm': gutter|string
+                  },
+                  'box_form_max_width': ''
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

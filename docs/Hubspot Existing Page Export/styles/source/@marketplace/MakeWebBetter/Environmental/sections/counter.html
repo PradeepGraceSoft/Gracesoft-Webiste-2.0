@@ -1,0 +1,137 @@
+<!--
+  templateType: section
+  label: Counter
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/counter.png
+  description: "Section with four column layout of counter Module"
+-->
+
+{% dnd_section
+  background_color='rgba(20, 99, 86, 1)',
+  padding={
+    'default' : {
+      'bottom' : '80px',
+      'top' : '80px'
+    },
+    'mobile' : {
+      'bottom' : '50px',
+      'top' : '50px'
+    }
+  }
+%}
+  {% dnd_module
+    path='/Environmental/modules/counter',
+    counter=[ {
+      'counter_text' : 'People Helped',
+      'counter_unit' : '+',
+      'counter_value' : '5898',
+      'enable_counter_unit' : false,
+      'icon' : {
+        'name' : 'Drafting Compass',
+        'type' : 'SOLID',
+        'unicode' : 'f568'
+      },
+      'image' : {
+        'alt' : 'People Helped',
+        'height' : 149,
+        'loading' : 'lazy',
+        'max_height' : 149,
+        'max_width' : 149,
+        'size_type' : 'auto',
+        'src' : get_asset_url('../images/multipurpose/helping-hand.png'),
+        'width' : 149
+      }
+    }, {
+      'counter_text' : 'Changing Life Since',
+      'counter_unit' : '+',
+      'counter_value' : '1999',
+      'enable_counter_unit' : false,
+      'icon' : {
+        'name' : 'Drafting Compass',
+        'type' : 'SOLID',
+        'unicode' : 'f568'
+      },
+      'image' : {
+        'alt' : 'Changing Life Since',
+        'height' : 149,
+        'loading' : 'lazy',
+        'max_height' : 149,
+        'max_width' : 149,
+        'size_type' : 'auto',
+        'src' : get_asset_url('../images/multipurpose/life.png'),
+        'width' : 149
+      }
+    }, {
+      'counter_text' : 'Our Partners',
+      'counter_unit' : '+',
+      'counter_value' : '21',
+      'enable_counter_unit' : true,
+      'icon' : {
+        'name' : 'Drafting Compass',
+        'type' : 'SOLID',
+        'unicode' : 'f568'
+      },
+      'image' : {
+        'alt' : 'Our Partners',
+        'height' : 149,
+        'loading' : 'lazy',
+        'max_height' : 149,
+        'max_width' : 149,
+        'size_type' : 'auto',
+        'src' : get_asset_url('../images/multipurpose/hand-shaking.png'),
+        'width' : 149
+      }
+    }, {
+      'counter_text' : 'Volunteers',
+      'counter_unit' : '+',
+      'counter_value' : '385',
+      'enable_counter_unit' : false,
+      'icon' : {
+        'name' : 'Drafting Compass',
+        'type' : 'SOLID',
+        'unicode' : 'f568'
+      },
+      'image' : {
+        'alt' : 'Volunteers',
+        'height' : 149,
+        'loading' : 'lazy',
+        'max_height' : 149,
+        'max_width' : 149,
+        'size_type' : 'auto',
+        'src' : get_asset_url('../images/multipurpose/volunteer-hand.png'),
+        'width' : 149
+      }
+    } ],
+    style={
+      'counter' : {
+        'counter_text' : {
+          'desktop' : {
+            'font' : {
+              'color' : '#FFFFFF',
+              'fallback' : 'sans-serif',
+              'font' : 'Roboto',
+              'font_set' : 'GOOGLE',
+              'size' : 24,
+              'styles' : { },
+              'variant' : '700'
+            }
+          }
+        },
+        'counter_value' : {
+          'desktop' : {
+            'font' : {
+              'color' : '#FFFFFF',
+              'fallback' : 'sans-serif',
+              'font' : 'Roboto',
+              'font_set' : 'GOOGLE',
+              'size' : 76,
+              'styles' : { },
+              'variant' : '700'
+            }
+          }
+        }
+      }
+    }
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}

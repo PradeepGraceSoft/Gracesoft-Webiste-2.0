@@ -1,0 +1,7 @@
+<header class="site-header"><div class="container nav-bar">
+<a class="brand" href="{{ module.home_url.href|escape_url }}"><img src="{{ (module.logo.src or get_asset_url('../../assets/logo.png'))|escape_url }}" width="500" height="237" alt="{{ module.logo.alt|escape_attr }}"></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-button>{{ module.menu_label|escape_html }} <span aria-hidden="true">☰</span></button>
+<nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+<details class="nav-products"><summary>{{ module.product_label|escape_html }} <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown">{% for item in module.products %}<a href="{{ item.url.href|escape_url }}">{{ item.label|escape_html }} <span aria-hidden="true">↗</span></a>{% endfor %}</div></details>
+<a href="#properties">{{ module.property_label|escape_html }}</a><a href="{{ module.pricing_url.href|escape_url }}">{{ module.pricing_label|escape_html }}</a><a href="#insights">{{ module.resources_label|escape_html }}</a><a class="login" href="{{ module.login_url.href|escape_url }}">{{ module.login_label|escape_html }} ↗</a><a class="button small" href="{{ module.demo_url.href|escape_url }}">{{ module.demo_label|escape_html }} <span aria-hidden="true">↗</span></a>
+</nav></div></header>

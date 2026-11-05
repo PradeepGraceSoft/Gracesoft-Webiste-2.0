@@ -1,0 +1,112 @@
+/* Base */
+
+.hs-menu-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hs-menu-wrapper li {
+  position: relative;
+}
+
+.hs-menu-wrapper a {
+  display: block;
+  position: relative;
+  color: {{ dark }};
+  text-decoration: none;
+  transition: .2s ease-in-out;
+}
+
+/* Flyouts */
+
+.hs-menu-wrapper.flyouts .hs-menu-children-wrapper {
+  display: none;
+  width: 220px;
+  padding: .46rem 0;
+  position: absolute;
+  z-index: 1;
+  background: {{ white }};
+  box-shadow: {{ large_shadow }};
+  border-radius: {{ radius_5 }};
+}
+
+.hs-menu-wrapper.flyouts li:hover > .hs-menu-children-wrapper {
+  display: block;
+  animation: .2s ease-in-out forwards uiPop;
+}
+
+.hs-menu-wrapper.flyouts .hs-menu-children-wrapper > li > a {
+  padding: .46rem .91rem;
+}
+
+.hs-menu-wrapper.flyouts .hs-menu-children-wrapper > li:not(:first-child) > a {
+  border-top: 1px solid {{ borders_color }};
+}
+
+.hs-menu-wrapper.flyouts .hs-menu-children-wrapper > li:hover > a {
+  background-color: {{ light }};
+}
+
+/* Top level */
+
+.hs-menu-flow-horizontal > ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.hs-menu-flow-horizontal.flyouts > ul {
+  align-items: center;
+}
+
+.hs-menu-flow-horizontal.flyouts > ul > li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.hs-menu-flow-horizontal.flyouts > ul > li > a {
+  padding-top: .46rem;
+  padding-bottom: .46rem;
+}
+
+.hs-menu-flow-horizontal.flyouts > ul > li > a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: {{ radius_1 }};
+  background: {{ accent_bg }};
+  opacity: 0;
+  transform: scale(.2,1) translateY(2px);
+  transition: .3s ease-out;
+}
+
+.hs-menu-flow-horizontal.flyouts > ul > li:hover > a::before,
+.hs-menu-flow-horizontal.flyouts > ul > li > a[aria-expanded="true"]::before {
+  transform: none;
+  opacity: 1;
+}
+
+/* All sub-levels */
+
+.hs-menu-wrapper ul ul a {
+  font-size: .9rem;
+}
+
+/* 2nd level */
+
+.hs-menu-flow-horizontal.flyouts > ul > li > ul {
+  top: 100%;
+  margin-left: -.91rem;
+}
+
+/* 3rd level */
+
+.hs-menu-flow-horizontal.flyouts ul ul ul,
+.hs-menu-flow-vertical.flyouts ul ul {
+  top: 0;
+  left: 100%;
+  margin-top: -.46rem;
+}

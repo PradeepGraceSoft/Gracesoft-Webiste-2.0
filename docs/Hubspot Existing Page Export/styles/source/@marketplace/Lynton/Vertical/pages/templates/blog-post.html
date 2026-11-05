@@ -1,0 +1,98 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/blog-post.png
+  label: "Blog Post"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top", no_wrapper=true %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header", make_transparent=true %}
+{% endblock %}
+
+{% block body %}
+  {% module "modifier" path="../modules/Blog Content Modifier", no_wrapper=true %}
+
+  <article class="blog-post">
+    {% global_partial path="{{ '../partials/blog-post-hero.html' }}" %}
+
+    <div class="container blog-post__inner dnd-section">
+      {% if !content.widgets.modifier.body.share_toggle %}
+        {% module "sharing" path="../modules/Social Sharing" %}
+      {% endif %}
+
+      <div class="blog-post__body">
+        <div class="blog-post__content">
+          {{ content.post_body }}
+        </div>
+
+        {% if !content.widgets.modifier.body.cta_toggle %}
+          <div class="blog-post__cta">
+            {% module "cta_box" path="../modules/Call to Action Box",
+              heading_level="h3",
+              styles={
+                "module": {
+                  "padding": {
+                    "desktop": {
+                      "padding": {
+                        "top": {
+                          "value": 60
+                        },
+                        "right": {
+                          "value": 50
+                        },
+                        "bottom": {
+                          "value": 60
+                        },
+                        "left": {
+                          "value": 50
+                        }
+                      }
+                    },
+                    "mobile": {
+                      "padding": {
+                        "top": {
+                          "value": 40
+                        },
+                        "right": {
+                          "value": 25
+                        },
+                        "bottom": {
+                          "value": 40
+                        },
+                        "left": {
+                          "value": 25
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            %}
+          </div>
+        {% endif %}
+
+        {% if !content.widgets.modifier.body.author_toggle %}
+          {% module "blog_author" path="../modules/Blog Author"%}
+        {% endif %}
+      </div>
+    </div>
+
+    {% if !content.widgets.modifier.body.related_toggle %}
+      <footer class="blog-post__footer">
+        <div class="container">
+          {% module "related_posts" path="../modules/Related Blog Posts",
+            heading={
+              "eyebrow": "You May Like These",
+              "heading": "Related Articles",
+              "add_cta": false
+            }
+          %}
+        </div>
+      </footer>
+    {% endif %}
+  </article>
+{% endblock %}

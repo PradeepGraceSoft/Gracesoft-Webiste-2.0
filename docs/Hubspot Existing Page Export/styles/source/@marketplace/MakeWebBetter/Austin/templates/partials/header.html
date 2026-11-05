@@ -1,0 +1,163 @@
+<!--
+templateType: global_partial
+label: Header with navigation
+-->
+<header class="header header--with-navigation {% if theme.layout_setting.header.sticky_header.enable == true  %} au-sticky-header {% endif %}{% if theme.layout_setting.header.header_on_top_scroll.enable_scroll == true %}au-on-scroll{% endif %}">
+
+  {# Top dnd header drag and drop area #}
+  {% if theme.layout_setting.header.header_top_bar.is_header_top_bar == true %}
+  <div class="header-dnd-area1 header__top">
+    {% dnd_area 'dnd-top-header' label='Top dnd header' class="content-wrapper" %}
+    {% dnd_section 
+    padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       }, 
+     vertical_alignment='MIDDLE',  
+    full_width=true
+     %}
+    {% dnd_column
+    padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       },    
+        offset=0,
+        width=9
+      %}
+    {% dnd_row %}
+    {% dnd_module path='../../modules/icon-box'
+     %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column
+    padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       },    
+        offset=9,
+        width=3
+      %}
+    {% dnd_row %}
+    {% dnd_module path='../../modules/social-follow' 
+    horizontal_alignment='RIGHT',
+  social_links=[{
+social_account: 'facebook',
+},
+{
+social_account: 'instagram'
+},
+{
+social_account: 'linkedin'
+},
+{
+social_account: 'youtube'
+},
+{
+social_account: 'twitter'
+}
+],
+  %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% end_dnd_section %}
+    {% end_dnd_area %}
+  </div>
+  {% endif %}
+
+  {# End dnd top header drag and drop area #}
+
+  <!--   header-layout   -->
+  <div class="header-dnd-area2 au-header au-header--one">
+    {% dnd_area 'header-top' label='Top header' class="content-wrapper" %}
+    {# with-navigation-header #}
+    {% dnd_section 
+    padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       }, 
+     vertical_alignment='MIDDLE',  
+    full_width=true
+     %}
+    {% dnd_column
+    padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       },    
+        offset=0,
+        width=2
+      %}
+    {% dnd_row %}
+    {% dnd_module path='../../modules/logo'
+     %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column
+       padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       },
+        offset=2,
+        width=6,
+      %}
+    {% dnd_row %}
+    {% dnd_module path='../../modules/header-toggler' 
+    %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+    {% dnd_module path='../../modules/menu' 
+     horizontal_alignment='RIGHT',
+     %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column
+       padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       },
+        offset=8,
+        width=4,
+      %}
+    {% dnd_row %}
+    {% dnd_module path='../../modules/header-controls',
+
+     horizontal_alignment='RIGHT',
+     %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% end_dnd_section %}
+    {# End of with-navigation-header #}
+
+    {% end_dnd_area %}
+    {# {% endif %} #}
+  </div>
+
+  {# Bottom header drag and drop area #}
+  {% if theme.layout_setting.header.header_bottom_bar.is_header_bottom_bar == true %}
+  <div class="header-dnd-area3 header__bottom">
+    {% dnd_area 'dnd-bottom-header' label='Bottom dnd header' class='content-wrapper' %}
+    {% end_dnd_area %}
+  </div>
+  {% endif %}
+  {# End bottom header drag and drop area #}
+
+</header>

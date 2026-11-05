@@ -1,0 +1,111 @@
+{% import "../_variables.css" as var %}
+
+.blog-load-more {
+  padding-top: 0;
+}
+
+.blog-load-more__loading {
+  display: none;
+  text-align: start;
+}
+
+.blog-load-more--loading .blog-load-more__loading {
+  display: inline-block;
+}
+
+.blog-load-more--loading .blog-load-more__btn,
+.blog-load-more--loading .center-btn:before,
+.blog-load-more--loading .center-btn:after {
+  display: none;
+}
+
+.blog-load-more--loading .center-btn {
+  display: block;
+}
+
+#post-list > * {
+  outline: 0;
+}
+
+.blog-load-more__btn {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Loading animation */
+
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: {{ var.accent }};
+  color: {{ var.accent }};
+  box-shadow: 9999px 0 0 -5px {{ var.accent }};
+  animation: dotPulse 1.5s infinite linear;
+  animation-delay: .25s;
+}
+
+.dot-pulse::before, .dot-pulse::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: {{ var.accent }};
+  color: {{ var.accent }};
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px {{ var.accent }};
+  animation: dotPulseBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px {{ var.accent }};
+  animation: dotPulseAfter 1.5s infinite linear;
+  animation-delay: .5s;
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px {{ var.accent }};
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px {{ var.accent }};
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px {{ var.accent }};
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px {{ var.accent }};
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px {{ var.accent }};
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px {{ var.accent }};
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px {{ var.accent }};
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px {{ var.accent }};
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px {{ var.accent }};
+  }
+}

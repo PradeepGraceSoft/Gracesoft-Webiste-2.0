@@ -1,0 +1,83 @@
+{% import "../_variables.css" as var %}
+
+.properties {
+  display: inline-block;
+}
+
+.properties__item {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: {{ var.gutter / 2 }}px;
+  margin-bottom: {{ var.gutter / 2 }}px;
+  text-align: start;
+}
+
+a.properties__item,
+a.properties__item:hover {
+  text-decoration: none;
+}
+
+a.properties__item .properties__text {
+  text-decoration: none;
+}
+
+a.properties__item:hover .properties__text {
+  text-decoration: underline;
+}
+
+.properties__item:not(:last-child) {
+  margin-inline-end: {{ var.gutter }}px;
+  padding-inline-end: {{ var.gutter }}px;
+  border-inline-end: 1px solid;
+}
+
+.properties__icon {
+  flex-shrink: 0;
+  margin-inline-end: 0.46rem;
+  line-height: 0;
+}
+
+.properties--always-stack .properties__item {
+  display: flex;
+  margin-inline-end: 0;
+  padding-inline-end: 0;
+  border-inline-end: none;
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .properties:not(.properties--stack):not(.properties--always-stack) .properties__item {
+    margin: 0;
+    padding: {{ var.gutter / 2 }}px;
+    border-inline-end: none;
+  }
+
+  .properties--stack .properties__item {
+    display: flex;
+    margin-inline-end: 0;
+    padding-inline-end: 0;
+    border-inline-end: none;
+  }
+}
+
+/* Light scheme */
+
+.properties--light .properties__item {
+  border-color: {{ var.borders_color }};
+}
+
+.properties--light .properties__item,
+.properties--light a.properties__item:hover {
+  color: {{ var.dark }};
+}
+
+/* Dark scheme */
+
+.properties--dark .properties__item {
+  border-color: {{ var.white_borders }};
+}
+
+.properties--dark .properties__item,
+.properties--dark a.properties__item:hover {
+  color: {{ var.white }};
+}

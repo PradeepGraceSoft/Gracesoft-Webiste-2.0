@@ -1,0 +1,1 @@
+(function(a){var b=function(){if(a.fn.fancybox){a(".hs-gallery-thumbnails a").fancybox()}};a(document).ready(b)})(hsjQuery);

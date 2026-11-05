@@ -1,0 +1,59 @@
+{% import "../_variables.css" as var %}
+
+.footer__nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer__nav ul li {
+  padding: 0 1.11rem 10px;
+}
+
+.footer__nav ul li a {
+  text-decoration: none;
+}
+
+.footer__nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.sm }}px) {
+  .footer__nav ul {
+    flex-direction: column;
+  }
+}
+
+/* Dark scheme */
+
+{% if theme.components.footer.scheme == 'dark' %}
+
+  .footer {
+    background: {{ var.dark }};
+  }
+  
+  .footer__nav ul li a,
+  .footer__nav ul li a:hover {
+    color: {{ var.white }};
+  }
+
+/* Light scheme */
+
+{% else %}
+
+  .footer {
+    background: {{ var.white }};
+  }
+  
+  .footer__nav ul li a,
+  .footer__nav ul li a:hover {
+    color: {{ var.dark }};
+  }
+
+{% endif %}

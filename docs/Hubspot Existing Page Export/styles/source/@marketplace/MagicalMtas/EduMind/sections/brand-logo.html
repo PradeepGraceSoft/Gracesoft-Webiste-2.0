@@ -1,0 +1,100 @@
+<!--
+  templateType: section
+  label: Brand Logo
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/brand-logo.png
+  description: "Brand Logo section separated in two columns."
+-->
+{% dnd_section max_width=1200, class="brand-logo-area" %} 
+
+  {% dnd_column %}
+    {% dnd_row %}
+
+      {% dnd_column width=5, offset=0 %} 
+        {% dnd_row %}
+          {% dnd_module "module_16675429389378" path="../modules/Section Title", label="Section Title" 
+            section_subtitle = '<span>Our Partners</span>',
+            section_title = '<h2>Learn with Our Partners</h2>',
+            section_shape = { 
+              'alt': 'Section Shape Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/svg/section-title-shape.svg')  
+            },
+            section_excerpt = '<p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor incididunt.</p>'
+          %}
+          {% end_dnd_module %} 
+        {% end_dnd_row %} 
+      {% end_dnd_column %}
+
+      {% dnd_column width=7, offset=5 %}
+        {% dnd_row %}
+          {% dnd_module "module_16675429110587" path="../modules/Brand Logo", label="Brand Logo" 
+            layout = 'brand-logo-column-four',
+            brand_logo_item = [
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-01.png') 
+                }
+              },
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-02.png') 
+                }
+              },
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-03.png') 
+                }
+              },
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-04.png') 
+                }
+              },
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-05.png') 
+                }
+              },
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-06.png') 
+                }
+              },
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-07.png') 
+                }
+              },
+              { 
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand-logo/brand-08.png') 
+                }
+              }
+            ]
+          %}
+        {% end_dnd_module %} 
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+  {% end_dnd_row %}
+{% end_dnd_column %}
+
+
+{% end_dnd_section %}

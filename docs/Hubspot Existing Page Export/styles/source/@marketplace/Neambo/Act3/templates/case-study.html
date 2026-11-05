@@ -1,0 +1,400 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Case study
+  screenshotPath: ../images/template-previews/case-study.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row vertical_alignment='MIDDLE' %}
+          {% dnd_column offset=0, width=3,
+            padding={
+              'default': {
+                'top': gutter,
+                'bottom': gutter,
+                'left': gutter,
+                'right': gutter
+              }
+            },
+            margin={
+              'mobile': {
+                'bottom': gutter
+              }
+            },
+            background_color='#ffffff'
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/image',
+                image={
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-firesphere.svg',
+                  'alt': 'Describe your image',
+                  'width': 143,
+                  'height': 42,
+                  'loading': 'disabled'
+                },
+                img_radius=false,
+                wrapper={
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column offset=3, width=9,
+            padding={
+              'default': {
+                'left': gutter * 2
+              },
+              'mobile': {
+                'left': 0
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='Healthcare, Startup'
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/heading',
+                text='Firesphere: 80% Increase in Traffic',
+                html_tag='h1',
+                looks_like='h2',
+                wrapper={
+                  'max_width': {
+                    'lg': '480'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>'
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Back to listing (top) #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': gutter,
+          'bottom': gutter
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='accent'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='<a href="#back-to-the-listing-page" rel="noopener">← Back to All Success Stories</a>',
+            settings={
+              'color_scheme': 'dark'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Numbers #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='<h2>After a free trial of Sonic Boom, there was no turning back.</h2>',
+            wrapper={
+              'max_width': {
+                'lg': '480'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': vspace_lg|string,
+                  'sm': vspace_sm|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module offset=0, width=4, path='../modules/numbers',
+            number='100%',
+            text='
+              <h3>Traffic Increase</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+            ',
+            wrapper={
+              'max_width': {
+                'lg': '280'
+              },
+              'margin': {
+                'bottom': {
+                  'sm': vspace_sm|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+          {% dnd_module offset=4, width=4, path='../modules/numbers',
+            number='180%',
+            text='
+              <h3>Increase in Leads</h3>
+              <p>Wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+            ',
+            wrapper={
+              'max_width': {
+                'lg': '280'
+              },
+              'margin': {
+                'bottom': {
+                  'sm': vspace_sm|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+          {% dnd_module offset=8, width=4, path='../modules/numbers',
+            number='30+',
+            text='
+              <h3>Weekly Customers</h3>
+              <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline.</p>
+            ',
+            wrapper={
+              'max_width': {
+                'lg': '280'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Details #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_column offset=0, width=8,
+            padding={
+              'default': {
+                'right': gutter * 3
+              },
+              'mobile': {
+                'right': 0
+              }
+            },
+            margin={
+              'mobile': {
+                'bottom': vspace_sm
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='
+                  <h2>Changing to a Sonic Boom X</h2>
+                  <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named <a href="#" rel="noopener">Duden</a> flows by their place and supplies it with the necessary regelialia.</p>
+                  <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far <a href="#" rel="noopener">World of Grammar</a>.</p>
+                  <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the <a href="#" rel="noopener">Line Lane</a>.</p>
+                  <p>Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                '
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column offset=8, width=4 %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='
+                  <h3>About Firesphere</h3>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                  <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                  <p><a href="#" rel="noopener" target="_blank"><strong>Visit their website&nbsp;→</strong></a></p>
+                ',
+                settings={
+                  'text_size': 'small',
+                  'box': 'white',
+                  'collapsed': true,
+                  'fade_overlay': true,
+                  'max_height': {
+                    'lg': '160'
+                  }
+                },
+                wrapper={
+                  'margin': {
+                    'bottom': {
+                      'lg': gutter|string
+                    }
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='
+                  <h3>Start Your Success Story</h3>
+                  <p>Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+                  <div>{{cta("3deb6bbd-6c95-489c-aa35-40a7dc228b14")}}</div>
+                ',
+                settings={
+                  'text_size': 'small',
+                  'box': 'accent'
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Project highlights #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/heading',
+            text='Project Highlights',
+            wrapper={
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image-box',
+            items=[
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-4mgdn.jpg',
+                  'alt': 'Describe your image',
+                  'width': 300,
+                  'height': 300,
+                  'loading': 'lazy'
+                },
+                'caption': {
+                  'title': 'Packaging',
+                  'desc': 'We set apart their product in a vast sea of options and added to the perceived value of their product.',
+                  'show': 'always',
+                  'overlay': 'dark',
+                  'overlay_opacity': 70,
+                  'color_scheme': 'dark',
+                  'space': true,
+                  'show_desc': 'hover-always-mobile'
+                }
+              },
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-hettl.jpg',
+                  'alt': 'Describe your image',
+                  'width': 300,
+                  'height': 300,
+                  'loading': 'lazy'
+                },
+                'caption': {
+                  'title': 'Imagery',
+                  'desc': 'We helped making a lasting impression on consumers, with fresh new graphics and product photos.',
+                  'show': 'always',
+                  'overlay': 'dark',
+                  'overlay_opacity': 70,
+                  'color_scheme': 'dark',
+                  'space': true,
+                  'show_desc': 'hover-always-mobile'
+                }
+              },
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-hms31.jpg',
+                  'alt': 'Describe your image',
+                  'width': 300,
+                  'height': 300,
+                  'loading': 'lazy'
+                },
+                'caption': {
+                  'title': 'Events',
+                  'desc': 'We promoted their brand and product with an in-person and real-time engagement.',
+                  'show': 'always',
+                  'overlay': 'dark',
+                  'overlay_opacity': 70,
+                  'color_scheme': 'dark',
+                  'space': true,
+                  'show_desc': 'hover-always-mobile'
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '3',
+                'md': '2',
+                'sm': '1'
+              },
+              'col_align': 'justify-center'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Back to listing (bottom) #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': gutter,
+          'bottom': gutter
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='accent'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='<a href="#back-to-the-listing-page" rel="noopener">← Back to All Success Stories</a>',
+            settings={
+              'color_scheme': 'dark'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

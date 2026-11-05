@@ -1,0 +1,28 @@
+<!--
+  templateType: global_partial
+  label: Header no navigation
+-->
+{% dnd_area "header_no_nav" label="Header No Nav" class='main p-0' %}
+  {% dnd_section padding={'top': '0px','right': '0px','bottom': '0px','left': '0px'} %}
+{% dnd_module "module_166818726899514" path="../../modules/global/Header No Navigation", label="Header No Navigation"
+logo=
+  {
+    'override_inherited_src': true,
+  'alt': brandSettings.primaryLogo.alt,
+  'src': brandSettings.primaryLogo.src,
+  'height': 40,
+  'link': brandSettings.primaryLogo.link,
+  'suppress_company_name': true
+  },
+  button_link= { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+  button_text= 'Contact Us'
+
+%}
+  {% end_dnd_module %}
+
+{% end_dnd_section %}
+
+
+{% end_dnd_area %}
+
+

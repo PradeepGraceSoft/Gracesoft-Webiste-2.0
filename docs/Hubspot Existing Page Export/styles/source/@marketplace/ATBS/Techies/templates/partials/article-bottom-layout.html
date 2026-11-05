@@ -1,0 +1,55 @@
+<!--
+  templateType: global_partial
+  label: Article Button Layout
+-->
+{% dnd_area "body_dnd_article_sidebar" %}
+    {% dnd_section 'sidebar',
+        full_width="true",
+         padding={
+           'top': '0',
+           'bottom': '0',
+           'left': '0',
+           'right': '0'
+         },
+         margin={
+           'top': 0,
+           'bottom': 0
+         },
+         vertical_alignment='MIDDLE'
+    %}
+    
+        <!-- column left -->
+        {% dnd_column
+           vertical_alignment='MIDDLE',
+               padding={
+               'top': '0',
+               'bottom': '0',
+               'left': '0',
+               'right': '0'
+             },
+             margin={
+               'top': 0,
+               'bottom': 0
+             }
+        %}
+            {% dnd_row 
+               padding={
+               'top': '0',
+               'bottom': '0',
+               'left': '0',
+               'right': '0'
+             },
+             margin={
+               'top': 0,
+               'bottom': 0
+             }
+             %}
+                {% dnd_module path="../../modules/listing-list-article-no-sidebar-1-techies" %} {% end_dnd_module %}
+            {% end_dnd_row %}
+
+        {% end_dnd_column %}
+
+    <!-- end column left -->
+
+    {% end_dnd_section %}
+{% end_dnd_area %}

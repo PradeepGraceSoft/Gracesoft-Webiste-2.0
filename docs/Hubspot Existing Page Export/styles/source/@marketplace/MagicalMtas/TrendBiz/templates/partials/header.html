@@ -1,0 +1,68 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+{% dnd_area "header_navigation" label="Header Navigation" class='main p-0' %}
+  {% dnd_section padding={'top': '0px','right': '0px','bottom': '0px','left': '0px'} %}
+    {% dnd_module "module_166922544785932" path="../../modules/global/Header Navigation", label="Header Navigation"
+    header_social_label = 'Follow Us:',
+    social_item = [
+      {
+        'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'},},
+      },
+      {
+        'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'},},
+      },
+      {
+        'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.linkedin.com/'},},
+      },
+      {
+        'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.pinterest.com/'},},
+      }
+    ],
+    header_top_info_list = [
+      {
+        'header_info_text' : 'Call: 123 4561 5523',
+      },
+      {
+        'header_info_text' : 'Email: info@trendBiz.com',
+      }
+    ],
+    logo = {
+      'override_inherited_src': true,
+      'alt': brandSettings.primaryLogo.alt,
+      'src': brandSettings.primaryLogo.src,
+      'height': 40,
+      'link': brandSettings.primaryLogo.link,
+      'suppress_company_name': true,
+  },
+  button_link = { 'url': { 'type': 'CONTENT', 'href': './home'},},
+  button_text = 'Contact Us'
+  
+
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+
+{% dnd_section %}
+  {% dnd_module "module_166922549436333" path="../../modules/global/Mobile Menu", label="Mobile Menu"
+  mobile_menu_logo = {
+    'override_inherited_src': true,
+    'alt': brandSettings.logos[1].alt,
+    'src': brandSettings.logos[1].src,
+    'height': 40,
+    'link': brandSettings.logos[1].link,
+    'suppress_company_name': true
+}
+  
+  
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}
+
+
+
+
+{% end_dnd_area %}
+

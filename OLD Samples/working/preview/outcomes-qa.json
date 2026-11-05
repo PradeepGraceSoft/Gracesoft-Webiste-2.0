@@ -1,0 +1,72 @@
+[
+  {
+    "mode": {
+      "width": 1440
+    },
+    "during": [
+      "5",
+      "97",
+      "23"
+    ],
+    "final": [
+      "8",
+      "20",
+      "60"
+    ],
+    "overflow": false,
+    "cards": 3
+  },
+  {
+    "mode": {
+      "width": 320
+    },
+    "during": [
+      "4",
+      "41",
+      "60"
+    ],
+    "final": [
+      "8",
+      "20",
+      "60"
+    ],
+    "overflow": false,
+    "cards": 3
+  },
+  {
+    "mode": {
+      "width": 390,
+      "reducedMotion": "reduce"
+    },
+    "during": [
+      "8",
+      "20",
+      "60"
+    ],
+    "final": [
+      "8",
+      "20",
+      "60"
+    ],
+    "overflow": false,
+    "cards": 3
+  },
+  {
+    "mode": {
+      "width": 390,
+      "javaScriptEnabled": false
+    },
+    "during": [
+      "8",
+      "20",
+      "60"
+    ],
+    "final": [
+      "8",
+      "20",
+      "60"
+    ],
+    "overflow": false,
+    "cards": 3
+  }
+]

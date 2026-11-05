@@ -1,0 +1,63 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+{% dnd_area "header_navigation" label="Header Navigation" class='main p-0' %}
+  {% dnd_section padding={'top': '0px','right': '0px','bottom': '0px','left': '0px'} %}
+    {% dnd_module "module_16684458481316" path="../../modules/global/Header Navigation", label="Header Navigation"
+    header_top_info_list = [
+      {
+        'header_info_text' : 'Call: 123 4561 5523',
+      },
+      {
+        'header_info_text' : 'Email: info@edumind.com',
+      }
+    ],
+    header_top_action_item = [
+      {
+        'header_top_action_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+        'header_top_action_link_text' : 'Login',
+      },
+      {
+        'header_top_action_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+        'header_top_action_link_text' : 'Register',
+      }
+    ],
+    logo = {
+      'override_inherited_src': true,
+      'alt': brandSettings.primaryLogo.alt,
+      'src': brandSettings.primaryLogo.src,
+      'height': 40,
+      'link': brandSettings.primaryLogo.link,
+      'suppress_company_name': true
+  },
+  no_wrapper=True
+  
+
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+
+{% dnd_section %}
+  {% dnd_module "module_16604111567527" path="../../modules/Global/Mobile Menu", label="Mobile Menu"
+  mobile_menu_logo = {
+    'override_inherited_src': true,
+    'alt': brandSettings.logos[1].alt,
+    'src': brandSettings.logos[1].src,
+    'height': 40,
+    'link': brandSettings.logos[1].link,
+    'suppress_company_name': true
+}
+no_wrapper=True
+  
+  
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}
+
+
+
+
+{% end_dnd_area %}
+

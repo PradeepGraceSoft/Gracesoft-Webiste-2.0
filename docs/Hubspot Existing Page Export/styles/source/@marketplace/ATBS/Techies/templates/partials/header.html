@@ -1,0 +1,207 @@
+<!--
+  templateType: global_partial
+  label: Website Header
+-->
+{% set header_dnd_area = theme.header.header_dnd_area %}
+{% set header_sticky = theme.sticky.header_sticky %}
+
+{% set header_color = theme.header.text_color %} 
+{% set header_color_class = '' %} 
+{% if header_color == 'white' %} 
+  {% set header_color_class = ' inverse-text' %} 
+{% endif %}
+
+{% set sticky_text_color = theme.sticky.text_color %} 
+{% set sticky_color_class = "" %}
+{% if sticky_text_color == 'white' %} 
+{% set sticky_color_class = ' inverse-text' %} 
+{% endif %}
+
+{% set offcanvas_text_color = theme.offcanvas.text_color %}
+{% set offcanvas_color_class = '' %}
+{% if offcanvas_text_color == 'white' %}
+{% set offcanvas_color_class = ' inverse-text' %}
+{% endif %}
+
+{% if header_dnd_area == 'enable' %}
+<header class="site-header header-default-no-dnd{{header_color_class}}">
+  <div class="site-header__inner hidden-xs hidden-sm">
+    {% dnd_area "body_dnd_header" %}
+            {% dnd_section 'header',
+                full_width="true",
+                 maxwidth = auto,
+                 padding={
+                   'top': '0',
+                   'bottom': '0',
+                   'left': '0',
+                   'right': '0'
+                 },
+                 margin={
+                   'top': 0,
+                   'bottom': 0
+                 },
+                 vertical_alignment='MIDDLE'
+            %}
+            <!-- column left -->
+                {% dnd_column 'header-col-3' 
+                   offset='0', 
+                   width='2',
+                   vertical_alignment='MIDDLE'
+                %}
+                    {% dnd_row vertical_alignment='MIDDLE' %}
+                       {% dnd_module 'logo_main' path='../../modules/logo-techies' %} {% end_dnd_module %}
+                    {% end_dnd_row %}
+                {% end_dnd_column %}
+
+                <!-- end column left -->
+                <!-- column right  -->
+                {% dnd_column 'header-col-9',
+                   offset='2', 
+                   width='10'
+                %}
+                {% dnd_row vertical_alignment='MIDDLE' %}
+                        {% dnd_module path="../../modules/menu-header-techies" %} {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% end_dnd_column %}
+                <!-- end column right -->
+            {% end_dnd_section %}
+        {% end_dnd_area %}
+  </div>
+  <div id="atbs-mobile-header" class="mobile-header visible-xs visible-sm">
+      <div class="mobile-header__inner flex-box align-item-center justify-content-space">
+          <div class="header-logo">
+              {% module "module_1619403013427124" path="../../modules/logo-techies", label="Logo Mobile" %}
+          </div>
+          <!-- logo close -->
+          <div class="mobile-header__section text-right">
+              <div class="flex-box justify-content-center align-item-center lwa lwa-template-modal">
+                  <a href="#atbs-offcanvas-mobile" class="offcanvas-menu-toggle mobile-header-btn atbs-icon-menu-svg js-atbs-offcanvas-toggle">
+                      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447716 2 0 1.55228 0 1Z" fill="#222222"></path>
+                          <path d="M0 7.03223C0 6.47994 0.447715 6.03223 1 6.03223H19C19.5523 6.03223 20 6.47994 20 7.03223C20 7.58451 19.5523 8.03223 19 8.03223H1C0.447716 8.03223 0 7.58451 0 7.03223Z" fill="#222222"></path>
+                          <path d="M1 12.0645C0.447715 12.0645 0 12.5122 0 13.0645C0 13.6167 0.447716 14.0645 1 14.0645H19C19.5523 14.0645 20 13.6167 20 13.0645C20 12.5122 19.5523 12.0645 19 12.0645H1Z" fill="#222222"></path>
+                      </svg>
+
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+{% else %}
+<header class="site-header site-header-default{{header_color_class}}" data-layout="container">
+    <div class="flex-box align-item-center hidden-sm hidden-xs">
+        <div class="column-width-75 navigation-bar__section flex-box align-item-center">
+            <div class="header-logo">
+                {% module "module_1619403013427123" path="../../modules/logo-techies", label="Logo Desktop" %}
+            </div>
+            <!-- menu -->
+            {% module "module_161940301342719" path="../../modules/menu-header-techies", label="Menu Header" %}
+        </div>
+        <div class="column-width-25 header-btn-wrapper flex-box align-item-center justify-content-end">
+            <!-- button offcanvas -->
+            {% module "module_161940301342741" path="../../modules/button-offcanvas-techies", label="Button Offcanvas header" %}
+        </div>
+    </div>
+    <div id="atbs-mobile-header" class="mobile-header visible-xs visible-sm ">
+      <div class="mobile-header__inner flex-box align-item-center justify-content-space">
+          <div class="header-logo">
+              {% module "module_1619403013427124" path="../../modules/logo-techies", label="Logo Mobile" %}
+          </div>
+          <!-- logo close -->
+          <div class="mobile-header__section text-right">
+              <div class="flex-box justify-content-center align-item-center lwa lwa-template-modal">
+                  <a href="#atbs-offcanvas-mobile" class="offcanvas-menu-toggle mobile-header-btn atbs-icon-menu-svg js-atbs-offcanvas-toggle">
+                      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447716 2 0 1.55228 0 1Z" fill="#222222"></path>
+                          <path d="M0 7.03223C0 6.47994 0.447715 6.03223 1 6.03223H19C19.5523 6.03223 20 6.47994 20 7.03223C20 7.58451 19.5523 8.03223 19 8.03223H1C0.447716 8.03223 0 7.58451 0 7.03223Z" fill="#222222"></path>
+                          <path d="M1 12.0645C0.447715 12.0645 0 12.5122 0 13.0645C0 13.6167 0.447716 14.0645 1 14.0645H19C19.5523 14.0645 20 13.6167 20 13.0645C20 12.5122 19.5523 12.0645 19 12.0645H1Z" fill="#222222"></path>
+                      </svg>
+
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+{% endif %}
+<div id="atbs-offcanvas-primary" class="atbs-offcanvas js-atbs-offcanvas inverse-text init-display-none is-actives" data-layout="">
+    {% module "module_161940301342333" path="../../modules/background-offcanvas-techies", label="Background Offcanvas" %}
+    <div class="atbs-offcanvas__inner flex-box align-item-center scrollbar-hidden">
+        <div class="column-left column-width-30">
+            <div class="offcanvas-navigation__wrapper scrollbar-hidden">
+                 {% module "module_161940301342734" path="../../modules/menu-offcanvas-techies", label="Menu Offcanvas" %}
+            </div>
+        </div>
+        <div class="column-right column-width-70">
+            <a href="#atbs-offcanvas-primary" class="atbs-offcanvas-close js-atbs-offcanvas-close" aria-label="Close"><span aria-hidden="true">✕</span></a>
+             {% module "module_16194030134124" path="../../modules/gallery-offcanvas-techies", label="Image Offcanvas" %}
+
+            <div class="flex-box box-space-50">
+                <div class="column-width-33">
+                    <div class="contact-paragraph__wrapper">
+                        <div class="contact-paragraph__text">
+                            {% module "module_16194030134227" path="../../modules/information-offcanvas-techies", label="Information Offcanvas" %}
+                        </div>
+                    </div>
+                </div>
+                <div class="column-width-33">
+                    <div class="contact-paragraph__wrapper">
+                        <div class="contact-paragraph__text">
+                            {% module "module_16194030134226" path="../../modules/information-offcanvas-techies", label="Information Offcanvas" %}
+                        </div>
+                    </div>
+                </div>
+                <div class="column-width-33">
+                    {% module 'site_search' path='@hubspot/search_input', label='search', field_label='search',
+                placeholder='Search', autocomplete="off" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="atbs-offcanvas-mobile" class="atbs-offcanvas js-atbs-offcanvas init-display-none{{offcanvas_color_class}}">
+    <div class="atbs-offcanvas__inner scrollbar-hidden">
+        <div class="atbs-offcanvas__section">
+            <a href="#atbs-offcanvas-mobile" class="atbs-offcanvas-close js-atbs-offcanvas-close" aria-label="Close"><span aria-hidden="true">✕</span></a>
+            <div class="header-logo">
+                {% module "module_1619403013427125" path="../../modules/logo-techies", label="Logo Offcanvas" %}
+            </div>
+        </div>
+        <div class="atbs-offcanvas__section">
+            {% module "module_161940301342734" path="../../modules/menu-offcanvas-techies", label="Menu Offcanvas" %}
+        </div>
+
+        <div class="atbs-offcanvas__section dropdown-language__wrapper">
+            {% module 'language-switcher' path='@hubspot/language_switcher', label='Language switcher', display_mode='localized' %}
+        </div>
+        <div class="atbs-offcanvas__section flex-box flex-direction-column justify-content-end">
+            <div class="social-list list-horizontal">
+                 {% module "module_16194030134555" path="../../modules/social-follow-techies", label="Social Follow" %}
+            </div>
+        </div>
+    </div>
+</div>
+{% if header_sticky == 'enable' %}
+{% set header_sticky_style = theme.sticky.header_sticky_style %}
+{% if header_sticky_style == 'style_1' %}
+{% set classHeaderStickyStyle = ' atbs-js-sticky-header-standard' %}
+{% else %}
+{% set classHeaderStickyStyle = '' %}
+{% endif %}
+<div id="atbs-sticky-header" class="sticky-header js-sticky-header{{classHeaderStickyStyle}} init-display-none{{sticky_color_class}}">
+  <div class="flex-box align-item-center">
+      <div class="column-width-75 navigation-bar__section flex-box align-item-center">
+          <div class="header-logo">
+              {% module "module_1619403013427126" path="../../modules/logo-techies", label="Logo Sticky" %}
+          </div>
+          <!-- menu -->
+          {% module "module_161940301342719" path="../../modules/menu-header-techies", label="Menu Header" %}
+      </div>
+      <div class="column-width-25 header-btn-wrapper flex-box align-item-center justify-content-end">
+          <!-- button offcanvas -->
+          {% module "module_161940301342741" path="../../modules/button-offcanvas-techies", label="Button Offcanvas header" %}
+      </div>
+  </div>
+</div>
+{% endif %}

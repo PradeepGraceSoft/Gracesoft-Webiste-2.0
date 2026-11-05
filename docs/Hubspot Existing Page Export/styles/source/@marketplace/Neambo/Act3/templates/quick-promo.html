@@ -1,0 +1,160 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Quick promo
+  screenshotPath: ../images/template-previews/quick-promo.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : gutter*3,
+          "top" : gutter
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/section-intro",
+            overline="Created for Pros",
+            title="Build & Grow",
+            settings={
+              "overline_badge_bottom_space" : "20px",
+              "overline_style" : "badge",
+              "text_max_width" : "420",
+              "title_looks_like" : "display",
+              "title_tag" : "h1"
+            },
+            wrapper={
+              "margin" : {
+                "bottom" : {
+                  "lg" : gutter*2|string
+                }
+              },
+              "max_width" : {
+                "lg" : "550"
+              }
+            }
+          %}
+            {% module_attribute "desc" %}
+              <p>Create fast, stunning websites with Act3. It's easy, powerful, and no developers needed!</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/go-card",
+            items=[
+              {
+                "image" : {
+                  "src" : "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/sample-09-2024-02-resize-optim.jpg",
+                  "alt" : "Describe your image",
+                  "width" : 726,
+                  "height" : 540,
+                  "loading" : "disabled"
+                },
+                "title" : "Beautiful",
+                "desc" : "",
+                "arrow" : false,
+                "color" : "white",
+                "title_tag" : "h2",
+                "text_align" : "center",
+                "link" : {
+                  "no_follow" : true,
+                  "open_in_new_tab" : true,
+                  "url" : {
+                    "href" : "https://www.hubspot.com/",
+                    "type" : "EXTERNAL"
+                  }
+                }
+              },
+              {
+                "image" : {
+                  "src" : "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/sample-09-2024-03-resize-optim.jpg",
+                  "alt" : "sample-09-2024-03-resize-optim",
+                  "width" : 726,
+                  "height" : 540,
+                  "loading" : "lazy"
+                },
+                "title" : "Modern",
+                "desc" : "",
+                "arrow" : false,
+                "color" : "white",
+                "title_tag" : "h2",
+                "text_align" : "center",
+                "link" : {
+                  "no_follow" : true,
+                  "open_in_new_tab" : true,
+                  "url" : {
+                    "href" : "https://www.hubspot.com/",
+                    "type" : "EXTERNAL"
+                  }
+                }
+              },
+              {
+                "image" : {
+                  "src" : "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/sample-09-2024-01-resize-optim.jpg",
+                  "alt" : "sample-09-2024-01-resize-optim",
+                  "width" : 726,
+                  "height" : 540,
+                  "loading" : "lazy"
+                },
+                "title" : "Performant",
+                "desc" : "",
+                "arrow" : false,
+                "color" : "white",
+                "title_tag" : "h2",
+                "text_align" : "center",
+                "link" : {
+                  "no_follow" : true,
+                  "open_in_new_tab" : true,
+                  "url" : {
+                    "href" : "https://www.hubspot.com/",
+                    "type" : "EXTERNAL"
+                  }
+                }
+              }
+            ],
+            settings={
+              "col" : {
+                "lg" : "3",
+                "md" : "3"
+              }
+            },
+            wrapper={
+              "block_align" : {
+                "sm" : "center"
+              },
+              "max_width" : {
+                "sm" : "550"
+              },
+              "text_align" : {
+                "lg" : "center"
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Wrap-up #}
+
+    {% include_dnd_partial path="../sections/wrap-up.html" %}
+
+  {% end_dnd_area %}
+{% endblock body %}

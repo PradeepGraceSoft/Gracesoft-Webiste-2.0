@@ -1,0 +1,517 @@
+<!--
+  templateType: section
+  label: Cards
+  isAvailableForNewContent: true
+  screenshotPath: ../Images/Page Preview/Cards.png
+  description: "Card which contain Heading, Desciption, Image, CTA, or css options(Background, border etc)."
+-->
+	{% dnd_section max_width = 1155,
+			 padding={
+				'default':{
+				'top': 100,
+				'bottom': 100
+				},
+				'mobile':{
+				'top': 60,
+				'bottom': 60
+				}
+			}
+		%}
+			{% dnd_column %}
+				{% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+					 add_custom_class_here="content-1",
+					 choose_content_type="single-content",
+					 single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"2",
+						add_heading_here:"Heading Text",
+						check_to_show_description:true,
+						add_description_here:"<p>The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a href='https://palmspire-3842749.hs-sites.com/en/'>offering</a>.</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-center",
+						set_max_width_of_the_content:"789"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+				{% dnd_row 
+					 padding={
+					  'default':{
+					  'top': 51
+					  },
+					  'mobile':{
+					  'top': 20
+					  }
+				 } 
+				%}
+					{% dnd_column, offset = 0, width = 4 %}
+						 {% dnd_row 
+								 padding={
+								 'default':{
+								 'bottom': 0
+								 },
+								 'mobile':{
+								 'bottom': 20
+								 }
+								}
+						 %}
+							 {% dnd_module path='../modules/Card', label="Card"
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4"
+									check_to_show_box_shadow = true,
+									check_to_show_hover_effect = false,
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									color : "#fff"
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here : {
+					        'alt': 'Headphones',
+									'src' : get_asset_url('../Images/Resized Image/Headphones.svg'),
+									 'width':48,
+									 'height':48
+									},
+									image_size_group : {
+									set_width_of_image : '52',
+									set_height_of_image : '52'
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : '4',
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false
+									},
+									style={
+										 'check_to_show_padding':true,
+										 'cards_spacing':{
+											 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													   'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }
+											 },
+											 'adjust_spacing_in_tab_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													  'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }											 
+											 },
+											 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+													 'top':{
+													   'value':20
+													 },
+													 'bottom':{
+													   'value':20
+													 },
+													 'left':{
+													  'value':20
+													 },
+													 'right':{
+													  'value':20
+													 }
+												 }														 
+											 }
+										 },
+										 'check_to_show_border_on_cards':false,
+										 'alignment':{
+										  'horizontal_align':'CENTER'
+										 },
+										 'add_spacing_here':{
+											 'margin':{
+												 'top':{
+												  'value':"25"
+												 }
+											 }
+										 },
+										 'check_this_to_show_maximum_width_of_card' : false
+									 }
+							 %}
+							 {% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+					{% dnd_column, offset = 4, width = 4 %}
+						{% dnd_row 
+							padding={
+							'default':{
+							'bottom': 0
+							},
+							'mobile':{
+							'bottom': 20
+							}
+						}
+						%}
+							{% dnd_module path='../modules/Card', label="Card"
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4"
+									check_to_show_box_shadow = true,
+									check_to_show_hover_effect = false,
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									color : "#fff"
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here : {
+					        'alt': 'Check Shield',
+									'src' : get_asset_url('../Images/shield.svg'),
+									'width':49,
+									'height':48
+									},
+									image_size_group : {
+									set_width_of_image : '52',
+									set_height_of_image : '52'
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : '4',
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false
+									},
+									style={
+										 'check_to_show_padding':true,
+										 'cards_spacing':{
+											 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													   'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }
+											 },
+											 'adjust_spacing_in_tab_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													  'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }											 
+											 },
+											 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+													 'top':{
+													   'value':20
+													 },
+													 'bottom':{
+													   'value':20
+													 },
+													 'left':{
+													  'value':20
+													 },
+													 'right':{
+													  'value':20
+													 }
+												 }														 
+											 }
+										 },
+										 'check_to_show_border_on_cards':false,
+										 'alignment':{
+										  'horizontal_align':'CENTER'
+										 },
+										 'add_spacing_here':{
+											 'margin':{
+												 'top':{
+												  'value':"25"
+												 }
+											 }
+										 },
+										 'check_this_to_show_maximum_width_of_card' : false
+									 }
+							 %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+					{% dnd_column, offset = 8, width = 4 %}
+						{% dnd_row %}
+							{% dnd_module path='../modules/Card', label="Card"
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4"
+									check_to_show_box_shadow = true,
+									check_to_show_hover_effect = false,
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									color : "#fff"
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here : {
+					        'alt': 'Up Graph',
+									'src' : get_asset_url('../Images/Resized Image/Up Graph.svg'),
+									'width': 40,
+									'height':48
+									},
+									image_size_group : {
+									set_width_of_image : '48',
+									set_height_of_image : '48'
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : '4',
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false
+									},
+									style={
+										 'check_to_show_padding':true,
+										 'cards_spacing':{
+											 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													   'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }
+											 },
+											 'adjust_spacing_in_tab_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													  'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }											 
+											 },
+											 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+													 'top':{
+													   'value':20
+													 },
+													 'bottom':{
+													   'value':20
+													 },
+													 'left':{
+													  'value':20
+													 },
+													 'right':{
+													  'value':20
+													 }
+												 }														 
+											 }
+										 },
+										 'check_to_show_border_on_cards':false,
+										 'alignment':{
+										  'horizontal_align':'CENTER'
+										 },
+										 'add_spacing_here':{
+											 'margin':{
+												 'top':{
+												  'value':"25"
+												 }
+											 }
+										 },
+										 'check_this_to_show_maximum_width_of_card' : false
+									 }
+							 %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+				{% end_dnd_row %}
+				{% dnd_row 
+					 padding={
+					 'default':{
+					 'top': 64
+					 },
+					 'mobile':{
+					 'top': 30
+					 }
+				 }
+				%}
+					{% dnd_module path='../modules/Buttons', label="Buttons"
+							choose_number_of_cta="single",
+							single_cta_group={
+							"choose_type_of_cta":"primary-cta",
+							primary_cta_group:{
+							"choose_cta_type_here":"solid-cta"
+							}
+							},
+							styles={
+								'alignment_field':{
+									'horizontal_align' : 'CENTER'
+								},
+								'single_cta_alignment':{
+									'horizontal_align' : 'CENTER'
+								}
+						  }
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!---------------------------------------- Three col Section Ended ----------------------------------->

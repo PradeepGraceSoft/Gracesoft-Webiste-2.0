@@ -1,0 +1,1075 @@
+[
+  {
+    "section": "gs-header",
+    "controls": [
+      {
+        "text": "",
+        "class": "gs-brand",
+        "color": "rgb(35, 58, 154)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(35, 58, 154)"
+      },
+      {
+        "text": "Product",
+        "class": "",
+        "color": "rgb(25, 56, 71)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(25, 56, 71)"
+      },
+      {
+        "text": "Property Management System",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Payments and Billing",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Point of Sale",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Booking Engine",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Channel Manager",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Website Builder",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Google Hotel Ads",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Guest Communication",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Hospitality CRM",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "AI Voice and Chat Assistant",
+        "class": "",
+        "color": "rgb(52, 72, 61)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(52, 72, 61)"
+      },
+      {
+        "text": "Pricing",
+        "class": "",
+        "color": "rgb(25, 56, 71)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(25, 56, 71)"
+      },
+      {
+        "text": "Reviews",
+        "class": "",
+        "color": "rgb(25, 56, 71)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(25, 56, 71)"
+      },
+      {
+        "text": "Resources",
+        "class": "",
+        "color": "rgb(25, 56, 71)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(25, 56, 71)"
+      },
+      {
+        "text": "Company",
+        "class": "",
+        "color": "rgb(25, 56, 71)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(25, 56, 71)"
+      },
+      {
+        "text": "Login",
+        "class": "",
+        "color": "rgb(25, 56, 71)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(25, 56, 71)"
+      },
+      {
+        "text": "Request a Demo",
+        "class": "atelier-demo",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(11, 53, 69)",
+        "border": "rgb(11, 53, 69)"
+      },
+      {
+        "text": "Start Free Trial",
+        "class": "atelier-trial",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(36, 88, 67)",
+        "border": "rgb(36, 88, 67)"
+      }
+    ]
+  },
+  {
+    "section": "gs-hero",
+    "controls": [
+      {
+        "text": "Request Demo",
+        "class": "gs-button gs-button--primary",
+        "color": "rgb(9, 45, 52)",
+        "bg": "rgb(121, 227, 207)",
+        "border": "rgb(121, 227, 207)"
+      },
+      {
+        "text": "Start Free Trial",
+        "class": "gs-button gs-button--secondary",
+        "color": "rgb(232, 248, 252)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(139, 181, 190)"
+      }
+    ]
+  },
+  {
+    "section": "platform",
+    "controls": []
+  },
+  {
+    "section": "",
+    "controls": []
+  },
+  {
+    "section": "manage-operations",
+    "controls": [
+      {
+        "text": "Explore the Property Management System →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore reservations →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore front desk tools →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore housekeeping →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore payments →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore point of sale →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore reporting →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "01Reservations",
+        "class": "",
+        "color": "rgb(11, 51, 58)",
+        "bg": "rgb(139, 228, 211)",
+        "border": "rgb(11, 51, 58)"
+      },
+      {
+        "text": "02Front desk",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "03Housekeeping",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "04Billing and payments",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "05Point of sale",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "06Reporting",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      }
+    ]
+  },
+  {
+    "section": "tour-head",
+    "controls": [
+      {
+        "text": "Explore the Property Management System →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      }
+    ]
+  },
+  {
+    "section": "sell-direct",
+    "controls": [
+      {
+        "text": "Explore Website Builder →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore the Booking Engine →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore the Channel Manager →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore Google Hotel Ads →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "01Website Builder",
+        "class": "",
+        "color": "rgb(11, 51, 58)",
+        "bg": "rgb(139, 228, 211)",
+        "border": "rgb(11, 51, 58)"
+      },
+      {
+        "text": "02Booking engine",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "03Channel manager",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "04Google Hotel Ads",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      }
+    ]
+  },
+  {
+    "section": "tour-head",
+    "controls": []
+  },
+  {
+    "section": "guest-assistant",
+    "controls": [
+      {
+        "text": "Explore the Unified Inbox →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore GraceSoft AI →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore GraceSoft AI →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "Explore Hospitality CRM →",
+        "class": "tour-link",
+        "color": "rgb(33, 78, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 78, 57)"
+      },
+      {
+        "text": "01Guest inbox",
+        "class": "",
+        "color": "rgb(11, 51, 58)",
+        "bg": "rgb(139, 228, 211)",
+        "border": "rgb(11, 51, 58)"
+      },
+      {
+        "text": "02AI voice assistant",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "03AI chat assistant",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      },
+      {
+        "text": "04Guest profiles and follow-up",
+        "class": "",
+        "color": "rgb(217, 234, 240)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(217, 234, 240)"
+      }
+    ]
+  },
+  {
+    "section": "tour-head",
+    "controls": []
+  },
+  {
+    "section": "property-types",
+    "controls": [
+      {
+        "text": "Hotels and MotelsCoordinate room assignments, arrivals ",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      },
+      {
+        "text": "Bed & BreakfastsKeep room availability and guest detail",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      },
+      {
+        "text": "Resorts and InnsConnect guest stays with front desk and",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      },
+      {
+        "text": "Vacation RentalsTrack bookings and availability across ",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      },
+      {
+        "text": "Campgrounds and RV ParksExplore reservations for sites ",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      },
+      {
+        "text": "Dude RanchesExplore reservation workflows for ranch sta",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      },
+      {
+        "text": "CondosFind availability and reservations by condo unit.",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      },
+      {
+        "text": "Multi-Property GroupsExplore tools for teams responsibl",
+        "class": "property-arch",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(72, 103, 119)"
+      }
+    ]
+  },
+  {
+    "section": "customer-stories",
+    "controls": [
+      {
+        "text": "Read Customer Testimonials →",
+        "class": "",
+        "color": "rgb(52, 78, 89)",
+        "bg": "rgb(243, 237, 223)",
+        "border": "rgb(169, 193, 174)"
+      },
+      {
+        "text": "Explore Case Studies →",
+        "class": "",
+        "color": "rgb(52, 78, 89)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(169, 193, 174)"
+      }
+    ]
+  },
+  {
+    "section": "",
+    "controls": [
+      {
+        "text": "Read Customer Testimonials →",
+        "class": "",
+        "color": "rgb(52, 78, 89)",
+        "bg": "rgb(243, 237, 223)",
+        "border": "rgb(169, 193, 174)"
+      },
+      {
+        "text": "Explore Case Studies →",
+        "class": "",
+        "color": "rgb(52, 78, 89)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(169, 193, 174)"
+      }
+    ]
+  },
+  {
+    "section": "awards",
+    "controls": [
+      {
+        "text": "Read the SoftwareSuggest guide →",
+        "class": "",
+        "color": "rgb(29, 81, 58)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(29, 81, 58)"
+      }
+    ]
+  },
+  {
+    "section": "faq",
+    "controls": [
+      {
+        "text": "What is hospitality property management software?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "What is GraceSoft Easy InnKeeping?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "What types of properties does GraceSoft support?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Can guests book directly through my website?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Explore the booking engine",
+        "class": "",
+        "color": "rgb(32, 80, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 80, 57)"
+      },
+      {
+        "text": "Will it work with my booking channels and payment provi",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Review booking channels",
+        "class": "",
+        "color": "rgb(32, 80, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 80, 57)"
+      },
+      {
+        "text": "Check payment integrations",
+        "class": "",
+        "color": "rgb(32, 80, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 80, 57)"
+      },
+      {
+        "text": "Can GraceSoft manage multiple properties?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Does GraceSoft offer AI Voice and Chat Assistants?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Does GraceSoft provide mobile access?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "How much does Easy InnKeeping cost?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "View pricing",
+        "class": "",
+        "color": "rgb(32, 80, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 80, 57)"
+      },
+      {
+        "text": "Can I see the software before deciding?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Request a demo",
+        "class": "",
+        "color": "rgb(32, 80, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 80, 57)"
+      },
+      {
+        "text": "Can I bring over existing reservations and guest record",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "What support is available?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Who can update my website?",
+        "class": "",
+        "color": "rgb(23, 57, 77)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(23, 57, 77)"
+      },
+      {
+        "text": "Explore Website Builder",
+        "class": "",
+        "color": "rgb(32, 80, 57)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 80, 57)"
+      }
+    ]
+  },
+  {
+    "section": "operator-reading",
+    "controls": [
+      {
+        "text": "Manage operations5 Mistakes Hoteliers Make When Managin",
+        "class": "",
+        "color": "rgb(36, 62, 49)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(36, 62, 49)"
+      },
+      {
+        "text": "Sell direct7 Ways to Increase Direct Bookings with an I",
+        "class": "",
+        "color": "rgb(36, 62, 49)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(36, 62, 49)"
+      },
+      {
+        "text": "Engage guestsFrom Check-In to Check-Out: How Automation",
+        "class": "",
+        "color": "rgb(36, 62, 49)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(36, 62, 49)"
+      },
+      {
+        "text": "View All Articles →",
+        "class": "reading-all",
+        "color": "rgb(33, 77, 54)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(33, 77, 54)"
+      }
+    ]
+  },
+  {
+    "section": "final-demo",
+    "controls": [
+      {
+        "text": "Request a Demo",
+        "class": "gs-button gs-button--primary",
+        "color": "rgb(12, 48, 58)",
+        "bg": "rgb(128, 228, 208)",
+        "border": "rgb(255, 250, 240)"
+      }
+    ]
+  },
+  {
+    "section": "site-footer",
+    "controls": [
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(32, 76, 58)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 76, 58)"
+      },
+      {
+        "text": "PMS Login",
+        "class": "",
+        "color": "rgb(32, 76, 58)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 76, 58)"
+      },
+      {
+        "text": "Support Center",
+        "class": "",
+        "color": "rgb(32, 76, 58)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(32, 76, 58)"
+      },
+      {
+        "text": "Request a Demo",
+        "class": "",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(36, 88, 67)",
+        "border": "rgb(255, 255, 255)"
+      },
+      {
+        "text": "sales@gracesoft.com",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "+1-713-981-5300",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "+1-832-919-2384",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "+91-72004-23323",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Products",
+        "class": "",
+        "color": "rgb(255, 245, 217)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(255, 245, 217)"
+      },
+      {
+        "text": "Hotel Management Software",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Hotel Reservation Software",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Website Booking Software",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Channel Manager",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Payments",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Point of Sale",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Guest Communication",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Hospitality CRM",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "AI Voice and Chat",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Website Builder",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Free Inn & B&B Software",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Free Hotel Management Software",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Free Vacation Rental Software",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Property Types",
+        "class": "",
+        "color": "rgb(255, 245, 217)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(255, 245, 217)"
+      },
+      {
+        "text": "Hotels and Motels",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Bed & Breakfasts",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Resorts and Inns",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Vacation Rentals",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Campgrounds and RV Parks",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Dude Ranches",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Condos",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Multi-Property Groups",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Resources and Support",
+        "class": "",
+        "color": "rgb(255, 245, 217)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(255, 245, 217)"
+      },
+      {
+        "text": "Blog",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Customer Testimonials",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Case Studies",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Pricing",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Company",
+        "class": "",
+        "color": "rgb(255, 245, 217)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(255, 245, 217)"
+      },
+      {
+        "text": "About GraceSoft",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "GraceSoft USA",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "GraceSoft India",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "GraceSoft Canada",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "GraceSoft Nigeria",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "GraceSoft Middle East",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Contact",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Privacy",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      },
+      {
+        "text": "Terms",
+        "class": "",
+        "color": "rgb(43, 71, 88)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(43, 71, 88)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,314 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Instructor Details
+  screenshotPath: ../images/template-previews/instructor-details.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+  {% dnd_area "dnd_area"
+    label="Main section",
+    class="body-container body-container--team-details p-0"
+  %}
+
+  {# Breadcrumb Section Start #} 
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# Team Details Start #}
+  {% dnd_section max_width=1200, class="edumind-container" background_color={{ context.background_color || "#FFFFFF" }}, margin={
+  'top': '0px',
+  'bottom': '0px',
+  'left': '0px',
+  'right': '0px'
+  },  padding={
+  'top': '130px',
+  'bottom': '130px',
+  'left': '0px',
+  'right': '0px'
+  } %}
+    {% dnd_column %}
+        {% dnd_row %}
+
+            {% dnd_column width=6, offset=0 %}
+                {% dnd_row, margin={
+                    'top': '0px',
+                    'bottom': '30px',
+                    'left': '0px',
+                    'right': '0px'
+                },  padding={
+                    'top': '0px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                } %}
+                {% dnd_module "module_16677164515911" path="../modules/Single Image", label="Single Image"
+                    extra_class = 'team-image',
+                    single_image = { 
+                        'alt': 'Instructor Image', 
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/instructor/instructor-details.jpg') 
+                    },
+
+                    %}
+
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+
+            {% dnd_column width=6, offset=6 %}
+
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <span class="subtitle">Instructor</span>
+                            <h3 class="name">Edward Narton</h3>
+                            <span class="designation">Developer and Teacher</span>
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+
+
+                  {% dnd_row, margin={
+                    'top': '20px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                },  padding={
+                    'top': '0px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                } %}
+                    {% dnd_module "module_166772022022332" path="../modules/Social Icon", label="Social Icon"
+                        social_icon_group = [
+                        {
+                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                        },
+                        {
+                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                        },
+                        {
+                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                        },
+                        {
+                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.linkedin.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                        }
+                        ]
+                        %}
+                        {% end_dnd_module %}
+                {% end_dnd_row %}
+
+                  {% dnd_row, margin={
+                    'top': '20px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                },  padding={
+                    'top': '0px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                } %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h4 class="title">About Me</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur elit sed do eius mod tempor incidid labore dolore magna aliqua. enim ad minim eniam quis nostrud exercitation ullamco laboris nisi aliquip ex commodo consequat. duis aute irure dolor in repreed ut perspiciatis unde omnis iste natus error sit voluptat em acus antium.</p>
+                            <p>doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch itecto beatae vitae dicta sunt explicabo.</p>
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row, margin={
+                    'top': '20px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                },  padding={
+                    'top': '0px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                } %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h4 class="title">Contact Me</h4>
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                {% dnd_row %}
+                    {% dnd_module "module_166771993266328" path="../modules/List", label="List"
+                    select_list = 'label-list',
+                    label_list_item = [
+                        {
+                            'label_text' : '<strong>Address:</strong>:',
+                            'label_text_value' : 'North Helenavile, FV77 8WS',
+                        },
+                        {
+                            'label_text' : '<strong>Email:</strong>',
+                            'label_text_value' : 'edumind@example.com',
+                        },
+                        {
+                            'label_text' : '<strong>Phone:</strong>:',
+                            'label_text_value' : '+37 (417) 683-4409',
+                        }
+                    ]
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+
+                
+
+            {% end_dnd_column %}
+
+
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# Team Details End #}
+
+    {# Course Section Start #} 
+  {% dnd_section max_width=1200, class="edumind-container course-area" background_color={{ context.background_color || "#F0F4F5" }}, margin={
+    'top': '0px',
+    'bottom': '0px',
+    'left': '0px',
+    'right': '0px'
+    },  padding={
+    'top': '120px',
+    'bottom': '120px',
+    'left': '0px',
+    'right': '0px'
+    } %} 
+
+  {% dnd_column %}
+
+    {% dnd_row %} 
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module "module_16675429389378" path="../modules/Section Title", label="Section Title"  
+            layout = 'without-excerpt',
+            section_subtitle = '<span>Edward Narton</span>',
+            section_title = '<h2>My Popular Courses</h2>',
+            section_shape = { 
+              'alt': 'Section Shape Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/svg/section-title-shape.svg')  
+            }
+          %}
+          {% end_dnd_module %} 
+        {% end_dnd_row %} 
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_column width=4, offset=0 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_16675432195049" path="../modules/Course", label="Course"  
+            course_image = { 
+              'alt': 'Course Image',    
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/course/course-01.jpg')  
+            },
+            course_time = '<span>3 Weeks</span>',
+            course_badge = '<span>Beginner</span>',
+            course_title = '<h3>Build Responsive Real- World Websites with HTML and CSS</h3>',
+            course_rating_content = '<span>(5.0 /7 Rating)</span>'
+            course_price = '<h4>$29.00</h4>',
+            course_meta_item = [
+              { 
+                'course_meta_content' : '8 Lessons'
+              },
+              { 
+                'course_meta_content' : '20 Students'
+              }
+            ]
+          %}
+        {% end_dnd_module %} 
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=4, offset=4 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_16675432195049" path="../modules/Course", label="Course" 
+            course_image = { 
+              'alt': 'Course Image',    
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/course/course-02.jpg')  
+            },
+            course_time = '<span>8 Weeks</span>',
+            course_badge = '<span>Advanced</span>',
+            course_title = '<h3>Java Programming Masterclass for Software Developers</h3>',
+            course_rating_content = '<span>(5.0 /7 Rating)</span>'
+            course_price = '<h4>$50.00</h4>',
+            course_meta_item = [
+              { 
+                'course_meta_content' : '15 Lessons'
+              },
+              { 
+                'course_meta_content' : '35 Students'
+              }
+            ]
+          %}
+        {% end_dnd_module %} 
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=4, offset=8 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_16675432195049" path="../modules/Course", label="Course"
+            course_image = { 
+              'alt': 'Course Image',    
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/course/course-03.jpg')  
+            },
+            course_time = '<span>5 Weeks</span>',
+            course_badge = '<span>Intermediate</span>',
+            course_title = '<h3>The Complete Camtasia Course for Content Creators</h3>',
+            course_rating_content = '<span>(5.0 /6 Rating)</span>'
+            course_price = '<h4>$60.00</h4>',
+            course_meta_item = [
+              { 
+                'course_meta_content' : '13 Lessons'
+              },
+              { 
+                'course_meta_content' : '18 Students'
+              }
+            ]
+          %}
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+    {% end_dnd_row %} 
+
+
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  {# Course Section End #} 
+
+{% end_dnd_area %}
+{% endblock body %}

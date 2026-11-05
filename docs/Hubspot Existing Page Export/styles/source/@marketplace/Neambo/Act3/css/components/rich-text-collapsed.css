@@ -1,0 +1,135 @@
+{% import "../_variables.css" as var %}
+
+/* Animation */
+
+@keyframes rtextFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    pointer-events: none;
+  }
+}
+
+/* Container */
+
+.rtext--collapsed {
+  position: relative;
+  padding-bottom: 40px; /* the height of the button */
+}
+
+.rtext--collapsed.rtext--box {
+  padding-bottom: {{ var.gutter + 40 }}px; /* box bottom padding + the height of the button */
+}
+
+.rtext--expanded {
+  padding-bottom: 0;
+}
+
+.rtext--expanded.rtext--box {
+  padding-bottom: {{ var.gutter }}px;
+}
+
+/* Content */
+
+.rtext--collapsed .rtext__content {
+  overflow: hidden;
+}
+
+.rtext--expanded .rtext__content {
+  max-height: none !important; /* override inline style */
+}
+
+.rtext--expanded.rtext--toggle-collapse .rtext__content {
+  padding-bottom: 40px; /* <-- the height of .rtext__more-btn  */
+}
+
+/* Expander container */
+
+.rtext__more {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+.rtext--box .rtext__more {
+  left: {{ var.gutter }}px; /* box left padding */
+  right: {{ var.gutter }}px; /* box right padding */
+  bottom: {{ var.gutter }}px; /* box bottom padding */
+}
+
+.rtext--expanded:not(.rtext--toggle-collapse) .rtext__more {
+  animation: .2s ease-in-out forwards rtextFade;
+}
+
+/* Expander overlay */
+
+.rtext__more-overlay {
+  height: 50px;
+}
+
+.rtext.txt--light .rtext__more-overlay {
+  background: linear-gradient(to bottom, rgba({{ var.white|default('#ffffff')|convert_rgb }}, 0) 0%, rgba({{ var.white|default('#ffffff')|convert_rgb }}, 1) 100%);
+}
+
+.rtext.txt--dark .rtext__more-overlay {
+  background: linear-gradient(to bottom, rgba({{ var.dark|default('#222326')|convert_rgb }}, 0) 0%, rgba({{ var.dark|default('#222326')|convert_rgb }}, 1) 100%);
+}
+
+.rtext--box-light.txt--light .rtext__more-overlay {
+  background: linear-gradient(to bottom, rgba({{ var.light|default('#F8F9FB')|convert_rgb }}, 0) 0%, rgba({{ var.light|default('#F8F9FB')|convert_rgb }}, 1) 100%);
+}
+
+.rtext--box-accent .rtext__more-overlay,
+.rtext--box-ghost .rtext__more-overlay,
+.rtext--box-custom .rtext__more-overlay,
+.rtext--expanded.rtext--toggle-collapse .rtext__more-overlay {
+  display: none !important;
+}
+
+ /* Expander button */
+
+.rtext__more-btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  border: 1px solid;
+  border-radius: {{ var.radius_3 }};
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.rtext__more-btn:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+.rtext.txt--light .rtext__more-btn {
+  background: {{ var.white }};
+  border-color: {{ var.borders_color }};
+  color: {{ var.dark }};
+}
+
+.rtext.txt--light .rtext__more-btn:hover {
+  background: {{ var.light }};
+}
+
+.rtext.txt--dark .rtext__more-btn {
+  background: {{ var.white_bg }};
+  border-color: {{ var.white_borders }};
+  color: {{ var.white }};
+}
+
+.rtext.txt--dark .rtext__more-btn:hover {
+  background: {{ var.white_borders }};
+}
+
+.rtext--expanded.rtext--toggle-collapse .rtext__more-btn svg {
+  transform: rotate(180deg);
+}

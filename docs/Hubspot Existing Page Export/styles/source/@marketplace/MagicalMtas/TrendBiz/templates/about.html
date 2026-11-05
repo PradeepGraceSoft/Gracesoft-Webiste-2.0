@@ -1,0 +1,44 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About
+  screenshotPath: ../images/template-previews/about.jpg
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--about about-area p-0"
+%}
+
+  {# Breadcrumb Section Start #}
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# About Section Start #}  
+  {% include_dnd_partial path='../sections/about.html' %}
+  {# About Section End #} 
+  
+  {# Project Section Start #}  
+  {% include_dnd_partial path='../sections/project.html' %}
+  {# Project Section End #}
+
+ {# Contact Section Start #}
+  {% include_dnd_partial path="../sections/brand-logo.html" %}
+  {# Contact Section End #}
+
+  {# Faq Section Start #}  
+  {% include_dnd_partial path='../sections/faq.html' %}
+  {# Faq Section End #}
+
+  {# Team Section Start #}  
+  {% include_dnd_partial path='../sections/team.html' %}
+  {# Team Section End #}
+
+  {# Newsletter Section Start #}   
+  {% include_dnd_partial path='../sections/newsletter.html' %}
+  {# Newsletter Section End #} 
+
+{% end_dnd_area %}
+{% endblock body %}

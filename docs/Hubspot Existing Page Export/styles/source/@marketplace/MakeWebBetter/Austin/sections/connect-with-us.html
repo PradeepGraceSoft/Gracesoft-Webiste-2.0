@@ -1,0 +1,75 @@
+<!--
+templateType: section
+label: Connect With Us
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/connect-with-us.png
+description: " Two column with image on left side and form on right side"
+-->
+
+{% dnd_section
+    vertical_alignment='MIDDLE',
+    class="au-tab-full-width",
+    padding={
+        'default': {
+          'top': 0,
+          'right': 20,
+          'bottom': 80,
+          'left': 20
+        },
+        'mobile': {
+          'top': 0,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        }
+      }
+  %}
+{% dnd_column 
+    offset=0,
+    width=6 %}
+{% dnd_row
+        padding={
+          'default': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          },
+          'mobile': {
+            'top': 0,
+            'right': 0,
+            'bottom': 30,
+            'left': 0
+        }
+      }
+   %}
+ {% dnd_module
+        path='../modules/image'
+        "image"={
+        'src': get_asset_url('../images/multipurpose/contact.png'),
+        'alt': "Group of friends",
+      },
+   %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+
+{% dnd_column 
+    offset=6,
+    width=6 
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/form'
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "multiple_field_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+
+{% end_dnd_column %}
+
+{% end_dnd_section %}

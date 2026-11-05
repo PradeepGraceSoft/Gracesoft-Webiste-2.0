@@ -1,0 +1,25 @@
+[
+  {
+    "width": 390,
+    "before": "0",
+    "during": "0.812002",
+    "after": "1",
+    "staysVisible": "1"
+  },
+  {
+    "width": 1440,
+    "before": "0",
+    "during": "0.789927",
+    "after": "1",
+    "staysVisible": "1"
+  },
+  {
+    "reducedMotionPending": 0
+  },
+  {
+    "noJsOpacity": "1"
+  },
+  {
+    "focusedCardVisible": "1"
+  }
+]

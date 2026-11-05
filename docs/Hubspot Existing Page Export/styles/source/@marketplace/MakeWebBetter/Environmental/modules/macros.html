@@ -1,0 +1,69 @@
+<!--
+templateType: "none"
+isAvailableForNewContent: false
+-->
+{# Macro to render a button from a module field #}
+
+{% macro button(btn) -%}
+{% set href = btn.link.url.href %}
+{% if btn.link.url.type is equalto "EMAIL_ADDRESS" %}
+{% set href = "mailto:" + href %}
+{% endif %}
+
+{% set class='en-btn' %}
+
+{% if btn.layout == 'primary' %}
+{% set class= class ~ ' en-btn--primary' %}
+{% elif btn.layout == 'secondary' %}
+{% set class= class ~ ' en-btn--secondary' %}
+{% endif %}
+
+{% if btn.type == 'filled' %}
+{% set class= class ~ ' en-btn--filled' %}
+{% elif btn.type == 'outline' %}
+{% set class= class ~ ' en-btn--outline' %}
+{% endif %}
+
+{% set anchor = { 'class': class } %}
+<a href="{{ href }}" {{ anchor | xmlattr }} {% if btn.link.open_in_new_tab %}target="_blank" {% endif %} {% if
+	btn.link.rel %}rel="{{ btn.link.rel }}" {% endif %}>
+  <span>{{ btn.text }}</span>
+</a>
+
+{%- endmacro %}
+
+{# Macro to render title content module from module fields #}
+{% macro title_content(tc) -%}
+
+{% set class = 'en-title-content' %}
+
+{% if module.style.title_content.alignment.alignment_desktop == 'left' %}
+{% set class = class ~ ' en-title-content--left' %}
+{% elif module.style.title_content.alignment.alignment_desktop == 'center' %}
+{% set class = class ~ ' en-title-content--center' %}
+{% elif module.style.title_content.alignment.alignment_desktop == 'right' %}
+{% set class = class ~ ' en-title-content--right' %}
+{% endif %}
+
+{% if module.style.title_content.alignment.alignment_mobile == 'left' %}
+{% set class = class ~ ' en-title-content--left-sm' %}
+{% elif module.style.title_content.alignment.alignment_mobile == 'center' %}
+{% set class = class ~ ' en-title-content--center-sm' %}
+{% elif module.style.title_content.alignment.alignment_mobile == 'right' %}
+{% set class = class ~ ' en-title-content--right-sm' %}
+{% endif %}
+
+{% set max_width = 'max-width: ' ~ module.style.title_content.max_width.value ~ 'px;' %}
+
+<div class="{{ class }}" {% if module.style.title_content.max_width.enable_max_width %} style="{{ max_width }}" {% endif %}>
+  {% if tc.enable_mini_title %}
+  <span class="en-mini-title">{{ tc.mini_title }}</span>
+  {% endif %}
+  <div class="en-content">{{ tc.content }}</div>
+  <div class="en-rich-text__buttons">
+    {% if module.show_primary_button %}
+    {{ button(module.primary_button) }}
+    {% endif %}
+  </div>
+</div>
+{%- endmacro %}

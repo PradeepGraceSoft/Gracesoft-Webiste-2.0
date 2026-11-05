@@ -1,0 +1,36 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/about.png
+  label: "About"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header" %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-full-overlap-image.html' %}
+
+    {% include_dnd_partial path='../sections/two-col-text-only.html', context={
+      "bg_image": {
+        "backgroundPosition": "MIDDLE_CENTER",
+        "backgroundSize": "cover",
+        "imageUrl": get_asset_url('../../assets/images/gradient-bg.png')
+      }
+    } %}
+
+    {% include_dnd_partial path='../sections/counter-double-overlap.html' %}
+
+    {% include_dnd_partial path='../sections/leadership-dark.html' %}
+
+    {% include_dnd_partial path='../sections/feature-grid.html' %}
+
+    {% include_dnd_partial path='../sections/two-tone-cta.html' %}
+  {% end_dnd_area %}
+{% endblock %}

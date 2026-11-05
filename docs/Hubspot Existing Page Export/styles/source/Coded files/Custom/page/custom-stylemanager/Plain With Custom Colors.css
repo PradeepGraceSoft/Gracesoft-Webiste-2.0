@@ -1,0 +1,23 @@
+
+/******************************************************/
+/* This style was originally created in Style Manager */
+/******************************************************/
+
+/****************************************/
+/* HubSpot Style Boilerplate            */
+/****************************************/
+
+/* This framework is required for Style Manager-created styles. */
+{% include "hubspot/styles/base/style_manager_base.css" %}
+
+/*****************************************/
+/* Put your style declarations here      */
+/*****************************************/
+
+
+
+/*****************************************/
+/* Included CSS files are below          */
+/*****************************************/
+
+{% include 'Coded files/Custom/system/css/Custom-style.css' %}

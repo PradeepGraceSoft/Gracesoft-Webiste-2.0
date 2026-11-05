@@ -1,0 +1,161 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#FFFFFF","body_border_color":"#cbd6e2","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#EEEEEE","use_email_client_default_settings":false,"primary_font":"Merriweather,Georgia,sans-serif","primary_font_color":"#000000","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"24"},"heading_two_font":{"size":"22"},"links_font":{"color":"#FFFFFF"},"user_module_defaults":{}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body id="hs_body" bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#ff6e13" %}
+                {% dnd_column width=8 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"gracesoft logo png (1)",
+                    "height":75,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/gracesoft%20logo%20png%20(1).png",
+                    "width":150
+                    }, alignment="left", lineNumber=42, hs_enable_module_padding=True, startPosition=-587, hs_wrapper_css={
+                    "padding-bottom":"0px",
+                    "padding-left":"5px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/rich_text", lineNumber=52, hs_enable_module_padding=True, startPosition=-261, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"10px",
+                    "padding-right":"20px",
+                    "padding-top":"20px"
+                    } %}
+                    {% module_attribute "html" %}<p><span style="color: #ffffff;"><a href="mailto:sales@gracesoft.com" style="color: #ffffff; font-weight: bold;" rel="noopener">sales@gracesoft.com</a></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#ff6e13" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/rich_text", lineNumber=67, hs_enable_module_padding=True, startPosition=-260, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 22px; line-height: 300%; text-align: center;"><span style="color: #ffffff;">Book Your Spot on Thursday's Webinar</span></p>
+<p style="font-size: 15px; line-height: 175%; text-align: center;"><span style="color: #ffffff;">Thursday 21st December @12pm CST&nbsp;</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"image (18)-1",
+                    "height":183,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Praveen/image%20(18)-1.png",
+                    "width":175
+                    }, lineNumber=82, hs_enable_module_padding=True, startPosition=-545, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/rich_text", lineNumber=90, hs_enable_module_padding=True, startPosition=-260, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 18px; line-height: 175%; font-weight: bold;"><span style="color: #ffffff;">Gideon Stanley</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/rich_text", lineNumber=98, hs_enable_module_padding=True, startPosition=-261, hs_wrapper_css={
+                    "padding-bottom":"20px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"20px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center; line-height: 250%;"><span style="color: #ffffff; font-size: 16px;">Hello {{ contact.firstname }}</span></p>
+<p style="text-align: center; line-height: 250%;"><span style="color: #ffffff;">We hope you're as excited as we are about our upcoming webinar.</span></p>
+<p style="text-align: center; line-height: 250%;"><span style="color: #ffffff;"> Just a quick reminder that the event is tomorrow, </span></p>
+<p style="text-align: center; line-height: 250%; font-size: 16px; font-weight: bold;"><span style="color: #000000;">October 11, 2023, 12:00 pm CST</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#fafafa" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/rich_text", lineNumber=126, hs_enable_module_padding=True, startPosition=-261, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 18px; line-height: 175%;"><span style="color: #000000;">You'll Learn</span></p>
+<ul style="font-size: 18px;">
+<li style="font-weight: bold; text-align: center; line-height: 175%;">The Power of GraceSoft and VRBO Integration</li>
+<li style="font-weight: bold; text-align: center; line-height: 175%;">AI-Powered Hospitality: The Role of ChatGPT in Hospitality Communication</li>
+</ul>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#fafafa" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module corner_radius=25, destination="https://meet.goto.com/GraceSoftDemo", startPosition=-425, schema_version=2, css_class="dnd-module", path="@hubspot/button_email", border_enabled=True, background_color="#ff6e13", make_full_width=True, text="Webinar Link", lineNumber=156, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"10",
+                "bottom":"0"
+                }, full_width=False, background_color="#fafafa" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=177, hs_enable_module_padding=False, startPosition=19, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#23496d","font":"Arial, sans-serif","size":{"units":"px","value":12}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

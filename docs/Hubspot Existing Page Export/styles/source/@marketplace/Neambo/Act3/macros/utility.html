@@ -1,0 +1,130 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+
+{%- macro link_open_tag(link_field, link_class, link_onclick, link_style) -%}
+  {%- set href = link_field.url.href -%}
+  {% if link_field.url.type is equalto "PAYMENT" %}
+    {% set query_param = "?referrer=CMS_MODULE_NEWTAB" %}
+  {% else %}
+    {% set query_param = "" %}
+  {% endif %}
+  {%- if href -%}
+    {%- if link_field.url.type is equalto "EMAIL_ADDRESS" -%}
+      {%- set href = "mailto:" ~ href -%}
+    {%- endif -%}
+    {%- set output = '<a href="' ~ href ~ query_param ~'"' -%}
+    {%- if link_field.open_in_new_tab -%}
+      {%- set output = output ~ ' target="_blank"' -%}
+    {%- endif -%}
+    {%- if link_field.no_follow -%}
+      {%- set output = output ~ ' rel="nofollow"' -%}
+    {%- endif -%}
+    {%- if link_class -%}
+      {%- set output = output ~ ' class="' ~ link_class ~ '"' -%}
+    {%- endif -%}
+    {%- if link_onclick -%}
+      {%- set link_onclick_md5 = link_onclick|md5 -%}
+      {%- set output = output + ' onclick-md5="' + link_onclick_md5 + '"' -%}
+      {%- require_js -%}
+        <script>document.addEventListener("click",function(e){if(e.target.closest("a[onclick-md5='{{ link_onclick_md5 }}']")){ {{ link_onclick }} } })</script>
+      {%- end_require_js -%}
+    {%- endif -%}
+    {%- if link_style -%}
+      {%- set output = output ~ ' style="' ~ link_style ~ '"' -%}
+    {%- endif -%}
+    {%- set output = output ~ ">" -%}{{ output }}
+  {%- endif -%}
+{%- endmacro -%}
+
+{%- macro link_close_tag(link_field) -%}
+  {%- if link_field.url.href -%}
+    {{ "</a>" }}
+  {%- endif -%}
+{%- endmacro -%}
+
+{% macro image_srcset(image_url, image_width) %}
+  {%- set widths = [360, 480, 720, 768, 1350, 1440, 1920, 2700, 2880, 3840] -%}
+  {%- set image_width = image_width*2 -%}
+  {%- set image_url = image_url|replace(",", "%2C") -%}
+srcset="
+  {%- for w in widths -%}
+    {%- if image_width < 4096 && image_width > w -%}
+      {{-resize_image_url(image_url, w, 0, 0)}} {{ w }}w, 
+    {%- endif -%}
+  {%- endfor -%}
+  {{- resize_image_url(image_url, image_width, 0, 0) }} {{image_width}}w"
+{% endmacro %}
+
+{% macro image_tag(img, class, style) %}
+{% if img.src %}
+  {% if img.loading && img.loading != 'disabled' %}{% set loading = ' loading="{{ img.loading }}"' %}{% endif %}
+  <img src="{{ img.src }}" alt="{{ img.alt }}" {% if img.src|split(".")|last|lower != 'svg' %}{{ image_srcset(img.src, img.width) }}{% endif %} width="{{ img.width }}" height="{{ img.height }}"{{ loading }}{% if class %} class="{{ class }}"{% endif %}{% if style %} style="{{ style }}"{% endif %}>
+{% endif %}
+{% endmacro %}
+
+{%- macro module_open_tag(module_id, component, wrapper, md = theme.layout.md, sm = theme.layout.sm) -%}
+
+  {%- set lg_css = '' -%}
+  {%- set md_css = '' -%}
+  {%- set sm_css = '' -%}
+  
+  {%- if wrapper.padding.top.lg -%}{% set lg_css = lg_css ~ 'padding-top:' ~ wrapper.padding.top.lg ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.bottom.lg -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ wrapper.padding.bottom.lg ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.left.lg -%}{% set lg_css = lg_css ~ 'padding-left:' ~ wrapper.padding.left.lg ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.right.lg -%}{% set lg_css = lg_css ~ 'padding-right:' ~ wrapper.padding.right.lg ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.top.lg -%}{% set lg_css = lg_css ~ 'margin-top:' ~ wrapper.margin.top.lg ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.bottom.lg -%}{% set lg_css = lg_css ~ 'margin-bottom:' ~ wrapper.margin.bottom.lg ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.left.lg -%}{% set lg_css = lg_css ~ 'margin-left:' ~ wrapper.margin.left.lg ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.right.lg -%}{% set lg_css = lg_css ~ 'margin-right:' ~ wrapper.margin.right.lg ~ 'px;' %}{%- endif -%}
+  {%- if lg_css -%}{% set lg_css = '.module--' ~ module_id ~ '{' ~ lg_css ~ '}' %}{%- endif -%}
+  {%- if wrapper.max_width.lg -%}{% set lg_css = lg_css ~ '.module--' ~ module_id ~ ' .module__inner{width:' ~ wrapper.max_width.lg ~ 'px;}' %}{%- endif -%}
+
+  {%- if wrapper.padding.top.md -%}{% set md_css = md_css ~ 'padding-top:' ~ wrapper.padding.top.md ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.bottom.md -%}{% set md_css = md_css ~ 'padding-bottom:' ~ wrapper.padding.bottom.md ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.left.md -%}{% set md_css = md_css ~ 'padding-left:' ~ wrapper.padding.left.md ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.right.md -%}{% set md_css = md_css ~ 'padding-right:' ~ wrapper.padding.right.md ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.top.md -%}{% set md_css = md_css ~ 'margin-top:' ~ wrapper.margin.top.md ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.bottom.md -%}{% set md_css = md_css ~ 'margin-bottom:' ~ wrapper.margin.bottom.md ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.left.md -%}{% set md_css = md_css ~ 'margin-left:' ~ wrapper.margin.left.md ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.right.md -%}{% set md_css = md_css ~ 'margin-right:' ~ wrapper.margin.right.md ~ 'px;' %}{%- endif -%}
+  {%- if md_css -%}{% set md_css = '.module--' ~ module_id ~ '{' ~ md_css ~ '}' %}{%- endif -%}
+  {%- if wrapper.max_width.md -%}{% set md_css = md_css ~ '.module--' ~ module_id ~ ' .module__inner{width:' ~ wrapper.max_width.md ~ 'px;}' %}{%- endif -%}
+  {%- if md_css -%}{% set md_css = '@media(max-width:' ~ md ~ 'px){' ~ md_css ~ '}' %}{%- endif -%}
+
+  {%- if wrapper.padding.top.sm -%}{% set sm_css = sm_css ~ 'padding-top:' ~ wrapper.padding.top.sm ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.bottom.sm -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ wrapper.padding.bottom.sm ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.left.sm -%}{% set sm_css = sm_css ~ 'padding-left:' ~ wrapper.padding.left.sm ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.padding.right.sm -%}{% set sm_css = sm_css ~ 'padding-right:' ~ wrapper.padding.right.sm ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.top.sm -%}{% set sm_css = sm_css ~ 'margin-top:' ~ wrapper.margin.top.sm ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.bottom.sm -%}{% set sm_css = sm_css ~ 'margin-bottom:' ~ wrapper.margin.bottom.sm ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.left.sm -%}{% set sm_css = sm_css ~ 'margin-left:' ~ wrapper.margin.left.sm ~ 'px;' %}{%- endif -%}
+  {%- if wrapper.margin.right.sm -%}{% set sm_css = sm_css ~ 'margin-right:' ~ wrapper.margin.right.sm ~ 'px;' %}{%- endif -%}
+  {%- if sm_css -%}{% set sm_css = '.module--' ~ module_id ~ '{' ~ sm_css ~ '}' %}{%- endif -%}
+  {%- if wrapper.max_width.sm -%}{% set sm_css = sm_css ~ '.module--' ~ module_id ~ ' .module__inner{width:' ~ wrapper.max_width.sm ~ 'px;}' %}{%- endif -%}
+  {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ sm_css ~ '}' %}{%- endif -%}
+
+  {%- if lg_css or md_css or sm_css -%}
+    <style>{{ lg_css ~ md_css ~ sm_css }}</style>
+  {% endif -%}
+  
+  <div{% if wrapper.identifiers.custom_id %} id="{{ wrapper.identifiers.custom_id }}"{% endif %} class="module module--{{ module_id }} module--{{ component }}{% if wrapper.identifiers.custom_class %} {{ wrapper.identifiers.custom_class }}{% endif %}{% if wrapper.block_align.lg %} module--block-{{ wrapper.block_align.lg }}{% endif %}{% if wrapper.block_align.md %} module--md-block-{{ wrapper.block_align.md }}{% endif %}{% if wrapper.block_align.sm %} module--sm-block-{{ wrapper.block_align.sm }}{% endif %}{% if wrapper.text_align.lg %} module--text-{{ wrapper.text_align.lg }}{% endif %}{% if wrapper.text_align.md %} module--md-text-{{ wrapper.text_align.md }}{% endif %}{% if wrapper.text_align.sm %} module--sm-text-{{ wrapper.text_align.sm }}{% endif %}">
+    <div class="module__inner{% if module.wrapper.max_width.preset %} {{ module.wrapper.max_width.preset }}{% endif %}">
+{% endmacro %}
+
+{% macro module_close_tag() %}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro module_close_tag() %}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro read_time(text) %}
+  {% set read_time = ((text|split('<img')|length - 1) * 0.1667 + (text|striptags|wordcount/265))|round %}
+  {% if read_time < 1 %}{% set read_time = 1 %}{% endif %}
+  {{ read_time }}
+{% endmacro %}

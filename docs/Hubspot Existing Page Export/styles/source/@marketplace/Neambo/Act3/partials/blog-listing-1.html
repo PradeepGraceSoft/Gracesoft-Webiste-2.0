@@ -1,0 +1,108 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+-->
+{{ require_css(get_asset_url('../css/components/blog-infobar.css')) }}
+{{ require_css(get_asset_url('../css/components/tag-list.css')) }}
+{{ require_js(get_asset_url('../js/components/tag-list.js'), { position: 'footer', defer:true }) }}
+{{ require_css(get_asset_url('../css/components/blog-listing-1.css')) }}
+{%- if b.listing.padding == 'custom' -%}
+  {%- set lg_css = '' -%}
+  {%- set sm_css = '' -%}
+  {%- if b.listing.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.listing.top_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if lg_css -%}{% set lg_css = '.blog-listing-1 {' ~ lg_css ~ '}' %}{%- endif -%}
+  {%- if b.listing.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.listing.top_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-listing-1 {' ~ sm_css ~ '}}' %}{%- endif -%}
+  {%- if lg_css or sm_css -%}
+    {%- require_css -%}
+      <style>{{ lg_css ~ sm_css }}</style>
+    {%- end_require_css -%}
+  {%- endif -%}
+{%- endif -%}
+<div class="blog-listing-1 section" test="{{ b.listing.top_padding_lg }}">
+  <div class="blog-listing-1__center container" id="post-list">
+    {# Post #}
+    {% for content in contents %}
+      {%- if b.hero.homepage_hero != 'latest_post' or (current_page_num > 1 or not loop.first) or blog_author or tag -%}
+        <div class="blog-listing-1__post row items-stretch">
+          <div class="blog-listing-1__contents col s6 md-s12 justify-between">
+            <div class="blog-listing-1__text">
+              <h2 class="blog-listing-1__title h3"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
+              {%- if b.listing.summary_type == 'meta_description' -%}
+                <p class="blog-listing-1__summary">{{ content.meta_description }}</p>
+              {%- elif b.listing.listing_1_summary_length > 0 -%}
+                <p class="blog-listing-1__summary">{{ content.post_list_content|striptags|truncate(b.listing.listing_1_summary_length, true, ' &hellip;') }}</p>
+              {%- endif -%}
+              <p class="blog-listing-1__btn"><a href="{{ content.absolute_url }}" class="btn btn--large btn--outline btn--light">{{ b.text.read_story }}</a></p>
+            </div>
+            {%- if true in [b.author.show_author, b.read_time.show_read_time, b.date.show_date] -%}
+              <div class="blog-listing-1__infobar blog-infobar blog-infobar--light">
+                {%- if b.author.show_author -%}
+                  <div class="blog-infobar__author">
+                    {% if content.blog_post_author.avatar %}
+                      <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}"><img src="{{ content.blog_post_author.avatar }}" {{ image_srcset(content.blog_post_author.avatar, 40) }} alt="{{ content.blog_post_author.display_name }}" width="40" height="40" loading="lazy"></a>
+                    {% endif %}
+                    <div class="blog-listing-1__author-name">{{ b.text.by|replace('[author]', '<a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">{{ content.blog_post_author.display_name }}</a>') }}</div>
+                  </div>
+                {%- endif -%}
+                {%- if b.read_time.show_read_time -%}
+                  <div class="blog-infobar__time">
+                    <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg> {{ b.text.min_read|replace('[minutes]', read_time(content.post_body)) }}
+                  </div>
+                {%- endif -%}
+                {%- if b.date.show_date -%}
+                  <div class="blog-infobar__date">
+                    <svg width="13" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"></path></svg> {{ content.publish_date_localized }}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="blog-listing-1__img-col col s6 md-s12">
+            {% if content.widgets.post_banner.body.src or content.featured_image %}
+              <div class="blog-listing-1__img">
+                <a href="{{ content.absolute_url }}">
+                  {% if content.widgets.post_banner.body.src %}
+                    {{ image_tag(content.widgets.post_banner.body) }}
+                  {% else %}
+                    <img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text|default(content.name) }}" {{ image_srcset(content.featured_image, md) }} loading="lazy">
+                  {% endif %}
+                </a>
+                {%- if b.tags.show_tags -%}
+                  <div class="blog-listing-1__tags">
+                    <div class="blog-listing-1__tags-visible">
+                      {% if content.tag_list[0] %}
+                        <a href="{{ blog_tag_url(group.id, content.tag_list[0].slug) }}" class="blog-listing-1__tag badge badge--medium badge--{% if content.tag_list[1] %}white{% else %}accent{% endif %} badge--lowercase">{{ content.tag_list[0].name }}</a>
+                      {% endif %}
+                      {% if content.tag_list[1] %}
+                        <a href="{{ blog_tag_url(group.id, content.tag_list[1].slug) }}" class="blog-listing-1__tag badge badge--medium badge--accent badge--lowercase">{{ content.tag_list[1].name }}</a>
+                      {% endif %}
+                    </div>
+                    {% if content.tag_list[2] %}
+                      <div class="blog-listing-1__tags-list tags-list">
+                        <a href="javascript:;" class="tags-list__btn tags-list__btn--white tags-list__open-list" aria-label="{{ b.text.all_topics }}">
+                          <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 10C3.89543 10 3 10.8954 3 12C3 13.1046 3.89543 14 5 14C6.10457 14 7 13.1046 7 12C7 10.8954 6.10457 10 5 10ZM12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10ZM17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12Z" fill="currentColor"/>
+                          </svg>
+                        </a>
+                        <div class="tags-list__list">
+                          {% for tag in content.tag_list %}
+                            {% if loop.index > 2 %}
+                              <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="tags-list__item">{{ tag.name }}</a>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+                {%- endif -%}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

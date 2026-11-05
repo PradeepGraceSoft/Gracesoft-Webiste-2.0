@@ -1,0 +1,607 @@
+{% if theme.typography.fonts.external_fonts %}
+:root {
+  --text-font-family: {{ ef_text_font_family }};
+  --text-font-weight: {{ ef_text_font_weight }};
+  --text-font-style: {{ ef_text_font_style }};
+  --strong-font-family: {{ ef_strong_font_family }};
+  --strong-font-weight: {{ ef_strong_font_weight }};
+  --strong-font-style: {{ ef_strong_font_style }};
+  
+  --headings-font-family: {{ ef_headings_font_family }};
+  --headings-font-weight: {{ ef_headings_font_weight }};
+  --headings-font-style: {{ ef_headings_font_style }};
+  --headings-strong-font-family: {{ ef_headings_strong_font_family }};
+  --headings-strong-font-weight: {{ ef_headings_strong_font_weight }};
+  --headings-strong-font-style: {{ ef_headings_strong_font_style }};
+  
+  --ui-font-family: {{ ef_ui_font_family }};
+  --ui-font-weight: {{ ef_ui_font_weight }};
+  --ui-font-style: {{ ef_ui_font_style }};
+  --ui-strong-font-family: {{ ef_ui_strong_font_family }};
+  --ui-strong-font-weight: {{ ef_ui_strong_font_weight }};
+  --ui-strong-font-style: {{ ef_ui_strong_font_style }};
+}
+{% endif %}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-size: {{ text_size_lg }}%;
+  --vw: 1vw;
+}
+
+body {
+  margin: 0;
+  background: {{ white }};
+  color: {{ text_color }};
+  font-family: {{ text_font_family }};
+  font-weight: {{ text_font_weight }};
+  font-style: {{ text_font_style }};
+  font-size: 1rem;
+  line-height: {{ text_height }};
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  /* make font consistent across browsers */
+  -webkit-text-rendering: antialiased;
+  -moz-text-rendering: antialiased;
+  -ms-text-rendering: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  {% if overflow_wrap %}
+    overflow-wrap: {{ overflow_wrap }};
+  {% endif %}
+  {% if hyphens %}
+    hyphens: {{ hyphens }};
+  {% endif %}
+}
+
+a {
+  color: {{ links_color }};
+  text-decoration: {{ links_underline_value }};
+  cursor: pointer;
+}
+
+a:hover {
+  color: {{ links_hover_color }};
+  text-decoration: {{ links_hover_underline_value }};
+}
+
+b,
+strong {
+  font-family: {{ strong_font_family }};
+  font-weight: {{ strong_font_weight }};
+  font-style: {{ strong_font_style }};
+}
+
+p,
+.p,
+blockquote {
+  margin: 0 0 {{ gutter }}px;
+}
+
+.important-quote {
+  position: relative;
+  padding: {{ gutter }}px;
+  padding-inline-start: {{ gutter * 2 + (gutter / 2)|round(0) }}px;
+  background: {{ light }};
+  border-radius: {{ radius_3 }};
+  border-inline-start: 4px solid {{ accent }};
+  color: {{ dark }};
+}
+
+.txt--dark .important-quote {
+  background: {{ white_bg }};
+  color: {{ white }};
+}
+
+.important-quote::before {
+  content: '“';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: {{ (gutter / 2)|round(0) }}px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: {{ accent }};
+}
+
+.important-quote *:last-child {
+  margin-bottom: 0;
+}
+
+{% if rtl_ready %}
+  [dir="rtl"] .important-quote::before {
+    content: '”';
+    left: auto;
+    right: {{ (gutter / 2)|round(0) }}px;
+  }
+{% endif %}
+
+.pns p {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: {{ gutter }}px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0 0 {{ gutter }}px;
+  color: {{ headings_color }};
+}
+
+h1,
+.h1 {
+  font-family: {{ h1_font_family }};
+  font-weight: {{ h1_font_weight }};
+  font-style: {{ h1_font_style }};
+  font-size: {{ h1_size_lg }}rem;
+  line-height: {{ h1_height }};
+}
+
+h2,
+.h2 {
+  font-family: {{ h2_font_family }};
+  font-weight: {{ h2_font_weight }};
+  font-style: {{ h2_font_style }};
+  font-size: {{ h2_size_lg }}rem;
+  line-height: {{ h2_height }};
+}
+
+h3,
+.h3 {
+  font-family: {{ h3_font_family }};
+  font-weight: {{ h3_font_weight }};
+  font-style: {{ h3_font_style }};
+  font-size: {{ h3_size_lg }}rem;
+  line-height: {{ h3_height }};
+}
+
+h4,
+.h4 {
+  font-family: {{ h4_font_family }};
+  font-weight: {{ h4_font_weight }};
+  font-style: {{ h4_font_style }};
+  font-size: {{ h4_size_lg }}rem;
+  line-height: {{ h4_height }};
+}
+
+h5,
+.h5 {
+  font-family: {{ h5_font_family }};
+  font-weight: {{ h5_font_weight }};
+  font-style: {{ h5_font_style }};
+  font-size: {{ h5_size_lg }}rem;
+  line-height: {{ h5_height }};
+}
+
+h6,
+.h6 {
+  font-family: {{ h6_font_family }};
+  font-weight: {{ h6_font_weight }};
+  font-style: {{ h6_font_style }};
+  font-size: {{ h6_size_lg }}rem;
+  line-height: {{ h6_height }};
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
+.h1 strong, .h2 strong, .h3 strong, .h4 strong, .h5 strong, .h6 strong,
+h1 b, h2 b, h3 b, h4 b, h5 b, h6 b,
+.h1 b, .h2 b, .h3 b, .h4 b, .h5 b, .h6 b {
+  font-family: {{ headings_strong_font_family }};
+  font-weight: {{ headings_strong_font_weight }};
+  font-style: {{ headings_strong_font_style }};
+}
+
+.display {
+  margin: 0 0 {{ gutter }}px;
+  color: {{ headings_color }};
+  font-family: {{ display_font_family }};
+  font-weight: {{ display_font_weight }};
+  font-style: {{ display_font_style }};
+  font-size: {{ display_size_lg }}rem;
+  line-height: {{ display_height }};
+}
+
+.hns h1,
+.hns h2,
+.hns h3,
+.hns h4,
+.hns h5,
+.hns h6,
+.hns .h1,
+.hns .h2,
+.hns .h3,
+.hns .h4,
+.hns .h5,
+.hns .h6,
+.hns .display {
+  margin-bottom: 0;
+}
+
+hr {
+  height: 0;
+  margin: {{ gutter }}px 0;
+  border: 0;
+  border-top: 1px solid {{ borders_color }};
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Fixes the problem with the missing icons in Rich text */
+
+[data-hs-icon-hubl] svg {
+  height: revert-layer;
+}
+
+figure {
+  margin: 0;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+sup,
+sub {
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.4em;
+}
+
+sub { 
+  top: 0.4em; 
+}
+
+[hidden] {
+  display: none;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+/* UI label */
+
+.ui-label {
+  color: {{ dark }};
+  font-family: {{ ui_font_family }};
+  font-weight: {{ ui_font_weight }};
+  font-style: {{ ui_font_style }};
+  font-size: 1rem;
+  line-height: {{ ui_height }};
+}
+
+/* Important text */
+
+.important-text {
+  color: {{ dark }};
+}
+
+/* Text size */
+
+.small-text {
+  font-size: {{ small_text }}rem;
+}
+
+.large-text {
+  font-size: {{ large_text }}rem;
+}
+
+.xlarge-text {
+  font-size: {{ large_text * 1.5 }}rem;
+}
+
+@media (max-width: {{ md }}px) {
+  .xlarge-text {
+    font-size: {{ large_text * 1.3 }}rem;
+  }
+}
+
+@media (max-width: {{ sm }}px) {
+  .xlarge-text {
+    font-size: {{ large_text * 1.1 }}rem;
+  }
+}
+
+/* Super text */
+
+.super-text {
+  display: block;
+  color: {{ text_color }};
+  font-size: .8rem;
+}
+
+/* Rich text */
+
+.txt--dark,
+.txt--dark .super-text {
+  color: {{ white_text }};
+}
+
+.txt--dark a,
+.txt--dark a:hover,
+.txt--dark h1,
+.txt--dark h2,
+.txt--dark h3,
+.txt--dark h4,
+.txt--dark h5,
+.txt--dark h6,
+.txt--dark .h1,
+.txt--dark .h2,
+.txt--dark .h3,
+.txt--dark .h4,
+.txt--dark .h5,
+.txt--dark .h6,
+.txt--dark .display,
+.txt--dark .important-text,
+.txt--dark .ui-label {
+  color: {{ white }};
+}
+
+.txt--dark hr {
+  background: {{ white_borders }};
+}
+
+/* Unstyle links */
+
+.txt--unstyle-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.txt--unstyle-links a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Unstyle lists */
+
+.txt--unstyle-lists ul,
+.txt--unstyle-lists ol {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.txt--unstyle-lists li + li {
+  margin-top: .28rem;
+}
+
+/* UI Font */
+
+.ui-font {
+  font-family: {{ ui_font_family }};
+  font-weight: {{ ui_font_weight }};
+  font-style: {{ ui_font_style }};
+  line-height: {{ ui_height }};
+}
+
+.ui-font strong,
+.ui-font b {
+  font-family: {{ ui_strong_font_family }};
+  font-weight: {{ ui_strong_font_weight }};
+  font-style: {{ ui_strong_font_style }};
+}
+
+/* UI icon */
+
+.ui-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-icon svg {
+  display: block;
+  width: {{ ui_icon_size }}rem;
+  height: {{ ui_icon_size }}rem;
+  pointer-events: none;
+}
+
+/* Image radius */
+
+.img--radius img,
+img.img--radius {
+  border-radius: {{ radius_7 }};
+}
+
+/* Image shadow */
+
+.img--shadow img,
+img.img--shadow {
+  box-shadow: {{ large_shadow }};
+}
+
+@media (max-width: {{ md }}px) {
+  html {
+    font-size: {{ text_size_md }}%;
+  }
+  
+  h1,
+  .h1 {
+    font-size: {{ h1_size_md }}rem;
+  }
+  
+  h2,
+  .h2 {
+    font-size: {{ h2_size_md }}rem;
+  }
+  
+  h3,
+  .h3 {
+    font-size: {{ h3_size_md }}rem;
+  }
+  
+  h4,
+  .h4 {
+    font-size: {{ h4_size_md }}rem;
+  }
+  
+  h5,
+  .h5 {
+    font-size: {{ h5_size_md }}rem;
+  }
+  
+  h6,
+  .h6 {
+    font-size: {{ h6_size_md }}rem;
+  }
+  
+  .display {
+    font-size: {{ display_size_md }}rem;
+  }
+}
+
+@media (max-width: {{ sm }}px) {
+  html {
+    font-size: {{ text_size_sm }}%;
+  }
+  
+  h1,
+  .h1 {
+    font-size: {{ h1_size_sm }}rem;
+  }
+  
+  h2,
+  .h2 {
+    font-size: {{ h2_size_sm }}rem;
+  }
+  
+  h3,
+  .h3 {
+    font-size: {{ h3_size_sm }}rem;
+  }
+  
+  h4,
+  .h4 {
+    font-size: {{ h4_size_sm }}rem;
+  }
+  
+  h5,
+  .h5 {
+    font-size: {{ h5_size_sm }}rem;
+  }
+  
+  h6,
+  .h6 {
+    font-size: {{ h6_size_sm }}rem;
+  }
+  
+  .display {
+    font-size: {{ display_size_sm }}rem;
+  }
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+/* Background */
+
+.bg-accent {
+  background: {{ accent_bg }};
+}
+
+.bg-dark {
+  background: {{ dark }};
+}
+
+.bg-light {
+  background: {{ light }};
+}
+
+.bg-white {
+  background: {{ white }};
+}
+
+.bg-ghost {
+  background: {{ white_bg }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}
+
+/* Tippy */
+
+.tippy-box[data-theme~='act-light'] {
+  border-radius: {{ radius_2 }};
+  background: {{ white }};
+  color: {{ dark }};
+}
+
+.tippy-box[data-theme~='act-light'] .tippy-arrow {
+  color: {{ white }};
+}
+
+.tippy-box[data-theme~='act-dark'] {
+  border-radius: {{ radius_2 }};
+  background: {{ dark }};
+  color: {{ white }};
+}
+
+.tippy-box[data-theme~='act-dark'] .tippy-arrow {
+  color: {{ dark }};
+}
+
+/* Theme corners section */
+
+.dnd-section-theme-corners .dnd-row,
+.dnd-section-theme-corners .dnd-column {
+  border-radius: {{ radius_7 }};
+}
+
+/* Fixes distortion of the CTA placeholder image */
+
+.hs-cta-simple-placeholder img {
+  height: auto !important;
+}

@@ -1,0 +1,20 @@
+{% import '../_variables.css' as var %}
+
+.logos__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splide .logos__logo {
+  width: 100%;
+}
+
+:not(.splide) .logos__logo {
+  padding-top: {{ (var.gutter / 2)|round(0) }}px;
+  padding-bottom: {{ (var.gutter / 2)|round(0) }}px;
+}
+
+.logos__logo__img {
+  width: 100%;
+}

@@ -1,0 +1,1504 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Success stories
+  screenshotPath: ../images/template-previews/success-stories.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter, content_width %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        },
+        'mobile': {
+          'top': vspace_sm,
+          'bottom': vspace_sm
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Customers',
+            title='Success Stories from All Around the World.',
+            desc='',
+            settings={
+              'title_tag': 'h1',
+              'title_looks_like': 'h2'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/cover-card',
+            card=[
+              {
+                'text': '<h3>Sonic Boom: 180% Growth in Conversions</h3>',
+                'labels': {
+                  'badge': 'Marketing',
+                  'info': 'Technology'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-video001.jpg',
+                    'alt': 'Describe your image',
+                    'width': 600,
+                    'height': 389
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 20,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '370'
+                },
+                'text_max_width': {
+                  'lg': '370'
+                },
+                'content_align': {
+                  'lg': '3',
+                  'md': '3',
+                  'sm': '3'
+                }
+              },
+              {
+                'text': '<h3>Green Heart: 200% Daily Revenue Increase</h3>',
+                'labels': {
+                  'badge': 'Sales',
+                  'info': 'Finance'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-video002.jpg',
+                    'alt': 'Describe your image',
+                    'width': 600,
+                    'height': 389
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 20,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '370'
+                },
+                'text_max_width': {
+                  'lg': '370'
+                },
+                'content_align': {
+                  'lg': '3',
+                  'md': '3',
+                  'sm': '3'
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '2',
+                'md': '2'
+              },
+              'col_align': 'justify-center'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Listing #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': 0,
+          'left': 0,
+          'right': 0
+        }
+      }
+    %}
+      {% dnd_module path='../modules/listing',
+        items_per_page=9,
+        pagination=true,
+        search=true,
+        search_placeholder='Search',
+        filter_group=[
+          {
+            'internal_name': 'Industry',
+            'filter_label': '',
+            'type': 'dd',
+            'placeholder': 'Industry',
+            'dd_width': '170',
+            'filter': [
+              {
+                'text': 'Education',
+                'category': 'education',
+                'active': false
+              },
+              {
+                'text': 'Finance',
+                'category': 'finance',
+                'active': false
+              },
+              {
+                'text': 'Healthcare',
+                'category': 'healthcare',
+                'active': false
+              },
+              {
+                'text': 'Technology',
+                'category': 'technology',
+                'active': false
+              }
+            ]
+          },
+          {
+            'internal_name': 'Company size',
+            'filter_label': '',
+            'type': 'dd',
+            'placeholder': 'Company size',
+            'dd_width': '270',
+            'filter': [
+              {
+                'text': 'Start-up',
+                'category': 'startup',
+                'active': false
+              },
+              {
+                'text': 'Small business (SMB)',
+                'category': 'smb',
+                'active': false
+              },
+              {
+                'text': 'Enterprise (SME)',
+                'category': 'sme',
+                'active': false
+              }
+            ]
+          },
+          {
+            'internal_name': 'Region',
+            'filter_label': '',
+            'type': 'dd',
+            'placeholder': 'Region',
+            'dd_width': '200',
+            'filter': [
+              {
+                'text': 'Africa',
+                'category': 'africa',
+                'active': false
+              },
+              {
+                'text': 'Asia',
+                'category': 'asia',
+                'active': false
+              },
+              {
+                'text': 'Australia',
+                'category': 'australia',
+                'active': false
+              },
+              {
+                'text': 'Europe',
+                'category': 'europe',
+                'active': false
+              },
+              {
+                'text': 'North America',
+                'category': 'north-america',
+                'active': false
+              },
+              {
+                'text': 'South America',
+                'category': 'south-america',
+                'active': false
+              }
+            ]
+          }
+        ],
+        card_type='cover',
+        cover_card=[
+          {
+            'text': '<h3>Sonic Boom: 180% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Startup'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mltmr.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'startup technology north-america'
+          },
+          {
+            'text': '
+              <h3>Green Heart: 20% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Healthcare'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'healthcare smb europe'
+          },
+          {
+            'text': '
+              <h3>Firesphere: 80% Increase in Traffic</h3>
+              <p>You will find amazing content here. All the information you need in one place.</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Technology'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'technology smb europe'
+          },
+          {
+            'text': '
+              <h3>Ocean Stuff: 30% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Small Business'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'finance smb asia'
+          },
+          {
+            'text': '<h3>Odd Dev: 136% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Brazil'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-ltl7p.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'education sme technology south-america'
+          },
+          {
+            'text': '<h3>Kaleidoo: 140% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Los Angeles, USA'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mrk5k.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'technology sme north-america'
+          },
+          {
+            'text': '
+              <h3>Ocean Australia: 33% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Enterprise'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'finance sme australia'
+          },
+          {
+            'text': '
+              <h3>Ocean Affrica: 27% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Africa'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'education sme africa'
+          },
+          {
+            'text': '<h3>Even Dev: 122% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Brazil'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-w2e8u.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'education startup education south-america'
+          },
+          {
+            'text': '
+              <h3>Ocean South America: 27% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'South America'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'healthcare smb south-america'
+          },
+          {
+            'text': '<h3>Sonic Boom: 180% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Education'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mltmr.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'startup education asia'
+          },
+          {
+            'text': '
+              <h3>Ocean Stuff: 30% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Enterprise'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'finance sme australia'
+          },
+          {
+            'text': '<h3>Odd Dev: 136% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Brazil'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-ltl7p.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'healthcare smb technology australia'
+          },
+          {
+            'text': '
+              <h3>Ocean Europe: 33% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Small Business'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'education smb europe'
+          },
+          {
+            'text': '
+              <h3>Green Heart: 20% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Education'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'education startup smb africa'
+          },
+          {
+            'text': '<h3>Even Dev: 122% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Brazil'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-w2e8u.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'education startup australia'
+          },
+          {
+            'text': '
+              <h3>Firesphere: 80% Increase in Traffic</h3>
+              <p>You will find amazing content here. All the information you need in one place.</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Technology'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'education startup europe'
+          },
+          {
+            'text': '
+              <h3>Ocean Stuff: 30% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Education'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'education startup north-america'
+          },
+          {
+            'text': '<h3>Odd Dev: 136% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Brazil'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-ltl7p.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'finance startup south-america'
+          },
+          {
+            'text': '<h3>Kaleidoo: 140% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Los Angeles, USA'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mrk5k.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'healthcare startup north-america'
+          },
+          {
+            'text': '<h3>Sonic Boom: 180% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Startup'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mltmr.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'startup technology north-america'
+          },
+          {
+            'text': '
+              <h3>Green Heart: 20% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Healthcare'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'healthcare smb europe'
+          },
+          {
+            'text': '
+              <h3>Firesphere: 80% Increase in Traffic</h3>
+              <p>You will find amazing content here. All the information you need in one place.</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Technology'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'technology smb europe'
+          },
+          {
+            'text': '
+              <h3>Ocean Stuff: 30% Daily Revenue Increase</h3>
+              <p>You will find amazing content here. All the information you need in one place. Tap here and let the knowledge flow!</p>
+            ',
+            'labels': {
+              'badge': '',
+              'info': 'Small Business'
+            },
+            'button': {
+              'type': 'link',
+              'text': 'Read More',
+              'link': {
+                'url': {
+                  'type': 'EXTERNAL',
+                  'href': 'https://www.hubspot.com/'
+                },
+                'open_in_new_tab': true,
+                'no_follow': true
+              },
+            },
+            'image': {
+              'lg': {
+                'src': ''
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'light',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370',
+              'sm': '0'
+            },
+            'text_max_width': {
+              'lg': '320'
+            },
+            'content_align': {
+              'lg': '6',
+              'md': '6',
+              'sm': '6'
+            },
+            'category': 'finance smb asia'
+          },
+          {
+            'text': '<h3>Odd Dev: 136% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Brazil'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-ltl7p.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'education sme technology south-america'
+          },
+          {
+            'text': '<h3>Kaleidoo: 140% Growth in Conversions</h3>',
+            'labels': {
+              'badge': '',
+              'info': 'Los Angeles, USA'
+            },
+            'image': {
+              'lg': {
+                'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mrk5k.jpg',
+                'alt': 'Describe your image',
+                'width': 370,
+                'height': 370
+              }
+            },
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color_scheme': 'dark',
+            'overlay': 0,
+            'card_shadow': true,
+            'min_height': {
+              'lg': '370'
+            },
+            'text_max_width': {
+              'lg': '500'
+            },
+            'content_align': {
+              'lg': '3',
+              'md': '3',
+              'sm': '3'
+            },
+            'category': 'technology sme north-america'
+          }
+        ],
+        settings={
+          'btn': {
+            'dd': {
+              'color': 'light-darker',
+              'fill': 'fill'
+            }
+          },
+          'col': {
+            'lg': 's4',
+            'md': 'md-s6'
+          },
+          'col_align': 'justify-center',
+          'pag_align': 'center',
+          'listing_top_padding': (vspace_lg / 2)|round(0)|string
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# SECTION: Call to action #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='accent'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Ready to Install',
+            title='Available now on the official HubSpot Marketplace',
+            desc='',
+            settings={
+              'color_scheme': 'dark',
+              'title_tag': 'h2',
+              'divider': ''
+            }
+            wrapper={
+              'max_width': {
+                'lg': '600'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': (gutter / 3)|round(0)|string,
+                  'sm': '0'
+                }
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Get Started',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'white',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

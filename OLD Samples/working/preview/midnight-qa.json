@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": 1,
+      "brokenFragments": 0
+    },
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "h1": 1,
+      "brokenFragments": 0
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": 1,
+      "brokenFragments": 0
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "brokenFragments": 0
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "h1": 1,
+      "brokenFragments": 0
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "brokenFragments": 0
+    }
+  ],
+  "errors": [],
+  "menuOpen": "true",
+  "menuClosed": "false",
+  "faqOpens": true,
+  "noJsMenu": true
+}

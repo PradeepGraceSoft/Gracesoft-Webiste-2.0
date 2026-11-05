@@ -1,0 +1,80 @@
+<!--
+ templateType: section
+ label: Numbers
+ description: "Quantify your greatest achievements with figures."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/numbers.jpg
+-->
+{% dnd_section %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {# Col 1 #}
+      {% dnd_column offset=0, width=4,
+        padding={
+          'default': {
+            'right': theme.layout.gutter
+          },
+          'mobile': {
+            'right': 0,
+            'bottom': (theme.layout.gutter * 2)|round(0)
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/numbers',
+            number='100%',
+            text='
+              <h3>Traffic Increase</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+            '
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {# Col 2 #}
+      {% dnd_column offset=4, width=4,
+        padding={
+          'default': {
+            'left': (theme.layout.gutter / 2)|round(0),
+            'right': (theme.layout.gutter / 2)|round(0)
+          },
+          'mobile': {
+            'left': 0,
+            'right': 0,
+            'bottom': (theme.layout.gutter * 2)|round(0)
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/numbers',
+            number='27k+',
+            text='
+              <h3>Leads Generated</h3>
+              <p>Far far away, behind the word mountains, far from the countries.</p>
+            '
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {# Col 3 #}
+      {% dnd_column offset=8, width=4,
+        padding={
+          'default': {
+            'left': theme.layout.gutter
+          },
+          'mobile': {
+            'left': 0
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/numbers',
+            number='700+',
+            text='
+              <h3>Success Stories</h3>
+              <p>Far far away, behind the word mountains, far from the countries Consonantia.</p>
+            '
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

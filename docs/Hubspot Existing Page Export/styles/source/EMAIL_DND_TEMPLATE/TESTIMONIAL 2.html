@@ -1,0 +1,258 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#FFFFFF","body_border_color":"#EAF0F6","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#ffffff","use_email_client_default_settings":false,"primary_font":"Arial, sans-serif","primary_font_color":"#23496d","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"24"},"heading_two_font":{"size":"22"},"links_font":{"color":"#00a4bd"},"user_module_defaults":{"button_email":{"background_color":"#00a4bd","corner_radius":8,"font":"Arial, sans-serif","font_size":16,"font_color":"#ffffff","font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}},"email_divider":{"height":1,"color":{"color":"#99acc2","opacity":100},"line_type":"solid"}}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"istockphoto-1445194096-170667a",
+                    "height":373,
+                    "loading":"disabled",
+                    "size_type":None,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/istockphoto-1445194096-170667a.webp",
+                    "width":560
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center; font-size: 18px; line-height: 175%;"><span style="font-family: Merriweather, Georgia, sans-serif; font-size: 22px;"><span style="font-weight: bold;">How was your experience</span>, </span></p>
+<p style="text-align: center; font-size: 20px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif;">Hello {{ contact.firstname }},&nbsp;</span></p>
+<p style="text-align: center; font-size: 20px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif;">we would love it if you could leave us a review.&nbsp;</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#99acc2",
+                    "opacity":100
+                    }, line_type="solid", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    }, height=1 %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#F9CB9C" %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"QuailCreek",
+                    "height":110,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/QuailCreek.png",
+                    "width":160
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 16px; line-height: 125%; font-weight: bold;"><span style="font-family: Merriweather, Georgia, sans-serif;">Quail Creek Resort</span></p>
+<p style="font-size: 14px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif;">“We've been in business as a gulf resort for 30 years. Starting small with a Nano gulf course, we had no technology issues. However, as we expanded to 18 hotels and 14 suites INN, we needed assistance. That's when we found Easy Innkeeping. From the start, they lived up to their name, making reservation management easy. I highly recommend Easy Innkeeping for its personal touch, dependability, and affordability.”</span></p>
+<p style="font-size: 14px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif;">- <span style="font-weight: bold;">Matthew Nail</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"stagecoach",
+                    "height":85,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/stagecoach.jpg",
+                    "width":160
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 16px; line-height: 125%; font-weight: bold;"><span style="font-family: Merriweather, Georgia, sans-serif;">Stagecoach Trails Guest Ranch</span></p>
+<p style="font-size: 14px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif;">We've been using them for almost Eight-year now. Their hotel booking engine system is so good. There is a lot of ability to customize your features in the program, and those are things that are very important because you can get a generic program that'll have pre-built-in things that may not fit what you want "</span></p>
+<p style="font-size: 14px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif;">- <span style="font-weight: bold;">JP McCormick</span></span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=4 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"Aaron",
+                    "height":168,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Aaron.jpg",
+                    "width":160
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 16px; line-height: 125%; font-weight: bold;"><span style="font-family: Merriweather, Georgia, sans-serif;">Dow Center and Rockwell Lake Lodge</span></p>
+<p style="font-size: 14px; line-height: 125%;"><span style="font-family: Merriweather, Georgia, sans-serif;">“We’ve been using GraceSoft for just over two years and have had a fantastic experience. It’s easy-to-use, easy to learn, and everything we need. What I like most about GraceSoft is their customer service (hands down)”</span></p>
+<p style="font-size: 14px; line-height: 125%;">&nbsp;</p>
+<p style="font-size: 14px; line-height: 125%; font-weight: bold;"><span style="font-family: Merriweather, Georgia, sans-serif;">-Aaron Tracey</span><br><span style="font-family: Merriweather, Georgia, sans-serif;">(Director of Hospitality Operations Dow Center and Rockwell Lake Lodge)</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#99acc2",
+                    "opacity":100
+                    }, line_type="solid", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    }, height=1 %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#fafafa" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/rich_text", lineNumber=218, hs_enable_module_padding=True, startPosition=-261, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 16px; line-height: 175%; text-align: center;"><span style="font-family: Merriweather, Georgia, sans-serif;">Kindly take a moment to leave us a review by following the link provided below. </span></p>
+<p style="font-size: 16px; line-height: 175%; text-align: center;"><span style="font-family: Merriweather, Georgia, sans-serif;">This platform allows you to easily record a brief video sharing your thoughts</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module corner_radius=25, path="@hubspot/button_email", background_color="#fec103", make_full_width=True, font_color="#ffffff", font_size=16, destination="https://gracesoft1.hippovideo.io/video/testimonial/record/1p29Cc_2dudjEApU52A5-ifJre38e8joMiw5vb_hSIwXHpS0WKtkJJjJ4ePUeHcj", text="Click here to Save Video", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    }, font="Arial, sans-serif" %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#000000","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":16},"styles":{"bold":true,"font-weight":"bold","italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 18px; line-height: 175%; text-align: center;"><span style="font-family: Merriweather, Georgia, sans-serif;">Your opinion matters to us. Tell us how you feel</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#F9CB9C" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/follow_me_email", scale=30, color_scheme="color", icon_shape="circle", lineNumber=228, startPosition=-277, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"5px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"5px"
+                    } %}
+                    {% module_attribute "social" is_json=True %}[{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc/"},{"network":"whatsapp","url":"https://api.whatsapp.com/send?phone=917200423323"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"},{"network":"pinterest","url":"https://www.pinterest.com/gracesoft/"}]{% end_module_attribute %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":14},"styles":{}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#F9CB9C" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=239, hs_enable_module_padding=True, startPosition=19, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#23496d","font":"Arial, sans-serif","size":{"units":"px","value":12}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

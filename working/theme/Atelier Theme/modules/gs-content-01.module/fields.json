@@ -49,13 +49,13 @@
   },
   {
     "name": "product_image_1",
-    "label": "Product screenshot 1",
+    "label": "Hero media",
     "type": "image",
     "responsive": true,
     "resizable": true,
     "default": {
       "src": "",
-      "alt": "GraceSoft Easy InnKeeping reservation calendar with rooms and scheduled stays"
+      "alt": "GraceSoft hospitality platform overview animation"
     }
   }
 ]

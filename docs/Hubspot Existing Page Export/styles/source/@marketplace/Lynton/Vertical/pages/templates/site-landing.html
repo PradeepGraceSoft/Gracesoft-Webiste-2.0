@@ -1,0 +1,45 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/landing.png
+  label: "Landing"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+{% endblock %}
+
+{% block header %}
+  {% dnd_area "header" %}
+    {% dnd_section padding={'top': 20, 'bottom': 20} %}
+      {% dnd_module path="@hubspot/logo", label="Logo", horizontal_alignment="CENTER" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-form.html', context={
+      "text": {
+        "eyebrow": "Free Offer",
+        "heading": "Why Wait? Reach New Levels with Vertical.",
+        "subheading": "<p>Vertical is a versatile and easy-to-use theme that can transform your scaling business with little effort. Made with care by HubSpot experts, Vertical is responsive and customizable for your specific business needs.</p><ul><li>Offer highlight here</li><li>How about another one?</li><li>This offer is cool</li></ul>",
+        "add_cta": false
+      },
+      "logos": {
+        "add_logos": false
+      }
+    } %}
+
+    {% include_dnd_partial path='../sections/featured-items-three.html' %}
+
+    {% include_dnd_partial path='../sections/related-blogs.html' %}
+  {% end_dnd_area %}
+{% endblock %}
+
+{% block footer %}
+  {% global_partial path="{{ '../partials/footer-landing.html' }}" %}
+{% endblock %}

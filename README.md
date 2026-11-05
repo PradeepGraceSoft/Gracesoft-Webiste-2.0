@@ -1,5 +1,11 @@
 # GraceSoft Atelier website workspace
 
+## Main local theme — selected 5 November 2026
+
+Use **Atelier Theme with the Pearl Ocean palette** for ongoing local work. Open [the main homepage preview](working/preview/home-v2-atelier-content.html). Its CMS source remains in `working/theme/Atelier Theme/`; its preview palette is `working/preview/pearl-ocean.css`.
+
+Alternate themes and design samples are archived in [OLD Samples](OLD%20Samples/). This selection is local only and does not change the HubSpot active theme.
+
 Build reusable templates and author page content locally. Deliver a separate unpublished HubSpot website page for owner review. The owner handles final publication.
 
 ## Working folders

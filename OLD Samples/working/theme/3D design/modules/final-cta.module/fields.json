@@ -1,0 +1,62 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Label",
+    "type": "text",
+    "default": "LET’S MAKE ROOM FOR WHAT MATTERS"
+  },
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Your next chapter\nstarts with a conversation."
+  },
+  {
+    "name": "body",
+    "label": "Introduction",
+    "type": "text",
+    "default": "See how GraceSoft Easy InnKeeping can fit your property, your people and your way of welcoming guests."
+  },
+  {
+    "name": "primary_label",
+    "label": "Primary CTA",
+    "type": "text",
+    "default": "Book your personalized demo"
+  },
+  {
+    "name": "primary_url",
+    "label": "Primary CTA URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/livedemo",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "secondary_label",
+    "label": "Secondary CTA",
+    "type": "text",
+    "default": "View pricing"
+  },
+  {
+    "name": "secondary_url",
+    "label": "Secondary CTA URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/pricing",
+      "type": "EXTERNAL"
+    }
+  }
+]

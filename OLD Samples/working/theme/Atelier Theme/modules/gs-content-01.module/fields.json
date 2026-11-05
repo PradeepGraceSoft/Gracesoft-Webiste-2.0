@@ -1,0 +1,61 @@
+[
+  {
+    "name": "text_1",
+    "label": "Hero eyebrow",
+    "type": "text",
+    "default": "/ Property management software"
+  },
+  {
+    "name": "text_2",
+    "label": "Hero heading",
+    "type": "richtext",
+    "default": "Smarter Hospitality Management.<br><em>Better Guest Experiences.</em>"
+  },
+  {
+    "name": "text_3",
+    "label": "Hero subheading",
+    "type": "text",
+    "default": "One platform for front desk, bookings, payments and guest CRM, with AI voice and chat assistants to answer guest questions."
+  },
+  {
+    "name": "link_4",
+    "label": "Request Demo",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/livedemo"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Request Demo"
+  },
+  {
+    "name": "link_5",
+    "label": "Start Free Trial",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/freetrial"
+    }
+  },
+  {
+    "name": "link_5_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Start Free Trial"
+  },
+  {
+    "name": "product_image_1",
+    "label": "Hero media",
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "src": "",
+      "alt": "GraceSoft hospitality platform overview animation"
+    }
+  }
+]

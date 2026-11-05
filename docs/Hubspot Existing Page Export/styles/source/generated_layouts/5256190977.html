@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+        <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+        <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+        <style type="text/css" id="hs-inline-css">
+        /*<![CDATA[*/
+        #backgroundTable {
+            padding: 8px;
+        }
+
+        #templateTable {
+            width: {{ email_body_width }}px;
+            margin:0;
+            font-family:Helvetica Neue,'Helvetica Neue',Helvetica,Arial,Lucida Grande,Lucida Sans,Lucida Sans Unicode,Verdana,sans-serif;
+            color:#444;
+            font-size:13px;
+            line-height:1.33em;
+            padding: 8px;
+        }
+        /*]]>*/
+    </style>
+         <style type="text/css">
+        /*<![CDATA[*/
+            /* ==== Mobile Styles ==== */
+            
+            /* Constrain email width for small screens */
+            @media screen and (max-width: 650px) {
+                table[id="backgroundTable"] {
+                    width: 95% !important;
+                }
+                
+                table[id="templateTable"] {
+                    max-width:{{ email_body_width }}px !important;
+                    width:100% !important;
+                }
+
+                table[id="contentTableInner"] {
+                    max-width:{{ email_body_width }}px !important;
+                    width:100% !important;
+                }
+            
+                /* Makes image expand to take 100% of width*/
+                img {
+                    width: 100% !important;
+                    height: auto !important;
+                }
+
+                #contentCell {
+                    padding: 10px 10px !important;
+                }
+
+                #headerTable {
+                    padding-right: {{email_body_padding_num / 2 |int}}px !important;
+                }
+
+                #contentTableOuter {
+                    padding: {{email_body_padding_num / 2 |int}}px !important;
+                }
+            }
+
+            @media only screen and (max-width: 480px) {
+                /* ==== Client-Specific Mobile Styles ==== */
+                body, table, td, p, a, li, blockquote{
+                    -webkit-text-size-adjust:none !important;
+                } /* Prevent Webkit platforms from changing default text sizes */
+                body{
+                    width:100% !important;
+                    min-width:100% !important;
+                } /* Prevent iOS Mail from adding padding to the body */
+
+                /* ==== Mobile Reset Styles ==== */
+                td[id="bodyCell"] {
+                    padding:10px !important;
+                }
+
+                /* ==== Mobile Template Styles ==== */
+    
+                table[id="templateTable"] {
+                    max-width:{{ email_body_width }}px !important;
+                    width:100% !important;
+                }
+
+                table[id="contentTableInner"] {
+                    max-width:{{ email_body_width }}px !important;
+                    width:100% !important;
+                }
+                
+                /* ==== Image Alignment Styles ==== */
+
+                h1, .h1 {
+                    font-size:26px !important;
+                    line-height:125% !important;
+                }
+
+                h2, .h2 {
+                    font-size:20px !important;
+                    line-height:125% !important;
+                }
+
+                h3, .h3 {
+                    font-size:15px !important;
+                    line-height:125% !important;
+                }
+
+                h4, .h4 {
+                    font-size:13px !important;
+                    line-height:125% !important;
+                }
+
+                h5, .h5 {
+                    font-size:11px !important;
+                    line-height:125% !important;
+                }
+
+                h6, .h6 {
+                    font-size:10px !important;
+                    line-height:125% !important;
+                }
+                
+                .hide {
+                    display:none !important;
+                } /* Hide to save space */
+
+                /* ==== Body Styles ==== */
+                
+                td[class="bodyContent"] {
+                    font-size:16px !important;
+                    line-height:145% !important;
+                }
+                
+                /* ==== Footer Styles ==== */
+
+                td[id="footerTable"]{
+                    padding-left: 0px !important;
+                    padding-right: 0px !important;
+                    font-size:12px !important;
+                    line-height:145% !important;
+                }
+                
+                /* ==== Image Alignment Styles ==== */
+                
+                table[class="alignImageTable"] {
+                    width: 100% !important;
+                }
+                
+                td[class="imageTableTop"] {
+                    display: none !important;
+                    /*padding-top: 10px !important;*/
+                }
+                td[class="imageTableRight"] {
+                    display: none !important;
+                }
+                td[class="imageTableBottom"] {
+                    padding-bottom: 10px !important;
+                }
+                td[class="imageTableLeft"] {
+                    display: none !important;
+                }
+                
+                /* ==== Column Styles ==== */
+
+                td[class~="column"] {
+                    display: block !important;
+                    width: 100% !important;
+                    padding-top: 0 !important;
+                    padding-right: 0 !important;
+                    padding-bottom: 0 !important;
+                    padding-left: 0 !important;
+                }
+
+                td[class~=columnContent] {
+                    font-size:14px !important;
+                    line-height:145% !important;
+                
+                    padding-top: 10px !important;
+                    padding-right: 10px !important;
+                    padding-bottom: 10px !important;
+                    padding-left: 10px !important;
+                }
+
+                #contentCell {
+                    padding: 10px 0px !important;
+                }
+
+                #headerTable {
+                    padding-right: {{email_body_padding_num / 2 |int}}px !important;
+                }
+
+                #contentTableOuter {
+                    padding: {{email_body_padding_num / 2 |int}}px !important;
+                }
+            }
+        /*]]>*/
+    </style>
+
+        <!-- http://www.emailon@cid.com/blog/details/C13/ensure_that_your_entire_email_is_rendered_by_default_in_the_iphone_ipad -->
+        <!--                                                                                                                     -->
+        <!--                                                                                                                     -->
+        <!--                            _/    _/            _/          _/_/_/                        _/                         -->
+        <!--                           _/    _/  _/    _/  _/_/_/    _/        _/_/_/      _/_/    _/_/_/_/                      -->
+        <!--                          _/_/_/_/  _/    _/  _/    _/    _/_/    _/    _/  _/    _/    _/                           -->
+        <!--                         _/    _/  _/    _/  _/    _/        _/  _/    _/  _/    _/    _/                            -->
+        <!--                        _/    _/    _/_/_/  _/_/_/    _/_/_/    _/_/_/      _/_/        _/_/                         -->
+        <!--                                                               _/                                                    -->
+        <!--                                                              _/                                                     -->
+        <!--                                                                                                                     -->
+        <!--                                                 Extra White Space!                                                  -->
+        <!--                                                                                                                     -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        
+    </head>
+    <body class="hs_simple_email_simulation_responsive " style="" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+
+        <!-- Preview text (text which appears right after subject) -->
+        <div id="preview_text" style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+            {% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
+        </div>
+
+        <div id="backgroundTable">
+            <table border="0" cellpadding="0" cellspacing="0" id="templateTable">
+                <div class="header-container-wrapper">
+<tr>
+<td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
+            <tr>
+<td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
+
+<div class="widget-span widget-type-email_body " style="" data-widget-type="email_body">
+{% content_attribute "email_body" %}<p>Hi&nbsp;{{ contact.firstname }},</p>
+<p>Describe what you have to offer the customer. Why should they read? What did you promise them in the subject line? Tell them something cool. Make them laugh. Make them cry. Well, maybe don't do that...</p>
+<p>Use a list to:</p>
+<ul>
+<li>Explain the value of your offer</li>
+<li>Remind the reader what they&rsquo;ll get out of taking action</li>
+<li>Show off your skill with bullet points</li>
+<li>Make your content easy to scan</li>
+</ul>
+<p><a href="http://hubspot.com">LINK TO A LANDING PAGE ON YOUR SITE</a> (This is the really important part.)</p>
+<p>Now wrap it all up with a pithy little reminder of how much you love them.</p>
+<p>Aw. You silver-tongued devil, you.</p>
+<p>Sincerely,</p>
+<p>Your name</p>{% end_content_attribute %}
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </table>
+   </td>
+</tr>
+<tr>
+<td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
+            <tr>
+<td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
+
+<div class="widget-span widget-type-email_can_spam " style="" data-widget-type="email_can_spam">
+&copy; <input class="hubspot-mergetag" type="button" value="Name" data-canspam="{{ site_settings.company_name }}">
+
+<br/><input class="hubspot-mergetag" type="button" value="Address 1" data-canspam="{{ site_settings.company_street_address_1 }}">
+
+<br/><input class="hubspot-mergetag" type="button" value="City" data-canspam="{{ site_settings.company_city }}">
+, <input class="hubspot-mergetag" type="button" value="State" data-canspam="{{ site_settings.company_state }}">
+ <input class="hubspot-mergetag" type="button" value="Zip" data-canspam="{{ site_settings.company_zip }}">
+
+<br/><input class="hubspot-mergetag" type="button" value="Country" data-canspam="{{ site_settings.company_country }}">
+
+<br/>
+<br/>
+<br/>
+&nbsp;<a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="text-decoration: underline; whitespace: nowrap; color: inherit;"
+>manage your email preferences</a>
+&nbsp;
+<br/><br/>
+&nbsp;<a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}" style="text-decoration: underline; whitespace: nowrap; color: {{ secondary_font_color }};"
+>Unsubscribe from all future emails</a>
+&nbsp;
+
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </table>
+   </td>
+</tr>
+</div><!--end header wrapper -->
+            </table>
+        </div>
+    </body>
+</html>

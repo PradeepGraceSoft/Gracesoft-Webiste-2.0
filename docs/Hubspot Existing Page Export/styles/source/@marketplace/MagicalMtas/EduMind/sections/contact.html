@@ -1,0 +1,95 @@
+<!--
+  templateType: section
+  label: Contact
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/contact.png
+  description: "Contact section separated in two columns."
+-->
+{% dnd_section max_width=1200, class="contact-area" %}
+  
+{% dnd_column width=12, offset=0 %}
+
+  {% dnd_row %}
+      {% dnd_column width=6, offset=0 %}
+        {% dnd_row %}
+            {% dnd_column width=12, offset=0 %}
+              {% dnd_row %}
+                {% dnd_module "module_16679258950165" path="../modules/Contact Info", label="Contact Info" 
+                  contact_title = '<h2>We are Always Eager to Hear From You!</h2>',
+                  contact_info_item = [
+                    {
+                      'contact_info_title' : '<h3>Address</h3>', 
+                      'contact_info_excerpt' : '<p>Studio 76d, Riley Ford, North Michael chester,<br> CF99 6QQ</p>'
+                    },
+                    {
+                      'contact_info_title' : '<h3>Email</h3>', 
+                      'contact_info_excerpt' : '<p>edumind@example.com</p>'
+                    },
+                    {
+                      'contact_info_title' : '<h3>Phone</h3>', 
+                      'contact_info_excerpt' : '<p>(+091) 413 554 8598</p>'
+                    }
+                  ]
+                %}
+                {% end_dnd_module %} 
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %} 
+
+          {% dnd_row %}
+            {% dnd_column width=12, offset=0 %}
+              {% dnd_row %}
+                {% dnd_module "module_16679258375384" path="../modules/Social Icon", label="Social Icon" 
+                
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %} 
+
+        {% end_dnd_column %}
+
+      {% dnd_column width=6, offset=6 %}
+        {% dnd_row %}
+            {% dnd_module "module_16679261984266" path="../modules/Contact Form", label="Contact Form"
+            
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+      {% end_dnd_column %}
+
+    {% end_dnd_row %}
+
+  {% dnd_row %}
+    {% dnd_module "module_166754340276912" path="../modules/Shape Image", label="Shape Image" 
+         shape_image_item = [
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'contact-shape-1',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '1',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/contact/contact-shape-1.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'contact-shape-2',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '1',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/contact/contact-shape-2.png') 
+            }
+          }
+        ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+
+  {% end_dnd_column %}     
+{% end_dnd_section %}

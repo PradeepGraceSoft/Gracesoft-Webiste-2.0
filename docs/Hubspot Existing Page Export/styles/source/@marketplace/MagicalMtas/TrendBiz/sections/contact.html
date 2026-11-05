@@ -1,0 +1,81 @@
+<!--
+  templateType: section
+  label: Contact
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/contact.png
+  description: "Contact section separated in two columns."
+-->
+
+{# Contact Section Start #}
+{% dnd_section max_width=1235, class="trendbiz-container poular-package-section" background_color={{ context.background_color || "#FFFFFF" }}, background_image={
+    "backgroundPosition": "MIDDLE_CENTER",
+    "backgroundSize": "cover",
+    "imageUrl": context.background_image || get_asset_url("../images/bg/contact-bg.jpg")
+    }, margin={
+    'top': '0px',
+    'bottom': '0px',
+    'left': '0px',
+    'right': '0px'
+    },  padding={
+    'top': '120px',
+    'bottom': '120px',
+    'left': '0px',
+    'right': '0px'
+    } %}
+  {% dnd_column width=4, offset=0 %}
+
+    {% dnd_row %}
+      {% dnd_module path='@hubspot/rich_text' %}         
+        {% module_attribute 'html' %} 
+            <h3>Contact Info</h3>
+            <p>Contact anytime to answer all enquiries within 24 hours.
+            on business days.</p>
+        {% end_module_attribute %}   
+      {% end_dnd_module %}     
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_module "module_16692213515515" path="../modules/List", label="List" 
+         extra_class = 'contact-list',
+         list_item = [
+           {
+             'list_title' : '<span>12/A, Pk House New York, US, FV77 8WS</span>'
+           },
+           {
+             'list_title' : '<span>trendbiz@gmail.com</span>'
+           },
+           {
+             'list_title' : '<span>+57 7051 678-2509</span>'
+           }
+         ]
+      %}
+      {% end_dnd_module %}
+   {% end_dnd_row %}
+     
+  {% end_dnd_column %}
+
+
+  {% dnd_column width=8, offset=4 %}
+    {% dnd_row %}
+      {% dnd_module path='@hubspot/rich_text' %}         
+        {% module_attribute 'html' %} 
+            <h3>Drop Us A Line</h3>
+            <p>Please call or email contact form and we will be happy to assist you.</p>
+        {% end_module_attribute %}   
+      {% end_dnd_module %}     
+    {% end_dnd_row %}
+
+     {% dnd_row %}
+      {% dnd_module "module_16694774395456" path='../modules/Theme Form', label="Form"
+      extra_class = '',
+      %}
+    {% end_dnd_module %}
+     {% end_dnd_row %}
+
+
+  {% end_dnd_column %}
+
+{% end_dnd_section %}
+{# Contact Section End #}
+ 
+ 

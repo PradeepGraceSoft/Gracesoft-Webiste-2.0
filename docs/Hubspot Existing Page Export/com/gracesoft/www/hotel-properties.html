@@ -1,0 +1,1667 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en">        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en">               <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="author" content="GraceSoft"> 
+  <meta name="description" content="Web-based  hotel booking software,reservation software,online booking software, hotel software,condo software,booking software,hotel management software"> 
+  <meta name="generator" content="HubSpot"> 
+  <title>Hotel Reservation Software Using Properties</title> 
+  <link rel="shortcut icon" href="https://www.gracesoft.com/hubfs/anew/Images/g-logo.ico"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta property="og:description" content="Web-based  hotel booking software,reservation software,online booking software, hotel software,condo software,booking software,hotel management software"> 
+  <meta property="og:title" content="Hotel Reservation Software Using Properties"> 
+  <meta name="twitter:description" content="Web-based  hotel booking software,reservation software,online booking software, hotel software,condo software,booking software,hotel management software"> 
+  <meta name="twitter:title" content="Hotel Reservation Software Using Properties"> 
+  <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style> 
+  <!-- Editor Styles --> 
+  <style id="hs_editor_style" type="text/css">
+#hs_cos_wrapper_module_1427796626864533  { display: block !important; margin-top: 10px !important }
+</style> 
+  <link rel="canonical" href="../../../com/gracesoft/www/hotel-properties.html"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="msvalidate.01" content="4D9072709FE4907393BE9588424B44C3"> 
+  <meta name="google-site-verification" content="aqDUL1PQIvgzgkYTVkckfypeaMjXXl4yC6Z8NB05PEw"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet"> 
+  <style>
+html{
+    overflow-x: hidden;
+}
+   h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+ h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+   h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+    .h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  p{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #4b5563;
+  }
+  li{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+.btn{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px !important;
+    font-weight: 500;
+}
+  .ui-label {
+    color: #4b5563;
+    font-style: normal;
+    line-height: 1.28;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+  .badge--large{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+  .section-intro__overline{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px; 
+    font-weight: 500;
+}
+  .review__quote {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #4b5563;
+}
+  .accordion__title--default {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+  .nav__link {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2937;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+}
+  .featshow__btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+  .comptab__box .comptab__box--text{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+strong{
+font-family: 'Inter', sans-serif !important;
+}  
+  .strong{
+font-family: 'Inter', sans-serif !important;
+}  
+  .pricing__price{
+color: #1f2937;
+font-family: 'Poppins', sans-serif !important;
+}
+.pricing__info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px !important;
+}
+.pricing__feature__text{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+}
+
+div:has(> header) {
+   position: sticky !important;
+   top: 0px !important;
+   z-index: 1000 !important;
+}
+  .kl-navbar__button {
+    color: #4e598c;
+    display: inline-block;
+    font-family: Inter, sans-serif !important;
+    font-size: 12px;
+    font-weight: 700 !important;
+    line-height: 2em;
+    word-break: normal;
+}
+    .kl-footer__byline{
+  display: none !important;
+  }
+.kl-footer__content {
+    padding: 60px 0 120px 0;
+}
+.floating-left-buttons {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.floating-left-buttons.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hide checkbox */
+.contact-toggle {
+    display: none;
+}
+
+/* Desktop */
+.float-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.float-toggle {
+    display: none;
+}
+
+.whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    background: unset;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-btn img {
+    width: 40px;
+}
+
+.float-btn {
+    background: linear-gradient(111.02deg, #f5693f, #f53f71);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px !important;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.float-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .floating-left-buttons {
+        left: 15px;
+        bottom: 20px;
+    }
+
+    .float-toggle {
+        display: flex;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: linear-gradient(111.02deg, #f5693f, #f53f71);
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        border: 0;
+        padding: 0;
+    }
+
+    .float-options {
+        display: none;
+        margin-bottom: 12px;
+        align-items: flex-start;
+    }
+
+    .contact-toggle:checked ~ .float-options {
+        display: flex;
+    }
+
+    .whatsapp-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .whatsapp-btn img {
+        width: 38px;
+    }
+
+    .float-btn {
+        padding: 10px 16px;
+        font-size: 14px !important;
+    }
+}
+</style> 
+  <script>
+  setTimeout(load_js, 10000); // Delay 4 seconds in loading function
+setTimeout(load_jsgtag, 10000); // Delay 4 seconds in loading function
+function load_js()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://www.googletagmanager.com/gtag/js?id=AW-988721745';
+    head_ID.appendChild(script_element);
+}
+function load_jsgtag()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://www.googletagmanager.com/gtag/js?id=G-QC7JYCD38K';
+    head_ID.appendChild(script_element);
+}
+var delayInMilliseconds = 10000; //1 second
+
+setTimeout(function() {
+  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-988721745'); 
+}, delayInMilliseconds);
+</script> 
+  <!-- Google tag (gtag.js) --> 
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-988721745"></script>  --> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QC7JYCD38K"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-QC7JYCD38K'); </script> 
+  <meta property="og:url" content="https://www.gracesoft.com/hotel-properties"> 
+  <script>var hsVars = { app_hs_base_url: 'https://app-na2.hubspot.com' };</script> 
+  <meta name="twitter:card" content="summary"> 
+  <link rel="stylesheet" href="http://7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/template_assets/DEFAULT_ASSET/1793199680890/template_layout.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/1906996289/1741520003565/template_Hubspot-default-basic.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/4042509380/1741520008628/template_Base.css"> 
+  <!-- The style tag has been deprecated. Attached stylesheets are included in the required_head_tags page variable. --> 
+  <meta name="google-site-verification" content="suY9kXSXMiZ8dznZO8AG4xXj3tdE97RvZAvHRTTBOjg"> 
+  <meta name="keywords" content="hotel reservation software, reservation software, condo software, condo management software, web based property management software, hotel software, hospitality management software, hotel management software, motel software, online reservation software, best property management software, best online property management software, property management systems, property management system, online booking software, reservation system"> 
+  <meta name="robots" content="index,follow"> 
+  <!--[if IE]>
+<link rel="stylesheet" type="text/css" href="http://gracesoft.com/Portals/107648/assets/css/ie-new.css" />
+<![endif]--> 
+  <link href="https://www.gracesoft.com/hubfs/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+  <style type="text/css">
+.fa.fa-angle-right.right-icon{
+  float: right;
+  line-height: 30px;
+  font-size: 20px;
+  padding-right: 20px;
+  color: #EEE;
+}
+.span12.widget-span.widget-type-rich_text span .span12{
+     margin-left: 0px;
+}
+</style> 
+  <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5011582"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+  <noscript>
+   &lt;img src="//bat.bing.com/action/0?ti=5011582&amp;amp;Ver=2" height="0" width="0" style="display:none; visibility: hidden;"&gt;
+  </noscript> 
+  <script type="text/javascript">
+    window.location.replace("http://www.gracesoft.com/featured-clients");
+</script> 
+ </head> 
+ <body class="   hs-content-id-3026609181 hs-landing-page hs-page hs-content-path-hotel-properties hs-content-name-hotel-reservation-software-using-properties  " style=""> 
+  <div class="header-container-wrapper"> 
+   <div class="header-container container-fluid"> 
+    <div class="row-fluid-wrapper row-depth-1 row-number-1 "> 
+     <div class="row-fluid "> 
+      <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+       <div class="cell-wrapper layout-widget-wrapper"> 
+        <span id="hs_cos_wrapper_green_header" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2653012970">
+         <div class="green-header-top"> 
+          <div class="span6 cloud-grace-header">
+           <span style="font-size: 14px; color: #bbbbbb;"><strong>Cloud Computing -"Best Property Management Software"</strong></span>
+          </div> 
+          <div class="span6"> 
+           <div class="span7 trial-grace">
+            <a href="//www.gracesoft.com/free-trial-registration" target="_blank" class="btn btn-success btn-lg">Free Trial <span class="fa fa-arrow-circle-right"></span></a> &nbsp;
+            <a href="//www.gracesoft.com/easy-innkeeping-live-demo" target="_blank" class="btn btn-info btn-lg"> Live Demo <span class="fa fa-eye"></span></a>
+           </div> 
+           <div class="span5 social-grace">
+            <a href="https://www.facebook.com/GraceSoft" target="_blank" data-mce-target="_blank"><img src="https://www.gracesoft.com/hs-fs/file-2494841711-png/assets/New-site/facebook.png" alt="facebook"></a>&nbsp;
+            <a href="https://plus.google.com/105941190345434707640/posts" target="_blank" data-mce-target="_blank"><img src="https://www.gracesoft.com/hs-fs/file-2494841601-png/assets/New-site/googleplus.png" alt="googleplus"></a>&nbsp;
+            <a href="https://twitter.com/GraceSoft" target="_blank" data-mce-target="_blank"><img src="https://www.gracesoft.com/hs-fs/file-2494841606-png/assets/New-site/twitter.png" alt="twitter"></a>&nbsp;
+            <a href="http://www.linkedin.com/home?trk=nav_responsive_tab_home" target="_blank" data-mce-target="_blank"><img src="https://www.gracesoft.com/hs-fs/file-2494852221-png/assets/New-site/linkedin.png" alt="linkedin"></a>&nbsp;
+            <a href="http://www.youtube.com/gracesoft1/" target="_blank" data-mce-target="_blank"><img src="https://www.gracesoft.com/hs-fs/file-2494841716-png/assets/New-site/youtube.png" alt="youtube"></a>&nbsp;
+            <a href="http://gracesoft.com/blog-1/" target="_blank" data-mce-target="_blank"><img src="https://www.gracesoft.com/hs-fs/file-2494841706-png/assets/New-site/rss.png" alt="rss"></a>
+           </div> 
+          </div> 
+         </div></span> 
+       </div>
+       <!--end layout-widget-wrapper --> 
+      </div>
+      <!--end widget-span --> 
+     </div>
+     <!--end row--> 
+    </div>
+    <!--end row-wrapper --> 
+    <div class="row-fluid-wrapper row-depth-1 row-number-2 "> 
+     <div class="row-fluid "> 
+      <div class="span12 widget-span widget-type-cell " style="background: none; border-top: 1px solid #EEEEEE;border-bottom: 1px solid #EEEEEE;" data-widget-type="cell" data-x="0" data-w="12"> 
+       <div class="row-fluid-wrapper row-depth-1 row-number-3 "> 
+        <div class="row-fluid "> 
+         <div class="span3 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="3"> 
+          <div class="cell-wrapper layout-widget-wrapper"> 
+           <span id="hs_cos_wrapper_new_gs_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2645029139">
+            <nav class="navbar navbar-default navbar-fixed-top"> 
+             <div class="container"> 
+              <div class="navbar-header">
+               <a class="navbar-brand" href="../../../com/gracesoft/www/index.html"><img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/gslogo.png?width=260&amp;name=gslogo.png" alt="Gracesoft Logo" title="Gracesoft" width="260" style="width: 260px; border-radius: 0px; padding-top: 9px;" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/gslogo.png?width=130&amp;name=gslogo.png 130w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/gslogo.png?width=260&amp;name=gslogo.png 260w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/gslogo.png?width=390&amp;name=gslogo.png 390w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/gslogo.png?width=520&amp;name=gslogo.png 520w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/gslogo.png?width=650&amp;name=gslogo.png 650w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/gslogo.png?width=780&amp;name=gslogo.png 780w" sizes="(max-width: 260px) 100vw, 260px"></a>
+              </div> 
+              <div class="collapse navbar-collapse" id="myNavbar">
+               &nbsp;
+              </div> 
+             </div> 
+            </nav><a href="../../../com/gracesoft/www/index.html"></a></span> 
+          </div>
+          <!--end layout-widget-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+         <div class="span9 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="3" data-w="9"> 
+          <div class="row-fluid-wrapper row-depth-2 row-number-1 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_gracesoft_login" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="2907434014"><script type="text/javascript">
+    $(function() {
+    var button = $('#loginButton');
+    var box = $('#loginBox');
+    var form = $('#loginForm');
+    button.removeAttr('href');
+    button.mouseup(function(login) {
+        box.toggle();
+        button.toggleClass('active');
+    });
+    form.mouseup(function() { 
+        return false;
+    });
+    $(this).mouseup(function(login) {
+        if(!($(login.target).parent('#loginButton').length > 0)) {
+            button.removeClass('active');
+            box.hide();
+        }
+    });
+});
+    </script> 
+               <div class="custom-contact"> 
+                <!--<p><a href="http://www.gracesoft.com/free-hotel-software" target="_blank" class="btn btn-danger" style="margin: 0px 15px;">Click Here For free Software <i class="fa fa-download"></i></a></p>--> 
+                <p><i class="fa fa-phone-square" style="color: #fbac4a; font-size: 25px;"></i><b> 1 - 888 - 781 - 1086</b></p> 
+                <div id="loginContainer"> 
+                 <a href="#" id="loginButton"><span>Log In</span></a> 
+                 <div style="clear:both"></div> 
+                 <div id="loginBox"> 
+                  <div id="loginForm"> 
+                   <p class="loginpara1"><a href="//www.gracesoft.com/login-pms/" title="Easy InnKeeping PMS Login">Easy InnKeeping PMS</a></p> 
+                   <p class="loginpara2"><a href="//www.gracesoft.com/crm-login/" title="E-Connect CRM">E-Connect CRM</a></p> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+          <div class="row-fluid-wrapper row-depth-2 row-number-2 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_new_gs_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu" data-global-widget-id="2624987572">
+               <div id="hs_menu_wrapper_new_gs_menu" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu"> 
+                <ul role="menu"> 
+                 <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="//www.gracesoft.com/easy-innkeeping" aria-haspopup="true" aria-expanded="false" role="menuitem" target="_self">Easy InnKeeping</a> 
+                  <ul role="menu" class="hs-menu-children-wrapper"> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easy-innkeeping/hotel-software.htm" role="menuitem" target="_self">Hotel Software</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easy-innkeeping/reservation-software.htm" role="menuitem" target="_self">B &amp; B Software</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easy-innkeeping/condo-software" role="menuitem" target="_self">Condo Software</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/web-based-pms-software/" role="menuitem" target="_self">Enterprise PMS</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/enterprise_solutions" role="menuitem" target="_self">Enterprise Solutions</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easy-innkeeping/reservation_software_features" role="menuitem" target="_self">Software Features</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="//www.gracesoft.com/easy-innkeeping-interfaces" role="menuitem" target="_self">Interfaces</a> 
+                    <ul role="menu" class="hs-menu-children-wrapper"> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/easy-innkeeping/hotel-gds" role="menuitem" target="_self">GDS Interface</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/credit-card-interface" role="menuitem" target="_self">Credit Card Interface</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/easy-innkeeping/hotel_callaccounting" role="menuitem" target="_self">Call Accounting Interface</a></li> 
+                    </ul></li> 
+                   <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="//www.gracesoft.com/easy-innkeeping/hotel-software-comparison" role="menuitem" target="_self">Pricing</a> 
+                    <ul role="menu" class="hs-menu-children-wrapper"> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/easy-innkeeping/hotel-software-comparison/additional-features" role="menuitem" target="_self">Additional Features</a></li> 
+                    </ul></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/clients" role="menuitem" target="_self">Clients</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="//www.gracesoft.com/online-clients" role="menuitem" target="_self">Online Clients</a> 
+                    <ul role="menu" class="hs-menu-children-wrapper"> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/hotel-properties" role="menuitem" target="_self">Hotel Properties</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/motel-properties" role="menuitem" target="_self">Motel Properties</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/resort-properties" role="menuitem" target="_self">Resort Properties</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/inn-properties" role="menuitem" target="_self">Inn Properties</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/bandb-properties" role="menuitem" target="_self">B &amp; B Properties</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/cms-properties" role="menuitem" target="_self">CMS Properties</a></li> 
+                    </ul></li> 
+                  </ul></li> 
+                 <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="//www.gracesoft.com/online_res" aria-haspopup="true" aria-expanded="false" role="menuitem" target="_self">Easy Webrez</a> 
+                  <ul role="menu" class="hs-menu-children-wrapper"> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easywebrez/basic" role="menuitem" target="_self">Easy Webrez Basic</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easywebrez/standard" role="menuitem" target="_self">Easy Webrez Standard</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easywebrez/advanced" role="menuitem" target="_self">Easy Webrez Advanced</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/associations" role="menuitem" target="_self">Easy Webrez Features</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/easy-innkeeping/booking_engine_customization" role="menuitem" target="_self">Easy Webrez Customization</a></li> 
+                  </ul></li> 
+                 <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="//www.gracesoft.com/e-connect" role="menuitem" target="_self">E- Connect</a></li> 
+                 <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="//www.gracesoft.com/easy-webpos" role="menuitem" target="_self">Easy Webpos</a></li> 
+                 <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="//www.gracesoft.com/aboutus" aria-haspopup="true" aria-expanded="false" role="menuitem" target="_self">About Us</a> 
+                  <ul role="menu" class="hs-menu-children-wrapper"> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/jobs" role="menuitem" target="_self">Executive Team</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/contactus" role="menuitem" target="_self">Contact Us</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="//www.gracesoft.com/partners" role="menuitem" target="_self">Partners</a> 
+                    <ul role="menu" class="hs-menu-children-wrapper"> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/partners/onetoonetext" role="menuitem" target="_self">OnetoOne Text</a></li> 
+                    </ul></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/sitemap" role="menuitem" target="_self">Sitemap</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/testimonials" role="menuitem" target="_self">Testimonials</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="//www.gracesoft.com/get-support" role="menuitem" target="_self">Get Support</a></li> 
+                   <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="../../../com/gracesoft/www/index.html" role="menuitem" target="_self">Branch Office</a> 
+                    <ul role="menu" class="hs-menu-children-wrapper"> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/middle-east-division" role="menuitem" target="_self">Middle East Division</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/indian-division" role="menuitem" target="_self">India Division</a></li> 
+                     <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="//www.gracesoft.com/australia-division" role="menuitem" target="_self">Australia Division</a></li> 
+                    </ul></li> 
+                  </ul></li> 
+                 <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="//www.gracesoft.com/blog-1/" role="menuitem" target="_self">Blog</a></li> 
+                </ul> 
+               </div></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+        </div>
+        <!--end row--> 
+       </div>
+       <!--end row-wrapper --> 
+      </div>
+      <!--end widget-span --> 
+     </div>
+     <!--end row--> 
+    </div>
+    <!--end row-wrapper --> 
+   </div>
+   <!--end header --> 
+  </div>
+  <!--end header wrapper --> 
+  <div class="body-container-wrapper"> 
+   <div class="body-container container-fluid"> 
+    <div class="row-fluid-wrapper row-depth-1 row-number-1 "> 
+     <div class="row-fluid "> 
+      <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12"> 
+       <div class="row-fluid-wrapper row-depth-1 row-number-2 "> 
+        <div class="row-fluid "> 
+         <div class="span12 widget-span widget-type-header " style="" data-widget-type="header" data-x="0" data-w="12"> 
+          <div class="cell-wrapper layout-widget-wrapper"> 
+           <span id="hs_cos_wrapper_module_1427796626864533" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h2>Hotel Properties</h2></span> 
+          </div>
+          <!--end layout-widget-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+        </div>
+        <!--end row--> 
+       </div>
+       <!--end row-wrapper --> 
+       <div class="row-fluid-wrapper row-depth-1 row-number-3 "> 
+        <div class="row-fluid "> 
+         <div class="span12 widget-span widget-type-rich_text " style="" data-widget-type="rich_text" data-x="0" data-w="12"> 
+          <div class="cell-wrapper layout-widget-wrapper"> 
+           <span id="hs_cos_wrapper_module_1435215442852642" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/clients/Newclients/hydepark-client.jpg" alt="Hyde Park Hotel" align="right" style="float: right; margin: 10px 10px 10px 20px;" title="Hyde Park Hotel">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Hyde Park Hotel</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Downtown Boutique Hotel, in the heart of SoHo! Minutes from Bern's Steak House and steps from Hyde Park Village and SoHo bar scene, in the center of Tampa. We offer fully furnished kitchens, free parking and free Wi-Fi.24-Hour Automated Check-In,Free Wi-Fi Internet Access , On-Site Laundry Facility. Full Kitchens,Free Parking.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="../../../com/gracesoft/www/hydeparkhotel.html" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/nealslodges.jpg?width=350&amp;height=210&amp;name=nealslodges.jpg" alt="Neal's Lodges" title="Neal's Lodges" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/nealslodges.jpg?width=175&amp;height=105&amp;name=nealslodges.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/nealslodges.jpg?width=350&amp;height=210&amp;name=nealslodges.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/nealslodges.jpg?width=525&amp;height=315&amp;name=nealslodges.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/nealslodges.jpg?width=700&amp;height=420&amp;name=nealslodges.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/nealslodges.jpg?width=875&amp;height=525&amp;name=nealslodges.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/nealslodges.jpg?width=1050&amp;height=630&amp;name=nealslodges.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Neal's Lodges</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span style="color: #2f343a;"><strong>Welcome To Neal's Lodges</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Are you looking for a Hill Country oasis with crystal clear streams, rugged hillsides, abundant wildlife and activities for the whole family? Then search no further! Neal's Lodges, which was founded in 1926, is a family owned and operated vacation hideaway on the beautiful spring-fed Frio River.
+            </div> 
+            <div style="text-align: justify;">
+             Today, Neal's remains family owned and a favorite Hill Country vacation spot offering year-round activities. We offer 71 cabins, 15 tent camping sites and 9 RV hook-ups near the river PLUS 12 lodges in different areas of Concan and 16 Condos overlooking the Frio Canyon.
+            </div> 
+            <div style="text-align: justify;">
+             We also have a country store, grocery, laundromat and new gift shop. All of Neal's cabins have AC, TV, and kitchens (furnished with dishes/ basic utensils, etc.). Be sure to read our Cancellation Policy.
+            </div> <p style="text-align: right;"><a href="http://nealslodges.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/shale-lodge.jpg?width=350&amp;height=210&amp;name=shale-lodge.jpg" alt="Shale Lodge Pleasanton" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="Shale Lodge Pleasanton" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/shale-lodge.jpg?width=175&amp;height=105&amp;name=shale-lodge.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/shale-lodge.jpg?width=350&amp;height=210&amp;name=shale-lodge.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/shale-lodge.jpg?width=525&amp;height=315&amp;name=shale-lodge.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/shale-lodge.jpg?width=700&amp;height=420&amp;name=shale-lodge.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/shale-lodge.jpg?width=875&amp;height=525&amp;name=shale-lodge.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/shale-lodge.jpg?width=1050&amp;height=630&amp;name=shale-lodge.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Shale Lodge Pleasanton</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Stay with us at Shale Lodge Pleasanton and feel the difference. Come experience our quality lodging and excellent hospitality services that leaves all our guests with a lasting impression Companies looking for hotels in the oil and gas industry are more than welcome to take advantage of the premiere lodging option in Pleasanton, TX. Perfect housing and accomodation for their employees as they ship off to their drilling, fracking, and other shale work is just a tip of the iceberg behind what Shale Lodging provides.
+            </div> <p style="text-align: right;"><a href="http://pleasanton.shalelodge.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/keylimesailing.jpg?width=350&amp;height=210&amp;name=keylimesailing.jpg" alt="Key Lime Sailing Club &amp; Cottages" style="margin: 10px 20px 10px 10px; width: 350px; height: 210px; float: left;" title="Key Lime Sailing Club &amp; Cottages" width="350" height="210" align="left" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/keylimesailing.jpg?width=175&amp;height=105&amp;name=keylimesailing.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/keylimesailing.jpg?width=350&amp;height=210&amp;name=keylimesailing.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/keylimesailing.jpg?width=525&amp;height=315&amp;name=keylimesailing.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/keylimesailing.jpg?width=700&amp;height=420&amp;name=keylimesailing.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/keylimesailing.jpg?width=875&amp;height=525&amp;name=keylimesailing.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/keylimesailing.jpg?width=1050&amp;height=630&amp;name=keylimesailing.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Key Lime Sailing Club &amp; Cottages</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Welcome to our unique little hideaway. Secluded, serene, and perfectly located, our self-contained cottages have everything you need for a relaxing waterfront vacation.
+             <br> In the evening, just walk or paddle around to local dining and dancing. Or stay on site and enjoy Key Largo’s incredible sunsets from one of the area’s most intimate settings… the Key Lime Sailing Club &amp; Cottages. Easy to reach, hard to forget!
+            </div> <p style="text-align: right;"><a href="http://www.keylimesailingclub.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/calvincenter.jpg?width=350&amp;height=210&amp;name=calvincenter.jpg" alt="Calvin Center" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="Calvin Center" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/calvincenter.jpg?width=175&amp;height=105&amp;name=calvincenter.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/calvincenter.jpg?width=350&amp;height=210&amp;name=calvincenter.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/calvincenter.jpg?width=525&amp;height=315&amp;name=calvincenter.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/calvincenter.jpg?width=700&amp;height=420&amp;name=calvincenter.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/calvincenter.jpg?width=875&amp;height=525&amp;name=calvincenter.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/calvincenter.jpg?width=1050&amp;height=630&amp;name=calvincenter.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Calvin Center</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             The Calvin Center is a beautiful conference center uniquely situated in a natural setting and yet just twenty miles south of the Atlanta Airport in Hampton, GA. &nbsp;Providing an ideal location for conferences, retreats, camping, and more, this impeccable locale is a favorite in the Atlanta area, and is one of the “must visits” if you are looking for a great place for a weekend retreat. With beautiful conference centers, incredible accommodations, and a landscape that must be seen to be believed, the Calvin Center is (Atlanta’s Conference Center) absolutely amazing, regardless of your purpose.
+            </div> <p style="text-align: right;"><a href="http://www.calvincenter.org/Home/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frangihouse.jpg?width=350&amp;height=210&amp;name=frangihouse.jpg" alt="Frangi House<" title="Frangi House<" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frangihouse.jpg?width=175&amp;height=105&amp;name=frangihouse.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frangihouse.jpg?width=350&amp;height=210&amp;name=frangihouse.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frangihouse.jpg?width=525&amp;height=315&amp;name=frangihouse.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frangihouse.jpg?width=700&amp;height=420&amp;name=frangihouse.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frangihouse.jpg?width=875&amp;height=525&amp;name=frangihouse.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frangihouse.jpg?width=1050&amp;height=630&amp;name=frangihouse.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Frangi House</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             <strong>Welcome to Frangi House,</strong> a charming and peaceful guest house in the heart of bustling Chennai. High quality guest accommodation , located in the most posh and quiet centre of town, near the British Consulate in Nungambakkam. Frangi House offers a good location, great prices, and excellent value.
+            </div> 
+            <div style="text-align: justify;">
+             All its bedrooms are tastefully done-up, are very affordable and are perfectly suited for international business travellers. Frangi House is very centrally located -near boutiques, spas, global cuisine restaurants, hospitals, shopping malls, luxury and traditional shops, banks, foreign consulates, offices, churches, beaches, and more.
+            </div> 
+            <div style="text-align: justify;">
+             Ideal for short or long stays and for professionals looking for a relaxed homestay atmosphere. We provide snacks and home-made meals, laundry, airport transfers and car rental. We are happy to cater to individual requirements. You can also order meals from a range of nearby restaurants. All bedrooms are available individually for daily / weekly / monthly / yearly rental.
+            </div> <p style="text-align: right;"><a href="http://frangihouse.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/eikmountainhotel.jpg?width=350&amp;height=210&amp;name=eikmountainhotel.jpg" alt="The Historic EIK Mountain Hotel" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="The Historic EIK Mountain Hotel" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/eikmountainhotel.jpg?width=175&amp;height=105&amp;name=eikmountainhotel.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/eikmountainhotel.jpg?width=350&amp;height=210&amp;name=eikmountainhotel.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/eikmountainhotel.jpg?width=525&amp;height=315&amp;name=eikmountainhotel.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/eikmountainhotel.jpg?width=700&amp;height=420&amp;name=eikmountainhotel.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/eikmountainhotel.jpg?width=875&amp;height=525&amp;name=eikmountainhotel.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/eikmountainhotel.jpg?width=1050&amp;height=630&amp;name=eikmountainhotel.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>The Historic EIK Mountain Hotel</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Midway between Laramie and Rawlins&nbsp;and 3 miles south of I-80
+             <br> Seasons and Views of the Historic Elk Mountain Hotel
+             <br> We are an under the radar destination for those escaping the hustle and bustle of city living.
+             <br> Come and experience one of Wyoming's most gracious and elegant historic country Inns. Restored to Folk Victorian era styling, many guest rooms are appointed with period antiques. All have private bath rooms.
+             <br> More relaxing than a large hotel, think a country house hotel with Victorian charm. Enjoy exceptionally refined American and European dining and quiet, romantic get a ways. Casual, comfortable, yet pampered and relaxed, your stay at Wyoming's Elk Mountain Hotel will make this vacation enjoyable and memorable.
+            </div> <p style="text-align: right;"><a href="http://www.elkmountainhotel.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/bransonhotel.jpg?width=350&amp;height=210&amp;name=bransonhotel.jpg" alt="Branson Hotel" title="Branson Hotel" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/bransonhotel.jpg?width=175&amp;height=105&amp;name=bransonhotel.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/bransonhotel.jpg?width=350&amp;height=210&amp;name=bransonhotel.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/bransonhotel.jpg?width=525&amp;height=315&amp;name=bransonhotel.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/bransonhotel.jpg?width=700&amp;height=420&amp;name=bransonhotel.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/bransonhotel.jpg?width=875&amp;height=525&amp;name=bransonhotel.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/bransonhotel.jpg?width=1050&amp;height=630&amp;name=bransonhotel.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>The Branson Hotel</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <strong>Welcome to Branson Hotel</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Prepare to make memories that will last a lifetime at The Branson Hotel. From the Egyptian cotton sheets to the smell of wisteria and honeysuckle in the garden. All of your senses will experience the unforgettable charm of The Branson Hotel. Be surrounded by the rich history of the 1900's but fully rested in the luxury of the 21st century. Maybe you want us to pull out all the stops or just need some serenity on a business trip or rather you need a home away from home while visiting family or a romantic stay for your honeymoon or anniversary! With 9 completely different designed rooms, we guarantee something for everyone. So go ahead, look around and find the room that suits you and let us lead the way to your own little paradise.
+            </div> <p style="text-align: right;"><a href="http://www.thebransonhotel.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/drift-hotel.jpg?width=350&amp;height=210&amp;name=drift-hotel.jpg" alt="The Drift Hotel" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="The Drift Hotel" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/drift-hotel.jpg?width=175&amp;height=105&amp;name=drift-hotel.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/drift-hotel.jpg?width=350&amp;height=210&amp;name=drift-hotel.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/drift-hotel.jpg?width=525&amp;height=315&amp;name=drift-hotel.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/drift-hotel.jpg?width=700&amp;height=420&amp;name=drift-hotel.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/drift-hotel.jpg?width=875&amp;height=525&amp;name=drift-hotel.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/drift-hotel.jpg?width=1050&amp;height=630&amp;name=drift-hotel.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>The Drift Hotel</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             One half block from the heart of the world famous Fort Lauderdale Beach. We are an intimate boutique hotel just steps off A1A in a private enclave away from the traffic and noise. All the shops and restaurant and exciting Fort Lauderdale night life is just a few minutes away. We offer a recently updated hotel setting with helpful staff and also provide free internet access, and continental breakfast for your stay.
+            </div> <p style="text-align: right;"><a href="http://www.thedrifthotel.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Alpinelodge.jpg?width=350&amp;height=210&amp;name=Alpinelodge.jpg" alt="Alpine Lodge &amp; Sawmill Restaurant" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="Alpine Lodge &amp; Sawmill Restaurant" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Alpinelodge.jpg?width=175&amp;height=105&amp;name=Alpinelodge.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Alpinelodge.jpg?width=350&amp;height=210&amp;name=Alpinelodge.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Alpinelodge.jpg?width=525&amp;height=315&amp;name=Alpinelodge.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Alpinelodge.jpg?width=700&amp;height=420&amp;name=Alpinelodge.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Alpinelodge.jpg?width=875&amp;height=525&amp;name=Alpinelodge.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Alpinelodge.jpg?width=1050&amp;height=630&amp;name=Alpinelodge.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Alpine Lodge &amp; Sawmill Restaurant</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             You are invited to visit the Alpine Lodge &amp; Sawmill Restaurant. Simple, Comfortable, and Affordable lodging in an area filled with exciting and wonderful things to do and see.
+            </div> 
+            <div style="text-align: justify;">
+             We are conveniently located near the intersection of Rt 32 &amp; Rt 93 in the historic town of Davis; minutes from Blackwater Falls State Park and Canaan Valley.
+            </div> 
+            <div style="text-align: justify;">
+             Visit Wild &amp; Wonderful West Virginia
+            </div> 
+            <div style="text-align: justify;">
+             * Blackwater Falls *
+            </div> 
+            <div style="text-align: justify;">
+             * Canaan Valley *
+            </div> 
+            <div style="text-align: justify;">
+             * Monongahela National Forest *
+            </div> 
+            <div style="text-align: justify;">
+             Hiking, Biking, Downhill &amp; Cross Country Skiing, Golf, Sledding, Rafting, Canoeing, Fishing, Horseback Riding, Snow and Water Tubing, Hunting, Birdwatching, Ice Skating, and More!
+            </div> 
+            <div style="text-align: justify;"></div> <p style="text-align: right;"><a href="http://www.alpinelodgewva.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Wildwood_Springs.jpg?width=350&amp;height=210&amp;name=Wildwood_Springs.jpg" alt="Wildwood Springs Lodge" style="margin: 10px 20px 10px 10px; width: 350px; height: 210px; float: left;" title="Wildwood Springs Lodge" width="350" height="210" align="left" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Wildwood_Springs.jpg?width=175&amp;height=105&amp;name=Wildwood_Springs.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Wildwood_Springs.jpg?width=350&amp;height=210&amp;name=Wildwood_Springs.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Wildwood_Springs.jpg?width=525&amp;height=315&amp;name=Wildwood_Springs.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Wildwood_Springs.jpg?width=700&amp;height=420&amp;name=Wildwood_Springs.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Wildwood_Springs.jpg?width=875&amp;height=525&amp;name=Wildwood_Springs.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/Wildwood_Springs.jpg?width=1050&amp;height=630&amp;name=Wildwood_Springs.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Wildwood Springs Lodge</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Wildwood.. It's all about you.... you are the one that needs to relax, get-away, hide from the 21 century. You are the one that might like to read a book on the front porch with the morning sunlight and cool breeze, or maybe watch the fog burn off the river valley from the dining room's porch holding a warm cup of coffee in your hands. You could also take a walk on one of the trails and enjoy the sites and sounds of Zahorsky Woods.
+            </div> <p style="text-align: right;"><a href="http://www.wildwoodspringslodge.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/mist-putinbay.jpg?width=350&amp;height=210&amp;name=mist-putinbay.jpg" alt="Mist Put In Bay" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="Mist Put In Bay" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/mist-putinbay.jpg?width=175&amp;height=105&amp;name=mist-putinbay.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/mist-putinbay.jpg?width=350&amp;height=210&amp;name=mist-putinbay.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/mist-putinbay.jpg?width=525&amp;height=315&amp;name=mist-putinbay.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/mist-putinbay.jpg?width=700&amp;height=420&amp;name=mist-putinbay.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/mist-putinbay.jpg?width=875&amp;height=525&amp;name=mist-putinbay.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/mist-putinbay.jpg?width=1050&amp;height=630&amp;name=mist-putinbay.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Mist Put In Bay</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Commodore Resort Hotel in Put-in-Bay is the place to take advantage of our hospitality. &nbsp;We offer discounted room rates during the week. Join our newsletter to receive our coupons to enjoy the savings when you travel to Put in Bay with a group of friends or family members.
+            </div> 
+            <div style="text-align: justify;">
+             Commodore Resort Hotel in Put in Bay is where Mist is at. Mist is a tropical paradise comprising of not only hot bodies but a 15 person swim up bar, 2 waterfalls, a huge tiki bar, a 2000 square ft pool with over 8 cabanas, couches and tables that come with top notch VIP bottle service.
+            </div> 
+            <div style="text-align: justify;">
+             If you would like see more of MIST pool, Check out Google's new 360 view of Mist.
+            </div> <p style="text-align: right;"><a href="https://www.mist-putinbay.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/laliberte.jpg?width=350&amp;height=210&amp;name=laliberte.jpg" alt="Hotel Laliberte" style="margin: 10px 20px 10px 10px; width: 350px; height: 210px; float: left;" title="Hotel Laliberte" width="350" height="210" align="left" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/laliberte.jpg?width=175&amp;height=105&amp;name=laliberte.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/laliberte.jpg?width=350&amp;height=210&amp;name=laliberte.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/laliberte.jpg?width=525&amp;height=315&amp;name=laliberte.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/laliberte.jpg?width=700&amp;height=420&amp;name=laliberte.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/laliberte.jpg?width=875&amp;height=525&amp;name=laliberte.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/all-new/ewr-clients/laliberte.jpg?width=1050&amp;height=630&amp;name=laliberte.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Hotel Laliberte</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Situated on the borders of the Montérégie, the Eastern Townships and Central Quebec regions, exit 147 off of Highway 20, Hotel LaLiberté offers all of the commodities. The professional, courteous, bilingual staff and 50 years of service in the industry guarantee you a successful stay, be it for business, family or romance.
+            </div> 
+            <div style="text-align: justify;">
+             The vast grounds and beautiful summertime pool compliment the European style rooms while the Complex’s restaurant, bar, 3 large meeting rooms, internet salon, exercise room, complementary continental breakfast and spacious parking put convenience at your fingertips. As an extra added bonus, the complex is proud to offer its guests the convenience of being able to stay in touch with the world from anywhere in the Hotel via its free wireless internet service.
+            </div> 
+            <div style="text-align: justify;">
+             So step in, put down your cares and let us serve you...
+            </div> <p style="text-align: right;"><a href="http://www.hotellaliberte.com/rooms.htm" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/azulkeylargo.jpg" alt="Azul Del Mar" title="Azul Del Mar" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Azul Del Mar</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>Your Personal Paradise Awaits…</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Key Largo may be famous for its intricate coral reef, the eco-wonderful everglades, spectacular sunsets, mouthwatering seafood or even Bogart and Bacall…but only a select few know that nestled in a tropical garden, far from the hustle and bustle is an intimate Florida Keys boutique hotel.
+            </div> 
+            <div style="text-align: justify;">
+             Featured as one of Travel and Leisure’s World’s Greatest Hotels, Resorts and Spas and voted Best Hidden Gem in The United States by TripAdvisor users, Azul del Mar is the most exclusive all adult hotel in Key Largo.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://azulkeylargo.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/casasucre.jpg?width=350&amp;height=210&amp;name=casasucre.jpg" alt="Casa Sucre Boutique Hotel" title="Casa Sucre Boutique Hotel" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/casasucre.jpg?width=175&amp;height=105&amp;name=casasucre.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/casasucre.jpg?width=350&amp;height=210&amp;name=casasucre.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/casasucre.jpg?width=525&amp;height=315&amp;name=casasucre.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/casasucre.jpg?width=700&amp;height=420&amp;name=casasucre.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/casasucre.jpg?width=875&amp;height=525&amp;name=casasucre.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/casasucre.jpg?width=1050&amp;height=630&amp;name=casasucre.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Casa Sucre Boutique Hotel</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span style="color: #2f343a;"><strong>Welcome Home!¡Bienvenido a Casa!</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Located in the historic Casco Viejo neighborhood of San Felipe, Panama, Casa Sucre Boutique Hotel is a renovated 1873 five bedroom three apartment guest house for those visiting our historic city. &nbsp;Included with the hotel is our new cafe, Casa Sucre
+            </div> 
+            <div style="text-align: justify;">
+             Coffeehouse serving the finest premium coffees of the Boquete and Vocan region of Panama. &nbsp; With its unique architectural history, picturesque buildings, cathedrals, churches, ruins, museums, gourmet restaurants and our varied and diverse cultures, guests of Casa Sucre Boutique Hotel will have the best of the city waiting just outside their door.
+            </div> 
+            <div style="text-align: justify;">
+             The building which houses the boutique hotel was built in 1873 and goes by the historic name of Casa Sucre. "Sucre" is the French word for sugar or candy (sucrerie). "Casa" is Spanish for house. While staying at Casa Sucre Boutique Hotel guests will have a home-sweet- home experience.
+            </div> <p style="text-align: right;"><a href="http://www.casasucreboutiquehotel.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/azulkeywest.jpg" alt="Azul Key West" title="Azul Key West" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Azul Key West</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>Imagine a classic Queen Anne mansion in the heart of Old Town Key West…</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Where tri-level, downpour blue decks surround a shimmering swimming pool. A Key West Bed and Breakfast with a serene, spa-like atmosphere. Your personal, southernmost sanctuary. The perfect romantic getaway.
+            </div> 
+            <div style="text-align: justify;">
+             Azul Key West is an adult-only, Key West boutique hotel just three and a half blocks from Duval Street and a five minute walk from Hemmingway House. It’s a bold new look in old town!
+            </div> 
+            <div style="text-align: justify;">
+             Ultramodern and minimalist by design, our upscale accommodations offer an uncluttered, tropical style unique in a town of chintz and lace. A Key West Inn known as much for its healthy and hearty fresh fruit breakfast, as the daring color palette of cool blues and crisp whites.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://www.azulkeywest.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/sunsetonseneca.jpg?width=350&amp;height=210&amp;name=sunsetonseneca.jpg" alt="Sunset On Seneca" title="Sunset On Seneca" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/sunsetonseneca.jpg?width=175&amp;height=105&amp;name=sunsetonseneca.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/sunsetonseneca.jpg?width=350&amp;height=210&amp;name=sunsetonseneca.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/sunsetonseneca.jpg?width=525&amp;height=315&amp;name=sunsetonseneca.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/sunsetonseneca.jpg?width=700&amp;height=420&amp;name=sunsetonseneca.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/sunsetonseneca.jpg?width=875&amp;height=525&amp;name=sunsetonseneca.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/sunsetonseneca.jpg?width=1050&amp;height=630&amp;name=sunsetonseneca.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Sunset On Seneca</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span style="color: #2f343a;"><strong>Relax with a beautiful view of the lake</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Welcome to Sunset On Seneca Bed &amp; Breakfast, set on the East side of Seneca Lake in Schuyler County, NY. Our inn is on a private lake front with spectacular sunsets across the lake and over the gentle rolling hills that define the Finger Lakes.
+            </div> 
+            <div style="text-align: justify;">
+             Add a three hour sail on Seneca Lake to your stay! Captain Terry and his crew invite you to sail on the "Lee Sea Anne". Private and semi-private sailings available. Cruises start in mid-May. Call for pricing.
+            </div> <p style="text-align: right;"><a href="http://www.sunsetonseneca.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/marinasol.jpg" alt="Marina Sol Premier Properties" title="Marina Sol Premier Properties" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Marina Sol Premier Properties</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>Marina Sol Premier Properties</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Marina Sol Premier Properties has been located in the same office location inside the Lobby of The Marina Sol Resort since 1997.Over the years, select owners at Marina Sol have purchased and remodeled several spectacular Penthouses and condos with us that we now offer in our Premier Properties Vacation Rental Program.
+            </div> 
+            <div style="text-align: justify;">
+             We pride ourselves in only renting the "Best of the Best Properties" at the Resort
+            </div> 
+            <div style="text-align: justify;">
+             Marina Sol Resort which is located by Medano Beach in downtown Cabo is central to everything and within minutes to Medano Beach, The Cabo Marina, Puerto Parisio Shopping Center and Downtown Cabo.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://marinasolpremierproperties.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lazyriverrentals.jpg?width=350&amp;height=210&amp;name=lazyriverrentals.jpg" alt="Lazy River Rentals" title="Lazy River Rentals" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lazyriverrentals.jpg?width=175&amp;height=105&amp;name=lazyriverrentals.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lazyriverrentals.jpg?width=350&amp;height=210&amp;name=lazyriverrentals.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lazyriverrentals.jpg?width=525&amp;height=315&amp;name=lazyriverrentals.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lazyriverrentals.jpg?width=700&amp;height=420&amp;name=lazyriverrentals.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lazyriverrentals.jpg?width=875&amp;height=525&amp;name=lazyriverrentals.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lazyriverrentals.jpg?width=1050&amp;height=630&amp;name=lazyriverrentals.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Lazy River Rentals</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span style="color: #2f343a;"><strong>3 Great Locations with Over 30 Amazing Properties</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Lazy River Rentals, circa 1996, was created to provide our guests superior accommodations with all the comforts of home. Each vacation rental is fully furnished and provides all the beach essentials necessary for a great family vacation at the Jersey Shore. Our professionally decorated Suites, Cottages &amp; Homes are situated in Seaside Heights and Seaside Park at three unique locations designed for family, fun and relaxation. Families and friends can now vacation together in one special, fun filled environment.
+            </div> 
+            <div style="text-align: justify;">
+             Separating Lazy River Rentals is that all of our 1, 2 3, 4, 5 and 6 bedroom vacation properties are owned, managed and rented exclusively through Lazy River Rentals - providing our guests with the best possible accommodations and superior personal guest service. Lazy River Rentals incorporates interior design, professional landscaping and professional cleaning into all properties along with the most desired amenities such as in ground pools, wifi, DVD electronics and cable access.
+            </div> <p style="text-align: right;"><a href="http://www.lazyriverrentals.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/notsohostel.jpg" alt="Notso Hostel" title="Notso Hostel" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Notso Hostel</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>Welcome to NotSo Hostel</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Located in lovely and historic downtown Charleston, SC, the Notso Hostel and Notso Hostel Annex are within walking distance of shops, restaurants, bars, &amp; museums. We provide clean, simple accommodations so that you can dream of your future travels in peace and comfort. We focus on safety, sustainability, cleanliness and building community among travelers that gather here from all over the world. We have two locations to accommodate travelers of all types:
+            </div> 
+            <div style="text-align: justify;">
+             156 Spring Street is our Main location with dorms, private rooms and camping. Kitchens and bathrooms are communal. Breakfast, private parking, Wi-Fi, Internet and linens are included.
+            </div> 
+            <div style="text-align: justify;">
+             33 Cannon Street is our Annex location with all private rooms and one with a private bathroom. The annex is completely renovated with bamboo flooring upstairs, private parking, Wi-Fi, and self-serve breakfast. The Annex is just one block away from King Street.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://notsohostel.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/davenhavenlodge.jpg?width=350&amp;height=210&amp;name=davenhavenlodge.jpg" alt="Daven Haven" title="Daven Haven" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/davenhavenlodge.jpg?width=175&amp;height=105&amp;name=davenhavenlodge.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/davenhavenlodge.jpg?width=350&amp;height=210&amp;name=davenhavenlodge.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/davenhavenlodge.jpg?width=525&amp;height=315&amp;name=davenhavenlodge.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/davenhavenlodge.jpg?width=700&amp;height=420&amp;name=davenhavenlodge.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/davenhavenlodge.jpg?width=875&amp;height=525&amp;name=davenhavenlodge.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/davenhavenlodge.jpg?width=1050&amp;height=630&amp;name=davenhavenlodge.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Daven Haven Lodge and Cabins</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span style="color: #2f343a;"><strong>Welcome to the Daven Haven Lodge in Grand Lake, CO</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             The Daven Haven Lodge is nestled inside the Village of Grand Lake, two city blocks off the main street. Our 12 cabins offer a comfortable sense of seclusion and affords each traveler the opportunity to relax in a home-away-from-home atmosphere. Our individual cabins sleep from one to eight guests - all have fully equipped kitchens and some have wood-burning fireplaces. The casual eclectic furnishings are a perfect partner to the natural unassuming beauty of the Daven Haven Lodge.
+            </div> <p style="text-align: right;"><a href="http://davenhavenlodge.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/christopheharbour.jpg" alt="Christophe Harbour" title="Christophe Harbour" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Christophe Harbour</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>SEASIDE LIVING WITH SOUL</strong>
+            </div> 
+            <div style="text-align: justify;">
+             On 2,500 stunning acres set astride the Atlantic Ocean and Caribbean Sea, lies a private island community that melds a relaxed Caribbean sensibility with elegant homes, exclusive amenities, and a world-class superyacht marina and village.
+            </div> 
+            <div style="text-align: justify;">
+             Christophe Harbour offers luxury living in St. Kitts, an island that retains its authentic Caribbean soul.
+            </div> 
+            <div style="text-align: justify;">
+             Explore our Caribbean luxury properties, discover St. Kitts, or make plans to visit us.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://www.christopheharbour.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=350&amp;height=210&amp;name=canopytower.jpg" alt="Canopy Lodge" title="Canopy Lodge" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=175&amp;height=105&amp;name=canopytower.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=350&amp;height=210&amp;name=canopytower.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=525&amp;height=315&amp;name=canopytower.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=700&amp;height=420&amp;name=canopytower.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=875&amp;height=525&amp;name=canopytower.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=1050&amp;height=630&amp;name=canopytower.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Canopy Lodge</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span style="color: #2f343a;"><strong>Welcome to The Canopy Family</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             <strong>Panama's Leader in Birding and Natural History Ecotourism Since 1999</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Canopy Family has two award-winning birding lodges, the Canopy Tower, not far from Panama City in Soberanía National Park, and the Canopy Lodge, in the hills of El Valle de Antón. Both offer world-class, unique birding and natural history experiences, led by friendly, knowledgeable bilingual guides.
+            </div> 
+            <div style="text-align: justify;">
+             The Canopy Tower features rooms and an observation deck mere feet from the canopy of the rainforest, virtually at eye-level with such avian treats as toucans, tanagers, honeycreepers and hawks, as well as amazing looks at two- and three-toed sloths and Geoffroy’s Tamarins and Mantled Howlers, two monkey species otherwise nearly impossible to see this well! &nbsp;From the Canopy Tower you can visit legendary Pipeline Road, arguably the best birding location in Mesoamerica, and other very birdy sites.
+            </div> <p style="text-align: right;"><a href="http://www.canopytower.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/pensionenichols.jpg" alt="Pensione Nichols" title="Pensione Nichols" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Pensione Nichols</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>Visit Pensione Nichols Hotel</strong>
+            </div> 
+            <div style="text-align: justify;">
+             We are a unique Seattle bed and breakfast with a stunning view — you’ll witness breathtaking sunsets over Elliott Bay and the Olympic Mountains. Ideally situated in downtown Seattle’s historic Pike Place Market, Pensione Nichols reflects European sense and sensibility married to Pacific Northwest heritage and hospitality.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://www.pensionenichols.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/vacationrental.jpg" alt="Vacation Rentals" title="Vacation Rentals" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Vacation Rentals in Paradise, LLC.</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Relax in luxury at this beachfront private resort. &nbsp;Come stay with us... some things are worth it!
+            </div> 
+            <div style="text-align: justify;">
+             Enjoy the beach lifestyle while staying in this newly renovated penthouse.
+            </div> 
+            <div style="text-align: justify;">
+             Relax at this Fort Myers beach condo with security entrances and enjoy breathtaking sunsets or watch the dolphins play.
+            </div> 
+            <div style="text-align: justify;">
+             Enjoy the Floridian lifestyle while staying in this charming Fort Myers Beach cottage.
+            </div> 
+            <div style="text-align: justify;">
+             Enjoy overlooking white sandy Fort Myers Beach on the Gulf of Mexico from this spacious corner condo.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://www.fort-myers-vacations.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frioacres.jpg?width=350&amp;height=210&amp;name=frioacres.jpg" alt="Frio Acres River Cabins" title="Frio Acres River Cabins" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frioacres.jpg?width=175&amp;height=105&amp;name=frioacres.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frioacres.jpg?width=350&amp;height=210&amp;name=frioacres.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frioacres.jpg?width=525&amp;height=315&amp;name=frioacres.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frioacres.jpg?width=700&amp;height=420&amp;name=frioacres.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frioacres.jpg?width=875&amp;height=525&amp;name=frioacres.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/frioacres.jpg?width=1050&amp;height=630&amp;name=frioacres.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Frio Acres River Cabins</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Come visit Frio Acres in Concan,Texas beautiful and secluded 51 acres with one acre on the Frio River. &nbsp;The Texas Hill Country at its best just a few miles from Garner State Park. &nbsp;Cabins on the Frio River where you can enjoy the mountains, the wildlife, the cold and refreshing waters of the Frio River, relax to the cool evening breeze and endless stars.
+            </div> 
+            <div style="text-align: justify;">
+             Look no further for all your lodging needs.
+            </div> 
+            <div style="text-align: justify;">
+             We Have Plenty of Beautiful Blue Water. The Drought Has Not Affected Our Property!
+            </div> <p style="text-align: right;"><a href="http://www.frioacres.com/index.html" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/mountauroralodge.jpg" alt="Mount Aurora Lodge" title="Mount Aurora Lodge" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>Mount Aurora Lodge</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>welcome to Mount Aurora Lodge Fairbanks, Alaska</strong>
+            </div> 
+            <div style="text-align: justify;">
+             <strong>Historic Fairbanks, AK Hotel in the Northern Lights</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Escape to a last frontier of majestic natural beauty, familial service, and rustic Yukon history. Built to house local gold miners in 1928, our bunkhouse-style hotel provides authentic Fairbanks, Alaska lodging in the heart of aurora country. Nearly every night the Northern Lights paint the sky above our property, and we'll be happy to wake you when they start. In fact, married owners Jeff and Lori are always available, from their free home-cooked breakfasts, to personal itinerary planning.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://www.mountauroralodge.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hubfs/assets/New-site/new-clients/bransonhotel.jpg" alt="Branson Hotel" title="Branson Hotel" align="right" style="float: right; margin: 10px 10px 10px 20px;">
+            </div> 
+            <div style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;">
+             <strong>The Branson Hotel</strong>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 April 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <strong>Welcome To The Branson Hotel</strong>
+            </div> 
+            <div style="text-align: justify;">
+             The Branson Town Company built this elegant little hotel in 1903 with an onset of progress and the coming of the first railroad through Branson. The Hotel, which overlooks the town, was a meeting place for some very important people in Branson's history.
+            </div> 
+            <div style="text-align: justify;">
+             Harold Bell Wright stayed here while writing his famed novel "Shepherd of the Hills." The hotel also housed the towns first library. Standing near the intersection of Main Street and Business 65, in historic downtown Branson. The hotel has provided memories for past generations and has been greatly restored to provide memories for you and future guests traveling through Branson.
+            </div> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;"><a href="http://www.thebransonhotel.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lagunareef.jpg?width=350&amp;height=210&amp;name=lagunareef.jpg" alt="Laguna Reef Management" title="Laguna Reef Management" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lagunareef.jpg?width=175&amp;height=105&amp;name=lagunareef.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lagunareef.jpg?width=350&amp;height=210&amp;name=lagunareef.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lagunareef.jpg?width=525&amp;height=315&amp;name=lagunareef.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lagunareef.jpg?width=700&amp;height=420&amp;name=lagunareef.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lagunareef.jpg?width=875&amp;height=525&amp;name=lagunareef.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/lagunareef.jpg?width=1050&amp;height=630&amp;name=lagunareef.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Laguna Reef Management 1, LLC</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span style="color: #2f343a;"><strong>Relax &amp; be yourself!</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             A secluded gem of the Gulf with amazing water views! All the amenities of home – and every suite with its own bayfront balcony or terrace. Trophy level fishing from our own 1000′ lighted pier. Sparkling pool. Private beach. &nbsp;Friendly, helpful &nbsp;staff. Fine dining, family restaurants, &nbsp;upscale shopping, all close by — in beautiful downtown Rockport, &nbsp;the heart of the “Texas Riviera“.
+            </div> <p style="text-align: right;"><a href="http://www.lagunareef.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/castillodepavones.jpg?width=350&amp;height=210&amp;name=castillodepavones.jpg" alt="Castillo De Pavones" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="Castillo De Pavones" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/castillodepavones.jpg?width=175&amp;height=105&amp;name=castillodepavones.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/castillodepavones.jpg?width=350&amp;height=210&amp;name=castillodepavones.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/castillodepavones.jpg?width=525&amp;height=315&amp;name=castillodepavones.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/castillodepavones.jpg?width=700&amp;height=420&amp;name=castillodepavones.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/castillodepavones.jpg?width=875&amp;height=525&amp;name=castillodepavones.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/castillodepavones.jpg?width=1050&amp;height=630&amp;name=castillodepavones.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Castillo De Pavones</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="color: #2f343a; line-height: 25px;">
+             <strong>Welcome to Castillo De Pavones</strong>
+            </div> 
+            <div style="text-align: justify;">
+             The Castillo de Pavones is a relatively young hotel, established about four years ago, elegantly perched on a mountainside with a direct view of the famous Pavones point break, the longest left breaking wave in the world. From the windows and balconies, you can look down on the canopy, which slopes to form the Rio Claro River. You will witness the birds soaring below over the canopy treetops. We have recently renovated and added a stunning rooftop bar and lounge. Dine like royalty in our ocean view restaurant. Here we serve incredible local foods with fresh ingredients directly from Pavones, prepared by the most talented cooks in the area! You’re taste buds won’t know what hit them! The views are incredible, the environment is relaxing, yet adventurous, and the staff is fantastic. There’s certainly a reason why we are the Trip Advisors highest rated hotel in Pavones!
+            </div> <p style="text-align: right;"><a href="http://castillodepavones.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/starfishpoint.jpg?width=350&amp;height=210&amp;name=starfishpoint.jpg" alt="Starfish Point<" title="Starfish Point<" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/starfishpoint.jpg?width=175&amp;height=105&amp;name=starfishpoint.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/starfishpoint.jpg?width=350&amp;height=210&amp;name=starfishpoint.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/starfishpoint.jpg?width=525&amp;height=315&amp;name=starfishpoint.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/starfishpoint.jpg?width=700&amp;height=420&amp;name=starfishpoint.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/starfishpoint.jpg?width=875&amp;height=525&amp;name=starfishpoint.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/starfishpoint.jpg?width=1050&amp;height=630&amp;name=starfishpoint.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Starfish Point</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="color: #2f343a; line-height: 25px;">
+             <strong>Welcome to Starfish Point,</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Starfish Point, a secluded Newport Oregon Motel , located on the Central Oregon Coast just off Highway 101, offers only the finest in luxury condominium lodging. Starfish Point is your Newport Oregon Condominium Hotel where every unit is focused on the beauty of the sea and the beach.
+            </div> 
+            <div style="text-align: justify;">
+             These spacious split-level fully rennovated condos offer two bedrooms, two bathrooms, King beds in th master bedrooms, queens in guest an queen pullout,esigner kitchens, wireless broadband internet, gas fireplaces, large Jacuzzi’s, ceramic walk-in showers and private decks, surrounding you in soothing relaxation and beauty.
+            </div> <p style="text-align: right;"><a href="http://www.starfishpoint.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/phoenicialodge.jpg?width=350&amp;height=210&amp;name=phoenicialodge.jpg" alt="Phoenicia Lodge" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="Phoenicia Lodge" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/phoenicialodge.jpg?width=175&amp;height=105&amp;name=phoenicialodge.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/phoenicialodge.jpg?width=350&amp;height=210&amp;name=phoenicialodge.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/phoenicialodge.jpg?width=525&amp;height=315&amp;name=phoenicialodge.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/phoenicialodge.jpg?width=700&amp;height=420&amp;name=phoenicialodge.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/phoenicialodge.jpg?width=875&amp;height=525&amp;name=phoenicialodge.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/phoenicialodge.jpg?width=1050&amp;height=630&amp;name=phoenicialodge.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Phoenicia Lodge</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             We're located in a wooded valley between Route 28 and the Esopus Creek, surrounded by the gorgeous Catskill Mountains and just around the corner from Main Street Phoenicia's fantastic shops and restaurants.
+            </div> 
+            <div style="text-align: justify;">
+             There's no better place than the Catskills for amazing hiking, skiing, swimming, tubing, horseback riding and fishing. We’re just minutes away from all of it, and will be glad to give you all the details.
+            </div> <p style="text-align: right;"><a href="http://www.phoenicialodge.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/aurorastay.jpg?width=350&amp;height=210&amp;name=aurorastay.jpg" alt="Aurora Hotel Extended Stay" title="Aurora Hotel Extended Stay" align="left" style="float: left; margin: 10px 20px 10px 10px; width: 350px; height: 210px;" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/aurorastay.jpg?width=175&amp;height=105&amp;name=aurorastay.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/aurorastay.jpg?width=350&amp;height=210&amp;name=aurorastay.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/aurorastay.jpg?width=525&amp;height=315&amp;name=aurorastay.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/aurorastay.jpg?width=700&amp;height=420&amp;name=aurorastay.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/aurorastay.jpg?width=875&amp;height=525&amp;name=aurorastay.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/aurorastay.jpg?width=1050&amp;height=630&amp;name=aurorastay.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; line-height: 40px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Aurora Hotel Extended Stay</strong></span>
+            </div> 
+            <div style="line-height: 25px; color: #2f343a;">
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="line-height: 25px;">
+             <strong>Welcome to Aurora Hotel Extended Stay</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Conveniently located nearby the southwest corner of I-88 tollway and IL-31 Road, the newly renovated Aurora Hotel will have her grand opening soon. The 120 air-conditioned guestrooms hotel boasts a different level of extended stay style in the local hospitality industries of the Aurora area. &nbsp;Featuring a personal, fully equipped kitchenette in each standard 2-3 star hotel room, the hotel offers her guests a home with separated private living and working space and a set of facilities including refrigerator, hotplate, microwave, coffee/tea maker, wireless internet , cable TV, as well as laundry and bath amenities.
+            </div> 
+            <div style="text-align: justify;">
+             We promise our patrons a comfortable family atmosphere and considerate services without compromising quiet enjoyment and affordable prices. The impressive discount for group customers is available as well.
+            </div> <p style="text-align: right;"><a href="http://auroraextendedstay.com/" class="btn btn-warning" target="_blank">View More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=350&amp;height=210&amp;name=canopytower.jpg" alt="Canopy Camp" align="right" style="float: right; margin: 10px 10px 10px 20px; width: 350px; height: 210px;" title="Canopy Camp" width="350" height="210" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=175&amp;height=105&amp;name=canopytower.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=350&amp;height=210&amp;name=canopytower.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=525&amp;height=315&amp;name=canopytower.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=700&amp;height=420&amp;name=canopytower.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=875&amp;height=525&amp;name=canopytower.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/canopytower.jpg?width=1050&amp;height=630&amp;name=canopytower.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Canopy Camp</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="color: #2f343a; font-weight: bold;">
+             Welcome to The Canopy Family
+            </div> 
+            <div style="text-align: justify;">
+             <strong>Panama's Leader in Birding and Natural History Ecotourism Since 1999</strong>
+            </div> 
+            <div style="text-align: justify;">
+             Canopy Family has two award-winning birding lodges, the Canopy Tower, not far from Panama City in Soberanía National Park, and the Canopy Lodge, in the hills of El Valle de Antón. Both offer world-class, unique birding and natural history experiences, led by friendly, knowledgeable bilingual guides.
+            </div> 
+            <div style="text-align: justify;">
+             The Canopy Tower features rooms and an observation deck mere feet from the canopy of the rainforest, virtually at eye-level with such avian treats as toucans, tanagers, honeycreepers and hawks, as well as amazing looks at two- and three-toed sloths and Geoffroy’s Tamarins and Mantled Howlers, two monkey species otherwise nearly impossible to see this well!
+            </div> <p style="text-align: right;"><a href="http://www.canopytower.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> 
+            <hr> 
+            <div>
+             <img src="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/evranch.jpg?width=350&amp;height=210&amp;name=evranch.jpg" alt="Echo Valley Ranch &amp; Spa" style="margin: 10px 20px 10px 10px; width: 350px; height: 210px; float: left;" title="Echo Valley Ranch &amp; Spa" width="350" height="210" align="left" srcset="https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/evranch.jpg?width=175&amp;height=105&amp;name=evranch.jpg 175w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/evranch.jpg?width=350&amp;height=210&amp;name=evranch.jpg 350w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/evranch.jpg?width=525&amp;height=315&amp;name=evranch.jpg 525w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/evranch.jpg?width=700&amp;height=420&amp;name=evranch.jpg 700w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/evranch.jpg?width=875&amp;height=525&amp;name=evranch.jpg 875w, https://www.gracesoft.com/hs-fs/hubfs/assets/New-site/new-clients/evranch.jpg?width=1050&amp;height=630&amp;name=evranch.jpg 1050w" sizes="(max-width: 350px) 100vw, 350px">
+            </div> 
+            <div>
+             <span style="font-size: 18px; font-family: 'trebuchet ms', geneva; color: #2f343a;"><strong>Echo Valley Ranch &amp; Spa</strong></span>
+            </div> 
+            <div>
+             <span class="fa fa-calendar"></span>
+             <span style="color: #2f343a;"><strong>&nbsp;1 March 2015</strong></span>
+            </div> 
+            <div style="text-align: justify;">
+             Echo Valley is a delightful contradiction.Exhilarating, yet relaxing. Naturally luxurious.
+            </div> 
+            <div style="text-align: justify;">
+             A world-class destination hidden in the mountains. It's a home and a hotel. A ranch and a spa.
+            </div> 
+            <div style="text-align: justify;">
+             A place of intense peace, spiritual and natural.Both comforting and exhilarating.
+            </div> 
+            <div style="text-align: justify;">
+             Our chef prepares delicious, farm fresh meals.Ranch hands serve you with a smile.
+            </div> 
+            <div style="text-align: justify;">
+             Echo Valley redefines what luxury is.Where everything belongs. Including you.
+            </div> <p style="text-align: right;"><a href="http://www.evranch.com/" class="btn btn-warning" target="_blank">View&nbsp;More <span class="fa fa-eye"></span></a></p> <p style="text-align: right;">&nbsp;</p> <p style="text-align: right;">&nbsp;</p> 
+            <hr></span> 
+          </div>
+          <!--end layout-widget-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+        </div>
+        <!--end row--> 
+       </div>
+       <!--end row-wrapper --> 
+      </div>
+      <!--end widget-span --> 
+     </div>
+     <!--end row--> 
+    </div>
+    <!--end row-wrapper --> 
+   </div>
+   <!--end body --> 
+  </div>
+  <!--end body wrapper --> 
+  <div class="footer-container-wrapper"> 
+   <div class="footer-container container-fluid"> 
+    <div class="row-fluid-wrapper row-depth-1 row-number-1 "> 
+     <div class="row-fluid "> 
+      <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12"> 
+       <div class="row-fluid-wrapper row-depth-1 row-number-2 "> 
+        <div class="row-fluid "> 
+         <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+          <div class="cell-wrapper layout-widget-wrapper"> 
+           <span id="hs_cos_wrapper_free_trial__live_demo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2660827409"></span> 
+          </div>
+          <!--end layout-widget-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+        </div>
+        <!--end row--> 
+       </div>
+       <!--end row-wrapper --> 
+       <div class="row-fluid-wrapper row-depth-1 row-number-3 "> 
+        <div class="row-fluid "> 
+         <div class="span3 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="3"> 
+          <div class="row-fluid-wrapper row-depth-2 row-number-1 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_1_head" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header" data-global-widget-id="2726904762"><h2>Gracesoft</h2></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+          <div class="row-fluid-wrapper row-depth-2 row-number-2 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_1_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2726948712">GraceSoft is a full service application provider. GraceSoft offers easy web-based solutions for Property Management systems, content management, point of sale systems and online booking services.</span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+         <div class="span3 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="3" data-w="3"> 
+          <div class="row-fluid-wrapper row-depth-2 row-number-3 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_2_head" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header" data-global-widget-id="2725438374"><h2>Support Links</h2></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+          <div class="row-fluid-wrapper row-depth-2 row-number-4 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_2_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2739902520">
+               <ul class="list-unstyled link-list"> 
+                <li style="border: 0px;"><a onclick="javascript: window.open('https://secure.livechatinc.com/licence/5426201/open_chat.cgi?group=2', 'chat47196001', 'top=' + (screen.height / 2 - 150) + ',left=' + (screen.width / 2 - 230) + ',width=550,height=450'); return false;" href="https://secure.livechatinc.com/licence/5426201/open_chat.cgi?group=2" title="Live Support">Live Support</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a target="_blank" href="https://www.join.me/gracesoft.com" title="Join Live Demo">Join Live Demo</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a target="_blank" href="https://global.gotomeeting.com/join/310488373" title="Live Training">Live Training</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a href="//www.gracesoft.com/login-pms/" target="_blank" title="PMS Login">PMS Login</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a href="//www.gracesoft.com/crm-login/" target="_blank" title="CRM Login">CRM Login</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+               </ul></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+         <div class="span3 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="6" data-w="3"> 
+          <div class="row-fluid-wrapper row-depth-1 row-number-1 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_3_head" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header" data-global-widget-id="2739968795"><h2>Easy Innkeeping Features</h2></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+          <div class="row-fluid-wrapper row-depth-1 row-number-2 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_3_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2713102676">
+               <ul class="list-unstyled link-list"> 
+                <li style="border: 0px;"><a href="//www.gracesoft.com/easy-innkeeping" title="Reservation Software">Reservation Software</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a target="_blank" href="//www.gracesoft.com/easy-innkeeping/hotel-software.htm" title="Hotel Software">Hotel Software</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a target="_blank" href="//www.gracesoft.com/easy-innkeeping/condo-software" title="Condo Management Software">Condo Management Software</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a target="_blank" href="//www.gracesoft.com/online_res" title="Online Booking Enginge With CMS Software">Online Booking Engine With CMS&nbsp;</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a href="//www.gracesoft.com/easy-webpos" target="_blank" title="Easy Web POS">Easy Web POS </a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+                <li><a href="//www.gracesoft.com/e-connect" target="_blank" title="E-Connect E-mail Marketing &amp; CRM">E-Connect E-mail Marketing &amp; CRM</a>&nbsp;<span class="fa fa-angle-right right-icon"></span></li> 
+               </ul></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+         <div class="span3 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="9" data-w="3"> 
+          <div class="row-fluid-wrapper row-depth-1 row-number-3 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_4_head" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header" data-global-widget-id="2713118276"><h2>Contact Us</h2></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+          <div class="row-fluid-wrapper row-depth-1 row-number-4 "> 
+           <div class="row-fluid "> 
+            <div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12"> 
+             <div class="cell-wrapper layout-widget-wrapper"> 
+              <span id="hs_cos_wrapper_footer_4_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2713095811"><p><span>Gracesoft ,</span></p> <p>3211 South Main Street,</p> <p>Stafford, Tx - 77477</p> <p>USA</p> <p>Phone:<span>&nbsp;</span><span>713 - 981 - 5300, X1</span></p> <p><span></span>Techinical support:&nbsp;713 - 981 - 5300, X2</p> <p><span>Sales Phone : 1 - 888 - 781 - 1086&nbsp;</span></p> <p>Fax: 713 - 588 - 1805&nbsp;</p> <p>Email: <span style="color: #72c02c;"><a href="../../../com/gracesoft/www/index.html"><span style="color: #72c02c;">sales@gracesoft.com</span></a></span></p></span> 
+             </div>
+             <!--end layout-widget-wrapper --> 
+            </div>
+            <!--end widget-span --> 
+           </div>
+           <!--end row--> 
+          </div>
+          <!--end row-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+        </div>
+        <!--end row--> 
+       </div>
+       <!--end row-wrapper --> 
+       <div class="row-fluid-wrapper row-depth-0 row-number-1 "> 
+        <div class="row-fluid "> 
+         <div class="span6 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="6"> 
+          <div class="cell-wrapper layout-widget-wrapper"> 
+           <span id="hs_cos_wrapper_footer_left" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2713042431">
+            <div style="text-align: right;"> 
+             <ul class="footer-menu-left"> 
+              <li><a href="https://global.gotomeeting.com/join/310488373" target="_blank" style="color: #eeeeee;">Live Training</a></li> 
+              <li><a href="https://www.join.me/gracesoft.com" target="_blank" style="color: #eeeeee;">Live Demo</a></li> 
+             </ul> 
+            </div></span> 
+          </div>
+          <!--end layout-widget-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+         <div class="span6 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="6" data-w="6"> 
+          <div class="cell-wrapper layout-widget-wrapper"> 
+           <span id="hs_cos_wrapper_footer_right" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" data-global-widget-id="2725451264"><script type="text/javascript">// <![CDATA[
+var __lc = {};
+__lc.license = 5742431;
+
+(function() {
+	var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+// ]]></script> 
+            <div class="right-footer-copy">
+             <span>© Copyright 2016 <span style="color: #72c02c;"><a href="../../../com/gracesoft/www/index.html"><span style="color: #72c02c;">Gracesoft.com</span></a></span>. All Rights Reserved</span>
+            </div></span> 
+          </div>
+          <!--end layout-widget-wrapper --> 
+         </div>
+         <!--end widget-span --> 
+        </div>
+        <!--end row--> 
+       </div>
+       <!--end row-wrapper --> 
+      </div>
+      <!--end widget-span --> 
+     </div>
+     <!--end row--> 
+    </div>
+    <!--end row-wrapper --> 
+   </div>
+   <!--end footer --> 
+  </div>
+  <!--end footer wrapper --> 
+  <!-- Start of HubSpot Analytics Code Not Loaded --> 
+  <script>
+(function(){
+  const timeoutEvent = document.createEvent('CustomEvent');
+  timeoutEvent.initCustomEvent("content-analytics-code-not-loaded", true, true, { detail: "Not loaded in preview mode" });
+  window.dispatchEvent(timeoutEvent);
+})();
+</script> 
+  <!-- End of HubSpot Analytics Code Not Loaded --> 
+  <script type="text/javascript">
+var hsVars = {
+    render_id: "f584cda5-e628-488d-ad3a-303b97f5c579",
+    ticks: 1793200310792,
+    page_id: 3026609181,
+    
+    content_group_id: 0,
+    portal_id: 107648,
+    app_hs_base_url: "https://app-na2.hubspot.com",
+    cp_hs_base_url: "https://cp-na2.hubspot.com",
+    language: "en",
+    analytics_page_type: "landing-page",
+    scp_content_type: "",
+    
+    analytics_page_id: "3026609181",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: null
+}
+</script> 
+  <script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js"></script> 
+  <style>
+    .footer__copyright-and-links {
+    padding-top: 10px !important;
+}
+  .footer__section--bottom {
+    padding-bottom: 20px !important;
+}
+  .footer__section--main {
+    padding-bottom: 20px !important;
+}
+</style> 
+  <script>
+  window.prechatTemplate = {
+    "SubmitLabel": "Start Chat",
+    "fields": {
+      "0": {"error": "Please Enter a valid name","fieldId": "name","label": "Full Name","required":"yes","type":"text"},
+      "1": {"error": "Please Enter a valid Email","fieldId": "email","label": "Email","required":"yes","type":"email"},
+      "2": {"error": "Please Enter a valid Phone Number","fieldId": "phone","label": "Phone","required":"yes","type":"phone"},
+      "3": {"error": "Please Enter a Property Name","fieldId": "cf_title","label": "Property Name","required":"yes","type":"text"}
+    },
+    "heading": "Chat with Us",
+    "mainbgColor": "#0AA4DB",
+    "maintxColor": "#fff",
+    "textBanner": "We can't wait to talk to you. But first, please take a couple of moments to tell us a bit about yourself."
+  };
+
+  window.fcSettings = {
+    onInit: function() {
+      // Initialize pre-chat form
+      if (window.fcPreChatform) {
+        window.fcPreChatform.fcWidgetInit(window.prechatTemplate);
+      }
+
+      // Inject custom styles for Freshchat pre-chat form
+      const style = document.createElement("style");
+      style.innerHTML = `
+        /* Label styles */
+        .chat-fc-form-outer div.fc-form ul li label {
+          position: absolute !important;
+          top: -15px !important;
+          font-weight: lighter !important;
+          margin-left: 8px !important;
+          margin-right: 8px !important;
+          padding: 0px 3px !important;
+          background-color: white !important;
+          border-radius: 3px !important;
+        }
+        /* Input styles */
+        .chat-fc-form-outer div.fc-form ul li input {
+          padding: 13px 0px 13px 10px !important;
+          width: 100% !important;
+          border: 1px solid #ddd !important;
+          border-radius: 3px !important;
+        }
+        /* TextBanner (intro sentence) styles */
+        .chat-fc-form-outer .fc-form .fc-form-header p {
+          line-height: 1.2 !important;
+          margin-bottom: 25px !important;
+          font-weight: lighter !important;
+          margin-top: 10px !important;
+          font-size: 16px !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  };
+
+  window.fcWidgetMessengerConfig = {
+    config: {
+      content: {
+        actions: { tab_chat: "Chat" },
+        headers: { chat: "Chat With Us" }
+      },
+      cssNames: {
+        expanded: "custom_fc_expanded",
+        widget: "custom_fc_frame"
+      }
+    }
+  };
+</script> 
+  <script src="https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js"></script> 
+  <script src="http://in.fw-cdn.com/32001440/1057521.js" chat="true" widgetid="0a04bc62-baed-498f-adec-5e2bf1056e62">
+</script> 
+  <!-- End Facebook Pixel Code 
+<noscript async ><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=510966462654695&ev=PageView&noscript=1"
+/></noscript>
+End Facebook Pixel Code --> 
+  <!-- Meta Pixel Code --> 
+  <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1313022930738316');
+fbq('track', 'PageView');
+</script> 
+  <noscript>
+   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1313022930738316&amp;ev=PageView&amp;noscript=1">
+  </noscript> 
+  <!-- End Meta Pixel Code --> 
+  <!--Google search Engine Console--> 
+  <meta name="google-site-verification" content="DfoC00W9lqOqmOnvkltkjMSyXST24BVqU_fUL5iD-TE"> 
+  <!--End of Google search Engine Console--> 
+  <div class="floating-left-buttons"> 
+   <!-- CSS-only toggle --> 
+   <input type="checkbox" id="contact-toggle" class="contact-toggle"> 
+   <label for="contact-toggle" class="float-toggle"> ☎ </label> 
+   <div class="float-options"> 
+    <a href="https://api.whatsapp.com/send?phone=917200423323" target="_blank" class="whatsapp-btn"> <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> </a> 
+    <a href="../../../com/gracesoft/www/corporate-contact.html" class="float-btn"> Contact Us </a> 
+   </div> 
+  </div> 
+  <script>
+window.addEventListener("scroll", function () {
+    const scrollPercent =
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+    if (scrollPercent > 30) {
+        document.querySelector(".floating-left-buttons")
+                ?.classList.add("show");
+    }
+});
+</script> 
+  <!-- Generated by the HubSpot Template Builder - template version 1.03 --> 
+ </body>
+</html>

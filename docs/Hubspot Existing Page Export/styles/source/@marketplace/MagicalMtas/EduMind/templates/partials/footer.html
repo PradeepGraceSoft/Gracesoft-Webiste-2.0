@@ -1,0 +1,58 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+{% dnd_area "footer" label="Footer" class='main p-0' %}
+  {% dnd_section padding={'top': '0px','right': '0px','bottom': '0px','left': '0px'} %}
+    {% dnd_module "module_166749589227525" path="../../modules/global/Footer", label="Footer" 
+      section_class = '',
+      footer_logo= 
+      {
+        'override_inherited_src': true,
+        'alt': brandSettings.logos[1].alt,
+        'src': brandSettings.logos[1].src,
+        'height': 40,
+        'link': brandSettings.logos[1].link,
+        'suppress_company_name': true
+      },
+      footer_excerpt = '<p>Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.</p>',
+      footer_info = [
+        {
+          'footer_info_title' : '<span>Add:</span>',
+          'footer_info_content' : '70-80 Upper St Norwich'
+        },
+        {
+          'footer_info_title' : '<span>Call:</span>',
+          'footer_info_content' : '+123 456 789'
+        },
+        {
+          'footer_info_title' : '<span>Email:</span>',
+          'footer_info_content' : 'Info@example.com'
+        }
+      ],
+      widget_title_one = '<h3>Links</h3>',
+      widget_title_two = '<h3>Services</h3>',
+      widget_title_three = '<h3>Contacts</h3>',
+      footer_contact_excerpt = '<p>Enter your email address to register to our newsletter subscription</p>',
+      footer_social_item = [
+        {
+          'social_icon_class_name' : 'facebook'
+        },
+        {
+          'social_icon_class_name' : 'instagram'
+        },
+        {
+          'social_icon_class_name' : 'twitter'
+        },
+        {
+          'social_icon_class_name' : 'youtube'
+        },
+        {
+          'social_icon_class_name' : 'linkedin'
+        }
+      ],
+      copyright = '<p>(c) 2022  All Rights Reserved.</p>'
+    %}
+    {% end_dnd_module %} 
+{% end_dnd_section %}
+{% end_dnd_area %}

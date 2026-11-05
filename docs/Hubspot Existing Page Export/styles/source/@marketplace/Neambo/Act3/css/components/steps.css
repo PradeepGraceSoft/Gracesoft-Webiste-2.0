@@ -1,0 +1,180 @@
+{% import "../_variables.css" as var %}
+
+.steps__nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.steps__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 2.73rem;
+  height: 2.73rem;
+  margin: 0 0 0.46rem;
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 2px {{ var.borders_color }} inset;
+  border-radius: 999px;
+  color: {{ var.dark }};
+  text-align: center;
+  line-height: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.steps--dark .steps__icon,
+.steps--dark-no-accent .steps__icon {
+  box-shadow: 0 0 0 2px {{ var.white_borders }} inset;
+  color: {{ var.white }};
+}
+
+.steps__icon:focus-visible {
+  box-shadow: 0 0 0 2px {{ var.accent }} inset;
+  color: {{ var.accent }}; 
+}
+
+.steps--dark .steps__icon:focus-visible,
+.steps--dark-no-accent .steps__icon:focus-visible {
+  box-shadow: 0 0 0 2px {{ var.white }} inset;
+  color: {{ var.white }};
+}
+
+.steps--active .steps__icon--active {
+  animation: .2s ease-in-out forwards uiPop;
+}
+
+.steps__icon--active,
+.steps--dark .steps__icon--active {
+  background: {{ var.accent_bg }};
+  box-shadow: none;
+  color: {{ var.white }};
+}
+
+.steps--dark-no-accent .steps__icon--active {
+  background: {{ var.white }};
+  box-shadow: none;
+  color: {{ var.accent }};
+}
+
+.steps__icon--active:focus-visible,
+.steps--dark .steps__icon--active:focus-visible {
+  color: {{ var.white }};
+}
+
+.steps--dark-no-accent .steps__icon--active:focus-visible {
+  color: {{ var.dark }};
+}
+
+.steps__glyph {
+  display: flex;
+  width: 1.36rem;
+  height: 1.36rem;
+  align-items: center;
+  justify-content: center;
+  font-family: {{ var.ui_font_family }};
+  font-weight: {{ var.ui_font_weight }};
+  font-style: {{ var.ui_font_style }};
+  font-size: 1.36rem;
+  line-height: 1.36rem;
+  text-align: center;
+}
+
+.steps__glyph svg {
+  fill: currentColor;
+  width: 100%;
+  height: 100%;
+}
+
+.steps__icon .ttip {
+  visibility: hidden !important; /* override the default animation in this case */
+  pointer-events: none;
+}
+
+.steps__icon--active .ttip {
+  visibility: visible !important; /* override the default animation in this case */
+  pointer-events: auto;
+}
+
+.steps__sep {
+  display: block;
+  max-width: 2.67rem;
+  min-width: .44rem;
+  height: 2px;
+  border-radius: {{ var.radius_1 }};
+  background: {{ var.borders_color }};
+  margin: 0 0.46rem;
+}
+
+.steps--dark .steps__sep,
+.steps--dark-no-accent .steps__sep {
+  background: {{ var.white_borders }};
+}
+
+.steps__content {
+  padding: {{ var.gutter }}px 0 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.steps__item {
+  flex: 0 0 100%;
+  order: 2;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.steps__item--active {
+  order: 1;
+  opacity: 1;
+}
+
+.steps--active .steps__item--active {
+  animation: .2s ease-in-out forwards uiPop;
+}
+
+.steps__title {
+  margin-bottom: .44rem;
+}
+
+.module--text-left .steps__nav {
+  justify-content: left;
+}
+
+.module--text-center .steps__nav {
+  justify-content: center;
+}
+
+.module--text-right .steps__nav {
+  justify-content: right;
+}
+
+@media (max-width: {{ var.md }}px) {
+  .module--md-text-left .steps__nav {
+    justify-content: left;
+  }
+
+  .module--md-text-center .steps__nav {
+    justify-content: center;
+  }
+
+  .module--md-text-right .steps__nav {
+    justify-content: right;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .module--sm-text-left .steps__nav {
+    justify-content: left;
+  }
+
+  .module--sm-text-center .steps__nav {
+    justify-content: center;
+  }
+
+  .module--sm-text-right .steps__nav {
+    justify-content: right;
+  }
+}

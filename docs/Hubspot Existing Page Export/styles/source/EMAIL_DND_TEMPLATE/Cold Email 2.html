@@ -1,0 +1,263 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#FFFFFF","body_border_color":"#cbd6e2","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#EEEEEE","use_email_client_default_settings":false,"primary_font":"Merriweather,Georgia,sans-serif","primary_font_color":"#23496d","primary_font_size":"15","primary_font_line_height":"150%","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"24"},"heading_two_font":{"size":"22"},"links_font":{"color":"#00a4bd"},"user_module_defaults":{}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body id="hs_body" bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"image (11)",
+                    "height":301,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/image%20(11).png",
+                    "width":600
+                    }, stretch_on_mobile=False, lineNumber=37, hs_enable_module_padding=False, startPosition=-343, hs_wrapper_css={} %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", lineNumber=52, hs_enable_module_padding=True, startPosition=-338, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div style="text-align: center;"><span style="color: #ffffff;">Hello {{ personalization_token('contact.firstname', 'Valued Client') }},<br><br></span></div>
+<div style="text-align: center;"><span style="color: #ffffff;">Gracesoft's Easy InnKeeping emerges as a beacon of innovation, offering a comprehensive and user-friendly solution that caters to the diverse needs of hotels, inns, bed and breakfasts, and vacation rentals. With its features and intuitive interface, Easy InnKeeping streamlines operations enhances guest satisfaction, and empowers property owners and managers like never before.</span></div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"0px"
+                    } %}
+                    {% module_attribute "html" %}<ul style="font-size: 14px;">
+<li style="font-size: 16px; line-height: 150%;"><span style="color: #ffffff;"><span style="color: #000000;"><strong><span style="color: #ff9902;"><a href="https://www.gracesoft.com/hotel-management-software" style="color: #ff9902;" rel="noopener">Comprehensive Management Suite</a></span></strong></span><span style="font-weight: bold;">: </span><span style="font-weight: normal; font-size: 15px;">Easy InnKeeping serves as an all-inclusive platform designed to centralize management tasks. From reservations and check-ins to housekeeping and billing, the software efficiently handles a range of operations.</span></span></li>
+</ul>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/nightauditbanner.png",
+                    "alt":"nightauditbanner",
+                    "width":260,
+                    "height":146
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"32px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<ul>
+<li><span style="color: #ffffff;"><strong><a href="https://www.gracesoft.com/online-booking-engine" style="color: #ffffff;" rel="noopener"><span style="color: #ff9902;">Streamlined Reservations and Bookings</span></a>:</strong> Easy InnKeeping streamlines hospitality reservations with its real-time booking engine, preventing overbooking and manual data entry while ensuring accurate availability on property websites.</span></li>
+</ul>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Praveen/istockphoto-1188426468-170667a.webp",
+                    "alt":"istockphoto-1188426468-170667a",
+                    "width":260,
+                    "height":173
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"32px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<ul style="list-style-type: circle;">
+<li><span style="color: #ffffff;"><strong><a href="https://www.gracesoft.com/hotel-management-software" style="color: #ffffff;" rel="noopener"><span style="color: #ff9902;">Analytics and Reporting</span></a>:</strong> Supporting informed decision-making, Easy InnKeeping's analytical tools offer insights into occupancy rates, revenue trends, and guest preferences, empowering property owners to adapt strategies to market demands.</span></li>
+</ul>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Praveen/istockphoto-1276312812-170667a.webp",
+                    "alt":"istockphoto-1276312812-170667a",
+                    "size_type":None,
+                    "width":260,
+                    "height":173,
+                    "loading":"disabled"
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"32px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<ul style="list-style-type: circle;">
+<li>
+<p><a href="https://www.gracesoft.com/support-center" rel="noopener"><span style="color: #ff9902;">Superior Customer Support</span></a><span style="color: #ffffff;"><span style="font-weight: bold;">:</span> We're committed to providing exceptional customer service at every step of your journey with us. Our dedicated support team is ready to assist you with onboarding and any questions or concerns you may have, ensuring a smooth and hassle-free experience.</span></p>
+</li>
+</ul>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Praveen/istockphoto-1740026412-170667a.webp",
+                    "alt":"istockphoto-1740026412-170667a",
+                    "width":260,
+                    "height":127
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"32px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<p style="text-align: center;"><span style="color: #ffffff;">In the end, Easy InnKeeping isn't just a software solution; it's a partner in hospitality success. By combining technological innovation with a commitment to guest satisfaction, Gracesoft has crafted a tool that empowers property owners and managers to deliver outstanding experiences while streamlining their operations.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module corner_radius=25, path="@hubspot/button_email", background_color="#FF9902", make_full_width=True, destination="https://www.gracesoft.com/", text="Click Here To Schedule Demo", lineNumber=11, startPosition=-428, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"value":15,"units":"px"},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module corner_radius=25, schema_version=2, css_class="dnd-module", path="@hubspot/button_email", background_color="#FF9902", make_full_width=True, destination="https://www.calendar.com/gracesoftsupport/demo", text="Click Here To Know More", lineNumber=150, startPosition=-406, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"2px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"value":15,"units":"px"},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"10",
+                "bottom":"10"
+                }, full_width=False, background_color="#242a41" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=160, hs_enable_module_padding=False, startPosition=19, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#FFFFFF","font":"Merriweather,Georgia,sans-serif","size":{"units":"px","value":12},"font_set":"DEFAULT"}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

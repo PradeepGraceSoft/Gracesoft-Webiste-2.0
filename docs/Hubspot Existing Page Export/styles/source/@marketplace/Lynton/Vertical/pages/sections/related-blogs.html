@@ -1,0 +1,17 @@
+<!--
+  templateType: section
+  label: Related Blogs
+  description: "A showcase of blog posts."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/related-blog.png
+-->
+
+{% dnd_section padding={'top': 60, 'bottom': 60} %}
+  {% dnd_module path="../modules/Related Blog Posts",
+    heading={
+      "eyebrow": "You May Like Our",
+      "heading": "Related Offers",
+      "add_cta": false
+    }
+  %}{% end_dnd_module %}
+{% end_dnd_section %}

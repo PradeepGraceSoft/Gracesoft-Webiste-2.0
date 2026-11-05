@@ -1,0 +1,11 @@
+<!--
+  templateType: section
+  label: Logos
+  description: "Simple row of logos with heading."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/logos.png
+-->
+
+{% dnd_section padding={{ context.padding || "{'top': 60, 'bottom': 60}" }} %}
+  {% dnd_module path="../modules/Logos" %}{% end_dnd_module %}
+{% end_dnd_section %}

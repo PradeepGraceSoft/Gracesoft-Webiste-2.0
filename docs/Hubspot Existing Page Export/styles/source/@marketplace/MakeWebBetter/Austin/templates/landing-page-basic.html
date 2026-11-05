@@ -1,0 +1,398 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Landing Page Basic
+screenshotPath: ../images/template-previews/landing-basic.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+{% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--basic-landing'
+%}
+
+{#  Banner Section #}
+{% dnd_section 
+  vertical_alignment='MIDDLE',
+  full_width=true,
+  padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  }
+%}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/banner-layouts',  
+      'subtitle'="",
+      'content'="<h1>2022 Online Business Conference</h1><p>The biggest challenge that comes in the data science field is understanding the business problem. Most data scientists go through a mechanical approach and initiate analyzing data sets without undergoing the business problem and its purpose. This leads to anomalies in the whole process.</p>",
+       primary_cta={ type: 'none' },
+       secondary_cta={ type: 'none' },
+       style_1={
+       'max_width': {enable: true, value: 760},
+         'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 30,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+        }    
+%}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+    "banner_layouts": "banner_with_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{#  End of Banner Section #}
+
+{# Card Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 50,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module
+   path='../modules/title-content',
+   "subtitle"="",
+   "content"="<h2>Event Agenda</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec felis at pellentesque. Sed amet dolorLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+    style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_card' 
+				path='../modules/card',
+        styles= {
+          'alignment_choice': {'alignment': 'left'}
+        },
+  card =[{
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Enhance Your Skills",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Modish And Pristine",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Stay Ahead Competitors",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        },
+        {
+        "enable_number": False,
+       "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Invite Your Teammates",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Get Real Time Updates",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Industry Experts",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        }
+        ]
+			%}
+{% module_attribute 'card_layouts' is_json=True %}
+{
+"layouts": "card"
+}
+{% end_module_attribute %}
+{% module_attribute 'card_column' is_json=True %}
+{
+"column_choice": "three_column"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/button',
+        button={ type: 'btn', style: 'filled_light', text: 'Know More' },
+         styles={
+          general_settings: {
+          "alignment_desktop_": "center"
+          }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Card Section #}
+
+{# Team Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 40,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 20,
+          'left': 0
+        }
+  }
+%}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Meet Our Experts</h2><p>Different teams work on different workflows. So, it must be the responsibility of the IT team to consistently work on rebuilding and upgrading environments.</p>"
+         style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+        %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %},
+%}
+{% dnd_module 'au_team' 
+				path='../modules/our-team',
+        style={
+          'alignment': { alignment: 'center' }
+        }
+        team_member =[{
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jane-cooper.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Jane Cooper",
+        "designation": "Digital Marketting",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jenny-wilson.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Jenny Wilson",
+        "designation": "Web Designer",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/wade-warner.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Wade Warren",
+        "designation": "Front-end Devloper",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/cameron-williamson.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Cameron Williamson",
+        "designation": "Digital Marketting",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/cody-fisher.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Cody Fisher",
+        "designation": "UI/UX Designer",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/zelia-doe.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Zelia Doe",
+        "designation": "Sr.Business Analyst",        
+        },{
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jane-cooper.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Maria Harris",
+        "designation": "Managing Director",        
+        },{
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jenny-wilson.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Jackie Doumet",
+        "designation": "Software Engineer",    
+        }, {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/wade-warner.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Maria Harris",
+        "designation": "Managing Director",        
+        }, {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/brooklyn.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Brooklyn Simmons",
+        "designation": "Technical Team Lead",           
+        }]
+			%}
+{% module_attribute 'layout_choices' is_json=True %}
+{
+"select_layout": "slider_with_dots"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Team Section #}
+
+{# Two Column Video Section #}
+{% include_dnd_partial path='../sections/two-column-video-text.html' %}
+{# End Of Two Column Video Section #}
+
+{% end_dnd_area %}
+{% endblock body %}
+
+{% block footer %}
+{% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

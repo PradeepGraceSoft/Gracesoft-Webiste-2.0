@@ -1,0 +1,152 @@
+<!--
+  templateType: section
+  label: Featured Items
+  description: "A list of items with icon, heading, text, and call to action."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/services.png
+-->
+
+{% dnd_section
+  padding={{ context.padding || "{'top': 60, 'bottom': 60}" }},
+  background_image={{ context.bg_image }}
+%}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path="../modules/Feature Items",
+        heading={
+          "eyebrow": "Our Services",
+          "heading": "A Versatile and Easy-To-Use Theme"
+        },
+        content=[
+          {
+            "icon": {
+              "name": "laptop",
+              "unicode": "f109",
+              "type": "SOLID"
+            },
+            "title": "Service Name",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.</p>",
+            "add_cta": true,
+            "cta": [
+              {
+                "color": "text-link",
+                "text": "Learn More",
+                "link": {
+                  "url": {
+                    "href": "https://www.example.com"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "icon": {
+              "name": "laptop",
+              "unicode": "f109",
+              "type": "SOLID"
+            },
+            "title": "Service Name",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.</p>",
+            "add_cta": true,
+            "cta": [
+              {
+                "color": "text-link",
+                "text": "Learn More",
+                "link": {
+                  "url": {
+                    "href": "https://www.example.com"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "icon": {
+              "name": "laptop",
+              "unicode": "f109",
+              "type": "SOLID"
+            },
+            "title": "Service Name",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.</p>",
+            "add_cta": true,
+            "cta": [
+              {
+                "color": "text-link",
+                "text": "Learn More",
+                "link": {
+                  "url": {
+                    "href": "https://www.example.com"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "icon": {
+              "name": "laptop",
+              "unicode": "f109",
+              "type": "SOLID"
+            },
+            "title": "Service Name",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.</p>",
+            "add_cta": true,
+            "cta": [
+              {
+                "color": "text-link",
+                "text": "Learn More",
+                "link": {
+                  "url": {
+                    "href": "https://www.example.com"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "icon": {
+              "name": "laptop",
+              "unicode": "f109",
+              "type": "SOLID"
+            },
+            "title": "Service Name",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.</p>",
+            "add_cta": true,
+            "cta": [
+              {
+                "color": "text-link",
+                "text": "Learn More",
+                "link": {
+                  "url": {
+                    "href": "https://www.example.com"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "icon": {
+              "name": "laptop",
+              "unicode": "f109",
+              "type": "SOLID"
+            },
+            "title": "Service Name",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis elit dolor eros.</p>",
+            "add_cta": true,
+            "cta": [
+              {
+                "color": "text-link",
+                "text": "Learn More",
+                "link": {
+                  "url": {
+                    "href": "https://www.example.com"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

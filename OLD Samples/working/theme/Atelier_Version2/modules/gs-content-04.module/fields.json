@@ -1,0 +1,170 @@
+[
+  {
+    "name": "text_1",
+    "label": "Manage Your Entire Property from One Place",
+    "type": "text",
+    "default": "Manage Your Entire Property from One Place"
+  },
+  {
+    "name": "text_2",
+    "label": "Reservation Management",
+    "type": "text",
+    "default": "Reservation Management"
+  },
+  {
+    "name": "text_3",
+    "label": "Keep bookings, room assignments and changes organized.",
+    "type": "text",
+    "default": "Keep bookings, room assignments and changes organized."
+  },
+  {
+    "name": "text_4",
+    "label": "Front Desk Operations",
+    "type": "text",
+    "default": "Front Desk Operations"
+  },
+  {
+    "name": "text_5",
+    "label": "Coordinate arrivals, departures and guest billing without losing ",
+    "type": "text",
+    "default": "Coordinate arrivals, departures and guest billing without losing the details."
+  },
+  {
+    "name": "text_6",
+    "label": "Guest Management",
+    "type": "text",
+    "default": "Guest Management"
+  },
+  {
+    "name": "text_7",
+    "label": "Keep preferences and stay history available for a more personal w",
+    "type": "text",
+    "default": "Keep preferences and stay history available for a more personal welcome."
+  },
+  {
+    "name": "text_8",
+    "label": "Housekeeping",
+    "type": "text",
+    "default": "Housekeeping"
+  },
+  {
+    "name": "text_9",
+    "label": "See room readiness and staff assignments before the next arrival.",
+    "type": "text",
+    "default": "See room readiness and staff assignments before the next arrival."
+  },
+  {
+    "name": "text_10",
+    "label": "Payment Processing",
+    "type": "text",
+    "default": "Payment Processing"
+  },
+  {
+    "name": "text_11",
+    "label": "Handle guest payments through supported payment gateways.",
+    "type": "text",
+    "default": "Handle guest payments through supported payment gateways."
+  },
+  {
+    "name": "text_12",
+    "label": "Reporting and Analytics",
+    "type": "text",
+    "default": "Reporting and Analytics"
+  },
+  {
+    "name": "text_13",
+    "label": "Review occupancy and revenue to understand property performance.",
+    "type": "text",
+    "default": "Review occupancy and revenue to understand property performance."
+  },
+  {
+    "name": "link_14",
+    "label": "Explore Reservation Management",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "link_14_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Reservation Management"
+  },
+  {
+    "name": "link_15",
+    "label": "Explore Front Desk Operations",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "link_15_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Front Desk Operations"
+  },
+  {
+    "name": "link_16",
+    "label": "Explore Guest Management",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/crm-software"
+    }
+  },
+  {
+    "name": "link_16_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Guest Management"
+  },
+  {
+    "name": "link_17",
+    "label": "Explore Housekeeping",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/housekeeping"
+    }
+  },
+  {
+    "name": "link_17_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Housekeeping"
+  },
+  {
+    "name": "link_18",
+    "label": "Explore Payment Processing",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/payments"
+    }
+  },
+  {
+    "name": "link_18_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Payment Processing"
+  },
+  {
+    "name": "link_19",
+    "label": "Explore Reporting and Analytics",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/feature-listing"
+    }
+  },
+  {
+    "name": "link_19_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Explore Reporting and Analytics"
+  }
+]

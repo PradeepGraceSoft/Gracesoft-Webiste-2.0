@@ -1,0 +1,108 @@
+<!--
+  templateType: global_partial
+  label: Footer 6
+-->
+
+{# Color scheme #}
+{% if theme.components.footer.scheme == 'dark' %}
+  {% set footer_color_scheme = 'dark' %}
+{% else %}
+  {% set footer_color_scheme = 'light' %}
+{% endif %}
+
+{% dnd_area 'above_footer', label='Above footer', class='above-footer' %}{% end_dnd_area %}
+
+<footer class="footer footer--6 hs-search-hidden">
+  <div class="footer__section footer__section--main section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="footer__form-intro">
+            {% module 'footer_form_intro' path='../modules/rich-text' label='Form intro' 
+              text='
+                <h1>Subscribe to updates</h1>
+                <p>Stay up to date with the latest marketing, sales, and service tips and news.</p>
+              '
+              settings={
+                'color_scheme': footer_color_scheme 
+              }
+              wrapper={
+                'text_align': {
+                  'lg': 'center'
+                },
+                'margin': {
+                  'bottom': {
+                    'lg': '20'
+                  }
+                }
+              }
+            %}
+          </div>
+          <div class="footer__form">
+            {% module 'footer_form' path='../modules/form' label='Form'
+              form_title='',
+              one_field_form=false,
+              form={
+                'form_id': ''
+              },
+              settings={
+                'form_title_tag': 'h4'
+              },
+              wrapper={
+                'max_width': {
+                  'lg': '420'
+                },
+                'block_align': {
+                  'lg': 'center'
+                }
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__section footer__section--bottom section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="flex flex-row items-center justify-center wrap sm-flex-col sm-items-center">
+            <div class="footer__nav">
+              {% module 'footer_nav' path='../modules/rich-text' label='Navigation'
+                text='
+                  <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                ' 
+                settings={
+                  'color_scheme': footer_color_scheme
+                }
+              %}
+            </div>
+            <div class="footer__lang">
+              {% module 'footer_lang' path='../modules/lang-select' label='Language selector' lang_label='short' show_icon='true' color_scheme={{ footer_color_scheme }} %}
+            </div>
+          </div>
+          <div class="footer__copyright">
+            {% module 'footer_copyright' path='../modules/rich-text' label='Copyright' 
+              text='© Copyright {{ year }} <strong>Company</strong>' 
+              settings={
+                'color_scheme': footer_color_scheme
+              }
+              wrapper={
+                'text_align': {
+                  'lg': 'center'
+                }
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{{ require_css(get_asset_url('../css/components/footer-06.css')) }}

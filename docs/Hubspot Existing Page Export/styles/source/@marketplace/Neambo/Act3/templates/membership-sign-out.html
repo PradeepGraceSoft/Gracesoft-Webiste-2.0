@@ -1,0 +1,84 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Membership sign out
+  screenshotPath: ../images/template-previews/membership-sign-out.jpg
+-->
+
+{% set template_translations = load_translations('./_locales', html_lang, 'en') %}
+
+{% extends './_base.html' %}
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  <div class="section membership-logout">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 membership-logout__intro">
+          {% module 'membership_logout_intro' path='../modules/section-intro'
+            label='Intro',
+            overline='',
+            title='{{ template_translations.membership_sign_out_title.message }}',
+            desc='',
+            settings={
+              'color_scheme': 'light',
+              'title_tag': 'h1',
+              'title_looks_like': 'h2',
+              'divider': 'auto'
+            },
+            wrapper={
+              'max_width': {
+                'lg': '700'
+              }
+            },
+            overrideable=False
+          %}
+        </div>
+        <div class="col s12 membership-logout__button">
+          {% module 'membership_logout_button' path='../modules/button',
+            button=[
+              {
+                'type': 'link',
+                'text': '{{ template_translations.membership_sign_out_button.message }}',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': '/_hcms/mem/login'
+                  },
+                  'open_in_new_tab': false
+                },
+                'color': 'accent',
+                'fill': 'fill',
+                'size': 'large',
+                'shape': ''
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            },
+            overrideable=False
+          %}
+        </div>
+        <div class="col s12 membership-logout__details">
+          {% module 'membership_logout_details' path='../modules/rich-text',
+            text='<p class="small-text">{{ template_translations.membership_sign_out_alternative.message }}</p>',
+            wrapper={
+                'text_align': {
+                'lg': 'center'
+              }
+            },
+            overrideable=False
+          %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ require_css(get_asset_url('../css/templates/membership-sign-out.css')) }}
+{% endblock body %}

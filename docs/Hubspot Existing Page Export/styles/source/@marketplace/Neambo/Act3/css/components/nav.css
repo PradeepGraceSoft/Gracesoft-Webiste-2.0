@@ -1,0 +1,486 @@
+{% import "../_variables.css" as var %}
+
+/* Animation */
+
+@keyframes navbarFlyout {
+  from {
+    opacity: 0;
+    transform: scale(.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Base */
+
+.nav {
+  position: relative;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  display: block;
+  padding-top: .56rem;
+  padding-bottom: .56rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: none;
+}
+
+/* Top level */
+
+.nav__list--level1 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav__list--level1 > li:not(:last-child) {
+  margin-inline-end: 2rem;
+}
+
+.nav--arrows .nav__list--level1 > li:not(:last-child) {
+  margin-inline-end: calc(2rem - 22px + 16px);/* default margin-right, minus padding-right from the a, plus the width of the svg => space looks consistent with or w/o arrows */
+}
+
+.nav__list--level1 > li > a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: {{ var.radius_1 }};
+  background: {{ var.accent_bg }};
+  opacity: 0;
+  transform: scale(.2,1) translateY(2px) translateZ(0);
+  transition: .3s ease-out;
+}
+
+.nav__list--level1 > li:hover > a::before,
+.nav__list--level1 > .nav__item--expanded > a::before,
+.nav__list--level1 > .nav__item--active-branch > a::before,
+.nav__list--level1 > .nav__item--active > a::before {
+  transform: scale(1,1) translateY(0) translateZ(0);
+  opacity: 1;
+}
+
+.nav__item--mega-branch > a {
+  position: relative;
+}
+
+.nav__mega-hover-extender {
+  display: none;
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  top: 100%;
+  height: 100px;
+}
+
+.nav__item--mega-branch:hover > a .nav__mega-hover-extender {
+  display: block;
+}
+
+.nav__link .badge {
+  margin-inline-start: 4px;
+}
+
+/* Arrows */
+
+.nav--arrows .nav__list--level1 > .nav__item--branch > a {
+  padding-inline-end: 22px; /* 1 */
+  background-position: right calc(50% + .056rem);
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+}
+
+.nav--arrows .nav__list--level1 > .nav__item--branch > a::before {
+  right: 22px; /* 1 */
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .nav--arrows .nav__list--level1 > .nav__item--branch > a {
+    background-position: left calc(50% + .056rem);
+  }
+  
+  [dir="rtl"] .nav--arrows .nav__list--level1 > .nav__item--branch > a::before {
+    right: 0;
+    left: 22px; /* 1 */
+  }
+{% endif %}
+
+/* Menu drop-down */
+
+.nav__list--flyout {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 6;
+  box-shadow: {{ var.large_shadow }};
+  border-radius: {{ var.radius_5 }};
+}
+
+.nav__list--level2 li:hover > .nav__list--flyout,
+.nav--on-hover li:hover > .nav__list--flyout,
+.nav--on-hover .nav__item--expanded > .nav__list--flyout,
+.nav--on-click .nav__list--level1 > .nav__item--expanded > .nav__list--flyout {
+  width: 220px;
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+  animation: .2s ease-in-out forwards uiPop;
+}
+
+.hs-inline-edit .nav__list--flyout {
+  display: none;
+}
+
+.hs-inline-edit .nav--on-hover li:hover > .nav__list--flyout {
+  display: block;
+}
+
+.nav__list--flyout a {
+  padding: .56rem 1.11rem;
+  font-size: .89rem;
+}
+
+.nav__list--flyout li:not(:first-child) > a {
+  border-top: 1px solid;
+}
+
+.nav__list--flyout .nav__item--active-branch > a,
+.nav__list--flyout .nav__item--active > a {
+  font-family: {{ var.strong_font_family }};
+  font-style: {{ var.strong_font_style }};
+  font-weight: {{ var.strong_font_weight }};
+}
+
+.nav__list--flyout .nav__item--active-branch > a:before,
+.nav__list--flyout .nav__item--active > a:before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: .44rem;
+  top: 50%;
+  margin-top: -2px;
+  background: {{ var.accent_bg }};
+  border-radius: 4px;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .nav__list--flyout .nav__item--active-branch > a:before,
+  [dir="rtl"] .nav__list--flyout .nav__item--active > a:before {
+    left: auto;
+    right: .44rem;
+  }
+{% endif %}
+
+.nav__list--level2 {
+  top: 100%;
+  margin-inline-start: -20px;
+}
+
+.nav__list--level3,
+.nav__list--level3 .nav__list--flyout {
+  top: 0;
+  left: 100%;
+  margin-top: -10px;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .nav__list--level3,
+  [dir="rtl"] .nav__list--level3 .nav__list--flyout {
+    left: auto;
+    right: 100%;
+  }
+{% endif %}
+
+/* Mega menu > Top level */
+
+.nav__item--mega-branch {
+  position: static;
+}
+
+.nav__item--mega-branch-width-custom {
+  position: relative;
+}
+
+/* Mega menu > Wrapper */
+
+.nav__mega {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  padding: {{ var.gutter * 1.8 }}px {{ var.gutter }}px;
+  max-height: calc(100vh - {{ var.scroll_offset_lg }}px);
+  overflow-y: auto;
+  box-shadow: {{ var.large_shadow }};
+  border-radius: {{ var.radius_5 }};
+  transform-origin: center top;
+}
+
+.nav__mega--width-custom {
+  left: 50%;
+  right: auto;
+}
+
+.nav__mega--position-left {
+  left: -{{ var.gutter * 2 }}px;
+}
+
+.nav__mega--position-right {
+  left: auto;
+  right: -{{ var.gutter * 2 }}px;
+}
+
+.nav__mega--position-custom-right {
+  left: auto;
+}
+
+.nav--on-hover li:hover > .nav__mega,
+.nav--on-hover .nav__item--expanded > .nav__mega,
+.nav--on-click .nav__item--expanded > .nav__mega {
+  display: flex;
+  animation: .2s ease-in-out forwards navbarFlyout;
+}
+
+.hs-inline-edit .nav__mega {
+  display: none;
+}
+
+.hs-inline-edit .nav--on-hover li:hover > .nav__mega {
+  display: block;
+}
+
+/* Mega menu > Columns */
+
+.nav__mega-cols {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Mega menu > Rich text columns (legacy) */
+
+.nav__mega-col {
+  margin-top: {{ var.gutter }}px;
+}
+
+.nav__mega-col {
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.nav__mega-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__mega-col ul a {
+  display: block;
+  margin-bottom: 1.11rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav__mega-col ul ul {
+  font-size: {{ var.small_text }}rem;
+}
+
+.nav__mega-col ul ul a {
+  margin-bottom: 0;
+  padding-bottom: .56rem;
+  font-size: .88rem;
+  border-bottom: none;
+}
+
+/* Mega menu > Multiple items */
+
+.nav__mega-column {
+  max-width: 100%;
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.nav__mega-item + .nav__mega-item {
+  margin-top: 4px;
+}
+
+/* Mega menu > Multiple items > Regular */
+
+.nav__mega-item-regular-link {
+  display: block;
+  border-radius: {{ var.radius_4 }};
+  color: inherit;
+  text-decoration: none;
+  transition: .1s;
+}
+
+.nav__mega-item-regular-link:last-child {
+  margin-bottom: 0;
+}
+
+.nav__mega-item-regular-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav__mega-item-regular-contents {
+  display: flex;
+  padding: {{ (var.gutter / 3)|round(0) }}px {{ (var.gutter / 2)|round(0) }}px;
+}
+
+.nav__mega-item-regular-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  /* width: calc({{ var.ui_icon_size }}rem + 8px);
+  height: calc({{ var.ui_icon_size }}rem + 8px); */
+  width: calc(var(--nav-mega-icon-size) + 8px);
+  height: calc(var(--nav-mega-icon-size) + 8px);
+  padding: 4px;
+}
+
+.nav__mega-item-regular-icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  fill: currentColor;
+}
+
+.nav__mega-item-regular-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: {{ (var.gutter / 3)|round(0) }}px;
+}
+
+.nav__mega-item-regular-title {}
+
+.nav__mega-item-regular-subtitle {}
+
+/* Light scheme */
+
+.nav--light .nav__link,
+.nav--light .nav__link:hover,
+.nav--light .nav__mega-col ul a {
+  color: {{ var.dark }};
+}
+
+.nav--light .nav__list--level1 > li > a::before {
+  background: {{ var.accent_bg }};
+}
+
+.nav--light .nav__list--flyout,
+.nav--light .nav__mega {
+  background-color: {{ var.white }};
+}
+
+.nav--light .nav__list--flyout li:not(:first-child) > a {
+  border-top-color: {{ var.borders_color }};
+}
+
+.nav--light .nav__list--flyout li:hover > a,
+.nav--light .nav__list--flyout .nav__item--active-branch > a,
+.nav--light .nav__list--flyout .nav__item--active > a {
+  background-color: {{ var.light }};
+  color: {{ var.dark }};
+}
+
+.nav--light .nav__mega-col ul ul a {
+  color: {{ var.text_color }};
+}
+
+.nav--light .nav__mega-col ul a:hover,
+.nav--light .nav__mega-col ul ul a:hover {
+  color: {{ var.accent }};
+}
+
+.nav--light .nav__mega-item-regular-link:hover,
+.nav--light .nav__mega-active-link {
+  background: {{ var.light }};
+}
+
+.nav--light.nav--arrows .nav__list--level1 > .nav__item--branch > a {
+  background-image: url("data:image/svg+xml, <svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path d='M3.60311 4.14644C3.40785 4.34171 3.40785 4.65829 3.60311 4.85356L6.60312 7.85355C6.79837 8.0488 7.11497 8.0488 7.31022 7.85355L10.3102 4.85356C10.5055 4.65829 10.5055 4.34171 10.3102 4.14644C10.115 3.95119 9.79837 3.95119 9.60312 4.14644L6.95667 6.7929L4.31022 4.14644C4.11496 3.95119 3.79838 3.95119 3.60311 4.14644Z' fill='{{ var.text_color|replace('#', '%23') }}'></path></svg>");
+}
+
+/* Dark scheme */
+
+.nav--dark .nav__link,
+.nav--dark .nav__link:hover,
+.nav--dark .nav__mega-col ul a {
+  color: {{ var.white }};
+}
+
+.nav--dark .nav__list--level1 > li > a::before {
+  background: {{ var.accent_bg }};
+}
+
+.nav--dark .nav__list--flyout,
+.nav--dark .nav__mega {
+  background-color: {{ var.dark }};
+}
+
+.nav--dark .nav__list--flyout li:not(:first-child) > a {
+  border-top-color: {{ var.white_borders }};
+}
+
+.nav--dark .nav__list--flyout li:hover > a,
+.nav--dark .nav__list--flyout .nav__item--active-branch > a,
+.nav--dark .nav__list--flyout .nav__item--active > a {
+  background-color: {{ var.white_bg }};
+  color: {{ var.white }};
+}
+
+.nav--dark .nav__mega-col ul ul a {
+  color: {{ var.white_text }};
+}
+
+.nav--dark .nav__mega-col ul a:hover,
+.nav--dark .nav__mega-col ul ul a:hover {
+  color: {{ var.accent }};
+}
+
+.nav--dark .nav__mega-item-regular-link:hover,
+.nav--dark .nav__mega-active-link {
+  background: {{ var.white_bg }};
+}
+
+.nav--dark.nav--arrows .nav__list--level1 > .nav__item--branch > a {
+  background-image: url("data:image/svg+xml, <svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path d='M3.60311 4.14644C3.40785 4.34171 3.40785 4.65829 3.60311 4.85356L6.60312 7.85355C6.79837 8.0488 7.11497 8.0488 7.31022 7.85355L10.3102 4.85356C10.5055 4.65829 10.5055 4.34171 10.3102 4.14644C10.115 3.95119 9.79837 3.95119 9.60312 4.14644L6.95667 6.7929L4.31022 4.14644C4.11496 3.95119 3.79838 3.95119 3.60311 4.14644Z' fill='{{ var.white_text_hex|replace('#', '%23') }}' fill-opacity='{{ var.white_text_opacity }}'></path></svg>");
+}
+
+/* Fixes a Mega Menu position issue in the page editor */
+
+.header__nav .inpage-editor-active-field,
+.header__nav .inpage-editor-highlight-field {
+  position: static !important;
+}

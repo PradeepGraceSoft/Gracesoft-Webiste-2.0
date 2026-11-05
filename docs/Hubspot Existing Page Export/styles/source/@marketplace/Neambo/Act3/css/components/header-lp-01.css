@@ -1,0 +1,104 @@
+{% import '../_variables.css' as var %}
+
+/* Main section */
+
+.header__section--main {
+  padding-top: 1.11rem;
+  padding-bottom: 1.11rem;
+}
+
+/* Elements */
+
+.header:not(.header--overlap) .header__logo__overlap,
+.header--overlap .header__logo__static,
+.header:not(.header--overlap) .header__icons__overlap,
+.header--overlap .header__icons__static {
+  display: none;
+}
+
+.header--wo-lang .header__lang {
+  display: none;
+}
+
+.header__info {
+  font-size: {{ var.small_text }}rem;
+}
+
+.header__info a {
+  text-decoration: none;
+}
+
+.header__info a:hover {
+  text-decoration: underline;
+}
+
+.header__icons .module .module__inner > * {
+  margin-bottom: 0;
+}
+
+.header--w-lang .header__icons {
+  margin-inline-start: 1rem;
+}
+
+.header--w-icons .header__info,
+.header--w-lang .header__info {
+  margin-inline-start: 2rem;
+  padding-inline-start: 2rem;
+  border-inline-start: 1px solid;
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.sm }}px) {
+  .header__icons {
+    display: none;
+  }
+}
+
+@media (max-width: {{ var.xs }}px) {
+  .header__info {
+    display: none;
+  }
+}
+
+/* Dark scheme */
+
+{% if theme.components.header.scheme == 'dark' %}
+
+  .header {
+    background: {{ var.dark }};
+  }
+  
+  .header__info {
+    color: {{ var.white_text }};
+  }
+
+  .header--w-icons .header__info,
+  .header--w-lang .header__info {
+    border-color: {{ var.white_borders }};
+  }
+
+  .header__info a,
+  .header__info a:hover {
+    color: {{ var.white }};
+  }
+
+/* Light scheme */
+
+{% else %}
+
+  .header {
+    background: {{ var.white }};
+  }
+
+  .header--w-icons .header__info,
+  .header--w-lang .header__info {
+    border-color: {{ var.borders_color }};
+  }
+
+  .header__info a,
+  .header__info a:hover {
+    color: {{ var.dark }};
+  }
+
+{% endif %}

@@ -1,0 +1,6 @@
+[
+  {"name":"brand_primary","label":"Terracotta primary","type":"color","default":{"color":"#C9795B","opacity":100}},
+  {"name":"brand_accent","label":"Warm coral accent","type":"color","default":{"color":"#F28C78","opacity":100}},
+  {"name":"brand_brass","label":"Honey gold accent","type":"color","default":{"color":"#EBCB83","opacity":100}},
+  {"name":"content_width","label":"Content width","type":"number","default":1180,"min":960,"max":1440}
+]

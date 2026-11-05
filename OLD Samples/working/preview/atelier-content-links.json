@@ -1,0 +1,127 @@
+[
+  {
+    "url": "https://www.gracesoft.com/",
+    "status": 200,
+    "final": "https://www.gracesoft.com/"
+  },
+  {
+    "url": "https://www.gracesoft.com/feature-listing",
+    "status": 200,
+    "final": "https://www.gracesoft.com/feature-listing"
+  },
+  {
+    "url": "https://www.gracesoft.com/pricing",
+    "status": 200,
+    "final": "https://www.gracesoft.com/pricing"
+  },
+  {
+    "url": "https://www.gracesoft.com/testimonials",
+    "status": 200,
+    "final": "https://www.gracesoft.com/testimonials"
+  },
+  {
+    "url": "https://apps.gracesoft.com/pmsui/",
+    "status": 200,
+    "final": "https://apps.gracesoft.com/pmsui/sso?AppGuid=f373ec1830334bc9a3d02680591b31a3"
+  },
+  {
+    "url": "https://www.gracesoft.com/livedemo",
+    "status": 200,
+    "final": "https://www.gracesoft.com/livedemo"
+  },
+  {
+    "url": "https://www.gracesoft.com/hotel-management-software",
+    "status": 200,
+    "final": "https://www.gracesoft.com/hotel-management-software"
+  },
+  {
+    "url": "https://www.gracesoft.com/online-booking-engine",
+    "status": 200,
+    "final": "https://www.gracesoft.com/online-booking-engine"
+  },
+  {
+    "url": "https://www.gracesoft.com/channel-manager",
+    "status": 200,
+    "final": "https://www.gracesoft.com/channel-manager"
+  },
+  {
+    "url": "https://www.gracesoft.com/crm-software",
+    "status": 200,
+    "final": "https://www.gracesoft.com/crm-software"
+  },
+  {
+    "url": "https://www.gracesoft.com/gracesoft-ai",
+    "status": 200,
+    "final": "https://www.gracesoft.com/gracesoft-ai"
+  },
+  {
+    "url": "https://www.gracesoft.com/point-of-sale-system",
+    "status": 200,
+    "final": "https://www.gracesoft.com/point-of-sale-system"
+  },
+  {
+    "url": "https://www.gracesoft.com/housekeeping",
+    "status": 200,
+    "final": "https://www.gracesoft.com/housekeeping"
+  },
+  {
+    "url": "https://www.gracesoft.com/payments",
+    "status": 200,
+    "final": "https://www.gracesoft.com/payments"
+  },
+  {
+    "url": "https://www.gracesoft.com/websites",
+    "status": 200,
+    "final": "https://www.gracesoft.com/websites"
+  },
+  {
+    "url": "https://www.gracesoft.com/bed-breakfast-reservation-software",
+    "status": 200,
+    "final": "https://www.gracesoft.com/bed-breakfast-reservation-software"
+  },
+  {
+    "url": "https://www.gracesoft.com/vacation-rental-management-software",
+    "status": 200,
+    "final": "https://www.gracesoft.com/vacation-rental-management-software"
+  },
+  {
+    "url": "https://www.gracesoft.com/campground-management-software",
+    "status": 200,
+    "final": "https://www.gracesoft.com/campground-management-software"
+  },
+  {
+    "url": "https://www.gracesoft.com/dude-rancher-software",
+    "status": 200,
+    "final": "https://www.gracesoft.com/dude-rancher-software"
+  },
+  {
+    "url": "https://www.gracesoft.com/condo-management-software",
+    "status": 200,
+    "final": "https://www.gracesoft.com/condo-management-software"
+  },
+  {
+    "url": "https://www.gracesoft.com/multi-property",
+    "status": 200,
+    "final": "https://www.gracesoft.com/multi-property"
+  },
+  {
+    "url": "https://www.gracesoft.com/unified-inbox",
+    "status": 200,
+    "final": "https://www.gracesoft.com/unified-inbox"
+  },
+  {
+    "url": "https://www.gracesoft.com/case-study",
+    "status": 200,
+    "final": "https://www.gracesoft.com/case-study"
+  },
+  {
+    "url": "https://www.gracesoft.com/corporate-contact",
+    "status": 200,
+    "final": "https://www.gracesoft.com/corporate-contact"
+  },
+  {
+    "url": "https://www.gracesoft.com/privacy-statement",
+    "status": 200,
+    "final": "https://www.gracesoft.com/privacy-statement"
+  }
+]

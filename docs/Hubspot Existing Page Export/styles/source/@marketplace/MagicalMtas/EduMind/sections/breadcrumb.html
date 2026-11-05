@@ -1,0 +1,36 @@
+<!--
+  templateType: section
+  label: Breadcrumb Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/breadcrumb-section.png
+  description: "Breadcrumb section Full size background image separated in One columns. This Column has heading and link text"
+-->
+
+{% dnd_section full_width=true, class="relxo-container page-banner-section" background_color={{ context.background_color || "#FFF6F2" }}, background_image={
+    "backgroundPosition": "MIDDLE_CENTER",
+    "backgroundSize": "cover",
+    "imageUrl": context.background_image || get_asset_url("../images/bg/breadcrumb.jpg")
+    } %}
+  
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module "module_166056644478932" path="../modules/Breadcrumb", label="Breadcrumb"
+          extra_class = '',
+          page_title = '<h1>A Large Range of Course <br> Learning Paths</h1>',
+          breadcrumb_item = [
+            {
+            'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+            'breadcrumb_text' :  'Home'
+            },
+            {
+              'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+              'breadcrumb_text' :  'About us'
+            }
+          ]
+          
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+  
+    {% end_dnd_section %}

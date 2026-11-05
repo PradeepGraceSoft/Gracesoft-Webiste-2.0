@@ -1,0 +1,237 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="{{ meta_author }}">
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <meta name="generator" content="HubSpot">
+    <title>{{ page_meta.html_title }}</title>
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    
+{{ standard_header_includes }}
+    {% style include_default_custom_css="true" %}
+
+</head>
+<body class=" {{ builtin_body_classes }}" style="">
+    <div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dark-overlay" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dotted-overlay" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja hubl-code" style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% image "background_image" label='Select a background image <a href="http://www.webcanopystudio.com/cadenza-documentation" target="_blank">Click Here For Documentation (password:cadenza)</a>', 
+src='http://cdn2.hubspot.net/hubfs/395201/Gigil/77D8C20DAF.jpg', no_wrapper=True, 
+export_to_template_context=True %}
+
+<style>
+
+body {
+    background-image:url("{{widget_data.background_image.src }}");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment:scroll;
+    background-size: cover;
+}
+</style></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-logo company-logo" style="" data-widget-type="logo" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% logo "logo" overrideable=true, wrapping_html='', label='Company Logo' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja hubl-code" style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% color "link_color_picker" label='Link/Button Color Picker', color='#d8621d', no_wrapper=True, export_to_template_context=True %}
+<style type="text/css">
+.hs-button.primary {
+    border-color: {{ widget_data.link_color_picker.color }};
+}
+a:link {
+    text-decoration: none;
+    color: {{ widget_data.link_color_picker.color }};
+}
+a:visited {
+    text-decoration: none;
+    color: {{ widget_data.link_color_picker.color }};
+}
+a:active {
+    text-decoration: none;
+    color: {{ widget_data.link_color_picker.color }};
+}
+a:hover {
+    text-decoration: none;
+    color:  rgba({{ widget_data.link_color_picker.color|convert_rgb }}, .7);
+}
+body .hs-button:hover{
+    background: none repeat scroll 0 0 rgba({{ widget_data.link_color_picker.color|convert_rgb }}, .7);
+    color: #FFFFFF;
+}
+</style></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja hubl-code" style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% boolean "add_dots" label='Display Dotted Pattern', value=True, no_wrapper=True, export_to_template_context=True %}
+
+{% if widget_data.add_dots.value == 'true' %}
+<style type="text/css">
+.dotted-overlay {
+    background-image:url("http://cdn2.hubspot.net/hubfs/395201/overlay.png");
+    background-position: center center;
+    background-repeat: repeat;
+}
+</style>
+{% elif widget_data.add_dots.value == 'false' %}
+<style type="text/css">
+.dotted-overlay {
+    background-image: none;
+}
+</style>
+{% endif %}
+
+{% color "site_color_picker" label='Overlay Color Picker', color='#000000', no_wrapper=True, export_to_template_context=True %}
+
+<style type="text/css">
+.dark-overlay {
+    background-color: rgba({{ widget_data.site_color_picker.color|convert_rgb }},0.6);
+}
+</style></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell intro-text" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-header page-title" style="" data-widget-type="header" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% header "module_144260695810140148" header_tag='h1', value='USE A CAPTIVATING HEADER TO INCREASE CONVERSION', overrideable=true, wrapping_html='', label='Header' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text center-text" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block rich_text "module_144260698533242373" overrideable=true, wrapping_html='', label='Rich Text' %}
+{% widget_attribute "html" %}<span>Pour-over retro master cleanse, plaid Williamsburg lumbersexual typewriter kale chips farm-to-table Banksy sustainable VHS pug viral mustache.</span>{% end_widget_attribute %}
+          {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell form-holder" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-form center-form" style="" data-widget-type="form" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block form "module_14153945412722261" form_follow_ups_follow_up_type='', response_redirect_id='null', form_to_use='1557fbc5-bad1-4b2a-a9b6-a5c10afdeebf', title='', notifications_are_overridden=false, sfdc_campaign='', response_message='Thanks for submitting the form.', response_response_type='redirect', response_redirect_url='', overrideable=true, gotowebinar_webinar_key='', wrapping_html='', response={message='Thank you for submitting the form.', redirect_url=''}, label='Center Form' %}
+{% widget_attribute "notifications_override_email_addresses" is_json=True %}null{% end_widget_attribute %}
+              {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+   </div><!--end widget-span -->
+    </div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-social_sharing social-sharing" style="" data-widget-type="social_sharing" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block social_sharing "social_sharing" wrapping_html='', overrideable=true, use_page_url=true, label='Social Sharing' %}
+{% widget_attribute "pinterest" is_json=True %}{"custom_link_format":"","enabled":false,"network":"pinterest","img_src":"https://static.hubspot.com/final/img/common/icons/social/pinterest-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "twitter" is_json=True %}{"custom_link_format":"","enabled":false,"network":"twitter","img_src":"https://static.hubspot.com/final/img/common/icons/social/twitter-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "google_plus" is_json=True %}{"custom_link_format":"","enabled":false,"network":"google_plus","img_src":"https://static.hubspot.com/final/img/common/icons/social/googleplus-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "linkedin" is_json=True %}{"custom_link_format":"","enabled":false,"network":"linkedin","img_src":"https://static.hubspot.com/final/img/common/icons/social/linkedin-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "facebook" is_json=True %}{"custom_link_format":"","enabled":false,"network":"facebook","img_src":"https://static.hubspot.com/final/img/common/icons/social/facebook-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "email" is_json=True %}{"custom_link_format":"","enabled":false,"network":"email","img_src":"https://static.hubspot.com/final/img/common/icons/social/email-24x24.png"}{% end_widget_attribute %}
+          {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-page_footer copyright-section" style="" data-widget-type="page_footer" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% page_footer "module_144285126583028675" footer='', overrideable=true, wrapping_html='', label='Page Footer' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    {{ standard_footer_includes }}
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% import '../_variables.css' as var %}
+
+.system-searchresults__intro {
+  text-wrap: balance;
+}
+
+.system-searchresults__form {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.system-searchresults__results {
+  max-width: 700px;
+  margin-inline: auto;
+  padding-top: {{ var.gutter * 2 }}px;
+}
+
+.system-searchresults__results .hs-search-results__title {
+  font-weight: bold;
+}

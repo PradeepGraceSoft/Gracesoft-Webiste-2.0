@@ -1,0 +1,48 @@
+{% import "../_variables.css" as var %}
+
+/* Box */
+
+.rtext--box {
+  margin-bottom: {{ var.gutter }}px;
+  padding: {{ var.gutter }}px;
+  border-radius: {{ var.radius_7 }};
+}
+
+.rtext--box-border {
+  border: 2px solid;
+}
+
+.rtext--box-border.txt--light {
+  border-color: {{ var.borders_color }};
+}
+
+.rtext--box-border.txt--dark {
+  border-color: {{ var.white_borders }};
+}
+
+.rtext--box-accent {
+  background: {{ var.accent_bg  }};
+  box-shadow: {{ var.accent_medium_shadow }};
+}
+
+.rtext--box-dark {
+  background: {{ var.dark  }};
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.rtext--box-light {
+  background: {{ var.light  }};
+}
+
+.rtext--box-white {
+  background: {{ var.white  }};
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.rtext--box-ghost {
+  background: {{ var.white_bg  }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}

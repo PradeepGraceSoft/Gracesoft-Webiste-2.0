@@ -1,0 +1,376 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Homepage Two
+screenshotPath: ../images/template-previews/home-two.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+    label='Main section',
+    class='body-container body-container--homepage-two'
+%}
+
+{# Homepage Banner #}
+{% dnd_section
+      vertical_alignment='TOP',
+      full_width=true,
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+  }
+%}
+{% dnd_column
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module
+    path='../modules/banner-layouts',
+        "subtitle"="",
+        "content"="<h1>Just Go Ahead With Austin</h1><p>Austin is the all-in-one Multipurpose theme. Built with macros, web-accessible, and highly customizable designed by experts. Attract your visitors with your stunnable website.</p>"
+         primary_cta={ type: 'btn', style: 'filled_light', text: 'Let`s Move' },
+         secondary_cta={ type: 'btn', style: 'filled_dark', text: 'Examine' }
+         style_1={
+          'content_color': {
+            'heading' : {enable_heading_color: true },
+            'text':{ enable_content_color: true}
+          },
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 140,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 140,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+       }
+ %}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_image"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Homepage Banner #}
+
+{# Portfolio Tabs #}
+{% dnd_section
+   vertical_alignment='MIDDLE' %}
+{% dnd_column
+     offset=0,
+     width=12,
+%}
+{% dnd_row
+   padding={
+    'default': {
+      'top': 40,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  }
+%}
+{% dnd_module path='../modules/portfolio-tabs'
+  tabs =[
+         {
+         "tab_link" : "Blog",
+         "tab_id" : "blog"
+         },
+         {
+         "tab_link" : "Service",
+         "tab_id" : "service"
+         },
+         {
+         "tab_link" : "Support",
+         "tab_id" : "support"
+         },
+         {
+         "tab_link" : "About Us",
+         "tab_id" : "about"
+         }
+  ],
+   portfolio =[              
+               {
+                 "image_field": {
+                  "src": get_asset_url('../images/multipurpose/mackbook.png'),
+                  "alt": "Mackbook"
+                 },
+                 "items_class": 'support',
+                 "content" : "<span style='color: #ffffff'>Latest Launch</span><h3 style='color: #ffffff'>Macbook</h3>"
+                 },
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/smart-watch-two.png'),
+                  "alt": "Smart Watch"
+                 },
+                 "items_class": 'support',
+                 "content" : "<span style='color: #ffffff'>New Gadgets</span><h3 style='color: #ffffff'>Smartwear</h3>"
+                 },
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/alexa.png'),
+                  "alt": "Alexa"
+                 },
+                 "items_class": 'blog',
+                 "content" : "<span style='color: #ffffff'>New Smart</span><h3 style='color: #ffffff'>Speaker</h3>"
+                 }, 
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/headphone-two.png'),
+                  "alt": "Headphone"
+                 },
+                 "items_class": 'about',
+                 "content" : "<span style='color: #ffffff'>New Smart</span><h3 style='color: #ffffff'>Headphone</h3>"
+                 }, 
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/vrbox.png'),
+                  "alt": "VR Box"
+                 },
+                 "items_class": 'service',
+                 "content" : "<span style='color: #ffffff'>Advance</span><h3 style='color: #ffffff'>VR Box</h3>"
+                 },
+                 {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/gaming-controller-two.png'),
+                  "alt": "Gaming Controller"
+                 },
+                 "items_class": 'support',
+                 "content" : "<span style='color: #ffffff'>Best Selling</span><h3 style='color: #ffffff'>Gamepad</h3>"
+                 }
+           ]
+%}
+{% module_attribute 'layout_choices' is_json=True %}
+{
+"select_layout": "image_tab"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{%end_dnd_column%}
+{% end_dnd_section %}
+{# end of Portfolio Tabs #}
+
+{# Two Column Image Text #}
+{% include_dnd_partial path='../sections/two-column-img-text.html' %}
+{# End Two Column Image Text #}
+
+{# Pricing #}
+{% include_dnd_partial path='../sections/pricing.html' %}
+{# end of Pricing #}
+
+{# Partners Section #}
+{% dnd_section %}
+{% dnd_column 
+  padding={
+          'default': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          },
+          'mobile': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          }
+        }
+%}
+{% dnd_row %}
+{% dnd_module 'au_partners' 
+				path='../modules/our-partners',
+         partner_content=[
+     {
+    'logo': {
+      'alt': 'Hubspot Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/hubspot-partner.png')
+     },
+     },
+     {
+    'logo': {
+      'alt': 'Capterra Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/capterra.png')
+     },
+     },
+    {
+
+    'logo': {
+      'alt': 'Goodfirms Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/goodfirms.png')
+     },
+    },
+     {
+
+    'logo': {
+      'alt': 'Crowd Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/crowd.png')
+     },
+     },
+      {
+
+    'logo': {
+      'alt': 'Trustpilot Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/trustpilot.png')
+     },
+     },
+       {
+
+    'logo': {
+      'alt': 'Software Suggest Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/software-suggest.png')
+     },
+     }
+     ]
+	%}
+{% module_attribute 'layout_choice' is_json=True %}
+{
+"select_layout": "listing"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Partners Section #}
+
+{# Testimonials Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+          path='../modules/title-content',
+          "subtitle"="",
+          "content"="<h2>Testimonials</h2><p>We always aim to deliver remarkable experience and unconditional support to our users.</p>"
+          style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+ %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_testimonials' 
+          path='../modules/testimonials',
+ %}
+{% module_attribute 'testimonial_layouts_choice' is_json=True %}
+{
+"testimonial_layouts": "two_column_slider"
+}
+{% end_module_attribute %}
+
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Testimonials Section #}
+
+{# Connect With Us #}
+{% dnd_section
+  vertical_alignment='MIDDLE',
+  padding={
+        'default': {
+          'top': 80,
+          'right': 20,
+          'bottom': 25,
+          'left': 20
+        },
+        'mobile': {
+          'top': 40,
+          'right': 20,
+          'bottom': 20,
+          'left': 20
+        }
+      }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Connect With Us</h2><p>Get in touch with us. Never hesitate. Our team is always ready to assist you. Feel free to contact us or drop an email.</p>"
+       style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{% include_dnd_partial 
+    path='../sections/connect-with-us.html',
+%}
+{# End Of Connect With Us #}
+
+{# Subscribe to newsletter #}
+{% include_dnd_partial path='../sections/cta.html' %}
+{# End Of Subscribe to newsletter #}
+
+{% end_dnd_area %}
+{% endblock body %}
+

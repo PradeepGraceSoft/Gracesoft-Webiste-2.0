@@ -1,0 +1,2 @@
+var hbspt={forms:{create:function(c){hubspot.forms.push(c)}}},hubcache={forms:[],letsgo:function(){for(var i in hubspot.forms)hbspt.forms.create(hubcache.forms[i])}};window.loadAsyncJs("_hcms/forms/v2.js",hubcache.letsgo);
+//# sourceURL=https://cdn2.hubspot.net/hub/107648/hub_generated/template_assets/111929081740/1681976723656/marketplace/MakeWebBetter/Environmental/js/defer-hubspot-form.js

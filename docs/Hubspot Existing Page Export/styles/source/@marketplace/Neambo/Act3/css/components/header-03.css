@@ -1,0 +1,317 @@
+{% import '../_variables.css' as var %}
+
+/* Animation */
+
+@keyframes sticky_header_active {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0%)
+  }
+}
+
+@keyframes sticky_header_inactive {
+  from {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Sticky element */
+
+.header--sticky-active .header__sticky-element {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+/* Fixes HS editor overlapping problem */
+
+.hs-inline-edit .header--sticky-active .header__sticky-element {
+  z-index: 2147483599;
+}
+
+/* Main section */
+
+.header__section--main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header__section--main {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.header--sticky-inactive .header__section--main {
+  animation: .2s ease-in-out sticky_header_inactive;
+}
+
+.header--sticky-active .header__section--main {
+  box-shadow: {{ var.small_shadow }};
+  border-top: none;
+  border-bottom: none;
+  animation: .2s ease-in-out sticky_header_active;
+}
+
+.header__section--main .header__center {
+  position: relative;
+  padding-top: .56rem;
+  padding-bottom: .56rem;
+}
+
+/* Top section */
+
+.header__section--top {
+  padding-top: .56rem;
+  padding-bottom: .56rem;
+}
+
+@media (min-width: {{ var.md + 1 }}px) {
+  .header--sticky-active .header__section--top {
+    display: none;
+  }
+}
+
+/* Elements */
+
+.header:not(.header--overlap) .header__logo__overlap,
+.header--overlap .header__logo__static,
+.header--sticky-active .header__logo__overlap,
+.header--sticky-active .header__logo__static,
+.header--sticky:not(.header--sticky-active) .header__logo__sticky {
+  display: none;
+}
+
+.header--w-icons .header__info,
+.header--w-info .header__lang,
+.header--wo-info .header__lang {
+  margin-inline-start: 1.2rem;
+  padding-inline-start: 1.2rem;
+  border-inline-start: 1px solid;
+}
+
+.header--wo-lang .header__lang {
+  display: none;
+}
+
+.header--wo-icons.header--wo-info .header__lang {
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  border-inline-start: 0;
+}
+
+.header__buttons:not(:first-child) .inline-items > *:first-child,
+.header__search {
+  margin-inline-start: 1.2rem;
+}
+
+.header:not(.header--overlap) .header__buttons__overlap,
+.header--overlap .header__buttons__static,
+.header:not(.header--overlap) .header__icons__overlap,
+.header--overlap .header__icons__static {
+  display: none;
+}
+
+.header__info {
+  font-size: {{ var.small_text }}rem;
+}
+
+.header__info a {
+  text-decoration: none;
+}
+
+.header__info a:hover {
+  text-decoration: underline;
+}
+
+.header__icons .module .module__inner > * {
+  margin-bottom: 0;
+}
+
+/* Nav */
+
+.header__nav .nav {
+  position: static;
+}
+
+.header:not(.header--overlap:not(.header--sticky-active)) .nav__mega {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.header__nav .nav > ul > li {
+  padding: 0 2rem;
+}
+
+.header__nav .nav > ul > li:first-child {
+  padding-inline-start: 0;
+}
+
+.header__nav .nav > ul > li:last-child {
+  padding-inline-end: 0;
+}
+
+.header__nav .nav__list--level1 > li:not(:last-child),
+.header__nav .nav--arrows .nav__list--level1 > li:not(:last-child) {
+  margin-inline-end: 0;
+}
+
+.header__nav .nav > ul > li:not(:last-child) {
+  border-inline-end: 1px solid;
+}
+
+.header__nav .nav > ul > li > a {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header--sticky-active .header__nav .nav > ul > li > a {
+  padding-top: .28rem;
+  padding-bottom: .28rem;
+}
+
+.header__nav--fill:not(.header--sticky-active .header__nav--fill) {
+  width: 100%;
+}
+
+.header__nav--fill .nav > .nav__list--level1 {
+  display: flex;
+}
+
+.header__nav--fill .nav > ul > li {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header__nav--fill .nav > ul > li:first-child {
+  justify-content: flex-start;
+}
+
+.header__nav--fill .nav__list--level1 > li > .nav__list--flyout {
+  left: 0;
+  margin-inline-start: 0;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .header__nav--fill .nav__list--level1 > li > .nav__list--flyout {
+    left: auto;
+    right: 0;
+  }
+{% endif %}
+
+.header__mobile-nav {
+  display: none;
+  padding-inline-start: 1.2rem;
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.md }}px) {
+
+  .header__section--top {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .header--sticky-inactive .header__section--top {
+    animation: .2s ease-in-out sticky_header_inactive;
+  }
+
+  .header--sticky-active .header__section--top {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    box-shadow: {{ var.small_shadow }};
+    border-bottom: none;
+    animation: .2s ease-in-out sticky_header_active;
+  }
+  
+  .header__section--main {
+    display: none;
+    border-top: none;
+  }
+
+  .header__icons,
+  .header__info {
+    display: none;
+  }
+  
+  .header--w-info .header__lang {
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+    border-inline-start: none;
+  }
+  
+  .header__mobile-nav {
+    display: block;
+  }
+  
+  .mnav-active {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .header__buttons {
+    display: none;
+  }
+}
+
+/* Dark scheme */
+
+{% if theme.components.header.scheme == 'dark' %}
+
+  .header,
+  .header__section--top,
+  .header__section--main {
+    background: {{ var.dark }};
+  }
+  
+  .header__section--main,
+  .header--w-icons .header__info,
+  .header--w-info .header__lang,
+  .header--wo-info .header__lang,
+  .header__nav .nav > ul > li:not(:last-child) {
+    border-color: {{ var.white_borders }};
+  }
+  
+  .header__info {
+    color: {{ var.white_text }};
+  }
+  
+  .header__info a,
+  .header__info a:hover {
+    color: {{ var.white }};
+  }
+  
+  .header__nav .nav__link .super-text {
+    color: {{ var.white_text }};
+  }
+
+/* Light scheme */
+
+{% else %}
+
+  .header,
+  .header__section--top,
+  .header__section--main {
+    background: {{ var.white }};
+  }
+  
+  .header__section--main,
+  .header--w-icons .header__info,
+  .header--w-info .header__lang,
+  .header--wo-info .header__lang,
+  .header__nav .nav > ul > li:not(:last-child) {
+    border-color: {{ var.borders_color }};
+  }
+
+{% endif %}

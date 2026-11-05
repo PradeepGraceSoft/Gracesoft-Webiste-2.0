@@ -1,0 +1,341 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Features
+screenshotPath: ../images/template-previews/features.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--about container-fluid-custom', label='Main section' %}
+
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-basic",
+        offset=0,
+        width=12,
+        tag_line="",
+        heading_text="Krazy Features",
+        styles={
+          "heading" : {
+            "heading_type" : "<h1>"
+          }
+        },
+        button={
+          "button_text" : ""
+        }
+      %}
+  {% module_attribute "rich_text" %}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in gravida sem enim sed. In at euismod tortor et tempor.</p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-card-1",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : ""
+        },
+        card=[ {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : "Alternate Long Arrow Right",
+              "type" : "SOLID",
+              "unicode" : "f30b"
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://484997.hs-sites.com/krazy/pillar-page",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "Read more",
+            "card_button_type" : "simple"
+          },
+          "card_icon" : {
+            "name" : "Lightbulb",
+            "type" : "SOLID",
+            "unicode" : "f0eb"
+          },
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Machine Learning"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : "Alternate Long Arrow Right",
+              "type" : "SOLID",
+              "unicode" : "f30b"
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://484997.hs-sites.com/krazy/pillar-page",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "Read more"
+          },
+          "card_icon" : {
+            "name" : "Chalkboard Teacher",
+            "type" : "SOLID",
+            "unicode" : "f51c"
+          },
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "User Journey"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : "Alternate Long Arrow Right",
+              "type" : "SOLID",
+              "unicode" : "f30b"
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://484997.hs-sites.com/krazy/pillar-page",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "Read more",
+            "card_button_type" : "simple"
+          },
+          "card_icon" : {
+            "name" : "PDF File",
+            "type" : "SOLID",
+            "unicode" : "f1c1"
+          },
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Automated Reports"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : "Alternate Long Arrow Right",
+              "type" : "SOLID",
+              "unicode" : "f30b"
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://484997.hs-sites.com/krazy/pillar-page",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "Read more",
+            "card_button_type" : "simple"
+          },
+          "card_icon" : {
+            "name" : "Bar Chart",
+            "type" : "SOLID",
+            "unicode" : "f080"
+          },
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "User Analytics"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : "Alternate Long Arrow Right",
+              "type" : "SOLID",
+              "unicode" : "f30b"
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://484997.hs-sites.com/krazy/pillar-page",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "Read more"
+          },
+          "card_icon" : {
+            "name" : "Alternate Sync",
+            "type" : "SOLID",
+            "unicode" : "f2f1"
+          },
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Adaptive Testing"
+        }, {
+          "card_button" : {
+            "card_button_icon" : {
+              "name" : "Alternate Long Arrow Right",
+              "type" : "SOLID",
+              "unicode" : "f30b"
+            },
+            "card_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://484997.hs-sites.com/krazy/pillar-page",
+                "type" : "EXTERNAL"
+              }
+            },
+            "card_button_text" : "Read more"
+          },
+          "card_icon" : {
+            "name" : "Clipboard List",
+            "type" : "SOLID",
+            "unicode" : "f46d"
+          },
+          "card_text" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>",
+          "card_title" : "Customized Dashboard"
+        } ],
+        heading_text="",
+        styles={
+          "card" : {
+            "background" : {
+              "card_background_gradient" : {
+                "colors" : [ {
+                  "color" : {
+                    "a" : 1,
+                    "b" : 250,
+                    "g" : 248,
+                    "r" : 247
+                  }
+                }, {
+                  "color" : {
+                    "a" : 1,
+                    "b" : 250,
+                    "g" : 248,
+                    "r" : 247
+                  }
+                } ],
+                "side_or_corner" : {
+                  "verticalSide" : "BOTTOM"
+                }
+              }
+            },
+            "button" : {
+              "card_button_as_link" : true
+            },
+            "corner" : {
+              "radius" : 6
+            },
+            "icon" : {
+              "card_icon_side_position" : false
+            }
+          },
+          "heading" : { }
+        },
+        tag_line=""
+      %}
+  {% module_attribute "rich_text" %}
+
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section
+  background_color="rgba(1, 68, 228, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-two-column-content-2",
+        offset=0,
+        width=12,
+        styles={
+          "content_block" : {
+            "background_color" : {
+              "color" : "#FFFFFF",
+              "opacity" : 100
+            }
+          },
+          "services_sidebar" : {
+            "border" : {
+              "bottom" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "left" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "right" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "top" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              }
+            },
+            "radius" : 6,
+            "services_background_gradient" : {
+              "colors" : [ {
+                "color" : {
+                  "a" : 1,
+                  "b" : 250,
+                  "g" : 248,
+                  "r" : 247
+                }
+              }, {
+                "color" : {
+                  "a" : 1,
+                  "b" : 250,
+                  "g" : 248,
+                  "r" : 247
+                }
+              } ],
+              "side_or_corner" : {
+                "verticalSide" : "BOTTOM"
+              }
+            }
+          }
+        }
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

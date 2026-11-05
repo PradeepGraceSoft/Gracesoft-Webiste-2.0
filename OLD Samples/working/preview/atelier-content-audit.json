@@ -1,0 +1,25 @@
+{
+  "sections": 12,
+  "faqs": 11,
+  "brokenImages": 0,
+  "images": [
+    {
+      "alt": "GraceSoft Easy InnKeeping reservation calendar with rooms and scheduled stays",
+      "width": 1200,
+      "height": 675
+    },
+    {
+      "alt": "Easy InnKeeping reservation calendar showing room availability and stays",
+      "width": 1200,
+      "height": 675
+    },
+    {
+      "alt": "Easy InnKeeping dashboard with property operations and performance information",
+      "width": 1200,
+      "height": 675
+    }
+  ],
+  "h1": "Smarter Hospitality Management.Better Guest Experiences.",
+  "priorFilesChanged": [],
+  "newModules": 12
+}

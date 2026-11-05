@@ -1,0 +1,697 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pricing
+  screenshotPath: ../images/template-previews/pricing.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Intro and pricing tables #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light',
+            bottom_deco={
+              'type': 'concave',
+              'arc_height_lg': 550,
+              'arc_height_md': 550,
+              'arc_height_sm': 550
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Pricing',
+            title='Pick the plan that’s right for you.',
+            desc='',
+            settings={
+              'title_tag': 'h1'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/pricing',
+            plans=[
+              {
+                'title': 'Personal',
+                'tag_1': {
+                  'price': '$15',
+                  'info': '/Month*'
+                },
+                'tag_2': {
+                  'price': '$12',
+                  'info': '/Month*'
+                },
+                'features': [
+                  'Unlimited updates',
+                  '5 projects',
+                  'Email support'
+                ],
+                'button': {
+                  'type': 'link',
+                  'text': 'Get Started',
+                  'link': {
+                    'link_1': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      }
+                    },
+                    'link_2': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      }
+                    }
+                  },
+                  'color': 'accent',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'shape': 'default'
+                },
+                'disclaimer_1': '* Billed monthly (auto-renewal)',
+                'disclaimer_2': '* Billed as $144 yearly (auto-renewal)',
+                'color': 'white',
+                'shadow': true
+              },
+              {
+                'title': 'Professional',
+                'tag_1': {
+                  'price': '$49',
+                  'info': '/Month*'
+                },
+                'tag_2': {
+                  'price': '$39',
+                  'info': '/Month*'
+                },
+                'features': [
+                  'Unlimited updates',
+                  'Unlimited projects',
+                  'Phone support',
+                  'Analytics',
+                  'Dashboard',
+                  'Upgrade discount'
+                ],
+                'button': {
+                  'type': 'link',
+                  'text': 'Get Started',
+                  'link': {
+                    'link_1': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      }
+                    },
+                    'link_2': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      }
+                    }
+                  },
+                  'color': 'accent',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'shape': 'default'
+                },
+                'disclaimer_1': '* Billed monthly (auto-renewal)',
+                'disclaimer_2': '* Billed as $468 yearly (auto-renewal)',
+                'color': 'white',
+                'shadow': true
+              },
+              {
+                'title': 'Team',
+                'tag_1': {
+                  'price': '$99',
+                  'info': '/Month*'
+                },
+                'tag_2': {
+                  'price': '$79',
+                  'info': '/Month*'
+                },
+                'features': [
+                  'Unlimited updates',
+                  'Unlimited projects',
+                  'Live video support',
+                  'Analytics',
+                  'Dashboard',
+                  'Upgrade discount',
+                  'Team packages',
+                  'Training videos',
+                  'Custom interface',
+                  'Branding'
+                ],
+                'button': {
+                  'type': 'link',
+                  'text': 'Get Started',
+                  'link': {
+                    'link_1': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      }
+                    },
+                    'link_2': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      }
+                    }
+                  },
+                  'color': 'white',
+                  'fill': 'outline',
+                  'size': 'large',
+                  'shape': 'default'
+                },
+                'disclaimer_1': '* Billed monthly (auto-renewal)',
+                'disclaimer_2': '* Billed as $948 yearly (auto-renewal)',
+                'color': 'accent',
+                'shadow': true
+              }
+            ],
+            settings={
+              'col': {
+                'lg': 's4',
+                'md': 'md-s6'
+              },
+              'col_align': 'justify-center'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: "All plans include" #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='<h3>All plans include:</h3>',
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/properties',
+            items=[
+              {
+                'text': '2 minutes setup',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Clock',
+                    'style': 'REGULAR',
+                    'unicode': 'f017',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'white-accent'
+                }
+              },
+              {
+                'text': 'Cancel anytime*',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Window Close',
+                    'style': 'REGULAR',
+                    'unicode': 'f410',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'white-accent'
+                }
+              },
+              {
+                'text': '24/7 support',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Headset',
+                    'style': 'SOLID',
+                    'unicode': 'f590',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'white-accent'
+                }
+              }
+            ],
+            settings={
+              'text_size': 'normal',
+              'icons': {
+                'fill': 'fill',
+                'size': 'large'
+              }
+            },
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: "All plans include" disclaimer #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': gutter,
+          'bottom': gutter
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            top_border='default',
+            bottom_border='default'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='* Cancellation fees may apply. <a href="#" rel="noopener">Learn more.</a>',
+            settings={
+              'text_size': 'small'
+            },
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: FAQs #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'bottom': 0
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Frequently Asked Questions',
+            title='Find answers and general information quickly.',
+            desc=''
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/accordion',
+            title='',
+            settings={
+              'back_to_top': false,
+              'boxed': true,
+              'box_border': false,
+              'box_shadow': true,
+              'items_maximum_width': 800
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    
+    {# SECTION: FAQs contact #}
+    
+    {% dnd_section vertical_alignment="MIDDLE" %}
+      {% dnd_column offset=0, width=6,
+        padding={
+          'default': {
+            'right': gutter
+          },
+          'mobile': {
+            'right': 0,
+            'bottom': gutter
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='Not finding your answer here? Shoot us a message.',
+            wrapper={
+              'max_width': {
+                'lg': '250'
+              },
+              'block_align': {
+                'lg': 'right',
+                'sm': 'center'
+              },
+              'text_align': {
+                'lg': 'right',
+                'sm': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=6, width=6 %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Get in Touch',
+                'type': 'link',
+                'text': 'Get in Touch',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  }
+                },
+                'color': 'accent',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'sm': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Customers #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            top_border='default'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Worldwide',
+            title='Trusted by the best of the best companies',
+            desc=''
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/logos',
+            items=[
+              {
+                'internal_name': 'HubSpot',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/HubSpot_Logo.svg',
+                  'alt': 'HubSpot logo',
+                  'width': 96,
+                  'height': 28,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'Spotify',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Spotify_Logo.svg',
+                  'alt': 'Spotify logo',
+                  'width': 114,
+                  'height': 34,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'GrowthHub',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/GrowthHub_Logo.svg',
+                  'alt': 'GrowthHub logo',
+                  'width': 132,
+                  'height': 26,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'Google',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Google_Logo.svg',
+                  'alt': 'Google logo',
+                  'width': 97,
+                  'height': 33,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'YouTube',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/YouTube_Logo.svg',
+                  'alt': 'YouTube logo',
+                  'width': 112,
+                  'height': 25,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'Google',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Google_Logo.svg',
+                  'alt': 'Google logo',
+                  'width': 97,
+                  'height': 33,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'HubSpot',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/HubSpot_Logo.svg',
+                  'alt': 'HubSpot logo',
+                  'width': 96,
+                  'height': 28,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'Spotify',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Spotify_Logo.svg',
+                  'alt': 'Spotify logo',
+                  'width': 114,
+                  'height': 34,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'GrowthHub',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/GrowthHub_Logo.svg',
+                  'alt': 'GrowthHub logo',
+                  'width': 132,
+                  'height': 26,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'Google',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Google_Logo.svg',
+                  'alt': 'Google logo',
+                  'width': 97,
+                  'height': 33,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'YouTube',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/YouTube_Logo.svg',
+                  'alt': 'YouTube logo',
+                  'width': 112,
+                  'height': 25,
+                  'loading': 'lazy'
+                }
+              },
+              {
+                'internal_name': 'Google',
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Google_Logo.svg',
+                  'alt': 'Google logo',
+                  'width': 97,
+                  'height': 33,
+                  'loading': 'lazy'
+                }
+              }
+            ]
+            settings={
+              'col': {
+                'lg': '4',
+                'md': '3',
+                'sm': '2'
+              },
+              'col_align': 'justify-center',
+              'logo_vertical_padding': '36',
+              'slider': false
+            },
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Testimonials #}
+
+    {% dnd_section max_width=1360 %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/quote',
+            items=[
+              {
+                'quote': '“What a fantastic journey this has been. Thanks to this product we can now focus on what matters.”',
+                'card': {
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg',
+                    'alt': 'Describe your image',
+                    'width': 50,
+                    'height': 50,
+                    'loading': 'lazy'
+                  },
+                  'title': 'Anthony Grower',
+                  'desc': 'Marketing Specialist'
+                }
+              },
+              {
+                'quote': '“What a fantastic journey this has been. Thanks to this product we can now focus on what matters.”',
+                'card': {
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg',
+                    'alt': 'Describe your image',
+                    'width': 50,
+                    'height': 50,
+                    'loading': 'lazy'
+                  },
+                  'title': 'Anthony Grower',
+                  'desc': 'Marketing Specialist'
+                }
+              },
+              {
+                'quote': '“What a fantastic journey this has been. Thanks to this product we can now focus on what matters.”',
+                'card': {
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg',
+                    'alt': 'Describe your image',
+                    'width': 50,
+                    'height': 50,
+                    'loading': 'lazy'
+                  },
+                  'title': 'Anthony Grower',
+                  'desc': 'Marketing Specialist'
+                }
+              },
+              {
+                'quote': '“What a fantastic journey this has been. Thanks to this product we can now focus on what matters.”',
+                'card': {
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg',
+                    'alt': 'Describe your image',
+                    'width': 50,
+                    'height': 50,
+                    'loading': 'lazy'
+                  },
+                  'title': 'Anthony Grower',
+                  'desc': 'Marketing Specialist'
+                }
+              },
+              {
+                'quote': '“What a fantastic journey this has been. Thanks to this product we can now focus on what matters.”',
+                'card': {
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg',
+                    'alt': 'Describe your image',
+                    'width': 50,
+                    'height': 50,
+                    'loading': 'lazy'
+                  },
+                  'title': 'Anthony Grower',
+                  'desc': 'Marketing Specialist'
+                }
+              }
+            ],
+            settings={
+              'color_scheme': 'light',
+              'col': {
+                'lg': '3',
+                'md': '2'
+              },
+              'col_align': 'justify-center',
+              'center_col_vertical': true,
+              'quote_size': 'large',
+              'slider': true,
+              'slider_settings': {
+                'arrows': {
+                  'lg': true,
+                  'md': true,
+                  'sm': false
+                },
+                'dots': {
+                  'lg': true,
+                  'md': true,
+                  'sm': true
+                },
+                'center_mode': true
+              }
+            },
+            wrapper={
+              'max_width': {
+                'lg': ''
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

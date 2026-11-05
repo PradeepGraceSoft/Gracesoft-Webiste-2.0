@@ -1,0 +1,859 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Teams
+screenshotPath: ../images/template-previews/teams.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--team'
+%}
+
+{# Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+    full_width=true,
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+  %}
+{% dnd_column 
+   padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+      "subtitle"="",
+      "content"="<h1>Our Team</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec felis at pellentesque. Sed amet dolor penatibus sed at posuere justo, lacinia neque.</p>"
+       primary_cta={ type: 'none' },
+       secondary_cta={ type: 'none' }
+       style_1={
+         'banner_content_alignment': { 
+            'banner_content_alignment_desktop_' : {
+              alignment_choice: 'center'
+            },
+            'banner_content_alignment_mobile_' : {
+              alignment_choice: 'center'
+            }
+          },
+          'max_width':{ enable: true,value: 760 },
+           'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 40,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+        }
+     %}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_color"
+}
+{% end_module_attribute %}
+{% module_attribute 'banner_content_alignment_desktop_' is_json=True %}
+{
+"alignment_choice": "center"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row%}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Banner #}
+
+{# Team Section #}
+{% dnd_section
+   padding = {
+        'default': {
+          'top': 0,
+          'right': 20,
+          'bottom': 80,
+          'left': 20
+        },
+        'mobile': {
+          'top': 0,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        }
+      }
+  %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module
+        path='../modules/our-team',
+        style= {
+        'color': { 'content_color': '#ffffff' },
+        'alignment' : { 'alignment':'center' },
+        'corners': {'rounded_corners': 8}
+        }
+      team_member= [{
+          "image":{
+          "src": get_asset_url('../images/multipurpose/kristen-dunst.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Kristen Dunst",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },{
+          "image":{
+          "src": get_asset_url('../images/multipurpose/david-karimova.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "David Karimova",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },{
+          "image":{
+          "src": get_asset_url('../images/multipurpose/rosemary-harris.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Rosemary Harris",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },
+        {
+          "image":{
+          "src": get_asset_url('../images/multipurpose/michael-jordan.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Michael Jordan",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },{
+          "image":{
+          "src": get_asset_url('../images/multipurpose/martin-freeman.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Martin Freeman",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },{
+          "image":{
+          "src": get_asset_url('../images/multipurpose/stan-lee.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Stan Lee",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },
+       {
+          "image":{
+          "src": get_asset_url('../images/multipurpose/kristen-wiig.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Kristen Wiig",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },{
+          "image":{
+          "src": get_asset_url('../images/multipurpose/lucy-davis.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Lucy Davis",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        },
+        {
+          "image":{
+          "src": get_asset_url('../images/multipurpose/lynda-carter.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Lynda Carter",
+        "designation": "UX/UI Designer",
+        "enable_social_links": true,
+        "social_icons" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.facebook.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "YouTube",
+              "type" : "REGULAR",
+              "unicode" : "f167"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.youtube.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+        }
+      ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Team Section #}
+
+{% end_dnd_area %}
+{% endblock body %}

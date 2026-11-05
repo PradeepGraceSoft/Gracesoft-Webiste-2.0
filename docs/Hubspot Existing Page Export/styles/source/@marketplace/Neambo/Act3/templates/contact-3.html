@@ -1,0 +1,265 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact 3
+  screenshotPath: ../images/template-previews/contact-3.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      vertical_alignment='TOP',
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column offset=0, width=7 %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro'
+            overline='Get in touch',
+            title="We'd Love to Hear from You!",
+            desc='',
+            settings={
+              'title_tag': 'h1',
+              'divider': ''
+            },
+            wrapper={
+              'max_width': {
+                'lg': '470'
+              },
+              'block_align': {
+                'lg': ''
+              },
+              'text_align': {
+                'lg': ''
+              },
+              'margin': {
+                'bottom': {
+                  'lg': '24'
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/form',
+            form_title='',
+            form={
+              'form_id': ''
+            },
+            settings={
+              'hide_labels': true
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=7, width=5,
+        padding={
+          'default': {
+            'top': gutter,
+            'left': 100
+          },
+          'mobile': {
+            'top': (vspace_lg - gutter)|round(0),
+            'left': 0
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text'
+            text='
+              <h4>Phone</h4>
+              <p><a href="tel:+1 800-800-8011" rel="noopener" target="_blank">+1 800 800-8011</a></p>
+            ',
+            settings={
+              'unstyle_links': true
+            },
+            wrapper={
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text'
+            text='
+              <h4>Address</h4>
+              <p>25 Growth Street, Inbound City,<br>MA 02123, United States</p>
+            ',
+            settings={
+              'unstyle_links': true
+            },
+            wrapper={
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text'
+            text='
+              <h4>Email</h4>
+              <p><a href="mailto:hey@company.com" rel="noopener">hey@company.com</a></p>
+            ',
+            settings={
+              'unstyle_links': true
+            },
+            wrapper={
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text'
+            text='
+              <h4>Community</h4>
+            '
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/icon',
+            icon=[
+              {
+                'internal_name': 'Twitter',
+                'type': 'icon',
+                'icon': {
+                  'name': 'Twitter',
+                  'style': 'REGULAR',
+                  'unicode': 'f099',
+                  'icon_set': 'fontawesome-5.14.0'
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://twitter.com/HubSpot'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              },
+              {
+                'internal_name': 'Slack',
+                'type': 'icon',
+                'icon': {
+                  'name': 'Slack Logo',
+                  'style': 'REGULAR',
+                  'unicode': 'f198',
+                  'icon_set': 'fontawesome-5.14.0'
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://developers.hubspot.com/slack'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              },
+              {
+                'internal_name': 'GitHub',
+                'type': 'icon',
+                'icon': {
+                  'name': 'GitHub',
+                  'style': 'REGULAR',
+                  'unicode': 'f09b',
+                  'icon_set': 'fontawesome-5.14.0'
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://github.com/HubSpot'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              }
+            ],
+            settings={
+              'shape': 'none'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Map intro #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/heading',
+            text='Find Us on Google Maps',
+            html_tag='h2',
+            remove_space=true,
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='Click the map to get directions',
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Map #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        }
+      }
+    %}
+      {% dnd_module path='@hubspot/text',
+        value='<!-- Paste your map embed code --><img src="https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-9h3xw.svg" alt="Map Sample" width="100%" loading="lazy" style="width: 100%;">'
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

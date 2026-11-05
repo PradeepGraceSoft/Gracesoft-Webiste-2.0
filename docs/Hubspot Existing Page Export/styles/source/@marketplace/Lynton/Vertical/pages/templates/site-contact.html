@@ -1,0 +1,24 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/contact.png
+  label: "Contact"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header" %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-form.html' %}
+
+    {% include_dnd_partial path='../sections/contact.html' %}
+
+    {% include_dnd_partial path='../sections/testimonials-static.html' %}
+  {% end_dnd_area %}
+{% endblock %}

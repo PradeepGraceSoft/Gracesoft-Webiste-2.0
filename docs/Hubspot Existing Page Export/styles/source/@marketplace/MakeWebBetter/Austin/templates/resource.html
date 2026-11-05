@@ -1,0 +1,195 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Resource
+screenshotPath: ../images/template-previews/resource.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--resource'
+%}
+
+{# Resource Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+    full_width=true,
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+        "subtitle"="",
+        "content"="<h1>Our Resources</h1><p>We slowly drove, he knew no haste,And I had put away My labor, and my leisure too,For his civility.We passed the school where children played,Their lessons scarcely done;We passed the fields of gazing grain,We passed the setting sun.</p>"
+          primary_cta={ type: 'none', style: 'filled_light', text: 'Let`s Move' },
+          secondary_cta={ type: 'none', style: 'filled_dark', text: 'Examine' }
+         style_1={
+             'content_color': {
+            'heading' : {enable_heading_color: true },
+            'text':{ enable_content_color: true}
+          },
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 200,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 200,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+          }
+      %}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_image"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Resource Banner #}
+
+{# Portfolio Tabs #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/portfolio-tabs',
+       tabs =[
+         {
+         "tab_link" : "Blog",
+         "tab_id" : "blog"
+         },
+         {
+         "tab_link" : "Service",
+         "tab_id" : "service"
+         },
+         {
+         "tab_link" : "Support",
+         "tab_id" : "support"
+         },
+         {
+         "tab_link" : "About Us",
+         "tab_id" : "about"
+         }
+      ],
+      portfolio =[              
+               {
+                 "image_field": {
+                  "src": get_asset_url('../images/multipurpose/resource-one.png'),
+                  "alt": "Resource image"
+                 },
+                 "items_class": 'about,support',
+                 "title" : "Best strategies to convert leads into customers",
+                 "text" : "Lorem ipsum dolor sit amet, consectetur adipisci elit. Amet ornare nisl vitae dui porttitor amet feu eu.",
+                 },
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/resource-two.png'),
+                  "alt": "Resource image"
+                 },
+                 "items_class": 'support',
+                 "title" : "Best strategies to convert leads into customers",
+                 "text" : "Lorem ipsum dolor sit amet, consectetur adipisci elit. Amet ornare nisl vitae dui porttitor amet feu eu.",
+                 },
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/resource-three.png'),
+                  "alt": "Resource image"
+                 },
+                 "items_class": 'blog',
+                 "title" : "Best strategies to convert leads into customers",
+                 "text" : "Lorem ipsum dolor sit amet, consectetur adipisci elit. Amet ornare nisl vitae dui porttitor amet feu eu.",
+                 }, 
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/resource-four.png'),
+                  "alt": "Resource image"
+                 },
+                 "items_class": 'about',
+                 "title" : "Best strategies to convert leads into customers",
+                 "text" : "Lorem ipsum dolor sit amet, consectetur adipisci elit. Amet ornare nisl vitae dui porttitor amet feu eu.",
+                 }, 
+                {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/resource-five.png'),
+                  "alt": "Resource image"
+                 },
+                 "items_class": 'service',
+                 "title" : "Best strategies to convert leads into customers",
+                 "text" : "Lorem ipsum dolor sit amet, consectetur adipisci elit. Amet ornare nisl vitae dui porttitor amet feu eu.",
+                 },
+                 {
+                  "image_field": {
+                  "src": get_asset_url('../images/multipurpose/resource-six.png'),
+                  "alt": "Resource image"
+                 },
+                 "items_class": 'support',
+                 "title" : "Best strategies to convert leads into customers",
+                 "text" : "Lorem ipsum dolor sit amet, consectetur adipisci elit. Amet ornare nisl vitae dui porttitor amet feu eu.",
+                 }
+           ]
+%}
+{% module_attribute 'layout_choices' is_json=True %}
+{
+"select_layout": "image-with-content"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{# End Of Portfolio Tabs #}
+
+{% end_dnd_area %}
+{% endblock body %}

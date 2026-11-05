@@ -1,0 +1,6 @@
+{% import "../_variables.css" as var %}
+
+.blog-sticky-sidebar {
+  position: sticky;
+  top: {{ var.scroll_offset_lg + var.gutter }}px;
+}

@@ -1,0 +1,261 @@
+[
+  {
+    "name": "logo",
+    "label": "Logo",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "GraceSoft",
+      "size_type": "auto"
+    }
+  },
+  {
+    "name": "tagline",
+    "label": "Tagline",
+    "type": "text",
+    "default": "Hospitality software.\nHuman possibilities."
+  },
+  {
+    "name": "email",
+    "label": "Email",
+    "type": "text",
+    "default": "sales@gracesoft.com"
+  },
+  {
+    "name": "phone",
+    "label": "Phone",
+    "type": "text",
+    "default": "+1-713-981-5300"
+  },
+  {
+    "name": "address",
+    "label": "Address",
+    "type": "text",
+    "default": "7310 Cortez Rd, Richmond, TX 77469, United States"
+  },
+  {
+    "name": "copyright",
+    "label": "Copyright",
+    "type": "text",
+    "default": "© 2026 GraceSoft. All rights reserved."
+  },
+  {
+    "name": "legal_label",
+    "label": "Legal label",
+    "type": "text",
+    "default": "Privacy & terms"
+  },
+  {
+    "name": "legal_url",
+    "label": "Legal URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/privacy-statement",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "support_label",
+    "label": "Support label",
+    "type": "text",
+    "default": "Support center"
+  },
+  {
+    "name": "support_url",
+    "label": "Support URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://support.gracesoft.com/support/home",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "links",
+    "label": "Footer links",
+    "type": "group",
+    "children": [
+      {
+        "name": "column",
+        "label": "Column",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "label",
+        "label": "Label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "url",
+        "label": "URL",
+        "type": "url",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS"
+        ],
+        "default": {
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 17
+    },
+    "default": [
+      {
+        "column": "Products",
+        "label": "Property management",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "Booking engine",
+        "url": {
+          "href": "https://www.gracesoft.com/online-booking-engine",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "Channel manager",
+        "url": {
+          "href": "https://www.gracesoft.com/channel-manager",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "Housekeeping",
+        "url": {
+          "href": "https://www.gracesoft.com/housekeeping",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "Payments",
+        "url": {
+          "href": "https://www.gracesoft.com/payments",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "Point of sale",
+        "url": {
+          "href": "https://www.gracesoft.com/point-of-sale-system",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "Guest CRM",
+        "url": {
+          "href": "https://www.gracesoft.com/crm-software",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "Unified inbox",
+        "url": {
+          "href": "https://www.gracesoft.com/unified-inbox",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Products",
+        "label": "AI voice & chat",
+        "url": {
+          "href": "https://www.gracesoft.com/gracesoft-ai",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Company",
+        "label": "About GraceSoft",
+        "url": {
+          "href": "https://www.gracesoft.com/about",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Company",
+        "label": "Contact us",
+        "url": {
+          "href": "https://www.gracesoft.com/corporate-contact",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Company",
+        "label": "Customer stories",
+        "url": {
+          "href": "https://www.gracesoft.com/testimonials",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Company",
+        "label": "Case studies",
+        "url": {
+          "href": "https://www.gracesoft.com/case-study",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Resources",
+        "label": "Hospitality insights",
+        "url": {
+          "href": "https://www.gracesoft.com/blog",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Resources",
+        "label": "Feature overview",
+        "url": {
+          "href": "https://www.gracesoft.com/feature-listing",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Resources",
+        "label": "Pricing",
+        "url": {
+          "href": "https://www.gracesoft.com/pricing",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "column": "Resources",
+        "label": "Website builder",
+        "url": {
+          "href": "https://www.gracesoft.com/websites",
+          "type": "EXTERNAL"
+        }
+      }
+    ]
+  }
+]

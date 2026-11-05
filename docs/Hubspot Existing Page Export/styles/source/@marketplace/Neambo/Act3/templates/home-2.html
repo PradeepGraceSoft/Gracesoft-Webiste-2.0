@@ -1,0 +1,483 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home 2
+  screenshotPath: ../images/template-previews/home-2.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=true, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION 1: Above the fold #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_media='image',
+            bg_img={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-eezax.jpg',
+              'alt': 'Describe your image',
+              'width': 1920,
+              'height': 1080
+            },
+            overlay='dark',
+            overlay_opacity=50,
+            min_height='minh-full'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/heading',
+            text='Get your HubSpot website going',
+            html_tag='h1',
+            looks_like='display',
+            color_scheme='dark',
+            wrapper={
+              'max_width': {
+                'lg': '850'
+              },
+              'block_align': {
+                'lg': 'center'
+              },
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='
+              <p>Drag and drop page editor, huge template and module library, theme settings in HubSpot.</p>
+            ',
+            settings={
+              'color_scheme': 'dark'
+            },
+            wrapper={
+              'max_width': {
+                'lg': '570'
+              },
+              'block_align': {
+                'lg': 'center'
+              },
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Get Started',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'accent',
+                'fill': 'fill',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/scroll-to',
+            scroll_to='customer-quote',
+            color='ghost',
+            fill='outline',
+            position_in_section='natural',
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'top': {
+                  'lg': (gutter * 2)|round(0)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Quote #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'bottom': (vspace_lg - (gutter * 2))|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            custom_id='customer-quote'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/quote',
+            items=[
+              {
+                'quote': '“What a fantastic journey this has been. Thanks to this product we can now focus on what matters.”',
+                'card': {
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg',
+                    'alt': 'Describe your image',
+                    'width': 50,
+                    'height': 50,
+                    'loading': 'lazy'
+                  },
+                  'title': 'Anthony Grower',
+                  'desc': 'Marketing Specialist'
+                }
+              }
+            ]
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Logos #}
+
+    {% dnd_section
+      max_width=1280,
+      padding={
+        'default': {
+          'top': 60,
+          'bottom': 60
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/logos',
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Features #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/feature-card',
+            card=[
+              {
+                'title': 'Made with HubSpot',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'HubSpot',
+                    'style': 'REGULAR',
+                    'unicode': 'f3b2',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Fast and SEO-ready',
+                'desc': 'Great score on Google PSI, both desktop and mobile.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Tachometer',
+                    'style': 'SOLID',
+                    'unicode': 'f3fd',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Fully Responsive',
+                'desc': 'Feels and looks great on any screen size and any device.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Mobile Phone',
+                    'style': 'SOLID',
+                    'unicode': 'f10b',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Beautiful & Modern',
+                'desc': 'Everything fits perfectly for a great aesthetic sense & feeling.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Star',
+                    'style': 'SOLID',
+                    'unicode': 'f005',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Easily Customizable',
+                'desc': 'Easier than ever to match your brand style and feeling.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'tint',
+                    'style': 'SOLID',
+                    'unicode': 'f043',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Buy Now',
+                'desc': 'Available on the HubSpot Marketplace',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Shopping Cart Arrow Down',
+                    'style': 'SOLID',
+                    'unicode': 'f218',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'white-accent'
+                },
+                'color': 'accent',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 200,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': 's4',
+                'md': 'md-s6'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: From the blog #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='From Our Blog',
+            title='Stay up to date with the latest news',
+            desc=''
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/blog-card'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Call to action #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='accent'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Ready to Install',
+            title='Available now on the official HubSpot Marketplace',
+            desc='',
+            settings={
+              'color_scheme': 'dark',
+              'divider': ''
+            },
+            wrapper={
+              'max_width': {
+                'lg': '700'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': (gutter / 3)|round(0)|string,
+                  'sm': '0'
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Get Started',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'white',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

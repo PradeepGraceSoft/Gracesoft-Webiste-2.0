@@ -1,0 +1,386 @@
+<!--
+templateType: global_partial
+label: Footer
+-->
+<footer class="footer">
+
+  {# Top dnd top footer drag and drop area #}
+  {% dnd_area 'dnd-top-footer' label='Top dnd footer' class="footer-dnd-area1 content-wrapper" %}
+  {% end_dnd_area %}
+  {# End dnd top footer drag and drop area #}
+
+  {% dnd_area 'footer' class='footer-dnd-area2 footer__container content-wrapper', label='Footer' %}
+
+  {# footer #}
+  {% dnd_section
+    padding={
+        'top': 80,
+        'bottom': 0,
+        'left': 20,
+        'right': 20
+    },
+    vertical_alignment='TOP'
+    %}
+  {% dnd_column
+   padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+    },
+offset=0,
+width=4
+%}
+  {% dnd_row 
+   padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+    },
+    %}
+  {% dnd_module path='../../modules/logo' label='Logo' %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+
+  {% dnd_row %}
+  {% dnd_module path='@hubspot/rich_text' label='Address' %}
+  {% module_attribute 'html' %}
+  <div>
+    <p>All types of businesses need access to development resources, so we give you the option to decide how much you need to use.</p>
+  </div>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+
+  {% dnd_row 
+  padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+    },
+    %}
+  {% dnd_module path='../../modules/social-follow' label='Social Links' 
+  ssocial_icons=[ {
+          "social_icon" : {
+            "name" : "Facebook Square",
+            "type" : "REGULAR",
+            "unicode" : "f082"
+          },
+          "social_image" : {
+            "alt" : "twitter",
+            "height" : 22,
+            "loading" : "lazy",
+            "max_height" : 22,
+            "max_width" : 26,
+            "size_type" : "auto",
+            "src" : "https://22422295.fs1.hubspotusercontent-na1.net/hubfs/22422295/twitter.png",
+            "width" : 26
+          },
+          "social_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : true,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "text_field" : "Icon Name"
+        }, {
+          "social_icon" : {
+            "name" : "Instagram",
+            "type" : "REGULAR",
+            "unicode" : "f16d"
+          },
+          "social_image" : {
+            "alt" : "twitter",
+            "height" : 22,
+            "loading" : "lazy",
+            "max_height" : 22,
+            "max_width" : 26,
+            "size_type" : "auto",
+            "src" : "https://22422295.fs1.hubspotusercontent-na1.net/hubfs/22422295/twitter.png",
+            "width" : 26
+          },
+          "social_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : true,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "text_field" : "Icon Name"
+        }, {
+          "social_icon" : {
+            "name" : "LinkedIn",
+            "type" : "REGULAR",
+            "unicode" : "f08c"
+          },
+          "social_image" : {
+            "alt" : "twitter",
+            "height" : 22,
+            "loading" : "lazy",
+            "max_height" : 22,
+            "max_width" : 26,
+            "size_type" : "auto",
+            "src" : "https://22422295.fs1.hubspotusercontent-na1.net/hubfs/22422295/twitter.png",
+            "width" : 26
+          },
+          "social_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : true,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "text_field" : "Icon Name"
+        }, {
+          "social_icon" : {
+            "name" : "YouTube",
+            "type" : "REGULAR",
+            "unicode" : "f167"
+          },
+          "social_image" : {
+            "alt" : "twitter",
+            "height" : 22,
+            "loading" : "lazy",
+            "max_height" : 22,
+            "max_width" : 26,
+            "size_type" : "auto",
+            "src" : "https://22422295.fs1.hubspotusercontent-na1.net/hubfs/22422295/twitter.png",
+            "width" : 26
+          },
+          "social_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : true,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "text_field" : "Icon Name"
+        }, {
+          "social_icon" : {
+            "name" : "Twitter",
+            "type" : "REGULAR",
+            "unicode" : "f099"
+          },
+          "social_image" : {
+            "alt" : "twitter",
+            "height" : 22,
+            "loading" : "lazy",
+            "max_height" : 22,
+            "max_width" : 26,
+            "size_type" : "auto",
+            "src" : "https://22422295.fs1.hubspotusercontent-na1.net/hubfs/22422295/twitter.png",
+            "width" : 26
+          },
+          "social_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : true,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "text_field" : "Icon Name"
+        } ],
+flexbox_positioning='TOP_LEFT'
+  %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=4,
+    width=4
+    %}
+  {% dnd_row %}
+  {% dnd_module path='../../modules/footer-nav' label='Navigation' %}{% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=8,
+    width=4
+    %}
+  {% dnd_row %}
+  {% dnd_module path='@hubspot/rich_text' label='Menu Title'%}
+  {% module_attribute 'html' %}
+  <div class="au-footer__menu-heading au-footer__menu-icon-heading">
+    <h6>Get In Touch</h6>
+  </div>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% dnd_row %}
+  {% dnd_module path='../../modules/icon-box' label='Menu Links'
+
+    icon_box_repeater=[ {
+          "content" : "<p>(209) 555-0104</p>",
+          "icon" : {
+            "name" : "Phone",
+            "type" : "SOLID",
+            "unicode" : "f879"
+          },
+          "image" : {
+            "alt" : "Cube",
+            "height" : 50,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 50,
+            "size_type" : "auto",
+            "src" : "https://f.hubspotusercontent40.net/hubfs/7479797/Cube.svg",
+            "width" : 50
+          }
+        }, {
+          "content" : "<p>austin@mail.com</p>",
+          "icon" : {
+            "name" : "Envelope",
+            "type" : "REGULAR",
+            "unicode" : "f0e0"
+          },
+          "image" : {
+            "alt" : "Cube",
+            "height" : 50,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 50,
+            "size_type" : "auto",
+            "src" : "https://f.hubspotusercontent40.net/hubfs/7479797/Cube.svg",
+            "width" : 50
+          }
+        }, {
+          "content" : "<p>4140 Parker Rd. Allentown, New Mexico 31134</p>",
+          "icon" : {
+            "name" : "Location Dot",
+            "type" : "SOLID",
+            "unicode" : "f3c5"
+          },
+          "image" : {
+            "alt" : "Cube",
+            "height" : 50,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 50,
+            "size_type" : "auto",
+            "src" : "https://f.hubspotusercontent40.net/hubfs/7479797/Cube.svg",
+            "width" : 50
+          }
+        } ],
+        icon_image_selection="icon",
+        style={
+          "icon_box_spacing" : {
+            "spacing_desktop_" : {
+              "margin" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "top" : { }
+              },
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 8
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 15
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 8
+                }
+              }
+            },
+            "spacing_mobile_" : {
+              "margin" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "top" : { }
+              },
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 8
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 15
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 8
+                }
+              }
+            }
+          },
+          "icon_styling" : {
+            "corner" : "square",
+            "icon_size_display" : {
+              "icon_size" : 25
+            }
+          }
+        }
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# end of footer #}
+
+  {# copyright #}
+  {% dnd_section 
+     padding={
+        'top': 30,
+        'bottom': 30,
+        'left': 20,
+        'right': 20
+     },
+    %}
+  {% dnd_column
+        offset=0,
+        width=12
+      %}
+  {% dnd_row %}
+  {% dnd_module path='../../modules/footer-copyright' label='Copyright' %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# end of copyright #}
+
+  {% end_dnd_area %}
+
+  {# Top dnd bottom footer drag and drop area #}
+  {% dnd_area 'dnd-bottom-footer' label='Bottom dnd footer' class="footer-dnd-area3 content-wrapper" %}
+  {% end_dnd_area %}
+  {# End dnd bottom footer drag and drop area #}
+
+
+  {# Scroll to top #}
+  {% if theme.scroll_to_top.enable_scroll_to_top %}
+  <div class="au-scroll-to-top__wrap">
+    <div class="au-scroll-to-top__btn" style="opacity: 0;">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="24" fill="{{ theme.scroll_to_top.icon_background_color.color.color }}"/>
+        <path d="M24 35L24 13" stroke="{{ theme.scroll_to_top.icon_fill_color.color.color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M33 22L24 13L15 22" stroke="{{ theme.scroll_to_top.icon_fill_color.color.color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+  {% endif %}
+  {# end of Scroll to top #}
+</footer>

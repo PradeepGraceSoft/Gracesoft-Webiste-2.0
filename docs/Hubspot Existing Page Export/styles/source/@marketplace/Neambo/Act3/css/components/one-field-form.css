@@ -1,0 +1,77 @@
+{% from '../_variables.css' import gutter, xs %}
+
+@media (min-width: {{ xs + 1 }}px) {
+  .form--one-field .hs-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form--one-field .hs-form-field:first-of-type {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .form--one-field .hs-form-field:first-of-type > label,
+  .form--one-field .hs-form-field:first-of-type > .hs-field-desc {
+    display: none;
+  }
+
+  .form--one-field .hs-form-field:first-of-type > .input {
+    margin-top: 0;
+    width: calc(100% - {{ gutter }}px);
+  }
+
+  .form--one-field .hs-form-field:not(:first-of-type),
+  .form--one-field .legal-consent-container {
+    order: 3;
+    width: 100%;
+  }
+
+  .form--one-field .legal-consent-container {
+    margin-top: {{ gutter }}px;
+  }
+
+  .form--one-field .hs_error_rollup {
+    order: 2;
+    width: 100%;
+  }
+
+  .form--one-field .field:not(.hs-fieldtype-checkbox):not(.hs-fieldtype-radio):not(.hs-fieldtype-file):not(.hs-fieldtype-date) > label,
+  .form--one-field .field:not(.hs-fieldtype-checkbox):not(.hs-fieldtype-radio):not(.hs-fieldtype-file):not(.hs-fieldtype-date) > legend {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+  }
+}
+
+/* No wrap */
+
+.form--one-field-no-wrap {
+  container-type: inline-size;
+  container-name: oneFieldFormContainer;
+}
+
+.form--one-field-no-wrap .hs-form {
+  flex-wrap: nowrap;
+}
+
+.form--one-field-no-wrap .hs-submit {
+  flex-shrink: 0;
+}
+
+@container oneFieldFormContainer (max-width: 260px) {
+  .form--one-field-no-wrap .hs-form {
+    flex-wrap: wrap;
+    gap: {{ gutter }}px;
+  }
+
+  .form--one-field-no-wrap .hs-form-field:first-of-type > .input {
+    width: 100%;
+  }
+
+  .form--one-field-no-wrap .legal-consent-container {
+    margin-top: 0;
+  }
+}

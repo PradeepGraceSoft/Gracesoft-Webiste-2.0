@@ -1,0 +1,47 @@
+{% import "../_variables.css" as var %}
+
+.blog-sub {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid {{ var.borders_color }};
+  border-bottom: 1px solid {{ var.borders_color }};
+}
+
+.blog-sub__form {
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.blog-sub__form--one {
+  width: 500px;
+}
+
+.blog-sub__icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.blog-sub__icon .icon {
+  border: 1px solid {{ var.borders_color }};
+}
+
+.blog-sub .form-title {
+  text-align: center;
+}
+
+.blog-sub form {
+  margin-bottom: 0;
+}
+
+.blog-sub__form--one .hs-form-field:first-of-type + .hs-form-field {
+  margin-top: {{ var.gutter }}px;
+}
+
+@media (max-width: {{ var.xs }}px) {
+  .blog-sub .form-title {
+    text-align: start;
+  }
+}

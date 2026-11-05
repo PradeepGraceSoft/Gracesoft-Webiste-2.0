@@ -1,0 +1,50 @@
+{% import "../_variables.css" as var %}
+
+.video--player.video--radius,
+.video--thumbnail.video--radius {
+  overflow: hidden;
+  border-radius: {{ var.radius_7 }};
+  /* For Safari */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.video--embed.video--radius video,
+.video--embed.video--radius iframe,
+.video--embed.video--radius img {
+  border-radius: {{ var.radius_7 }};
+}
+
+.video__player,
+.video__thumbnail {
+  position: relative;
+}
+
+.video__player__video {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  outline: 0;
+  transform: translateZ(0);
+}
+
+.video__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: {{ var.dark }};
+  opacity: .5;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.video__play {
+  z-index: 2;
+}
+
+.video__player--activated .video__player__overlay,
+.video__player--activated .video__player__play {
+  display: none;
+}

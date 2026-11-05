@@ -1,0 +1,151 @@
+.section-module-12 {
+    background-color: var(--color-background-gray);
+
+    --color-border-black: rgba(255,255,255,0.1);
+    --color-dark-contrast-80: rgba(255,255,255,0.8);
+    --color-dark-contrast-50: rgba(255,255,255,0.5);
+    --color-dark-contrast-40: rgba(255,255,255,0.4);
+}
+
+.section-module-12  .block-heading {
+    max-width: 480px;
+}
+.section-module-12 .block-heading__title {
+    color: var(--color-white-contrast-100);
+}
+.section-module-12 .block-heading__subtitle {
+    color: var(--color-white-contrast-80);
+}
+.section-module-12 .section-main {
+    padding: 80px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+.section-module-12 .section-main__bottom > * {
+    width: 100%;
+}
+
+.section-module-12 .section-sub {
+    padding: 100px 120px;
+}
+.contact-feature__background {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+}
+.contact-feature__background:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.55);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.section-module-12 .contact-paragraph__info {
+    max-width: 420px;
+}
+.section-module-12 iframe {
+    width: 100%;
+    height: 350px;
+}
+.section-module-12 .contact-heading__title {
+    margin-bottom: 20px;
+    color: var(--color-white-contrast-80);
+}
+
+.contact-form {
+    margin-top: 40px;
+}
+.contact-form form .hs-button[type='submit'] {
+    padding: 12px 45px;
+}
+
+
+.section-module-12 .contact-form form {
+    background-color: transparent;
+}
+.section-module-12 .contact-form label {
+    color: var(--color-dark-contrast-80);
+}
+
+.section-module-12 .contact-form form input[type=date], 
+.section-module-12 .contact-form form input[type=email], 
+.section-module-12 .contact-form form input[type=number], 
+.section-module-12 .contact-form form input[type=password], 
+.section-module-12 .contact-form form input[type=search], 
+.section-module-12 .contact-form form input[type=tel], 
+.section-module-12 .contact-form form input[type=text], 
+.section-module-12 .contact-form form input[type=url], 
+.section-module-12 .contact-form form select, 
+.section-module-12 .contact-form form select.form-control, 
+.section-module-12 .contact-form form textarea, 
+.section-module-12 .contact-form form textarea.form-control {
+    background-color: transparent;
+    border: 1px solid var(--color-border-black);
+    color: var(--color-dark-contrast-50);
+}
+@media (max-width: 1545px) {
+    .section-module-12 .section-main {
+        padding: 80px;
+    }
+    .section-module-12 .section-sub {
+        padding: 80px 80px;
+    }
+}
+@media (max-width: 1199px) {
+    .section-module-12 .section-main {
+        padding: 60px 60px;
+    }
+    .section-module-12 .section-sub {
+        padding: 60px 60px;
+    }
+
+    .section-module-12 iframe {
+        height: 250px;
+    }
+}
+@media (max-width: 1080px) {
+    .section-module-12 .section-main {
+        padding: 50px;
+    }
+    .section-module-12 .section-sub {
+        padding: 50px;
+    }
+}
+@media (max-width: 991px) {
+    .section-module-12 .section-main {
+        width: 100%;
+        min-height: 600px;
+    }
+    .section-module-12 .section-sub {
+        width: 100%;
+    }
+    .section-module-12 .contact-paragraph__wrapper:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 767px) {
+    .section-module-12 .section-main,
+    .section-module-12 .section-sub {
+        padding: 50px 40px;
+    }
+}
+@media (max-width: 480px) {
+    .section-module-12 .section-main,
+    .section-module-12 .section-sub {
+        padding: 40px 30px;
+    }
+}
+@media (max-width: 480px) {
+    .section-module-12 .section-main,
+    .section-module-12 .section-sub {
+        padding: 40px 20px;
+    }
+}

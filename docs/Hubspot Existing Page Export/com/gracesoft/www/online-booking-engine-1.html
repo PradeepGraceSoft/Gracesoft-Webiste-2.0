@@ -1,0 +1,2677 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Hotel Booking Engine - GraceSoft easy Innkeeping</title> 
+  <link rel="shortcut icon" href="https://www.gracesoft.com/hubfs/anew/Images/g-logo.ico"> 
+  <meta name="description" content="With a powerful and fully integrated hotel booking system tailored to meet the unique needs of hoteliers, you can drive commission-free direct bookings"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta property="og:description" content="With a powerful and fully integrated hotel booking system tailored to meet the unique needs of hoteliers, you can drive commission-free direct bookings"> 
+  <meta property="og:title" content="Hotel Booking Engine - GraceSoft easy Innkeeping"> 
+  <meta name="twitter:description" content="With a powerful and fully integrated hotel booking system tailored to meet the unique needs of hoteliers, you can drive commission-free direct bookings"> 
+  <meta name="twitter:title" content="Hotel Booking Engine - GraceSoft easy Innkeeping"> 
+  <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/152150936587/1786354647731/template_main.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/152150936589/1786354650547/template_responsive.min.css"> 
+  <style>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </style> 
+  <style>
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("/_hcms/googlefonts/Poppins/regular.woff2") format("woff2"), url("/_hcms/googlefonts/Poppins/regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("/_hcms/googlefonts/Poppins/700.woff2") format("woff2"), url("/_hcms/googlefonts/Poppins/700.woff") format("woff");
+  }
+</style> 
+  <!-- Editor Styles --> 
+  <style id="hs_editor_style" type="text/css">
+#hs_cos_wrapper_widget_1689246420692  { color: #ffffff !important; display: block !important; font-size: 32px !important; font-weight: bold !important; text-align: center !important }
+#hs_cos_wrapper_widget_1689246420692  p , #hs_cos_wrapper_widget_1689246420692  li , #hs_cos_wrapper_widget_1689246420692  span , #hs_cos_wrapper_widget_1689246420692  label , #hs_cos_wrapper_widget_1689246420692  h1 , #hs_cos_wrapper_widget_1689246420692  h2 , #hs_cos_wrapper_widget_1689246420692  h3 , #hs_cos_wrapper_widget_1689246420692  h4 , #hs_cos_wrapper_widget_1689246420692  h5 , #hs_cos_wrapper_widget_1689246420692  h6  { color: #ffffff !important; font-size: 32px !important; font-weight: bold !important }
+#hs_cos_wrapper_widget_1689252856446  { color: #102d7b !important; display: block !important; font-size: 26px !important; font-weight: bold !important; text-align: center !important }
+#hs_cos_wrapper_widget_1689252856446  p , #hs_cos_wrapper_widget_1689252856446  li , #hs_cos_wrapper_widget_1689252856446  span , #hs_cos_wrapper_widget_1689252856446  label , #hs_cos_wrapper_widget_1689252856446  h1 , #hs_cos_wrapper_widget_1689252856446  h2 , #hs_cos_wrapper_widget_1689252856446  h3 , #hs_cos_wrapper_widget_1689252856446  h4 , #hs_cos_wrapper_widget_1689252856446  h5 , #hs_cos_wrapper_widget_1689252856446  h6  { color: #102d7b !important; font-size: 26px !important; font-weight: bold !important }
+#hs_cos_wrapper_widget_1636619902690  { display: block !important; margin-top: -143px !important; padding-bottom: 0px !important; padding-top: 0px !important }
+#hs_cos_wrapper_module_16367276797323  { display: block !important; margin-bottom: 7px !important; margin-top: -40px !important; padding-top: 56px !important }
+#hs_cos_wrapper_widget_1689306455787  { display: block !important; padding-top: 50px !important }
+#hs_cos_wrapper_module_16370692811533  { display: block !important; margin-top: -29px !important; padding-bottom: 35px !important; padding-top: 0px !important }
+#hs_cos_wrapper_widget_1689307318799  { color: #000000 !important; display: block !important; font-size: 26px !important; font-weight: bold !important; text-align: center !important }
+#hs_cos_wrapper_widget_1689307318799  p , #hs_cos_wrapper_widget_1689307318799  li , #hs_cos_wrapper_widget_1689307318799  span , #hs_cos_wrapper_widget_1689307318799  label , #hs_cos_wrapper_widget_1689307318799  h1 , #hs_cos_wrapper_widget_1689307318799  h2 , #hs_cos_wrapper_widget_1689307318799  h3 , #hs_cos_wrapper_widget_1689307318799  h4 , #hs_cos_wrapper_widget_1689307318799  h5 , #hs_cos_wrapper_widget_1689307318799  h6  { color: #000000 !important; font-size: 26px !important; font-weight: bold !important }
+#hs_cos_wrapper_widget_1637043827738  { display: block !important; margin-bottom: 29px !important; margin-top: 35px !important; padding-top: -8px !important }
+#hs_cos_wrapper_widget_1689246420692  { color: #ffffff !important; display: block !important; font-size: 32px !important; font-weight: bold !important; text-align: center !important }
+#hs_cos_wrapper_widget_1689246420692  p , #hs_cos_wrapper_widget_1689246420692  li , #hs_cos_wrapper_widget_1689246420692  span , #hs_cos_wrapper_widget_1689246420692  label , #hs_cos_wrapper_widget_1689246420692  h1 , #hs_cos_wrapper_widget_1689246420692  h2 , #hs_cos_wrapper_widget_1689246420692  h3 , #hs_cos_wrapper_widget_1689246420692  h4 , #hs_cos_wrapper_widget_1689246420692  h5 , #hs_cos_wrapper_widget_1689246420692  h6  { color: #ffffff !important; font-size: 32px !important; font-weight: bold !important }
+#hs_cos_wrapper_widget_1689252856446  { color: #102d7b !important; display: block !important; font-size: 26px !important; font-weight: bold !important; text-align: center !important }
+#hs_cos_wrapper_widget_1689252856446  p , #hs_cos_wrapper_widget_1689252856446  li , #hs_cos_wrapper_widget_1689252856446  span , #hs_cos_wrapper_widget_1689252856446  label , #hs_cos_wrapper_widget_1689252856446  h1 , #hs_cos_wrapper_widget_1689252856446  h2 , #hs_cos_wrapper_widget_1689252856446  h3 , #hs_cos_wrapper_widget_1689252856446  h4 , #hs_cos_wrapper_widget_1689252856446  h5 , #hs_cos_wrapper_widget_1689252856446  h6  { color: #102d7b !important; font-size: 26px !important; font-weight: bold !important }
+#hs_cos_wrapper_module_16367276797323  { display: block !important; margin-bottom: 7px !important; margin-top: -40px !important; padding-top: 56px !important }
+#hs_cos_wrapper_widget_1636619902690  { display: block !important; margin-top: -143px !important; padding-bottom: 0px !important; padding-top: 0px !important }
+#hs_cos_wrapper_widget_1689306455787  { display: block !important; padding-top: 50px !important }
+#hs_cos_wrapper_module_16370692811533  { display: block !important; margin-top: -29px !important; padding-bottom: 35px !important; padding-top: 0px !important }
+#hs_cos_wrapper_widget_1689307318799  { color: #000000 !important; display: block !important; font-size: 26px !important; font-weight: bold !important; text-align: center !important }
+#hs_cos_wrapper_widget_1689307318799  p , #hs_cos_wrapper_widget_1689307318799  li , #hs_cos_wrapper_widget_1689307318799  span , #hs_cos_wrapper_widget_1689307318799  label , #hs_cos_wrapper_widget_1689307318799  h1 , #hs_cos_wrapper_widget_1689307318799  h2 , #hs_cos_wrapper_widget_1689307318799  h3 , #hs_cos_wrapper_widget_1689307318799  h4 , #hs_cos_wrapper_widget_1689307318799  h5 , #hs_cos_wrapper_widget_1689307318799  h6  { color: #000000 !important; font-size: 26px !important; font-weight: bold !important }
+#hs_cos_wrapper_widget_1637043827738  { display: block !important; margin-bottom: 29px !important; margin-top: 35px !important; padding-top: -8px !important }
+.dnd_area_header_global-row-0-force-full-width-section > .row-fluid {
+  max-width: none !important;
+}
+.widget_1689251770074-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1689251770074-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1636619902690-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1636619902690-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1689306067347-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1689306067347-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_1637140867854-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_1637140867854-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1689305073178-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1689305073178-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_16370692811533-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_16370692811533-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1689307571989-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1689307571989-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1689305505916-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1689305505916-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1637043827738-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1637043827738-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1689255685093-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1689255685093-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+/* HubSpot Non-stacked Media Query Styles */
+@media (min-width:768px) {
+  .dnd_area-row-6-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .dnd_area-row-8-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .dnd_area-row-10-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .dnd_area-row-14-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .dnd_area-row-16-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_1636728565062-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1636728565062-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1636622147120-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1636622147120-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16367241870262-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_16367241870262-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16367241870262-row-0-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_16371352713752-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_16371352713752-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1637322741286-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1637322741286-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1637322743650-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1637322743650-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16370695924782-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_16370695924782-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16370695924782-row-0-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_1637070062026-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1637070062026-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1637318882615-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1637318882615-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1637318876253-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1637318876253-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16371409339812-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_16371409339812-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16371409339812-row-0-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_16373200245882-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_16373200245882-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+}
+/* HubSpot Styles (default) */
+.dnd_area_header_global-row-0-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area_header_global-module-1-hidden {
+  display: block !important;
+}
+.dnd_area-row-0-padding {
+  padding-top: 200px !important;
+  padding-bottom: 140px !important;
+}
+.dnd_area-row-0-background-layers {
+  background-image: url('https://www.gracesoft.com/hubfs/ssl.webp') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.dnd_area-row-1-padding {
+  padding-bottom: 0px !important;
+}
+.dnd_area-row-2-padding {
+  padding-top: 20px !important;
+  padding-bottom: 0px !important;
+}
+.dnd_area-row-3-padding {
+  padding-top: 20px !important;
+  padding-bottom: 40px !important;
+}
+.dnd_area-row-4-padding {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+.dnd_area-row-4-background-layers {
+  background-image: linear-gradient(to right, rgba(38, 161, 212, 0.3), rgba(234, 240, 246, 1)) !important;
+  background-position: left top !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+.dnd_area-row-5-padding {
+  padding-top: 60px !important;
+  padding-bottom: 0px !important;
+}
+.dnd_area-row-6-margin {
+  margin-top: 177px !important;
+  margin-bottom: 69px !important;
+}
+.dnd_area-row-6-padding {
+  padding-top: 1px !important;
+  padding-bottom: 2px !important;
+}
+.dnd_area-row-6-background-layers {
+  background-image: linear-gradient(rgba(38, 161, 212, 1), rgba(38, 161, 212, 1)) !important;
+  background-position: left top !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+.dnd_area-row-7-padding {
+  padding-top: 0px !important;
+  padding-bottom: 40px !important;
+}
+.dnd_area-row-8-margin {
+  margin-top: 0px !important;
+}
+.dnd_area-row-8-padding {
+  padding-top: 25px !important;
+  padding-bottom: 20px !important;
+}
+.dnd_area-row-9-padding {
+  padding-top: 70px !important;
+  padding-bottom: 60px !important;
+}
+.dnd_area-row-9-background-layers {
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)) !important;
+  background-position: left top !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+.dnd_area-row-10-margin {
+  margin-bottom: 17px !important;
+}
+.dnd_area-row-10-padding {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.dnd_area-row-10-background-layers {
+  background-image: linear-gradient(rgba(250, 250, 250, 1), rgba(250, 250, 250, 1)) !important;
+  background-position: left top !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+.dnd_area-row-11-padding {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.dnd_area-row-12-padding {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+.dnd_area-row-12-background-layers {
+  background-image: linear-gradient(rgba(38, 161, 212, 1), rgba(38, 161, 212, 1)) !important;
+  background-position: left top !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+.dnd_area-row-13-padding {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.dnd_area-row-14-margin {
+  margin-bottom: 9px !important;
+}
+.dnd_area-row-14-padding {
+  padding-top: 30px !important;
+  padding-bottom: 26px !important;
+}
+.dnd_area-row-14-background-layers {
+  background-image: linear-gradient(rgba(246, 251, 255, 1), rgba(246, 251, 255, 1)) !important;
+  background-position: left top !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+.dnd_area-row-15-padding {
+  padding-top: 40px !important;
+  padding-bottom: 0px !important;
+}
+.dnd_area-row-16-padding {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.dnd_area-row-17-background-layers {
+  background-image: linear-gradient(rgba(241, 244, 249, 1), rgba(241, 244, 249, 1)) !important;
+  background-position: left top !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+.cell_16892516429714-padding {
+  padding-top: 40px !important;
+}
+.cell_1636728565062-padding {
+  padding-left: 30px !important;
+}
+.cell_16893060250302-padding {
+  padding-top: 0px !important;
+}
+.cell_1689306025030-padding {
+  padding-top: 0px !important;
+}
+.cell_16893050663673-padding {
+  padding-top: 0px !important;
+}
+.cell_1637070062026-margin {
+  margin-top: -28px !important;
+}
+.cell_1637070062026-padding {
+  padding-top: -7px !important;
+}
+.cell_16893075082163-padding {
+  padding-top: 40px !important;
+}
+.cell_1692863774032-padding {
+  padding-top: 60px !important;
+}
+.cell_1689255662838-padding {
+  padding-top: 80px !important;
+}
+</style> 
+  <link rel="canonical" href="../../../com/gracesoft/www/online-booking-engine-1.html"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="msvalidate.01" content="4D9072709FE4907393BE9588424B44C3"> 
+  <meta name="google-site-verification" content="aqDUL1PQIvgzgkYTVkckfypeaMjXXl4yC6Z8NB05PEw"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet"> 
+  <style>
+html{
+    overflow-x: hidden;
+}
+   h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+ h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+   h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+    .h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  p{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #4b5563;
+  }
+  li{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+.btn{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px !important;
+    font-weight: 500;
+}
+  .ui-label {
+    color: #4b5563;
+    font-style: normal;
+    line-height: 1.28;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+  .badge--large{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+  .section-intro__overline{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px; 
+    font-weight: 500;
+}
+  .review__quote {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #4b5563;
+}
+  .accordion__title--default {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+  .nav__link {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2937;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+}
+  .featshow__btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+  .comptab__box .comptab__box--text{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+strong{
+font-family: 'Inter', sans-serif !important;
+}  
+  .strong{
+font-family: 'Inter', sans-serif !important;
+}  
+  .pricing__price{
+color: #1f2937;
+font-family: 'Poppins', sans-serif !important;
+}
+.pricing__info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px !important;
+}
+.pricing__feature__text{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+}
+
+div:has(> header) {
+   position: sticky !important;
+   top: 0px !important;
+   z-index: 1000 !important;
+}
+  .kl-navbar__button {
+    color: #4e598c;
+    display: inline-block;
+    font-family: Inter, sans-serif !important;
+    font-size: 12px;
+    font-weight: 700 !important;
+    line-height: 2em;
+    word-break: normal;
+}
+    .kl-footer__byline{
+  display: none !important;
+  }
+.kl-footer__content {
+    padding: 60px 0 120px 0;
+}
+.floating-left-buttons {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.floating-left-buttons.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hide checkbox */
+.contact-toggle {
+    display: none;
+}
+
+/* Desktop */
+.float-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.float-toggle {
+    display: none;
+}
+
+.whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    background: unset;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-btn img {
+    width: 40px;
+}
+
+.float-btn {
+    background: linear-gradient(111.02deg, #f5693f, #f53f71);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px !important;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.float-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .floating-left-buttons {
+        left: 15px;
+        bottom: 20px;
+    }
+
+    .float-toggle {
+        display: flex;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: linear-gradient(111.02deg, #f5693f, #f53f71);
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        border: 0;
+        padding: 0;
+    }
+
+    .float-options {
+        display: none;
+        margin-bottom: 12px;
+        align-items: flex-start;
+    }
+
+    .contact-toggle:checked ~ .float-options {
+        display: flex;
+    }
+
+    .whatsapp-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .whatsapp-btn img {
+        width: 38px;
+    }
+
+    .float-btn {
+        padding: 10px 16px;
+        font-size: 14px !important;
+    }
+}
+</style> 
+  <script>
+  setTimeout(load_js, 10000); // Delay 4 seconds in loading function
+setTimeout(load_jsgtag, 10000); // Delay 4 seconds in loading function
+function load_js()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://www.googletagmanager.com/gtag/js?id=AW-988721745';
+    head_ID.appendChild(script_element);
+}
+function load_jsgtag()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://www.googletagmanager.com/gtag/js?id=G-QC7JYCD38K';
+    head_ID.appendChild(script_element);
+}
+var delayInMilliseconds = 10000; //1 second
+
+setTimeout(function() {
+  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-988721745'); 
+}, delayInMilliseconds);
+</script> 
+  <!-- Google tag (gtag.js) --> 
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-988721745"></script>  --> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QC7JYCD38K"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-QC7JYCD38K'); </script> 
+  <meta property="og:url" content="https://www.gracesoft.com/online-booking-engine-1"> 
+  <script>var hsVars = { app_hs_base_url: 'https://app-na2.hubspot.com' };</script> 
+  <meta name="twitter:card" content="summary"> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWKBFQ95VD"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SWKBFQ95VD'); </script> 
+  <link rel="alternate" href="https://www.gracesoft.com/online-booking-engine" hreflang="x-default"> 
+  <link rel="alternate" hreflang="en" href="https://www.gracesoft.com/online-booking-engine"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
+  <!-- Bing ADS tag --> 
+  <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5011582", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script> 
+  <!-- Latest compiled and minified CSS --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css"> 
+  <link rel="stylesheet prefetch" href="http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css"> 
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+    .kl-navbar__item {
+    margin: 0px 25px;
+    position: relative;
+}
+  .kl-featured-cards__wrapper {
+    display: unset !important; 
+    flex-wrap: unset !important;
+    margin: -12px;
+}
+.kl-featured-card__body {
+    align-items: flex-start;
+    display: flex;
+    flex-basis: 65px !important;
+    flex-direction: column;
+    flex-grow: 3 !important;
+    justify-content: space-between;
+    padding: 32px 25px;
+}
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+  .navbar-nav > li {
+    padding-left: 0px !important; 
+     padding-right: 0px !important; 
+}
+  a{
+    font-family: 'Cabin',sans-serif !important;
+    font-weight: normal;
+  }
+  .header__top-bar {
+    display: block !important;
+}
+  .header__dnd .dnd-section {
+    padding: 0px 0px !important;
+}
+  a.read-more {
+    background-color: #e65f25;
+    color: #fff !important;
+    padding: 2px 6px;
+    border-radius: 6px;
+    display: inline-block !important;
+}
+  .fa-3x {
+    font-size: 2em !important;
+    color:#FF9667 !important;
+}
+        h1,h3, h4, h6, p, a {
+            font-family: 'Cabin', sans-serif;
+        }
+  h3 {
+    font-size: 1.75rem;
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+  .res-img{
+    margin: 200px auto 0px;
+  }
+  .atf{
+    height: 25em;
+  }
+        .iconh6 {
+            font-size: 24px;
+            color: #D57C56;
+        }
+  .hs-richtext h3 {
+    font-size: 23px;
+    color: #ff9667;
+}
+  .submitted-message , form{
+    background-color: rgb(255 255 255 / 0%) !important;
+  }
+  .row{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+        .sec-col-bg {
+            background-image: url('https://www.gracesoft.com/hubfs/Path%20291.png');
+            background-size: contain;
+    background-repeat: no-repeat;
+        }
+.dropdown-item.active, .dropdown-item:active {
+ color: #3a3a3a;
+    text-decoration: none;
+    background-color: #eaeaea;
+    border-radius: 10px;
+}
+
+        .section-bg {
+            background-color: #fff;
+            margin: 46px 47px;
+            border-radius: 16px;
+            -webkit-box-shadow: 0px 13px 12px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 13px 12px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 13px 12px 0px rgba(50, 50, 50, 0.75);
+            min-height: 281px;
+        }
+
+        .section-sub {
+            padding: 9px 9px;
+        }
+
+            .section-sub a {
+                text-align: right !important;
+                display: block;
+            }
+
+   .btn-primary {
+    background-color: #4e88bb !important;
+    border-color: #4e88bb !important;
+}
+  .bd-bottom {
+    border: 1px solid #fff;
+    padding: 1px 17px 3px 14px;
+    min-height: 226px;
+    margin: 12px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.13);
+}
+
+        .shadow-effect {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid #ECECEC;
+            box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+        }
+.fa{
+    font-size: 35px;
+    color: #ff9667;
+}
+  .fa-calendar-alt{
+    font-size: 35px;
+    color: #ff9667;
+  }
+  .fa-chart-line{
+        font-size: 35px;
+    color: #ff9667;
+  }
+        #customers-testimonials .shadow-effect p {
+            font-family: inherit;
+            font-size: 17px;
+            line-height: 1.5;
+            margin: 0 0 17px 0;
+            font-weight: 300;
+        }
+
+        .testimonial-name {
+            margin: -17px auto 0;
+            display: table;
+            width: auto;
+            background: #4E88BB;
+            padding: 9px 35px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
+        }
+
+        #customers-testimonials .item {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 40px;
+            opacity: .2;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        #customers-testimonials .owl-item.active.center .item {
+            opacity: 1;
+            -webkit-transform: scale3d(1.0, 1.0, 1);
+            transform: scale3d(1.0, 1.0, 1);
+        }
+
+        .owl-carousel .owl-item img {
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            max-width: 100%;
+            margin: 0 auto 17px;
+        }
+
+        #customers-testimonials.owl-carousel.owl-theme .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
+            background: #28CB75;
+            -webkit-transform: translate3d(0px, -50%, 0px) scale(0.7);
+            transform: translate3d(0px, -50%, 0px) scale(0.7);
+        }
+
+        #customers-testimonials.owl-carousel.owl-theme .owl-dots .owl-dot span {
+            background: #C4C4CC;
+            display: block;
+            height: 20px;
+            margin: 0 2px 5px;
+            -webkit-transform: translate3d(0px, -50%, 0px) scale(0.3);
+            transform: translate3d(0px, -50%, 0px) scale(0.3);
+            -webkit-transform-origin: 50% 50% 0;
+            transform-origin: 50% 50% 0;
+            transition: all 250ms ease-out 0s;
+            width: 20px;
+        }
+        .footer-sec h4 {
+            color: #fff;
+            font-size: 24px;
+        }
+        .footer-sec p {
+            color: #fff;
+            font-size: 16px;
+            line-height: 28px;
+        }
+        .footer-sec a {
+            color: #fff;
+            font-size: 16px;
+            line-height: 28px;
+        }
+        .social-text{
+            text-align:center;
+        }
+        .social-text a {
+            padding: 0px 9px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .btn-head1 {
+            width: 35px;
+            color: #fff;
+            padding: 5px 6px 4px 9px;
+            margin-top: 3px;
+            background-color: #FF9667;
+            border-radius: 17px;
+            border: 1px solid #FF9667;
+            overflow: hidden;
+            transition: width .55s ease;
+        }
+            .btn-head1:hover {
+                background-color: #FF9667;
+                color: #fff;
+                width: 207px;
+                border: 1px solid #FF9667;
+            }
+        .navbar-nav > li {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .nav-link{
+            color:#000;
+        }
+        .icon-sec{
+            text-align:center;
+        }
+        .icon-text {
+            padding: 18px 2px;
+        }
+        .success-sec {
+            padding: 9em 4em 0 0;
+            text-align: center;
+            color: #fff;
+        }
+        .nocon-bg {
+            background-image: url('https://www.gracesoft.com/hubfs/Group%201772.png');
+            background-size: cover;
+            height: 400px;
+        }
+        .seam-bg {
+            background-image: url('https://www.gracesoft.com/hubfs/IMG_1.jpg');
+            background-size: contain;
+    background-repeat: no-repeat;
+        }
+        .seam-bg-sec {
+            padding: 22px 14em;
+        }
+        .seam-bg-sec2{
+            text-align:right;
+        }
+      
+
+        .extended-dropdown {
+            min-width: 45rem;
+        }
+
+
+        .head-text {
+            white-space: normal;
+        }
+        /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+        @media (min-width: 481px) and (max-width: 767px) {
+                     .atf{
+            height: 9em;
+          }
+          .mobile-res{
+            text-align:center !important;
+          }
+          .img-res{
+            width:100% !important;
+          }
+          .res-img{
+            margin: 5px auto 0px;
+          }
+        }
+
+        /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+        @media (min-width: 320px) and (max-width: 480px) {
+          .cell_1692863774032-padding {
+    padding-top: 0px !important;
+}
+          #hs_cos_wrapper_module_16370657666803 h2{
+             margin-top: 30px !important;
+          }
+          #hs_cos_wrapper_widget_1689306067347 {
+            margin-top: 15px !important;
+          }
+          #hs_cos_wrapper_widget_1689306455787 {
+    padding-top: 0px !important;
+}
+          .dnd_area_main_banner-row-9-padding {
+    padding-top: 30px !important;
+}
+          #hs_cos_wrapper_widget_1689305647952 h2{
+            font-size: 24px !important;
+          }
+          #hs_cos_wrapper_widget_1637135271059 h2{
+            font-size: 25px !important;
+          }
+          #hs_cos_wrapper_widget_1689307318799 h2{
+            font-size: 23px !important;
+          }
+          #hs_cos_wrapper_widget_1689255776122 h2{
+            font-size: 23px !important;
+            margin-bottom: 15px !important;
+          }
+          .dnd_area_main_banner-row-13-padding {
+    padding-bottom: 45px !important;
+}
+          #hs_cos_wrapper_module_16370692811533 {
+    padding-top: 15px !important;
+}
+          #hs_cos_wrapper_module_16370657666803 h2{
+            font-size: 23px !important;
+    margin-bottom: 15px !important;
+          }
+          #hs_cos_wrapper_widget_1637135271059{
+            margin-top: 25px !important;
+          }
+          .cell_1689306025030-padding {
+    padding-top: 0px !important;
+}
+          .dnd_area_main_banner-row-12-padding {
+    padding-top: 45px !important;
+    padding-bottom: 30px !important;
+}
+          #hs_cos_wrapper_widget_1689252856446 h2 {
+            font-size: 23px !important;
+          }
+          #hs_cos_wrapper_widget_1689251770074{
+            margin-top: 20px;
+          }
+          #hs_cos_wrapper_widget_1689251869861_ h2{
+             font-size: 23px !important;
+            margin-bottom: 20px;
+          }
+          .dnd_area_main_banner-row-4-padding {
+    padding-top: 10px !important;
+            padding-bottom: 40px !important;
+}
+          #hs_cos_wrapper_widget_1689249034355_ h3{
+            font-size: 16px !important;
+          }
+           #hs_cos_wrapper_widget_1689248814244_ h3{
+            font-size: 16px !important;
+          }
+           #hs_cos_wrapper_widget_1689248782933_ h3{
+            font-size: 16px !important;
+          }
+           #hs_cos_wrapper_widget_1689248076790_ h3{
+            font-size: 16px !important;
+          }
+           #hs_cos_wrapper_widget_1689247865960_ h3{
+            font-size: 16px !important;
+          }
+          #hs_cos_wrapper_widget_1689247589080_ h3{
+            font-size: 16px !important;
+          }
+          .dnd_area_main_banner-row-1-padding {
+    padding-top: 40px !important;
+}
+          #hs_cos_wrapper_widget_1689247477285_ h2{
+            font-size: 20px !important;
+          }
+          #hs_cos_wrapper_widget_1689305073178_ img{
+                width: 100%;
+                height: auto;
+          }
+                    .mobile-res{
+            text-align:center !important;
+          }
+          .atf{
+            height: 9em;
+          }
+          .carousel-control-next {
+    margin-right: 0 !important;
+}
+          .carousel-control-prev {
+    margin-left:0 !important;
+}
+          .img-res{
+            width:100% !important;
+          }
+          .form-div{
+margin-top: 81px!important;
+}
+          .res-img{
+            margin: 5px auto 0px;
+          }
+            .icon-text {
+                padding: 46px 0;
+            }
+            .success-sec {
+                padding: 10px;
+
+            }
+            .nocon-bg {
+
+                height: 300px;
+            }
+            .seam-bg {
+                background-position: 35% 36%;
+            }
+            .seam-bg-sec {
+                padding: 10px;
+            }
+            .seam-bg-sec2{
+                text-align:center;
+            }
+            .thousand-sec {
+                padding: 46px 36px;
+            }
+            .extended-dropdown {
+                min-width:90%;
+            }
+        }
+  .hs-input{
+    height:30px !important;
+  }
+  .hs-input:not([type=file]) {
+    background-color: #ffffff !important;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px 9px;
+    font-family: 'Cabin', sans-serif;
+}
+  .hs-form-field label {
+    font-family: 'Cabin', sans-serif;
+    line-height: 28px;
+    margin: 0;
+        font-size: 14px;
+    color: #666;
+}
+  input.hs-button.primary.large {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 15px;
+    border: 1px solid #ff570b;
+    background-color: #ff570b;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+
+/* Testimonials */
+.testimonials blockquote {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: medium none;
+    color: #666;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px;
+    position: relative;
+      min-height: 162px;
+}
+.testimonials blockquote::before {
+    width: 0; 
+    height: 0;
+	right: 0;
+	bottom: 0;
+	content: " "; 
+	display: block; 
+	position: absolute;
+    border-bottom: 20px solid #fff;    
+	border-right: 0 solid transparent;
+	border-left: 15px solid transparent;
+	border-left-style: inset; /*FF fixes*/
+	border-bottom-style: inset; /*FF fixes*/
+}
+.testimonials blockquote::after {
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    content: " ";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #e63f0c transparent transparent transparent;
+}
+.testimonials .carousel-info img {
+    border: 1px solid #f5f5f5;
+    border-radius: 150px !important;
+    height: 75px;
+    padding: 3px;
+    width: 75px;
+}
+.testimonials .carousel-info {
+    overflow: hidden;
+}
+.testimonials .carousel-info img {
+    margin-right: 15px;
+}
+.testimonials .carousel-info span {
+    display: block;
+}
+.testimonials span.testimonials-name {
+    color: #e6400c;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 23px 0 7px;
+}
+.testimonials span.testimonials-post {
+    color: #656565;
+    font-size: 12px;
+}
+  .carousel-control-next {
+    margin-right: -135px;
+}
+    .carousel-control-prev {
+    margin-left: -135px;
+}
+  .carousel-indicators .active {
+    background-color: #febc9e !important;
+}
+  .carousel-indicators li {
+    background-color: rgb(109 103 103 / 50%) !important;
+}
+  .carousel-indicators {
+    bottom: -52px !important;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+  .img-res{
+    width:100% !important;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .img-res{
+    width:100% !important;
+  }
+  
+}
+</style> 
+  <meta name="generator" content="HubSpot">
+ </head> 
+ <body> 
+  <div class="body-wrapper   hs-content-id-124479873892 hs-landing-page hs-page hs-content-path-online-booking-engine-1 hs-content-name-online-booking-engine-new  "> 
+   <div data-global-resource-path="@marketplace/kalungicom/atlas-theme/templates/partials/header.html"> 
+    <div class="kl-dnd-header-area"> 
+     <div class="container-fluid"> 
+      <div class="row-fluid-wrapper"> 
+       <div class="row-fluid"> 
+        <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12"> 
+         <div class="row-fluid-wrapper row-depth-1 row-number-1 dnd_area_header_global-row-0-force-full-width-section dnd-section dnd_area_header_global-row-0-padding"> 
+          <div class="row-fluid "> 
+           <div class="span12 widget-span widget-type-custom_widget dnd_area_header_global-module-1-hidden dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+            <div id="hs_cos_wrapper_dnd_area_header_global-module-1" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+             <header class="kl-header"> 
+              <nav class="kl-navbar content-wrapper"> 
+               <a href="../../../com/gracesoft/www/index.html"> <img src="https://www.gracesoft.com/hubfs/GraceSoftLogo.webp" alt="GraceSoftLogo" width="100%" style="max-width: 100px; max-height: 48px" class="kl-navbar__logo"> </a> 
+               <div class="kl-navbar__mobile"> 
+                <button class="hamburger hamburger--squeeze kl-navbar__hamburger" type="button"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </button> 
+               </div> 
+               <div class="kl-navbar__content"> 
+                <ul class="kl-navbar__menu"> 
+                 <li class="kl-navbar__item"> <a href="#" class="kl-navbar__button kl-navbar__dropdown"> <span>PRODUCT</span> </a> 
+                  <div class="kl-navbar__panel"> 
+                   <div class="kl-navbar__panel-wrapper"> 
+                    <div class="kl-navbar__categories"> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/hotel-management-software"> <h3 style="text-align: left;">Hotel Management Software&nbsp;</h3> <p>&nbsp;</p> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/condo-management-software"> <h3 style="text-align: left;">Condo Management Software</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/campground-management-software"> <h3 style="text-align: left;">Campground &amp; RV Park Software</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/vacation-rental-management-software"> <h3 style="text-align: left;">Vacation Rental</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/bed-breakfast-reservation-software"> <h3>Bed &amp; Breakfast</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/online-booking-engine"> <h3>Online Booking Engine</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/channel-manager"> <h3>Channel Manager</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/websites"> <h3>Websites</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/point-of-sale-system"> <h3>Point of Sale</h3> <p>&nbsp;</p> </a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> </li> 
+                 <li class="kl-navbar__item"> <a href="https://www.gracesoft.com/pricing" class="kl-navbar__button kl-navbar__dropdown kl-navbar__leaf"> <span>PRICING</span> </a> </li> 
+                 <li class="kl-navbar__item"> <a href="../../../com/gracesoft/www/easy-innkeeping/support/help/marketing-reports/testimonials.html" class="kl-navbar__button kl-navbar__dropdown kl-navbar__leaf"> <span>TESTIMONIALS</span> </a> </li> 
+                 <li class="kl-navbar__item"> <a href="#" class="kl-navbar__button kl-navbar__dropdown"> <span>FEATURES</span> </a> 
+                  <div class="kl-navbar__panel"> 
+                   <div class="kl-navbar__panel-wrapper"> 
+                    <div class="kl-navbar__categories"> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/housekeeping"> <h3>HouseKeeping</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/crm-software"> <h3>CRM</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/unified-inbox"> <h3>Unified Inbox</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/payments"> <h3>Payment</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/multi-property"> <h3>Multi Property Management&nbsp;</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/calendar"> <h3>Reservation Calender</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/web-based-pms-software"> <h3>Web based</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/direct-billing"> <h3>Direct Billing</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/gift-certificate"> <h3>Gift Certificate</h3> <p>&nbsp;</p> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/quickbooks"> <h3>Quickbooks</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/facebook"> <h3>Facebook</h3> </a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> </li> 
+                 <li class="kl-navbar__item"> <a href="#" class="kl-navbar__button kl-navbar__dropdown"> <span>RESOURCES</span> </a> 
+                  <div class="kl-navbar__panel"> 
+                   <div class="kl-navbar__panel-wrapper"> 
+                    <div class="kl-navbar__categories"> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/case-studies"> <h3>Case Study</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/infographics"> <h3>Infographics</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/support-center"> <h3>Support Centers</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/blog"> <h3>Blog</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/webinar"> <h3>Webinar</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/pci-compliance"> <h3>PCI Compliances&nbsp;</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/devices"> <h3>Devices</h3> </a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> </li> 
+                 <li class="kl-navbar__item"> <a href="#" class="kl-navbar__button kl-navbar__dropdown"> <span>ABOUT US</span> </a> 
+                  <div class="kl-navbar__panel"> 
+                   <div class="kl-navbar__panel-wrapper"> 
+                    <div class="kl-navbar__categories"> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/about"> <h3>About Gracesoft</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/about/executive-team"> <h3>Dream Team</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/featured-clients"> <h3>Featured Clients</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="https://www.gracesoft.com/corporate-contact"> <h3>Contact Us</h3> </a> 
+                     </div> 
+                     <div class="kl-navbar__description"> 
+                      <a href="../../../com/gracesoft/www/press-release.html"> <h3>Press Release</h3> </a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> </li> 
+                 <li class="kl-navbar__item"> <a href="https://apps.gracesoft.com/pmsui/" class="kl-navbar__button kl-navbar__dropdown kl-navbar__leaf"> <span>LOGIN</span> </a> </li> 
+                </ul> 
+                <div class="kl-navbar__end"> 
+                 <a href="https://www.gracesoft.com/freetrial" class="button button--outlined dnd_area_header_global-module-1__button"> <span>FREE TRIAL</span> </a> 
+                 <a href="https://www.gracesoft.com/livedemo" class="button dnd_area_header_global-module-1__button"> <span>BOOK A DEMO</span> </a> 
+                </div> 
+               </div> 
+              </nav> 
+             </header> 
+             <div class="kl-header-placeholder"></div>
+            </div> 
+           </div>
+           <!--end widget-span --> 
+          </div>
+          <!--end row--> 
+         </div>
+         <!--end row-wrapper --> 
+        </div>
+        <!--end widget-span --> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="kl-dnd-header-spacer"></div> 
+   </div> 
+   <main class="body-container-wrapper"> 
+    <div class="container-fluid body-container body-container--home"> 
+     <div class="row-fluid-wrapper"> 
+      <div class="row-fluid"> 
+       <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12"> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 dnd_area-row-0-background-layers dnd-section dnd_area-row-0-padding dnd_area-row-0-background-image"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689246420692" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689246420692_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h1>Easy WebRez Hotel Booking Engine</h1></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689246323719" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689246323719_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="text-align: center; font-size: 20px; font-weight: normal;"><span style="color: #ffffff;">Welcome to GraceSoft's Easy WebRez, the commission-free hotel booking engine designed to effortlessly transform your website visitors into valued guests.</span></h2> <h2 style="text-align: center;"><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Start Free Trial</a></h2> 
+                <div class="modal fade show" id="exampleModalCenter" role="dialog" aria-labelledby="exampleModalCenterTitle" style="display: none;" tabindex="-1"> 
+                 <div class="modal-dialog modal-dialog-centered" role="document"> 
+                  <div class="modal-content">
+                   <!--<div class="modal-header"></div>--> 
+                   <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button> 
+                    <script charset="utf-8" type="text/javascript" src="http://js.hsforms.net/forms/embed/v2.js"></script> 
+                    <script>
+hbspt.forms.create({
+region: "na1",
+portalId: "107648",
+formId: "c068a264-cac2-4009-b036-2c7d302f4d16"
+});
+</script> 
+                   </div> 
+                   <!--<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>-->
+                  </div> 
+                 </div> 
+                </div></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd_area-row-1-padding dnd-section"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689247477285" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689247477285_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="text-align: center; font-size: 28px; line-height: 1.5;"><span style="color: #355ab7;"><strong>Powerful Booking Engine for Hotels, Motels, B&amp;Bs, Inns, Campgrounds, Vacation Rentals, Condos and more.</strong></span></h2></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd_area-row-2-padding dnd-section"> 
+         <div class="row-fluid "> 
+          <div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="4"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689247589080" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689247589080_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><img src="https://www.gracesoft.com/hs-fs/hubfs/Business.webp?width=131&amp;height=108&amp;name=Business.webp" alt="GraceSoft Gain More Business" width="131" height="108" loading="lazy" style="width: 95px; margin-left: auto; margin-right: auto; display: block; height: auto; max-width: 100%;" srcset="https://www.gracesoft.com/hs-fs/hubfs/Business.webp?width=66&amp;height=54&amp;name=Business.webp 66w, https://www.gracesoft.com/hs-fs/hubfs/Business.webp?width=131&amp;height=108&amp;name=Business.webp 131w, https://www.gracesoft.com/hs-fs/hubfs/Business.webp?width=197&amp;height=162&amp;name=Business.webp 197w, https://www.gracesoft.com/hs-fs/hubfs/Business.webp?width=262&amp;height=216&amp;name=Business.webp 262w, https://www.gracesoft.com/hs-fs/hubfs/Business.webp?width=328&amp;height=270&amp;name=Business.webp 328w, https://www.gracesoft.com/hs-fs/hubfs/Business.webp?width=393&amp;height=324&amp;name=Business.webp 393w" sizes="(max-width: 131px) 100vw, 131px"> <h3 style="text-align: center; font-size: 20px; margin-top: 19px;"><span style="color: #000;"><span style="font-weight: bold;">Gain More Business</span></span></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="4" data-w="4"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689247865960" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689247865960_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><img src="https://www.gracesoft.com/hs-fs/hubfs/booking.webp?width=131&amp;height=108&amp;name=booking.webp" alt="GraceSoft Commission-free Bookings" width="131" height="108" loading="lazy" style="width: 95px; margin-left: auto; margin-right: auto; display: block; height: auto; max-width: 100%;" srcset="https://www.gracesoft.com/hs-fs/hubfs/booking.webp?width=66&amp;height=54&amp;name=booking.webp 66w, https://www.gracesoft.com/hs-fs/hubfs/booking.webp?width=131&amp;height=108&amp;name=booking.webp 131w, https://www.gracesoft.com/hs-fs/hubfs/booking.webp?width=197&amp;height=162&amp;name=booking.webp 197w, https://www.gracesoft.com/hs-fs/hubfs/booking.webp?width=262&amp;height=216&amp;name=booking.webp 262w, https://www.gracesoft.com/hs-fs/hubfs/booking.webp?width=328&amp;height=270&amp;name=booking.webp 328w, https://www.gracesoft.com/hs-fs/hubfs/booking.webp?width=393&amp;height=324&amp;name=booking.webp 393w" sizes="(max-width: 131px) 100vw, 131px"> <h3 style="text-align: center; font-size: 20px; margin-top: 19px;"><span style="color: #000;"><span style="font-weight: bold;">Commission-free Bookings</span></span></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689248076790" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689248076790_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><img src="https://www.gracesoft.com/hs-fs/hubfs/directbooking.png?width=131&amp;height=108&amp;name=directbooking.png" alt="GraceSoft Direct Booking" width="131" height="108" loading="lazy" style="width: 95px; margin-left: auto; margin-right: auto; display: block; height: auto; max-width: 100%;" srcset="https://www.gracesoft.com/hs-fs/hubfs/directbooking.png?width=66&amp;height=54&amp;name=directbooking.png 66w, https://www.gracesoft.com/hs-fs/hubfs/directbooking.png?width=131&amp;height=108&amp;name=directbooking.png 131w, https://www.gracesoft.com/hs-fs/hubfs/directbooking.png?width=197&amp;height=162&amp;name=directbooking.png 197w, https://www.gracesoft.com/hs-fs/hubfs/directbooking.png?width=262&amp;height=216&amp;name=directbooking.png 262w, https://www.gracesoft.com/hs-fs/hubfs/directbooking.png?width=328&amp;height=270&amp;name=directbooking.png 328w, https://www.gracesoft.com/hs-fs/hubfs/directbooking.png?width=393&amp;height=324&amp;name=directbooking.png 393w" sizes="(max-width: 131px) 100vw, 131px"> <h3 style="text-align: center; font-size: 20px; margin-top: 19px;"><span style="color: #000;"><span style="font-weight: bold;">Increase Direct Booking</span></span></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-section dnd_area-row-3-padding"> 
+         <div class="row-fluid "> 
+          <div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="4"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689248782933" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689248782933_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><img src="https://www.gracesoft.com/hs-fs/hubfs/communication.webp?width=131&amp;height=108&amp;name=communication.webp" alt="GraceSoft Instant Communication" width="131" height="108" loading="lazy" style="width: 95px; margin-left: auto; margin-right: auto; display: block; height: auto; max-width: 100%;" srcset="https://www.gracesoft.com/hs-fs/hubfs/communication.webp?width=66&amp;height=54&amp;name=communication.webp 66w, https://www.gracesoft.com/hs-fs/hubfs/communication.webp?width=131&amp;height=108&amp;name=communication.webp 131w, https://www.gracesoft.com/hs-fs/hubfs/communication.webp?width=197&amp;height=162&amp;name=communication.webp 197w, https://www.gracesoft.com/hs-fs/hubfs/communication.webp?width=262&amp;height=216&amp;name=communication.webp 262w, https://www.gracesoft.com/hs-fs/hubfs/communication.webp?width=328&amp;height=270&amp;name=communication.webp 328w, https://www.gracesoft.com/hs-fs/hubfs/communication.webp?width=393&amp;height=324&amp;name=communication.webp 393w" sizes="(max-width: 131px) 100vw, 131px"> <h3 style="text-align: center; font-size: 20px; margin-top: 19px;"><span style="color: #000;"><span style="font-weight: bold;">Instant Communication</span></span></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="4" data-w="4"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689248814244" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689248814244_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><img src="https://www.gracesoft.com/hs-fs/hubfs/optimize.webp?width=131&amp;height=108&amp;name=optimize.webp" alt="GraceSoft Mobile-Optimized" width="131" height="108" loading="lazy" style="width: 95px; margin-left: auto; margin-right: auto; display: block; height: auto; max-width: 100%;" srcset="https://www.gracesoft.com/hs-fs/hubfs/optimize.webp?width=66&amp;height=54&amp;name=optimize.webp 66w, https://www.gracesoft.com/hs-fs/hubfs/optimize.webp?width=131&amp;height=108&amp;name=optimize.webp 131w, https://www.gracesoft.com/hs-fs/hubfs/optimize.webp?width=197&amp;height=162&amp;name=optimize.webp 197w, https://www.gracesoft.com/hs-fs/hubfs/optimize.webp?width=262&amp;height=216&amp;name=optimize.webp 262w, https://www.gracesoft.com/hs-fs/hubfs/optimize.webp?width=328&amp;height=270&amp;name=optimize.webp 328w, https://www.gracesoft.com/hs-fs/hubfs/optimize.webp?width=393&amp;height=324&amp;name=optimize.webp 393w" sizes="(max-width: 131px) 100vw, 131px"> <h3 style="text-align: center; font-size: 20px; margin-top: 19px;"><span style="color: #000;"><span style="font-weight: bold;">Mobile-Optimized</span></span></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689249034355" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689249034355_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><img src="https://www.gracesoft.com/hs-fs/hubfs/secure-payment.webp?width=131&amp;height=108&amp;name=secure-payment.webp" alt="GraceSoft Secure Payment" width="131" height="108" loading="lazy" style="width: 95px; margin-left: auto; margin-right: auto; display: block; height: auto; max-width: 100%;" srcset="https://www.gracesoft.com/hs-fs/hubfs/secure-payment.webp?width=66&amp;height=54&amp;name=secure-payment.webp 66w, https://www.gracesoft.com/hs-fs/hubfs/secure-payment.webp?width=131&amp;height=108&amp;name=secure-payment.webp 131w, https://www.gracesoft.com/hs-fs/hubfs/secure-payment.webp?width=197&amp;height=162&amp;name=secure-payment.webp 197w, https://www.gracesoft.com/hs-fs/hubfs/secure-payment.webp?width=262&amp;height=216&amp;name=secure-payment.webp 262w, https://www.gracesoft.com/hs-fs/hubfs/secure-payment.webp?width=328&amp;height=270&amp;name=secure-payment.webp 328w, https://www.gracesoft.com/hs-fs/hubfs/secure-payment.webp?width=393&amp;height=324&amp;name=secure-payment.webp 393w" sizes="(max-width: 131px) 100vw, 131px"> <h3 style="text-align: center; font-size: 20px; margin-top: 19px;"><span style="color: #000;"><span style="font-weight: bold;">Secure Payment</span></span></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-section dnd_area-row-4-background-layers dnd_area-row-4-padding dnd_area-row-4-background-gradient"> 
+         <div class="row-fluid "> 
+          <div class="span6 widget-span widget-type-cell cell_16892516429714-padding dnd-column" style="" data-widget-type="cell" data-x="0" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-15 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689251869861" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689251869861_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000; font-weight: bold;">Make your business successful with our online booking engine</span></h2> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Customize the booking engine with your images and photos.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Direct connection to online travel agencies (OTAs) for seamless integration and booking.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Create online promotion codes.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Collect payment at the time of booking.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Package and shopping cart options.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Content management for your website.</span></p></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span6 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="6" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-16 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget widget_1689251770074-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689251770074" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689251770074_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/devices%20booking%20engine-min.webp?width=2400&amp;height=1800&amp;name=devices%20booking%20engine-min.webp" class="hs-image-widget " width="2400" height="1800" style="max-width: 100%; height: auto;" alt="Online Booking Engine" title="Online Booking Engine" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/devices%20booking%20engine-min.webp?width=1200&amp;height=900&amp;name=devices%20booking%20engine-min.webp 1200w, https://www.gracesoft.com/hs-fs/hubfs/devices%20booking%20engine-min.webp?width=2400&amp;height=1800&amp;name=devices%20booking%20engine-min.webp 2400w, https://www.gracesoft.com/hs-fs/hubfs/devices%20booking%20engine-min.webp?width=3600&amp;height=2700&amp;name=devices%20booking%20engine-min.webp 3600w, https://www.gracesoft.com/hs-fs/hubfs/devices%20booking%20engine-min.webp?width=4800&amp;height=3600&amp;name=devices%20booking%20engine-min.webp 4800w, https://www.gracesoft.com/hs-fs/hubfs/devices%20booking%20engine-min.webp?width=6000&amp;height=4500&amp;name=devices%20booking%20engine-min.webp 6000w, https://www.gracesoft.com/hs-fs/hubfs/devices%20booking%20engine-min.webp?width=7200&amp;height=5400&amp;name=devices%20booking%20engine-min.webp 7200w" sizes="(max-width: 2400px) 100vw, 2400px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-17 dnd-section dnd_area-row-5-padding"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-18 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689252856446" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689252856446_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h2>User-Friendly and Responsive Bookings with Easy WebRez</h2></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-19 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689252736588" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689252736588_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="text-align: center; font-size: 16px; font-weight: normal; line-height: 1.5;"><span style="color: #000;">Easy WebRez, the booking engine that effortlessly adapts to any device and provides an intuitive user experience. Our responsive design ensures that guests can easily access and book accommodations from desktops, laptops, tablets, and smartphones. Easy WebRez has been thoughtfully crafted to meet user preferences and exceed expectations, offering a range of features to enhance the booking process.</span></p></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-20 dnd_area-row-6-padding dnd_area-row-6-vertical-alignment dnd-section dnd_area-row-6-margin dnd_area-row-6-background-layers dnd_area-row-6-background-color"> 
+         <div class="row-fluid "> 
+          <div class="span8 widget-span widget-type-cell cell_1636622147120-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="8"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-21 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget widget_1636619902690-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1636619902690" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1636619902690_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/ezgif.com-gif-to-webp.webp?width=1000&amp;height=563&amp;name=ezgif.com-gif-to-webp.webp" class="hs-image-widget " width="1000" height="563" style="max-width: 100%; height: auto;" alt="Responsive online reservation software" title="Responsive online reservation software" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/ezgif.com-gif-to-webp.webp?width=500&amp;height=282&amp;name=ezgif.com-gif-to-webp.webp 500w, https://www.gracesoft.com/hs-fs/hubfs/ezgif.com-gif-to-webp.webp?width=1000&amp;height=563&amp;name=ezgif.com-gif-to-webp.webp 1000w, https://www.gracesoft.com/hs-fs/hubfs/ezgif.com-gif-to-webp.webp?width=1500&amp;height=845&amp;name=ezgif.com-gif-to-webp.webp 1500w, https://www.gracesoft.com/hs-fs/hubfs/ezgif.com-gif-to-webp.webp?width=2000&amp;height=1126&amp;name=ezgif.com-gif-to-webp.webp 2000w, https://www.gracesoft.com/hs-fs/hubfs/ezgif.com-gif-to-webp.webp?width=2500&amp;height=1408&amp;name=ezgif.com-gif-to-webp.webp 2500w, https://www.gracesoft.com/hs-fs/hubfs/ezgif.com-gif-to-webp.webp?width=3000&amp;height=1689&amp;name=ezgif.com-gif-to-webp.webp 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span4 widget-span widget-type-cell cell_1636728565062-padding dnd-column cell_1636728565062-vertical-alignment" style="" data-widget-type="cell" data-x="8" data-w="4"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-22 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_16367276797323" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_module_16367276797323_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
+                <div style="font-weight: bold; text-align: left;"> 
+                 <p style="line-height: 1.5; font-size: 16px;"><span style="color: #fff; font-weight: 600;">* Responsive Design</span></p> 
+                 <p style="line-height: 1.5; font-size: 16px;"><span style="color: #fff; font-weight: 600;">* User-Friendly Interface</span></p> 
+                 <p style="line-height: 1.5; font-size: 16px;"><span style="color: #fff; font-weight: 600;">* Customizable Features</span></p> 
+                 <p style="line-height: 1.5; font-size: 16px;"><span style="color: #fff; font-weight: 600;">* Impressive User Experience</span></p> 
+                </div></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-23 dnd-section dnd_area-row-7-padding"> 
+         <div class="row-fluid "> 
+          <div class="span5 widget-span widget-type-cell cell_1689306025030-padding dnd-column" style="" data-widget-type="cell" data-x="0" data-w="5"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-24 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689306455787" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689306455787_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000000; font-weight: bold;">CMS Editor</span></h2> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #000000;">With Easy WebRez, tailor your booking engine to look exactly like a standalone website.</span></p> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #000000;">Select from many pre-designed templates, upload inviting pictures and an attractive background image, and harness the power of CMS editor to create your personalized website content. Create website experiences to entice your guests.</span></p></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span7 widget-span widget-type-cell cell_16893060250302-padding dnd-column" style="" data-widget-type="cell" data-x="5" data-w="7"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-25 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget widget_1689306067347-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689306067347" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689306067347_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/ww.webp?width=2000&amp;height=1028&amp;name=ww.webp" class="hs-image-widget " width="2000" height="1028" style="max-width: 100%; height: auto;" alt="CMS Editor" title="CMS Editor" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/ww.webp?width=1000&amp;height=514&amp;name=ww.webp 1000w, https://www.gracesoft.com/hs-fs/hubfs/ww.webp?width=2000&amp;height=1028&amp;name=ww.webp 2000w, https://www.gracesoft.com/hs-fs/hubfs/ww.webp?width=3000&amp;height=1542&amp;name=ww.webp 3000w, https://www.gracesoft.com/hs-fs/hubfs/ww.webp?width=4000&amp;height=2056&amp;name=ww.webp 4000w, https://www.gracesoft.com/hs-fs/hubfs/ww.webp?width=5000&amp;height=2570&amp;name=ww.webp 5000w, https://www.gracesoft.com/hs-fs/hubfs/ww.webp?width=6000&amp;height=3084&amp;name=ww.webp 6000w" sizes="(max-width: 2000px) 100vw, 2000px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-26 dnd-section dnd_area-row-8-margin dnd_area-row-8-padding dnd_area-row-8-vertical-alignment"> 
+         <div class="row-fluid "> 
+          <div class="span6 widget-span widget-type-cell cell_1637322741286-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-27 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module module_1637140867854-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_1637140867854" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_module_1637140867854_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/bes%20copy-min.png?width=235&amp;height=473&amp;name=bes%20copy-min.png" class="hs-image-widget " width="235" height="473" alt="GraceSoft Instant Notification" title="GraceSoft Instant Notification" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/bes%20copy-min.png?width=118&amp;height=237&amp;name=bes%20copy-min.png 118w, https://www.gracesoft.com/hs-fs/hubfs/bes%20copy-min.png?width=235&amp;height=473&amp;name=bes%20copy-min.png 235w, https://www.gracesoft.com/hs-fs/hubfs/bes%20copy-min.png?width=353&amp;height=710&amp;name=bes%20copy-min.png 353w, https://www.gracesoft.com/hs-fs/hubfs/bes%20copy-min.png?width=470&amp;height=946&amp;name=bes%20copy-min.png 470w, https://www.gracesoft.com/hs-fs/hubfs/bes%20copy-min.png?width=588&amp;height=1183&amp;name=bes%20copy-min.png 588w, https://www.gracesoft.com/hs-fs/hubfs/bes%20copy-min.png?width=705&amp;height=1419&amp;name=bes%20copy-min.png 705w" sizes="(max-width: 235px) 100vw, 235px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span6 widget-span widget-type-cell dnd-column cell_16367241870262-vertical-alignment" style="" data-widget-type="cell" data-x="6" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-28 cell_16367241870262-row-0-vertical-alignment dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-cell cell_16371352713752-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-29 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                 <div id="hs_cos_wrapper_widget_1637135271059" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                  <span id="hs_cos_wrapper_widget_1637135271059_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000; font-weight: bold;">Instant notification</span></h2> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #000;">Can send instant notification to your guests for their successful bookings &amp; their check-outs through emails &amp; SMS.</span></p> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #000;">The Easy WebRez is integrated with the customer relationship manager, which helps you manage your guest’s details and also helps you to be in touch with your guests to market your offers.</span></p></span>
+                 </div> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-30 dnd-section dnd_area-row-9-padding dnd_area-row-9-background-color dnd_area-row-9-background-layers"> 
+         <div class="row-fluid "> 
+          <div class="span5 widget-span widget-type-cell cell_16893050663673-padding dnd-column" style="" data-widget-type="cell" data-x="0" data-w="5"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-31 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689305140535" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689305140535_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000; font-weight: bold;">Secure Payment Processing</span></h2> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #000;">We prioritize the security and ease of online transactions. Easy WebRez seamlessly integrates with trusted payment processors, including Stripe, Square, Authorize.Net, PayStack, PayPal, Cashfree, Shift 4, and Moneris. This provides your guests with a range of secure payment options, giving them peace of mind when completing their reservations.</span></p> <h3 style="text-align: center;"><a href="https://www.gracesoft.com/payments" target="_blank" class="btn btn-primary" rel="noopener">Learn More</a></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span7 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="5" data-w="7"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-32 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget widget_1689305073178-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689305073178" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689305073178_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/auto.webp?width=2000&amp;height=686&amp;name=auto.webp" class="hs-image-widget " width="2000" height="686" style="max-width: 100%; height: auto;" alt="Secure Payment Processing" title="Secure Payment Processing" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/auto.webp?width=1000&amp;height=343&amp;name=auto.webp 1000w, https://www.gracesoft.com/hs-fs/hubfs/auto.webp?width=2000&amp;height=686&amp;name=auto.webp 2000w, https://www.gracesoft.com/hs-fs/hubfs/auto.webp?width=3000&amp;height=1029&amp;name=auto.webp 3000w, https://www.gracesoft.com/hs-fs/hubfs/auto.webp?width=4000&amp;height=1372&amp;name=auto.webp 4000w, https://www.gracesoft.com/hs-fs/hubfs/auto.webp?width=5000&amp;height=1715&amp;name=auto.webp 5000w, https://www.gracesoft.com/hs-fs/hubfs/auto.webp?width=6000&amp;height=2058&amp;name=auto.webp 6000w" sizes="(max-width: 2000px) 100vw, 2000px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-33 dnd_area-row-10-margin dnd-section dnd_area-row-10-background-layers dnd_area-row-10-background-color dnd_area-row-10-padding dnd_area-row-10-vertical-alignment"> 
+         <div class="row-fluid "> 
+          <div class="span6 widget-span widget-type-cell cell_16370695924782-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-34 cell_16370695924782-row-0-vertical-alignment dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-cell cell_1637070062026-padding cell_1637070062026-vertical-alignment dnd-column cell_1637070062026-margin" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-35 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                 <div id="hs_cos_wrapper_module_16370657666803" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                  <span id="hs_cos_wrapper_module_16370657666803_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000; font-weight: bold;">Use Shopping Cart to Sell Tours and Amenities</span></h2> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Using Easy WebRez, showcase your retail and gift shop items to your online customers.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Treat your customers by helping them purchase additional items before they land at your property.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Maximize the value of guest bookings using the integrated functionality to upsell meal plans, spa treatment, guided tours, or any other add-on services after the guest has committed to the reservation. Make more profitable sales today!</span></p></span>
+                 </div> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span6 widget-span widget-type-cell cell_1637322743650-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="6" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-36 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module module_16370692811533-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_16370692811533" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_module_16370692811533_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/gift%20cart%20new_Mesa%20de%20trabajo%201.png?width=500&amp;height=414&amp;name=gift%20cart%20new_Mesa%20de%20trabajo%201.png" class="hs-image-widget " width="500" height="414" style="max-width: 100%; height: auto;" alt="GraceSoft Shopping Cart to Sell Tours and Amenities" title="GraceSoft Shopping Cart to Sell Tours and Amenities" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/gift%20cart%20new_Mesa%20de%20trabajo%201.png?width=250&amp;height=207&amp;name=gift%20cart%20new_Mesa%20de%20trabajo%201.png 250w, https://www.gracesoft.com/hs-fs/hubfs/gift%20cart%20new_Mesa%20de%20trabajo%201.png?width=500&amp;height=414&amp;name=gift%20cart%20new_Mesa%20de%20trabajo%201.png 500w, https://www.gracesoft.com/hs-fs/hubfs/gift%20cart%20new_Mesa%20de%20trabajo%201.png?width=750&amp;height=621&amp;name=gift%20cart%20new_Mesa%20de%20trabajo%201.png 750w, https://www.gracesoft.com/hs-fs/hubfs/gift%20cart%20new_Mesa%20de%20trabajo%201.png?width=1000&amp;height=828&amp;name=gift%20cart%20new_Mesa%20de%20trabajo%201.png 1000w, https://www.gracesoft.com/hs-fs/hubfs/gift%20cart%20new_Mesa%20de%20trabajo%201.png?width=1250&amp;height=1035&amp;name=gift%20cart%20new_Mesa%20de%20trabajo%201.png 1250w, https://www.gracesoft.com/hs-fs/hubfs/gift%20cart%20new_Mesa%20de%20trabajo%201.png?width=1500&amp;height=1242&amp;name=gift%20cart%20new_Mesa%20de%20trabajo%201.png 1500w" sizes="(max-width: 500px) 100vw, 500px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-37 dnd-section dnd_area-row-11-padding"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-38 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689307318799" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689307318799_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h2>Stats &amp; Reports to measure results</h2></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-39 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689307345100" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689307345100_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="text-align: center; font-size: 16px; font-weight: normal; line-height: 1.5;"><span style="color: #000;">Also, the booking engine helps you know what is happening on your property regarding the reservations, revenue &amp; other major reports to measure the performance.</span></p></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-40 dnd_area-row-12-background-color dnd_area-row-12-padding dnd-section dnd_area-row-12-background-layers"> 
+         <div class="row-fluid "> 
+          <div class="span7 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="7"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-41 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget widget_1689307571989-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689307571989" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689307571989_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hubfs/custom%20website.webp" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="GraceSoft Website Builder" title="GraceSoft Website Builder" loading="lazy"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span5 widget-span widget-type-cell cell_16893075082163-padding dnd-column" style="" data-widget-type="cell" data-x="7" data-w="5"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-42 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689307736816" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689307736816_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #fff; font-weight: bold;">Website Builder Admin</span></h2> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #fff;">Website Builder customers can request admin access to make changes to text or images on their website hosted by GraceSoft. Websites hosted by GraceSoft have either ‘static’ pages or ‘dynamic pages.’ The admin access includes a Media Library where various types of media can be added to your website.</span></p> <h3 style="text-align: center;"><a href="https://www.gracesoft.com/websites" target="_blank" class="btn btn-light" rel="noopener">Learn More</a></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-43 dnd_area-row-13-padding dnd-section"> 
+         <div class="row-fluid "> 
+          <div class="span5 widget-span widget-type-cell cell_1692863774032-padding dnd-column" style="" data-widget-type="cell" data-x="0" data-w="5"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-44 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689305647952" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689305647952_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000; font-weight: bold;">Package and Hourly Reservations</span></h2> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Advance your business to the next level and entice your guests to stay longer by offering them attractive packages and discounts.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Using Easy WebRez’s package booking feature, create and offer promotional packages like a 3-day whale watch tour or a free spa service and attract potential bookers.</span></p> <p style="line-height: 1.5; font-size: 16px;"><span style="color: #000; background-color: transparent;">* Use the hourly reservation feature to allow guests to book rental items (boats, bikes, etc.) or use the conference rooms.</span></p> <h3 style="text-align: center;"><a href="https://www.gracesoft.com/hotel-management-software" target="_blank" class="btn btn-primary" rel="noopener">Learn More</a></h3></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span7 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="5" data-w="7"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-45 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module widget_1689305505916-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689305505916" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689305505916_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/qt.webp?width=2000&amp;height=1319&amp;name=qt.webp" class="hs-image-widget " width="2000" height="1319" style="max-width: 100%; height: auto;" alt="Package and Hourly Reservations" title="Package and Hourly Reservations" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/qt.webp?width=1000&amp;height=660&amp;name=qt.webp 1000w, https://www.gracesoft.com/hs-fs/hubfs/qt.webp?width=2000&amp;height=1319&amp;name=qt.webp 2000w, https://www.gracesoft.com/hs-fs/hubfs/qt.webp?width=3000&amp;height=1979&amp;name=qt.webp 3000w, https://www.gracesoft.com/hs-fs/hubfs/qt.webp?width=4000&amp;height=2638&amp;name=qt.webp 4000w, https://www.gracesoft.com/hs-fs/hubfs/qt.webp?width=5000&amp;height=3298&amp;name=qt.webp 5000w, https://www.gracesoft.com/hs-fs/hubfs/qt.webp?width=6000&amp;height=3957&amp;name=qt.webp 6000w" sizes="(max-width: 2000px) 100vw, 2000px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-46 dnd_area-row-14-background-layers dnd_area-row-14-background-color dnd_area-row-14-vertical-alignment dnd-section dnd_area-row-14-margin dnd_area-row-14-padding"> 
+         <div class="row-fluid "> 
+          <div class="span7 widget-span widget-type-cell cell_1637318876253-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="7"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-47 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget widget_1637043827738-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1637043827738" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1637043827738_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/booking%20engine%20design%20rate-01-min.png?width=600&amp;height=337&amp;name=booking%20engine%20design%20rate-01-min.png" class="hs-image-widget " width="600" height="337" style="max-width: 100%; height: auto;" alt="Hotel software rates &amp; availability calendar" title="Hotel software rates &amp; availability calendar" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/booking%20engine%20design%20rate-01-min.png?width=300&amp;height=169&amp;name=booking%20engine%20design%20rate-01-min.png 300w, https://www.gracesoft.com/hs-fs/hubfs/booking%20engine%20design%20rate-01-min.png?width=600&amp;height=337&amp;name=booking%20engine%20design%20rate-01-min.png 600w, https://www.gracesoft.com/hs-fs/hubfs/booking%20engine%20design%20rate-01-min.png?width=900&amp;height=506&amp;name=booking%20engine%20design%20rate-01-min.png 900w, https://www.gracesoft.com/hs-fs/hubfs/booking%20engine%20design%20rate-01-min.png?width=1200&amp;height=674&amp;name=booking%20engine%20design%20rate-01-min.png 1200w, https://www.gracesoft.com/hs-fs/hubfs/booking%20engine%20design%20rate-01-min.png?width=1500&amp;height=843&amp;name=booking%20engine%20design%20rate-01-min.png 1500w, https://www.gracesoft.com/hs-fs/hubfs/booking%20engine%20design%20rate-01-min.png?width=1800&amp;height=1011&amp;name=booking%20engine%20design%20rate-01-min.png 1800w" sizes="(max-width: 600px) 100vw, 600px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span5 widget-span widget-type-cell cell_1637318882615-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="7" data-w="5"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-48 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1636729084243" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1636729084243_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000; font-weight: bold;">Real-Time Rates and Availability Instant Updates for Your Guests</span></h2> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #000;">With our online booking engine, rates and availability are automatically updated in real-time, ensuring that guests have access to the most accurate and up-to-date information. This means that your guests can see real-time rates and the number of available units to book, providing them with a seamless and transparent booking experience.</span></p></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-49 dnd-section dnd_area-row-15-padding"> 
+         <div class="row-fluid "> 
+          <div class="span6 widget-span widget-type-cell cell_1689255662838-padding dnd-column" style="" data-widget-type="cell" data-x="0" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-50 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689255776122" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <span id="hs_cos_wrapper_widget_1689255776122_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2 style="font-size: 28px; text-align: left;"><span style="color: #000; font-weight: bold;">Map Location: Help Guests Find Your Property with Ease</span></h2> <p style="font-size: 16px; line-height: 1.5; text-align: left;"><span style="color: #000;">Our reservation software includes a convenient map location feature that allows you to add your address and directions. By utilizing online Google Maps integration, your guests can easily locate your property and navigate their way to you.</span></p></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span6 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="6" data-w="6"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-51 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module widget_1689255685093-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1689255685093" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <span id="hs_cos_wrapper_widget_1689255685093_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.gracesoft.com/hs-fs/hubfs/image%20(25).png?width=1171&amp;height=868&amp;name=image%20(25).png" class="hs-image-widget " width="1171" height="868" style="max-width: 100%; height: auto;" alt="Map Location" title="Map Location" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/image%20(25).png?width=586&amp;height=434&amp;name=image%20(25).png 586w, https://www.gracesoft.com/hs-fs/hubfs/image%20(25).png?width=1171&amp;height=868&amp;name=image%20(25).png 1171w, https://www.gracesoft.com/hs-fs/hubfs/image%20(25).png?width=1757&amp;height=1302&amp;name=image%20(25).png 1757w, https://www.gracesoft.com/hs-fs/hubfs/image%20(25).png?width=2342&amp;height=1736&amp;name=image%20(25).png 2342w, https://www.gracesoft.com/hs-fs/hubfs/image%20(25).png?width=2928&amp;height=2170&amp;name=image%20(25).png 2928w, https://www.gracesoft.com/hs-fs/hubfs/image%20(25).png?width=3513&amp;height=2604&amp;name=image%20(25).png 3513w" sizes="(max-width: 1171px) 100vw, 1171px"></span>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-52 dnd_area-row-16-padding dnd-section dnd_area-row-16-vertical-alignment"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell cell_16371409339812-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-53 cell_16371409339812-row-0-vertical-alignment dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-cell cell_16373200245882-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-54 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                 <div id="hs_cos_wrapper_widget_1637144130334" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                  <span id="hs_cos_wrapper_widget_1637144130334_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-size: 20px; text-align: center;">The simple, attractive &amp; user-friendly booking engine allows your guests to book multiple rooms in a single booking.</p> 
+                   <div style="text-align: center;">
+                    <a href="https://www.gracesoft.com/freetrial" class="btn btn-primary">Get Free Trail</a>
+                   </div></span>
+                 </div> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-55 dnd_area-row-17-background-color dnd-section dnd_area-row-17-background-layers"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-56 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1709542264152" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="kl-rich-text"> 
+                <div>
+                 <h2 style="margin-left: 15px;"><span style="color: #f9c784;"><strong>Blog</strong></span></h2>
+                </div> 
+               </div>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-57 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1709537684089" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="kl-featured-cards"> 
+                <div class="kl-featured-cards__wrapper"> 
+                 <div class="kl-featured-cards__card-wrapper"> 
+                  <div class="kl-featured-card"> 
+                   <div class="kl-featured-card__body"> 
+                    <div class="kl-featured-card__text"> 
+                     <div class="kl-featured-card__content"> 
+                      <h3 class="kl-featured-card__preheader">Hotel Booking Engine</h3> 
+                      <h2>Choosing the Best Hotel Booking Engine: The Ultimate Guide</h2> 
+                      <p><span>Discover the importance of a hotel booking engine and learn how to choose the best one for your business.&nbsp;</span></p> 
+                      <h4><a href="../../../com/gracesoft/www/blog/how-to-choose-the-best-hotel-booking-engine.html" class="button button--arrow module_17078434576674__secondary_cta" target="_blank" rel="noopener"> <span>LEARN MORE</span> </a></h4> 
+                     </div> 
+                    </div> 
+                   </div> 
+                   <div class="kl-featured-card__image" style="max-width: 100%; height: auto;"> 
+                    <img src="https://www.gracesoft.com/hubfs/BookingEngineBanner.png" alt="Online Booking Engine"> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div class="kl-featured-cards__column"> 
+                 </div> 
+                </div> 
+               </div>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+       </div>
+       <!--end widget-span --> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+   <div data-global-resource-path="@marketplace/kalungicom/atlas-theme/templates/partials/footer.html"> 
+    <div id="hs_cos_wrapper_Footer" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+     <footer class="kl-footer"> 
+      <div class="kl-footer__wrapper content-wrapper"> 
+       <div class="kl-footer__content"> 
+        <div class="kl-footer__info"> 
+         <a href="../../../com/gracesoft/www/index.html"> <img src="https://www.gracesoft.com/hs-fs/hubfs/Praveen/25%20logo%202.png?width=156&amp;height=73&amp;name=25%20logo%202.png" alt="GraceSoft Logo" width="156" height="73" loading="" srcset="https://www.gracesoft.com/hs-fs/hubfs/Praveen/25%20logo%202.png?width=78&amp;height=37&amp;name=25%20logo%202.png 78w, https://www.gracesoft.com/hs-fs/hubfs/Praveen/25%20logo%202.png?width=156&amp;height=73&amp;name=25%20logo%202.png 156w, https://www.gracesoft.com/hs-fs/hubfs/Praveen/25%20logo%202.png?width=234&amp;height=110&amp;name=25%20logo%202.png 234w, https://www.gracesoft.com/hs-fs/hubfs/Praveen/25%20logo%202.png?width=312&amp;height=146&amp;name=25%20logo%202.png 312w, https://www.gracesoft.com/hs-fs/hubfs/Praveen/25%20logo%202.png?width=390&amp;height=183&amp;name=25%20logo%202.png 390w, https://www.gracesoft.com/hs-fs/hubfs/Praveen/25%20logo%202.png?width=468&amp;height=219&amp;name=25%20logo%202.png 468w" sizes="(max-width: 156px) 100vw, 156px"> </a> 
+         <div class="kl-footer__address">
+          <p><span><span data-hs-icon-hubl="true" style="display: inline-block; fill: #FFFFFF;"><span id="hs_cos_wrapper_Footer_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512" height="14" aria-hidden="true">
+               <g id="Location Dot1_layer">
+                <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+               </g>
+              </svg></span></span>&nbsp; 7310 Cortez Rd,</span><br><span>&nbsp; &nbsp; &nbsp;Richmond, TX 77469</span><br><span>&nbsp; &nbsp; &nbsp;United States</span></p> 
+          <!-- HTML !--> 
+          <p style="margin-left: 12px; font-weight: 600;">Easy Innkeeping: 25 Years of Innovation, redefining hotel management software standards.</p> 
+          <div class="col-md-12" style="padding: 0px;"> 
+           <h2 style="color: #fff; text-align: left; font-size: 22px; padding: 0px 0 0px 7px;">Certifications</h2> 
+           <a href="https://www.gracesoft.com/pci-compliance" target="_blank" rel="noopener" style="float: left;"><img loading="lazy" src="https://www.gracesoft.com/hubfs/NoPath%20-%20Copy.png" alt="PCI Compliance" style="width: 80px; height: 60px;"> </a> 
+           <img loading="lazy" src="https://www.gracesoft.com/hubfs/NoPath%20-%20Copy%20(2).png" alt="Comodo Secure" style="width: 80px; height: 60px;">
+          </div> 
+          <!--christmas-->
+         </div> 
+         <ul class="kl-footer__social"> 
+         </ul> 
+        </div> 
+        <div class="kl-footer__menu"> 
+         <div class="kl-footer__group"> 
+          <h3>Contact Us</h3> 
+          <ul> 
+           <li> <a href="#">1-713-981-5300</a> </li> 
+           <li> <a href="#"> 1-888-781-1086</a> </li> 
+           <li> <a href="#">sales@gracesoft.com</a> </li> 
+           <li> <a href="#"> USA : +1-832-919-2384</a> </li> 
+           <li> <a href="#"> INDIA : +91-72004-23323</a> </li> 
+           <li> <a href="https://www.gracesoft.com/livedemo">Demo</a> </li> 
+           <li> <a href="https://outlook.office365.com/owa/calendar/SupportandTraining@gracesoft.com/bookings/">Support</a> </li> 
+          </ul> 
+         </div> 
+         <div class="kl-footer__group"> 
+          <h3>Products</h3> 
+          <ul> 
+           <li> <a href="../../../com/gracesoft/www/free-hotel-software.html">Free Hotel Management Software</a> </li> 
+           <li> <a href="https://www.gracesoft.com/hotel-management-software">Hotel Management Software</a> </li> 
+           <li> <a href="../../../com/gracesoft/www/hotel-reservation-software.html">Hotel Reservation Software</a> </li> 
+           <li> <a href="https://www.gracesoft.com/bed-breakfast-reservation-software">B&amp;B Software</a> </li> 
+           <li> <a href="https://www.gracesoft.com/condo-management-software">Condo Software</a> </li> 
+           <li> <a href="https://www.gracesoft.com/online-booking-engine">Website Booking Software</a> </li> 
+           <li> <a href="https://www.gracesoft.com/vacation-rental-management-software">Vacation Rental Management Software</a> </li> 
+           <li> <a href="../../../com/gracesoft/www/free-vacation-rental-software.html">Free Vacation Rental Software</a> </li> 
+          </ul> 
+         </div> 
+         <div class="kl-footer__group"> 
+          <h3>Resources</h3> 
+          <ul> 
+           <li> <a href="https://secure.livechatinc.com/licence/5426201/v2/open_chat.cgi?group=2">Live Support</a> </li> 
+           <li> <a href="https://apps.gracesoft.com/pmsui/">PMS Login</a> </li> 
+           <li> <a href="https://www.gracesoft.com/blog">GraceSoft Blog</a> </li> 
+          </ul> 
+         </div> 
+         <div class="kl-footer__group"> 
+          <h3>Locations</h3> 
+          <ul> 
+           <li> <a href="../../../com/gracesoft/www/index.html">GraceSoft USA</a> </li> 
+           <li> <a href="https://www.gracesoft.com/india">GraceSoft India</a> </li> 
+           <li> <a href="https://www.gracesoft.com/canada">GraceSoft Canada</a> </li> 
+           <li> <a href="https://www.gracesoft.com/nigeria">GraceSoft Nigeria</a> </li> 
+           <li> <a href="../../../com/gracesoft/www/hotel-software-middle-east.html">GraceSoft Middle East</a> </li> 
+          </ul> 
+         </div> 
+         <div class="kl-footer__group"> 
+          <h3>Our Reseller Partners</h3> 
+          <ul> 
+           <li> <a href="../../../com/gracesoft/www/1-prakash-daniel/us1/1-863-594-771.html">Prakash Daniel</a> </li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="kl-footer__legal"> 
+        <div>
+         <a style="position: fixed; bottom: 15px; left: 13px;" href="https://api.whatsapp.com/send?phone=917200423323" target="_blank" rel="noopener"> <img style="width: 56px; height: 55px; z-index: 1; position: relative;" loading="lazy" sizes="50vw" src="https://www.gracesoft.com/hubfs/whatsapp.png" alt="whatsapp"> 
+          <div style="background: #50cc5d; width: 111px; height: 43px; display: block; position: absolute; color: #fff; left: 44px; padding: 5px 10px; text-align: right; font-size: 11px; line-height: 1.1; font-weight: 600; bottom: 5px; border-radius: 0 23px 23px 0;"> 
+           <p style="font-size: 11px; font-weight: 600; margin-bottom: 0px; margin-right: 10px; letter-spacing: 0.03em; color: #fff;">Click to chat</p> 
+           <strong style="font-size: 16px; line-height: 1; letter-spacing: 0.03em;">WhatsApp</strong>
+          </div> </a>
+        </div> 
+        <p class="social-text" style="position: absolute;"><a href="https://www.facebook.com/GraceSoft" target="_blank" rel="noopener"><img loading="lazy" src="https://www.gracesoft.com/hubfs/facebbok-1.png" alt="facebook" style="width: 25px; margin-right: 4px; height: 25px;"></a> <a href="https://twitter.com/gracesoftinc?lang=en" target="_blank" rel="noopener"><img loading="lazy" src="https://www.gracesoft.com/hubfs/twitterlogo.webp" alt="twitter" style="width: 25px; margin-right: 4px; height: 25px;"></a> <a href="https://www.linkedin.com/company/gracesoft/" target="_blank" rel="noopener"><img loading="lazy" src="https://www.gracesoft.com/hubfs/linkedin.png" alt="Linkedin" style="width: 25px; margin-right: 4px; height: 25px;"></a> <a href="https://www.instagram.com/gracesoftinc/" target="_blank" rel="noopener"><img loading="lazy" src="https://www.gracesoft.com/hubfs/instagram.png" alt="instagram" style="width: 25px; margin-right: 4px; height: 25px;"></a> <a href="https://www.youtube.com/user/gracesoft1" target="_blank" rel="noopener"><img loading="lazy" src="https://www.gracesoft.com/hubfs/youtube.png" alt="youtube" style="width: 25px; margin-right: 4px; height: 25px;"></a> <a href="https://goo.gl/maps/5KgtmD2AmsTfL8Ew5" target="_blank" rel="noopener"><img loading="lazy" src="https://www.gracesoft.com/hubfs/maps.png" alt="google-maps" style="width: 25px; margin-right: 4px; height: 25px;"></a></p> 
+        <div style="margin-top: 40px;"> 
+         <h2 style="font-size: 15px; text-align: center;"><a href="https://www.google.com/maps/place/Grace+Software,+Inc./@29.5075055,-95.7577246,17z/data=!3m1!4b1!4m6!3m5!1s0x8640e7dec94c1ed3:0x14624a69663b25f7!8m2!3d29.5075055!4d-95.7577246!16s%2Fg%2F1tgpndvt?hl=en&amp;entry=ttu" rel="noopener" target="_blank">© 2024 GraceSoft, Inc.</a></h2> 
+         <h2 style="font-size: 18px;"><a href="https://www.gracesoft.com/terms" target="_blank" rel="noopener">Privacy | Terms &amp; Conditions</a></h2> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="kl-footer__byline-wrapper"> 
+       <div class="content-wrapper"> 
+        <div class="kl-footer__byline"> 
+         <span> <a href="https://www.kalungi.com/atlas-hubspot-theme-for-b2b-saas-software"> Powered by Atlas - a B2B SaaS HubSpot theme 
+           <!-- Made by: https://github.com/pipriles --> </a> </span> 
+        </div> 
+       </div> 
+      </div> 
+     </footer>
+    </div> 
+   </div> 
+  </div> 
+  <script src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/152140795656/1786354648798/template_main.min.js"></script> 
+  <script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script> 
+  <script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script> 
+  <script src="https://www.gracesoft.com/hubfs/hub_generated/module_assets/1/152150936678/1741006187956/module_Navbar_with_Menu.min.js"></script> 
+  <!-- Start of HubSpot Analytics Code Not Loaded --> 
+  <script>
+(function(){
+  const timeoutEvent = document.createEvent('CustomEvent');
+  timeoutEvent.initCustomEvent("content-analytics-code-not-loaded", true, true, { detail: "Not loaded in preview mode" });
+  window.dispatchEvent(timeoutEvent);
+})();
+</script> 
+  <!-- End of HubSpot Analytics Code Not Loaded --> 
+  <script type="text/javascript">
+var hsVars = {
+    render_id: "50155a92-9ab1-4cd3-947a-8c375c3ca6b2",
+    ticks: 1793200404836,
+    page_id: 124479873892,
+    
+    content_group_id: 0,
+    portal_id: 107648,
+    app_hs_base_url: "https://app-na2.hubspot.com",
+    cp_hs_base_url: "https://cp-na2.hubspot.com",
+    language: "en",
+    analytics_page_type: "landing-page",
+    scp_content_type: "",
+    
+    analytics_page_id: "124479873892",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: null
+}
+</script> 
+  <script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js"></script> 
+  <style>
+    .footer__copyright-and-links {
+    padding-top: 10px !important;
+}
+  .footer__section--bottom {
+    padding-bottom: 20px !important;
+}
+  .footer__section--main {
+    padding-bottom: 20px !important;
+}
+</style> 
+  <script>
+  window.prechatTemplate = {
+    "SubmitLabel": "Start Chat",
+    "fields": {
+      "0": {"error": "Please Enter a valid name","fieldId": "name","label": "Full Name","required":"yes","type":"text"},
+      "1": {"error": "Please Enter a valid Email","fieldId": "email","label": "Email","required":"yes","type":"email"},
+      "2": {"error": "Please Enter a valid Phone Number","fieldId": "phone","label": "Phone","required":"yes","type":"phone"},
+      "3": {"error": "Please Enter a Property Name","fieldId": "cf_title","label": "Property Name","required":"yes","type":"text"}
+    },
+    "heading": "Chat with Us",
+    "mainbgColor": "#0AA4DB",
+    "maintxColor": "#fff",
+    "textBanner": "We can't wait to talk to you. But first, please take a couple of moments to tell us a bit about yourself."
+  };
+
+  window.fcSettings = {
+    onInit: function() {
+      // Initialize pre-chat form
+      if (window.fcPreChatform) {
+        window.fcPreChatform.fcWidgetInit(window.prechatTemplate);
+      }
+
+      // Inject custom styles for Freshchat pre-chat form
+      const style = document.createElement("style");
+      style.innerHTML = `
+        /* Label styles */
+        .chat-fc-form-outer div.fc-form ul li label {
+          position: absolute !important;
+          top: -15px !important;
+          font-weight: lighter !important;
+          margin-left: 8px !important;
+          margin-right: 8px !important;
+          padding: 0px 3px !important;
+          background-color: white !important;
+          border-radius: 3px !important;
+        }
+        /* Input styles */
+        .chat-fc-form-outer div.fc-form ul li input {
+          padding: 13px 0px 13px 10px !important;
+          width: 100% !important;
+          border: 1px solid #ddd !important;
+          border-radius: 3px !important;
+        }
+        /* TextBanner (intro sentence) styles */
+        .chat-fc-form-outer .fc-form .fc-form-header p {
+          line-height: 1.2 !important;
+          margin-bottom: 25px !important;
+          font-weight: lighter !important;
+          margin-top: 10px !important;
+          font-size: 16px !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  };
+
+  window.fcWidgetMessengerConfig = {
+    config: {
+      content: {
+        actions: { tab_chat: "Chat" },
+        headers: { chat: "Chat With Us" }
+      },
+      cssNames: {
+        expanded: "custom_fc_expanded",
+        widget: "custom_fc_frame"
+      }
+    }
+  };
+</script> 
+  <script src="https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js"></script> 
+  <script src="http://in.fw-cdn.com/32001440/1057521.js" chat="true" widgetid="0a04bc62-baed-498f-adec-5e2bf1056e62">
+</script> 
+  <!-- End Facebook Pixel Code 
+<noscript async ><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=510966462654695&ev=PageView&noscript=1"
+/></noscript>
+End Facebook Pixel Code --> 
+  <!-- Meta Pixel Code --> 
+  <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1313022930738316');
+fbq('track', 'PageView');
+</script> 
+  <noscript>
+   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1313022930738316&amp;ev=PageView&amp;noscript=1">
+  </noscript> 
+  <!-- End Meta Pixel Code --> 
+  <!--Google search Engine Console--> 
+  <meta name="google-site-verification" content="DfoC00W9lqOqmOnvkltkjMSyXST24BVqU_fUL5iD-TE"> 
+  <!--End of Google search Engine Console--> 
+  <div class="floating-left-buttons"> 
+   <!-- CSS-only toggle --> 
+   <input type="checkbox" id="contact-toggle" class="contact-toggle"> 
+   <label for="contact-toggle" class="float-toggle"> ☎ </label> 
+   <div class="float-options"> 
+    <a href="https://api.whatsapp.com/send?phone=917200423323" target="_blank" class="whatsapp-btn"> <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> </a> 
+    <a href="../../../com/gracesoft/www/corporate-contact.html" class="float-btn"> Contact Us </a> 
+   </div> 
+  </div> 
+  <script>
+window.addEventListener("scroll", function () {
+    const scrollPercent =
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+    if (scrollPercent > 30) {
+        document.querySelector(".floating-left-buttons")
+                ?.classList.add("show");
+    }
+});
+</script> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script> 
+  <!-- Latest compiled and minified JavaScript --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+  <script>
+        jQuery(document).ready(function ($) {
+            "use strict";
+            //  TESTIMONIALS CAROUSEL HOOK
+            $('#customers-testimonials').owlCarousel({
+                loop: true,
+                center: true,
+                items: 3,
+                margin: 0,
+                autoplay: true,
+                dots: true,
+                autoplayTimeout: 2000,
+                smartSpeed: 1000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1170: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script> 
+ </body>
+</html>

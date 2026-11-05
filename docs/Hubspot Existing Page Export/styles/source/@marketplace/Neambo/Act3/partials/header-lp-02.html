@@ -1,0 +1,156 @@
+<!--
+  templateType: global_partial
+  label: Header LP 2
+-->
+
+{# Optional elements #}
+{% boolean 'enable_header_lang' label='Show language selector (apply and reload the page)', value=True, export_to_template_context=True %}
+
+{# Logo column width #}
+{% text 'logo_col_width_lg', label='Logo column width on large screens (possible values: 2, 3, 4, 5, 6)', value='4', export_to_template_context=True %}
+{% text 'logo_col_width_md', label='Logo column width on medium screens (possible values: 2, 3, 4, 5, 6)', value='4', export_to_template_context=True %}
+{% text 'logo_col_width_sm', label='Logo column width on small screens (possible values: 2, 3, 4, 5, 6)', value='4', export_to_template_context=True %}
+{% if widget_data.logo_col_width_lg.value|trim|int > 0 %}{% set logo_col_width_lg = widget_data.logo_col_width_lg.value|trim|int %}{% else %}{% set logo_col_width_lg = 4 %}{% endif %}
+{% if widget_data.logo_col_width_md.value|trim|int > 0 %}{% set logo_col_width_md = widget_data.logo_col_width_md.value|trim|int %}{% else %}{% set logo_col_width_md = 4 %}{% endif %}
+{% if widget_data.logo_col_width_sm.value|trim|int > 0 %}{% set logo_col_width_sm = widget_data.logo_col_width_sm.value|trim|int %}{% else %}{% set logo_col_width_sm = 4 %}{% endif %}
+
+{# Color scheme #}
+{% if theme.components.header.scheme == 'dark' %}
+  {% set header_color_scheme = 'dark' %}
+{% else %}
+  {% set header_color_scheme = 'light' %}
+{% endif %}
+
+<header class="header header--lp-2 {% if header_overlap %}header--overlap{% endif %} {% if theme.components.header.sticky_header %}header--sticky{% endif %}{% if widget_data.enable_header_lang.value and (content.translated_content|length or group.translations|length) %} header--w-lang{% else %} header--wo-lang{% endif %} hs-search-hidden">
+  {% dnd_area 'above_header', label='Above the header', class='above-header' %}{% end_dnd_area %}
+  <div class="header__section header__section--main section">
+    <div class="header__center container">
+      <div class="row items-center">
+        <div class="col s{{ logo_col_width_lg }} md-s{{ logo_col_width_md }} sm-s{{ logo_col_width_sm }}">
+          <div class="header__logo">
+            {%- if not header_overlap -%}
+              <div class="header__logo__static">
+                {%- module 'static_header_logo' path='@hubspot/logo' label='Static header logo'
+                  img={
+                    'override_inherited_src': true,
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/act3-logo-color.svg',
+                    'alt': 'Logo',
+                    'width': 52,
+                    'height': 48
+                  },
+                  link='/'
+                -%}
+              </div>
+            {%- endif -%}
+            {%- if header_overlap or header_overlap is not defined -%}
+              <div class="header__logo__overlap">
+                {%- module 'overlapping_header_logo' path='@hubspot/logo' label='Overlapping header logo'
+                  img={
+                    'override_inherited_src': true,
+                    'src': 'https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/act3-logo-white2.svg',
+                    'alt': 'Logo',
+                    'width': 52,
+                    'height': 48
+                  },
+                  link='/'
+                -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="col s{{ 12 - logo_col_width_lg }} md-s{{ 12 - logo_col_width_md }} sm-s{{ 12 - logo_col_width_sm }}">
+          <div class="flex flex-row items-center justify-end no-shrink wrap">
+            {% if widget_data.enable_header_lang.value %}
+              <div class="header__lang">
+                {% module 'header_lang' path='../modules/lang-select' label='Language selector' lang_label='short' show_icon='false' color_scheme={{ header_color_scheme }} %}
+              </div>
+            {% endif %}
+            <div class="header__buttons">
+              {% if header_color_scheme == 'light' %}
+                {% set header_static_btn_1_color = 'light' %}
+              {% elif header_color_scheme == 'dark' %}
+                {% set header_static_btn_1_color = 'ghost' %}
+              {% endif %}
+              <div class="header__buttons__static">
+                {% module 'static_header_buttons' path='../modules/button' label='Static header buttons'
+                  button=[
+                    {
+                      'internal_name': 'Sign In',
+                      'type': 'link',
+                      'text': 'Sign In',
+                      'link': {
+                        'url': {
+                          'type': 'EXTERNAL',
+                          'href': 'https://www.hubspot.com/'
+                        }
+                      },
+                      'color': header_static_btn_1_color,
+                      'fill': 'outline',
+                      'size': 'small',
+                      'shape': 'default'
+                    },
+                    {
+                      'internal_name': 'Sign Up',
+                      'type': 'link',
+                      'text': 'Sign Up',
+                      'link': {
+                        'url': {
+                          'type': 'EXTERNAL',
+                          'href': 'https://www.hubspot.com/'
+                        }
+                      },
+                      'color': 'accent',
+                      'fill': 'fill',
+                      'size': 'small',
+                      'shape': 'default'
+                    }
+                  ]
+                %}
+              </div>
+              <div class="header__buttons__overlap">
+                {% module 'overlapping_header_buttons' path='../modules/button' label='Overlapping header buttons'
+                  button=[
+                    {
+                      'internal_name': 'Sign In',
+                      'type': 'link',
+                      'text': 'Sign In',
+                      'link': {
+                        'url': {
+                          'type': 'EXTERNAL',
+                          'href': 'https://www.hubspot.com/'
+                        }
+                      },
+                      'color': 'ghost',
+                      'fill': 'outline',
+                      'size': 'small',
+                      'shape': 'default'
+                    },
+                    {
+                      'internal_name': 'Sign Up',
+                      'type': 'link',
+                      'text': 'Sign Up',
+                      'link': {
+                        'url': {
+                          'type': 'EXTERNAL',
+                          'href': 'https://www.hubspot.com/'
+                        }
+                      },
+                      'color': 'accent',
+                      'fill': 'fill',
+                      'size': 'small',
+                      'shape': 'default'
+                    }
+                  ]
+                %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{{ require_css(get_asset_url('../css/components/header-lp-02.css')) }}
+{% if header_overlap %}
+  {{ require_css(get_asset_url('../css/components/header-lp-02-overlap.css')) }}
+{% endif %}

@@ -1,0 +1,45 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/flex.png
+  label: "Flex"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header" %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-video.html' %}
+
+    {% include_dnd_partial path='../sections/featured-items.html', context={
+      "padding": {
+        'top': 30,
+        'bottom': 120
+      }
+    } %}
+
+    {% include_dnd_partial path='../sections/tabs.html', context={
+      "padding": {
+        'top': 80,
+        'bottom': 80
+      },
+      "bg_image": {
+        'backgroundPosition': 'MIDDLE_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': get_asset_url('../../assets/images/gradient-bg.png')
+      }
+    } %}
+
+    {% include_dnd_partial path='../sections/two-col-image-left.html' %}
+
+    {% include_dnd_partial path='../sections/two-col-image-right.html' %}
+
+    {% include_dnd_partial path='../sections/two-tone-cta-dark.html' %}
+  {% end_dnd_area %}
+{% endblock %}

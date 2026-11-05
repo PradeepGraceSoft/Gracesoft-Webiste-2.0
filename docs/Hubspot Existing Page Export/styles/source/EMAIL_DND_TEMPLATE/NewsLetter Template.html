@@ -1,0 +1,248 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#FFFFFF","body_border_color":"#cbd6e2","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#EEEEEE","use_email_client_default_settings":false,"primary_font":"Merriweather,Georgia,sans-serif","primary_font_color":"#FFFFFF","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"24"},"heading_two_font":{"size":"22"},"links_font":{"color":"#FFFFFF"},"user_module_defaults":{}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"NS 2",
+                    "height":314,
+                    "loading":"disabled",
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/NS%202.png",
+                    "width":600
+                    }, stretch_on_mobile=False, hs_enable_module_padding=False, hs_wrapper_css={} %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, background_color="#2c75b9" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"5px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 36px; line-height: 125%;">Monthly</p>
+<p style="line-height: 125%; font-size: 36px;">Newsletter</p>
+<p style="line-height: 125%; font-size: 18px;">August Edition</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#f9be0c",
+                    "opacity":100
+                    }, width=75, alignment="right", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"5px",
+                    "padding-top":"10px"
+                    }, height=3 %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p>Dear {{ contact.firstname }},</p>
+<p>&nbsp;</p>
+<p>We are delighted to present to you the latest trends that are shaping the hospitality industry and transforming hotel management software. In this edition, we will explore the latest developments that are revolutionizing guest experiences and streamlining lodging operations. Here are the cutting-edge innovations that define the hospitality landscape in 2023.</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#f9be0c",
+                    "opacity":100
+                    }, width=75, alignment="left", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    }, height=3 %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-weight: bold;"><span style="font-family: Merriweather, Georgia, sans-serif; font-size: 22px;">Rise of Technology Integration</span></p>
+<pre></pre>
+<p style="line-height: 200%; font-size: 16px;">Customer expectations continue to evolve, and hotels are increasingly focusing on delivering personalized experiences. From tailored offers to bespoke services, customer-centricity remains a top priority for hoteliers looking to enhance guest satisfaction and loyalty. Technological advancements are revolutionizing the guest experience and hotel operations. Mobile apps, self-check-in kiosks, and smart room features are becoming standard offerings, providing guests with seamless and convenient interactions while streamlining operational efficiency.</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#fec104",
+                    "opacity":100
+                    }, width=75, alignment="right", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    }, height=3 %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-weight: bold; font-size: 18px; line-height: 175%;">Future Hospitality Events</p>
+<p style="font-weight: bold; font-size: 18px; line-height: 175%;">&nbsp;</p>
+<p style="font-weight: bold; font-size: 18px; line-height: 125%;"><span style="font-size: 16px; font-weight: normal;">Get ready for some exciting news! There are hospitality events coming up that will show the newest trends and ideas for people who work in hotels and travel.</span></p>
+<p style="font-weight: bold; font-size: 18px; line-height: 175%;">&nbsp;</p>
+<p style="font-weight: bold; font-size: 18px; line-height: 197%;"><span style="color: #ffff04;"><a href="https://www.texasbb.org/meeting-and-convention/2023-texas-aspiring-innkeeper-workshop-in-galveston-texas/" style="color: #ffff04;" rel="noopener"><span style="font-weight: normal;"><span style="font-weight: bold;">Texas Bed &amp; Breakfast Association</span></span></a></span></p>
+<p style="font-weight: bold; font-size: 16px; line-height: 197%;"><span style="font-weight: normal; color: #ffff04;">September 10, 2023<br>Grand Galvez Hotel in&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Galveston, Texas</span></p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-size: 20px; line-height: 175%; font-weight: bold;"><span style="font-family: Merriweather, Georgia, sans-serif;">Table of content</span></p>
+<ul>
+<li>Industry Insights, Trends, and Opinions</li>
+<li>News at GraceSoft.</li>
+<li>Locate the Next Event We're Attending Near You</li>
+</ul>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "alt":"mp3",
+                    "height":146,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/mp3.gif",
+                    "width":260
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="text-align: center;"><span style="font-size: 20px; font-weight: bold;">News from GraceSoft</span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p><span style="font-size: 20px; font-weight: bold;">SEO services</span></p>
+<p><br>GraceSoft Easy InnKeeping offers comprehensive SEO services to our clients, ensuring they achieve optimal online visibility and drive targeted traffic to their property websites. <span style="text-decoration: underline;">According to NP Digital, 70% of all traffic in google comes through organic searches, and only 30% through paid ads</span>. </p>
+<p>&nbsp;</p>
+<p>Our team of skilled SEO experts employs a multifaceted approach to enhance our clients ' online presence and boost their search engine rankings.</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-weight: bold;"><span style="font-size: 20px;">Our Latest Webinar</span></p>
+<p style="font-weight: bold;">&nbsp;</p>
+<p>GraceSoft conducts webinars twice a month, providing value-added updates about our products. These webinars offer an excellent opportunity to learn more about GraceSoft, including its new features. To watch the latest webinar video, please click on the link below.</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module corner_radius=25, path="@hubspot/button_email", background_color="#f9be0c", destination="https://www.youtube.com/watch?v=_HTGOL0_xtA", text="Webinar Video", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":20},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "html" %}<p style="font-weight: bold;"><span style="font-size: 18px;">Our New Team Members</span></p>
+<p><br><span style="font-weight: bold;">Sathiyamoorthi - Tech Lead:</span><br>We are excited to have Mr. Staya, who will be the lead developer on our PMS, he comes with more than 15 years of experience.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Naveen - Web Designer:</span></p>
+<p>We are adding more staff to our graphics team, our latest addition is Mr Naveen a graphics designer.</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False %}
+                {% dnd_column width=12 %}
+                  {% dnd_module corner_radius=25, path="@hubspot/button_email", background_color="#fec104", make_full_width=True, destination="https://www.gracesoft.com/", text="To Know More", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"5",
+                "bottom":"5"
+                }, full_width=False, background_color="#EEEEEE" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/follow_me_email", spacing=5, scale=32, color_scheme="color", icon_shape="circle", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+                    {% module_attribute "social" is_json=True %}[{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc/"},{"network":"whatsapp","url":"https://api.whatsapp.com/send?phone=917200423323"},{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"},{"network":"pinterest","url":"https://www.pinterest.com/gracesoft/"}]{% end_module_attribute %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#FFFFFF","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":14},"styles":{}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"30",
+                "bottom":"0"
+                }, full_width=False, background_color="" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", hs_enable_module_padding=False, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#23496d","font":"Arial, sans-serif","size":{"units":"px","value":12}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

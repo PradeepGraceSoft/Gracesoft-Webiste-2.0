@@ -1,0 +1,144 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#EAF0F6","body_border_color":"#EAF0F6","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#ffffff","use_email_client_default_settings":false,"primary_font":"Arial, sans-serif","primary_font_color":"#23496d","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"28"},"heading_two_font":{"size":"22"},"links_font":{"color":"#00a4bd","underline":true,"bold":false,"italic":false},"user_module_defaults":{"button_email":{"background_color":"#00a4bd","corner_radius":8,"font":"Arial, sans-serif","font_size":16,"font_color":"#ffffff","font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}},"email_divider":{"height":1,"color":{"color":"#23496d","opacity":100},"line_type":"solid"}},"layout_padding":{"top":{"value":20,"units":"px"},"bottom":{"value":20,"units":"px"},"left":{"value":10,"units":"px"},"right":{"value":10,"units":"px"}},"mobile_settings":{}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body id="hs_body" bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "default":{
+                  "top":"10",
+                  "bottom":"10"
+                  },
+                "mobile":{
+                  "top":"10",
+                  "bottom":"10"
+                  }
+                }, full_width={
+                "default":False,
+                "mobile":False
+                }, stack="LEFT_TO_RIGHT", background_color={
+                "default":"#eaf0f6",
+                "mobile":"#eaf0f6"
+                } %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/image_email", img={
+                    "alt":"GraceSoftLogo",
+                    "height":144,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/GraceSoftLogo.jpg",
+                    "width":300
+                    }, style={
+                    "alignment":"center",
+                    "corner_radius":0,
+                    "corner_radius_unit":"%"
+                    }, alignment="center", lineNumber=52, hs_enable_module_padding=True, startPosition=-462 %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "default":{
+                  "top":"0",
+                  "bottom":"0"
+                  },
+                "mobile":{
+                  "top":"0",
+                  "bottom":"0"
+                  }
+                }, full_width={
+                "default":False,
+                "mobile":False
+                }, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/image_email", img={
+                    "alt":"Gracesoft banner Landscape-1 (9 x 8 in) (1) (1)",
+                    "height":498,
+                    "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/Gracesoft%20banner%20Landscape-1%20(9%20x%208%20in)%20(1)%20(1).png",
+                    "width":560
+                    }, lineNumber=72, hs_enable_module_padding=True, startPosition=-591, hs_wrapper_css={
+                    "padding-bottom":"10px",
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "default":{
+                  "top":"30",
+                  "bottom":"30"
+                  },
+                "mobile":{
+                  "top":"30",
+                  "bottom":"30"
+                  }
+                }, full_width={
+                "default":False,
+                "mobile":False
+                }, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module css_class="dnd-module", schema_version=2, path="@hubspot/rich_text", lineNumber=91, hs_enable_module_padding=True, startPosition=19 %}
+                    {% module_attribute "html" %}<p data-start="314" data-end="332">Dear Valued Client,</p>
+<p data-start="339" data-end="440">I’m reaching out to share a simple solution to help you manage your Inn, B&amp;B, or Lodge more easily.</p>
+<p data-start="447" data-end="548"><strong data-start="447" data-end="479">GraceSoft's Easy InnKeeping</strong> helps properties like yours save time and increase bookings.</p>
+<p data-start="555" data-end="752">Book a short demo here:<br data-start="651" data-end="654">👉 <a href="https://outlook.office365.com/book/EIKDemoUSandEurope@gracesoft.com/" target="_new" rel="noopener" data-start="659" data-end="750"><strong data-start="660" data-end="679">Schedule a Demo</strong></a></p>
+<p data-start="555" data-end="752">&nbsp;</p>
+<p data-start="759" data-end="882">Best regards,<br data-start="792" data-end="795">GraceSoft Team</p>
+<p data-start="759" data-end="882">sales@gracesoft.com</p>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "default":{
+                  "top":"20",
+                  "bottom":"20"
+                  },
+                "mobile":{
+                  "top":"20",
+                  "bottom":"20"
+                  }
+                }, full_width={
+                "default":False,
+                "mobile":False
+                }, stack="LEFT_TO_RIGHT", background_color={
+                "default":"",
+                "mobile":""
+                } %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=119, hs_enable_module_padding=False, startPosition=19, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#23496d","font":"Arial, sans-serif","size":{"units":"px","value":12}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

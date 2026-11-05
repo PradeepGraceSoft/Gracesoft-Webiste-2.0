@@ -1,0 +1,167 @@
+{% import "../_variables.css" as var %}
+
+/* Base */
+
+.team-card {
+  width: 100%;
+  margin-bottom: {{ var.gutter }}px;
+  padding: 30px 30px 40px;
+  border-radius: {{ var.radius_7 }};
+  text-align: center;
+  transition: .2s ease-in-out;
+  position: relative;
+}
+
+.splide .team-card {
+  margin-bottom: 0;
+}
+
+.splide .team-card--shadow {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.listing .team-card {
+  height: 100%;
+}
+
+/* With link */
+
+.team-card--with-link:not(.splide .team-card):hover {
+  transform: scale(1.02);
+}
+
+/* Link */
+
+.team-card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/* Image */
+
+.team-card__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+}
+
+/* Text */
+
+.team-card__img + .team-card__txt {
+  margin-top: 15px;
+}
+
+/* Icons */
+
+.team-card__icons {
+  margin-top: 15px;
+}
+
+.team-card__icons a {
+  display: inline-block;
+  transition: .2s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__icons a:hover {
+  position: relative;
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+/* Icon */
+
+.team-card__icon {
+  box-shadow: {{ var.small_shadow }};
+}
+
+/* Link */
+
+.team-card__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Shadow */
+
+.team-card--shadow {
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.team-card--shadow.team-card--with-link:not(.splide .team-card):hover {
+  box-shadow: {{ var.large_shadow }};
+}
+
+/* Color */
+
+.team-card--accent {
+  background: {{ var.accent_bg }};
+}
+
+.team-card--accent.team-card--shadow {
+  box-shadow: {{ var.accent_medium_shadow }};
+}
+
+.team-card--accent.team-card--shadow.team-card--with-link:not(.splide .team-card):hover {
+  box-shadow: {{ var.accent_large_shadow }};
+}
+
+.team-card--dark {
+  background: {{ var.dark }};
+}
+
+.team-card--light {
+  background: {{ var.light }};
+}
+
+.team-card--white {
+  background: {{ var.white }};
+}
+
+.team-card--ghost {
+  background: {{ var.white_bg }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}
+
+/* Slider: center mode */
+
+@media (min-width: {{ var.md + 1 }}px) {
+  .splide--center-mode:not(.splide--lg-2):not(.splide--lg-4):not(.splide--lg-6) .splide__slide:not(.is-active) .team-card {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: {{ var.md }}px) and (min-width: {{ var.sm + 1 }}px) {
+  .splide--center-mode:not(.splide--md-2):not(.splide--md-4):not(.splide--md-6) .splide__slide:not(.is-active) .team-card {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .splide--center-mode:not(.splide--sm-2):not(.splide--sm-4):not(.splide--sm-6) .splide__slide:not(.is-active) .team-card {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+/* Slider pagination */
+
+.module--team-card .splide--dots-below:not(.splide--team-card-shadow) .splide__pagination {
+  padding-top: {{ var.gutter }}px;
+}

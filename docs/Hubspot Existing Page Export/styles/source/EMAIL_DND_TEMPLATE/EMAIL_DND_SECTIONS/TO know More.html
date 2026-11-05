@@ -1,0 +1,20 @@
+<!--
+  templateType: section
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+{% dnd_section padding={
+  "top":"0",
+  "bottom":"0"
+  }, full_width=False, background_color="#FFFFFF" %}
+  {% dnd_column width=12 %}
+    {% dnd_module corner_radius=25, destination="https://www.gracesoft.com/", startPosition=-406, schema_version=2, css_class="dnd-module", path="@hubspot/button_email", background_color="#FF9902", make_full_width=True, text="Click Here To Know More", lineNumber=150, hs_enable_module_padding=True, hs_wrapper_css={
+      "padding-bottom":"10px",
+      "padding-left":"20px",
+      "padding-right":"20px",
+      "padding-top":"10px"
+      } %}
+      {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Merriweather,Georgia,sans-serif","font_set":"DEFAULT","size":{"units":"px","value":19},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

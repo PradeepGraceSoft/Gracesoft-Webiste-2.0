@@ -1,0 +1,1021 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home 6
+  screenshotPath: ../images/template-previews/home-6.jpg
+-->
+
+{% extends "./_base.html" %}
+
+{% block settings %}
+  {% boolean "lp" label="LP header and footer", value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label="Overlapping header", value=true, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from "../css/_variables.css" import gutter %}
+  {% dnd_area "content_bucket", class="main" %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      padding={
+        "default": {
+          "bottom": "196px",
+          "left": "0px",
+          "right": "0px",
+          "top": "196px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/section-extra-settings",
+            bg_color="dark",
+            bg_media="image",
+            bg_img={
+              "src": "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/sample-h003.jpg",
+              "alt": "Sample image"
+            },
+            overlay="dark",
+            overlay_opacity=50,
+            bottom_deco={
+              "color": "white",
+              "type": "angle-reverse"
+            },
+            parallax=true,
+            parallax_delay=5,
+            parallax_lock_scale=false,
+            parallax_orientation="up",
+            parallax_scale=1.2
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row
+          padding={
+            "default": {
+              "left": gutter,
+              "right": gutter,
+              "bottom": gutter*3
+            },
+            "mobile": {
+              "bottom": gutter*2
+            }
+          }
+        %}
+          {% dnd_module path="../modules/section-intro",
+            overline="Available only on HubSpot",
+            title="Beautiful & Performant.<br>Absolutely Pro.",
+            settings={
+              "color_scheme": "dark",
+              "title_tag": "h1",
+              "title_looks_like": "display",
+              "overline_style": "badge",
+              "overline_badge_color": "accent",
+              "overline_badge_bottom_space": "20px",
+              "divider": "accent"
+            },
+            desc="",
+            wrapper={
+              "max_width": {
+                "lg": "900",
+                "md": "700",
+                "sm": "700"
+              },
+              "margin": {
+                "bottom": {
+                  "lg": "0"
+                }
+              },
+              "identifiers": {
+                "custom_class": "reveal reveal--up reveal--duration-2000 reveal--timing-ease-out reveal--rerun"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row
+          padding={
+            "mobile": {
+              "bottom": gutter,
+              "top": gutter
+            }
+          }
+        %}
+          {% dnd_column
+            background_color="rgba(255, 255, 255, 0.2)",
+            padding={
+              "default": {
+                "bottom": "48px",
+                "left": "48px",
+                "right": "48px",
+                "top": "48px"
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path="../modules/logos",
+                items=[
+                  {
+                    "image": {
+                      "alt": "HubSpot logo",
+                      "height": 28,
+                      "loading": "lazy",
+                      "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/HubSpot_Logo_White.svg",
+                      "width": 96
+                    },
+                    "internal_name": "HubSpot"
+                  },
+                  {
+                    "image": {
+                      "alt": "Spotify logo",
+                      "height": 34,
+                      "loading": "lazy",
+                      "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Spotify_Logo_White.svg",
+                      "width": 114
+                    },
+                    "internal_name": "Spotify"
+                  },
+                  {
+                    "image": {
+                      "alt": "Google logo",
+                      "height": 33,
+                      "loading": "lazy",
+                      "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Google_Logo_White.svg",
+                      "width": 97
+                    },
+                    "internal_name": "Google"
+                  },
+                  {
+                    "image": {
+                      "alt": "YouTube logo",
+                      "height": 25,
+                      "loading": "lazy",
+                      "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/YouTube_Logo_White.svg",
+                      "width": 112
+                    },
+                    "internal_name": "YouTube"
+                  },
+                  {
+                    "image": {
+                      "alt": "Sony logo",
+                      "height": 17,
+                      "loading": "lazy",
+                      "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/Sony_Logo_White.svg",
+                      "width": 95
+                    },
+                    "internal_name": "Sony"
+                  }
+                ],
+                settings={
+                  "col": {
+                    "lg": "5"
+                  },
+                  "slider": true,
+                  "slider_settings": {
+                    "arrows": {
+                      "lg": true,
+                      "md": true,
+                      "sm": true,
+                      "white": true
+                    },
+                    "autoplay": false,
+                    "dots": {
+                      "lg": false,
+                      "md": false,
+                      "sm": false,
+                      "white": true
+                    },
+                    "interval": 5000
+                  }
+                },
+                wrapper={
+                  "max_width": {
+                    "lg": "1280"
+                  },
+                  "block_align": {
+                    "lg": "center"
+                  },
+                  "text_align": {
+                    "lg": "center"
+                  },
+                  "identifiers": {
+                    "custom_class": "reveal reveal--duration-1500 reveal--delay-300 reveal--rerun"
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Review #}
+
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : gutter
+        }
+      },
+      max_width=600
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/review",
+            items=[
+              {
+                "author_name": "Kelly Brighton",
+                "author_details": "Boston, Massachusetts",
+                "author_photo": {
+                  "src": "https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-b8etd.jpg",
+                  "alt": "Describe your image",
+                  "width": 80,
+                  "height": 80,
+                  "loading": "lazy"
+                },
+                "company_logo": {
+                  "src": ""
+                },
+                "quote": "“I definitely recommend Vokalia & Consonantia. Find the courage to pursue your dream. Don't wait, like I did.”",
+                "rating": "full,full,full,full,full"
+              }
+            ],
+            settings={
+              "boxed": false,
+              "col": {
+                "lg": "1",
+                "md": "1"
+              },
+              "color_scheme": "light",
+              "quote_size": "xlarge",
+              "rating": true,
+              "slider": false,
+              "slider_settings": {
+                "arrows": {
+                  "white": true
+                },
+                "center_mode": true,
+                "dots": {
+                  "white": true
+                }
+              }
+            },
+            wrapper={
+              "text_align": {
+                "lg": "center"
+              },
+              "identifiers": {
+                "custom_class": "reveal reveal--up reveal--duration-1000 reveal--rerun"
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Features showcase #1 #}
+
+    {% dnd_section
+      padding={
+        "default": {
+          "bottom": "100px",
+          "left": "0px",
+          "right": "0px",
+          "top": "100px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/section-extra-settings",
+            bg_color="light",
+            bg_media="image",
+            bg_img={
+              "src": "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/pexels-mark-2724748.jpg",
+              "alt": "pexels-mark-2724748",
+              "width": 1920,
+              "height": 1280,
+              "loading": "disabled",
+              "size_type": "exact"
+            },
+            top_deco={
+              "type": "angle"
+            },
+            bottom_deco={
+              "type": "angle"
+            },
+            overlay="dark",
+            parallax=true,
+            parallax_delay=1.5,
+            parallax_scale=1.3
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/features-showcase",
+            items=[
+              {
+                "button": {
+                  "link": {
+                    "no_follow": false,
+                    "open_in_new_tab": false,
+                    "url": {
+                      "href": "https://www.hubspot.com/",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "text": "Get Started",
+                  "type": "link"
+                },
+                "nav_label": "Exceptional Results",
+                "properties": [
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Bullseye",
+                        "type": "SOLID",
+                        "unicode": "f140"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Precision"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Stopwatch 20",
+                        "type": "SOLID",
+                        "unicode": "e06f"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Efficiency"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "certificate",
+                        "type": "SOLID",
+                        "unicode": "f0a3"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Quality"
+                  }
+                ],
+                "text": "<h2>Exceptional Results</h2>\n<p>Get services designed to meet your needs, focused on delivering great results. Whether it's support, innovation, or growth, our solutions adapt to your goals for a smooth experience.</p>"
+              },
+              {
+                "button": {
+                  "link": {
+                    "no_follow": false,
+                    "open_in_new_tab": false,
+                    "url": {
+                      "href": "https://www.hubspot.com/",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "text": "Get Started",
+                  "type": "link"
+                },
+                "nav_label": "Fast Delivery Times",
+                "properties": [
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Lightning Bolt",
+                        "type": "SOLID",
+                        "unicode": "f0e7"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Speed"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Alternate Shield",
+                        "type": "SOLID",
+                        "unicode": "f3ed"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Reliability"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Clock",
+                        "type": "SOLID",
+                        "unicode": "f017"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Efficiency"
+                  }
+                ],
+                "text": "<h2>Fast Delivery Times</h2>\n<p>Get the results you need without the wait. Our streamlined process ensures quick turnarounds without compromising on quality, so you can stay ahead and keep your projects moving.</p>"
+              },
+              {
+                "button": {
+                  "link": {
+                    "no_follow": false,
+                    "open_in_new_tab": false,
+                    "url": {
+                      "href": "https://www.hubspot.com/",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "text": "Get Started",
+                  "type": "link"
+                },
+                "nav_label": "Made for You",
+                "properties": [
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Puzzle Piece",
+                        "type": "SOLID",
+                        "unicode": "f12e"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Customization"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Ruler",
+                        "type": "SOLID",
+                        "unicode": "f545"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Flexibility"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Horizontal Sliders",
+                        "type": "SOLID",
+                        "unicode": "f1de"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Personalization"
+                  }
+                ],
+                "text": "<h2>Made for You</h2>\n<p>Services that meet specific needs, offering flexible solutions that adapt to unique goals. Personalization ensures everything aligns with your desired outcome.</p>"
+              },
+              {
+                "button": {
+                  "link": {
+                    "no_follow": false,
+                    "open_in_new_tab": false,
+                    "url": {
+                      "href": "https://www.hubspot.com/",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "text": "Get Started",
+                  "type": "link"
+                },
+                "nav_label": "Built for Success",
+                "properties": [
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "trophy",
+                        "type": "SOLID",
+                        "unicode": "f091"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Achievement"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Line Chart",
+                        "type": "SOLID",
+                        "unicode": "f201"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Growth"
+                  },
+                  {
+                    "icon": {
+                      "icon": {
+                        "name": "Cube",
+                        "type": "SOLID",
+                        "unicode": "f1b2"
+                      },
+                      "image": {
+                        "loading": "lazy",
+                        "size_type": "exact",
+                        "src": ""
+                      },
+                      "number": 1,
+                      "type": "icon"
+                    },
+                    "text": "Stability"
+                  }
+                ],
+                "text": "<h2>Built for Success</h2>\n<p>Designed with your objectives in mind, these services focus on delivering the best results. Every solution is crafted to help you achieve success and meet your specific targets efficiently.</p>"
+              }
+            ],
+            settings={
+              "col_order": "right",
+              "color_scheme": "light",
+              "nav_bg": "transparent",
+              "nav_style": "pillbtn"
+            },
+            wrapper={
+              "identifiers": {
+                "custom_class": "reveal reveal--left reveal--duration-1000 reveal--rerun reveal--offset-200"
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Quote #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/quote",
+            items=[
+              {
+                "card": {
+                  "arrow": false,
+                  "color": "white",
+                  "desc": "CEO, Acme Ventures Intl",
+                  "image": {
+                    "alt": "Describe your image",
+                    "height": 50,
+                    "loading": "lazy",
+                    "size_type": "exact",
+                    "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-15.jpg",
+                    "width": 50
+                  },
+                  "link": {
+                    "url": {
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "shadow": true,
+                  "text_align": "left",
+                  "title": "John Doe",
+                  "title_tag": "h5"
+                },
+                "quote": "“What a fantastic journey this has been. Thanks to this product we can now focus on what matters.”"
+              }
+            ],
+            wrapper={
+              "identifiers": {
+                "custom_class": "reveal reveal--up reveal--duration-1000 reveal--rerun"
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Features showcase #2 #}
+
+    {% dnd_section
+      padding={
+        "default": {
+          "bottom": "100px",
+          "left": "0px",
+          "right": "0px",
+          "top": "100px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/section-extra-settings",
+            bg_media="image",
+            bg_img={
+              "alt": "sample-prlx3",
+              "height": 960,
+              "src": "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/sample-prlx3.jpg",
+              "width": 1440
+            },
+            top_deco={
+              "type": "angle"
+            },
+            bottom_deco={
+              "type": "angle"
+            },
+            overlay="dark",
+            overlay_opacity=50,
+            parallax=true,
+            parallax_delay=1.5,
+            parallax_scale=1.3
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/features-showcase",
+            settings={
+              "col_order": "left",
+              "color_scheme": "light",
+              "nav_bg": "transparent",
+              "nav_color_scheme": "dark",
+              "nav_style": "pillbtn"
+            },
+            wrapper={
+              "identifiers": {
+                "custom_class": "reveal reveal--right reveal--duration-1000 reveal--rerun reveal--offset-200"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: CTA Intro #}
+
+    {% dnd_section
+      padding={
+        "default": {
+          "bottom": gutter
+        }
+      },
+      max_width=800
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/section-intro",
+            title="Let's talk your project.",
+            overline="Ready to grow?",
+            desc="",
+            settings={
+              "color_scheme": "light",
+              "title_tag": "h1",
+              "title_looks_like": "display",
+              "divider": ""
+            },
+            wrapper={
+              "max_width": {
+                "lg": "500"
+              },
+              "block_align": {
+                "lg": "left"
+              },
+              "text_align": {
+                "lg": "left"
+              },
+              "margin": {
+                "bottom": {
+                  "lg": gutter*2|string
+                }
+              },
+              "padding": {
+                "left": {
+                  "lg": "32"
+                }
+              },
+              "identifiers": {
+                "custom_class": "reveal reveal--up reveal--duration-1000 reveal--rerun"
+              },
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: CTA #}
+
+    {% dnd_section
+      padding={
+        "default": {
+          "bottom": "196px",
+          "top": "196px"
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/section-extra-settings",
+            bg_media="image",
+            bg_img={
+              "src": "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/sample-prlx8.jpg",
+              "alt": "sample-prlx8"
+            },
+            top_deco={
+              "type": "angle"
+            },
+            bottom_deco={
+              "type": "angle-reverse"
+            },
+            overlay="dark",
+            overlay_opacity=30,
+            parallax=true,
+            parallax_delay=1.5,
+            parallax_lock_scale=false,
+            parallax_scale=1.3
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/contact-box",
+            box=[
+              {
+                "color": "white",
+                "main_icon": {
+                  "code": '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5487 12.1637L12.0455 18.7203L7.50811 12.1855C6.76428 10.7087 6.68438 8.94769 7.29099 7.40024C9.04849 2.91683 14.9513 2.90133 16.7347 7.38581C17.3475 8.92687 17.2791 10.6851 16.5487 12.1637ZM18.1983 13.1099L13.1142 20.8423L13.1135 20.8438L13.0642 20.9436L12.5873 21.6568C12.3503 22.1366 11.713 22.1391 11.4723 21.6613L11.0438 20.9518L10.9937 20.8523L10.993 20.8509L5.86579 13.1451C4.85099 11.1302 4.74198 8.7277 5.56957 6.61652C7.96992 0.493193 16.0219 0.482175 18.4522 6.59367C19.2878 8.69494 19.1949 11.0925 18.1983 13.1099ZM12.9778 9.38272C12.9791 9.9386 12.5619 10.3903 12.0459 10.3915C11.5299 10.3928 11.1105 9.94318 11.1092 9.3873C11.1078 8.83142 11.525 8.37976 12.041 8.3785C12.557 8.37723 12.9764 8.82684 12.9778 9.38272ZM14.8463 9.37814C14.8504 11.0458 13.5988 12.4008 12.0509 12.4045C10.5029 12.4083 9.24469 11.0595 9.2406 9.39187C9.23652 7.72423 10.4881 6.36926 12.0361 6.36547C13.5841 6.36168 14.8423 7.7105 14.8463 9.37814Z" fill="currentColor"/></svg>',
+                  "color": "accent",
+                  "image": {
+                    "alt": "Location",
+                    "height": "32",
+                    "loading": "lazy",
+                    "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-78q9q.svg",
+                    "width": "32"
+                  },
+                  "link": {
+                    "no_follow": true,
+                    "open_in_new_tab": true,
+                    "url": {
+                      "href": "https://g.page/hubspot-cambridge-25-first?share",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "type": "code"
+                },
+                "text": "<h3>Visit Office</h3>\n<p>Street Address, City, ST 00000</p>"
+              },
+              {
+                "color": "ghost",
+                "custom_color": {
+                  "color": "#ebedf1",
+                  "opacity": 100
+                },
+                "main_icon": {
+                  "code": '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C3.34315 4 2 5.34315 2 7V17C2 18.6569 3.34315 20 5 20H19C20.6569 20 22 18.6569 22 17V7C22 5.34315 20.6569 4 19 4H5ZM4.09132 6.58194C4.24961 6.23843 4.59696 6 5 6H19C19.403 6 19.7504 6.23843 19.9087 6.58194L12.6139 12.2556C12.2528 12.5365 11.7472 12.5365 11.3861 12.2556L4.09132 6.58194ZM4 9.04464V14.865L7.61261 11.8544L4 9.04464ZM4.0829 17.3993C4.23705 17.7529 4.58966 18 5 18H19C19.4103 18 19.763 17.7529 19.9171 17.3993L14.7715 13.1113L13.8418 13.8343C12.7585 14.6769 11.2415 14.6769 10.1582 13.8343L9.22853 13.1113L4.0829 17.3993ZM20 14.865V9.04464L16.3874 11.8544L20 14.865Z" fill="currentColor"/></svg>',
+                  "color": "white-accent",
+                  "image": {
+                    "alt": "Email",
+                    "height": "32",
+                    "loading": "lazy",
+                    "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-cor5v.svg",
+                    "width": "32"
+                  },
+                  "link": {
+                    "no_follow": false,
+                    "open_in_new_tab": true,
+                    "url": {
+                      "href": "hey@company.com",
+                      "type": "EMAIL_ADDRESS"
+                    }
+                  },
+                  "type": "code"
+                },
+                "text": '<h3>Send Email</h3><p><a href="mailto:hey@company.com" rel="noopener">hey@company.com</a></p>'
+              },
+              {
+                "color": "ghost",
+                "custom_color": {
+                  "color": "#dfe1e4",
+                  "opacity": 100
+                },
+                "main_icon": {
+                  "code": '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29791 4.19683L6.29858 4.19767L6.29791 4.19683ZM6.34092 4.26436L8.34545 7.4229C8.10322 7.65032 7.83901 7.87557 7.55466 8.118C7.31027 8.32636 7.051 8.54741 6.77803 8.79341C6.10146 9.40312 5.97078 10.3837 6.40865 11.1469C8.7241 15.1824 11.8822 17.0186 13.2953 17.6779C14.1466 18.0751 15.0716 17.7617 15.5865 17.1126L16.9736 15.364C16.9736 15.364 16.9748 15.3631 16.9769 15.3627C16.979 15.3623 16.9828 15.3627 16.9828 15.3627C16.9828 15.3627 16.9858 15.3634 16.9887 15.3652C17.797 15.8592 18.9247 16.5305 19.9605 17.0989C19.7745 18.2112 19.3471 18.8591 18.8759 19.2552C18.3812 19.6712 17.7413 19.8901 17.0277 19.9691C15.6028 20.1269 14.1563 19.6988 13.8354 19.5945C13.4814 19.4153 11.5406 18.4036 9.467 16.7641C7.32883 15.0735 5.18484 12.8204 4.36486 10.2363C3.7656 8.34782 3.99156 7.01888 4.46257 6.10221C4.9179 5.21604 5.65473 4.61458 6.34092 4.26436ZM5.61578 2.395C6.56043 1.95131 7.53722 2.41392 7.99221 3.13084L10.0892 6.43513C10.5132 7.10314 10.5422 8.07966 9.85303 8.74862C9.55766 9.03532 9.14671 9.38769 8.76429 9.7156C8.55438 9.89559 8.35307 10.0682 8.18419 10.2186C10.177 13.6549 12.8412 15.2448 14.053 15.8261L15.4019 14.1258C16.0387 13.323 17.1727 13.1353 18.0362 13.6631C18.835 14.1513 19.9394 14.8084 20.9402 15.3572C21.6076 15.7231 22.0851 16.486 21.9498 17.3473C21.7068 18.8943 21.0722 20.0211 20.1679 20.7814C19.2786 21.5289 18.2193 21.8461 17.249 21.9536C15.3403 22.1649 13.5148 21.5926 13.1814 21.482C13.097 21.454 13.027 21.4245 12.9517 21.3866C12.5938 21.2066 10.4847 20.1175 8.22168 18.3282C5.98216 16.5575 3.45652 13.9961 2.45452 10.8384C1.71849 8.51885 1.93622 6.63814 2.67919 5.19218C3.40913 3.77157 4.59122 2.87624 5.61578 2.395Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.7105 2.09121C14.2077 1.86126 13.613 2.08108 13.3822 2.58221C13.1515 3.08333 13.372 3.67599 13.8749 3.90594C16.2013 4.9698 18.864 6.96993 20.0808 9.72996C20.3033 10.2348 20.8944 10.4642 21.4009 10.2424C21.9074 10.0207 22.1377 9.43165 21.9151 8.92685C20.4289 5.55547 17.2873 3.26957 14.7105 2.09121ZM13.9688 5.63303C13.474 5.38645 12.8722 5.58634 12.6248 6.0795C12.3774 6.57265 12.5779 7.17233 13.0728 7.4189C14.0142 7.88796 14.6657 8.32998 15.1917 8.85419C15.7177 9.3784 16.1613 10.0277 16.632 10.9658C16.8794 11.4589 17.4811 11.6588 17.976 11.4122C18.4709 11.1657 18.6715 10.566 18.424 10.0728C17.8929 9.01428 17.3347 8.16604 16.6085 7.44233C15.8822 6.71862 15.0311 6.1623 13.9688 5.63303Z" fill="currentColor"/></svg>',
+                  "color": "white-accent",
+                  "image": {
+                    "alt": "Phone",
+                    "height": "32",
+                    "loading": "lazy",
+                    "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-130pu.svg",
+                    "width": "32"
+                  },
+                  "link": {
+                    "no_follow": false,
+                    "open_in_new_tab": true,
+                    "url": {
+                      "href": "tel:+1-800-800-8011",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "type": "code"
+                },
+                "text": '<h3>Call</h3><p><a href="tel:+1-800-800-8011" rel="noopener">+1 800 800-8011</a></p>'
+              },
+              {
+                "color": "dark",
+                "icon": [ {
+                  "code": '<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 462.799"><path fill-rule="nonzero" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/></svg>',
+                  "color": "accent",
+                  "icon": {
+                    "icon_set": "fontawesome-5.14.0",
+                    "name": "Twitter",
+                    "style": "REGULAR",
+                    "unicode": "f099"
+                  },
+                  "internal_name": "X",
+                  "link": {
+                    "no_follow": true,
+                    "open_in_new_tab": true,
+                    "url": {
+                      "href": "https://twitter.com/HubSpot",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "type": "code"
+                }, {
+                  "color": "accent",
+                  "icon": {
+                    "icon_set": "fontawesome-5.14.0",
+                    "name": "Slack Logo",
+                    "style": "REGULAR",
+                    "unicode": "f198"
+                  },
+                  "internal_name": "Slack",
+                  "link": {
+                    "no_follow": true,
+                    "open_in_new_tab": true,
+                    "url": {
+                      "href": "https://developers.hubspot.com/slack",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "type": "icon"
+                }, {
+                  "color": "accent",
+                  "icon": {
+                    "icon_set": "fontawesome-5.14.0",
+                    "name": "GitHub",
+                    "style": "REGULAR",
+                    "unicode": "f09b"
+                  },
+                  "internal_name": "GitHub",
+                  "link": {
+                    "no_follow": true,
+                    "open_in_new_tab": true,
+                    "url": {
+                      "href": "https://github.com/HubSpot",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "type": "icon"
+                } ],
+                "main_icon": {
+                  "color": "accent",
+                  "image": {
+                    "alt": "Community",
+                    "height": "32",
+                    "loading": "lazy",
+                    "src": "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-r1zb5.svg",
+                    "width": "32"
+                  },
+                  "link": {
+                    "no_follow": true,
+                    "open_in_new_tab": false,
+                    "url": {
+                      "href": "",
+                      "type": "EXTERNAL"
+                    }
+                  },
+                  "type": "image"
+                },
+                "text": "<h3>Engage</h3>"
+              }
+            ],
+            settings={
+              "col": {
+                "lg": "s6",
+                "md": "md-s6"
+              }
+            },
+            wrapper={
+              "block_align": {
+                "lg": "center"
+              },
+              "identifiers": {
+                "custom_class": ""
+              },
+              "margin": {
+                "bottom": {
+                  "lg": "48"
+                }
+              },
+              "max_width": {
+                "lg": "800"
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/button",
+            button=[
+              {
+                "internal_name": "Button",
+                "text": "Submit a Quick Form",
+                "link": {
+                  "no_follow": false,
+                  "open_in_new_tab": false,
+                  "url": {
+                    "href": "https://www.hubspot.com/",
+                    "type": "EXTERNAL"
+                  }
+                },
+                "link_class": "reveal reveal--rerun reveal--zoom reveal--duration-1000",
+                "color": "white",
+                "fill": "fill",
+                "size": "large",
+                "shape": "pill",
+                "add_icon": false,
+                "type": "link"
+              }
+            ],
+            wrapper={
+              "text_align": {
+                "lg": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

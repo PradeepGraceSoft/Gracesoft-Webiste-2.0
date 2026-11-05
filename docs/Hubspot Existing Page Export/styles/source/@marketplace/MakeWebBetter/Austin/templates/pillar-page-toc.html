@@ -1,0 +1,492 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Pillar Page TOC
+screenshotPath: ../images/template-previews/pillar-toc.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--pillar-page-toc'
+%}
+
+{# Pillar Page TOC Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+    full_width=true,
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+      "subtitle"="",
+      "content"="<h1>Pillar Page</h1><p>Consectetur adipiscing elit. Leo nec felis at pellentesque. Sed amet dolor penatibus sed at posuere justo, lacinia neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec felis at pellentesque. Sed amet dolor penatibus sed at posuere justo, lacinia neque.</p>"
+      %}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_color"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Pillar Page TOC Banner #}
+
+{# Spacer #}
+{% dnd_section 
+full_width=true,
+padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+			%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{# Content #}
+
+{% dnd_section 
+padding={
+        'default': {
+          'top': 0,
+          'right': 20,
+          'bottom': 0,
+          'left': 20
+        },
+        'mobile': {
+          'top': 0,
+          'right': 20,
+          'bottom': 0,
+          'left': 20
+        }
+      }
+
+%}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/title-content',
+        "subtitle"="",
+        "content"="<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <br/><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>"
+         style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{# End Of Content #}
+
+{# Spacer #}
+{% dnd_section 
+full_width=true,
+padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+			%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{# video Section #}
+
+{% dnd_section %}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/video-popup'
+      %}
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{# End Of video Section #}
+
+{# Spacer #}
+{% dnd_section 
+full_width=true,
+padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+			%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{# TOC #}
+
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/table of-contents'
+       %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{# End TOC#}
+
+{# Spacer #}
+{% dnd_section 
+full_width=true,
+padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+			%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{# Cta #}
+{% dnd_section %}
+{% dnd_column
+       padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+      %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Heading for Call to Action</h2><p>Lorem ipsum dolor sit amet, an libris accusamus evertitur.Curabitur at elit ut ante porta porta. Duis pulvinar vitae nunc vel finibus.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+        primary_cta={ type: 'none', style: 'filled_light', text: 'Get Started' },
+        secondary_cta={ type: 'btn', style: 'filled_dark', text: 'Call to Action' }
+        %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# end of cta #}
+
+{# Spacer #}
+{% dnd_section 
+  full_width=true,
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+			%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{# Content #}
+{% dnd_section %}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h4>Lorem Ipsum Doler Set Amet.</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.</p>"
+         style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "left"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h4>Lorem Ipsum Doler Set Amet.</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "left"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h4>Lorem Ipsum Doler Set Amet.</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "left"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h4>Lorem Ipsum Doler Set Amet.</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "left"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{# End Of Content #}
+
+{# Spacer #}
+{% dnd_section 
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+
+{% end_dnd_area %}
+
+{% endblock body %}

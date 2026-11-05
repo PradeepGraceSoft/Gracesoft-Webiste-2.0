@@ -1,0 +1,45 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About
+  screenshotPath: ../images/template-previews/about.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--about p-0"
+%}
+
+  {# Breadcrumb Section Start #}
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# About Section Start #}
+  {% include_dnd_partial path="../sections/about.html" %}
+  {# About Section End #}
+
+  {# Brand Logo Six Column Section Start #}
+  {% include_dnd_partial path="../sections/brand-logo-column-six.html" %}
+  {# Brand Logo Six Column Section End #}
+
+  {# Choose Section Start #}
+  {% include_dnd_partial path="../sections/choose.html" %}
+  {# Choose Section End #}
+
+  {# Testimonial Section Start #}
+  {% include_dnd_partial path="../sections/testimonial.html" %}
+  {# Testimonial Section End #}
+
+  {# Funfact With Image Section Start #}
+  {% include_dnd_partial path="../sections/funfact-with-icon.html" %}
+  {# Funfact With Image Section End #}
+
+  {# Instructor Section Start #} 
+  {% include_dnd_partial path='../sections/instructor.html' %}
+  {# Instructor Section End #} 
+  
+
+{% end_dnd_area %}
+{% endblock body %}

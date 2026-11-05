@@ -1,0 +1,24 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+.en-footer__copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1.5px solid #5B9289;
+}
+
+.en-footer__copyright span {
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.25px;
+}

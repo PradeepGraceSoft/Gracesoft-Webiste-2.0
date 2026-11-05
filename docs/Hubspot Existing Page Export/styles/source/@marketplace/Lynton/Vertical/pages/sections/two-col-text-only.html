@@ -1,0 +1,40 @@
+<!--
+  templateType: section
+  label: Two Column - Text Only
+  description: "Simple two columns of text."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/two-col-text.png
+-->
+
+{% dnd_section
+  max_width=1125,
+  padding={'top': 60, 'bottom': 60},
+  background_image={{ context.bg_image || nul }}
+%}
+{% dnd_column width=5 %}
+  {% dnd_row %}
+    {% dnd_module path="../modules/Theme Rich Text",
+        eyebrow="",
+        heading="Transform your Scaling Business with Little Effort Using Vertical.",
+        heading_level="h3",
+        subheading="",
+        text="",
+        add_cta=false
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_row %}
+{% end_dnd_column %}
+
+{% dnd_column width=7, offset=5 %}
+  {% dnd_row %}
+    {% dnd_module path="../modules/Theme Rich Text",
+        eyebrow="",
+        heading="",
+        subheading="",
+        text="<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aenean dignissim pellentesque felis.</p><p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>",
+        add_cta=false
+      %}
+    {% end_dnd_module %}
+  {% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

@@ -1,0 +1,35 @@
+<!--
+  templateType: global_partial
+  label: Website Header
+-->
+
+<a href="#body" class="skip-link">Skip to Content</a>
+
+<header id="site-header" class="site-header {% if theme.header.sticky %}site-header--sticky{% endif %} site-header--not-scrolled hs-search-hidden">
+  <a href="#body" id="skip-link"></a>
+
+  {# Top dnd area #}
+    {% dnd_area 'header_dnd_top'
+      label='Above Header',
+      class='site-header__top'
+    %}
+    {% end_dnd_area %}
+  {# End top dnd area #}
+
+  {% dnd_area 'header' label="Main Header", class="site-header__main" %}
+    {% dnd_section
+        background_color="#ffffff",
+        padding={'top': 20, 'bottom': 20}
+    %}
+      {% dnd_module "header" path="../modules/Site Header", label="Site Header", no_wrapper=true %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Bottom dnd area #}
+    {% dnd_area 'header_dnd_bottom'
+      label='Below Header',
+      class='site-header__bottom'
+    %}
+    {% end_dnd_area %}
+  {# End bottom dnd area #}
+</header>

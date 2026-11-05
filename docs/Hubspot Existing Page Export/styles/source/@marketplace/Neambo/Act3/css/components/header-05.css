@@ -1,0 +1,207 @@
+{% import '../_variables.css' as var %}
+
+/* Animations */
+
+@keyframes sticky_header_active {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0%)
+  }
+}
+
+@keyframes sticky_header_inactive {
+  from {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Sticky element */
+
+.header--sticky-active .header__sticky-element {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+/* Fixes HS editor overlapping problem */
+
+.hs-inline-edit .header--sticky-active .header__sticky-element {
+  z-index: 2147483599;
+}
+
+/* Main section */
+
+.header__section--main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header--sticky-inactive .header__section--main {
+  animation: .2s ease-in-out sticky_header_inactive;
+}
+
+.header--sticky-active .header__section--main {
+  box-shadow: {{ var.small_shadow }};
+  animation: .2s ease-in-out sticky_header_active;
+}
+
+.header__section--main .header__center {
+  position: relative;
+  padding-top: 1.11rem;
+  padding-bottom: 1.11rem;
+}
+
+.header--sticky-active .header__section--main .header__center {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+/* Elements */
+
+.header:not(.header--overlap) .header__logo__overlap,
+.header--overlap .header__logo__static,
+.header--sticky-active .header__logo__overlap,
+.header--sticky-active .header__logo__static,
+.header--sticky:not(.header--sticky-active) .header__logo__sticky {
+  display: none;
+}
+
+.header__logo {
+  margin-inline-end: {{ var.gutter }}px;
+}
+
+.header .nav {
+  position: static;
+}
+
+.header__nav .nav > ul > li {
+  margin: 0;
+  margin-inline-end: 2rem;
+  padding-inline-end: 2rem;
+  border-inline-end: 1px solid;
+}
+
+.header__nav .nav > ul > li:last-child {
+  margin-inline-end: 0;
+  padding-inline-end: 0;
+  border-inline-end: none;
+}
+
+.header__nav .nav > ul > li > a {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header__nav .nav__list--level1 > li > a::before {
+  bottom: -.56rem;
+}
+
+.header--sticky-active .header__nav .nav__list--level1 > li > a::before {
+  bottom: -.25rem;
+}
+
+.header:not(.header--overlap) .nav__mega {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.header__search,
+.header__lang {
+  margin-inline-start: 1.2rem;
+}
+
+.header--wo-lang .header__lang {
+  display: none;
+}
+
+.header:not(.header--overlap) .header__buttons__overlap,
+.header--overlap .header__buttons__static,
+.header--sticky-active .header__buttons__overlap,
+.header--sticky-active .header__buttons__static,
+.header--sticky:not(.header--sticky-active) .header__buttons__sticky {
+  display: none;
+}
+
+.header__buttons .inline-items > *:first-child {
+  margin-inline-start: 1.2rem;
+}
+
+.header__mobile-nav {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.md }}px) {
+  .header__nav {
+    display: none;
+  }
+  
+  .header__mobile-nav {
+    display: block;
+    margin-inline-start: 1.2rem;
+  }
+  
+  .mnav-active {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+
+  .header__search {
+    order: 2;
+  }
+  
+  .header__lang {
+    margin-inline-start: 0;
+    order: 1;
+  }
+  
+  .header__buttons {
+    display: none;
+  }
+  
+  .header__mobile-nav {
+    order: 3;
+  }
+}
+
+/* Color scheme */
+
+{% if theme.components.header.scheme == 'dark' %}
+
+  .header,
+  .header__section--main {
+    background: {{ var.dark }};
+  }
+  
+  .header__nav .nav > ul > li {
+    border-color: {{ var.white_borders }};
+  }
+  
+  .header__nav .nav__link .super-text {
+    color: {{ var.white_text }};
+  }
+
+{% else %}
+
+  .header,
+  .header__section--main {
+    background: {{ var.white }};
+  }
+  
+  .header__nav .nav > ul > li {
+    border-color: {{ var.borders_color }};
+  }
+
+{% endif %}

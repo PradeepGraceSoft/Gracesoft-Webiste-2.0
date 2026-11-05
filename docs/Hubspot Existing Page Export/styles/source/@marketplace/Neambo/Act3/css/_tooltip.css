@@ -1,0 +1,208 @@
+/* Holder */
+
+.ttip-holder {
+  position: relative;
+  overflow: visible;
+}
+
+/* Tooltip */
+
+.ttip {
+  display: none;
+  max-width: 200px;
+  padding: .77rem .91rem;
+  font-family: {{ ui_font_family }};
+  font-weight: {{ ui_font_weight }};
+  font-style: {{ ui_font_style }};
+  font-size: .82rem;
+  line-height: {{ ui_height }};
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  z-index: 5;
+}
+
+.ttip[style*="position"] {
+  display: block;
+}
+
+/* Block */
+
+.ttip--block {
+  max-width: none;
+  width: 200px;
+  text-align: left;
+  white-space: normal;
+  text-overflow: clip;
+}
+
+/* On hover */
+
+.ttip--on-hover {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+*:hover > .ttip--on-hover {
+  visibility: visible;
+  pointer-events: auto;
+  animation: .2s ease-in-out forwards fadeIn;
+}
+
+/* Background */
+
+.ttip::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  z-index: -1;
+  border-radius: {{ radius_2 }};
+}
+
+/* Caret */
+
+.ttip::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  z-index: -2;
+  background: inherit;
+}
+
+.ttip[data-popper-placement="top-start"]::after {
+  bottom: 4px;
+  left: 10px;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.ttip[data-popper-placement="top"]::after {
+  bottom: 6px;
+  left: 50%;
+  margin-left: -6px;
+  transform: rotate(45deg);
+  {% if theme.corners.global_radius != 'square' %}border-radius: 2px{% endif %};
+}
+
+.ttip[data-popper-placement="top-end"]::after {
+  bottom: 4px;
+  right: 10px;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.ttip[data-popper-placement="bottom-start"]::after {
+  top: 4px;
+  left: 10px;
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+}
+
+.ttip[data-popper-placement="bottom"]::after {
+  top: 6px;
+  left: 50%;
+  margin-left: -6px;
+  transform: rotate(45deg);
+  {% if theme.corners.global_radius != 'square' %}border-radius: 2px{% endif %};
+}
+
+.ttip[data-popper-placement="bottom-end"]::after {
+  top: 4px;
+  right: 10px;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.ttip[data-popper-placement="left-start"]::after {
+  top: 10px;
+  right: 4px;
+  clip-path: polygon(0 100%, 100% 0, 0 0);
+}
+
+.ttip[data-popper-placement="left"]::after {
+  top: 50%;
+  right: 6px;
+  margin-top: -6px;
+  transform: rotate(45deg);
+  {% if theme.corners.global_radius != 'square' %}border-radius: 2px{% endif %};
+}
+
+.ttip[data-popper-placement="left-end"]::after {
+  bottom: 10px;
+  right: 4px;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+}
+
+.ttip[data-popper-placement="right-start"]::after {
+  top: 10px;
+  left: 4px;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.ttip[data-popper-placement="right"]::after {
+  top: 50%;
+  left: 6px;
+  margin-top: -6px;
+  transform: rotate(45deg);
+  {% if theme.corners.global_radius != 'square' %}border-radius: 2px{% endif %};
+}
+
+.ttip[data-popper-placement="right-end"]::after {
+  bottom: 10px;
+  left: 4px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* Accent */
+
+.ttip--accent {
+  color: {{ white }};
+}
+
+.ttip--accent::before,
+.ttip--accent::after {
+  background: {{ accent }};
+}
+
+.ttip--accent::before {
+  box-shadow: {{ accent_small_shadow }};
+}
+
+/* Dark */
+
+.ttip--dark {
+  color: {{ white }};
+}
+
+.ttip--dark::before,
+.ttip--dark::after {
+  background: {{ dark }};
+}
+
+.ttip--dark::before {
+  box-shadow: {{ small_shadow }};
+}
+
+/* White */
+
+.ttip--white {
+  color: {{ dark }};
+}
+
+.ttip--white::before,
+.ttip--white::after {
+  background: {{ white }};
+}
+
+/* White accent */
+
+.ttip--white-accent {
+  color: {{ accent }};
+}
+
+.ttip--white-accent::before,
+.ttip--white-accent::after {
+  background: {{ white }};
+}

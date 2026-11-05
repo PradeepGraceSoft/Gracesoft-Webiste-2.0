@@ -1,0 +1,49 @@
+<!--
+  templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title || pageTitle %}<title>{{ page_meta.html_title || pageTitle }}</title>{% endif %}
+    {% if brand_settings.primaryFavicon %}<link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
+    {{ require_css("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap", {async: true}) }} 
+
+    <script src="https://kit.fontawesome.com/1985d96bfa.js" crossorigin="anonymous"></script>
+    {{ require_css(get_asset_url("../../css/plugins/bootstrap.min.css"), {async: true}) }}
+    {{ require_css(get_asset_url("../../css/plugins/animate.css"), {async: true}) }}
+    {{ require_css(get_asset_url("../../css/plugins/swiper-bundle.min.css"), {async: true}) }}
+    {{ require_css(get_asset_url("../../css/plugins/venobox.min.css"), {async: true}) }}
+    {{ require_css(get_asset_url("../../css/main.css"), {async: true}) }}  
+    {{ standard_header_includes }}  
+  </head>
+  <body>
+    <div class="body-wrapper {{ builtin_body_classes }}">
+      {% block header %} 
+        {% global_partial path='../partials/header.html' %}
+      {% endblock header %} 
+
+      <main id="main-content" class="body-container-wrapper">
+        {% block body %}
+        {% endblock body %}
+      </main> 
+
+      {% block footer %}
+        {% global_partial path="../partials/footer.html" %}
+      {% endblock footer %}
+    </div>
+	
+    {{ require_js(get_asset_url('../../js/plugins/modernizr-3.6.0.min.js')) }}
+    {{ require_js(get_asset_url('../../js/plugins/bootstrap.bundle.min.js')) }}  
+    {{ require_js(get_asset_url('../../js/plugins/parallax.min.js')) }}  
+    {{ require_js(get_asset_url('../../js/plugins/svg-injector.min.js')) }} 
+    {{ require_js(get_asset_url('../../js/plugins/swiper-bundle.min.js')) }}  
+    {{ require_js(get_asset_url("../../js/plugins/venobox.min.js")) }}
+    {{ require_js(get_asset_url('../../js/main.js'), { defer: true }) }} 
+    {{ standard_footer_includes }} 
+  </body>
+</html>

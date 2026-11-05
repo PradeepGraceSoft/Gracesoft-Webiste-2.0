@@ -1,0 +1,795 @@
+/*-----------------------------------------------------------------------------------
+CSS INDEX
+===================
+
+01. No button
+02. imple links styling , links that does not have any specific class or links present in the rich-text-field 
+03. Primary CTAs Styling 
+04. Secondary CTAs Styling
+05. Video CTAs Styling 
+06. Video Button Styling 
+07. Responsive Styling
+
+-----------------------------------------------------------------------------------*/
+
+{# Configuration variables #}
+
+{% set blackColor = '#000000' %}
+{% set white_color =  "#ffffff" %}
+
+
+button:disabled,
+.button:disabled {
+	background-color: #D0D0D0;
+	border-color: #D0D0D0;
+	color: #E6E6E6;
+}
+
+
+/* No button */
+
+.no-button,
+.no-button:hover,
+.no-button:focus,
+.no-button:active {
+	background: none;
+	border: none;
+	border-radius: 0;
+	color: initial;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	margin-bottom: 0;
+	padding: 0;
+	text-align: left;
+	text-decoration: none;
+	transition: none;
+}
+
+body a.no-style-link:hover{
+	text-decoration:none;
+}
+/*****************************************/
+/* Simple links styling , links that does not have any specific class or links present in the rich-text-field   */
+/*****************************************/
+
+body a {  
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_family == "inherit" %}
+	font-family: inherit;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.choose_font_size == "inherit" %}
+	font-size: inherit;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.choose_font_size == "custom" %}
+	font-size: {{ theme.fonts_group.formatting.buttons.simple_link.font_size  }}px;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "inherit" %}
+	font-weight: inherit;
+	font-style: inherit;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "medium_500" %}
+	font-weight: 500;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.simple_link.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}	
+	letter-spacing: inherit;
+	line-height: inherit;
+	border-radius:  unset;
+	padding: unset;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	margin-bottom: 0;
+	position: relative;
+	z-index: 1;
+	border:none;
+	text-decoration:none;
+	color: {{ theme.colors_group.growthkit_colors.ctas.simple_link.simple_link_color.color }};
+}
+
+
+
+/*****************************************/
+/* Primary CTAs Styling  */
+/*****************************************/
+
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li .primary-cta a.cta-button,
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li .primary-cta.solid-cta a.cta_button,
+body .primary-cta button,
+body form input.hs-button,
+body .primary-cta .button,
+body .primary-cta a.cta-button,
+body .primary-cta a.cta_button,
+body .header-cta .primary-cta button,
+body .header-cta .primary-cta .button,
+body .header-cta .primary-cta a.cta-button,
+body .header-cta .primary-cta a.cta_button
+{    
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.buttons.primary_cta.font_size }}px;
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "medium_500" %}
+	font-weight: 500;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.primary_cta.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}	
+	letter-spacing: {{ theme.fonts_group.formatting.buttons.primary_cta.letter_spacing }}px;
+	line-height: {{ theme.fonts_group.formatting.buttons.primary_cta.line_height }}px;
+	border-radius:  {{ theme.styling_group.corners.overwrite_for_buttons }}px;
+	padding: {{ theme.styling_group.spacing.ctas.primary_cta.vertical_spacing }}px
+		{{ theme.styling_group.spacing.ctas.primary_cta.horizontal_spacing }}px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	margin-bottom: 0;
+	position: relative; 
+	z-index: 1;
+	text-decoration:none;
+	border:{{ theme.styling_group.border.ctas.primary_cta.border_width ~ 'px' }} solid transparent;
+	color: {{ theme.colors_group.growthkit_colors.ctas.primary_cta.primary_cta_color.color }};
+	background: rgba({{ theme.colors_group.growthkit_colors.ctas.primary_cta.primary_cta_bg_color.color|convert_rgb }}, {{ theme.colors_group.growthkit_colors.ctas.primary_cta.primary_cta_bg_color.opacity/100 }});
+	box-sizing:border-box !important;
+	width: 100%;
+	max-width: max-content;
+	min-width: 172px;
+}
+
+body form input.hs-button{
+	width: 100%;
+	max-width: 100%;
+}
+@media(max-width:1024px) and (min-width:768px){
+	body .header-cta .primary-cta a.cta_button{
+		min-width: 100px !important;
+	}
+}
+@media(max-width:767px){
+	.header-cta.right-group.align-right {
+		text-align: left;
+		padding-top: 20px;
+		padding-left: 15px;
+	}
+}
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li .wanna_dark_cta .primary-cta a.cta-button,
+body .wanna_dark_cta .primary-cta button,
+body .wanna_dark_cta .primary-cta .button,
+body .wanna_dark_cta .primary-cta a.cta-button,
+body .wanna_dark_cta .primary-cta a.cta_button,
+body .wanna_dark_cta .header-cta .primary-cta button,
+body .wanna_dark_cta .header-cta .primary-cta .button,
+body .wanna_dark_cta .header-cta .primary-cta a.cta-button,
+body .wanna_dark_cta .header-cta .primary-cta a.cta_button{
+	background-color: {{ theme.colors_group.brand_colors.headings_color.color }};
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li .wanna_dark_cta .primary-cta a.cta-button:hover,
+body .wanna_dark_cta .primary-cta button:hover,
+body .wanna_dark_cta .primary-cta .button:hover,
+body .wanna_dark_cta .primary-cta a.cta-button:hover,
+body .wanna_dark_cta .primary-cta a.cta_button:hover,
+body .wanna_dark_cta .header-cta .primary-cta button:hover,
+body .wanna_dark_cta .header-cta .primary-cta .button:hover,
+body .wanna_dark_cta .header-cta .primary-cta a.cta-button:hover,
+body .wanna_dark_cta .header-cta .primary-cta a.cta_button:hover {
+	background-color: {{ theme.colors_group.brand_colors.headings_color.color }};
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li .primary-cta.transparent-cta a.cta-button,
+body .primary-cta.transparent-cta button,
+body .primary-cta.transparent-cta .button,
+body .primary-cta.transparent-cta a.cta-button,
+body .primary-cta.transparent-cta a.cta_button,
+body .header-cta.transparent-cta .primary-cta button,
+body .header-cta.transparent-cta .primary-cta .button,
+body .header-cta.transparent-cta .primary-cta a.cta-button,
+body .header-cta.transparent-cta .primary-cta a.cta_button{
+	color: {{ theme.colors_group.growthkit_colors.ctas.primary_transparent_cta.primary_transparent_cta_color.color }};
+	background: transparent;
+	border: {{ theme.styling_group.border.ctas.primary_cta.border_width ~ 'px' }} solid 
+		rgba({{ theme.styling_group.border.ctas.primary_cta.border_color.color|convert_rgb }}, {{ theme.styling_group.border.ctas.primary_cta.border_color.opacity/100 }});
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+{% if theme.effects_group.buttons_hover_effect.primary_ctas_hover_effect == "true" %}
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li .primary-cta a.cta-button:hover,
+body.row-fluid .primary-cta button:hover,
+body .row-fluid .primary-cta .button:hover,
+body.row-fluid .primary-cta  a.cta-button:hover,
+body .row-fluid .primary-cta a.cta_button:hover,
+body .row-fluid .primary-cta .header-cta a.cta_button:hover 
+{
+	color: {{ theme.colors_group.growthkit_colors.ctas.primary_cta.primary_cta_hover_color.color }};
+	background: rgba({{ theme.colors_group.growthkit_colors.ctas.primary_cta.primary_cta_bg_hover_color.color|convert_rgb }},
+		{{ theme.colors_group.growthkit_colors.ctas.primary_cta.primary_cta_bg_hover_color.opacity/100 }} );
+	border-radius:  {{ theme.styling_group.corners.overwrite_for_buttons_on_hover }}px;
+	border-color: transparent;
+	text-decoration:none;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li .primary-cta.transparent-cta a.cta-button:hover,
+body.row-fluid .primary-cta.transparent-cta button:hover,
+body .row-fluid .primary-cta.transparent-cta .button:hover,
+body.row-fluid .primary-cta.transparent-cta  a.cta-button:hover,
+body .row-fluid .primary-cta.transparent-cta a.cta_button:hover,
+body .row-fluid .primary-cta.transparent-cta .header-cta a.cta_button:hover 
+{
+	color: {{ theme.colors_group.growthkit_colors.ctas.primary_transparent_cta.primary_transparent_cta_hover_color.color }};
+	background-color:transparent;
+	border-color:rgba({{ theme.styling_group.border.ctas.primary_cta.border_color_on_hover.color|convert_rgb }},  {{ theme.styling_group.border.ctas.primary_cta.border_color_on_hover.opacity/100 }});
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+{% endif %}
+
+body .header-cta .primary-cta button,
+body .header-cta .primary-cta .button,
+body .header-cta .primary-cta a.cta-button,
+body .header-cta .primary-cta a.cta_button{    
+	padding: {{ theme.styling_group.spacing.ctas.primary_button_of_header.vertical_spacing }}px
+		{{ theme.styling_group.spacing.ctas.primary_button_of_header.horizontal_spacing }}px;
+}
+li.hs-menu-item.hs-menu-depth-1.hs-item-has-children .primary-cta.solid-cta a.cta_button {
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 12px;
+	padding: 6.5px 15.5px;
+}
+
+/*****************************************/
+/* Secondary CTAs Styling  */
+/*****************************************/
+
+.header-grp .hs-menu-wrapper.hs-menu-flow-horizontal>ul li .secondary-cta a.cta_button,
+body .secondary-cta button,
+body .secondary-cta .button,
+body .secondary-cta a.cta_button,
+body .secondary-cta a.cta-button,
+body .secondary-cta a
+{
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.buttons.secondary_cta.font_size }}px;
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "medium_500" %}
+	font-weight: 500;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}	
+	letter-spacing: {{ theme.fonts_group.formatting.buttons.secondary_cta.letter_spacing }}px;
+	line-height: {{ theme.fonts_group.formatting.buttons.secondary_cta.line_height }}px;
+	border-radius: none;
+	padding: 0;
+	display: inline-block;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	color: {{ theme.colors_group.growthkit_colors.ctas.secondary_cta.secondary_cta_color.color }};
+	background: rgba({{ theme.colors_group.growthkit_colors.ctas.secondary_cta.secondary_cta_bg_color.color|convert_rgb }}, {{ theme.colors_group.growthkit_colors.ctas.secondary_cta.secondary_cta_bg_color.opacity/100 }});
+	text-decoration: none;
+	border: 0;
+	text-transform: capitalize;
+}
+
+{% if theme.effects_group.buttons_hover_effect.secondary_ctas_hover_effect == "true" %}
+.header-grp .hs-menu-wrapper.hs-menu-flow-horizontal>ul li .secondary-cta a.cta_button:hover,
+body .secondary-cta button:hover,
+body .secondary-cta .button:hover,
+body .secondary-cta a.cta_button:hover,
+body .secondary-cta a.cta-button:hover,
+body .secondary-cta a:hover
+{
+	color: {{ theme.colors_group.growthkit_colors.ctas.secondary_cta.secondary_cta_hover_color.color }};
+	background: rgba({{ theme.colors_group.growthkit_colors.ctas.secondary_cta.secondary_cta_bg_hover_color.color|convert_rgb }}, {{ theme.colors_group.growthkit_colors.ctas.secondary_cta.secondary_cta_bg_hover_color.opacity/100 }});
+	text-decoration:underline;
+}
+{% endif %}
+
+
+/*****************************************/
+/* Video CTAs Styling  */
+/*****************************************/
+
+body .video-cta button,
+body .video-cta .button,
+body .video-cta a.cta-button,
+body .video-cta a.cta_button,
+body .video-cta a
+{
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_family == "accent_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.accent_font.font_family.font }};
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_family == "base_font" %}
+	font-family: {{ theme.fonts_group.basic_setup.base_font.font_family.font }};
+	{% endif %}
+	font-size: {{ theme.fonts_group.formatting.buttons.video_cta.font_size }}px;
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "thin_100" %}
+	font-weight: 100;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "thin_100_italic" %}
+	font-weight: 100;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "extra_light_200" %}
+	font-weight: 200;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "extra_light_200_italic" %}
+	font-weight: 200;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "light_300" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "light_300_italic" %}
+	font-weight: 300;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "regular_400" %}
+	font-weight: 400;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "regular_400_italic" %}
+	font-weight: 400;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "medium_500" %}
+	font-weight: 500;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "medium_500_italic" %}
+	font-weight: 500;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "semi_bold_600" %}
+	font-weight: 600;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "semi_bold_600_italic" %}
+	font-weight: 600;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "bold_700" %}
+	font-weight: 700;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "bold_700_italic" %}
+	font-weight: 700;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "extra_bold_800" %}
+	font-weight: 800;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "extra_bold_800_italic" %}
+	font-weight: 800;
+	font-style: italic;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "black_900" %}
+	font-weight: 900;
+	font-style: normal;
+	{% endif %}
+	{% if theme.fonts_group.formatting.buttons.video_cta.font_weight == "black_900_italic" %}
+	font-weight: 900;
+	font-style: italic;
+	{% endif %}	
+	letter-spacing: {{ theme.fonts_group.formatting.buttons.video_cta.letter_spacing }}px;
+	line-height: {{ theme.fonts_group.formatting.buttons.video_cta.line_height }}px;
+	border-radius:  {{ theme.styling_group.corners.overwrite_for_buttons }}px;
+	padding: {{ theme.styling_group.spacing.ctas.video_cta.vertical_spacing }}px {{ theme.styling_group.spacing.ctas.video_cta.right_spacing }}px {{ theme.styling_group.spacing.ctas.video_cta.vertical_spacing }}px {{ theme.styling_group.spacing.ctas.video_cta.left_spacing }}px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	margin-bottom: 0;
+	position: relative;
+	z-index: 1;
+	border:{{ theme.styling_group.border.ctas.video_cta.border_width ~ 'px' }} solid 
+		rgba({{ theme.styling_group.border.ctas.video_cta.border_color.color|convert_rgb }}, {{ theme.styling_group.border.ctas.video_cta.border_color.opacity/100 }});
+	color: {{ theme.colors_group.growthkit_colors.ctas.video_cta.video_cta_color.color }};	
+	background: transparent;
+	text-transform: ;
+}
+
+body .video-cta.solid-cta button,
+body .video-cta.solid-cta .button,
+body .video-cta.solid-cta a.cta-button,
+body .video-cta.solid-cta a.cta_button,
+body .video-cta.solid-cta a{
+	background: rgba({{ theme.colors_group.growthkit_colors.ctas.video_cta.video_cta_bg_color.color|convert_rgb }},
+		{{ theme.colors_group.growthkit_colors.ctas.video_cta.video_cta_bg_color.opacity/100 }});
+	color: {{ theme.colors_group.growthkit_colors.ctas.video_cta.video_cta_solid_color.color }};	
+}
+
+{% if theme.effects_group.buttons_hover_effect.video_ctas_hover_effect == "true" %}
+body .video-cta.solid-cta button:hover,
+body .video-cta.solid-cta .button:hover,
+body .video-cta.solid-cta a:hover,
+body .video-cta.solid-cta a.cta-button:hover,
+body .video-cta.solid-cta a.cta_button:hover {    
+	color: {{ theme.colors_group.growthkit_colors.ctas.video_cta.video_cta_solid_color.color }};
+	background: rgba({{ theme.colors_group.growthkit_colors.ctas.video_cta.video_cta_bg_hover_color.color|convert_rgb }},{{ theme.colors_group.growthkit_colors.ctas.video_cta.video_cta_bg_hover_color.opacity/100 }});
+	text-transform: ;
+	border-radius: {{ theme.styling_group.corners.overwrite_for_buttons_on_hover ~ 'px'}};
+	text-decoration:none;
+}
+
+body .video-cta button:hover,
+body .video-cta .button:hover,
+body .video-cta a:hover,
+body .video-cta a.cta-button:hover,
+body .video-cta a.cta_button:hover {    
+	text-decoration:underline;
+}
+{% else %}
+body .video-cta button:hover,
+body .video-cta .button:hover,
+body .video-cta a:hover,
+body .video-cta a.cta-button:hover,
+body .video-cta a.cta_button:hover {    
+	text-decoration:none;
+}
+{% endif %}
+
+/*****************************************/
+/* Video Button Styling  */
+/*****************************************/
+
+body .video-button button,
+body .video-button .button,
+body .video-button a.cta_button,
+body .video-button a.cta-button,
+body .video-button a {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	background: rgba ({{ theme.colors_group.growthkit_colors.ctas.video_button.video_button_color.color|convert_rgb }}, {{ theme.colors_group.growthkit_colors.ctas.video_button.video_button_color.opacity/100 }});
+	text-decoration: none;
+	border: 0;
+	text-transform: none;
+}
+
+{% if theme.effects_group.buttons_hover_effect.video_buttons_hover_effect == "true" %}
+body .video-button button:hover,
+body .video-button .button:hover,
+body .video-button a.cta_button:hover,
+body .video-button a.cta-button:hover,
+body .video-button a:hover{
+	background: rgba({{ theme.colors_group.growthkit_colors.ctas.video_button.video_button_hover_color.color|convert_rgb }}, {{ theme.colors_group.growthkit_colors.ctas.video_button.video_button_hover_color.opacity/100 }});
+	border-radius: 6px; 
+	transition: all 0.5s ease-in-out;
+
+}
+{% endif %}
+
+/*****************************************/
+/* Responsive Styling  */
+/*****************************************/
+
+@media(max-width: 1024px) and (min-width: 768px) {
+	body .row-fluid .hs-button {
+		font-size: 14px !important;
+	}
+
+	{% if theme.fonts_group.formatting.buttons.primary_cta.overwrite_for_tab_mobile == "true" %}
+	body .primary-cta button,
+	body form input.hs-button,
+	body .primary-cta .button,
+	body .primary-cta a.cta-button,
+	body .primary-cta a.cta_button,
+	body .header-cta .primary-cta button,
+	body .header-cta .primary-cta .button,
+	body .header-cta .primary-cta a.cta-button,
+	body .header-cta .primary-cta a.cta_button {
+		font-size: {{ theme.fonts_group.formatting.buttons.primary_cta.font_size_tab }}px;
+		line-height: {{  theme.fonts_group.formatting.buttons.primary_cta.line_height_tab }}px;
+		letter-spacing: {{  theme.fonts_group.formatting.buttons.primary_cta.letter_spacing_tab }}px;
+	}
+	{% endif %}	
+
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.overwrite_for_tab_mobile == "true" %}
+	body .secondary-cta button,
+	body .secondary-cta .button,
+	body .secondary-cta a.cta_button,
+	body .secondary-cta a.cta-button,
+	body .secondary-cta a {
+		font-size: {{ theme.fonts_group.formatting.buttons.secondary_cta.font_size_tab }}px;
+		line-height: {{  theme.fonts_group.formatting.buttons.secondary_cta.line_height_tab }}px;
+		letter-spacing: {{  theme.fonts_group.formatting.buttons.secondary_cta.letter_spacing_tab }}px;
+	}
+	{% endif %}	
+
+	{% if theme.fonts_group.formatting.buttons.video_cta.overwrite_for_tab_mobile == "true" %}
+	body .video-cta button,
+	body .video-cta .button,
+	body .video-cta a.cta-button,
+	body .video-cta a.cta_button,
+	body .video-cta a{
+		font-size: {{ theme.fonts_group.formatting.buttons.video_cta.font_size_tab }}px;
+		line-height: {{  theme.fonts_group.formatting.buttons.video_cta.line_height_tab }}px;
+		letter-spacing: {{  theme.fonts_group.formatting.buttons.video_cta.letter_spacing_tab }}px;
+	}
+	{% endif %}	
+
+}
+
+@media(min-width:768px) {
+
+	{% if theme.fonts_group.formatting.buttons.primary_cta.overwrite_for_tab_mobile == "true" %}
+	body .primary-cta button,
+	body form input.hs-button,
+	body .primary-cta .button,
+	body .primary-cta a.cta-button,
+	body .primary-cta a.cta_button,
+	body .header-cta .primary-cta button,
+	body .header-cta .primary-cta .button,
+	body .header-cta .primary-cta a.cta-button,
+	body .header-cta .primary-cta a.cta_button {
+		font-size: {{ theme.fonts_group.formatting.buttons.primary_cta.font_size_mob }}px;
+		line-height: {{  theme.fonts_group.formatting.buttons.primary_cta.line_height_mob }}px;
+		letter-spacing: {{  theme.fonts_group.formatting.buttons.primary_cta.letter_spacing_mob }}px;
+	}
+	{% endif %}	
+
+	{% if theme.fonts_group.formatting.buttons.secondary_cta.overwrite_for_tab_mobile == "true" %}
+	body .secondary-cta button,
+	body .secondary-cta .button,
+	body .secondary-cta a.cta_button,
+	body .secondary-cta a.cta-button,
+	body .secondary-cta a {
+		font-size: {{ theme.fonts_group.formatting.buttons.secondary_cta.font_size_mob }}px;
+		line-height: {{  theme.fonts_group.formatting.buttons.secondary_cta.line_height_mob }}px;
+		letter-spacing: {{  theme.fonts_group.formatting.buttons.secondary_cta.letter_spacing_mob }}px;
+	}
+	{% endif %}	
+
+	{% if theme.fonts_group.formatting.buttons.video_cta.overwrite_for_tab_mobile == "true" %}
+	body .video-cta button,
+	body .video-cta .button,
+	body .video-cta a.cta-button,
+	body .video-cta a.cta_button,
+	body .video-cta a{
+		font-size: {{ theme.fonts_group.formatting.buttons.video_cta.font_size_mob }}px;
+		line-height: {{  theme.fonts_group.formatting.buttons.video_cta.line_height_mob }}px;
+		letter-spacing: {{  theme.fonts_group.formatting.buttons.video_cta.letter_spacing_mob }}px;
+	}
+	{% endif %}	
+
+}
+
+@media(min-width:768px) and (max-width:1024px){
+	body .primary-cta a.cta_button{
+		padding: 14.5px 20.5px;
+	}
+}
+
+

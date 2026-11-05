@@ -1,0 +1,325 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Pillar Page Tab
+screenshotPath: ../images/template-previews/pillar-tab.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--pillar-page-tab'
+%}
+
+{# Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+    full_width=true,
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_column 
+   padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+      "subtitle"="",
+      "content"="<h1>Pillar Page</h1><p>Every savvy marketer will make sure that the pillar page is a beautiful and responsive one, and set it’s content accordingly. A pillar page represents an encyclopedic view of cluster or related content. They give a nice understanding of topics to your visitors. These pillar pages are effective for SEO also.</p>"
+       primary_cta={ type: 'none' },
+       secondary_cta={ type: 'none' }
+       style_1={
+          'banner_content_alignment_desktop_': { alignment_choice: 'center' },
+          enable_banner_overlay:  true,
+          'max_width':{ enable: true,value: 760 }
+        }
+     %}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "video_banner"
+}
+{% end_module_attribute %}
+{% module_attribute 'banner_content_alignment_desktop_' is_json=True %}
+{
+"alignment_choice": "center"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row%}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Banner #}
+
+{# Content #}
+{% dnd_section 
+   max_width=950,
+   padding= {
+        'default': {
+            'top': 60,
+            'right': 20,
+            'bottom': 40,
+            'left': 20
+          },
+          'mobile': {
+            'top': 0,
+            'right': 20,
+            'bottom': 20,
+            'left': 20
+          }
+    }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+   path="../modules/title-content",
+   'subtitle'="",
+   'content'="<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</p> 
+     <p>the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty.</p>
+    <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth.</p>"
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Content #}
+
+{# Tab Section #}
+{% dnd_section
+  max_width= 950,
+  padding= {
+        'default': {
+            'top': 20,
+            'right': 20,
+            'bottom': 60,
+            'left': 20
+          },
+          'mobile': {
+            'top': 20,
+            'right': 20,
+            'bottom': 20,
+            'left': 20
+          }
+    }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+   path='../modules/tabs'
+%}
+{% module_attribute 'layout_choices' is_json=True %}
+{
+"select_layout": "half_width_horizontal_tabs"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row%}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Tab Section #}
+
+{# Content #}
+{% dnd_section 
+   max_width=950,
+   padding= {
+        'default': {
+            'top': 20,
+            'right': 20,
+            'bottom': 60,
+            'left': 20
+          },
+          'mobile': {
+            'top': 20,
+            'right': 20,
+            'bottom': 30,
+            'left': 20
+          }
+      }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+   path="../modules/title-content",
+   'subtitle'="Chapter 1",
+   'content'="<h2>How to create amazing Pillar pages</h2>
+              <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth.</p>
+              <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages.</p>
+              <ul><li>Lorem ipsum dolor sit amet</li><li>Lorem ipsum dolor sit amet</li><li>Lorem ipsum dolor sit amet</li><li>Lorem ipsum dolor sit amet</li> </ul>"
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Content #}
+
+{# Video Section #}
+{% dnd_section
+  class="au-video-section",
+  full_width= true,
+  padding= {
+        'default': {
+            'top': 20,
+            'right': 0,
+            'bottom': 60,
+            'left': 0
+          },
+          'mobile': {
+            'top': 20,
+            'right': 20,
+            'bottom': 20,
+            'left': 20
+          }
+  }
+%}
+{% dnd_module
+   path='../modules/video-popup',
+   image= {
+    'src': get_asset_url('../images/multipurpose/video-poster-two.png'),
+    'alt': 'Video Poster'
+   }
+   style= {   
+         "alignment" : {
+         "alignment" : "center"         
+         },
+    'corners': {
+      'overwrite': true,
+      'corners': 0,
+    }
+   }
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Video Section #}
+
+{# Content #}
+{% dnd_section 
+   max_width=950,
+   padding= {
+        'default': {
+            'top': 20,
+            'right': 20,
+            'bottom': 60,
+            'left': 20
+          },
+          'mobile': {
+            'top': 20,
+            'right': 20,
+            'bottom': 20,
+            'left': 20
+          }
+      }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+   path="../modules/title-content",
+   'subtitle'="Chapter 2",
+   'content'="<h2>How to optimize your Pillar page</h2>
+              <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.</p>
+              <p>He'd fall right off his desk! And it's a funny sort of business to be sitting up there at your desk, talking down at your subordinates from up there, especially when you have to go right up close because the boss is hard of hearing. Well, there's still some hope; once I've got the money together to pay off my parents' debt to him - another five or six years I suppose - that's definitely what I'll do. That's when I'll make the big change.</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>"
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Content #}
+
+{# Image #}
+{% dnd_section 
+   max_width=950,
+   padding= {
+        'default': {
+            'top': 30,
+            'right': 20,
+            'bottom': 50,
+            'left': 20
+          },
+          'mobile': {
+            'top': 20,
+            'right': 20,
+            'bottom': 40,
+            'left': 20
+          }
+      }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+   path="../modules/image",
+   "image" = {
+    "src": get_asset_url('../images/multipurpose/shoe.png'),
+    "alt": "shoes"
+   }
+   
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Image #}
+
+{# Content #}
+{% dnd_section 
+   max_width=950,
+   padding= {
+        'default': {
+            'top': 30,
+            'right': 20,
+            'bottom': 50,
+            'left': 20
+          },
+          'mobile': {
+            'top': 20,
+            'right': 20,
+            'bottom': 30,
+            'left': 20
+          }
+      }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+   path="../modules/title-content",
+   'subtitle'="",
+   'content'="<p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word and the Little Blind Text should turn around and return to its own, safe country. </p>
+              <p>they are still using her.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again.</p>
+              <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Content #}
+
+{# Subscribe to newsletter #}
+{% include_dnd_partial path='../sections/cta.html' %}
+{# End Of Subscribe to newsletter #}
+
+{% end_dnd_area %}
+{% endblock body %}

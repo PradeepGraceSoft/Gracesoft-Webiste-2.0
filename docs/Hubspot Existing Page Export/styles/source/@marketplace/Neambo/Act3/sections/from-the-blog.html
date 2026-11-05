@@ -1,0 +1,60 @@
+<!--
+ templateType: section
+ label: From the blog
+ description: "List your latest blog posts on your website page."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/from-the-blog.jpg
+-->
+{% dnd_section %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-extra-settings',
+        bg_color='light'
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-intro',
+        overline='Related Articles',
+        title='From Our Blog',
+        desc='<p>Stay up to date with what is new in our industry, learn more about the upcoming products and events.</p>'
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/blog-card'
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/button',
+        button=[
+          {
+            'internal_name': 'Button',
+            'type': 'link',
+            'text': "Subscribe to Our Blog",
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            },
+            'color': 'accent',
+            'fill': 'outline',
+            'size': 'large',
+            'shape': 'default'
+          }
+        ],
+        wrapper={
+          'text_align': {
+            'lg': 'center'
+          },
+          'margin': {
+            'top': {
+              'lg': (theme.layout.gutter * 2)|string
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

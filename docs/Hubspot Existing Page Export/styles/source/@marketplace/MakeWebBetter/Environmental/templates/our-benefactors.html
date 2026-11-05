@@ -1,0 +1,1816 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Our Benefactors
+  screenshotPath: ../images/template-previews/benefactor.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{% dnd_area 'dnd_area'
+label='Main section',
+class='body-container body-container--benefactors'
+%}
+
+{# Banner Section #}
+{% dnd_section
+  full_width=true,
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12,
+    padding={
+      "default" : {
+        "bottom" : "0px",
+        "left" : "0px",
+        "right" : "0px",
+        "top" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/hero",
+        offset=0,
+        width=12,
+        breadcumbs={
+          "current_page_name" : "Our Benefactors",
+          "parent_data" : [ {
+            "parent_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "http://makewebbetter-5145589.hs-sites.com/en/homepage",
+                "type" : "EXTERNAL"
+              }
+            },
+            "parent_page_name" : "Home"
+          } ]
+        },
+        select_action="breadcumb",
+        style_1={
+          "banner_content_alignment" : {
+            "banner_content_alignment_mobile_" : {
+              "alignment_choice" : "center"
+            }
+          },
+          "image" : {
+            "alt" : "Benefactors Banner",
+            "height" : 556,
+            "max_height" : 556,
+            "max_width" : 1366,
+            "src" : get_asset_url('../images/multipurpose/banner-five.png'),
+            "width" : 1366
+          },
+          "max_width" : {
+            "value" : 600
+          },
+          "spacing" : {
+            "desktop" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 80
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 80
+                  }
+                }
+              }
+            },
+            "mobile" : {
+              "spacing_mobile_" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 50
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 50
+                  }
+                }
+              }
+            }
+          }
+        }
+      %}
+        {% module_attribute "content" %}
+          <h1><span style="color: #ffa17a;">People</span> <span style="color: #ffffff;">who </span><span style="color: #ffa17a;">Became </span><span style="color: #ffffff;">heroes</span></h1>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Image an Content Section #}
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        title_content={
+          "content" : '<h2><span style="color: #0a0a0a;">Help</span> <span style="color: #ffa17a;">Today</span> <span style="color: #0a0a0a;">for</span></h2><h2><span style=\"color: #0a0a0a;\">Brighter</span> <span style=\"color: #a3da8d;\">Tomorrow</span></h2><p><span style=\"color: #575757;\">Leaders across the country are tackling the most challenging and pressing issues of our time. Earth Let us all join to deal with unprecedented threats to Earths life.</span></p>'
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 30,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/button",
+        offset=0,
+        width=12,
+        enable_secondary_button=true,
+        secondary_button={
+          "layout" : "secondary",
+          "type" : "outline"
+        },
+        style={
+          "overwrite_secondary_button" : false
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/image",
+        offset=0,
+        width=12,
+        image={
+          "alt" : "Babies",
+          "height" : 549,
+          "loading" : "lazy",
+          "max_height" : 549,
+          "max_width" : 558,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/boys.png'),
+          "width" : 558
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Benefactors Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        style={
+          "title_content" : {
+            "alignment" : {
+              "alignment_desktop" : "center"
+            },
+            "mini_title" : {
+              "color" : {
+                "color" : "#A3DA8D",
+                "opacity" : 100
+              }
+            }
+          }
+        },
+        title_content={
+          "content" : "<h3>Our Benefactors</h3>",
+          "enable_mini_title" : true,
+          "mini_title" : "Helping Hand"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 50,
+          "height_mobile_" : 40,
+          "height_tablet_" : 40
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/benefactor",
+        offset=0,
+        width=12,
+        benefactor_list=[ {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Pauline  Wright"
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/pauline.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Esther Howard"
+          },
+          "profile" : "Frontend Developer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/brandon.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Ted Horton"
+          },
+          "profile" : "Gaming Director",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/morris.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "James Stewart"
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/james.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Pauline  Wright"
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/pauline.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Esther Howard"
+          },
+          "profile" : "Frontend Developer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/brandon.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Ted Horton"
+          },
+          "profile" : "Gaming Director",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/morris.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "James Stewart"
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/james.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Pauline  Wright"
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/pauline.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Esther Howard"
+          },
+          "profile" : "Frontend Developer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/brandon.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Ted Horton"
+          },
+          "profile" : "Gaming Director",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/morris.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "James Stewart"
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/james.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          } ]
+        } ],
+        layout_choice={
+          "column_choice" : "four_column"
+        },
+        style={
+          "overwrite_style" : true
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Video Section #}
+{% dnd_section
+  vertical_alignment=MIDDLE,
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/video",
+        offset=0,
+        width=12,
+        image={
+          "alt" : "Video Poster",
+          "height" : 605,
+          "loading" : "lazy",
+          "max_height" : 605,
+          "max_width" : 780,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/video-poster-five.png'),
+          "width" : 780
+        },
+        style={
+          "overlay" : {
+            "enable_overlay" : false
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        title_content={
+          "content" : "<h3>Our Unique Approach Towards Our Aim</h3><p>You are responsible for operations, service, or customer support and face challenges trying to communicate complex procedures to a global market effectively. Traditional methods don’t.</p>",
+          "enable_mini_title" : true,
+          "mini_title" : "HOW WE WORK"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 30,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/button",
+        offset=0,
+        width=12,
+        button={
+          "layout" : "secondary",
+          "type" : "outline"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Counter Section #}
+{% dnd_section
+  background_color="rgba(20, 99, 86, 1)",
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "80px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_module
+    path="../modules/counter",
+    offset=0,
+    width=12,
+    counter=[ {
+      "counter_text" : "People Helped",
+      "counter_unit" : "+",
+      "counter_value" : "5898",
+      "enable_counter_unit" : false,
+      "icon" : {
+        "name" : "Drafting Compass",
+        "type" : "SOLID",
+        "unicode" : "f568"
+      },
+      "image" : {
+        "alt" : "People Helped",
+        "height" : 149,
+        "loading" : "lazy",
+        "max_height" : 149,
+        "max_width" : 149,
+        "size_type" : "auto",
+        "src" : get_asset_url('../images/multipurpose/helping-hand.png'),
+        "width" : 149
+      }
+    }, {
+      "counter_text" : "Changing Life Since",
+      "counter_unit" : "+",
+      "counter_value" : "1999",
+      "enable_counter_unit" : false,
+      "icon" : {
+        "name" : "Drafting Compass",
+        "type" : "SOLID",
+        "unicode" : "f568"
+      },
+      "image" : {
+        "alt" : "Changing Life Since",
+        "height" : 149,
+        "loading" : "lazy",
+        "max_height" : 149,
+        "max_width" : 149,
+        "size_type" : "auto",
+        "src" : get_asset_url('../images/multipurpose/life.png'),
+        "width" : 149
+      }
+    }, {
+      "counter_text" : "Our Partners",
+      "counter_unit" : "+",
+      "counter_value" : "21",
+      "enable_counter_unit" : true,
+      "icon" : {
+        "name" : "Drafting Compass",
+        "type" : "SOLID",
+        "unicode" : "f568"
+      },
+      "image" : {
+        "alt" : "Our Partners",
+        "height" : 149,
+        "loading" : "lazy",
+        "max_height" : 149,
+        "max_width" : 149,
+        "size_type" : "auto",
+        "src" : get_asset_url('../images/multipurpose/hand-shaking.png'),
+        "width" : 149
+      }
+    }, {
+      "counter_text" : "Volunteers",
+      "counter_unit" : "+",
+      "counter_value" : "385",
+      "enable_counter_unit" : false,
+      "icon" : {
+        "name" : "Drafting Compass",
+        "type" : "SOLID",
+        "unicode" : "f568"
+      },
+      "image" : {
+        "alt" : "Volunteers",
+        "height" : 149,
+        "loading" : "lazy",
+        "max_height" : 149,
+        "max_width" : 149,
+        "size_type" : "auto",
+        "src" : get_asset_url('../images/multipurpose/volunteer-hand.png'),
+        "width" : 149
+      }
+    } ],
+    style={
+      "counter" : {
+        "counter_text" : {
+          "desktop" : {
+            "font" : {
+              "color" : "#FFFFFF",
+              "fallback" : "sans-serif",
+              "font" : "Roboto",
+              "font_set" : "GOOGLE",
+              "size" : 24,
+              "styles" : { },
+              "variant" : "700"
+            }
+          }
+        },
+        "counter_value" : {
+          "desktop" : {
+            "font" : {
+              "color" : "#FFFFFF",
+              "fallback" : "sans-serif",
+              "font" : "Roboto",
+              "font_set" : "GOOGLE",
+              "size" : 76,
+              "styles" : { },
+              "variant" : "700"
+            }
+          }
+        }
+      }
+    }
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}
+
+{# FAQ Section #}
+{% dnd_section
+  vertical_alignment=MIDDLE,
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/image",
+        offset=0,
+        width=12,
+        image={
+          "alt" : "Volunteer Group",
+          "height" : 541,
+          "loading" : "lazy",
+          "max_height" : 541,
+          "max_width" : 484,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/volunteer-group.png'),
+          "width" : 484
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "background_color" : {
+            "color" : "#ffffff",
+            "opacity" : 0
+          },
+          "height_desktop_" : 0,
+          "height_mobile_" : 30,
+          "height_tablet_" : 0
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/accordion",
+        offset=0,
+        width=12,
+        accordion=[ {
+          "content" : '<p><span style=\"color: #575757;\">We will begin in this chapter by dealing with some general quantum mechanical ideas. Some of the statements will be quite precise, others only partially precise.</span></p>',
+          "icon_field" : {
+            "name" : "chevron-down",
+            "type" : "SOLID",
+            "unicode" : "f078"
+          },
+          "title" : "Q. How confident do you feel with where the company is going?"
+        }, {
+          "content" : '<p><span style=\"color: #575757;\">We will begin in this chapter by dealing with some general quantum mechanical ideas. Some of the statements will be quite precise, others only partially precise.</span></p>',
+          "icon_field" : {
+            "name" : "chevron-down",
+            "type" : "SOLID",
+            "unicode" : "f078"
+          },
+          "title" : "Q. Do you have any questions about the recent change involving X?"
+        }, {
+          "content" : '<p><span style=\"color: #575757;\">We will begin in this chapter by dealing with some general quantum mechanical ideas. Some of the statements will be quite precise, others only partially precise.</span></p>',
+          "icon_field" : {
+            "name" : "chevron-down",
+            "type" : "SOLID",
+            "unicode" : "f078"
+          },
+          "title" : "Q. Last time we spoke you said X was a challenge for you, how is that going?"
+        }, {
+          "content" : '<p><span style=\"color: #575757;\">We will begin in this chapter by dealing with some general quantum mechanical ideas. Some of the statements will be quite precise, others only partially precise.</span></p>',
+          "icon_field" : {
+            "name" : "chevron-down",
+            "type" : "SOLID",
+            "unicode" : "f078"
+          },
+          "title" : "Q. How are you/your team progressing towards established goals?"
+        } ],
+        style={
+          "accordion" : {
+            "border" : {
+              "border_color" : {
+                "color" : "#A3DA8D",
+                "opacity" : 100
+              }
+            },
+            "spacing" : {
+              "margin" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 30
+                },
+                "top" : { }
+              },
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 0
+                }
+              }
+            }
+          },
+          "overwrite" : {
+            "content" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : { },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                }
+              }
+            },
+            "enable" : true,
+            "title" : {
+              "color_field" : {
+                "color" : "#0a0a0a",
+                "opacity" : 100
+              },
+              "font_size" : 14
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Partner Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+   {% dnd_column
+  offset=0,
+  width=12
+%}
+  {% dnd_row %}
+    {% dnd_module
+      path="../modules/title-content",
+      offset=0,
+      width=12,
+      style={
+        "title_content" : {
+          "alignment" : {
+            "alignment_desktop" : "center"
+          },
+          "mini_title" : {
+            "spacing" : 50
+          }
+        }
+      },
+      title_content={
+        "content" : "",
+        "enable_mini_title" : true,
+        "mini_title" : "TRUSTED BY THE WORLD'S BEST TEAM"
+      }
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% dnd_row %}
+    {% dnd_module
+      path="../modules/partner",
+      offset=0,
+      width=12,
+      parnter=[ {
+        "image" : {
+          "alt" : "paypal",
+          "height" : 32,
+          "loading" : "lazy",
+          "max_height" : 32,
+          "max_width" : 121,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/paypal.png'),
+          "width" : 121
+        },
+        "link" : {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+            "href" : "https://www.paypal.com/",
+            "type" : "EXTERNAL"
+          }
+        }
+      }, {
+        "image" : {
+          "alt" : "Microsoft",
+          "height" : 32,
+          "loading" : "lazy",
+          "max_height" : 32,
+          "max_width" : 150,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/microsoft.png'),
+          "width" : 150
+        },
+        "link" : {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+            "href" : "https://www.microsoft.com/",
+            "type" : "EXTERNAL"
+          }
+        }
+      }, {
+        "image" : {
+          "alt" : "Google",
+          "height" : 32,
+          "loading" : "lazy",
+          "max_height" : 32,
+          "max_width" : 98,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/google.png'),
+          "width" : 98
+        },
+        "link" : {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+            "href" : "https://www.google.com/",
+            "type" : "EXTERNAL"
+          }
+        }
+      }, {
+        "image" : {
+          "alt" : "Nike",
+          "height" : 32,
+          "loading" : "lazy",
+          "max_height" : 32,
+          "max_width" : 89,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/nike.png'),
+          "width" : 89
+        },
+        "link" : {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+            "href" : "https://www.nike.com/",
+            "type" : "EXTERNAL"
+          }
+        }
+      }, {
+        "image" : {
+          "alt" : "dropbox",
+          "height" : 32,
+          "loading" : "lazy",
+          "max_height" : 32,
+          "max_width" : 163,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/dropbox.png'),
+          "width" : 163
+        },
+        "link" : {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+            "href" : "https://www.dropbox.com/",
+            "type" : "EXTERNAL"
+          }
+        }
+      } ]
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Form Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/image",
+        offset=0,
+        width=12,
+        image={
+          "alt" : "Family",
+          "height" : 768,
+          "loading" : "lazy",
+          "max_height" : 768,
+          "max_width" : 667,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/multipurpose/family.png'),
+          "width" : 667
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_mobile_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/form",
+        offset=0,
+        width=12,
+        form_layout_choice={
+          "form_layouts" : "multiple_field_form"
+        },
+        single_field_form={
+          "form_id" : "",
+          "form_type" : "HUBSPOT",
+          "message" : "Thanks for submitting the form.",
+          "response_type" : "inline"
+        },
+        style={
+          "button_full_width" : {
+            "enable" : true
+          },
+          "form_alignment" : {
+            "max_width" : 500
+          },
+          "form_title" : {
+            "enable" : true,
+            "title_color" : {
+              "color" : "#146356",
+              "opacity" : 100
+            }
+          },
+          "spacing" : {
+            "desktop_spacing" : {
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 40
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 20
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 20
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 40
+                }
+              }
+            },
+            "mobile_spacing" : {
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 30
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 10
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 10
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 20
+                }
+              }
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+{% end_dnd_area %}
+{% endblock body %}

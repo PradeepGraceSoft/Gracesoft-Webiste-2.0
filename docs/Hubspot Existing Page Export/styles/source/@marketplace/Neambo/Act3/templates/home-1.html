@@ -1,0 +1,601 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home 1
+  screenshotPath: ../images/template-previews/home-1.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=true, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import content_width, vspace_lg, vspace_sm, gutter %}
+  
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': 120,
+          'bottom': 120
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_media='image',
+            bg_img={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/act3-h5-sample-4.jpg',
+              'alt': 'Sample image'
+            },
+            overlay='dark',
+            min_height='minh-full'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Welcome to',
+            title='The Next Level',
+            desc='<p>Help visitors get the basic idea within a few seconds, so they understand what it is all about.</p>',
+            settings={
+              'color_scheme': 'dark',
+              'title_tag': 'h1',
+              'title_looks_like': 'display',
+              'divider': 'accent'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Read Docs',
+                'type': 'link',
+                'text': 'Read Docs',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://neambo.com/support/act3'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'white',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'pill'
+              },
+              {
+                'internal_name': 'Get Started',
+                'type': 'link',
+                'text': 'Get Started',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'accent',
+                'fill': 'fill',
+                'size': 'large',
+                'shape': 'pill'
+              }
+            ],
+            settings={
+              'space': 20
+            },
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/scroll-to',
+            scroll_to='offer',
+            color='ghost',
+            fill='fill',
+            position_in_section='natural',
+            wrapper={
+              'margin': {
+                'top': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Offer #}
+
+    {% dnd_section
+      max_width=900,
+      padding={
+        'default': {
+          'top': (gutter * 2)|string,
+          'bottom': gutter|string
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='accent',
+            custom_id="offer"
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row vertical_alignment='MIDDLE' %}
+          {% dnd_column offset=0, width=6 %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/heading',
+                text='Limited Time Offer',
+                html_tag='h2',
+                looks_like='',
+                color_scheme='dark'
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column offset=6, width=6 %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/compact-card',
+                items=[
+                  {
+                    'image': {
+                      'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-15.jpg',
+                      'alt': 'Describe your image',
+                      'width': 50,
+                      'height': 50,
+                      'loading': 'lazy'
+                    },
+                    'title': 'Unlock the benefits',
+                    'desc': 'Till Dec 6th, 2021',
+                    'arrow': true,
+                    'color': 'white',
+                    'title_tag': 'h3',
+                    'link': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      },
+                      'open_in_new_tab': true,
+                      'no_follow': false
+                    }
+                  }
+                ]
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Highlights 1 #}
+
+    {% dnd_section max_width=1405 %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bottom_deco={
+              'type': 'waves-reverse',
+              'color': 'light'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Page Editor',
+            title='Add, clone, reorder or remove sections directly from your page',
+            desc=''
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/act3-promo-demo-7.png',
+              'width': 1405,
+              'height': 841,
+              'alt': 'Sample image',
+              'loading': 'lazy'
+            },
+            img_radius=false,
+            wrapper={
+              'text_align': {
+                'sm': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Highlights 2 #}
+
+    {% dnd_section full_width=true,
+      padding={
+        'default': {
+          'top': 0,
+          'bottom': 0
+        },
+        'mobile': {
+          'bottom': gutter
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light',
+            bottom_deco={
+              'type': 'waves',
+              'color': 'white'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Theme Settings',
+            title='Customize color, fonts, shape and space',
+            desc=''
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/feature-card',
+            card=[
+              {
+                'title': 'Feature card',
+                'desc': 'With cards, features are easy to read and browse through.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Feather',
+                    'style': 'SOLID',
+                    'unicode': 'f56b',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h3',
+                'title_looks_like': 'h4',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Feature card',
+                'desc': 'With cards, features are easy to read and browse through.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Feather',
+                    'style': 'SOLID',
+                    'unicode': 'f56b',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'ghost'
+                },
+                'color': 'accent',
+                'shadow': true,
+                'title_tag': 'h3',
+                'title_looks_like': 'h4',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Feature card',
+                'desc': 'With cards, features are easy to read and browse through.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Feather',
+                    'style': 'SOLID',
+                    'unicode': 'f56b',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h3',
+                'title_looks_like': 'h4',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': false
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': 's4',
+                'md': 'md-s6'
+              },
+              'col_align': 'justify-center'
+            },
+            wrapper={
+              'max_width': {
+                'lg': content_width|string
+              },
+              'block_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': (gutter * 2)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/rich-text',
+            text='
+              <hr>
+              <h3 style="text-align: center;">And More Right Here</h3>
+              <hr>
+            ',
+            wrapper={
+              'max_width': {
+                'lg': '1400'
+              },
+              'block_align': {
+                'lg': 'center'
+              },
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': (gutter * 2)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/quick-features',
+            items=[
+              {
+                'internal_name': 'CRM Platform',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Cloud',
+                    'style': 'SOLID',
+                    'unicode': 'f0c2',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'CRM Platform',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Software as a Service',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Cat',
+                    'style': 'SOLID',
+                    'unicode': 'f6be',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Software as a Service',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Enterprise Level',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Chess Bishop',
+                    'style': 'SOLID',
+                    'unicode': 'f43a',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Enterprise Level',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Behind the Words',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Medical Chat',
+                    'style': 'SOLID',
+                    'unicode': 'f7f5',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Behind the Words',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Brand Identity',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Cloud with Sun',
+                    'style': 'SOLID',
+                    'unicode': 'f6c4',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Brand Identity',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Dummy Content',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Mortar Pestle',
+                    'style': 'SOLID',
+                    'unicode': 'f5a7',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Dummy Content',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              }
+            ],
+            settings={
+              'col': {
+                'lg': 's4',
+                'md': 'md-s6'
+              },
+              'col_align': 'justify-center'
+            },
+            wrapper={
+              'max_width': {
+                'lg': '1100'
+              },
+              'block_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/act3-sample-bottom-bg2.png',
+              'width': 1400,
+              'height': 808,
+              'alt': 'Sample image',
+              'loading': 'lazy'
+            },
+            img_radius=false,
+            wrapper={
+              'max_width': {
+                'lg': '1500'
+              },
+              'block_align': {
+                'lg': 'center'
+              },
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'top': {
+                  'lg': (gutter * 2)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Action #}
+
+    {% dnd_section padding={
+      'default': {
+        'top': gutter,
+        'bottom': gutter * 2
+      }
+    } %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            custom_id='action'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/heading',
+            text='The Wait is Over',
+            html_tag='h2',
+            looks_like='',
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/quick-action',
+            items=[
+              {
+                'title': "Grab it while it's hot",
+                'desc': "Like there's no tomorrow",
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-tly127.jpg',
+                  'alt': 'Describe your image',
+                  'width': 52,
+                  'height': 55,
+                  'loading': 'lazy'
+                },
+                'button_text': 'Get Started',
+                'button_link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color': 'accent'
+              }
+            ],
+            wrapper={
+              'max_width': {
+                'lg': '450'
+              },
+              'block_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

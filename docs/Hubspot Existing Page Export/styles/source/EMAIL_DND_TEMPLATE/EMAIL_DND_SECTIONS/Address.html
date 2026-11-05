@@ -1,0 +1,16 @@
+<!--
+  templateType: section
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+{% dnd_section padding={
+  "top":"10",
+  "bottom":"0"
+  }, full_width=True, background_color="#FFFCF1" %}
+  {% dnd_column width=12 %}
+    {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=232, hs_enable_module_padding=False, startPosition=19, unsubscribe_link_type="both" %}
+      {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true,"font-weight":"normal"}}{% end_module_attribute %}
+      {% module_attribute "font" is_json=True %}{"color":"#000000","font":"Merriweather,Georgia,sans-serif","size":{"units":"px","value":12},"font_set":"DEFAULT","styles":{"text-decoration":"none","font-weight":"bold","font-style":"normal","bold":true}}{% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

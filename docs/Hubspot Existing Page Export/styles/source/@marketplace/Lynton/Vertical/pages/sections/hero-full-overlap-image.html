@@ -1,0 +1,70 @@
+<!--
+  templateType: section
+  label: Hero - Overlapping Image
+  description: "A full width hero with an image overlapping section below. >> Section below this must have a background different from this section's background for the overlap to be apparent."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/hero-full-overlap-image.png
+-->
+
+{% dnd_section %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path="../modules/Hero - Full Width",
+        text={
+          "eyebrow": "About Us",
+          "heading": "Vertical Changes Everything. Dream Big & Make Your Site a Reality",
+          "heading_level": "h1",
+          "subheading": "Vertical is a versatile and easy-to-use theme that can transform your scaling business with little effort. Made with care by HubSpot experts."
+        },
+        media={
+          "type": "none"
+        },
+        styles={
+          "module": {
+            "max_width": 740,
+            "background": {
+              "bg_type": "none"
+            },
+            "padding": {
+              "desktop": {
+                "padding": {
+                  "top": {
+                    "value": 30
+                  },
+                  "bottom": {
+                    "value": 75
+                  }
+                }
+              },
+              "mobile": {
+                "padding": {
+                  "top": {
+                    "value": 30
+                  },
+                  "bottom": {
+                    "value": 75
+                  }
+                }
+              }
+            }
+          }
+        } %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_module path="../modules/Theme Image",
+        image={"src": get_asset_url('../../assets/images/about-image.png')},
+        styles={
+          "animation": "up",
+          "module": {
+            "add_overlap": {
+              "overlap": "below",
+              "overlap_height": "three-fourths"
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

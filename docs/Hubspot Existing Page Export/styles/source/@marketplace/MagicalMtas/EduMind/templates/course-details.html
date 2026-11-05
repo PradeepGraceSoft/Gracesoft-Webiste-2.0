@@ -1,0 +1,337 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Course Details
+  screenshotPath: ../images/template-previews/course-details.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+  {% dnd_area "dnd_area"
+    label="Main section",
+    class="body-container body-container--course-details p-0"
+  %}
+
+  {# Breadcrumb Section Start #} 
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# Course Details Start #}
+  {% dnd_section max_width=1200, class="edumind-container" background_color={{ context.background_color || "#FFFFFF" }}, margin={
+  'top': '0px',
+  'bottom': '0px',
+  'left': '0px',
+  'right': '0px'
+  },  padding={
+  'top': '130px',
+  'bottom': '130px',
+  'left': '0px',
+  'right': '0px'
+  } %}
+    {% dnd_column %}
+
+        {% dnd_row %}
+
+            {% dnd_column width=8, offset=0 %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h2>Global Education Fall Meeting for Everyone</h2>
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module "module_16677396970051" path="../modules/List", label="List"
+                      select_list = 'meta-list',
+                      meta_list = [
+                        {
+                          'meta_text' : 'Oct 10, 2022',
+                        },
+                        {
+                          'meta_text' : '08:00AM-10:00PM',
+                        },
+                        {
+                          'meta_text' : 'Newyork City, USA',
+                        }
+                      ],
+                      rating_item = [
+                        {
+                          'rating_text': '<span class="rating-count">(720 Rating)</span>',
+                        }
+                      ]
+                    %}
+                    {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module "module_166783980976015" path="../modules/Video Popup", label="Video Popup"
+                        extra_class = '',
+                        video_thumb = { 
+                            'alt': 'Video Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/course/course-details.jpg') 
+                            },
+                        video_popup_link = { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/watch?v=DMmd2kzN1-Y'},},
+
+                              %}
+
+                              {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h3>Course Description</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores.</p>
+                            <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+               
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module "module_16677396970051" path="../modules/List", label="List"
+                      select_list = 'check-list',
+                      list_item = [
+                        {
+                          'list_icon_image' : { 
+                            'alt': 'Check Icon Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/icon/check.svg') 
+                            },
+                          'list_text' : 'No prior knowledge of Wordpress is required as everything will be covered in this course.',
+                        },
+                        {
+                          'list_icon_image' : { 
+                            'alt': 'Check Icon Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/icon/check.svg') 
+                            },
+                          'list_text' : 'Basic HTML and CSS knowledge helps, but is not a must-have',
+                        },
+                        {
+                          'list_icon_image' : { 
+                            'alt': 'Check Icon Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/icon/check.svg') 
+                            },
+                          'list_text' : 'You do not need any coding experience at all. That is the beauty of Wordpress.',
+                        },
+                        {
+                          'list_icon_image' : { 
+                            'alt': 'Check Icon Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/icon/check.svg') 
+                            },
+                          'list_text' : 'Basic JavaScript knowledge is required',
+                        }
+                      ]
+                    %}
+                    {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h3>Topics for This Course</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua.</p>
+               
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module "module_16679255021802" path="../modules/Faq", label="Faq"
+                    select_accrodion = 'course-accrodion',
+                    accordion_id = 'accordionExample',
+                    course_accordion_item = [
+                        { 
+                        'accordion_collapse_class': '',
+                        'data_bs_target': 'collapseOne',
+                        'aria_expanded': 'true',
+                        'accordion_header_content': 'Course Introduction',
+                        'accordion_body_id': 'collapseOne',
+                        'accordion_active_class': 'show',
+                        'data_bs_parent_id': 'accordionExample',
+                        'course_list': [
+                            {
+                                'course_list_text' : ' Introduction'
+                            }, 
+                            {
+                                'course_list_text' : '  Course Overview'
+                            },
+                            {
+                                'course_list_text' : '  Local Development Environment Tools'
+                            },
+                            {
+                                'course_list_text' : '  Course Exercise / Reference Files'
+                            },
+                            {
+                                'course_list_text' : '  Code Editor Installation (Optional if you have one)'
+                            },
+                            {
+                                'course_list_text' : '  Embedding PHP in HTML'
+                            }
+                        ]
+                    },
+
+                    { 
+                      'accordion_collapse_class': 'collapsed',
+                      'data_bs_target': 'collapseTwo',
+                      'aria_expanded': 'false',
+                      'accordion_header_content': 'JavaScript Language Basics',
+                      'accordion_body_id': 'collapseTwo',
+                      'accordion_active_class': '',
+                      'data_bs_parent_id': 'accordionExample',
+                      'course_list': [
+                            {
+                                'course_list_text' : ' Introduction'
+                            }, 
+                            {
+                                'course_list_text' : '  Course Overview'
+                            },
+                            {
+                                'course_list_text' : '  Local Development Environment Tools'
+                            },
+                            {
+                                'course_list_text' : '  Course Exercise / Reference Files'
+                            },
+                            {
+                                'course_list_text' : '  Code Editor Installation (Optional if you have one)'
+                            },
+                            {
+                                'course_list_text' : '  Embedding PHP in HTML'
+                            }
+                        ]
+                    },
+                    { 
+                      'accordion_collapse_class': 'collapsed',
+                      'data_bs_target': 'collapseThree',
+                      'aria_expanded': 'false',
+                      'accordion_header_content': 'Components & Databinding',
+                      'accordion_body_id': 'collapseThree',
+                      'accordion_active_class': '',
+                      'data_bs_parent_id': 'accordionExample',
+                      'course_list': [
+                            {
+                                'course_list_text' : ' Introduction'
+                            }, 
+                            {
+                                'course_list_text' : '  Course Overview'
+                            },
+                            {
+                                'course_list_text' : '  Local Development Environment Tools'
+                            },
+                            {
+                                'course_list_text' : '  Course Exercise / Reference Files'
+                            },
+                            {
+                                'course_list_text' : '  Code Editor Installation (Optional if you have one)'
+                            },
+                            {
+                                'course_list_text' : '  Embedding PHP in HTML'
+                            }
+                        ]
+                    },
+                    { 
+                      'accordion_collapse_class': 'collapsed',
+                      'data_bs_target': 'collapseFour',
+                      'aria_expanded': 'false',
+                      'accordion_header_content': 'Product Management Leadership',
+                      'accordion_body_id': 'collapseFour',
+                      'accordion_active_class': '',
+                      'data_bs_parent_id': 'accordionExample',
+                      'course_list': [
+                            {
+                                'course_list_text' : ' Introduction'
+                            }, 
+                            {
+                                'course_list_text' : '  Course Overview'
+                            },
+                            {
+                                'course_list_text' : '  Local Development Environment Tools'
+                            },
+                            {
+                                'course_list_text' : '  Course Exercise / Reference Files'
+                            },
+                            {
+                                'course_list_text' : '  Code Editor Installation (Optional if you have one)'
+                            },
+                            {
+                                'course_list_text' : '  Embedding PHP in HTML'
+                            }
+                        ]
+                    }
+                    ]
+
+                    %}         
+                        
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+
+            {% end_dnd_column %}
+
+            {% dnd_column width=4, offset=8 %}
+
+                
+
+                  {% dnd_row, margin={
+                    'top': '20px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                },  padding={
+                    'top': '0px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                } %}
+                    {% dnd_module "module_166774077178110" path="../modules/Sidebar Widget", label="Sidebar Widget"
+                        sidebar_title = '<h4>Course Includes:</h4>',
+                        list_item = [
+                          {
+                            'list_label_text' : 'Cost:',
+                            'list_value' : '<span class="price">Free</span>'
+                          },
+                          {
+                            'list_label_text' : 'Instrutor:',
+                            'list_value' : '<span>Edward Norton</span>'
+                          },
+                          {
+                            'list_label_text' : 'Duration:',
+                            'list_value' : '<span>3 weeks</span>'
+                          },
+                          {
+                            'list_label_text' : 'Lessons:',
+                            'list_value' : '<span>10</span>'
+                          },
+                          {
+                            'list_label_text' : 'Enrolled:',
+                            'list_value' : '<span>65 students</span>'
+                          },
+                          {
+                            'list_label_text' : 'Certificate:',
+                            'list_value' : '<span>Yes</span>'
+                          }
+                        ],
+                        button_link = { 'url': { 'type': 'CONTENT', 'href': './home'},},
+                        button_text = 'Book Now'
+                    %}
+                    {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+            {% end_dnd_column %}
+
+
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# Course Details End #}
+
+{% end_dnd_area %}
+{% endblock body %}

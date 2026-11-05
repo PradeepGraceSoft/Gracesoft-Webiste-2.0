@@ -1,0 +1,2 @@
+const rtext=document.querySelectorAll(".rtext__more-btn");for(i=0;i<rtext.length;i++)rtext[i].addEventListener("click",function(event){event.target.closest(".rtext").classList.toggle("rtext--expanded")});
+//# sourceURL=https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/hub_generated/template_assets/1/186085716819/1792753254782/template_rich-text-collapsed.js

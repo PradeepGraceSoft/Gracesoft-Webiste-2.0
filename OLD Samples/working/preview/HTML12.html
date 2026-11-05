@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML12 | GraceSoft Easy InnKeeping</title>
+<meta name="description" content="Explore GraceSoft Easy InnKeeping for hospitality property management, direct bookings, guest communication and AI voice and chat tools. Request a demo.">
+<meta name="robots" content="noindex, nofollow">
+  
+  
+  
+
+<script>
+  document.documentElement.classList.add('enhanced');
+  // File previews load fonts through CSS. HTTP previews can preload with CORS.
+  if (location.protocol === 'http:' || location.protocol === 'https:') {
+    for (const font of ['Sora','Manrope']) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'font';
+      link.type = 'font/ttf';
+      link.crossOrigin = 'anonymous';
+      link.href = 'atelier4/' + font + '.ttf';
+      document.head.append(link);
+    }
+  }
+</script>
+<link rel="stylesheet" href="html6/design.css">
+<style>@scope (.horizon) to (.outcome-section,.import-four,.property-directory,#faq,.reading-section,.gs-cta,.atelier-footer){:scope{--ink:#302c48;--violet:#47415e;--paper:#fffdf8;--apricot:#e6e2fa;--muted:#4f4690;--rule:#e6e2fa}
+.gs-header{background:#fffdf8ee;backdrop-filter:blur(14px)}.atelier-demo,.desk-bar nav a:last-child{background:#302c48}
+.opening{position:relative;isolation:isolate;background:linear-gradient(112deg,#fffdf8 1%,#f5f3fa 44%,#e6e2fa 82%,#f5f3fa);color:var(--ink)}
+.opening::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 83% 36%,#ffffffca,transparent 35%),radial-gradient(ellipse at 65% 100%,#c5bfdc98,transparent 45%)}
+.opening-inner{grid-template-columns:.94fr 1.06fr;gap:3vw;padding-block:clamp(48px,5.2vw,86px)}
+.brandline{color:#47415e;font-size:12px;letter-spacing:.09em}.brandline i{width:13px;height:13px;border-radius:50%;background:#47415e;box-shadow:0 0 0 4px #c5bfdc;transform:none}
+.opening h1{font:560 clamp(45px,5.1vw,84px)/1.03 var(--display);letter-spacing:-.072em;margin:25px 0 20px}
+.opening h1 em{font:inherit;color:#47415e;background:linear-gradient(110deg,#47415e,#4f4690);background-clip:text;-webkit-text-fill-color:transparent}
+.opening-lead{color:#47415e;max-width:46ch}.gs-button{border-radius:30px}.opening .gs-button--primary{background:#302c48;color:white;box-shadow:0 9px 20px -11px #302c48}.opening .gs-button--secondary{border:0;color:#47415e;text-decoration:underline;text-underline-offset:5px}
+.exhibit{padding:14px clamp(12px,1.6vw,24px);min-width:0}.exhibit::before{display:none}.exhibit-label,.exhibit-foot{border-color:#68608066}.exhibit-label{color:#47415e;letter-spacing:.09em}.exhibit-label span:last-child{font:500 12px var(--body);text-transform:none;letter-spacing:0}
+.scene{aspect-ratio:1.52;isolation:isolate}.terrain{position:absolute;inset:-16% -13% -21%;background:url("html9/terrain.svg") center/100% 100% no-repeat;pointer-events:none;z-index:-1}.scene #view-property>img{width:87%;margin:auto;filter:drop-shadow(0 13px 10px #4f46901f)}.scene #view-property{isolation:isolate}
+.preview-chip{position:absolute;left:-2%;bottom:1%;display:flex;align-items:center;gap:10px;background:#fffffff5;color:#302c48;border:1px solid #c5bfdc;border-radius:12px;padding:8px 12px 8px 8px;box-shadow:0 12px 30px -14px #47415e80;text-align:left;font:700 13px var(--body)}.scene .preview-chip img{width:70px;height:48px;object-fit:cover;object-position:left;border:1px solid #e6e2fa;border-radius:5px}.preview-chip small{display:block;color:#4f4690;font:600 10px var(--body);margin-bottom:3px}
+.map-pins span{background:#302c48;color:white;border:2px solid #e6e2fa}.map-pins b{background:#302c48}
+#plate,#plate b,.inspect-screen{color:#47415e}.view-buttons{background:#fffdf8bb;border:1px solid #c5bfdc;border-radius:30px}.view-buttons button{border-radius:24px;color:#47415e}.view-buttons button[aria-pressed=true]{background:#302c48;color:white}
+.routebar{background:#302c48;color:white;position:sticky;top:67px;z-index:5}.routebar a,.routebar a:last-child{border-color:#4f4690}.routebar small{color:#9991b9}.routebar a:hover,.routebar a[aria-current]{background:#47415e}.routebar a[aria-current]{box-shadow:inset 0 -3px #c5bfdc}
+html{scroll-padding-top:145px}.gs-tour{background:#f5f3fa}.tour-distribution{background:#f5f3fa}.tour-guest-journey{background:#f5f3fa}.tour-widget{border-radius:22px}.tour-controls button[aria-selected=true]{background:#302c48}.customer-voices,.gs-cta{background:radial-gradient(ellipse at top right,#4f4690,transparent 65%),#302c48}.voice-topic,.voice-links a{color:#e6e2fa}.atelier-footer{background:#f5f3fa}
+@media(max-width:780px){.opening-inner{grid-template-columns:1fr;gap:18px;padding-block:30px}.opening h1{font-size:clamp(43px,8.8vw,66px);margin:18px 0 14px}.exhibit{padding:8px 0}.scene{aspect-ratio:1.9}.scene #view-property>img{height:clamp(170px,47vw,270px)}.preview-chip{left:0;font-size:11px;padding:5px 8px}.scene .preview-chip img{width:42px;height:32px}.routebar{position:static}html{scroll-padding-top:83px}}
+@media(prefers-reduced-motion:no-preference){.terrain{animation:survey 1.1s ease-out both}.preview-chip{animation:rise-in .65s .25s backwards}.preview-chip:hover{transform:translateY(-2px)}@keyframes survey{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}}
+@media(forced-colors:active){.opening h1 em{-webkit-text-fill-color:CanvasText}}
+.terrain{mask-image:radial-gradient(ellipse at 53% 54%,#000 25%,transparent 70%)}
+@media(max-width:530px){.opening .gs-actions{gap:12px}.opening .gs-button{padding:10px 12px;font-size:14px}.opening .gs-button--secondary{padding-inline:0}.scene .preview-chip img{display:none}.preview-chip{bottom:-2%;left:1%}}
+}</style>
+<style>
+@scope (.import-four) {
+:scope {
+  --gs-ink: #302c48;
+  --gs-primary: #4f4690;
+  --gs-accent: #686080;
+  --gs-coral: #9991b9;
+  --gs-brass: #c5bfdc;
+  --gs-peach: #e6e2fa;
+  --gs-rose: #c5bfdc;
+  --gs-sage: #c5bfdc;
+  --gs-muted: #4f4690;
+  --gs-surface: #f5f3fa;
+  --gs-soft: #e6e2fa;
+  --gs-paper: #f5f3fa;
+  --gs-line: #e6e2fa;
+  --gs-focus: #47415e;
+  --gs-max: 1180px;
+  --gs-radius: 18px;
+  --gs-shadow: 0 24px 60px rgba(71, 51, 38, .12);
+  --gs-font: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --gs-display: "Iowan Old Style", "Baskerville", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--gs-ink); background: var(--gs-surface); font-family: var(--gs-font); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a { color: inherit; }
+img { max-width: 100%; height: auto; }
+button, a { font: inherit; }
+.gs-container { width: min(var(--gs-max), calc(100% - 40px)); margin-inline: auto; }
+.gs-section { padding: clamp(76px, 8vw, 112px) 0; }
+.gs-kicker { color: var(--gs-primary); font-size: .72rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+.gs-title { max-width: 20ch; margin: .38em 0 .52em; font: 500 clamp(2.15rem, 4.5vw, 3.65rem)/1.08 var(--gs-display); letter-spacing: -.035em; }
+.gs-lead { max-width: 63ch; color: var(--gs-muted); font-size: clamp(1rem, 1.2vw, 1.14rem); line-height: 1.75; }
+.gs-button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .86rem 1.35rem; border: 1px solid transparent; border-radius: 999px; font-size: .94rem; font-weight: 700; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease; }
+.gs-button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(71, 51, 38, .14); }
+.gs-button--primary { background: var(--gs-primary); color: #fffdf8; }
+.gs-button--primary:hover { background: #47415e; }
+.gs-button--secondary { border-color: #c5bfdc; background: rgba(255,255,255,.58); color: var(--gs-primary); }
+:focus-visible { outline: 3px solid var(--gs-focus); outline-offset: 3px; }
+.gs-skip { position: absolute; left: -9999px; top: 8px; z-index: 20; padding: 12px; background: #fff; }
+.gs-skip:focus { left: 8px; }
+.gs-grid { display: grid; gap: 22px; }
+.gs-card { padding: 28px; border: 1px solid rgba(211, 198, 180, .68); border-radius: var(--gs-radius); background: rgba(255,255,255,.78); box-shadow: 0 8px 28px rgba(71, 51, 38, .045); }
+.gs-card h3 { margin: .2rem 0 .5rem; }
+.gs-muted { color: var(--gs-muted); }
+@media (max-width: 700px) { .gs-section { padding: 60px 0; } .gs-container { width: min(var(--gs-max), calc(100% - 32px)); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+}
+
+@scope (.import-four) {
+.gs-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--gs-line); background: rgba(255, 248, 239, .96); backdrop-filter: blur(12px); }
+.gs-nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+.gs-brand { color: var(--gs-primary); font-size: 1.16rem; font-weight: 800; letter-spacing: -.03em; text-decoration: none; }
+.gs-brand span { font-weight: 500; }
+.gs-brand img { display: block; width: clamp(190px, 24vw, 300px); height: auto; }
+.gs-navlinks { display: flex; align-items: center; gap: 22px; }
+.gs-navlinks a { font-size: 1rem; font-weight: 650; text-decoration: none; }
+.gs-menu-toggle { display: none; border: 1px solid var(--gs-line); border-radius: 12px; padding: 9px 12px; background: white; color: var(--gs-ink); }
+.gs-hero { padding: 76px 0 82px; background: radial-gradient(ellipse at 86% 25%, #c5bfdc 0, transparent 43%), linear-gradient(135deg, #f5f3fa, #f5f3fa 64%, #e6e2fa); }
+.gs-hero-layout { display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 48px; }
+.gs-hero h1 { margin: .24em 0; font: 500 clamp(2.7rem, 5.3vw, 4.55rem)/1.02 var(--gs-display); letter-spacing: -.045em; }
+.gs-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.gs-product-art { position: relative; min-height: 390px; overflow: hidden; padding: 28px; border-radius: 26px; background: #e6e2fa; box-shadow: var(--gs-shadow); }
+.gs-window { overflow: hidden; border: 1px solid #e6e2fa; border-radius: 14px; background: var(--gs-surface); box-shadow: 0 12px 36px rgba(108, 68, 48, .12); }
+.gs-windowbar { height: 42px; display: flex; align-items: center; gap: 7px; padding: 0 14px; border-bottom: 1px solid var(--gs-line); background: var(--gs-soft); }
+.gs-dot { width: 8px; height: 8px; border-radius: 50%; background: #c5bfdc; }
+.gs-windowbody { padding: 20px; }
+.gs-uihead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; font-weight: 750; }
+.gs-ui-tag { padding: 5px 10px; border-radius: 999px; background: #c5bfdc; color: var(--gs-ink); font-size: .72rem; }
+.gs-calendar { display: grid; grid-template-columns: 70px repeat(5, 1fr); gap: 5px; font-size: .7rem; }
+.gs-calendar span { padding: 9px 4px; border-radius: 5px; background: #f5f3fa; text-align: center; }
+.gs-calendar .book { background: #e6e2fa; color: #47415e; }
+.gs-calendar .book2 { background: #e6e2fa; color: #47415e; }
+.gs-calendar .time { background: transparent; color: #4f4690; text-align: left; }
+.gs-metric-row { display: flex; gap: 10px; margin-top: 14px; }
+.gs-metric { flex: 1; padding: 10px; border: 1px solid var(--gs-line); border-radius: 9px; color: var(--gs-muted); font-size: .7rem; }
+.gs-metric b { display: block; color: var(--gs-ink); font-size: 1.05rem; }
+.gs-trust { padding: 24px 0; border-block: 1px solid var(--gs-line); background: var(--gs-surface); }
+.gs-trust-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; color: #47415e; font-weight: 650; text-align: center; }
+.gs-about { background: var(--gs-soft); }
+.gs-benefits { grid-template-columns: repeat(3, 1fr); margin-top: 30px; }
+.gs-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 15px; border-radius: 12px; background: #c5bfdc; color: var(--gs-primary); font-weight: 800; }
+.gs-product { background: var(--gs-primary); color: var(--gs-surface); }
+.gs-product .gs-muted, .gs-product .gs-lead { color: #e6e2fa; }
+.gs-product-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+.gs-product-panel { padding: 24px; border: 1px solid rgba(255,255,255,.22); border-radius: 22px; background: rgba(255,255,255,.08); }
+.gs-property-grid, .gs-feature-grid { grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
+.gs-quote-grid { grid-template-columns: repeat(3, 1fr); }
+.gs-quote { font-size: 1.02rem; }
+.gs-quote footer { margin-top: 18px; color: var(--gs-muted); font-size: .88rem; }
+.gs-faq details { padding: 18px 0; border-bottom: 1px solid var(--gs-line); }
+.gs-faq summary { font-weight: 740; cursor: pointer; }
+.gs-cta { background: var(--gs-soft); text-align: center; }
+.gs-footer { padding: 44px 0; background: #47415e; color: #f5f3fa; }
+.gs-footer a { color: #f5f3fa; }
+.gs-footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; }
+.gs-footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.gs-mobile-menu { display: none; }
+/* Progressive scroll reveal: content stays visible unless JS adds the ready class. */
+.gs-reveal-ready [data-scroll-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+.gs-reveal-ready [data-scroll-reveal].gs-is-visible { opacity: 1; transform: none; }
+/* Atelier-style scroll reveals are opt-in per element and never hide content. */
+.horizon .tour-head, .horizon .voice-card, .horizon .property-arches li,
+.horizon .reading-grid article, .horizon .gs-awards-inner,
+.horizon .chapter-body .tour-cards article { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .horizon .tour-head.arrives, .horizon .tour-head.chapter-enter,
+  .horizon .voice-card.arrives, .horizon .voice-card.chapter-enter,
+  .horizon .property-arches li.arrives, .horizon .reading-grid article.arrives,
+  .horizon .gs-awards-inner.arrives,
+  .horizon .chapter-body .tour-cards article.chapter-enter {
+    animation: horizon-arrive .52s cubic-bezier(.2,.7,.2,1) both;
+  }
+  @keyframes horizon-arrive { from { opacity: .15; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+}
+.gs-preview-note { padding: 10px 16px; background: #47415e; color: #f5f3fa; font-size: .9rem; text-align: center; }
+.gs-preview-note strong { color: #9991b9; }
+.gs-illustration-note { margin: 10px 0 0; color: var(--gs-muted); font-size: .78rem; }
+.gs-product-illustration { min-height: 310px; display: grid; align-items: center; padding: 24px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; background: rgba(255,255,255,.08); }
+.gs-product-illustration .gs-window { color: var(--gs-ink); }
+.gs-product-illustration .gs-calendar { grid-template-columns: 70px repeat(5, minmax(0, 1fr)); }
+.gs-products-inline { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.gs-products-inline a { padding: 8px 13px; border: 1px solid var(--gs-line); border-radius: 999px; text-decoration: none; }
+.gs-card a { font-weight: 700; }
+.gs-section[id] { scroll-margin-top: 90px; }
+@media (prefers-reduced-motion: reduce) { .gs-reveal-ready [data-scroll-reveal] { opacity: 1; transform: none; transition: none; } }
+.gs-preview-note { padding: 9px 16px; background: #e6e2fa; color: #4f4690; font-size: .78rem; letter-spacing: .025em; }
+.gs-preview-note strong { color: #4f4690; }
+.gs-button--primary { background: #4f4690; color: #fffdf8; }
+.gs-button--primary:hover { background: #47415e; }
+.gs-header { border-color: rgba(212, 199, 181, .62); background: rgba(251, 248, 242, .9); backdrop-filter: blur(16px); }
+.gs-nav { min-height: 82px; }
+.gs-brand { display: inline-flex; align-items: baseline; gap: 7px; color: #4f4690; font-family: var(--gs-display); font-size: 1.35rem; letter-spacing: -.045em; }
+.gs-brand img { display: block; width: clamp(178px, 19vw, 238px); height: auto; }
+.gs-brand span { color: #4f4690; font-family: var(--gs-font); font-size: .77rem; font-weight: 600; letter-spacing: .015em; }
+.gs-navlinks { gap: clamp(14px, 1.8vw, 27px); }
+.gs-navlinks a:not(.gs-button) { color: #47415e; font-size: .88rem; font-weight: 600; }
+.gs-navlinks a:not(.gs-button):hover, .gs-footer a:hover { color: var(--gs-accent); }
+.gs-hero { position: relative; overflow: hidden; padding: clamp(70px, 8vw, 116px) 0 clamp(74px, 8vw, 112px); background: radial-gradient(ellipse at 87% 12%, rgba(223,196,147,.34), transparent 35%), radial-gradient(ellipse at 10% 100%, rgba(216,181,177,.2), transparent 33%), linear-gradient(118deg, #f5f3fa 0%, #f5f3fa 54%, #e6e2fa 100%); }
+.gs-hero::before { position: absolute; top: -165px; right: -100px; width: 510px; height: 510px; border: 1px solid rgba(151, 111, 82, .11); border-radius: 50%; content: ""; }
+.gs-hero::after { position: absolute; top: -110px; right: -48px; width: 410px; height: 410px; border: 1px solid rgba(151, 111, 82, .08); border-radius: 50%; content: ""; }
+.gs-hero-layout { position: relative; z-index: 1; grid-template-columns: 1.08fr .92fr; gap: clamp(38px, 6vw, 82px); }
+.gs-hero h1 { max-width: 13ch; margin: .27em 0 .35em; color: #302c48; font: 500 clamp(3.2rem, 6.1vw, 5.2rem)/.98 var(--gs-display); letter-spacing: -.052em; }
+.gs-hero .gs-kicker { color: #4f4690; }
+.gs-hero .gs-lead { max-width: 57ch; color: #4f4690; font-size: 1.08rem; }
+.gs-actions { gap: 14px; margin-top: 31px; }
+.gs-product-art { min-height: 410px; overflow: visible; padding: clamp(20px, 3vw, 36px); border: 1px solid rgba(255,255,255,.74); border-radius: 34px; background: linear-gradient(145deg, #c5bfdc 0%, #c5bfdc 48%, #c5bfdc 100%); box-shadow: 0 34px 76px rgba(78, 54, 39, .16); }
+.gs-product-art::before { position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.38); border-radius: 25px; content: ""; pointer-events: none; }
+.gs-product-art > .gs-window { position: relative; z-index: 1; transform: rotate(-1.2deg); }
+.gs-product-art .gs-window { border-color: rgba(132, 105, 84, .15); border-radius: 17px; box-shadow: 0 18px 40px rgba(86, 60, 42, .14); }
+.gs-windowbar { height: 44px; background: #f5f3fa; }
+.gs-dot { background: #9991b9; }
+.gs-dot:nth-child(2) { background: #9991b9; }
+.gs-dot:nth-child(3) { background: #9991b9; }
+.gs-windowbody { padding: clamp(17px, 2.3vw, 25px); }
+.gs-uihead { color: #47415e; font-size: .9rem; }
+.gs-calendar { gap: 6px; font-size: .67rem; }
+.gs-calendar span { min-height: 33px; display: grid; place-items: center; border: 1px solid rgba(220, 207, 190, .3); background: #f5f3fa; }
+.gs-calendar .book { background: #c5bfdc; color: #47415e; }
+.gs-calendar .book2 { background: #e6e2fa; color: #4f4690; }
+.gs-metric { background: #fffdf8; }
+.gs-illustration-note { position: relative; z-index: 2; text-align: right; }
+.gs-about { background: #e6e2fa; }
+.gs-home-v2 > .gs-section:nth-of-type(3) { background: #f5f3fa; }
+.gs-benefits { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; margin-top: 38px; }
+.gs-benefits .gs-card { min-height: 245px; position: relative; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.gs-benefits .gs-card:hover { transform: translateY(-5px); border-color: #c5bfdc; box-shadow: 0 18px 42px rgba(71, 51, 38, .09); }
+.gs-benefits .gs-card h3 { font-size: 1.07rem; letter-spacing: -.015em; }
+.gs-benefits .gs-card p { color: #4f4690; font-size: .94rem; }
+.gs-benefits .gs-card a { color: #4f4690; font-size: .89rem; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.gs-icon { width: 39px; height: 39px; background: #e6e2fa; color: #4f4690; font-size: .7rem; letter-spacing: .02em; }
+.gs-product { position: relative; overflow: hidden; background: #4f4690; }
+.gs-product::after { position: absolute; right: -100px; bottom: -300px; width: 600px; height: 600px; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; content: ""; }
+.gs-product .gs-container { position: relative; z-index: 1; }
+.gs-product .gs-kicker { color: #c5bfdc; }
+.gs-product .gs-title { color: #fffdf8; }
+.gs-product .gs-muted, .gs-product .gs-lead { color: #e6e2fa; }
+.gs-product .gs-button--secondary { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.08); color: #fffdf8; }
+.gs-product-illustration { border-color: rgba(255,255,255,.18); background: rgba(250, 244, 235, .07); box-shadow: 0 24px 50px rgba(38, 28, 23, .16); }
+.gs-feature-grid { gap: 12px; }
+.gs-product-panel { border-color: rgba(255,255,255,.16); border-radius: 16px; background: rgba(255,255,255,.07); transition: background-color .2s ease, transform .2s ease; }
+.gs-product-panel:hover { transform: translateY(-3px); background: rgba(255,255,255,.12); }
+.gs-product-panel h3 { color: #fffdf8; font-family: var(--gs-display); font-size: 1.22rem; font-weight: 500; }
+.gs-product-panel p { font-size: .9rem; }
+.gs-product-panel a { color: #c5bfdc; font-size: .85rem; text-underline-offset: 3px; }
+.gs-products-inline { gap: 11px; margin-top: 30px; }
+.gs-products-inline a { padding: 10px 15px; border-color: #c5bfdc; background: rgba(255,255,255,.56); color: #4f4690; font-size: .88rem; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+.gs-products-inline a:hover { transform: translateY(-2px); border-color: #9991b9; background: white; }
+.gs-property-grid { gap: 14px; margin-top: 34px; }
+.gs-property { padding: 20px 22px; border-radius: 14px; transition: transform .2s ease, box-shadow .2s ease; }
+.gs-property:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(71, 51, 38, .07); }
+.gs-property a { display: flex; align-items: center; justify-content: space-between; color: #47415e; font-family: var(--gs-display); font-size: 1.12rem; text-decoration: none; }
+.gs-property a span { color: #686080; font-family: var(--gs-font); }
+.gs-faq { max-width: 850px; }
+.gs-faq details { padding: 21px 0; border-bottom-color: #c5bfdc; }
+.gs-faq summary { color: #47415e; font-family: var(--gs-display); font-size: 1.22rem; font-weight: 500; }
+.gs-faq details p { max-width: 72ch; color: #4f4690; }
+.gs-cta { background: radial-gradient(ellipse at 50% 110%, rgba(216,181,177,.3), transparent 50%), #e6e2fa; }
+.gs-cta .gs-container { max-width: 850px; }
+.gs-cta .gs-title { max-width: 18ch; margin-inline: auto; }
+.gs-cta .gs-lead { margin-bottom: 26px; }
+.gs-footer { background: #302c48; color: #f5f3fa; }
+.gs-footer a { color: #f5f3fa; text-decoration-color: rgba(247,240,230,.45); text-underline-offset: 3px; }
+.gs-footer-grid { align-items: center; }
+.gs-footer p { color: #c5bfdc; }
+.gs-mobile-menu { border-top: 1px solid rgba(212, 199, 181, .5); }
+@media (max-width: 900px) { .gs-hero-layout { gap: 38px; } .gs-hero h1 { max-width: 15ch; font-size: clamp(3rem, 7.4vw, 4.7rem); } .gs-product-art { min-height: 360px; } }
+@media (max-width: 700px) { .gs-nav { min-height: 70px; } .gs-brand { display: grid; gap: 0; line-height: 1.05; } .gs-brand span { margin-top: 4px; } .gs-hero { padding: 58px 0 68px; } .gs-hero h1 { max-width: 12ch; font-size: clamp(2.9rem, 13vw, 4rem); } .gs-hero-layout { gap: 31px; } .gs-product-art { min-height: 0; padding: 18px; border-radius: 24px; } .gs-product-art::before { inset: 8px; border-radius: 18px; } .gs-product-art > .gs-window { transform: rotate(-.5deg); } .gs-windowbody { padding: 14px; } .gs-demo-table { font-size: .61rem; } .gs-demo-table th, .gs-demo-table td { padding: 7px 3px; } .gs-illustration-note { text-align: center; } .gs-benefits, .gs-feature-grid, .gs-property-grid { grid-template-columns: 1fr; } .gs-benefits .gs-card { min-height: auto; } .gs-product-layout { gap: 28px; } }
+@media (prefers-reduced-motion: reduce) { .gs-button, .gs-benefits .gs-card, .gs-product-panel, .gs-products-inline a, .gs-property { transition: none; } .gs-button:hover, .gs-benefits .gs-card:hover, .gs-product-panel:hover, .gs-products-inline a:hover, .gs-property:hover { transform: none; } }
+@media (max-width: 900px) { .gs-navlinks { gap: 12px; } .gs-hero-layout, .gs-product-layout { grid-template-columns: 1fr; } .gs-product-art { max-width: 650px; margin: auto; } .gs-benefits, .gs-feature-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .gs-navlinks { display: none; } .gs-menu-toggle { display: block; } .gs-mobile-menu[data-open="true"] { display: grid; gap: 14px; padding: 16px 0 22px; } .gs-mobile-menu a { font-weight: 650; text-decoration: none; } .gs-hero { padding: 54px 0; } .gs-product-art { min-height: 300px; padding: 14px; } .gs-windowbody { padding: 12px; } .gs-calendar { grid-template-columns: 55px repeat(5, 1fr); font-size: .58rem; } .gs-calendar span { padding: 7px 2px; } .gs-property-grid, .gs-benefits, .gs-feature-grid, .gs-quote-grid { grid-template-columns: 1fr; } }
+
+
+
+
+}
+
+@scope (.import-four) {
+:scope{--gs-ink:#302c48;--gs-primary:#47415e;--gs-accent:#47415e;--gs-muted:#4f4690;--gs-surface:#fff;--gs-soft:#f5f3fa;--gs-line:#e6e2fa;--gs-focus:#47415e;--gs-max:1240px;--gs-display:'Segoe UI',Arial,sans-serif;--gs-radius:22px;--gs-shadow:0 28px 70px #302c4830}
+.gs-preview-note{background:#f5f3fa;color:#47415e;font-size:11px}.gs-preview-note strong{color:#47415e}.gs-header{background:#ffffffed;border-color:#e6e2fa}.gs-nav{min-height:90px}.gs-brand{font-family:var(--gs-font);color:#302c48;font-size:27px;font-weight:800;letter-spacing:-1.2px;display:grid;gap:0;line-height:1.1}.gs-brand span{font-size:10px;letter-spacing:2px;color:#4f4690;text-transform:uppercase;margin-top:5px}.gs-navlinks a:not(.gs-button){color:#47415e;font-size:13px}.gs-button{border-radius:8px;padding:15px 22px}.gs-button--primary{background:#47415e;color:white}.gs-button--primary:hover{background:#302c48}.gs-button--secondary{background:transparent;color:#47415e;border-color:#9991b9}.gs-title{font-weight:650;font-size:clamp(32px,4.5vw,56px);letter-spacing:-2px;line-height:1.08;max-width:25ch}.gs-kicker{color:#47415e;font-size:11px;letter-spacing:2px}.gs-lead{font-size:17px}.gs-hero{background:radial-gradient(ellipse at 90% 85%,#47415e 0,transparent 47%),#302c48;padding:105px 0 110px;color:white}.gs-hero:before{border-color:#9991b925;width:800px;height:800px;right:-120px;top:-150px}.gs-hero:after{border-color:#9991b920;width:630px;height:630px;right:-35px;top:-70px}.gs-hero-layout{grid-template-columns:1fr 1.05fr;gap:55px}.gs-hero h1{color:white;font-family:var(--gs-display);font-size:clamp(54px,6vw,82px);font-weight:650;line-height:1.02;letter-spacing:-4px;max-width:12ch}.gs-hero h1 em{color:#9991b9;font-style:normal}.gs-hero .gs-kicker{color:#c5bfdc}.gs-hero .gs-lead{color:#e6e2fa;font-size:17px;max-width:45ch}.gs-hero .gs-button--primary{background:#9991b9;color:#302c48}.gs-hero .gs-button--primary:hover{background:#e6e2fa}.gs-hero .gs-button--secondary{border-color:#686080;color:#fff;background:transparent}.gs-product-art{background:linear-gradient(145deg,#c5bfdc,#e6e2fa);padding:30px 18px 45px;min-height:350px;border:0;border-radius:26px 80px 26px 26px;box-shadow:0 40px 70px #211f3255;transform:rotate(-2deg)}.gs-product-art:before{display:none}.gs-product-art>.gs-window{transform:rotate(2deg);margin-left:-38px;margin-right:7px}.gs-window{background:#fff;border-color:#e6e2fa;box-shadow:var(--gs-shadow)}.gs-windowbar{background:#f5f3fa;border-color:#e6e2fa}.gs-dot{background:#9991b9}.gs-dot:nth-child(2){background:#9991b9}.gs-dot:nth-child(3){background:#686080}.gs-uihead{color:#302c48;font-size:14px}.gs-uihead small{display:block;font-size:10px;color:#4f4690}.gs-ui-tag{background:#f5f3fa;color:#4f4690;font-size:9px}.gs-demo-table{width:100%;border-collapse:separate;border-spacing:4px;font-size:10px;color:#47415e}.gs-demo-table th,.gs-demo-table td{padding:13px 4px;text-align:center;background:#f5f3fa;border-radius:4px}.gs-demo-table th:first-child{background:transparent}.gs-demo-table .stay{background:#c5bfdc}.gs-demo-table .stay2{background:#e6e2fa}.gs-metric{background:#fffdf8;border-color:#e6e2fa;color:#4f4690}.gs-product-art .gs-illustration-note{color:#47415e;font-size:10px;transform:rotate(2deg);margin-top:18px}.gs-intro{background:#f5f3fa;border-bottom:1px solid #e6e2fa}.gs-intro .gs-container{display:grid;grid-template-columns:.9fr 1.1fr;column-gap:80px}.gs-intro .gs-kicker{grid-column:1/-1}.gs-intro .gs-title{font-size:36px;margin:0}.gs-intro .gs-lead{margin:0}.gs-home-v2>.gs-section:nth-of-type(3){background:#fff}.gs-section{padding:90px 0}.gs-benefits{gap:18px}.gs-benefits .gs-card{padding:30px;background:#fffdf8;border:1px solid #e6e2fa;box-shadow:none;min-height:280px}.gs-benefits .gs-card:first-child{background:#f5f3fa;grid-column:span 2}.gs-benefits .gs-card:nth-child(2){background:#e6e2fa}.gs-benefits .gs-card:nth-child(4){background:#f5f3fa}.gs-benefits .gs-card h3{font-size:22px;letter-spacing:-.5px;max-width:25ch}.gs-benefits .gs-card p{color:#4f4690;max-width:49ch}.gs-benefits .gs-card a{color:#47415e}.gs-benefits .gs-card:hover{border-color:#686080;box-shadow:0 14px 30px #302c4810}.gs-icon{background:#fff;color:#47415e;border-radius:50%;height:44px;width:44px}.gs-product{background:#302c48}.gs-product .gs-kicker{color:#9991b9}.gs-product .gs-title{color:white}.gs-product .gs-lead{color:#e6e2fa}.gs-product-illustration{background:#47415e;border-color:#4f4690;transform:rotate(2deg)}.gs-calendar span{background:#f5f3fa;border-color:#e6e2fa;color:#47415e}.gs-calendar .book{background:#c5bfdc;color:#302c48}.gs-calendar .book2{background:#e6e2fa;color:#4f4690}.gs-calendar .time{color:#4f4690}.gs-products-inline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid #e6e2fa}.gs-products-inline a{border:0;border-bottom:1px solid #e6e2fa;border-radius:0;padding:25px 10px;background:white;font-size:16px;color:#47415e}.gs-products-inline a:after{content:'↗';float:right;margin-right:12px}.gs-products-inline a:hover{background:#f5f3fa;transform:none}.gs-ai{background:#f5f3fa}.gs-conversation{background:#e6e2fa;padding:35px;border-radius:80px 24px 24px 24px;display:grid;gap:20px}.gs-conversation>.gs-ui-tag{justify-self:start;margin-left:24px}.gs-bubble{background:white;border-radius:16px 16px 16px 3px;padding:20px 25px;margin-right:42px;box-shadow:0 8px 22px #302c4810;font-weight:700}.gs-bubble span{display:block;font-size:13px;font-weight:400;margin-top:4px}.gs-reply{margin:0 0 0 42px;background:#47415e;color:white;border-radius:16px 16px 3px 16px}.gs-conversation .gs-illustration-note{color:#4f4690}.gs-about#property-types{background:#fff}.gs-property-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.gs-property{background:#f5f3fa;border:0;min-height:165px;padding:28px;display:flex;align-items:flex-end;position:relative;overflow:hidden}.gs-property:before{content:'';position:absolute;right:20px;top:20px;width:55px;height:45px;border:2px solid #9991b9;border-radius:20px 20px 0 0;background:repeating-linear-gradient(90deg,transparent 0 12px,#9991b9 13px 14px)}.gs-property:nth-child(2n){background:#f5f3fa}.gs-property:nth-child(3n){background:#f5f3fa}.gs-property a{font:600 19px/1.3 var(--gs-font);color:#302c48;width:100%;z-index:1;gap:15px}.gs-property a span{color:#47415e}.gs-stories{background:#f5f3fa;position:relative;overflow:hidden}.gs-stories .gs-container{position:relative;z-index:1}.gs-stories:after{content:'“';font:600 650px/1 Georgia,serif;position:absolute;right:40px;top:-30px;color:#e6e2fa}.gs-stories .gs-lead{max-width:58ch}.gs-faq{max-width:900px}.gs-faq summary{font:600 18px/1.5 var(--gs-font);color:#302c48;min-height:32px}.gs-faq details{border-color:#e6e2fa}.gs-faq details p{color:#4f4690}.gs-cta{background:radial-gradient(ellipse at 80% 100%,#47415e,transparent 65%),#302c48;color:white;padding:110px 0}.gs-cta .gs-kicker{color:#9991b9}.gs-cta .gs-title{font-size:clamp(42px,6vw,76px);letter-spacing:-3px}.gs-cta .gs-lead{color:#e6e2fa}.gs-cta .gs-button{background:#9991b9;color:#302c48}.gs-footer{background:#211f32;color:white}.gs-footer p{color:#c5bfdc}.gs-footer a{color:#fff}.gs-mobile-menu{border-color:#e6e2fa}.gs-reveal-ready [data-scroll-reveal]{opacity:1;transform:none}.gs-home-v2 .dnd-section>.row-fluid{max-width:none;padding:0}.gs-home-v2 .row-fluid [class*=span]{min-height:0}
+@media(max-width:1100px){.gs-navlinks{gap:14px}.gs-brand{font-size:23px}.gs-navlinks a:not(.gs-button){font-size:12px}.gs-hero-layout{gap:35px}.gs-product-art>.gs-window{margin-left:-20px}.gs-hero h1{font-size:64px}}
+@media(max-width:900px){.gs-hero-layout{grid-template-columns:1fr}.gs-hero h1{max-width:15ch}.gs-product-art{width:100%;max-width:650px;margin:30px auto 0}.gs-intro .gs-container{gap:20px;grid-template-columns:1fr}.gs-navlinks{display:none}.gs-menu-toggle{display:block}.gs-mobile-menu[data-open=true]{display:grid;gap:15px;padding:20px 0}.gs-product-layout{grid-template-columns:1fr}.gs-property-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gs-benefits{grid-template-columns:repeat(2,minmax(0,1fr))}.gs-product-illustration{transform:none}}
+@media(max-width:600px){.gs-container{width:calc(100% - 36px)}.gs-nav{min-height:76px}.gs-section{padding:60px 0}.gs-hero{padding:65px 0}.gs-hero h1{font-size:clamp(45px,12vw,65px);letter-spacing:-2.5px}.gs-hero .gs-lead{font-size:16px}.gs-product-art{transform:none;border-radius:20px 50px 20px 20px;padding:20px 10px;min-height:0}.gs-product-art>.gs-window{margin:0;transform:none}.gs-uihead{font-size:11px}.gs-demo-table{font-size:8px;border-spacing:2px}.gs-demo-table th,.gs-demo-table td{padding:12px 2px}.gs-windowbody{padding:10px}.gs-benefits,.gs-property-grid,.gs-products-inline{grid-template-columns:1fr}.gs-benefits .gs-card:first-child{grid-column:auto}.gs-property{min-height:145px}.gs-title{letter-spacing:-1px}.gs-conversation{padding:25px 15px;border-radius:35px 18px 18px 18px}.gs-bubble{margin-right:18px;padding:18px}.gs-reply{margin:0 0 0 18px}.gs-product-illustration{padding:10px;min-height:240px}.gs-product-illustration .gs-calendar{grid-template-columns:45px repeat(5,minmax(0,1fr))}.gs-preview-note{font-size:10px}.gs-stories:after{right:-130px}.gs-footer-grid{display:block}.gs-footer nav{margin-top:30px}.gs-cta{padding:75px 0}}
+
+@media(min-width:901px){.gs-benefits .gs-card:nth-child(4),.gs-benefits .gs-card:last-child{grid-column:span 2}}
+@media(min-width:601px) and (max-width:900px){.gs-benefits .gs-card:first-child{grid-column:auto}}
+
+/* Scroll entrance motion: CSS remains visible by default if JavaScript fails. */
+.gs-home-v2 .gs-motion-item{transition:opacity .75s cubic-bezier(.2,.65,.25,1),translate .85s cubic-bezier(.2,.65,.25,1);transition-delay:var(--gs-reveal-delay,0ms)}
+.gs-motion-pending{opacity:0;translate:0 36px}
+.gs-motion-shown{opacity:1;translate:0 0}
+.gs-product-illustration.gs-motion-pending,.gs-conversation.gs-motion-pending{translate:0 48px}
+.gs-conversation.gs-motion-shown .gs-bubble{animation:gs-message-in .65s both cubic-bezier(.2,.65,.25,1)}
+.gs-conversation.gs-motion-shown .gs-bubble:nth-of-type(2){animation-delay:.15s}
+.gs-conversation.gs-motion-shown .gs-bubble:nth-of-type(3){animation-delay:.3s}
+@keyframes gs-message-in{from{opacity:0;translate:0 15px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.gs-motion-item,.gs-motion-pending,.gs-motion-shown{opacity:1!important;translate:none!important;transition:none!important}.gs-conversation.gs-motion-shown .gs-bubble{animation:none!important}}
+@media print{.gs-motion-pending{opacity:1!important;translate:none!important}}
+
+
+}
+
+@scope (.import-four) {
+/* Daylight Studio: an independent light concept. Midnight source is unchanged. */
+:scope{--gs-ink:#302c48;--gs-primary:#686080;--gs-accent:#686080;--gs-muted:#4f4690;--gs-surface:#fffdf8;--gs-soft:#f5f3fa;--gs-line:#e6e2fa;--gs-focus:#686080;--gs-max:1220px;--gs-radius:24px}
+body{background:#fffdf8}.gs-preview-note{background:#f5f3fa;color:#4f4690}.gs-preview-note strong{color:#686080}.gs-header{background:#fffdf8f2;border-bottom:1px solid #e6e2fa}.gs-brand{color:#4f4690}.gs-brand span{color:#4f4690}.gs-nav{min-height:84px}.gs-button{border-radius:999px;padding:15px 25px}.gs-button--primary,.gs-hero .gs-button--primary{background:#686080;color:white;box-shadow:0 7px 18px #68608020}.gs-button--primary:hover,.gs-hero .gs-button--primary:hover{background:#4f4690}.gs-button--secondary,.gs-hero .gs-button--secondary{background:#fffdf8;border-color:#c5bfdc;color:#4f4690}.gs-kicker{color:#686080;letter-spacing:2px}.gs-title{font-weight:650;letter-spacing:-2px}.gs-hero{padding:65px 0 65px;background:radial-gradient(ellipse at 8% 70%,#f5f3fa 0,transparent 38%),radial-gradient(ellipse at 92% 85%,#e6e2fa 0,transparent 37%),#fffdf8;color:#302c48}.gs-hero::before{width:470px;height:470px;top:160px;right:-250px;border:75px solid #c5bfdc40}.gs-hero::after{width:190px;height:190px;left:-100px;right:auto;top:190px;border:35px solid #c5bfdc4a}.gs-hero-layout{grid-template-columns:1fr;gap:48px;text-align:center}.gs-hero-layout>div:first-child{max-width:900px;margin:auto}.gs-hero h1{font-size:clamp(55px,6.7vw,92px);font-weight:650;letter-spacing:-5px;line-height:1.01;color:#302c48;max-width:none;margin:18px 0 24px}.gs-hero h1 br{display:none}.gs-hero h1 em{color:#686080;display:block;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;letter-spacing:-5px}.gs-hero .gs-kicker{display:inline-block;padding:6px 16px;border:1px solid #e6e2fa;border-radius:99px;background:#f5f3fa;color:#686080;margin:0}.gs-hero .gs-lead{max-width:62ch;margin-inline:auto;color:#4f4690;font-size:18px;line-height:1.65}.gs-hero .gs-actions{justify-content:center;margin-top:26px}.gs-product-art{width:min(880px,100%);max-width:none;margin:0 auto;min-height:0;border-radius:24px;padding:18px 18px 14px;background:linear-gradient(120deg,#f5f3fa,#f5f3fa 45%,#e6e2fa);transform:none;box-shadow:0 22px 45px #4f469016;border:1px solid #e6e2fa}.gs-product-art>.gs-window{margin:0;transform:none;border-radius:12px}.gs-product-art .gs-windowbar{height:28px}.gs-product-art .gs-windowbody{padding:20px 26px}.gs-product-art .gs-uihead{text-align:left}.gs-product-art .gs-uihead small{display:inline}.gs-product-art .gs-demo-table{font-size:11px}.gs-product-art .gs-demo-table th,.gs-product-art .gs-demo-table td{padding:10px 5px}.gs-product-art .gs-metric-row{margin-top:10px}.gs-product-art .gs-metric{padding:5px 12px;text-align:left;display:flex;align-items:center;justify-content:space-between}.gs-product-art .gs-illustration-note{transform:none;text-align:center;margin-top:10px;font-size:10px;color:#4f4690}.gs-demo-table .stay{background:#e6e2fa}.gs-demo-table .stay2{background:#e6e2fa}.gs-ui-tag{background:#f5f3fa;color:#4f4690}.gs-intro{background:#fffdf8;border-bottom:1px solid #e6e2fa}.gs-intro .gs-container{grid-template-columns:1fr 1.35fr;gap:20px 65px}.gs-intro .gs-title{font-size:35px}.gs-home-v2>.gs-section:nth-of-type(3){background:#fffdf8}.gs-benefits{gap:18px}.gs-benefits .gs-card,.gs-benefits .gs-card:first-child{background:white;border:1px solid #e6e2fa;box-shadow:0 6px 16px #47415e10}.gs-benefits .gs-card:nth-child(2){background:#f5f3fa}.gs-benefits .gs-card:nth-child(4){background:#f5f3fa}.gs-benefits .gs-card:last-child{background:#f5f3fa}.gs-benefits .gs-card h3{color:#302c48}.gs-benefits .gs-card a{color:#686080}.gs-icon{background:#f5f3fa;color:#686080}.gs-product{background:#f5f3fa;color:#302c48}.gs-product:after{border:50px solid #e6e2fa;opacity:.6}.gs-product .gs-kicker{color:#686080}.gs-product .gs-title{color:#302c48}.gs-product .gs-lead{color:#4f4690}.gs-product .gs-button--secondary{background:white;color:#686080;border-color:#c5bfdc}.gs-product-illustration{background:#e6e2fa;border-color:#c5bfdc;box-shadow:0 18px 32px #4f469013;transform:rotate(-2deg)}.gs-product-illustration .gs-illustration-note{color:#4f4690!important}.gs-products-inline a{background:transparent;color:#686080;border-color:#e6e2fa}.gs-products-inline a:hover{background:#f5f3fa}.gs-ai{background:#fffdf8}.gs-conversation{background:#f5f3fa;border:1px solid #e6e2fa;border-radius:35px;box-shadow:0 20px 50px #4f46900c}.gs-reply{background:#686080}.gs-about#property-types{background:#fffdf8}.gs-property{background:white;border:1px solid #e6e2fa;min-height:170px;box-shadow:0 5px 14px #4f469008}.gs-property:nth-child(2n){background:#f5f3fa}.gs-property:nth-child(3n){background:#f5f3fa}.gs-property a{color:#302c48}.gs-property a span{color:#686080}.gs-property:before{border-color:#9991b9;background:repeating-linear-gradient(90deg,transparent 0 12px,#9991b9 13px 14px)}.gs-stories{background:#f5f3fa}.gs-stories:after{color:#c5bfdc}.gs-stories .gs-title{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-1.5px}.gs-faq summary{color:#302c48}.gs-cta{background:radial-gradient(ellipse at 15% 100%,#f5f3fa,transparent 55%),radial-gradient(ellipse at 90% 10%,#e6e2fa,transparent 50%),#f5f3fa;color:#302c48;position:relative;overflow:hidden}.gs-cta .gs-title{color:#302c48;font-size:clamp(45px,6vw,78px)}.gs-cta .gs-kicker{color:#686080}.gs-cta .gs-lead{color:#4f4690}.gs-cta .gs-button{background:#686080;color:white}.gs-cta .gs-button:hover{background:#4f4690}.gs-footer{background:#fffdf8;color:#302c48;border-top:1px solid #e6e2fa}.gs-footer p{color:#4f4690}.gs-footer a{color:#686080;text-decoration-color:#c5bfdc}.gs-home-v2 .gs-motion-pending{translate:0 30px}
+@media(max-width:900px){.gs-hero h1{font-size:72px}.gs-hero-layout{gap:35px}.gs-product-art{max-width:760px}.gs-intro .gs-container{grid-template-columns:1fr;gap:18px}.gs-product-illustration{transform:none}}
+@media(max-width:600px){.gs-hero{padding:45px 0}.gs-hero h1{font-size:clamp(45px,11.7vw,68px);letter-spacing:-2.5px}.gs-hero h1 em{letter-spacing:-2.5px}.gs-hero .gs-lead{font-size:16px}.gs-hero .gs-kicker{font-size:9px;letter-spacing:1.5px}.gs-hero .gs-actions{gap:10px}.gs-hero .gs-button{padding:13px 19px;font-size:14px}.gs-product-art{padding:9px;border-radius:15px}.gs-product-art .gs-windowbody{padding:10px}.gs-product-art .gs-demo-table{font-size:8px}.gs-product-art .gs-demo-table th,.gs-product-art .gs-demo-table td{padding:10px 2px}.gs-product-art .gs-uihead small{display:block}.gs-product-art .gs-metric{font-size:9px;padding:5px;display:block}.gs-product-art .gs-metric b{font-size:13px}.gs-product-art .gs-illustration-note{font-size:9px}.gs-title{letter-spacing:-1px}.gs-intro .gs-title{font-size:30px}.gs-property{min-height:145px}.gs-cta .gs-title{letter-spacing:-2px}}
+
+}
+
+@scope (.import-four) {
+/* Botanical Atelier — independent editorial hospitality concept. */
+:scope{--gs-ink:#302c48;--gs-primary:#47415e;--gs-accent:#4f4690;--gs-muted:#4f4690;--gs-surface:#f5f3fa;--gs-soft:#e6e2fa;--gs-line:#c5bfdc;--gs-focus:#4f4690;--gs-max:1240px;--gs-display:Georgia,'Times New Roman',serif}
+body{background:#f5f3fa;color:#302c48}.gs-preview-note{background:#e6e2fa;color:#4f4690}.gs-preview-note strong{color:#47415e}.gs-header{background:#f5f3faf5;border-color:#c5bfdc}.gs-brand{display:flex;align-items:center;flex:0 0 auto;width:clamp(210px,22vw,280px);line-height:0}.gs-brand img{display:block;width:100%;height:auto;max-height:74px;object-fit:contain;object-position:left center}.gs-navlinks a:not(.gs-button){color:#47415e;font-size:1rem;font-weight:650}.gs-nav{min-height:82px}.gs-button{border-radius:3px;padding:15px 24px;box-shadow:none!important}.gs-button--primary,.gs-hero .gs-button--primary{background:#47415e;color:#fffdf8}.gs-button--primary:hover,.gs-hero .gs-button--primary:hover{background:#302c48}.gs-button--secondary,.gs-hero .gs-button--secondary{background:transparent;color:#47415e;border-color:#686080}.gs-kicker{font-size:10px;letter-spacing:2.4px;color:#4f4690}.gs-title{font-family:Georgia,serif;font-weight:400;letter-spacing:-2px;font-size:clamp(36px,4.6vw,62px);line-height:1.08}.gs-lead{color:#4f4690}.gs-hero{padding:36px 0 40px;background:#f5f3fa;overflow:hidden}.gs-hero-layout{grid-template-columns:1fr 1.04fr;gap:65px;text-align:left;align-items:center}.gs-hero-layout>div:first-child{margin:0;max-width:none}.gs-hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(48px,5.25vw,72px);letter-spacing:-3px;color:#302c48;line-height:1.02;max-width:12ch;margin:12px 0 16px}.gs-hero h1 br{display:block}.gs-hero h1 em{color:#4f4690;letter-spacing:-4px;display:block}.gs-hero .gs-kicker{color:#47415e;background:transparent;padding:0;border:0;border-radius:0}.gs-hero .gs-lead{margin:0;color:#4f4690;max-width:44ch;font-size:16px;line-height:1.5}.gs-hero .gs-actions{justify-content:flex-start;margin-top:18px;gap:10px}.gs-hero:before{width:470px;height:640px;right:3%;top:36px;border:1px solid #c5bfdc;border-radius:240px 240px 10px 10px;background:transparent;transform:rotate(8deg)}.gs-hero:after{width:140px;height:260px;left:auto;right:-65px;top:400px;border:1px solid #9991b9;background:#e6e2fa;border-radius:100% 0 100% 0;transform:rotate(-25deg)}.gs-product-art{padding:50px 18px 28px;background:#e6e2fa;border:1px solid #c5bfdc;border-radius:250px 250px 18px 18px;box-shadow:none;transform:rotate(2deg);width:100%;min-height:360px;display:flex;flex-direction:column;justify-content:center}.gs-product-art>.gs-window{margin:0 0 0 -45px;transform:rotate(-4deg);border-radius:9px;border-color:#c5bfdc;box-shadow:0 26px 45px #302c4820}.gs-product-art .gs-windowbar{background:#f5f3fa;height:35px;border-color:#c5bfdc}.gs-product-art .gs-windowbody{padding:20px}.gs-product-art .gs-uihead{color:#47415e}.gs-product-art .gs-uihead small{display:block;color:#4f4690}.gs-product-art .gs-demo-table{font-size:10px}.gs-product-art .gs-demo-table th,.gs-product-art .gs-demo-table td{padding:13px 4px;background:#f5f3fa;color:#47415e}.gs-product-art .gs-demo-table .stay{background:#c5bfdc}.gs-product-art .gs-demo-table .stay2{background:#c5bfdc}.gs-product-art .gs-metric{background:#f5f3fa;color:#4f4690;border-color:#c5bfdc}.gs-ui-tag{background:#e6e2fa;color:#47415e}.gs-dot,.gs-dot:nth-child(2),.gs-dot:nth-child(3){background:#9991b9}.gs-product-art .gs-illustration-note{color:#47415e;margin-top:25px;transform:rotate(-2deg)}.gs-intro{background:#e6e2fa;border:0}.gs-intro .gs-container{grid-template-columns:1fr 1.25fr;gap:20px 80px}.gs-intro .gs-title{font-size:39px}.gs-home-v2>.gs-section:nth-of-type(3){background:#f5f3fa}.gs-benefits{gap:0;border-top:1px solid #c5bfdc}.gs-benefits .gs-card,.gs-benefits .gs-card:first-child,.gs-benefits .gs-card:nth-child(2),.gs-benefits .gs-card:nth-child(4),.gs-benefits .gs-card:last-child{background:transparent;border:0;border-bottom:1px solid #c5bfdc;border-radius:0;box-shadow:none;grid-column:auto;min-height:280px;padding:32px 28px}.gs-benefits .gs-card:hover{box-shadow:none;background:#e6e2fa;transform:translateY(-3px)}.gs-benefits .gs-card h3{font-family:Georgia,serif;font-size:25px;font-weight:400;color:#302c48}.gs-benefits .gs-card p{color:#4f4690}.gs-benefits .gs-card a{color:#47415e}.gs-icon{width:auto;height:auto;display:block;background:none;color:#4f4690;font-family:Georgia,serif;font-size:23px;border-radius:0;margin-bottom:23px}.gs-product{background:#47415e;color:#f5f3fa}.gs-product .gs-kicker{color:#c5bfdc}.gs-product .gs-title{color:#fffdf8}.gs-product .gs-lead{color:#e6e2fa}.gs-product .gs-button--secondary{background:transparent;color:#fffdf8;border-color:#c5bfdc}.gs-product:after{border:1px solid #686080;background:transparent;opacity:.4}.gs-product-illustration{background:#4f4690;border:1px solid #686080;border-radius:160px 160px 14px 14px;padding:45px 24px 20px;transform:rotate(2deg);box-shadow:none}.gs-product-illustration .gs-illustration-note{color:#f5f3fa!important}.gs-calendar .book{background:#c5bfdc;color:#47415e}.gs-calendar .book2{background:#c5bfdc;color:#47415e}.gs-products-inline{grid-template-columns:repeat(2,minmax(0,1fr));border-color:#c5bfdc;column-gap:45px}.gs-products-inline a{color:#47415e;border-color:#c5bfdc;font-family:Georgia,serif;font-size:23px;padding:24px 0}.gs-products-inline a:hover{background:#e6e2fa}.gs-ai{background:#e6e2fa}.gs-conversation{background:#c5bfdc;border-color:#c5bfdc;border-radius:8px 100px 8px 8px;box-shadow:none;padding:40px 30px}.gs-bubble{background:#fffdf8;color:#302c48;box-shadow:0 7px 20px #302c480a}.gs-reply{background:#47415e;color:#fffdf8}.gs-about#property-types{background:#f5f3fa}.gs-property-grid{gap:20px}.gs-property,.gs-property:nth-child(2n),.gs-property:nth-child(3n){background:#e6e2fa;border:0;border-radius:90px 90px 4px 4px;min-height:220px;padding:30px;box-shadow:none}.gs-property:nth-child(2n){background:#e6e2fa}.gs-property:nth-child(3n){background:#e6e2fa}.gs-property:before{right:calc(50% - 27px);top:35px;border-color:#686080;background:repeating-linear-gradient(90deg,transparent 0 12px,#686080 13px 14px);height:65px}.gs-property a{color:#302c48;font-family:Georgia,serif;font-weight:400;font-size:22px}.gs-property a span{color:#47415e}.gs-stories{background:#e6e2fa}.gs-stories .gs-title{font-size:clamp(36px,4.7vw,64px);max-width:23ch;color:#302c48}.gs-stories:after{color:#c5bfdc}.gs-faq summary{font-family:Georgia,serif;font-size:22px;font-weight:400;color:#302c48}.gs-faq details{border-color:#c5bfdc}.gs-faq details p{color:#4f4690}.gs-cta{background:#e6e2fa;color:#302c48}.gs-cta .gs-title{font-family:Georgia,serif;font-weight:400;color:#302c48;letter-spacing:-3px}.gs-cta .gs-lead{color:#4f4690}.gs-cta .gs-kicker{color:#4f4690}.gs-cta .gs-button{background:#47415e;color:#fffdf8}.gs-cta .gs-button:hover{background:#302c48}.gs-footer{background:#f5f3fa;border-color:#c5bfdc;color:#302c48}.gs-footer p{color:#4f4690}.gs-footer a{color:#47415e;text-decoration-color:#9991b9}
+@media(min-width:901px){.gs-benefits{grid-template-columns:repeat(3,minmax(0,1fr))}.gs-benefits .gs-card:nth-child(4),.gs-benefits .gs-card:last-child{grid-column:auto}}
+@media(max-width:900px){.gs-hero-layout{grid-template-columns:1fr;gap:45px}.gs-hero-layout>div:first-child{max-width:650px}.gs-hero h1{max-width:none;font-size:76px}.gs-product-art{max-width:600px;margin:auto;min-height:390px}.gs-product-art>.gs-window{margin-left:0}.gs-intro .gs-container{grid-template-columns:1fr;gap:20px}.gs-product-illustration{transform:none}}
+@media(max-width:600px){.gs-hero{padding:55px 0}.gs-hero h1{font-size:clamp(52px,13vw,72px);letter-spacing:-3px}.gs-hero h1 em{letter-spacing:-3px}.gs-hero .gs-lead{font-size:16px}.gs-product-art{padding:55px 12px 20px;min-height:340px;transform:none}.gs-product-art>.gs-window{transform:none}.gs-product-art .gs-windowbody{padding:10px}.gs-product-art .gs-demo-table{font-size:8px}.gs-product-art .gs-demo-table th,.gs-product-art .gs-demo-table td{padding:11px 2px}.gs-product-art .gs-illustration-note{transform:none}.gs-hero:before{width:300px;height:430px;right:-90px;top:440px}.gs-title{letter-spacing:-1.5px}.gs-intro .gs-title{font-size:34px}.gs-benefits .gs-card{padding:28px 12px;min-height:0}.gs-products-inline{grid-template-columns:1fr}.gs-conversation{padding:30px 18px}.gs-property-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gs-property{min-height:210px;padding:20px 15px}.gs-property a{font-size:18px}.gs-property:before{height:50px}.gs-faq summary{font-size:20px}}
+
+}
+
+@scope (.import-four) {
+.gs-content-refresh .gs-hero h1{font-size:clamp(40px,4.2vw,60px);max-width:16ch;letter-spacing:-2px}.gs-content-refresh .gs-hero h1 em{letter-spacing:-2px}.gs-content-refresh .gs-title{max-width:26ch;font-size:clamp(32px,4vw,52px)}.gs-content-refresh .gs-section{padding:75px 0}.gs-content-refresh .gs-note{font-size:13px;color:#4f4690;margin-top:24px}.gs-content-refresh .gs-benefits .gs-card p{color:#4f4690}.gs-content-refresh .gs-ai .gs-product-layout{margin-top:30px}.gs-ai-options{grid-template-columns:1fr 1fr;gap:25px}.gs-ai-options h3,.gs-booking-steps h3,.gs-integration-columns h3,.gs-why-grid h3{font-family:Georgia,serif;font-weight:400;font-size:23px;line-height:1.25}.gs-direct{background:#e6e2fa}.gs-booking-steps,.gs-integration-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin-top:35px}.gs-booking-steps>article{padding:24px 0;border-top:1px solid #c5bfdc}.gs-booking-steps span{color:#4f4690;font-size:24px;font-family:Georgia,serif}.gs-content-refresh .gs-property-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.gs-content-refresh .gs-property{padding:22px;min-height:215px}.gs-content-refresh .gs-property a{font-size:21px}.gs-integrations{background:#e6e2fa}.gs-integration-columns>article{padding:0 20px 0 0;border-right:1px solid #c5bfdc}.gs-integration-columns>article:last-child{border:0}.gs-showcase{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}.gs-showcase figure{margin:0;padding:12px;background:#e6e2fa;border:1px solid #c5bfdc;border-radius:12px}.gs-showcase img{display:block;width:100%;height:auto;border-radius:5px}.gs-showcase figcaption{font-size:12px;color:#4f4690;padding:12px 4px 3px}.gs-showcase-section .gs-button{margin-top:30px}.gs-content-refresh blockquote{margin:35px 0 25px;max-width:760px}.gs-content-refresh blockquote p{font:400 30px/1.45 Georgia,serif}.gs-content-refresh blockquote footer{font-size:15px;color:#4f4690}.gs-why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px;margin-top:30px}.gs-content-refresh .gs-cta .gs-actions{justify-content:center;align-items:center;gap:25px}.gs-content-refresh .gs-showcase-section{background:#f5f3fa}.gs-content-refresh .gs-hero .gs-product-art img{width:100%;height:auto;display:block;border-radius:8px}.gs-content-refresh .gs-hero .gs-product-art{padding:65px 18px 30px}.gs-content-refresh .gs-hero .gs-product-art figure{margin:0 0 0 -30px;transform:rotate(-3deg)}.gs-content-refresh .gs-hero .gs-product-art figcaption{font-size:10px;text-align:center;margin-top:15px;color:#47415e}
+@media(max-width:900px){.gs-content-refresh .gs-property-grid,.gs-why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gs-content-refresh .gs-hero h1{font-size:58px;max-width:20ch}.gs-content-refresh .gs-hero .gs-product-art figure{margin:0;transform:none}}
+@media(max-width:600px){.gs-content-refresh .gs-hero h1{font-size:42px;letter-spacing:-1.5px}.gs-content-refresh .gs-hero h1 em{letter-spacing:-1.5px}.gs-content-refresh .gs-section{padding:52px 0}.gs-ai-options,.gs-booking-steps,.gs-integration-columns,.gs-showcase,.gs-why-grid{grid-template-columns:1fr;gap:18px}.gs-integration-columns>article{border-right:0;border-bottom:1px solid #c5bfdc;padding-bottom:20px}.gs-content-refresh .gs-property{padding:18px 13px}.gs-content-refresh .gs-property a{font-size:18px}.gs-content-refresh blockquote p{font-size:24px}.gs-content-refresh .gs-hero .gs-product-art{min-height:260px;padding:45px 12px 20px}}
+
+/* Product navigation uses the same disclosure at every screen size. */
+.gs-header .gs-nav {position:relative;display:flex;align-items:center;justify-content:space-between;background:#f5f3fa}
+.atelier-navigation {display:flex;align-items:center;gap:clamp(12px,1.5vw,24px);color:#302c48}
+.atelier-navigation a,.atelier-navigation summary {color:inherit;text-decoration:none;font:inherit;cursor:pointer;padding:8px 0}
+.atelier-navigation a:hover,.atelier-navigation summary:hover {text-decoration:underline;text-underline-offset:4px}
+.atelier-product-panel {position:absolute;z-index:20;top:100%;right:0;width:min(850px,100%);box-sizing:border-box;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:28px;background:#fffdf8;border:1px solid #c5bfdc;border-top:3px solid #47415e;border-radius:0 0 16px 16px;box-shadow:0 12px 26px #302c481c}
+.atelier-product-panel strong {display:block;margin-bottom:8px;font:normal 24px Georgia,serif;color:#47415e}
+.atelier-product-panel a {display:block}
+.atelier-navigation .atelier-demo {background:#47415e;color:white;border-radius:6px;padding:10px 16px}
+.atelier-navigation :focus-visible {outline:3px solid #4f4690;outline-offset:3px}
+@media(min-width:1001px){.gs-header .gs-menu-toggle{display:none}}
+@media(max-width:1000px){
+  .gs-header .gs-menu-toggle{display:block}
+  .atelier-navigation{display:none;position:absolute;z-index:20;top:100%;inset-inline:0;background:#fffdf8;padding:16px;max-height:70vh;overflow:auto}
+  .atelier-navigation[data-open="true"]{display:grid;gap:4px}
+  .atelier-product-panel{position:static;width:100%;grid-template-columns:1fr;gap:16px;padding:14px;box-shadow:none}
+}
+
+/* Keep the pointer path continuous between the trigger and its floating panel. */
+.atelier-navigation {font:500 15px/1.45 system-ui,sans-serif}
+.atelier-products summary {display:flex;align-items:center;gap:8px;list-style:none;padding:8px 10px;border-radius:6px}
+.atelier-products summary::-webkit-details-marker {display:none}
+.atelier-products summary::after {content:"";width:6px;height:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-2px) rotate(45deg)}
+.atelier-products[open] summary {background:#e6e2fa;color:#302c48}
+.atelier-products[open] summary::after {transform:translateY(2px) rotate(225deg)}
+.atelier-product-panel {background:#fffdf8;padding:24px;gap:0;border:1px solid #e6e2fa;border-radius:14px;box-shadow:0 15px 38px #302c481f,0 2px 5px #302c480a}
+.atelier-product-panel>div {padding:0 16px}
+.atelier-product-panel strong {display:block;font:650 12px/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;padding:4px 8px 10px;margin:0 0 4px;color:#4f4690}
+.atelier-product-panel a {display:flex;align-items:center;justify-content:space-between;gap:5px;padding:9px 8px;border-radius:5px;font:500 14px/1.45 system-ui,sans-serif;color:#47415e}
+.atelier-product-panel a:is(:hover,:focus-visible) {background:#f5f3fa;color:#302c48;text-decoration:none}
+.atelier-product-panel a:is(:hover,:focus-visible)::after {content:"→";font-size:14px}
+@media(min-width:1001px){
+  .atelier-navigation,.atelier-products {align-self:stretch;align-items:center}
+  .atelier-products {display:flex}
+  .atelier-product-panel>div+div {border-left:1px solid #e6e2fa}
+}
+@media(max-width:1000px){
+  .atelier-product-panel {padding:10px;box-shadow:none}
+  .atelier-product-panel>div {padding:8px}
+  .atelier-product-panel>div+div {border-top:1px solid #e6e2fa}
+}
+
+.gs-awards {background:linear-gradient(120deg,#f5f3fa,#e6e2fa);border-block:1px solid #c5bfdc;color:#302c48;scroll-margin-top:96px}
+.gs-awards-inner {display:grid;grid-template-columns:minmax(210px,1fr) 2fr;align-items:center;gap:12px clamp(20px,4vw,60px);padding-block:clamp(32px,4vw,60px)}
+.gs-awards h2 {margin:0;font:normal clamp(30px,3.2vw,48px)/1.1 Georgia,serif}
+.gs-awards p {margin:12px 0;font-size:clamp(18px,1.4vw,21px);line-height:1.5}
+.gs-awards a {display:inline-block;padding-block:10px;color:#302c48;font-size:clamp(18px,1.3vw,20px);line-height:1.4;font-weight:700;text-underline-offset:4px}
+.gs-awards ul {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;list-style:none;padding:0 0 9px;margin:0;border-bottom:2px solid #9991b9}
+.gs-awards li {display:grid;place-items:center;background:#fffdf8;border:1px solid #c5bfdc;border-radius:40% 40% 7px 7px;padding:16px 6px 8px;box-shadow:0 4px 8px #302c480c}
+.gs-awards img {display:block;width:100%;height:clamp(76px,7vw,116px);object-fit:contain}
+@media(max-width:850px){.gs-awards-inner{grid-template-columns:1fr}}
+@media(max-width:600px){.gs-awards ul{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:no-preference){
+  .awards-revealing li {animation:award-settle .55s cubic-bezier(.2,.7,.25,1) both;animation-delay:calc(var(--award-position,0)*90ms)}
+  @keyframes award-settle {from{opacity:.5;transform:translateY(12px) rotate(-3deg)}to{opacity:1;transform:none}}
+}
+
+
+.atelier-product-panel a {justify-content:flex-start;gap:9px}
+.atelier-product-panel a svg {flex:none;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;color:#47415e}
+.atelier-product-panel a:is(:hover,:focus-visible)::after {margin-left:auto}
+
+@media (min-width:1001px) {
+  .atelier-product-panel {
+    box-shadow:0 18px 44px -8px rgb(24 44 34 / 30%),0 3px 8px rgb(24 44 34 / 10%);
+  }
+  body:has(.atelier-products[open]) .gs-header::after {
+    content:"";
+    position:absolute;
+    inset:100% 0 auto;
+    height:100vh;
+    background:rgb(35 49 40 / 9%);
+    pointer-events:none;
+  }
+}
+
+/* Product walkthrough */
+.gs-tour {padding:clamp(48px,6vw,92px) 0;color:#302c48;background:#f5f3fa}
+.gs-tour [hidden] {display:none}
+.tour-head {max-width:850px;margin-bottom:32px}
+.tour-head h2 {font:normal clamp(34px,4.4vw,62px)/1.04 Georgia,serif;letter-spacing:-.035em;margin:12px 0 16px}
+.tour-head p:not(.tour-label) {max-width:68ch;font-size:18px;line-height:1.55}
+.tour-label {font:700 12px/1.4 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#4f4690}
+.tour-widget {display:grid;grid-template-columns:minmax(165px,1fr) minmax(0,3.7fr);background:#302c48;border-radius:18px;padding:clamp(16px,2.4vw,32px);gap:24px;color:#fffdf8}
+.tour-controls h3 {font:normal 28px/1.15 Georgia,serif;margin:4px 0 22px}
+.tour-controls button {display:block;width:100%;text-align:left;padding:12px 14px;margin:5px 0;border:1px solid #686080;background:transparent;color:inherit;border-radius:7px;font:600 15px/1.4 system-ui,sans-serif;cursor:pointer}
+.tour-controls button[aria-selected="true"] {background:#e6e2fa;color:#302c48;border-color:#e6e2fa}
+.gs-tour :focus-visible {outline:3px solid #686080;outline-offset:3px}
+.tour-panels {min-width:0}
+.tour-panels figure {margin:0;background:#fffdf8;color:#302c48;border-radius:10px;overflow:hidden}
+.tour-panels img {display:block;width:100%;height:auto}
+.tour-panels figcaption {padding:13px 18px;border-top:1px solid #c5bfdc}
+.tour-panels [data-tour-panel]+[data-tour-panel]:not([hidden]) {margin-top:14px}
+.tour-widget[data-ready] .tour-panels [data-tour-panel] {margin:0}
+.tour-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 26px;margin:30px 0}
+.tour-cards article {padding:16px 0 4px;border-top:2px solid #c5bfdc}
+.tour-cards h3,.tour-routes h3 {margin:0 0 8px;font:600 18px/1.4 system-ui,sans-serif}
+.tour-cards p,.tour-panels article p {margin:0 0 12px;line-height:1.55}
+.tour-link {color:#302c48;font-weight:650;text-underline-offset:4px}
+.tour-distribution {background:#f5f3fa}
+.tour-routes {display:grid;gap:12px}
+.tour-routes>div {padding:20px;border-radius:12px;background:#fffdf8;border:1px solid #c5bfdc}
+.tour-routes ol {display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin:0;padding:0;list-style:none}
+.tour-routes li {display:flex;gap:18px;align-items:center}
+.tour-routes li+li::before {content:"→";color:#4f4690}
+.tour-routes li:last-child {font-weight:650}
+.tour-guest-journey .tour-widget {background:#e6e2fa;color:#302c48;grid-template-columns:minmax(170px,1fr) minmax(0,2.6fr)}
+.tour-guest-journey button[aria-selected="true"] {background:#47415e;color:white}
+.tour-panels article {padding:clamp(18px,3vw,42px);background:#fffdf8;border-radius:12px}
+.tour-panels h4 {margin:0 0 14px;font:650 14px/1.3 system-ui,sans-serif}
+.tour-panels .tour-bubble {width:fit-content;max-width:34ch;background:#e6e2fa;border-radius:16px 16px 16px 3px;padding:14px 18px;font:normal clamp(19px,2.3vw,28px)/1.25 Georgia,serif}
+.tour-actions {display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
+@media(prefers-reduced-motion:no-preference){
+  .tour-widget[data-ready] [data-tour-panel]:not([hidden]) {animation:tour-enter .28s ease-out}
+  @keyframes tour-enter {from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:none}}
+}
+@media(max-width:720px){
+  .tour-widget,.tour-guest-journey .tour-widget {grid-template-columns:1fr;gap:14px}
+  .tour-controls [role=tablist] {display:flex;flex-wrap:wrap;gap:6px}
+  .tour-controls button {width:auto;margin:0}
+  .tour-cards {grid-template-columns:1fr}
+  .tour-routes ol {display:grid}
+  .tour-routes li+li::before {content:"↓"}
+}
+
+#platform.tour-overview {padding-block:clamp(38px,4.5vw,66px);background:#f5f3fa}
+.tour-overview .gs-title {max-width:24ch}
+.tour-overview .gs-lead {max-width:66ch}
+.gs-tour>.gs-container {display:grid;grid-template-columns:minmax(210px,.8fr) minmax(0,2fr);align-items:start;gap:clamp(28px,4vw,64px)}
+.chapter-number {display:inline-block;color:#4f4690;font:700 12px/1.4 system-ui,sans-serif;letter-spacing:.14em;padding:7px 12px;border:1px solid #c5bfdc;border-radius:20px}
+.tour-head .chapter-subtitle {font:normal 23px/1.25 Georgia,serif;margin:16px 0 8px}
+.chapter-body {min-width:0}
+.chapter-body .tour-cards {grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0 0 22px}
+.chapter-body .tour-cards article {display:flex;flex-direction:column;align-items:flex-start;padding:clamp(16px,2vw,25px);background:#fffdf8;border:1px solid #c5bfdc;border-radius:14px;box-shadow:0 4px 13px #302c4808}
+.chapter-body .tour-cards article:is(:hover,:focus-within) {border-color:#9991b9;box-shadow:0 8px 20px #302c4815}
+.chapter-body .tour-cards svg {width:38px;height:38px;padding:9px;box-sizing:border-box;margin-bottom:15px;border-radius:10px;background:#e6e2fa;stroke:#47415e;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.65}
+.chapter-body .tour-cards a {margin-top:auto}
+.chapter-body>.tour-link {display:inline-block;margin-top:18px}
+@media(min-width:761px) and (min-height:580px){.gs-tour .tour-head {position:sticky;top:105px}}
+@media(max-width:760px){
+  .gs-tour>.gs-container {display:block}
+  .gs-tour .tour-head {margin-bottom:22px}
+  .chapter-body .tour-cards {grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:no-preference){
+  .chapter-body .tour-cards article {transition:transform .18s ease,box-shadow .18s ease}
+  .chapter-body .tour-cards article:is(:hover,:focus-within) {transform:translateY(-3px)}
+  .chapter-enter {animation:chapter-arrive .44s ease-out both}
+  @keyframes chapter-arrive {from{opacity:.55;translate:0 14px}to{opacity:1;translate:0 0}}
+}
+
+.tour-overview>.gs-container {display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:start;gap:clamp(24px,5vw,80px)}
+.tour-overview .gs-title {margin-top:0}
+.chapter-index ol {margin:0;padding:0;list-style:none;border-top:1px solid #c5bfdc}
+.chapter-index li {border-bottom:1px solid #c5bfdc}
+.chapter-index a {display:flex;align-items:center;gap:16px;padding:17px 12px;color:#47415e;text-decoration:none;font:600 18px/1.4 system-ui,sans-serif}
+.chapter-index a:is(:hover,:focus-visible) {background:#e6e2fa}
+.chapter-index a:focus-visible {outline:2px solid #47415e;outline-offset:-2px}
+.index-number {font:600 12px/1.4 system-ui,sans-serif;color:#4f4690;letter-spacing:.1em}
+.index-arrow {margin-left:auto}
+.gs-tour[id] {scroll-margin-top:95px}
+@media(prefers-reduced-motion:no-preference){
+  .index-arrow {transition:transform .16s ease}
+  .chapter-index a:is(:hover,:focus-visible) .index-arrow {transform:translateY(3px)}
+}
+@media(max-width:760px){.tour-overview>.gs-container {grid-template-columns:1fr;gap:20px}}
+
+.property-directory {background:#f5f3fa;scroll-margin-top:95px}
+.property-arches {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;list-style:none;margin:30px 0 0;padding:0}
+.property-arches li {display:flex;min-width:0}
+.property-arch {position:relative;display:flex;flex-direction:column;width:100%;padding:22px 20px 44px;border-radius:72px 72px 8px 8px;background:#e6e2fa;color:#302c48;text-decoration:none}
+.property-arches li:nth-child(even) .property-arch {background:#e6e2fa}
+.property-arch svg {align-self:center;width:min(96%,175px);height:98px;fill:none;stroke:#47415e;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.property-arch h3 {font:normal 23px/1.15 Georgia,serif;margin:14px 0 8px}
+.property-arch p {margin:0;font:normal 15px/1.5 system-ui,sans-serif}
+.arch-arrow {position:absolute;right:18px;bottom:12px;font-size:21px}
+.property-arch:is(:hover,:focus-visible) {color:#302c48;box-shadow:inset 0 0 0 1px #686080}
+.property-arch:focus-visible {outline:3px solid #47415e;outline-offset:3px}
+.scene-light {fill:#9991b9}
+.property-arch svg path {transform-box:fill-box}
+.scene-swing {transform-origin:top center}
+.scene-gate {transform-origin:left center}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .property-arch:is(:hover,:focus-visible) .scene-light {animation:arch-light .7s ease forwards}
+  .property-arch:is(:hover,:focus-visible) .scene-swing {animation:arch-swing .65s ease}
+  .property-arch:is(:hover,:focus-visible) .scene-ripple {animation:arch-ripple .7s ease}
+  .property-arch:is(:hover,:focus-visible) .scene-gate {animation:arch-gate .65s ease forwards}
+  .property-arch:is(:hover,:focus-visible) .scene-trace {stroke-dasharray:1;animation:arch-trace .7s ease}
+  @keyframes arch-light {to{fill:#9991b9}}
+  @keyframes arch-swing {25%{transform:rotate(8deg)}65%{transform:rotate(-4deg)}}
+  @keyframes arch-ripple {50%{transform:translate(4px,1px);opacity:.5}}
+  @keyframes arch-gate {to{transform:skewY(-7deg) scaleX(.7)}}
+  @keyframes arch-trace {from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+}
+@media(max-width:900px){.property-arches {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.property-arches {gap:12px}.property-arch {padding:16px 13px 38px;border-radius:45px 45px 6px 6px}.property-arch h3 {font-size:20px}.property-arch svg {height:70px}}
+
+.customer-voices {background:#302c48;color:#fffdf8;padding-block:clamp(48px,6vw,88px);scroll-margin-top:94px}
+.customer-voices header {display:flex;align-items:center;justify-content:space-between;gap:32px}
+.voice-intro {max-width:76ch;min-width:0}
+.customer-voices header .voice-links {justify-content:flex-end}
+@media(max-width:900px){.customer-voices header {flex-direction:column;align-items:flex-start;gap:12px}.customer-voices header .voice-links {justify-content:flex-start}}
+.customer-voices h2 {font:normal clamp(36px,4.4vw,62px)/1.07 Georgia,serif;letter-spacing:-.035em;margin:0 0 14px;color:inherit}
+.customer-voices header p {color:#e6e2fa;font-size:18px;line-height:1.5}
+.voice-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:30px 0}
+.voice-card {margin:0;padding:clamp(20px,2.2vw,32px);display:flex;flex-direction:column;border-radius:4px 24px 4px 4px;background:#f5f3fa;color:#302c48}
+.voice-card:nth-child(2){background:#e6e2fa}
+.voice-card:nth-child(3){background:#e6e2fa}
+.voice-topic {font:650 12px/1.4 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.09em;color:#4f4690}
+.voice-card blockquote {margin:20px 0 24px;font:normal clamp(18px,1.45vw,23px)/1.45 Georgia,serif}
+.voice-card figcaption {margin-top:auto;padding-top:14px;border-top:1px solid #9991b9}
+.voice-card figcaption span {display:block;margin-top:3px;font-size:14px}
+.voice-links {display:flex;flex-wrap:wrap;gap:12px}
+.voice-links a {display:inline-flex;align-items:center;gap:12px;padding:13px 20px;text-decoration:none;border:1px solid #9991b9;border-radius:7px;color:#fffdf8;font-weight:650}
+.voice-links a:first-child {background:#e6e2fa;color:#302c48}
+.voice-links a:focus-visible {outline:3px solid #c5bfdc;outline-offset:4px}
+@media(max-width:800px){.voice-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){
+  .voice-card.chapter-enter {animation-delay:var(--voice-delay,0ms)}
+  .voice-card:nth-child(2){--voice-delay:65ms}.voice-card:nth-child(3){--voice-delay:130ms}
+  .voice-links a span {transition:transform .18s ease}
+  .voice-links a:is(:hover,:focus-visible) span {transform:translateX(3px)}
+}
+
+.gs-faq details p {
+  max-width:68ch;
+  color:#47415e;
+  font-size:clamp(18px,1.4vw,20px);
+  line-height:1.6;
+}
+.gs-faq details p a {
+  color:#302c48;
+  font-weight:600;
+  text-underline-offset:.16em;
+}
+
+/* The disclosure indicator follows the native FAQ open state. */
+.gs-faq details summary {display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none;cursor:pointer}
+.gs-faq summary::-webkit-details-marker {display:none}
+.gs-faq summary::after {content:"";flex:none;width:9px;height:9px;margin-right:6px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.gs-faq details[open] summary::after {transform:rotate(225deg)}
+.gs-faq summary:focus-visible {outline:2px solid #47415e;outline-offset:3px}
+@media(prefers-reduced-motion:no-preference){
+  .gs-faq summary::after {transition:transform .2s ease}
+  .gs-faq details[open] p {animation:faq-answer-in .24s ease-out}
+  @keyframes faq-answer-in {from{opacity:.65;transform:translateY(-4px)}to{opacity:1;transform:none}}
+}
+
+#final-demo {background:#302c48;color:#f5f3fa;padding-block:clamp(40px,6vw,82px);scroll-margin-top:90px}
+#final-demo .gs-title {max-width:24ch;margin:0 auto;color:inherit;font-size:clamp(34px,4.5vw,62px);line-height:1.08}
+#final-demo .gs-lead {max-width:58ch;margin:18px auto 26px;color:#f5f3fa;font-size:18px;line-height:1.55}
+#final-demo .gs-actions {justify-content:center;margin:0}
+#final-demo .gs-button {background:#f5f3fa;border-color:#f5f3fa;color:#302c48}
+#final-demo .gs-button:hover {background:#e6e2fa}
+#final-demo .gs-button:focus-visible {outline:3px solid #c5bfdc;outline-offset:4px}
+@media(max-width:360px){
+  #final-demo {padding-block:24px}
+  #final-demo .gs-title {font-size:30px;letter-spacing:-.03em}
+  #final-demo .gs-lead {font-size:17px;margin:14px auto 18px}
+}
+
+.reading-section {padding-block:clamp(40px,5vw,72px);background:#e6e2fa;color:#302c48;scroll-margin-top:95px}
+.reading-section h2 {margin:0 0 28px;font:normal clamp(32px,4vw,54px)/1.08 Georgia,serif}
+.reading-grid {display:grid;grid-template-columns:1.15fr 1fr;gap:14px 32px}
+.reading-grid article {min-width:0;border-top:1px solid #9991b9}
+.reading-grid article:first-child {grid-row:span 2;border:0}
+.reading-grid a {display:flex;align-items:center;gap:18px;height:100%;padding:16px 0;color:inherit;text-decoration:none}
+.reading-grid article:first-child a {display:block;padding:0}
+.reading-grid img {width:96px;height:80px;object-fit:cover;border-radius:6px}
+.reading-grid article:first-child img {width:100%;height:auto;display:block;margin-bottom:14px}
+.reading-grid a span {font:650 12px/1.4 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.09em;color:#47415e}
+.reading-grid h3 {margin:6px 0 0;font:normal clamp(21px,2vw,29px)/1.2 Georgia,serif}
+.reading-grid a:is(:hover,:focus-visible) h3 {text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.reading-all {display:inline-block;margin-top:24px;padding:8px 0;color:#302c48;font-weight:650;text-underline-offset:4px}
+.reading-section a:focus-visible {outline:3px solid #47415e;outline-offset:3px}
+@media(max-width:760px){.reading-grid{grid-template-columns:1fr}.reading-grid article:first-child{grid-row:auto}.reading-grid img{width:76px;height:68px}}
+
+.atelier-footer {padding:44px 0 24px;background:#f5f3fa;color:#302c48;border-top:1px solid #c5bfdc}
+.footer-mast,.footer-base,.footer-essentials,.footer-apps>div,.footer-base nav {display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.footer-mast,.footer-base {justify-content:space-between}
+.footer-mast>div:first-child img {width:160px;height:auto}
+.atelier-footer address {font-style:normal;line-height:1.65}
+.atelier-footer a {color:#47415e;text-underline-offset:3px}
+.footer-apps {padding:18px 24px;background:#e6e2fa;border-radius:12px}
+.footer-apps h2 {margin:0 0 8px;font:normal 24px Georgia,serif}
+.footer-apps>div {gap:6px}
+.footer-apps img {display:block;width:auto;height:40px}
+.footer-apps a:last-child img {height:60px}
+.footer-essentials {margin:26px 0;padding-block:13px;border-block:1px solid #c5bfdc;gap:24px;font-weight:650}
+.footer-groups {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.footer-groups summary {font:600 18px/1.4 system-ui,sans-serif;cursor:pointer}
+.footer-groups ul {list-style:none;padding:0;margin:10px 0}
+.footer-groups li {margin:6px 0}
+.footer-groups a {display:inline-block;padding:3px 0;text-decoration:none}
+.footer-groups a:hover {text-decoration:underline}
+.footer-base {margin-top:20px;padding-top:20px;border-top:1px solid #c5bfdc}
+.atelier-footer :focus-visible {outline:3px solid #47415e;outline-offset:3px}
+@media(max-width:720px){.footer-groups{grid-template-columns:1fr;gap:0}.footer-groups details{border-bottom:1px solid #c5bfdc}.footer-groups summary{padding:13px 0}.footer-apps{padding:14px}.footer-mast{align-items:flex-start}}
+
+/* Align identity, contact details and downloads along one masthead. */
+.footer-mast {display:grid;grid-template-columns:1fr 1.2fr 1fr;align-items:start;gap:clamp(20px,3vw,50px);padding-bottom:28px}
+.footer-mast>div:first-child p {max-width:28ch;margin:8px 0;color:#47415e;line-height:1.5}
+.footer-mast h2 {font:600 17px/1.4 system-ui,sans-serif;margin:0 0 10px}
+.footer-contact address {font-size:15px}
+.footer-contact a[href^="tel"] {display:inline-block;margin-right:10px}
+.footer-apps {background:none;padding:0;border-radius:0}
+.footer-apps>div {gap:0}
+.footer-groups {grid-template-columns:2fr repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,32px);border-top:1px solid #c5bfdc;padding-top:24px}
+.footer-groups summary {font:600 17px/1.4 system-ui,sans-serif;color:#302c48}
+.footer-groups li {margin:0;break-inside:avoid}
+.footer-groups a {font-size:15px;line-height:1.4;padding:5px 0}
+.footer-base {display:flex;align-items:center;gap:16px;padding-top:16px}
+.footer-base .footer-essentials {margin:0;padding:0;border:0;gap:16px}
+.footer-base nav[aria-label="Social profiles"] {gap:2px}
+.footer-base nav[aria-label="Social profiles"] a {width:40px;height:40px;display:grid;place-items:center;border-radius:50%}
+.footer-base nav[aria-label="Social profiles"] a:is(:hover,:focus-visible) {background:#e6e2fa}
+.footer-base svg {width:19px;height:19px;fill:currentColor}
+@media(min-width:1001px){.footer-groups details:first-child ul {columns:2;column-gap:20px}}
+@media(min-width:721px) and (max-width:1000px){.footer-mast,.footer-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+  .footer-mast,.footer-groups {grid-template-columns:1fr}
+  .footer-mast {gap:20px}
+  .footer-groups {padding-top:0;gap:0}
+  .footer-base {align-items:flex-start;flex-direction:column}
+  .footer-base .footer-essentials {order:-1}
+}
+.footer-mast>div:first-child p {max-width:36ch}
+.footer-contact .contact-line,.footer-contact .contact-region {display:flex;gap:9px;align-items:baseline;margin-top:8px}
+.footer-contact svg {width:19px;height:15px;align-self:flex-start;margin-top:5px;flex:none}
+.footer-contact .contact-region strong {min-width:36px;font-size:14px}
+.footer-contact .contact-region {margin-top:4px}
+
+
+/* Operations: decorative icon feedback. */
+@media (prefers-reduced-motion:no-preference) and (hover:hover){
+ .tour-operations .tour-cards article:hover>svg,
+ .tour-distribution .tour-cards article:hover>svg,
+ .tour-guest-journey .tour-cards article:hover>svg{animation:operations-icon-bounce .65s ease-in-out}
+}
+@keyframes operations-icon-bounce{
+ 0%,100%{transform:translateY(0) rotate(0)}
+ 30%{transform:translateY(-5px) rotate(-8deg)}
+ 60%{transform:translateY(-2px) rotate(7deg)}
+ 80%{transform:translateY(-1px) rotate(-3deg)}
+}
+
+.tour-operations .tour-head>.tour-link{display:inline-block;margin-top:12px}
+
+
+/* Operations walkthrough: slim navigation and framed product stage. */
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget{grid-template-columns:155px minmax(0,1fr);gap:20px;padding:24px;border:1px solid #4f4690;background:radial-gradient(ellipse at top right,#47415e 0,transparent 65%),#302c48;box-shadow:0 18px 40px #302c4815}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls h3{font-size:26px;margin:4px 0 24px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button{position:relative;display:flex;align-items:center;gap:8px;padding:15px 9px;margin:4px 0;border:0;border-radius:7px;background:transparent;overflow:hidden;font-size:13px;min-height:52px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button[aria-selected="true"]{background:#e6e2fa;color:#302c48}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button:hover{background:#ffffff14}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button[aria-selected="true"]:hover{background:#e6e2fa}
+.walkthrough-number{font-size:10px;letter-spacing:.06em;opacity:.8;font-variant-numeric:tabular-nums}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button svg{width:17px;height:17px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.walkthrough-label{line-height:1.4}
+.walkthrough-progress{position:absolute;bottom:0;left:0;width:100%;height:3px;background:#4f4690;transform:scaleX(var(--tour-progress,0));transform-origin:left}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels{align-self:start;border-radius:12px;box-shadow:0 14px 30px #211f3240;overflow:hidden}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels figure{border-radius:0 0 10px 10px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels::before{content:"●  ●  ●";display:block;padding:8px 14px;font:12px/1.2 system-ui;color:#686080;background:#e6e2fa;border-bottom:1px solid #c5bfdc;letter-spacing:3px}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels img{aspect-ratio:16/9;object-fit:contain;background:#f5f3fa}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels figcaption{padding:18px 20px;min-height:112px;font:14px/1.55 system-ui,sans-serif;background:#fffdf8}
+.walkthrough-benefit{display:block;font:400 23px/1.2 Georgia,serif;margin-bottom:8px;color:#302c48}
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget[data-ready] [data-tour-panel]:not([hidden]){animation:none}
+@media(max-width:1000px){
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget{grid-template-columns:1fr;padding:18px}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls h3{margin-bottom:14px}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls [role="tablist"]{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:4px 4px 8px;scrollbar-width:thin;scrollbar-color:#9991b9 transparent}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls button{width:auto;flex:0 0 auto;white-space:nowrap;margin:0;padding:12px;min-height:48px}
+ :is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-panels figcaption{min-height:132px;padding:16px}
+}
+@media(prefers-reduced-motion:reduce){.walkthrough-progress{display:none}}
+
+:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-controls{min-width:0}
+@media(max-width:1000px){:is(.tour-operations,.tour-distribution,.tour-guest-journey) .tour-widget{grid-template-columns:minmax(0,1fr)}}
+
+.tour-guest-journey .tour-widget{color:#fffdf8}
+
+/* Atelier front desk footer */
+.atelier-footer {background:#302c48;color:#f5f3fa;padding:0 0 20px}
+.atelier-footer a,.footer-groups summary {color:inherit}
+.atelier-footer :focus-visible {outline-color:#c5bfdc}
+.desk-strip {background:#f5f3fa;color:#302c48;border-bottom:2px solid #686080}
+.desk-strip :focus-visible {outline-color:#47415e}
+.desk-bar,.desk-bar nav,.desk-utility,.desk-utility nav,.desk-utility .footer-apps {display:flex;align-items:center;flex-wrap:wrap}
+.desk-bar,.desk-utility {justify-content:space-between;gap:14px;padding-block:15px}
+.desk-bar img {display:block;width:150px;height:auto}
+.desk-bar nav {gap:8px 18px}
+.desk-bar nav a {display:inline-flex;align-items:center;min-height:44px;font-weight:650;text-decoration:none}
+.desk-bar nav a:last-child {padding:0 18px;background:#47415e;color:white;border-radius:7px}
+.desk-bar nav a:hover {text-decoration:underline}
+.desk-directory {display:grid;grid-template-columns:minmax(195px,1.1fr) minmax(0,4fr);gap:32px;padding-block:32px}
+.desk-directory h2,.desk-directory summary,.desk-utility h2 {margin:0;color:#f5f3fa;font:650 16px/1.4 system-ui,sans-serif}
+.desk-directory address {margin-top:12px;max-width:26ch}
+.desk-directory .footer-groups {border:0;padding:0}
+.desk-directory .footer-groups ul {margin:8px 0 0}
+.desk-directory a:hover,.desk-utility a:hover {color:white;text-decoration:underline}
+.desk-utility,.atelier-footer .footer-base {border-top:1px solid #4f4690}
+.desk-utility .footer-apps {gap:12px;padding:0}
+.desk-utility .footer-apps img {height:36px}
+.desk-utility .footer-apps a:last-child img {height:54px}
+.desk-utility nav a {display:grid;place-items:center;width:40px;height:40px}
+.desk-utility nav svg {width:19px;height:19px;fill:currentColor}
+.atelier-footer .footer-base {margin:0;font-size:14px}
+@media(max-width:1100px) and (min-width:721px) {
+  .desk-directory {grid-template-columns:minmax(190px,1fr) 3fr}
+  .desk-directory .footer-groups {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .desk-directory .footer-groups details:first-child ul {columns:1}
+}
+@media(max-width:720px) {
+  .desk-directory {grid-template-columns:1fr;gap:20px;padding-block:22px}
+  .desk-directory summary {padding:14px 0}
+  .desk-directory .footer-groups details {border-color:#4f4690}
+  .desk-bar nav {gap:4px 12px;font-size:14px}
+  .desk-utility .footer-apps {align-items:flex-start;flex-direction:column;gap:4px}
+}
+
+}
+
+@scope (.import-four) {
+
+.outcome-section>.gs-container{display:block}.outcome-section header{max-width:850px}.outcome-notice{font-size:13px;color:#4f4690;margin:24px 0}.outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:28px 0 32px}.outcome-card{padding:clamp(22px,3vw,38px);border:1px solid #c5bfdc;border-radius:8px;background:#fffdf8;box-shadow:0 12px 30px #302c4808}.outcome-card .outcome-number{font:600 clamp(52px,5.6vw,78px)/1.15 system-ui,sans-serif;letter-spacing:-3px;color:#4f4690;margin:0 0 6px;white-space:nowrap;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:8px}.outcome-number [data-outcome-value]{display:inline-block;letter-spacing:0}.outcome-number small{font-size:.46em;letter-spacing:-1px}.outcome-card .outcome-label{font-size:18px;color:#302c48;margin:0 0 30px}.outcome-card h3{font:400 25px/1.2 Georgia,serif;margin:0 0 14px;color:#302c48}.outcome-card p{color:#4f4690;line-height:1.6}.outcome-section .chapter-index ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.outcome-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}@media(max-width:760px){.outcome-grid,.outcome-section .chapter-index ol{grid-template-columns:1fr}.outcome-card .outcome-number{font-size:64px}}
+
+}
+
+@scope (.import-four) {
+@font-face {font-family:Sora;src:url("atelier4/Sora.ttf") format("truetype");font-weight:100 800;font-display:swap}
+@font-face {font-family:Manrope;src:url("atelier4/Manrope.ttf") format("truetype");font-weight:200 800;font-display:swap}
+.v4 {
+  --ink:#211f32; --blue:#4f4690; --teal:#47415e; --mist:#fffdf8;
+  --edge:#e6e2fa; --lift:0 20px 54px -32px #47415e80;
+  --display:Sora,system-ui,sans-serif; --body:Manrope,system-ui,sans-serif;
+  font-family:var(--body);color:var(--ink);background:white;
+}
+.v4 main :is(h1,h2,h3,.gs-title,.chapter-subtitle,.outcome-number),.v4 .footer-contact h2 {font-family:var(--display);text-wrap:balance;letter-spacing:-.045em}
+.v4 main :is(p:not(.outcome-number),button,a,summary,figcaption,blockquote),.v4 header nav,.v4 footer {font-family:var(--body)}
+.v4 .gs-header {background:#fffffff5;border-bottom:1px solid var(--edge);transition:box-shadow .25s}
+.v4.scrolled .gs-header {box-shadow:0 5px 26px #302c4816}
+.v4 .atelier-product-panel {background:white;border-color:var(--edge);border-radius:16px;box-shadow:var(--lift)}
+.v4 .gs-content-refresh .gs-hero {
+  isolation:isolate;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 90% 4%,#e6e2fa,transparent 55%),linear-gradient(115deg,#fffdf8 3%,#fffdf8 52%,#e6e2fa);color:var(--ink);
+}
+.v4 .gs-hero:after {content:"";position:absolute;pointer-events:none;z-index:-1;inset:12% -15% -45% 52%;border:1px solid #9991b966;border-radius:50%;box-shadow:0 0 0 50px #ffffff36,0 0 0 100px #ffffff29}
+.v4 .gs-hero-layout {padding-block:clamp(46px,6.8vw,104px)}
+.v4 .gs-content-refresh .gs-hero h1 {font:620 clamp(40px,4.8vw,80px)/1.04 var(--display);letter-spacing:-.065em;max-width:17ch;color:var(--ink)}
+.v4 .gs-content-refresh .gs-hero h1 em {font:inherit;letter-spacing:inherit;color:var(--blue)}
+.v4 .gs-hero .gs-lead {font-size:clamp(16px,1.25vw,20px);line-height:1.6;max-width:53ch;color:#47415e}
+.v4 .gs-kicker,.v4 .chapter-number {color:var(--teal);font:700 12px/1.5 var(--body);letter-spacing:.1em}
+.v4 .gs-content-refresh .gs-hero .gs-product-art {min-height:0;border-radius:26px;padding:clamp(16px,2.7vw,44px);background:linear-gradient(135deg,#47415e,#47415e 70%,#c5bfdc);box-shadow:0 28px 65px -30px #47415e99}
+.v4 .gs-content-refresh .gs-product-art figure {margin:0;transform:none;background:white;border-radius:12px;overflow:hidden;box-shadow:0 8px 28px #302c4845}
+.v4 .gs-content-refresh .gs-product-art figcaption {margin:0;padding:10px 14px;text-align:left;color:#4f4690;font-size:12px}
+.v4 .gs-content-refresh .gs-product-art img {border-radius:0}
+.v4 :is(.gs-button,.atelier-demo) {border-radius:999px}
+.v4 :is(.gs-button--primary,.atelier-navigation .atelier-demo,.desk-bar nav a:last-child) {color:white;background:linear-gradient(110deg,#4f4690,#47415e);border-color:transparent;box-shadow:0 7px 18px -8px #4f4690}
+.v4 .gs-hero .gs-button--secondary {color:var(--ink);background:white;border:1px solid #c5bfdc}
+.v4 .outcome-section {background:white}
+.v4 .outcome-card {border:0;border-top:3px solid #686080;background:linear-gradient(155deg,#f5f3fa,#fffdf8);border-radius:4px 4px 18px 18px;box-shadow:var(--lift)}
+.v4 .outcome-card:nth-child(2) {background:linear-gradient(155deg,#f5f3fa,#fffdf8);border-color:#4f4690}
+.v4 .outcome-card:nth-child(3) {background:linear-gradient(155deg,#f5f3fa,#fffdf8);border-color:#9991b9}
+.v4 .outcome-card .outcome-number {color:#47415e}
+.v4 .tour-operations {background:#f5f3fa}
+.v4 .tour-distribution {background:#fffdf8}
+.v4 .tour-guest-journey {background:#f5f3fa}
+.v4 .gs-tour .tour-widget {background:radial-gradient(ellipse at top right,#47415e,transparent 65%),#302c48;border:1px solid #4f4690;border-radius:22px;box-shadow:var(--lift)}
+.v4 .tour-head h2,.v4 .gs-title {font-weight:580}
+.v4 .property-directory {background:white}
+.v4 .property-arches .property-arch {border-radius:20px;background:#f5f3fa;color:var(--ink)}
+.v4 .property-arches li:nth-child(even) .property-arch {background:#f5f3fa}
+.v4 .property-arch svg {stroke:var(--teal)}
+.v4 .customer-voices {background:radial-gradient(ellipse at top right,#47415e,transparent 70%),var(--ink);color:white}
+.v4 .customer-voices .voice-card {border-radius:16px;background:#fffdf8;color:var(--ink)}
+.v4 .voice-card blockquote {font-weight:500;letter-spacing:-.025em}
+.v4 .gs-awards,.v4 #faq {background:#fffdf8}
+.v4 .gs-faq details {background:white;border:1px solid var(--edge);border-radius:14px;margin:10px 0;padding-inline:20px}
+.v4 .reading-section {background:white}
+.v4 .reading-grid img {border-radius:14px}
+.v4 .gs-cta {background:linear-gradient(115deg,#302c48,#47415e 60%,#47415e);color:white}
+.v4 .gs-cta :is(.gs-title,.gs-lead,p) {color:white}
+.v4 .atelier-footer {background:#302c48}
+.v4 .desk-strip {background:#fffdf8;border-color:#9991b9}
+.v4 :focus-visible {outline:3px solid #4f4690;outline-offset:3px}
+@media(min-width:1000px){.v4 .outcome-section header {max-width:76ch}.v4 .voice-grid {gap:24px}}
+@media(max-width:700px){.v4 .gs-hero-layout {padding-block:32px}.v4 .gs-content-refresh .gs-hero h1 {font-size:clamp(38px,8.8vw,56px)}}
+@media(prefers-reduced-motion:no-preference){
+  .v4 .gs-product-art {animation:screen-lift 1s cubic-bezier(.16,.78,.25,1) both}
+  .v4 .gs-hero:after {animation:light-drift 4s ease-out both}
+  .v4 .in-frame {animation:section-lift .75s cubic-bezier(.16,.76,.2,1) backwards;animation-delay:var(--delay,0ms)}
+  .v4 .in-frame:focus-within {animation:none}
+  .v4 :is(.gs-button,.property-arch,.arch-arrow,.reading-grid img) {transition:translate .22s,scale .3s,box-shadow .22s}
+  .v4 :is(.gs-button,.property-arch):hover {translate:0 -3px;box-shadow:var(--lift)}
+  .v4 .gs-button:active {translate:0 1px}
+  .v4 .property-arch:hover .arch-arrow {translate:3px 0}
+  .v4 .reading-grid a:hover img {scale:1.02}
+  @keyframes section-lift {from{opacity:.12;translate:0 25px}to{opacity:1;translate:0 0}}
+  @keyframes screen-lift {from{opacity:.4;transform:perspective(1100px) rotateY(-7deg) translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes light-drift {from{translate:4% 8%}to{translate:0 0}}
+}
+
+}
+
+body.horizon{--ink:#211f32;--paper:#fffdf8;--muted:#565469;--violet:#4f4690;--rule:#d9d6df;font-family:Manrope,system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+.horizon .opening{background:radial-gradient(ellipse at 78% 60%,#e4def1,transparent 60%),linear-gradient(110deg,#fffdf8,#f4f1fa)}
+.horizon .opening::before{opacity:.18}.horizon .opening h1 em{background:none;color:var(--violet);-webkit-text-fill-color:currentColor}
+.horizon .opening .gs-button--primary,.horizon .atelier-demo,.horizon .view-buttons button[aria-pressed=true]{background:var(--ink);color:white}
+.horizon .brandline,.horizon .exhibit-label,.horizon .opening .gs-button--secondary{color:var(--violet)}
+.horizon .brandline i{background:var(--violet);box-shadow:0 0 0 4px #e6e2f0}
+.horizon .import-four{--ink:#211f32;--blue:#4f4690;--teal:#574e78;--mist:#f4f1f8;--edge:#d9d6df;font-family:Manrope,system-ui,sans-serif}
+.horizon .import-four .gs-tour,.horizon .import-four .gs-awards{background:#fffdf8}
+.horizon .import-four .tour-distribution{background:#f4f1f8}
+.horizon .import-four .tour-widget,.horizon .import-four .customer-voices{background:#29253e}
+.horizon .import-four .chapter-body .tour-cards article{background:#fffdf8;border-color:#d9d6df}
+.horizon .import-four :is(h2,h3,.chapter-subtitle,blockquote),.horizon .opening h1{font-family:Sora,system-ui,sans-serif}
+.horizon .import-four :is(p,a,button,figcaption){font-family:Manrope,system-ui,sans-serif}
+.horizon .routebar{background:#e6e2fa;color:var(--ink)}
+.horizon .routebar a{border-color:#c7c1dd}
+.horizon .routebar small{color:var(--violet)}
+.horizon .routebar a:is(:hover,[aria-current]){background:#d9d3f4;box-shadow:inset 0 -3px var(--violet)}
+html{scroll-padding-top:145px}
+@media(max-width:780px){html{scroll-padding-top:83px}}
+</style></head>
+<body class="horizon">
+  
+  <a class="gs-skip" href="#main-content">Skip to main content</a>
+  <header class="gs-header">
+    <div class="gs-container gs-nav">
+      <a class="gs-brand" href="https://www.gracesoft.com/" aria-label="GraceSoft Easy InnKeeping home"><img src="../theme/Atelier%20Theme/assets/gracesoft-logo-approved.png" alt="GraceSoft" width="500" height="180"></a>
+      <button class="gs-menu-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="atelier-navigation">Menu</button>
+      <nav class="atelier-navigation" id="atelier-navigation" data-mobile-menu data-open="false" aria-label="Main navigation">
+        <details class="atelier-products">
+          <summary>Product</summary>
+          <div class="atelier-product-panel">
+            <div><strong>Manage operations</strong>
+              <a href="https://www.gracesoft.com/hotel-management-software"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M3 18h18M5 15a7 7 0 0 1 14 0ZM12 8V5m-2 0h4"/></svg><span>Property Management System</span></a>
+              <a href="https://www.gracesoft.com/payments"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6 15h4"/></svg><span>Payments and Billing</span></a>
+              <a href="https://www.gracesoft.com/point-of-sale-system"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M4 16h16l1 4H3zM8 16l1-5h6l2 5"/><rect x="6" y="3" width="12" height="8" rx="1"/></svg><span>Point of Sale</span></a>
+            </div>
+            <div><strong>Grow your bookings</strong>
+              <a href="https://www.gracesoft.com/online-booking-engine"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 5 3 3 5-5"/></svg><span>Booking Engine</span></a>
+              <a href="https://www.gracesoft.com/channel-manager"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M12 8v4M5 16v-4h14v4"/><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/></svg><span>Channel Manager</span></a>
+              <a href="https://www.gracesoft.com/websites"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h1m3 0h1M6 13h5m-5 3h10"/></svg><span>Website Builder</span></a>
+              <a href="https://www.gracesoft.com/feature-listing"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 12V9m3 3V7m3 5V8"/></svg><span>Google Hotel Ads</span></a>
+            </div>
+            <div><strong>Engage guests</strong>
+              <a href="https://www.gracesoft.com/unified-inbox"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M4 3h12a2 2 0 0 1 2 2v8H9l-5 4v-4H2V5a2 2 0 0 1 2-2ZM9 16v2h7l4 3v-3h2V9h-1"/></svg><span>Guest Communication</span></a>
+              <a href="https://www.gracesoft.com/crm-software"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M5 16a4 4 0 0 1 8 0m2-7h4m-4 4h3"/></svg><span>Hospitality CRM</span></a>
+              <a href="https://www.gracesoft.com/gracesoft-ai"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0m-7 7v4m-4 0h8"/></svg><span>AI Voice and Chat Assistant</span></a>
+            </div>
+          </div>
+        </details>
+        <a href="#property-types">Property Types</a>
+        <a href="https://www.gracesoft.com/pricing">Pricing</a>
+        <a href="https://www.gracesoft.com/testimonials-1">Reviews</a>
+        <a href="https://www.gracesoft.com/blog">Resources</a>
+        <a href="https://www.gracesoft.com/about">Company</a>
+        <a href="https://apps.gracesoft.com/pmsui/">Login</a>
+        <a class="atelier-demo" href="https://www.gracesoft.com/livedemo">Request a Demo</a>
+      </nav>
+    </div>  </header>
+
+  <main id="main-content" class="gs-home-v2 gs-content-refresh"><section class="opening" aria-labelledby="opening-title">
+<div class="opening-inner wrap">
+<div class="opening-copy">
+<p class="brandline"><i aria-hidden="true"></i> GraceSoft Easy InnKeeping</p>
+<h1 id="opening-title">One front desk.<br><em>The whole property.</em></h1>
+<p class="opening-lead">Hospitality property management software for the people behind every stay. Bring reservations, direct bookings, payments and guest conversations into one workspace.</p>
+<div class="gs-actions"><a class="gs-button gs-button--primary" href="https://www.gracesoft.com/livedemo">Request a demo <span aria-hidden="true">↗</span></a><a class="gs-button gs-button--secondary" href="#platform">Tour the platform <span aria-hidden="true">↓</span></a></div>
+</div>
+<div class="exhibit">
+<div class="exhibit-label"><span>Inside Easy InnKeeping</span><span>Interactive preview</span></div>
+<div class="scene">
+<figure id="view-property"><div class="terrain" aria-hidden="true"></div><img src="html6/property.svg" alt="Illustrated boutique hotel with illuminated guest rooms, a reception canopy and a tree-lined courtyard." width="622" height="421" fetchpriority="high">
+<button class="preview-chip" type="button" aria-label="View the actual reservation calendar"><img src="../theme/Atelier%20Theme/assets/calendar.png" width="1200" height="675" alt=""><span><small>Inside the software</small>Reservation calendar ↗</span></button></figure>
+<figure id="view-calendar" hidden><img src="../theme/Atelier%20Theme/assets/calendar.png" width="1200" height="675" alt="GraceSoft Easy InnKeeping reservation calendar with rooms and scheduled stays"><figcaption class="sr-only">Easy InnKeeping · Reservation calendar</figcaption></figure>
+<figure id="view-dashboard" hidden><img loading="lazy" src="../theme/Atelier%20Theme/assets/dashboard.png" width="1200" height="675" alt="Easy InnKeeping dashboard showing property operations and performance information"></figure>
+</div>
+<div class="exhibit-foot"><p aria-live="polite" id="plate">01 / 03 <b>The property</b></p><div class="view-buttons" aria-label="Explore product views" role="group" hidden>
+<button type="button" data-view="property" aria-pressed="true">Property</button><button type="button" data-view="calendar" aria-pressed="false">Calendar</button><button type="button" data-view="dashboard" aria-pressed="false">Dashboard</button></div></div>
+<a class="inspect-screen" href="../theme/Atelier%20Theme/assets/calendar.png" hidden>Open full-size screen <span aria-hidden="true">↗</span></a>
+<noscript><p>Easy InnKeeping · Reservation calendar</p><img src="../theme/Atelier%20Theme/assets/calendar.png" width="1200" height="675" alt="Reservation calendar"></noscript>
+</div>
+</div></section>
+<section class="gs-section tour-overview outcome-section" id="platform"><div class="gs-container"><header><h2 class="gs-title">More time for guests. More value from every day.</h2><p class="gs-lead">Explore the difference in daily admin, software costs and guest communication.</p></header><div class="outcome-grid"><article class="outcome-card"><p class="outcome-number"><span data-outcome-value aria-hidden="true">8</span><span class="outcome-sr">8</span> <small>hrs</small></p><p class="outcome-label">Saved weekly</p><h3>Less routine admin</h3><p>Time saved on reservations, reports and front-desk tasks.</p></article><article class="outcome-card"><p class="outcome-number"><span data-outcome-value aria-hidden="true">20</span><span class="outcome-sr">20</span> <small>%</small></p><p class="outcome-label">Lower costs</p><h3>Reduce overlapping subscriptions</h3><p>Compare total software spending, including subscriptions and add-ons.</p></article><article class="outcome-card"><p class="outcome-number"><span data-outcome-value aria-hidden="true">60</span><span class="outcome-sr">60</span> <small>%</small></p><p class="outcome-label">AI resolution</p><h3>More room for personal service</h3><p>Routine guest questions resolved without staff intervention.</p></article></div></div></section>
+
+<section class="gs-tour tour-operations" id="manage-operations">
+<div class="gs-container">
+<header class="tour-head"><span class="chapter-number" aria-hidden="true">01 / 03</span><h2>Manage operations</h2><p class="chapter-subtitle">From the reservation calendar to the final bill</p><p>Start with today’s arrivals. See which rooms are ready, find the reservation you need and review charges before checkout.</p><a class="tour-link" href="https://www.gracesoft.com/hotel-management-software">Explore the Property Management System <span aria-hidden="true">&rarr;</span></a></header>
+<div class="chapter-body"><div class="tour-cards">
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 5 3 3 5-5"/></svg><h3>Reservations</h3><p>See bookings and room availability on the reservation calendar.</p><a class="tour-link" href="https://www.gracesoft.com/hotel-management-software">Explore reservations <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M3 18h18M5 15a7 7 0 0 1 14 0ZM12 8V5m-2 0h4"/></svg><h3>Front desk</h3><p>Review arrivals, assign rooms and manage departures.</p><a class="tour-link" href="https://www.gracesoft.com/hotel-management-software">Explore front desk tools <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 18V7m0 7h18v5m-18-3h18M6 10h4v4m2 0V9h6a3 3 0 0 1 3 3v2"/></svg><h3>Housekeeping</h3><p>Check room status as your team prepares for the next arrival.</p><a class="tour-link" href="https://www.gracesoft.com/feature-listing">Explore housekeeping <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M6 15h4"/></svg><h3>Billing and payments</h3><p>Review a guest’s folio and process payments through a supported provider.</p><a class="tour-link" href="https://www.gracesoft.com/payments">Explore payments <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M4 16h16l1 4H3zM8 16l1-5h6l2 5"/><rect x="6" y="3" width="12" height="8" rx="1"/></svg><h3>Point of sale</h3><p>Explore tools for purchases guests make during their stay.</p><a class="tour-link" href="https://www.gracesoft.com/point-of-sale-system">Explore point of sale <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 3v17h18M7 16v-4m5 4V8m5 8V5"/></svg><h3>Reporting</h3><p>Review occupancy and revenue reports for your property.</p><a class="tour-link" href="https://www.gracesoft.com/feature-listing">Explore reporting <span aria-hidden="true">&rarr;</span></a></article>
+</div>
+<div data-tour class="tour-widget"><div class="tour-controls"><h3>Follow a stay</h3><div data-tour-tabs hidden><button type="button">Reservations</button><button type="button">Front desk</button><button type="button">Housekeeping</button><button type="button">Billing and payments</button><button type="button">Point of sale</button><button type="button">Reporting</button></div></div><div class="tour-panels"><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/calendar.png" alt="Easy InnKeeping reservation calendar showing stays by room and date"><figcaption><strong class="walkthrough-benefit">See availability at a glance</strong><span>Check which rooms are available before assigning an arrival.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/dashboard.png" alt="Easy InnKeeping dashboard showing property operations and performance information"><figcaption><strong class="walkthrough-benefit">Keep the front desk informed</strong><span>Review the property dashboard for an overview of daily operations.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/operations-placeholder-3.svg" alt="Housekeeping screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Prepare for the next arrival</strong><span>Housekeeping preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/operations-placeholder-4.svg" alt="Billing and payments screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Review charges and payments</strong><span>Billing and payments preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/operations-placeholder-5.svg" alt="Point of sale screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Connect on-property purchases</strong><span>Point of sale preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/operations-placeholder-6.svg" alt="Reporting screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Review property performance</strong><span>Reporting preview — product screenshot coming soon.</span></figcaption></figure></div></div>
+</div>
+</div>
+</section>
+
+<section class="gs-tour tour-distribution" id="sell-direct">
+<div class="gs-container">
+<header class="tour-head"><span class="chapter-number" aria-hidden="true">02 / 03</span><h2>Grow your bookings</h2><p class="chapter-subtitle">Connect direct bookings and booking channels in one strategy.</p><p>Your website introduces the property. Your booking engine gives guests a way to reserve. Your channel manager helps the team maintain availability across supported booking channels.</p></header>
+<div class="chapter-body"><div class="tour-cards">
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h1m3 0h1M6 13h5m-5 3h10"/></svg><h3>Website Builder</h3><p>Introduce your rooms, amenities and policies, then guide guests toward booking.</p><a class="tour-link" href="https://www.gracesoft.com/websites">Explore Website Builder <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 5 3 3 5-5"/></svg><h3>Booking engine</h3><p>Let guests check availability and reserve through your website.</p><a class="tour-link" href="https://www.gracesoft.com/online-booking-engine">Explore the Booking Engine <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M12 8v4M5 16v-4h14v4"/><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/></svg><h3>Channel manager</h3><p>Manage rates and availability across supported booking channels.</p><a class="tour-link" href="https://www.gracesoft.com/channel-manager">Explore the Channel Manager <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 12V9m3 3V7m3 5V8"/></svg><h3>Google Hotel Ads</h3><p>Connect your property with Google Hotel Ads to support visibility and direct booking opportunities.</p><a class="tour-link" href="https://www.gracesoft.com/feature-listing">Explore Google Hotel Ads <span aria-hidden="true">&rarr;</span></a></article>
+</div>
+<div data-tour class="tour-widget"><div class="tour-controls"><h3>Explore booking tools</h3><div data-tour-tabs hidden><button type="button">Website Builder</button><button type="button">Booking engine</button><button type="button">Channel manager</button><button type="button">Google Hotel Ads</button></div></div><div class="tour-panels"><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/booking-placeholder-1.svg" alt="Website Builder screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Introduce your property</strong><span>Website Builder preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/booking-placeholder-2.svg" alt="Booking engine screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Give guests a direct booking path</strong><span>Booking engine preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/booking-placeholder-3.svg" alt="Channel manager screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Coordinate rates and availability</strong><span>Channel manager preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/booking-placeholder-4.svg" alt="Google Hotel Ads screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Support discovery on Google</strong><span>Google Hotel Ads preview — product screenshot coming soon.</span></figcaption></figure></div></div>
+</div>
+</div>
+</section>
+
+<section class="gs-tour tour-guest-journey" id="guest-assistant">
+<div class="gs-container">
+<header class="tour-head"><span class="chapter-number" aria-hidden="true">03 / 03</span><h2>Engage guests</h2><p class="chapter-subtitle">Keep track of the conversation before, during and after a stay</p><p>A guest may ask about a room before booking and contact the front desk again after arrival. Explore how guest messaging, profiles and follow-up tools fit those moments.</p></header>
+<div class="chapter-body"><div class="tour-cards">
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M4 3h12a2 2 0 0 1 2 2v8H9l-5 4v-4H2V5a2 2 0 0 1 2-2ZM9 16v2h7l4 3v-3h2V9h-1"/></svg><h3>Guest inbox</h3><p>Bring guest questions and replies into one workspace.</p><a class="tour-link" href="https://www.gracesoft.com/unified-inbox">Explore the Unified Inbox <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0m-7 7v4m-4 0h8"/></svg><h3>AI voice assistant</h3><p>Explore how voice assistants help handle guest enquiries by phone.</p><a class="tour-link" href="https://www.gracesoft.com/gracesoft-ai">Explore GraceSoft AI <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><path d="M4 3h16v13H9l-5 5V3Z"/><path d="M8 7h8M8 11h5"/></svg><h3>AI chat assistant</h3><p>Explore how chat assistants help answer guest questions through chat.</p><a class="tour-link" href="https://www.gracesoft.com/gracesoft-ai">Explore GraceSoft AI <span aria-hidden="true">&rarr;</span></a></article>
+<article><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M5 16a4 4 0 0 1 8 0m2-7h4m-4 4h3"/></svg><h3>Guest profiles and follow-up</h3><p>Explore guest profiles, campaigns and loyalty options for returning guests.</p><a class="tour-link" href="https://www.gracesoft.com/crm-software">Explore Hospitality CRM <span aria-hidden="true">&rarr;</span></a></article>
+</div>
+<div data-tour class="tour-widget"><div class="tour-controls"><h3>Explore guest engagement</h3><div data-tour-tabs hidden><button type="button">Guest inbox</button><button type="button">AI voice assistant</button><button type="button">AI chat assistant</button><button type="button">Guest profiles and follow-up</button></div></div><div class="tour-panels"><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/guest-placeholder-1.svg" alt="Guest inbox screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Keep conversations together</strong><span>Guest inbox preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/guest-placeholder-2.svg" alt="AI voice assistant screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Help answer guest calls</strong><span>AI voice assistant preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/guest-placeholder-3.svg" alt="AI chat assistant screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Support guest questions through chat</strong><span>AI chat assistant preview — product screenshot coming soon.</span></figcaption></figure><figure data-tour-panel><img loading="lazy" width="1200" height="675" src="../theme/Atelier%20Theme/assets/guest-placeholder-4.svg" alt="Guest profiles and follow-up screenshot placeholder; not a product screen"><figcaption><strong class="walkthrough-benefit">Keep guest details close</strong><span>Guest profiles and follow-up preview — product screenshot coming soon.</span></figcaption></figure></div></div>
+</div>
+</div>
+</section>
+
+<div class="import-four v4"><div class="gs-content-refresh"><section class="customer-voices" id="customer-stories"><div class="gs-container">
+<header><div class="voice-intro"><h2>Why properties choose GraceSoft Easy InnKeeping</h2><p>From front desk tasks to ranch activities, hear how properties use Easy InnKeeping.</p></div>
+<div class="voice-links">
+<a href="https://www.gracesoft.com/testimonials">Read Customer Testimonials <span aria-hidden="true">&rarr;</span></a>
+<a href="https://www.gracesoft.com/case-study">Explore Case Studies <span aria-hidden="true">&rarr;</span></a>
+</div>
+</header>
+<div class="voice-grid">
+<figure class="voice-card"><span class="voice-topic">Daily operations</span>
+<blockquote>After two years with GraceSoft, we&#39;ve seen a significant improvement in operational efficiency. The platform&#39;s intuitive design and comprehensive features, including integrated POS and channel management, streamline our daily tasks.</blockquote>
+<figcaption><strong>Aaron Tracey</strong><span>Dow Center Hotel, Rockwell Lodge &amp; Conference rooms</span></figcaption></figure>
+<figure class="voice-card"><span class="voice-topic">Activity reservations</span>
+<blockquote>For eight years, GraceSoft Easy Innkeeping has been the backbone of our complex reservation system. Its customizable booking engine seamlessly handles our diverse inventory – from equestrian activities to ATV rentals – ensuring efficient management and accurate guest forecasting.</blockquote>
+<figcaption><strong>JP McCormick</strong><span>Stagecoach Trails Guest Ranch</span></figcaption></figure>
+<figure class="voice-card"><span class="voice-topic">Multiple properties</span>
+<blockquote>Calling from a single, boutique resort to a multi-property operation presented significant logistical challenges. GraceSoft Easy Innkeeping provided the robust, yet intuitive, system we needed to streamline reservations across our hotels, suites, and campgrounds.</blockquote>
+<figcaption><strong>Matthew Nail</strong><span>Quail Creek Resort</span></figcaption></figure>
+</div></div></section></div></div>
+
+<div class="import-four v4"><div class="gs-content-refresh"><section class="gs-awards" id="awards"><div class="gs-container gs-awards-inner">
+  <div><h2>Awards and recognition</h2><p>SoftwareSuggest features GraceSoft Easy InnKeeping in its 2026 guide to hotel management apps.</p><a href="https://www.softwaresuggest.com/blog/best-hotel-management-apps/">Read the SoftwareSuggest guide <span aria-hidden="true">&rarr;</span></a></div>
+  <ul aria-label="Industry awards">
+    <li><img loading="lazy" src="../theme/Atelier%20Theme/assets/award-badge_1.png" alt="GraceSoft award badge 1" width="361" height="361"></li>
+    <li><img loading="lazy" src="../theme/Atelier%20Theme/assets/award-badge_2.png" alt="GraceSoft award badge 2" width="347" height="347"></li>
+    <li><img loading="lazy" src="../theme/Atelier%20Theme/assets/award-badge_3.png" alt="GraceSoft award badge 3" width="374" height="415"></li>
+    <li><img loading="lazy" src="../theme/Atelier%20Theme/assets/award-badge_4.png" alt="GraceSoft award badge 4" width="361" height="361"></li>
+    <li><img loading="lazy" src="../theme/Atelier%20Theme/assets/award-badge_5.png" alt="GraceSoft award badge 5" width="352" height="391"></li>
+    <li><img loading="lazy" src="../theme/Atelier%20Theme/assets/award-badge_6.png" alt="GraceSoft award badge 6" width="462" height="462"></li>
+  </ul>
+</div></section></div></div>
+
+<section class="gs-section" id="faq"><div class="gs-container">
+  <h2 class="gs-title">Frequently asked questions</h2>
+  <div class="gs-faq">
+    <details><summary>What is hospitality property management software?</summary><p>A hospitality property management system (PMS) helps lodging teams organize reservations, room availability, guest records, billing and daily operations.</p></details>
+    <details><summary>What is GraceSoft Easy InnKeeping?</summary><p>Easy InnKeeping is GraceSoft’s cloud-based hospitality PMS, with connected booking, distribution, guest engagement and operational tools.</p></details>
+    <details><summary>What types of properties does GraceSoft support?</summary><p>GraceSoft serves independent hotels, motels, bed and breakfasts, inns, resorts, vacation rentals, campgrounds, RV parks, dude ranches, condos and multi-property businesses.</p></details>
+    <details><summary>Can guests book directly through my website?</summary><p>Yes. The Easy InnKeeping booking engine lets guests check availability and reserve directly through your website.</p><p><a href="https://www.gracesoft.com/online-booking-engine">Explore the booking engine</a></p></details>
+    <details><summary>Will it work with my booking channels and payment provider?</summary><p>GraceSoft lists channels including Booking.com, Expedia, Airbnb and Vrbo, and payment providers including Stripe, Square, Authorize.Net and Shift4. Ask GraceSoft to confirm support for your channels and provider in your region and configuration.</p><p><a href="https://www.gracesoft.com/channel-manager">Review booking channels</a> &middot; <a href="https://www.gracesoft.com/payments">Check payment integrations</a></p></details>
+    <details><summary>Can GraceSoft manage multiple properties?</summary><p>Yes. GraceSoft offers multi-property management, including access to multiple properties through a unified login. Discuss portfolio requirements with the team.</p></details>
+    <details><summary>Does GraceSoft offer AI Voice and Chat Assistants?</summary><p>Yes. GraceSoft describes AI voice and chat options for property questions, availability, rates and booking inquiries, including outside normal desk hours.</p></details>
+    <details><summary>Does GraceSoft provide mobile access?</summary><p>Yes. GraceSoft describes cloud access from desktop, tablet and mobile, with apps for Android, iPhone and iPad. Confirm the workflows available on your device.</p></details>
+    <details><summary>How much does Easy InnKeeping cost?</summary><p>Visit the GraceSoft pricing page to compare options. If you also need Website Builder, ask which services and fees apply.</p><p><a href="https://www.gracesoft.com/pricing">View pricing</a></p></details>
+    <details><summary>Can I see the software before deciding?</summary><p>Yes. Request a demo and tell GraceSoft which workflows you want to see, such as arrivals, direct bookings or guest messaging.</p><p><a href="https://www.gracesoft.com/livedemo">Request a demo</a></p></details>
+    <details><summary>Can I bring over existing reservations and guest records?</summary><p>Tell GraceSoft which system you use and what records you need to move. Ask which imports are supported and who will handle each step before setting a switch date.</p></details>
+    <details><summary>What support is available?</summary><p>Ask GraceSoft which support channels, hours and onboarding assistance apply to your plan.</p></details>
+    <details><summary>Who can update my website?</summary><p>If you are considering a website package, confirm who can edit room descriptions, photos and policies, and how to request changes.</p><p><a href="https://www.gracesoft.com/websites">Explore Website Builder</a></p></details>
+  </div>
+</div></section>
+
+<section class="reading-section" id="operator-reading"><div class="gs-container">
+  <h2>Practical reading for property operators</h2>
+  <div class="reading-grid">
+    <article><a href="https://www.gracesoft.com/blog/5-mistakes-hoteliers-make-when-managing-reservations-and-how-to-avoid-them">
+      <img loading="lazy" width="960" height="480" src="../theme/Atelier%20Theme/assets/reading-reservations.jpg" alt="">
+      <div><span>Manage operations</span><h3>5 Mistakes Hoteliers Make When Managing Reservations (and How to Avoid Them)</h3></div>
+    </a></article>
+    <article><a href="https://www.gracesoft.com/blog/7-ways-to-increase-direct-bookings-with-an-integrated-online-booking-engine">
+      <img loading="lazy" width="320" height="213" src="../theme/Atelier%20Theme/assets/reading-direct-bookings.jpg" alt="">
+      <div><span>Sell direct</span><h3>7 Ways to Increase Direct Bookings with an Integrated Online Booking Engine</h3></div>
+    </a></article>
+    <article><a href="https://www.gracesoft.com/blog/from-check-in-to-check-out-how-automation-improves-guest-experience">
+      <img loading="lazy" width="320" height="240" src="../theme/Atelier%20Theme/assets/reading-guest-stay.jpg" alt="">
+      <div><span>Engage guests</span><h3>From Check-In to Check-Out: How Automation Improves the Guest Experience</h3></div>
+    </a></article>
+  </div>
+  <a class="reading-all" href="https://www.gracesoft.com/blog">View All Articles <span aria-hidden="true">&rarr;</span></a>
+</div></section>
+
+<section class="gs-section gs-cta" id="final-demo"><div class="gs-container"><h2 class="gs-title">See how Easy InnKeeping fits your front desk</h2><p class="gs-lead">What would you like to see first: assigning a room, taking a direct booking or following up with a guest? Bring that question to your demo.</p><div class="gs-actions"><a class="gs-button gs-button--primary" href="https://www.gracesoft.com/livedemo">Request a Demo</a></div></div></section>
+</main>
+  <footer id="site-footer" class="atelier-footer">
+<div class="desk-strip"><div class="gs-container desk-bar"><a href="https://www.gracesoft.com/"><img src="../theme/Atelier%20Theme/assets/gracesoft-logo-approved.png" alt="GraceSoft home"></a>
+<nav aria-label="Footer quick actions"><a href="https://apps.gracesoft.com/pmsui/">PMS Login</a> <a href="https://support.gracesoft.com/support/home">Support Center</a> <a href="https://www.gracesoft.com/livedemo">Request a Demo</a></nav></div></div>
+<div class="gs-container"><div class="desk-directory"><div class="footer-contact"><h2>Get in touch</h2><address>7310 Cortez Rd, Richmond, TX 77469, United States<div class="contact-line"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></g></svg><a href="mailto:sales@gracesoft.com">sales@gracesoft.com</a></div><div class="contact-region"><svg aria-hidden="true" focusable="false" viewBox="0 0 38 26"><rect width="38" height="26" fill="#fff"/><rect y="0" width="38" height="2" fill="#b22234"/><rect y="4" width="38" height="2" fill="#b22234"/><rect y="8" width="38" height="2" fill="#b22234"/><rect y="12" width="38" height="2" fill="#b22234"/><rect y="16" width="38" height="2" fill="#b22234"/><rect y="20" width="38" height="2" fill="#b22234"/><rect y="24" width="38" height="2" fill="#b22234"/><rect width="16" height="14" fill="#354878"/><circle cx="1.3" cy="1.0" r=".65" fill="white"/><circle cx="3.9000000000000004" cy="1.0" r=".65" fill="white"/><circle cx="6.5" cy="1.0" r=".65" fill="white"/><circle cx="9.100000000000001" cy="1.0" r=".65" fill="white"/><circle cx="11.700000000000001" cy="1.0" r=".65" fill="white"/><circle cx="14.3" cy="1.0" r=".65" fill="white"/><circle cx="2.6" cy="2.5" r=".65" fill="white"/><circle cx="5.2" cy="2.5" r=".65" fill="white"/><circle cx="7.8" cy="2.5" r=".65" fill="white"/><circle cx="10.400000000000002" cy="2.5" r=".65" fill="white"/><circle cx="13.000000000000002" cy="2.5" r=".65" fill="white"/><circle cx="1.3" cy="4.0" r=".65" fill="white"/><circle cx="3.9000000000000004" cy="4.0" r=".65" fill="white"/><circle cx="6.5" cy="4.0" r=".65" fill="white"/><circle cx="9.100000000000001" cy="4.0" r=".65" fill="white"/><circle cx="11.700000000000001" cy="4.0" r=".65" fill="white"/><circle cx="14.3" cy="4.0" r=".65" fill="white"/><circle cx="2.6" cy="5.5" r=".65" fill="white"/><circle cx="5.2" cy="5.5" r=".65" fill="white"/><circle cx="7.8" cy="5.5" r=".65" fill="white"/><circle cx="10.400000000000002" cy="5.5" r=".65" fill="white"/><circle cx="13.000000000000002" cy="5.5" r=".65" fill="white"/><circle cx="1.3" cy="7.0" r=".65" fill="white"/><circle cx="3.9000000000000004" cy="7.0" r=".65" fill="white"/><circle cx="6.5" cy="7.0" r=".65" fill="white"/><circle cx="9.100000000000001" cy="7.0" r=".65" fill="white"/><circle cx="11.700000000000001" cy="7.0" r=".65" fill="white"/><circle cx="14.3" cy="7.0" r=".65" fill="white"/><circle cx="2.6" cy="8.5" r=".65" fill="white"/><circle cx="5.2" cy="8.5" r=".65" fill="white"/><circle cx="7.8" cy="8.5" r=".65" fill="white"/><circle cx="10.400000000000002" cy="8.5" r=".65" fill="white"/><circle cx="13.000000000000002" cy="8.5" r=".65" fill="white"/><circle cx="1.3" cy="10.0" r=".65" fill="white"/><circle cx="3.9000000000000004" cy="10.0" r=".65" fill="white"/><circle cx="6.5" cy="10.0" r=".65" fill="white"/><circle cx="9.100000000000001" cy="10.0" r=".65" fill="white"/><circle cx="11.700000000000001" cy="10.0" r=".65" fill="white"/><circle cx="14.3" cy="10.0" r=".65" fill="white"/><circle cx="2.6" cy="11.5" r=".65" fill="white"/><circle cx="5.2" cy="11.5" r=".65" fill="white"/><circle cx="7.8" cy="11.5" r=".65" fill="white"/><circle cx="10.400000000000002" cy="11.5" r=".65" fill="white"/><circle cx="13.000000000000002" cy="11.5" r=".65" fill="white"/><circle cx="1.3" cy="13.0" r=".65" fill="white"/><circle cx="3.9000000000000004" cy="13.0" r=".65" fill="white"/><circle cx="6.5" cy="13.0" r=".65" fill="white"/><circle cx="9.100000000000001" cy="13.0" r=".65" fill="white"/><circle cx="11.700000000000001" cy="13.0" r=".65" fill="white"/><circle cx="14.3" cy="13.0" r=".65" fill="white"/></svg><strong>US</strong><div><a href="tel:+17139815300">+1-713-981-5300</a><br><a href="tel:+18329192384">+1-832-919-2384</a></div></div><div class="contact-region"><svg aria-hidden="true" focusable="false" viewBox="0 0 36 24"><path fill="#ff9933" d="M0 0h36v8H0z"/><path fill="white" d="M0 8h36v8H0z"/><path fill="#138808" d="M0 16h36v8H0z"/><circle cx="18" cy="12" r="3.5" fill="none" stroke="#183779"/><path d="M18 12v-3.4" transform="rotate(0 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(15 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(30 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(45 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(60 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(75 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(90 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(105 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(120 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(135 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(150 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(165 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(180 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(195 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(210 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(225 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(240 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(255 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(270 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(285 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(300 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(315 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(330 18 12)" stroke="#183779" stroke-width=".2"/><path d="M18 12v-3.4" transform="rotate(345 18 12)" stroke="#183779" stroke-width=".2"/></svg><strong>India</strong><a href="tel:+917200423323">+91-72004-23323</a></div></address></div>
+<nav class="footer-groups" aria-label="Footer directory">
+<details open><summary>Products</summary><ul>
+<li><a href="https://www.gracesoft.com/hotel-management-software">Hotel Management Software</a></li>
+<li><a href="https://www.gracesoft.com/hotel-reservation-software">Hotel Reservation Software</a></li>
+<li><a href="https://www.gracesoft.com/online-booking-engine">Website Booking Software</a></li>
+<li><a href="https://www.gracesoft.com/channel-manager">Channel Manager</a></li>
+<li><a href="https://www.gracesoft.com/payments">Payments</a></li>
+<li><a href="https://www.gracesoft.com/point-of-sale-system">Point of Sale</a></li>
+<li><a href="https://www.gracesoft.com/unified-inbox">Guest Communication</a></li>
+<li><a href="https://www.gracesoft.com/crm-software">Hospitality CRM</a></li>
+<li><a href="https://www.gracesoft.com/gracesoft-ai">AI Voice and Chat</a></li>
+<li><a href="https://www.gracesoft.com/websites">Website Builder</a></li>
+<li><a href="https://www.gracesoft.com/free-inns-bnb-software">Free Inn &amp; B&amp;B Software</a></li>
+<li><a href="https://www.gracesoft.com/free-hotel-software">Free Hotel Management Software</a></li>
+<li><a href="https://www.gracesoft.com/free-vacation-rental-software">Free Vacation Rental Software</a></li>
+</ul></details>
+<details open><summary>Property Types</summary><ul>
+<li><a href="https://www.gracesoft.com/hotel-management-software">Hotels and Motels</a></li>
+<li><a href="https://www.gracesoft.com/bed-breakfast-reservation-software">Bed &amp; Breakfasts</a></li>
+<li><a href="https://www.gracesoft.com/bed-breakfast-reservation-software">Resorts and Inns</a></li>
+<li><a href="https://www.gracesoft.com/vacation-rental-management-software">Vacation Rentals</a></li>
+<li><a href="https://www.gracesoft.com/campground-management-software">Campgrounds and RV Parks</a></li>
+<li><a href="https://www.gracesoft.com/dude-rancher-software">Dude Ranches</a></li>
+<li><a href="https://www.gracesoft.com/condo-management-software">Condos</a></li>
+<li><a href="https://www.gracesoft.com/multi-property">Multi-Property Groups</a></li>
+</ul></details>
+<details open><summary>Resources and Support</summary><ul>
+
+<li><a href="https://www.gracesoft.com/blog">Blog</a></li>
+<li><a href="https://www.gracesoft.com/testimonials">Customer Testimonials</a></li>
+<li><a href="https://www.gracesoft.com/case-study">Case Studies</a></li>
+<li><a href="https://www.gracesoft.com/pricing">Pricing</a></li>
+
+</ul></details>
+<details open><summary>Company</summary><ul>
+<li><a href="https://www.gracesoft.com/about">About GraceSoft</a></li>
+<li><a href="https://www.gracesoft.com/">GraceSoft USA</a></li>
+<li><a href="https://www.gracesoft.com/india">GraceSoft India</a></li>
+<li><a href="https://www.gracesoft.com/canada">GraceSoft Canada</a></li>
+<li><a href="https://www.gracesoft.com/nigeria">GraceSoft Nigeria</a></li>
+<li><a href="https://www.gracesoft.com/hotel-software-middle-east">GraceSoft Middle East</a></li>
+</ul></details>
+</nav></div>
+<div class="desk-utility"><div class="footer-apps"><h2>Easy InnKeeping on mobile</h2><div><a href="https://apps.apple.com/in/app/easy-innkeeping/id6738291188"><img src="../theme/Atelier%20Theme/assets/download-app-store.svg" alt="Download Easy InnKeeping on the App Store"></a><a href="https://play.google.com/store/apps/details?id=com.gracesoft.pms1"><img src="../theme/Atelier%20Theme/assets/download-google-play.png" alt="Get Easy InnKeeping on Google Play"></a></div></div><nav aria-label="Social profiles"><a href="https://www.linkedin.com/company/gracesoft/" aria-label="GraceSoft on LinkedIn" title="LinkedIn"><svg aria-hidden="true" focusable="false" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a> <a href="https://www.facebook.com/GraceSoft/" aria-label="GraceSoft on Facebook" title="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg></a> <a href="https://www.instagram.com/gracesoftinc/" aria-label="GraceSoft on Instagram" title="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a> <a href="https://www.youtube.com/@gracesoft1" aria-label="GraceSoft on YouTube" title="YouTube"><svg aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a> <a href="https://x.com/gracesoftinc" aria-label="GraceSoft on X" title="X"><svg aria-hidden="true" focusable="false" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg></a></nav></div>
+<div class="footer-base"><span>&copy; 2026 GraceSoft, Inc.</span><nav class="footer-essentials" aria-label="Account, contact and legal"><a href="https://www.gracesoft.com/corporate-contact">Contact</a>  <a href="https://www.gracesoft.com/privacy-statement">Privacy</a> <a href="https://www.gracesoft.com/terms">Terms</a></nav></div></div></footer>
+  
+
+  
+
+<script>'use strict';
+const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+const menu = document.querySelector('[data-mobile-menu]');
+const menuButton = document.querySelector('[data-menu-button]');
+const products = menu.querySelector('details');
+function closeMenu() {
+  products.open = false;
+  menu.dataset.open = 'false';
+  menuButton.setAttribute('aria-expanded', 'false');
+}
+menuButton.addEventListener('click', () => {
+  const open = menu.dataset.open !== 'true';
+  menu.dataset.open = String(open);
+  menuButton.setAttribute('aria-expanded', String(open));
+});
+document.addEventListener('click', event => {
+  if (event.target.closest('.atelier-navigation a') || !event.target.closest('.gs-header')) closeMenu();
+});
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return;
+  if (products.open) {
+    products.open = false;
+    products.querySelector('summary').focus();
+  } else if (menu.dataset.open === 'true') {
+    closeMenu();
+    menuButton.focus();
+  }
+});
+const desktop = matchMedia('(min-width:1091px) and (hover:hover)');
+products.addEventListener('pointerenter', event => {
+  if (desktop.matches && event.pointerType === 'mouse') products.open = true;
+});
+products.addEventListener('pointerleave', () => {
+  if (desktop.matches && !products.contains(document.activeElement)) products.open = false;
+});
+menu.addEventListener('focusout', event => {
+  if (!products.contains(event.relatedTarget)) products.open = false;
+});
+desktop.addEventListener('change',closeMenu);
+
+const viewButtons = document.querySelector('.view-buttons');
+const plate = document.querySelector('#plate');
+const inspectScreen = document.querySelector('.inspect-screen');
+const views = ['The property', 'Easy InnKeeping · Reservation calendar', 'Property dashboard'];
+viewButtons.querySelectorAll('button').forEach((button,index) => {
+  const figure = document.getElementById('view-' + button.dataset.view);
+  button.setAttribute('aria-controls', figure.id);
+  button.addEventListener('click', () => {
+    viewButtons.querySelectorAll('button').forEach(other => {
+      const selected = button === other;
+      other.setAttribute('aria-pressed', String(selected));
+      document.getElementById(other.getAttribute('aria-controls')).hidden = !selected;
+    });
+    const name = document.createElement('b');
+    name.textContent = views[index];
+    plate.replaceChildren('0' + (index + 1) + ' / 03 ', name);
+    inspectScreen.hidden = index === 0;
+    if (index > 0) inspectScreen.href = figure.querySelector('img').src;
+    figure.classList.add('changed');
+  });
+});
+viewButtons.hidden = false;
+
+const compact = matchMedia('(max-width:780px)');
+function syncDirectory() {
+  document.querySelectorAll('.footer-groups details').forEach(group => { group.open = !compact.matches; });
+}
+compact.addEventListener('change',syncDirectory);
+syncDirectory();
+if ('IntersectionObserver' in window && !motionPreference.matches) {
+  const reveal = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('arrives');
+      reveal.unobserve(entry.target);
+    }
+  },{rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('.tour-head,.voice-card,.property-arches li,.reading-grid article,.gs-awards-inner').forEach(element => reveal.observe(element));
+}
+
+// Atelier outcome counters: scramble briefly, then settle on the visible source value.
+// The static value remains intact when motion is reduced or IntersectionObserver is unavailable.
+if ('IntersectionObserver' in window && !motionPreference.matches) {
+  const outcomeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      outcomeObserver.unobserve(entry.target);
+      const value = entry.target.querySelector('[data-outcome-value]');
+      if (!value || value.dataset.animated === 'true') return;
+      value.dataset.animated = 'true';
+      const finalValue = value.textContent.trim();
+      let start = null, last = -120, frame;
+      const finish = () => { cancelAnimationFrame(frame); value.textContent = finalValue; };
+      const tick = now => {
+        start ??= now;
+        const elapsed = now - start;
+        if (elapsed >= 1050 || motionPreference.matches || document.hidden) return finish();
+        if (elapsed - last >= 105) {
+          value.textContent = finalValue.replace(/[0-9]/g, () => String(Math.floor(Math.random() * 10)));
+          last = elapsed;
+        }
+        frame = requestAnimationFrame(tick);
+      };
+      frame = requestAnimationFrame(tick);
+      motionPreference.addEventListener('change', () => { if (motionPreference.matches) finish(); }, { once: true });
+      document.addEventListener('visibilitychange', () => { if (document.hidden) finish(); }, { once: true });
+    });
+  }, { threshold: .25 });
+  document.querySelectorAll('.outcome-card').forEach(card => outcomeObserver.observe(card));
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('chapter-enter');
+      observer.unobserve(entry.target);
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.tour-head, .chapter-body .tour-cards article, .voice-card').forEach(function (element) {
+    observer.observe(element);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (!('IntersectionObserver' in window)) return;
+  document.querySelectorAll('.gs-awards').forEach(function (section) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    section.querySelectorAll('li').forEach(function (badge, index) {
+      badge.style.setProperty('--award-position', index);
+    });
+    function reveal() {
+      if (reducedMotion.matches) return;
+      section.classList.add('awards-revealing');
+    }
+    const observer = new IntersectionObserver(function (entries) {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      reveal();
+      observer.disconnect();
+    }, {threshold:0.2});
+    observer.observe(section);
+  });
+});
+
+</script>
+<script>
+const previewChip = document.querySelector('.preview-chip');
+previewChip.addEventListener('click', () => {
+  const control = document.querySelector('[data-view="calendar"]');
+  control.click();
+  control.focus({preventScroll:true});
+});
+</script></body>
+</html>
+
+
+
+
+
+
+
+
+
+

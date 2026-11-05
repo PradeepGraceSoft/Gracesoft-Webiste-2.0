@@ -1,0 +1,23 @@
+{
+  "name": "gracesoft-3d-design",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-only editable HubSpot theme and 3D review preview",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "preview": "node scripts/serve.cjs",
+    "test": "node tests/qa.cjs",
+    "check": "node scripts/check.cjs"
+  },
+  "dependencies": {
+    "gsap": "3.13.0",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "axe-core": "4.11.0",
+    "esbuild": "0.25.11",
+    "lighthouse": "13.0.1",
+    "nunjucks": "3.2.4",
+    "sharp": "^0.34.4"
+  }
+}

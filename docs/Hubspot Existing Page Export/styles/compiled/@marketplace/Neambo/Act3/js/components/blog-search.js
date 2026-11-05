@@ -1,0 +1,14 @@
+<html>
+ <head></head>
+ <body>
+  let blog_search=document.querySelector(".blog-search"),blog_search_form=blog_search.querySelector(".blog-search__form"),blog_search_input=blog_search.querySelector(".blog-search__input"),blog_results=blog_search.querySelector(".blog-search__results");function do_blog_search(e){if(e.preventDefault(),blog_search_input.blur(),blog_search_input.value.length&lt;3)return blog_search.classList.remove("blog-search--searching"),blog_search.classList.remove("blog-search--done"),void(blog_results.innerHTML="");blog_search.classList.remove("blog-search--done"),blog_search.classList.add("blog-search--searching"),blog_results.innerHTML="";let request=new XMLHttpRequest,api="https://api.hubapi.com/contentsearch/v2/search?portalId=107648";for(let i=0;i
+  <blog_search_form.elements.length;i++)blog_search_form.elements[i].name&&blog_search_form.elements[i].value&&(api+="&"+blog_search_form.elements[i].name+"="+encodeuricomponent(blog_search_form.elements[i].value));request.open("get",api),request.onreadystatechange=function(){if(4===this.readystate&&200===this.status){let data="JSON.parse(this.responseText);if(data.total)for(let" i="0;i<data.results.length;i++){let" item="document.createElement(&quot;div&quot;),item_html=&quot;&quot;;item.classList.add(&quot;blog-search__results-item&quot;),item_html='<p" class="blog-search__results-title ui-label">
+   <a href="'+data.results[i].url+'">'+data.results[i].title+"</a>
+   <p></p>",item_html+='
+   <p class="blog-search__results-desc small-text">'+data.results[i].description+"</p>",item.innerHTML=item_html,blog_results.appendChild(item)}else{let txt=e.target.getAttribute("results-zero-text")||"No results found.";blog_results.innerHTML='
+   <div class="blog-search__results-zero">
+    '+txt+"
+   </div>"}blog_search.classList.remove("blog-search--searching"),blog_search.classList.add("blog-search--done")}},request.send()}function blog_search_reset(){blog_search.classList.remove("blog-search--done"),blog_results.innerHTML="",blog_search_input.value=""}const blog_search_reset_btn=document.querySelectorAll(".blog-search__reset");blog_search_reset_btn.forEach(btn=&gt;{btn.addEventListener("click",()=&gt;{blog_search_reset()})}); //# sourceURL=https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/hub_generated/template_assets/1/186085640338/1792753251827/template_blog-search.js
+  </blog_search_form.elements.length;i++)blog_search_form.elements[i].name&&blog_search_form.elements[i].value&&(api+="&"+blog_search_form.elements[i].name+"="+encodeuricomponent(blog_search_form.elements[i].value));request.open("get",api),request.onreadystatechange=function(){if(4===this.readystate&&200===this.status){let>
+ </body>
+</html>

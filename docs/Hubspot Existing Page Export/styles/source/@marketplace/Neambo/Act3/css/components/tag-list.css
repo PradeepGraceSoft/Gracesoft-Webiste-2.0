@@ -1,0 +1,98 @@
+{% import "../_variables.css" as var %}
+
+.tags-list {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Button */
+
+.tags-list__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.67rem;
+  height: 1.67rem;
+  border: 2px solid;
+  border-radius: 999px;
+  line-height: 0;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.tags-list__btn svg {
+  width: .89rem;
+  height: .89rem;
+  transition: .2s transform ease-in-out;
+}
+
+.tags-list__btn:hover svg {
+  transform: scale(1.15, 1.15);
+}
+
+/* Button: Ghost */
+
+.tags-list__btn--ghost {
+  border-color: {{ var.white_borders }};
+  color: {{ var.white }};
+}
+
+.tags-list__btn--ghost:hover,
+.tags-list__btn--ghost.tags-list__btn--active {
+  background: {{ var.white }};
+  border-color: {{ var.white }};
+  color: {{ var.dark }};
+}
+
+/* Button: White */
+
+.tags-list__btn--white,
+.tags-list__btn--white:hover,
+.tags-list__btn--white.tags-list__btn--active {
+  background: {{ var.white }};
+  border-color: {{ var.white }};
+  color: {{ var.dark }};
+}
+
+/* List */
+
+.tags-list__list {
+  display: none;
+  width: 160px;
+  padding: 1.11rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  right: -2px;
+  z-index: 5;
+  background: {{ var.white }};
+  border-radius: {{ var.radius_6 }};
+  box-shadow: {{ var.small_shadow }};
+  font-size: {{ var.small_text }}rem;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .tags-list__list {
+    right: auto;
+    left: -2px;
+  }
+{% endif %}
+
+.tags-list__list--active {
+  display: block;
+  animation: .2s ease-in-out forwards uiPop;
+}
+
+.tags-list__list a {
+  display: block;
+  padding: .28rem 0;
+  color: {{ var.dark }};
+  text-decoration: none;
+}
+
+.tags-list__list a:hover {
+  color: {{ var.text_color }};
+  text-decoration: none;
+}

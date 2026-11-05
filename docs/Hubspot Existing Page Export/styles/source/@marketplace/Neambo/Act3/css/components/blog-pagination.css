@@ -1,0 +1,60 @@
+{% import "../_variables.css" as var %}
+
+.blog-pagination {
+  padding-top: {{ var.gutter }}px;
+  list-style: none;
+}
+
+.blog-pagination__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  margin: .28rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: {{ var.dark }};
+  text-decoration: none;
+  font-family: {{ var.ui_font_family }};
+  font-style: {{ var.ui_font_style }};
+  font-weight: {{ var.ui_font_weight }};
+  font-size: .9rem;
+  text-align: center;
+  transition: .2s ease-in-out;
+}
+
+.blog-pagination__item:hover {
+  text-decoration: none;
+}
+
+.blog-pagination__item--number {
+  background: {{ var.light }};
+}
+
+.blog-pagination__item--number:hover {
+  background: {{ var.white }};
+  color: {{ var.accent }};
+}
+
+.blog-pagination__item--active,
+.blog-pagination__item--active:hover {
+  background: {{ var.accent_bg }};
+  color: {{ var.white }};
+}
+
+.blog-pagination__item--arrow:hover {
+  color: {{ var.dark }};
+  transform: scale(1.15);
+}
+
+.blog-pagination__item--disabled {
+  cursor: default;
+  pointer-events: none;
+  color: {{ var.borders_color }};
+}
+
+.blog-pagination--left .blog-pagination__item--disabled,
+.blog-pagination--right .blog-pagination__item--disabled {
+  display: none;
+}

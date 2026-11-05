@@ -1,0 +1,254 @@
+[
+  {
+    "name": "text_1",
+    "label": "Frequently asked questions",
+    "type": "text",
+    "default": "Frequently asked questions"
+  },
+  {
+    "name": "text_2",
+    "label": "What is hospitality property management software?",
+    "type": "text",
+    "default": "What is hospitality property management software?"
+  },
+  {
+    "name": "text_3",
+    "label": "A hospitality property management system (PMS) helps lodging team",
+    "type": "text",
+    "default": "A hospitality property management system (PMS) helps lodging teams organize reservations, room availability, guest records, billing and daily operations."
+  },
+  {
+    "name": "text_4",
+    "label": "What is GraceSoft Easy InnKeeping?",
+    "type": "text",
+    "default": "What is GraceSoft Easy InnKeeping?"
+  },
+  {
+    "name": "text_5",
+    "label": "Easy InnKeeping is GraceSoft’s cloud-based hospitality PMS, with ",
+    "type": "text",
+    "default": "Easy InnKeeping is GraceSoft’s cloud-based hospitality PMS, with connected booking, distribution, guest engagement and operational tools."
+  },
+  {
+    "name": "text_6",
+    "label": "What types of properties does GraceSoft support?",
+    "type": "text",
+    "default": "What types of properties does GraceSoft support?"
+  },
+  {
+    "name": "text_7",
+    "label": "GraceSoft serves independent hotels, motels, bed and breakfasts, ",
+    "type": "text",
+    "default": "GraceSoft serves independent hotels, motels, bed and breakfasts, inns, resorts, vacation rentals, campgrounds, RV parks, dude ranches, condos and multi-property businesses."
+  },
+  {
+    "name": "text_8",
+    "label": "Can guests book directly through my website?",
+    "type": "text",
+    "default": "Can guests book directly through my website?"
+  },
+  {
+    "name": "text_9",
+    "label": "Yes. The Easy InnKeeping booking engine lets guests check av",
+    "type": "text",
+    "default": "Yes. The Easy InnKeeping booking engine lets guests check availability and reserve directly through your website."
+  },
+  {
+    "name": "text_10",
+    "label": "Will it work with my booking channels and payment provider?",
+    "type": "text",
+    "default": "Will it work with my booking channels and payment provider?"
+  },
+  {
+    "name": "text_11",
+    "label": "GraceSoft lists channels including Booking.com, Expedia, Air",
+    "type": "text",
+    "default": "GraceSoft lists channels including Booking.com, Expedia, Airbnb and Vrbo, and payment providers including Stripe, Square, Authorize.Net and Shift4. Ask GraceSoft to confirm support for your channels and provider in your region and configuration."
+  },
+  {
+    "name": "text_12",
+    "label": "Can GraceSoft manage multiple properties?",
+    "type": "text",
+    "default": "Can GraceSoft manage multiple properties?"
+  },
+  {
+    "name": "text_13",
+    "label": "Yes. GraceSoft offers multi-property management, including access",
+    "type": "text",
+    "default": "Yes. GraceSoft offers multi-property management, including access to multiple properties through a unified login. Discuss portfolio requirements with the team."
+  },
+  {
+    "name": "text_14",
+    "label": "Does GraceSoft offer AI Voice and Chat Assistants?",
+    "type": "text",
+    "default": "Does GraceSoft offer AI Voice and Chat Assistants?"
+  },
+  {
+    "name": "text_15",
+    "label": "Yes. GraceSoft describes AI voice and chat options for property q",
+    "type": "text",
+    "default": "Yes. GraceSoft describes AI voice and chat options for property questions, availability, rates and booking inquiries, including outside normal desk hours."
+  },
+  {
+    "name": "text_20",
+    "label": "Does GraceSoft provide mobile access?",
+    "type": "text",
+    "default": "Does GraceSoft provide mobile access?"
+  },
+  {
+    "name": "text_21",
+    "label": "Yes. GraceSoft describes cloud access from desktop, tablet and mo",
+    "type": "text",
+    "default": "Yes. GraceSoft describes cloud access from desktop, tablet and mobile, with apps for Android, iPhone and iPad. Confirm the workflows available on your device."
+  },
+  {
+    "name": "text_22",
+    "label": "Can I see the software before deciding?",
+    "type": "text",
+    "default": "Can I see the software before deciding?"
+  },
+  {
+    "name": "text_23",
+    "label": "Yes. Request a demo and tell GraceSoft which workflows you w",
+    "type": "text",
+    "default": "Yes. Request a demo and tell GraceSoft which workflows you want to see, such as arrivals, direct bookings or guest messaging."
+  },
+  {
+    "name": "text_24",
+    "type": "text",
+    "label": "How much does Easy InnKeeping cost?",
+    "default": "How much does Easy InnKeeping cost?"
+  },
+  {
+    "name": "text_25",
+    "type": "text",
+    "label": "Visit the GraceSoft pricing page to compare options. If you ",
+    "default": "Visit the GraceSoft pricing page to compare options. If you also need Website Builder, ask which services and fees apply."
+  },
+  {
+    "name": "text_26",
+    "type": "text",
+    "label": "Can I bring over existing reservations and guest records?",
+    "default": "Can I bring over existing reservations and guest records?"
+  },
+  {
+    "name": "text_27",
+    "type": "text",
+    "label": "Tell GraceSoft which system you use and what records you nee",
+    "default": "Tell GraceSoft which system you use and what records you need to move. Ask which imports are supported and who will handle each step before setting a switch date."
+  },
+  {
+    "name": "text_28",
+    "type": "text",
+    "label": "What support is available?",
+    "default": "What support is available?"
+  },
+  {
+    "name": "text_29",
+    "type": "text",
+    "label": "Ask GraceSoft which support channels, hours and onboarding a",
+    "default": "Ask GraceSoft which support channels, hours and onboarding assistance apply to your plan."
+  },
+  {
+    "name": "text_30",
+    "type": "text",
+    "label": "Who can update my website?",
+    "default": "Who can update my website?"
+  },
+  {
+    "name": "text_31",
+    "type": "text",
+    "label": "If you are considering a website package, confirm who can ed",
+    "default": "If you are considering a website package, confirm who can edit room descriptions, photos and policies, and how to request changes."
+  },
+  {
+    "name": "resource_8_1",
+    "label": "Explore the booking engine URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/online-booking-engine"
+    }
+  },
+  {
+    "name": "resource_8_1_label",
+    "type": "text",
+    "label": "Explore the booking engine",
+    "default": "Explore the booking engine"
+  },
+  {
+    "name": "resource_10_1",
+    "label": "Review booking channels URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/channel-manager"
+    }
+  },
+  {
+    "name": "resource_10_1_label",
+    "type": "text",
+    "label": "Review booking channels",
+    "default": "Review booking channels"
+  },
+  {
+    "name": "resource_10_2",
+    "label": "Check payment integrations URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/payments"
+    }
+  },
+  {
+    "name": "resource_10_2_label",
+    "type": "text",
+    "label": "Check payment integrations",
+    "default": "Check payment integrations"
+  },
+  {
+    "name": "resource_24_1",
+    "label": "View pricing URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/pricing"
+    }
+  },
+  {
+    "name": "resource_24_1_label",
+    "type": "text",
+    "label": "View pricing",
+    "default": "View pricing"
+  },
+  {
+    "name": "resource_22_1",
+    "label": "Request a demo URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/livedemo"
+    }
+  },
+  {
+    "name": "resource_22_1_label",
+    "type": "text",
+    "label": "Request a demo",
+    "default": "Request a demo"
+  },
+  {
+    "name": "resource_30_1",
+    "label": "Explore Website Builder URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/websites"
+    }
+  },
+  {
+    "name": "resource_30_1_label",
+    "type": "text",
+    "label": "Explore Website Builder",
+    "default": "Explore Website Builder"
+  }
+]

@@ -1,0 +1,49 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/home.png
+  label: "Home"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header" %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-two-col.html', context={
+      "module": {
+        "background": {
+          "bg_type": "image",
+          "bg_image": {
+            "src": get_asset_url('../../assets/images/hero-bg-img.png')
+          }
+        },
+        "mobile_background": {
+          "bg_type": "image",
+          "bg_image": {
+            "src": get_asset_url('../../assets/images/hero-bg-img--mobile.png')
+          }
+        }
+      }
+    } %}
+
+    {% include_dnd_partial path='../sections/showcase-slider.html' %}
+
+    {% include_dnd_partial path='../sections/two-col-image-left.html' %}
+
+    {% include_dnd_partial path='../sections/two-col-image-right.html' %}
+
+    {% include_dnd_partial path='../sections/two-col-text-only.html' %}
+
+    {% include_dnd_partial path='../sections/testimonial-slider.html' %}
+
+    {% include_dnd_partial path='../sections/related-blogs-dark.html' %}
+
+    {% include_dnd_partial path='../sections/cta-box.html' %}
+  {% end_dnd_area %}
+{% endblock %}

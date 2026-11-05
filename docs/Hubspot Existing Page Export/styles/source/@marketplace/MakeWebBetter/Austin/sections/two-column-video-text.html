@@ -1,0 +1,68 @@
+<!--
+templateType: section
+label: Two Column Video Text
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/two-column-video-text.png
+description: "Two column with content on left side and video on right side."
+-->
+
+{% dnd_section
+  vertical_alignment='MIDDLE',
+  class="au-tab-full-width"
+%}
+{% dnd_column 
+  offset=0,
+  width=6 %}
+{% dnd_row  
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Transform Innovative Ideas Into App</h2>
+        <p>Our App is designed keeping in mind the customer's comfort zone. Make mind-blowing inner pages. Show your organization aims, achievements,  products and services. Your customers will never go away from you.</p>"
+        primary_cta={ type: 'btn', style: 'filled_light', text: 'View More' }
+        secondary_cta={ type: 'none', style: '', text: '' }
+       %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% dnd_column 
+  offset=6,
+  width=6 %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 40,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/video-popup'
+      %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

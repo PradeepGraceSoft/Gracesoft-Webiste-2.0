@@ -1,0 +1,43 @@
+<!--
+  templateType: section
+  label: Hero Slider
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/hero-slider.png
+  description: "Full width hero banner section with background image."
+-->
+
+{# Hero Slider Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_166914031919816" path="../modules/Hero Slider", label="Hero Slider" 
+       single_hero_slider_item = [
+            {
+              'hero_background_image' : { 
+                'alt': 'bg-image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/hero/hero-1.jpg') 
+              },
+              'hero_title' : '<h1 class="animated">Your Business Planning <br>and Strategy</h1>',
+              'hero_excerpt' : '<p class="animated">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br>officia deserunt mollit anim id est laborum. </p>',
+              'hero_button_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+              'hero_button_text' : 'Contact Us' 
+            },
+            {
+              'hero_background_image' : { 
+                'alt': 'bg-image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/hero/hero-2.jpg') 
+              },
+              'hero_title' : '<h1 class="animated">Your Business Planning <br>and Strategy</h1>',
+              'hero_excerpt' : '<p class="animated">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br>officia deserunt mollit anim id est laborum. </p>',
+              'hero_button_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+              'hero_button_text' : 'Contact Us'
+            }
+        ]
+     
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+{# Hero Slider Section End #}
+		
+		
+	

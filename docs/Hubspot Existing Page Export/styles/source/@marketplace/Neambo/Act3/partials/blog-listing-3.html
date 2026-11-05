@@ -1,0 +1,151 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+-->
+{{ require_css(get_asset_url('../css/components/blog-listing-3.css')) }}
+{%- if b.listing.padding == 'custom' -%}
+  {%- set lg_css = '' -%}
+  {%- set sm_css = '' -%}
+  {%- if b.listing.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.listing.top_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if lg_css -%}{% set lg_css = '.blog-listing-3 {' ~ lg_css ~ '}' %}{%- endif -%}
+  {%- if b.listing.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.listing.top_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-listing-3 {' ~ sm_css ~ '}}' %}{%- endif -%}
+  {%- if lg_css or sm_css -%}
+    {%- require_css -%}
+      <style>{{ lg_css ~ sm_css }}</style>
+    {%- end_require_css -%}
+  {%- endif -%}
+{%- endif -%}
+<div class="blog-listing-3 section">
+  <div class="blog-listing-3__center container">
+    {%- set si = 0 if blog_author or tag or b.hero.homepage_hero not in ['latest_post'] else 1 -%}
+    {%- if current_page_num == 1 and contents[si] -%}
+      {# Recent posts intro #}
+      <div class="row">
+        <div class="col s12">
+          <h2 class="blog-listing-3__recent-intro">{{ b.text.recent_stories }}</h2>
+        </div>
+      </div>
+      {# Recent posts #}
+      <div class="row items-stretch">
+        {# Spot 1 #}
+        <div class="col s4 flex-row">
+          <div class="blog-listing-3__recent-post">
+            <div class="blog-listing-3__recent-contents">
+              {% if b.tags.show_tags and contents[si].tag_list[0] %}
+                <div class="blog-listing-3__tags">
+                  <a class="blog-listing-3__tag" href="{{ blog_tag_url(group.id, contents[si].tag_list[0].slug) }}">{{ contents[si].tag_list[0].name }}</a>
+                </div>
+              {% endif %}
+              <h3 class="blog-listing-3__title"><a href="{{ contents[si].absolute_url }}">{{ contents[si].name }}</a></h3>
+            </div>
+            {% if contents[si].widgets.post_banner.body.src or contents[si].featured_image %}
+              <div class="blog-listing-3__recent-img">
+                <a href="{{ contents[si].absolute_url }}">
+                  {% if contents[si].widgets.post_banner.body.src %}
+                    {{ image_tag(contents[si].widgets.post_banner.body) }}
+                  {% else %}
+                    <img src="{{ contents[si].featured_image }}" alt="{{ contents[si].featured_image_alt_text|default(contents[si].name) }}" {{ image_srcset(contents[si].featured_image, sm) }} loading="lazy">
+                  {% endif %}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        {% if contents[si + 1] %}
+          {# Spot 2 #}
+          <div class="col s4 flex-row">
+            <div class="blog-listing-3__recent-post">
+              <div class="blog-listing-3__recent-contents">
+                {% if b.tags.show_tags and contents[si + 1].tag_list[0] %}
+                  <div class="blog-listing-3__tags">
+                    <a class="blog-listing-3__tag" href="{{ blog_tag_url(group.id, contents[si + 1].tag_list[0].slug) }}">{{ contents[si + 1].tag_list[0].name }}</a>
+                  </div>
+                {% endif %}
+                <h3 class="blog-listing-3__title"><a href="{{ contents[si + 1].absolute_url }}">{{ contents[si + 1].name }}</a></h3>
+              </div>
+              {% if contents[si + 1].widgets.post_banner.body.src or contents[si + 1].featured_image %}
+                <div class="blog-listing-3__recent-img">
+                  <a href="{{ contents[si + 1].absolute_url }}">
+                    {% if contents[si + 1].widgets.post_banner.body.src %}
+                      {{ image_tag(contents[si + 1].widgets.post_banner.body) }}
+                    {% else %}
+                      <img src="{{ contents[si + 1].featured_image }}" alt="{{ contents[si + 1].featured_image_alt_text|default(contents[si + 1].name) }}" {{ image_srcset(contents[si + 1].featured_image, sm) }} loading="lazy">
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+        {% if contents[si + 2] %}
+          {# Spot 3 #}
+          <div class="col s4 flex-row">
+            <div class="blog-listing-3__recent-post">
+              <div class="blog-listing-3__recent-contents">
+                {% if b.tags.show_tags and contents[si + 2].tag_list[0] %}
+                  <div class="blog-listing-3__tags">
+                    <a class="blog-listing-3__tag" href="{{ blog_tag_url(group.id, contents[si + 2].tag_list[0].slug) }}">{{ contents[si + 2].tag_list[0].name }}</a>
+                  </div>
+                {% endif %}
+                <h3 class="blog-listing-3__title"><a href="{{ contents[si + 2].absolute_url }}">{{ contents[si + 2].name }}</a></h3>
+              </div>
+              {% if contents[si + 2].widgets.post_banner.body.src or contents[si + 2].featured_image %}
+                <div class="blog-listing-3__recent-img">
+                  <a href="{{ contents[si + 2].absolute_url }}">
+                    {% if contents[si + 2].widgets.post_banner.body.src %}
+                      {{ image_tag(contents[si + 2].widgets.post_banner.body) }}
+                    {% else %}
+                      <img src="{{ contents[si + 2].featured_image }}" alt="{{ contents[si + 2].featured_image_alt_text|default(contents[si + 2].name) }}" {{ image_srcset(contents[si + 2].featured_image, sm) }} loading="lazy">
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {# More posts intro #}
+    {% if current_page_num == 1 and contents[si + 3] %}
+    <div class="row">
+      <div class="col s12">
+        <h2 class="blog-listing-3__other-intro">{{ b.text.more_stories }}</h2>
+      </div>
+    </div>
+    {% endif %}
+    {# More posts #}
+    <div class="row items-center" id="post-list">
+      {% for content in contents %}
+        {% if current_page_num > 1 or loop.index > si + 3 %}
+          {# Post #}
+          <div class="blog-listing-3__other-post-col col s6 flex-row">
+            <div class="blog-listing-3__other-post">
+              <div class="blog-listing-3__other-contents">
+                {% if b.tags.show_tags and content.tag_list[0] %}
+                  <div class="blog-listing-3__tags">
+                    <a class="blog-listing-3__tag" href="{{ blog_tag_url(group.id, content.tag_list[0].slug) }}">{{ content.tag_list[0].name }}</a>
+                  </div>
+                {% endif %}
+                <h3 class="blog-listing-3__title h4"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h3>
+              </div>
+              {% if content.widgets.post_banner.body.src or content.featured_image %}
+                <div class="blog-listing-3__other-img">
+                  <a href="{{ content.absolute_url }}">
+                    {% if content.widgets.post_banner.body.src %}
+                      {{ image_tag(content.widgets.post_banner.body) }}
+                    {% else %}
+                      <img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text|default(content.name) }}" {{ image_srcset(content.featured_image, sm) }} loading="lazy">
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

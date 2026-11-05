@@ -1,0 +1,107 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Event Listing
+screenshotPath: ../images/template-previews/event-listing.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+    label='Main section',
+    class='body-container body-container--event-listing'
+%}
+
+{# Event Listing Banner #}
+{% dnd_section
+   vertical_alignment='TOP',
+   full_width=true,
+   padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  },
+%}
+{% dnd_module
+        path='../modules/banner-layouts',
+        "subtitle"="",
+        "content"="<h1>Mobile World Expo Meet 2022</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien vulputate massa quis eu, pulvinar tempus. Semper magnis sagittis placerat interdum sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien vulputate massa quis eu, pulvinar tempus. Semper magnis sagittis placerat interdum sit.</p>"
+          primary_cta={ type: 'none', style: 'filled_light' },
+          secondary_cta={ type: 'none', style: 'filled_dark' }
+%}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "banner_with_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Event Listing Banner #}
+
+{# Event Listing Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 35,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 20,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Events List</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec felis at pellentesque. Sed amet dolor penatibus sed at posuere justo, lacinia neque.</p>"
+          style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 760 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row
+       padding={
+				'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+			},
+%}
+{% dnd_module 'au_partners' 
+				path='../modules/listing-layouts',
+%}
+{% module_attribute 'listing_layout_choice' is_json=True %}
+{
+"listing_layouts": "grid_layout"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Event Listing Section #}
+
+{% end_dnd_area %}
+{% endblock body %}

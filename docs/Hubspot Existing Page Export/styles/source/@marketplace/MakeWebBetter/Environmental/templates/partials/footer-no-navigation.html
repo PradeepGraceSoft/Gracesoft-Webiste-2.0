@@ -1,0 +1,43 @@
+<!--
+templateType: global_partial
+label: Footer No Navigation
+-->
+<footer class="footer">
+
+  {% dnd_area 'footer' class='footer-dnd-area2 footer__container content-wrapper footer-conatiner-no-navigation', label='Footer' %}
+
+  {# copyright #}
+  {% dnd_section 
+    padding={
+    'top': 0,
+    'bottom': 60,
+    'left': 0,
+    'right': 0
+    },
+    %}
+  {% dnd_column
+        offset=0,
+        width=12
+        %}
+  {% dnd_row %}
+  {% dnd_module path='@hubspot/rich_text' label='Copyright'%}
+  {% module_attribute 'html' %}
+  <div style="text-align: center; font-s">
+    <span style="font-size: 12px; color: #ffffff;">Copyright &copy; 2021 MakeWebBetter All Rights Reserved. Privacy Policy | Terms Condition</span>
+  </div>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# end of copyright #}
+
+  {% end_dnd_area %}
+</footer>
+
+
+{% if theme.scroll_to_top.enable_scroll_to_top %}
+<div class="mwb-footer__scroll-to-top">
+  {% module 'scroll_to_top' path='../../modules/scroll-to-top' label='Scroll To Top'  %}
+</div>
+{% endif %}

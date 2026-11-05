@@ -1,0 +1,143 @@
+<!--
+templateType: section
+label: Contact
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/contact.png
+description: "Two column section with contact information on left and form on right."
+-->
+
+{# Contact Section #}
+{% dnd_section 
+   vertical_alignment="MIDDLE",
+   class="au-tab-full-width",
+   padding={
+        'default': {
+          'top': 0,
+          'right': 20,
+          'bottom': 80,
+          'left': 20
+        },
+        'mobile': {
+          'top': 0,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        }
+      }
+ %}
+{% dnd_column 
+    offset=0,
+    width=5,
+    background_color= {{ theme.color_font_setting.global_colors.primary.color }}
+  %}
+{% dnd_row 
+    padding={
+        'default': {
+          'top': 60,
+          'right': 0,
+          'bottom': 20,
+          'left': 0
+        },
+        'mobile': {
+          'top': 50,
+          'right': 0,
+          'bottom': 20,
+          'left': 0
+        }
+      }
+  %}
+{% dnd_module 
+      path='../modules/icon-box',
+      icon_box_repeater=[ {
+        "image": {
+          "src": get_asset_url('../images/icons/phone-call.svg'),
+          "alt": "Phone icon"
+        },
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel enim, nunc ultrices faucibus laoreet pretium, et id praesent.</p>"
+      }],
+        style={
+          'icon_styling': {
+            'corner' : 'square'
+          }
+      }
+    %}
+
+{% module_attribute 'icon_box_layout_choice' is_json=True %}
+{
+"icon_box_layout": "card_layout"
+}
+{% end_module_attribute%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+
+{% dnd_row 
+   padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 60,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module
+        path='../modules/icon-box',
+        icon_box_repeater= [
+        {
+        "image": {
+        'src': get_asset_url('../images/icons/phone.svg'),
+        'alt': "Phone icon"
+        },
+        "content":"<p>+ 505 123 456</p>"
+        },
+        {
+        "image": {
+        'src': get_asset_url('../images/icons/email.svg'),
+        'alt': "Email icon"
+        },
+        "content":"<p>Sample123@xyz.com</p>"
+        },
+         {
+        "image": {
+        'src': get_asset_url('../images/icons/map.svg'),
+        'alt': "Map icon"
+        },
+        "content":"<p>21, Jump Street</p>"
+        }
+        ],
+        style={
+          'icon_styling': {
+            'corner' : 'square'
+          }
+      }
+     %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+
+{% dnd_column 
+    offset=5,
+    width=7,
+  %}
+{% dnd_row  %}
+{% dnd_module 
+    path='../modules/form'
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "multiple_field_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+
+{# End of Contact Section #}

@@ -1,0 +1,69 @@
+{% import "../_variables.css" as var %}
+
+.play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  background: {{ var.white }};
+  border: 2px solid {{ var.white }};
+  box-shadow: {{ var.small_shadow }};
+  border-radius: 999px;
+  color: {{ var.accent }};
+  transition: .2s ease-in-out;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  outline: none;
+}
+
+.play-btn:hover,
+.play-btn:focus {
+  background: rgba({{ var.white|convert_rgb }}, .7);
+}
+
+.play-btn svg {
+  width: 26px;
+  height: auto;
+  margin-left: 5px;
+  transition: .2s ease-in-out;
+}
+
+.play-btn:hover svg,
+.play-btn:focus svg {
+  transform: scale(1.2);
+}
+
+@media (max-width: {{ var.md }}px) {
+  .play-btn {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+  }
+  
+  .play-btn svg {
+    width: 20px;
+    margin-left: 3px;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  
+  .play-btn svg {
+    width: 18px;
+    margin-left: 2px;
+  }
+}

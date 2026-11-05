@@ -1,0 +1,61 @@
+{%- macro field_color(color) -%}
+  {%- if color.opacity == 100 || !color.opacity -%}
+    {{ color.color }}
+  {%- else -%}
+    rgba({{ color.color|convert_rgb }}, {{ color.opacity / 100 }})
+  {%- endif -%}
+{%- endmacro -%}
+
+{%- macro font_stack(primary, type) -%}
+  {%- if type == 'serif' -%}
+    {{ primary }}, Georgia, Times, Times New Roman, serif
+  {%- else -%}
+    {{ primary }}, Helvetica Neue, Helvetica, Arial, sans-serif
+  {%- endif -%}
+{%- endmacro -%}
+
+{% macro font_short(group, line_height) %}
+  {% set style = "italic" if group.variant is containing "italic" else "normal" %}
+
+  {{ style
+    ~" "~group.variant|replace('italic','')|replace('regular','400')
+    ~" "~group.size~"px"
+    ~"/"~line_height
+    ~" "~font_stack(group.font, group.fallback) }}
+{% endmacro %}
+
+{% macro typography(group, slug, dark) %}
+  {% if dark == false %}
+  --{{ slug }}-font: {{ font_short(group.text_font, group.line_height) }};
+  --{{ slug }}-size: {{ group.text_font.size }}px;
+  --{{ slug }}-mobile-size: {{ group.mobile if group.mobile else group.text_font.size }}px;
+  --{{ slug }}-mobile-line-height: {{ group.mobile_line_height if group.mobile_line_height else group.line_height }};
+  --{{ slug }}-letter-spacing: {{ group.letter_spacing }}em;
+  --{{ slug }}-transform: {{ "uppercase" if group.uppercase else "none" }};
+  --{{ slug }}-color: {{ theme.buttons.design.primary.text.color if group == theme.buttons.design else group.text_font.color }};
+  {% if group.hover_color.color %}
+    --{{ slug }}-hover: {{ group.hover_color.color }};
+  {% endif %}
+{% else %}
+  --{{ slug }}-color: {{ group.dark_mode.color }};
+{% endif %}
+{% endmacro %}
+
+{% macro button_colors(group, slug) %}
+  --button-{{ slug }}-text: {{ group.text.color }};
+  --button-{{ slug }}-text-hover: {{ group.text_hover.color }};
+  --button-{{ slug }}-bg: {{ group.background.color }};
+  --button-{{ slug }}-bg-hover: {{ group.background_hover.color }};
+  --button-{{ slug }}-border: {{ group.border.color }};
+  --button-{{ slug }}-border-hover: {{ group.border_hover.color }};
+{% endmacro %}
+
+{% macro box_shadow(group) %}
+  {{ group.offset_x }}px {{ group.offset_y }}px {{ group.blur_radius }}px {{ group.spread_radius }}px {{ field_color(group.color) }}
+{% endmacro %}
+
+{% macro padding(group, slug) %}
+  {% for side in ['top', 'right', 'bottom', 'left'] %}
+    --padding-{{ side }}-{{ slug }}: {{ group.spacing.padding[side].value + group.spacing.padding[side].units }};
+  {% endfor %}
+{% endmacro %}

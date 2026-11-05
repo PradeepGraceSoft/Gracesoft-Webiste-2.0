@@ -1,0 +1,2196 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pricing
+  screenshotPath: ../Images/Page Preview/Pricing.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_pricing' label='Pricing' class='body-container-pricing' %}
+
+<!---------------------------------- Banner section Start Here---------------------------->
+
+     {% dnd_section max_width=1098,
+				vertical_alignment='MIDDLE'
+				margin={
+					'default':{
+					'top': 125,
+					'bottom': 0
+					},
+					'mobile':{
+					'top': 0,
+					'bottom': 0
+					}
+				},
+				padding={
+					'default':{
+					'top': 80,
+					'bottom': 83
+					},
+					'mobile':{
+					'top': 60,
+					'bottom': 60
+					}
+				}
+      %}
+       {% dnd_column offset=0, width=6 %}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="text-conta2",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h1>Add Page Heading Text</h1>
+								<p> No coding required, Clean, Easily editable, design and developed by team of Hubspot certified Marketers, designers and programmers.</p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-left",
+								set_max_width_of_the_content:"453"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							  }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row,
+						 padding={
+              'default':{
+              'top': 15
+              },
+              'mobile':{
+              'top': 10
+              }
+            }
+          %}
+            {% dnd_module path='../modules/Buttons', label="Buttons"
+                choose_number_of_cta = "single",
+                single_cta_group = {
+                "choose_type_of_cta" : "primary-cta",
+                primary_cta_group:{
+                "add_cta_text_here" : "REQUEST A QUOTE",
+                "choose_cta_type_here" : "solid-cta"
+                }
+                },
+                styles={
+									 'alignment_field':{
+									   'horizontal_align' : 'LEFT'
+									 }
+                 }
+           %} 
+           {% end_dnd_module %}
+        {% end_dnd_row %}
+     {% end_dnd_column %}
+     {% dnd_column offset=6 , width=6,
+		     padding={
+							'default':{
+							'top': 0,
+							'bottom': 0
+							},
+							'mobile':{
+						  'top': 30,
+							'bottom': 0
+							}
+					}
+		  %}
+       {% dnd_row %}
+          {% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image Video with before image"
+								choose_between_image_and_video = "image",
+								image_group = {
+								add_custom_class_here : "image-container1",
+								add_image_here : {
+								'src' : get_asset_url('../Images/Column Images/Column-Image-16.png')
+								},
+								add_max_width_here : "568",
+								check_to_show_box_shadow_to_image : false,
+								set_width_in_responsive : "100"
+								}
+								check_to_add_vector_image = false,
+								style = {
+								  'set_alignment_for_image' : 'align-right'
+								}
+					%}
+          {% end_dnd_module %}
+       {% end_dnd_row %}
+     {% end_dnd_column %}
+  {% end_dnd_section %}
+
+
+<!---------------------------------- Banner section Ends Here----------------------------->
+
+<!----------------------------------  border Start Here ---------------------------------->
+
+  {% dnd_section
+     vertical_alignment='MIDDLE',
+     padding={
+     'default':{
+     'top': 0,
+     'bottom':0
+     },
+     'mobile':{
+     'top': 0,
+     'bottom': 0
+     }
+    }
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<hr>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------   border End Here  --------------------------------->
+
+
+<!---------------------------------- Pricing Start Here----------------------------->
+
+
+  {% dnd_section
+			vertical_alignment='MIDDLE',
+			padding={
+			 'default':{
+			 'top': 88,
+			 'bottom':56
+			 },
+			 'mobile':{
+			 'top': 60,
+			 'bottom': 60
+			 }
+			}
+	 %}
+    {% dnd_column %}
+      {% dnd_row 
+				 padding={
+				   'default':{
+				   'right': 0,
+				   'bottom':40
+				   },
+				   'mobile':{
+				   'right': 0,
+				   'bottom':40
+				   }
+				  }
+				%}
+           {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="text-conta4",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h2>Heading Text</h2>
+								<p> The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a>offering.</a></p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-center",
+								set_max_width_of_the_content:"770"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							 }
+				 %}
+				 {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module path='../modules/Pricing', label="Pricing" 
+					add_custom_class_here = "pricing-cards-section",
+					check_to_show_pricing_containers = true,
+					choose_bill_duration_position = "center",
+					check_to_show_left_text = false,
+					check_to_show_pricing_toggle = true,
+					add_sub_heading_here = '<p>Choose Plan Billing duration</p>',
+					choose_column_layout = "four-col-adjust",
+					pricing_card_group =[
+					{
+					check_to_highlight_card : false,
+					add_heading_here : '<h4>Free</h4>',
+					check_to_show_tag : false,
+					choose_card_cta_position_here : 'mid',
+					check_to_add_pricing : true,
+					pricing : {
+					add_price_yearly_here : '$0',
+					add_yearly_text_here : '',
+					add_price_monthly_here : '$0',
+					add_monthly_text_here : ''
+					},
+					add_content_here : '<p>No coding required, Clean, Easily editable, design and developed.</p>',
+					list_group : [
+					{
+					add_list_item_here : 'Add Feature One'
+					},
+					{
+					add_list_item_here : 'Add Feature Two'
+					},
+					{
+					add_list_item_here : 'Add Feature Three'
+					},
+					{
+					add_list_item_here : 'Add Feature Four'
+					}
+					],
+					want_box_shadow_on_select : false
+					},
+					{
+					check_to_highlight_card : false,
+					add_heading_here : '<h4>Standard</h4>',
+					check_to_show_tag : false,
+					choose_card_cta_position_here : 'mid',
+					check_to_add_pricing : true,
+					pricing : {
+					add_price_yearly_here : '<span>$999</span>',
+					add_yearly_text_here : '/year',
+					add_price_monthly_here : '<span>$199</span>',
+					add_monthly_text_here : '/month'
+					},
+					add_content_here : '<p>No coding required, Clean, Easily editable, design and developed.</p>',
+					list_group : [
+					{
+					add_list_item_here : 'Add Feature One'
+					},
+					{
+					add_list_item_here : 'Add Feature Two'
+					},
+					{
+					add_list_item_here : 'Add Feature Three'
+					},
+					{
+					add_list_item_here : 'Add Feature Four'
+					},
+					{
+					add_list_item_here : 'Add Feature Five'
+					}
+					],
+					want_box_shadow_on_select : false
+					},
+					{
+					check_to_highlight_card : true,
+					add_heading_here : '<h4>Professional</h4>',
+					check_to_show_tag : true,
+					add_tag_here : 'Best Value',
+					choose_card_cta_position_here : 'mid',
+					check_to_add_pricing : true,
+					pricing : {
+					add_price_yearly_here : '<span>$1499</span>',
+					add_yearly_text_here : '/year',
+					add_price_monthly_here : '<span>$399</span>',
+					add_monthly_text_here : '/month'
+					},
+					add_content_here : '<p>No coding required, Clean, Easily editable, design and developed.</p>',
+					list_group : [
+					{ 
+					add_list_item_here : 'Add Feature One'
+					},
+					{
+					add_list_item_here : 'Add Feature Two'
+					},
+					{
+					add_list_item_here : 'Add Feature Three'
+					},
+					{
+					add_list_item_here : 'Add Feature Four'
+					},
+					{
+					add_list_item_here : 'Add Feature Five'
+					}
+					],
+					want_box_shadow_on_select : true
+					},
+					{
+					check_to_highlight_card : false,
+					add_heading_here : '<h4>Enterprise</h4>',
+					check_to_show_tag : false,
+					choose_card_cta_position_here : 'mid',
+					check_to_add_pricing : true,
+					pricing : {
+					add_price_yearly_here : '<span>$1999</span>',
+					add_yearly_text_here : '/year',
+					add_price_monthly_here : '<span>$499</span>',
+					add_monthly_text_here : '/month'
+					},
+					add_content_here : '<p>No coding required, Clean, Easily editable, design and developed.</p>',
+					list_group : [
+					{
+					add_list_item_here : 'Add Feature One'
+					},
+					{
+					add_list_item_here : 'Add Feature Two'
+					},
+					{
+					add_list_item_here : 'Add Feature Three'
+					},
+					{
+					add_list_item_here : 'Add Feature Four'
+					},
+					{
+					add_list_item_here : 'Add Feature Five'
+					}
+					],
+					want_box_shadow_on_select : false
+					}
+					],
+					check_to_show_for_table_section = true,
+					table = {
+					add_head_first_cell_text_here : '<h2>All Features</h2><br>
+																					 <p>No coding required, Clean,<a href="#"> Easily editable,</a> design and developed. </p>',
+					table_head_group : [
+					{
+					check_to_highlight_text_color : false,
+					check_to_fill_cell_background_color : false,
+					add_table_data_here : '<h4>Free</h4>',
+					add_text_here : '',
+					check_to_add_pricing : false,
+					},
+					{
+					check_to_highlight_text_color : false,
+					check_to_fill_cell_background_color : false,
+					add_table_data_here : '<h4>Standard</h4>',
+					add_text_here : '',
+					check_to_add_pricing : false,
+					},
+					{
+					check_to_highlight_text_color : true,
+					check_to_fill_cell_background_color : false,
+					add_table_data_here : '<h4>Professional</h4>',
+					add_text_here : '',                         
+					check_to_add_pricing : false,
+					},
+					{
+					check_to_highlight_text_color : false,
+					check_to_fill_cell_background_color : false,
+					add_table_data_here : '<h4>Enterprise</h4>',
+					add_text_here : '',
+					check_to_add_pricing : false,
+					}
+					],
+					table_row_group : [
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Priority support & training',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Unlimited e-signature & document sending',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Encrypted file sharing & large files storage',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Advanced Workflow Orchestration',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Advanced Mobile Forms',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Interactive sales dashboards',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Contact sync',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Visual reports',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Read-only access',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Automated workflows',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Light user role',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Task management',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'Unlimited external users',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					add_row_first_column_data : 'User management',
+					icons_group : [
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "minus",
+							"type" : "SOLID",
+							"unicode" : "f068",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					},
+					{
+					"add_icon_here" : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c",
+							"icon_set" : "fontawesome-5.14.0"
+						}
+					}
+					]
+					}
+					],
+					table_foot_group : [
+					{
+					check_to_fill_cell_background_color : false,
+					want_empty_cell : true
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					want_empty_cell : false,
+					add_text_here : '<h4>Free</h4>',
+					check_to_add_pricing : true,
+					table_pricing :{
+					add_price_yearly_here : '<span>$0</span>',
+					add_yearly_text_here : '',
+					add_price_monthly_here : '<span>$0</span>',
+					add_monthly_text_here : ''
+					},
+					table_bottom_cta_group :{
+					choose_style_of_cta_here : 'transparent-cta',
+					add_cta_here : '1ac08da6-17a7-4498-a962-34fd66f9ac1f'
+					}
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					want_empty_cell : false,
+					add_text_here : '<h4>Standard</h4>',
+					check_to_add_pricing : true,
+					table_pricing :{
+					add_price_yearly_here : '<span>$999</span>',
+					add_yearly_text_here : '/year',
+					add_price_monthly_here : '<span>$199</span>',
+					add_monthly_text_here : '/month'
+					},
+					table_bottom_cta_group :{
+					choose_style_of_cta_here : 'transparent-cta',
+					add_cta_here : '1ac08da6-17a7-4498-a962-34fd66f9ac1f'
+					}
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					want_empty_cell : false,
+					add_text_here : '<h4>Professional</h4>',
+					check_to_add_pricing : true,
+					table_pricing :{
+					add_price_yearly_here : '<span>$1499</span>',
+					add_yearly_text_here : '/year',
+					add_price_monthly_here : '<span>$399</span>',
+					add_monthly_text_here : '/month'
+					},
+					table_bottom_cta_group :{
+					choose_style_of_cta_here : 'solid-cta',
+					add_cta_here : '1ac08da6-17a7-4498-a962-34fd66f9ac1f'
+					}
+					},
+					{
+					check_to_fill_cell_background_color : false,
+					want_empty_cell : false,
+					add_text_here : '<h4>Enterprise</h4>',
+					check_to_add_pricing : true,
+					table_pricing :{
+					add_price_yearly_here : '<span>$1999</span>',
+					add_yearly_text_here : '/year',
+					add_price_monthly_here : '<span>$499</span>',
+					add_monthly_text_here : '/month'
+					},
+					table_bottom_cta_group :{
+					choose_style_of_cta_here : 'transparent-cta',
+					add_cta_here : '1ac08da6-17a7-4498-a962-34fd66f9ac1f'
+					}
+					}
+					]
+					} ,
+					styles={
+							'alignment_field':{
+							'horizontal_align':'LEFT'
+							},
+							'single_cta_alignment':{
+							'horizontal_align':'CENTER'
+							},
+							'white_text':false,
+							'spacing' : {
+								'add_spacing_for_desktop_view' : {
+                   'padding' : {
+                      'top' : {
+                         'value' : 0
+                      },
+                      'bottom' : {
+                         'value' : 0
+                      },
+                      'left' : {
+                         'value' : 0
+                      },
+                      'right' : {
+                         'value' : 0
+                      }
+                   }
+								 },
+								 'add_spacing_for_tab_view' : {
+									'padding' : {
+										 'top' : {
+												'value' : 0
+										 },
+										 'bottom' : {
+												'value' : 0
+										 },
+										 'left' : {
+												'value' : 0
+										 },
+										 'right' : {
+												'value' : 0
+										 }
+									}
+								 },
+								 'add_spacing_for_mobile_view' : {
+									'padding' : {
+										 'top' : {
+												'value' : 0
+										 },
+										 'bottom' : {
+												'value' : 0
+										 },
+										 'left' : {
+												'value' : 0
+										 },
+										 'right' : {
+												'value' : 0
+										 }
+									}
+								 }
+							},
+							'background':{
+							'choose_background_type':'color',
+							'add_background_color':{
+							'color':'#fff',
+							'opacity':0
+							}
+							},
+							'card_styling':{
+							 'add_spacing_for_top_part' : {                                                 
+								 'padding' : {
+										'top' : {
+											 'value' : 20
+										},
+										'bottom' : {
+											 'value' : 38
+										},
+										'left' : {
+											 'value' : 22
+										},
+										'right' : {
+											 'value' : 30
+										}
+									}
+							 },
+							 'add_spacing_for_bottom_part' : {
+								 'padding' : {
+										'top' : {
+											 'value' : 30
+										},
+										'bottom' : {
+											 'value' : 30
+										},
+										'left' : {
+											 'value' : 30
+										},
+										'right' : {
+											 'value' : 30
+										}
+									}
+							 },
+							 'add_card_background_color':{
+							 'color':'#ffffff'
+							 },
+							 'check_to_show_middle_border': false,
+							 'check_to_make_all_text_white': false
+						},
+					  'add_border_radius':'4'
+            }
+				%}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!---------------------------------- Pricing Ended Here----------------------------->
+
+<!------------------------------------- section 1 Start Here------------------------------>
+
+  {% dnd_section vertical_alignment='MIDDLE',
+		 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+       padding={
+			 'default':{
+			 'top':60,
+			 'bottom':60
+			 },
+			 'mobile':{
+			 'top':60,
+			 'bottom':60
+			 }
+		 }
+	%}
+    {% dnd_column offset=0, width=12 %}
+      {% dnd_row 
+			   padding={
+					'bottom':18
+				}
+			%}
+				{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+				 add_custom_class_here="h4_24",
+				 choose_content_type="single-content",
+				 single_column_group={
+					check_to_show_heading:true,
+					choose_heading:"4",
+					add_heading_here:"Trusted By <span>100+ Brands</span> and Agencies.",
+					check_to_show_description:false,
+					check_to_show_contact_information:false,
+					check_to_show_cta:false,
+					choose_text_alignment:"align-center",
+					set_max_width_of_the_content:"827"
+				 },
+				 styles={
+							 'check_to_show_wrapper':false,
+							 'turn_on_to_make_all_text_white':false,
+							 'background':{
+									 'choose_background':"color",
+									 'add_background_color':{
+											'color':"#fff",
+											'opacity':0
+									 }
+							 },
+							 'border':{
+							 'add_border_here':{
+														"top": {
+															 "width": { "value": 0, "units": "px" },
+															 "opacity": 0,
+															 "style": "solid",
+															 "color": "#E6E6E6"
+														 },
+														 "bottom": {
+															 "width": { "value": 0, "units": "px" },
+															 "opacity": 0,
+															 "style": "solid",
+															 "color": "#E6E6E6"
+														 },
+														 "left": {
+															 "width": { "value": 0, "units": "px" },
+															 "opacity": 0,
+															 "style": "solid",
+															 "color": "#E6E6E6"
+														 },
+														 "right": {
+															 "width": { "value": 0, "units": "px" },
+															 "opacity": 0,
+															 "style": "solid",
+															 "color": "#E6E6E6"
+														 }
+							 },
+							 'add_border_radius':"0"
+							 },
+							 'spacing':{
+												 'adjust_spacing_in_desktop_view':{
+																								'padding':{
+																									'top':{
+																									'value':0
+																									},
+																								 'bottom':{
+																									'value':0
+																									},
+																									'left':{
+																									'value':0
+																									},
+																									'right':{
+																									'value':0
+																									}
+																								}												
+											},
+											'adjust_spacing_in_tab_view':{
+																								'padding':{
+																									'top':{
+																									'value':0
+																									},
+																								 'bottom':{
+																									'value':0
+																									},
+																									'left':{
+																									'value':0
+																									},
+																									'right':{
+																									'value':0
+																									}
+																								}											
+											},
+											'adjust_spacing_in_mobile_view':{
+																								'padding':{
+																									'top':{
+																									'value':0
+																									},
+																								 'bottom':{
+																									'value':0
+																									},
+																									'left':{
+																									'value':0
+																									},
+																									'right':{
+																									'value':0
+																									}
+																								}											
+											}
+							 }
+				 }
+				%}
+				{% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %} 
+         {% dnd_column offset=0, width=2 %}
+            {% dnd_row 
+						   padding={
+							  'mobile':{
+							  'bottom':15
+							  }
+							 }
+						%}
+              {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'alt': 'Microsoft',
+                 'src': get_asset_url('../Images/Microsoft.png'),
+                 'width': auto
+                 }
+              %}
+              {% end_dnd_module %}
+           {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=2, width=2 %}
+            {% dnd_row 
+							 padding={
+								 'mobile':{
+								 'top':15,
+								 'bottom':15
+								 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'alt': 'Youtube',
+                 'src': get_asset_url('../Images/Youtube.png'),
+                 'width': auto
+                }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=4, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15,
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'alt': 'Harvest',
+                 'src': get_asset_url('../Images/Harvest.png'),
+                 'width': auto
+               }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=6, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15,
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'alt': 'Slack',
+                 'src': get_asset_url('../Images/Slack.png'),
+                 'width': auto
+               }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=8, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15,
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'alt': 'Asana',
+                 'src': get_asset_url('../Images/asana-3.png'),
+                 'width': auto
+               }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=10, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'alt': 'Pinterest',
+                 'src': get_asset_url('../Images/Pinterest.png'),
+                 'width': auto
+               }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+      {% end_dnd_row %}      
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!------------------------------------- section 1 Ends Here------------------------------->
+
+
+
+<!----------------------------------  Accordion Start Here  ---------------------------->
+
+
+  {% dnd_section
+			vertical_alignment='MIDDLE',
+			max_width="890",
+			padding={
+     'default':{
+     'top': 140,
+     'bottom':110
+     },
+     'mobile':{
+     'top': 60,
+     'bottom': 60
+     }
+    }
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+          {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="text-conta4",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h2>Heading Text</h2>
+								<p> The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a>offering.</a></p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-center",
+								set_max_width_of_the_content:"770"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							 }
+				 %}
+				 {% end_dnd_module %}
+      {% end_dnd_row %} 
+      {% dnd_row %}
+	      {% dnd_module path='../modules/Accordion', label="Accordion" 
+							add_custom_class_here ="accordion-1"
+							accordion_group=[
+							{
+							check_to_show_border:false,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_open_by_default:true,
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_number":"Q. ",
+							"add_question_here":"Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+							}
+							],
+							styles = {
+										 'text_white':{
+												'all_text_white' : false
+											},
+											'section_style' : {
+												'section_background' : {
+													'choose_section_background' :'color',
+													'add_background_color' :  {
+														'color' : '#FFFFFF',
+														'opacity':0
+													}
+												},
+												'section_spacing' : {
+													'desktop_spacing' : {
+														'padding' : {
+															'top' : {
+															  'value' : 20
+															},
+															'bottom' : {
+															  'value' :0
+															},
+															'left' : {
+															  'value' : 0
+															},
+															'right' : {
+															  'value' : 0
+															}
+														}
+													},
+													'tab_spacing' : {
+														'padding' : {
+															'top' : {
+															  'value' : 0
+															},
+															'bottom' : {
+															  'value' :0
+															},
+															'left' : {
+															  'value' : 0
+															},
+															'right' : {
+															  'value' : 0
+															}
+														}
+													},
+													'mobile_spacing' : {
+														'padding' : {
+															'top' : {
+															  'value' : 0
+															},
+															'bottom' : {
+															  'value' :0
+															},
+															'left' : {
+															  'value' : 0
+															},
+															'right' : {
+															  'value' : 0
+															}
+														}
+													 }
+												 }
+											 },
+											 'accordion_style' : {
+												 'accordion_background' : {
+													 'choose_accordion_background' :'color',
+													 'add_background_color' :  {
+														 'color' : '#FFFFFF',
+														 'opacity':0
+														}
+												 },
+												 'check_to_show_border' : true,
+												 'accordion_border':{
+												 'add_border_here':{
+													 "top": {
+														 "width": { "value": 1, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#E6E6E6"
+													 },
+													 "bottom": {
+														 "width": { "value": 0, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#E6E6E6"
+													 },
+													 "left": {
+														 "width": { "value": 0, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#E6E6E6"
+													 },
+													 "right": {
+														 "width": { "value": 0, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#E6E6E6"
+													 }
+												 },
+												 "add_border_radius_here" :"0"
+												 },
+												 'add_accordion_button_color' : { color : "#2CD8B1"},
+												 'spacing' : {
+													 'description_spacing' : {
+														'padding' : {
+															'top' : {
+															  'value' : 18
+															},
+															'bottom' : {
+															  'value' :15
+															},
+															'left' : {
+															  'value' : 0
+															},
+															'right' : {
+															  'value' : 65
+															}
+														}
+													},
+													'desktop_spacing' : {
+														'padding' : {
+															'top' : {
+															  'value' : 37
+															},
+															'bottom' : {
+															  'value' :20
+															},
+															'left' : {
+															  'value' : 0
+															},
+															'right' : {
+															  'value' : 0
+															}
+														}
+													},
+													'tab_spacing' : {
+														'padding' : {
+															'top' : {
+															  'value' : 25
+															},
+															'bottom' : {
+															  'value' :10
+															},
+															'left' : {
+															  'value' : 0
+															},
+															'right' : {
+															  'value' : 0
+															}
+														}
+													},
+													'mobile_spacing' : {
+														'padding' : {
+															'top' : {
+															  'value' : 25
+															},
+															'bottom' : {
+															  'value' :15
+															},
+															'left' : {
+															  'value' : 0
+															},
+															'right' : {
+															  'value' : 0
+															}
+														}
+													}
+												}
+											}
+						        }
+					%}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------  Accordion End Here  ---------------------------->
+
+<!-----------------------------------Slider Section Start Here---------------------------->
+
+  {% dnd_section 
+	    padding={
+				'default':{
+				'top':130,
+				'bottom':90
+				},
+				'mobile':{
+				'top':60,
+				'bottom':60
+				}
+			},
+			background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+	%}
+    {% dnd_column offset=0, column=12 %}
+      {% dnd_row
+				 padding={
+					 'default':{
+					 'bottom': 20,
+					 'left': 0,
+					 'right': 0
+					 },
+					 'mobile':{
+					 'bottom': 20,
+					 'left': 0,
+					 'right': 0
+					 }
+				 }
+      %}
+          {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="text-conta4",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h2>Heading Text</h2>
+								<p> The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a>offering.</a></p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-center",
+								set_max_width_of_the_content:"770"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							 }
+				 %}
+				 {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+         {% dnd_module path='../modules/Testimonial_Slider', label="Testimonial Slider",
+					  add_custom_class_here="slider_sec",
+            choose_slider_type="simple_slider",
+						"choose_dots_type"="dots_type_2",
+						simple_slider_group=[
+						{
+					  add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Microsoft.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Boy.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/google.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Pinterest.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/asana-3.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Boy.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Youtube.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Harvest.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 3.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						}
+						],
+						slider_function_group={
+						want_dots:"true",
+						want_arrows:"false",
+						want_autoplay:"false",
+						want_centermode:"true",
+						want_variable_width:"true",
+						wanted_to_play_infinitely:"true",
+						slider_speed:"700",
+						slider_autoplay_speed:"1000",
+						no_of_slides_to_show:"3",
+						no_of_slides_to_scroll:"1"
+						}
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------- Slider Section Ends Here----------------------------->
+
+
+{% end_dnd_area %}
+{% endblock body %} 

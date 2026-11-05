@@ -1,0 +1,60 @@
+{% import "../_variables.css" as var %}
+
+.quickfeat__item {
+  display: flex;
+  position: relative;
+}
+
+.quickfeat__item--with-link {
+  transition: .2s ease-in-out;
+}
+
+.quickfeat__item--with-link:hover {
+  transform: scale(1.05);
+}
+
+.quickfeat__item--no-anim:hover {
+  transform: none;
+}
+
+.quickfeat__icon {
+  flex-shrink: 0;
+}
+
+.quickfeat__text {
+  width: 100%;
+}
+
+.quickfeat__title {
+  margin-bottom: .56rem;
+}
+
+.quickfeat__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .quickfeat--stack-icon-sm .quickfeat__item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .quickfeat--stack-icon-sm .quickfeat__icon {
+    margin-bottom: .56rem;
+  }
+  
+  .quickfeat--stack-icon-sm .quickfeat__text {
+    padding-left: {{ var.gutter }}px !important;
+    padding-right: {{ var.gutter }}px !important;
+  }
+  
+  .quickfeat--stack-icon-sm .quickfeat__text {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

@@ -1,0 +1,44 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Edumind - blog listing
+  screenshotPath: ../images/template-previews/blog-index.png
+-->
+{% set template_css = "../../css/templates/blog.css" %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--blog-index p-0"
+%}
+
+  {# Breadcrumb Section Start #}
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# Blog Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16681644895877" path="../modules/Blog", label="Blog"
+    blog_layout = 'with-out-title',
+    section_class = '',
+
+
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Blog Section End #}
+
+  {# Blog Pagination Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16681645173722" path="../modules/Blog Pagination", label="Blog Pagination" %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Blog Pagination End #}
+
+  {# CTA Banner Section Start #} 
+  {% include_dnd_partial path='../sections/cta-banner.html' %}
+  {# CTA Banner Section End #}
+
+{% end_dnd_area %}
+{% endblock body %}

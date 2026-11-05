@@ -1,0 +1,4998 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../Images/Page Preview/Home One.png
+--> 
+{% extends './layouts/base.html' %} 
+{% block body %}
+{% dnd_area 'dnd_area_home' label='Home' class='body-container-home'%}
+
+
+<!----------------------------------Home Banner section Start Here---------------------------->
+
+    {% dnd_section
+				vertical_alignment='MIDDLE',
+					padding={
+					'default':{
+					'top': 114,
+					'bottom': 99 
+					},
+					'mobile':{
+					'top': 60,
+					'bottom': 60
+					} 
+				 },
+				 margin={
+					'default':{
+					'top': 125
+					},
+					'mobile':{
+					'top': 0
+					}
+				}
+      %}
+         {% dnd_column offset=0, width=6 %}
+          {% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+						add_custom_class_here="content-text",
+						choose_content_type="single-content",
+						single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"1",
+						add_heading_here:"Add two lines<br> of Heading Text",
+						check_to_show_description:true,
+						add_description_here:"<p>No coding required, Clean, Easily editable, design and developed by team of Hubspot certified Marketers, designers and programmers.</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-left",
+						set_max_width_of_the_content:"460"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row,
+         padding={
+           'default':{
+           'top': 25
+           },
+           'mobile':{
+           'top': 15
+           }
+         }
+      %}
+         {% dnd_module path='../modules/Buttons', label="Buttons"
+						 choose_number_of_cta="double",
+						 first_cta_group={
+						 choose_type_of_cta:"primary-cta",
+						 primary_cta_group:{
+						 choose_style_of_cta:"solid-cta"
+						 }
+						 },
+						 second_cta_group={
+						 choose_type_of_cta:"video-cta",
+						 video_cta_group:{
+						 choose_style_of_cta:"transparent-cta",
+						 choose_video_type:"wistia",
+						 add_wistia_video_id:"pukozq6xf0",
+						 add_video_title_here:"Watch video",
+						 add_play_icon_here:{
+						 'src': get_asset_url('../Images/Resized Image/Play Icon Black.svg'),
+						 'width':auto,
+						 'height':auto
+						 }
+						 }
+						 },
+						 styles={
+                'alignment_field':{
+                'horizontal_align' : 'LEFT'
+                },
+				        'single_cta_alignment':{
+						    'horizontal_align' : 'LEFT'
+						    }
+             }
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+   {% dnd_column offset=6 , width=6,
+	   padding={
+		 'default':{
+		 'top':0
+		 },
+		 'mobile':{
+		 'top':30
+		 }
+		 }
+	 %}
+      {% dnd_row %}
+						{% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image_Video_With_Before_Image"
+						 choose_between_image_and_video="image",
+						 image_group={
+						 add_custom_class_here:"image-1",
+						 add_image_here:{
+						 'alt':'Drag & drop',
+						 'src': get_asset_url('../Images/Column Images/Laptop-on-table.png'),
+						 'width':'531',
+						 'height':'498'
+						 },
+						 add_max_width_here:"528",
+						 check_to_show_box_shadow_to_image:false,
+						 set_max_width_in_responsive:"100"
+						 },
+						 check_to_add_vector_image=false,
+						 style={
+						 'check_to_show_spacing_for_section':false,
+						 'check_to_show_border_radius':true,
+						 'add_border_radius':'4',
+						 'set_alignment_for_image':"align-right"
+						 }
+					 %}
+					 {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+<!----------------------------------Home Banner section End Here---------------------------->
+
+<!--------------------------------  Single border Start Here -------------------------------->
+
+  {% dnd_section
+     vertical_alignment='MIDDLE'
+     padding={
+      'default':{
+      'top': 0,
+      'bottom':0
+      },
+      'mobile':{
+      'top': 0,
+      'bottom': 0
+      }
+    },
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<hr>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------  Single border End Here  ------------------------------->
+
+<!------------------------------------------------------- Three col Section Started ------------------------------------------------------->
+
+		{% dnd_section max_width = 1155,
+			 padding={
+				'default':{
+				'top': 100,
+				'bottom': 100
+				},
+				'mobile':{
+				'top': 60,
+				'bottom': 60
+				}
+			}
+		%}
+			{% dnd_column %}
+				{% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+					 add_custom_class_here="content-1",
+					 choose_content_type="single-content",
+					 single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"2",
+						add_heading_here:"Heading Text",
+						check_to_show_description:true,
+						add_description_here:"<p>The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a href='https://palmspire-3842749.hs-sites.com/en/'>offering</a>.</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-center",
+						set_max_width_of_the_content:"789"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+				{% dnd_row 
+					 padding={
+					  'default':{
+					  'top': 51
+					  },
+					  'mobile':{
+					  'top': 20
+					  }
+				 } 
+				%}
+					{% dnd_column, offset = 0, width = 4 %}
+						 {% dnd_row 
+								 padding={
+								 'default':{
+								 'bottom': 0
+								 },
+								 'mobile':{
+								 'bottom': 20
+								 }
+								}
+						 %}
+							 {% dnd_module path='../modules/Card', label="Card"
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4"
+									check_to_show_box_shadow = true,
+									check_to_show_hover_effect = false,
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									color : "#fff"
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here : {
+					        'alt': 'Headphones',
+									'src' : get_asset_url('../Images/Resized Image/Headphones.svg'),
+									 'width':48,
+									 'height':48
+									},
+									image_size_group : {
+									set_width_of_image : '52',
+									set_height_of_image : '52'
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : '4',
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false
+									},
+									style={
+										 'check_to_show_padding':true,
+										 'cards_spacing':{
+											 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													   'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }
+											 },
+											 'adjust_spacing_in_tab_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													  'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }											 
+											 },
+											 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+													 'top':{
+													   'value':20
+													 },
+													 'bottom':{
+													   'value':20
+													 },
+													 'left':{
+													  'value':20
+													 },
+													 'right':{
+													  'value':20
+													 }
+												 }														 
+											 }
+										 },
+										 'check_to_show_border_on_cards':false,
+										 'alignment':{
+										  'horizontal_align':'CENTER'
+										 },
+										 'add_spacing_here':{
+											 'margin':{
+												 'top':{
+												  'value':"25"
+												 }
+											 }
+										 },
+										 'check_this_to_show_maximum_width_of_card' : false
+									 }
+							 %}
+							 {% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+					{% dnd_column, offset = 4, width = 4 %}
+						{% dnd_row 
+							padding={
+							'default':{
+							'bottom': 0
+							},
+							'mobile':{
+							'bottom': 20
+							}
+						}
+						%}
+							{% dnd_module path='../modules/Card', label="Card"
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4"
+									check_to_show_box_shadow = true,
+									check_to_show_hover_effect = false,
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									color : "#fff"
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here : {
+					        'alt': 'Check Shield',
+									'src' : get_asset_url('../Images/shield.svg'),
+									'width':49,
+									'height':48
+									},
+									image_size_group : {
+									set_width_of_image : '52',
+									set_height_of_image : '52'
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : '4',
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false
+									},
+									style={
+										 'check_to_show_padding':true,
+										 'cards_spacing':{
+											 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													   'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }
+											 },
+											 'adjust_spacing_in_tab_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													  'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }											 
+											 },
+											 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+													 'top':{
+													   'value':20
+													 },
+													 'bottom':{
+													   'value':20
+													 },
+													 'left':{
+													  'value':20
+													 },
+													 'right':{
+													  'value':20
+													 }
+												 }														 
+											 }
+										 },
+										 'check_to_show_border_on_cards':false,
+										 'alignment':{
+										  'horizontal_align':'CENTER'
+										 },
+										 'add_spacing_here':{
+											 'margin':{
+												 'top':{
+												  'value':"25"
+												 }
+											 }
+										 },
+										 'check_this_to_show_maximum_width_of_card' : false
+									 }
+							 %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+					{% dnd_column, offset = 8, width = 4 %}
+						{% dnd_row %}
+							{% dnd_module path='../modules/Card', label="Card"
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4"
+									check_to_show_box_shadow = true,
+									check_to_show_hover_effect = false,
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									color : "#fff"
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here : {
+					        'alt': 'Up Graph',
+									'src' : get_asset_url('../Images/Resized Image/Up Graph.svg'),
+									'width': 40,
+									'height':48
+									},
+									image_size_group : {
+									set_width_of_image : '48',
+									set_height_of_image : '48'
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : '4',
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false
+									},
+									style={
+										 'check_to_show_padding':true,
+										 'cards_spacing':{
+											 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													   'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }
+											 },
+											 'adjust_spacing_in_tab_view':{
+												 'padding':{
+													 'top':{
+													   'value':37
+													 },
+													 'bottom':{
+													  'value':22
+													 },
+													 'left':{
+													  'value':30
+													 },
+													 'right':{
+													  'value':30
+													 }
+												 }											 
+											 },
+											 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+													 'top':{
+													   'value':20
+													 },
+													 'bottom':{
+													   'value':20
+													 },
+													 'left':{
+													  'value':20
+													 },
+													 'right':{
+													  'value':20
+													 }
+												 }														 
+											 }
+										 },
+										 'check_to_show_border_on_cards':false,
+										 'alignment':{
+										  'horizontal_align':'CENTER'
+										 },
+										 'add_spacing_here':{
+											 'margin':{
+												 'top':{
+												  'value':"25"
+												 }
+											 }
+										 },
+										 'check_this_to_show_maximum_width_of_card' : false
+									 }
+							 %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+				{% end_dnd_row %}
+				{% dnd_row 
+					 padding={
+					 'default':{
+					 'top': 64
+					 },
+					 'mobile':{
+					 'top': 30
+					 }
+				 }
+				%}
+					{% dnd_module path='../modules/Buttons', label="Buttons"
+							choose_number_of_cta="single",
+							single_cta_group={
+							"choose_type_of_cta":"primary-cta",
+							primary_cta_group:{
+							"choose_cta_type_here":"solid-cta"
+							}
+							},
+							styles={
+								'alignment_field':{
+									'horizontal_align' : 'CENTER'
+								},
+								'single_cta_alignment':{
+									'horizontal_align' : 'CENTER'
+								}
+						  }
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!---------------------------------------- Three col Section Ended ----------------------------------->
+
+
+<!------------------------------------- Before Image section Starts Here------------------------------>
+
+		{% dnd_section vertical_alignment='MIDDLE',
+			 padding={
+				 'default':{
+			   'top':120,
+				 'bottom':100
+				 },
+				 'mobile':{
+				 'top':60,
+				 'bottom':60
+				 }
+			},
+			background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+		%}
+			{% dnd_column offset=0, width=12 %} 
+				 {% dnd_row 
+						padding={
+						  'default':{
+						  'left': 0,
+							'right': 0,
+							'top': 0,
+					    'bottom': 65
+							},
+							'mobile':{
+							'left': 0,
+							'right': 0,
+							'top': 0,
+					    'bottom': 0
+							}
+						}
+				%}
+        {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="content-2",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h2>Heading Text</h2>
+								<p> The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a href='https://palmspire-3842749.hs-sites.com/home-1'>offering.</a></p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-center",
+								set_max_width_of_the_content:"827"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							 }
+				 %}
+				 {% end_dnd_module %}
+				{% end_dnd_row %}
+				{% dnd_row %}
+					{% dnd_column offset=0, width=6,
+						 padding={
+							 'mobile':{
+							 'top':30,
+							 'bottom':30
+							 }
+						}
+					%}
+						{% dnd_row %}
+							{% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image_Video_With_Before_Image"
+								 choose_between_image_and_video="image",
+								 image_group={
+								 "add_custom_class_here":"image-sec1",
+								 add_image_here:{
+								 'src': get_asset_url('../Images/Resized Image/Conversions.png'),
+								 "alt" : "Conversions",
+								 "width" : 507,
+                 "height" : 671
+								 },
+								 add_max_width_here:"506",
+								 check_this_to_show_border_radius:true,
+								 add_border_radius:"6",
+								 check_to_show_box_shadow_to_image:false,
+								 choose_alignment_for_image:"align-center",
+								 set_max_width_in_responsive:"100"
+								 },
+								 check_to_add_vector_image=false,
+								 style={
+									'set_alignment_for_image':"align-left",
+									'add_border_radius':'4'
+								 }
+							%}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+					{% dnd_column offset=6, width=6 %}
+						{% dnd_row %}
+							{% dnd_module path='../modules/Vertical_Separator', label="Vertical_separator",
+								 add_custom_class="custom",
+								 choose_list_type="unorder",
+								 content_group=[
+								 {
+								 choose_heading_here:"3",
+								 add_heading_here:"Heading Text",
+								 add_description_here:"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates, animi eveniet soluta</p>",
+								 add_padding_from_bottom_of_the_content:"59",
+								 check_to_show_cta:false
+								 },
+								 {
+							   choose_heading_here:"3",
+								 add_heading_here:"Heading Text",
+								 add_description_here:"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates, animi eveniet soluta</p>",
+								 add_padding_from_bottom_of_the_content:"59",
+								 check_to_show_cta:false
+								 },
+								 {
+								 choose_heading_here:"3",
+								 add_heading_here:"Heading Text",
+								 add_description_here:"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates, animi eveniet soluta</p>",
+								 add_padding_from_bottom_of_the_content:"59",
+								 check_to_show_cta:false,
+								 cta_group:{
+								 add_cta_name_here:"Call to Action",
+								 add_cta_link_here:{
+								 'url':{
+								 'href':"https://www.google.com/"
+								 }
+								 }
+								 }
+								 }
+								 ],
+								 style={
+										 'check_to_show_wrapper':false,
+										 'add_spacing_from_left_of_the_content':"85",
+										 'separator_group':{
+											 'vertical_line':{
+												 'add_line_width_here':"1",
+												 'add_line_color_here':{
+													 'color':"#e2e2e2",
+													 'opacity': 100
+												 }
+											 },
+											 'small_circle':{
+												 'add_circle_width_here':"14",
+												 'add_circle_height_here':"14",
+												 'add_circle_color_here':{
+													 'color':"#246bfd",
+													 'opacity': 100							
+												 }
+											 },
+											 'big_circle':{
+												 'add_circle_width_here':"32",
+												 'add_circle_height_here':"32",
+												 'add_circle_color_here':{
+												   'color':"#ffffff",
+													 'opacity': 100									
+												 },
+												 'add_border_here':{
+													 "top": {
+													   "width": { "value": 1, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#e2e2e2"
+													 },
+													 "bottom": {
+														 "width": { "value": 1, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#e2e2e2"
+													 },
+													 "left": {
+														 "width": { "value": 1, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#e2e2e2"
+													 },
+													 "right": {
+														 "width": { "value": 1, "units": "px" },
+														 "opacity": 100,
+														 "style": "solid",
+														 "color": "#e2e2e2"
+														}
+													}
+												}
+											}
+									 }
+							%}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+						{% dnd_row  
+							 padding={
+							  'default':{
+							  'left':88
+								},
+								'mobile':{
+								'left':60
+								}
+							}
+						%}
+							{% dnd_module path='../modules/Buttons', label="Buttons"
+								 choose_number_of_cta="single",
+								 single_cta_group={
+							   "choose_type_of_cta":"primary-cta",
+								 primary_cta_group:{
+								 "choose_cta_type_here":"solid-cta"
+								 }
+								 },
+								 styles={
+										 'alignment_field':{
+											 'horizontal_align' : 'LEFT'
+										 },
+										 'single_cta_alignment':{
+											 'horizontal_align' : 'LEFT'
+										 }
+									}
+							%}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!---------------------------------------Bottom Heading Starts----------------------------------->
+
+		{% dnd_section background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}" %}
+			{% dnd_column offset=0, width=12 %}
+				 {% dnd_row %}
+						{% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+							 {% module_attribute "html"%}
+										<hr>
+							 {% end_module_attribute %}
+						{% end_dnd_module %}
+				 {% end_dnd_row %}
+				 {% dnd_row 
+						padding={
+							'default':{
+							'top':46,
+							'bottom':44
+							},
+							'mobile':{
+							'top':30,
+							'bottom':30
+							}
+						}
+				 %}
+					  {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description", horizontal_alignment='CENTER' %}
+							 {% module_attribute "html"%}
+									<div class="h4_24">
+										<h4>Subscribe to <span>free resources</span> TODAY! Be one of 2.000+ users.</h4>
+									</div>
+							 {% end_module_attribute %}
+						{% end_dnd_module %}
+				 {% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!---------------------------------------Bottom Heading Ends------------------------------------->
+
+<!-------------------------------------------- Two Column Content Section starts here ----------------------------------------------->
+
+ {% dnd_section 
+  padding={
+	'default':{
+	'top':130,
+	'bottom':65
+	},
+	'mobile':{
+	'top':60,
+	'bottom':60
+	}
+	}
+ %}
+     {% dnd_column offset=0, column=12 %}
+       {% dnd_row %}
+					{% dnd_column offset=0, width=6,
+						 padding={
+						  'default':{
+						  'left': 00,
+						  'right': 40
+							 },
+						  'mobile':{
+						  'left': 0,
+						  'right': 0
+							}
+						}
+					%}
+              {% dnd_row %}
+							 {% dnd_module path='../modules/Card', label="Card" 
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4",
+									check_to_show_box_shadow = false,
+									check_to_show_hover_effect = false,
+									hover = {
+									check_to_show_border_on_hover : false,
+									border_on_hover_group :{
+									set_border_width_here : '1',
+									set_border_color_here : {
+									'color' : '#e2e2e2',
+									'opacity':0
+									}
+									},
+									check_to_show_on_icon_on_hover : false,
+									check_to_show_box_shadow : false,
+									add_box_shadow_here : "0 4px 70px 0 rgba(0, 0, 0, 0.1)"
+									},
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									'color' : '#ffffff',
+									'opacity': 0
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here :{
+									'alt':'Up Graph',
+									'src':get_asset_url('../Images/Resized Image/Monitor.svg'),
+									'width': auto,
+									'height': auto
+									},
+									check_to_show_border_radius_of_image : true,
+									circular_image_group : {
+									add_border_radius_for_top_left_corner : "0",
+									add_border_radius_for_top_right_corner : "0",
+									add_border_radius_for_bottom_left_corner : "0",
+									add_border_radius_for_bottom_right_corner : "0",
+									check_to_show_maximum_width_of_image : false
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : "3",
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Its the best solution, saves time and money and give you the website that converts. you can reach out to us to know more about the services via email or chat, our email is <a href='mailto:hello@palmspire.com'>hello@palmspire.com</a></p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false,
+									choose_type_of_call_to_action : "simple-cta",
+									call_to_action_group : {
+									add_cta_link_here:{
+										"url":{
+										"href":"https://www.google.com/"
+										}
+									},
+									add_cta_text_here : "Read More"
+									}
+									},
+									style = {
+									'check_to_show_padding' : true,
+										'cards_spacing' : {
+											 'adjust_spacing_in_desktop_view' : {
+													'padding' : {
+															'top' : {
+																 'value' : 0
+															},
+															'bottom' : {
+																 'value' : 0
+															},
+															'left' : {
+																 'value' : 0
+															},
+															'right' : {
+																 'value' : 0
+															}
+													 }
+													 },
+													 'adjust_spacing_in_tab_view' : {
+														'padding' : {
+															 'top' : {
+																	'value' : 0
+															 },
+															 'bottom' : {
+																	'value' : 0
+															 },
+															 'left' : {
+																	'value' : 0
+															 },
+															 'right' : {
+																	'value' : 0
+															 }
+														}
+													 },
+													 'adjust_spacing_in_mobile_view' : {
+														'padding' : {
+															 'top' : {
+																	'value' : 0
+															 },
+															 'bottom' : {
+																	'value' : 0
+															 },
+															 'left' : {
+																	'value' : 0
+															 },
+															 'right' : {
+																	'value' : 0
+															 }
+														}
+													}
+												},
+												'check_to_show_border_on_cards' : false,
+												'alignment':{
+												'set_card_content_alignment':{
+																'horizontal_align':'LEFT'
+												}
+												},
+												 'add_spacing_here' : {
+													 'padding' : {
+															'top' : {
+																 'value' : 20
+															},
+															'bottom' : {
+																 'value' : 0
+															},
+															'left' : {
+																 'value' : 0
+															},
+															'right' : {
+																 'value' : 0
+															}
+													 },
+													 'margin' : {
+															'top' : {
+																 'value' : 0
+															},
+															'bottom' : {
+																 'value' : 0
+															}
+													 }
+												 }
+										}
+								 %}
+							 {% end_dnd_module %}
+              {% end_dnd_row %}
+						{% end_dnd_column %} 
+							{% dnd_column offset=6, width=6,
+								 padding={
+									'default':{
+									'left': 40,
+									'right': 0,
+									'top':0
+									},
+									'mobile':{
+									'left': 0,
+									'right': 0,
+									'top':30
+									}
+								}
+							%}
+               {% dnd_row %}
+							   {% dnd_module path='../modules/Card', label="Card" 
+									check_to_show_wrapper = false,
+									add_padding_top_here = "0",
+									add_padding_bottom_here = "0",
+									check_to_show_border_radius = true,
+									add_border_radius_here = "4",
+									check_to_show_box_shadow = false,
+									check_to_show_hover_effect = false,
+									hover = {
+									check_to_show_border_on_hover : false,
+									border_on_hover_group :{
+									set_border_width_here : '1',
+									set_border_color_here : {
+									'color' : '#e2e2e2',
+									'opacity':0
+									}
+									},
+									check_to_show_on_icon_on_hover : false,
+									check_to_show_box_shadow : false,
+									add_box_shadow_here : "0 4px 70px 0 rgba(0, 0, 0, 0.1)"
+									},
+									check_to_show_image_in_bottom = false,
+									card_content =
+									{
+									check_to_show_background_color_of_card : true,
+									add_card_color_here : {
+									'color' : '#ffffff',
+									'opacity': 0
+									},
+									check_to_show_all_text_white : false,
+									check_to_show_image_background_image_here : true,
+									image_group : {
+									choose_between_image_and_background_image : "image",
+									add_image_here :{
+									'alt':'Speaker',
+									'src':get_asset_url('../Images/icon/Speaker.svg'),
+									'width': auto,
+									'height': auto
+									},
+									check_to_show_border_radius_of_image : true,
+									circular_image_group : {
+									add_border_radius_for_top_left_corner : "0",
+									add_border_radius_for_top_right_corner : "0",
+									add_border_radius_for_bottom_left_corner : "0",
+									add_border_radius_for_bottom_right_corner : "0",
+									check_to_show_maximum_width_of_image : false
+									}
+									},
+									check_to_show_heading : true,
+									select_heading : "3",
+									add_heading_here : "Heading Text",
+									check_to_show_description : true,
+									add_description_here : "<p>Its the best solution, saves time and money and give you the website that converts. you can reach out to us to know more about the services via email or chat.</p>",
+									check_to_show_email_option : false,
+									check_to_show_call_to_action : false,
+									choose_type_of_call_to_action : "simple-cta",
+									call_to_action_group : {
+									add_cta_link_here:{
+										"url":{
+										"href":"https://www.google.com/"
+										}
+									},
+									add_cta_text_here : "Read More"
+									}
+									},
+									style = {
+									'check_to_show_padding' : true,
+										'cards_spacing' : {
+											 'adjust_spacing_in_desktop_view' : {
+													'padding' : {
+															'top' : {
+																 'value' : 0
+															},
+															'bottom' : {
+																 'value' : 0
+															},
+															'left' : {
+																 'value' : 0
+															},
+															'right' : {
+																 'value' : 0
+															}
+													 }
+													 },
+													 'adjust_spacing_in_tab_view' : {
+														'padding' : {
+															 'top' : {
+																	'value' : 0
+															 },
+															 'bottom' : {
+																	'value' : 0
+															 },
+															 'left' : {
+																	'value' : 0
+															 },
+															 'right' : {
+																	'value' : 0
+															 }
+														}
+													 },
+													 'adjust_spacing_in_mobile_view' : {
+														'padding' : {
+															 'top' : {
+																	'value' : 0
+															 },
+															 'bottom' : {
+																	'value' : 0
+															 },
+															 'left' : {
+																	'value' : 0
+															 },
+															 'right' : {
+																	'value' : 0
+															 }
+														}
+													}
+												},
+												'check_to_show_border_on_cards' : false,
+												'alignment':{
+												'set_card_content_alignment':{
+																'horizontal_align':'LEFT'
+												}
+												},
+												 'add_spacing_here' : {
+													 'padding' : {
+															'top' : {
+																 'value' : 20
+															},
+															'bottom' : {
+																 'value' : 0
+															},
+															'left' : {
+																 'value' : 0
+															},
+															'right' : {
+																 'value' : 0
+															}
+													 },
+													 'margin' : {
+															'top' : {
+																 'value' : 0
+															},
+															'bottom' : {
+																 'value' : 0
+															}
+													 }
+												 }
+										}
+								   %}
+							     {% end_dnd_module %}
+                {% end_dnd_row %}
+						{% end_dnd_column %} 
+         {% end_dnd_row %}
+     {% end_dnd_column %}
+ {% end_dnd_section %}
+
+<!--------------------------------------------- Two Column Content Section ends here ------------------------------------------------>
+ 
+<!--------------------------------  Single border Start Here -------------------------------->
+
+  {% dnd_section
+     vertical_alignment='MIDDLE'
+     padding={
+      'default':{
+      'top': 0,
+      'bottom':0
+      },
+      'mobile':{
+      'top': 0,
+      'bottom': 0
+     }
+    }
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<hr>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------  Single border End Here  ------------------------------->
+
+<!----------------------------------Home Brand icons sectionStart Here------------------------------->
+  {% dnd_section,
+     vertical_alignment='MIDDLE',
+     padding={
+       'default':{
+       'top': 45,
+       'bottom': 44
+       },
+       'mobile':{
+       'top': 40,
+       'bottom': 40
+       }
+    }
+  %}
+    {% dnd_column offset=0, width=12 %}
+       {% dnd_row vertical_alignment='MIDDLE' %}
+         {% dnd_column offset=0, width=2 %}
+            {% dnd_row vertical_alignment='MIDDLE', 
+							padding={
+               'default':{
+               'top': 10,
+               'bottom': 10,
+               'left':10,
+               'right':10
+               },
+               'mobile':{
+               'top': 20,
+               'bottom': 20
+               }
+               },
+              margin={
+               'default':{
+               'top': 5,
+               'bottom': 5
+               },
+               'mobile':{
+               'top': 0,
+               'bottom': 0
+               }
+             }       
+         %}
+           {% dnd_module
+							path='@hubspot/linked_image', label='Logo',
+							horizontal_alignment='CENTER',
+							img={
+								'alt': 'Microsoft',
+								'src': get_asset_url('../Images/Microsoft.png'),
+								'width': 121,
+								'height':27
+							}
+            %}
+          {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+      {% dnd_column offset=2, width=2 %}
+         {% dnd_row vertical_alignment='MIDDLE'
+            padding={
+              'default':{
+              'top': 10,
+              'bottom': 10,
+              'left':10,
+              'right':10
+              },
+              'mobile':{
+              'top': 20,
+              'bottom': 20
+             }
+            },
+            margin={
+              'default':{
+              'top': 5,
+              'bottom': 5
+              },
+              'mobile':{
+              'top': 0,
+              'bottom': 0
+              }
+            }          
+         %}
+           {% dnd_module
+							path='@hubspot/linked_image',label='Logo',
+							horizontal_alignment='CENTER',
+							img={
+								'alt': 'Youtube',
+								'src': get_asset_url('../Images/Youtube.png'),
+								'width': 121,
+								'height':27
+							}
+           %}
+           {% end_dnd_module %}
+         {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=4, width=2 %}
+         {% dnd_row
+            padding={
+             'default':{
+             'top': 10,
+             'bottom': 10,
+             'left':10,
+             'right':10
+             },
+             'mobile':{
+             'top': 20,
+             'bottom': 20
+             }
+            },
+            margin={
+             'default':{
+             'top': 5,
+             'bottom': 5
+             },
+             'mobile':{
+             'top': 0,
+             'bottom': 0
+             }
+           }          
+         %}
+           {% dnd_module
+							path='@hubspot/linked_image',label='Logo',
+							horizontal_alignment='CENTER',
+							img={
+								'alt': 'Harvest',
+								'src': get_asset_url('../Images/Harvest.png'),
+								'width': 121,
+								'height':27
+							}
+            %}
+            {% end_dnd_module %}
+         {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=6, width=2 %}
+         {% dnd_row vertical_alignment='MIDDLE'
+            padding={
+              'default':{
+              'top': 10,
+              'bottom': 10,
+              'left':10,
+              'right':10
+              },
+              'mobile':{
+              'top': 20,
+              'bottom': 20
+              }
+            },
+            margin={
+              'default':{
+              'top': 5,
+              'bottom': 5
+              },
+              'mobile':{
+              'top': 0,
+              'bottom': 0
+              }
+            }           
+         %}
+           {% dnd_module
+							path='@hubspot/linked_image',label='Logo',
+							horizontal_alignment='CENTER',
+							img={
+								'alt': 'slack',
+								'src': get_asset_url('../Images/Slack.png'),
+								'width': 121,
+								'height':27
+							}
+            %}
+           {% end_dnd_module %}
+         {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=8, width=2 %}
+         {% dnd_row vertical_alignment='MIDDLE'
+            padding={
+              'default':{
+              'top': 10,
+              'bottom': 10,
+              'left':10,
+              'right':10
+              },
+              'mobile':{
+              'top': 20,
+              'bottom': 20
+              }
+            },
+            margin={
+              'default':{
+              'top': 5,
+              'bottom': 5
+              },
+              'mobile':{
+              'top': 0,
+              'bottom': 0
+              }
+           }         
+         %}
+           {% dnd_module
+							path='@hubspot/linked_image',label='Logo',
+							horizontal_alignment='CENTER',
+							img={
+								'alt': 'Asana',
+								'src': get_asset_url('../Images/asana-3.png'),
+								'width': 121,
+								'height':27
+							}
+            %}
+           {% end_dnd_module %}
+         {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=10, width=2 %}
+         {% dnd_row vertical_alignment='MIDDLE'
+            padding={
+              'default':{
+              'top': 10,
+              'bottom': 10,
+              'left':10,
+              'right':10
+              },
+              'mobile':{
+              'top': 20,
+              'bottom': 20
+              }
+            },
+            margin={
+              'default':{
+              'top': 5,
+              'bottom': 5
+              },
+              'mobile':{
+              'top': 0,
+              'bottom': 0
+              }
+            }      
+         %}
+           {% dnd_module
+							path='@hubspot/linked_image',label='Logo',
+							horizontal_alignment='CENTER',
+							img={
+								'alt': 'Pinterest',
+								'src': get_asset_url('../Images/Pinterest.png'),
+								'width': 121,
+								'height':27
+							}
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------Home Brand icons section End Here---------------------------->
+
+
+
+<!---------------------------------- Right Image left text Start Here---------------------------->
+
+		{% dnd_section vertical_alignment='MIDDLE',
+			 padding={
+				 'default':{
+				 'top':120,
+				 'bottom':120
+				 },
+				'mobile':{
+				'top':60,
+				'bottom':60
+				}
+			 },
+			 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+		%}
+			{% dnd_column offset=0, width=6 %}
+				{% dnd_row %}
+					 {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+							{% module_attribute "html"%}
+									<h2><strong>Heading Text</strong></h2>
+									<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident Facilisis dapibus convallis molestie fugit.</p>
+							{% end_module_attribute %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+				{% dnd_row
+				   padding={
+					  'default':{
+					  'top':15
+					  },
+					  'mobile':{
+					  'top':8
+					  }
+					 }
+				%}
+					{% dnd_module path='../modules/List_Item', label="List Item"
+						 choose_list_item = "unordered",
+						 unordered_group = [
+						 {
+						 choice_image_or_icon : 'icon',
+						 add_before_icon_here : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c"
+						 },
+						 add_list_text_here : "Desktop cinema display.",
+						 set_spacing_from_left_side : "34",
+						 set_spacing_from_bottom : "9"
+						 }
+						 ],
+						 style = {
+							 'all_text_white' : false,
+							 'check_to_show_spacing' : false,
+							 'choose_background_option' : 'none',
+							 'list_item_styling':{
+								 'add_color_for_list_items':{
+								   'color':'#737588'
+								 },
+								 'add_font_size_for_list_items':'16',
+								 'add_font_weight_for_list_items':'400'
+								 }
+						 }
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module path='../modules/List_Item', label="List Item"
+             choose_list_item = "unordered",
+						 unordered_group = [
+						 {
+						 choice_image_or_icon : 'icon',
+						 add_before_icon_here : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c"
+						 },
+						 add_list_text_here : "iPad or tablet.",
+						 set_spacing_from_left_side : "34",
+						 set_spacing_from_bottom : "9"
+						 }
+						 ],
+						 style = {
+							 'all_text_white' : false,
+							 'check_to_show_spacing' : false,
+							 'choose_background_option' : 'none',
+							 'list_item_styling':{
+								 'add_color_for_list_items':{
+								   'color':'#737588'
+								 },
+								 'add_font_size_for_list_items':'16',
+								 'add_font_weight_for_list_items':'400'
+								 }
+						 }				
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module path='../modules/List_Item', label="List Item"
+             choose_list_item = "unordered",
+						 unordered_group = [
+						 {
+						 choice_image_or_icon : 'icon',
+						 add_before_icon_here : {
+							"name" : "Check",
+							"type" : "SOLID",
+							"unicode" : "f00c"
+						 },
+						 add_list_text_here : "Mobile device of your liking. Double check!",
+						 set_spacing_from_left_side : "34",
+						 set_spacing_from_bottom : "9"
+						 }
+						 ],
+						 style = {
+							 'all_text_white' : false,
+							 'check_to_show_spacing' : false,
+							 'choose_background_option' : 'none',
+							 'list_item_styling':{
+								 'add_color_for_list_items':{
+								   'color':'#737588'
+								 },
+								 'add_font_size_for_list_items':'16',
+								 'add_font_weight_for_list_items':'400'
+								 }
+						 }
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+				{% dnd_row 
+					margin={
+						'default':{
+						'top':38
+						},
+						'mobile':{
+						'top':15
+						}
+					}
+				%}
+					 {% dnd_module path='../modules/Buttons', label="Buttons"
+						  choose_number_of_cta="single",
+						  single_cta_group={
+						  "choose_type_of_cta":"primary-cta",
+						  primary_cta_group:{
+						  "choose_cta_type_here":"solid-cta"
+						  }
+						  },
+						  styles={
+								'alignment_field':{
+								  'horizontal_align' : 'LEFT'
+							  },
+							 	'single_cta_alignment':{
+								  'horizontal_align' : 'LEFT'
+								}
+						  }
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+			{% dnd_column offset=6, width=6,
+				 padding={
+					'mobile':{
+					'top':30
+					}
+				}
+			%}
+				{% dnd_row %}
+						{% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image_Video_With_Before_Image"
+						 choose_between_image_and_video="image",
+						 image_group={
+						 add_custom_class_here:"image-sec2",
+						 add_image_here:{
+						 'alt':'Search',
+						 'src': get_asset_url('../Images/Resized Image/Search.png'),
+						 'width':546,
+						 'height':338
+						 },
+						 add_max_width_here:"544",
+						 check_to_show_box_shadow_to_image:false,
+						 set_max_width_in_responsive:"100"
+						 },
+						 check_to_add_vector_image=false,
+						 style={
+						 'check_to_show_spacing_for_section':false,
+						 'check_to_show_border_radius':true,
+						 'add_border_radius':'4',
+						 'set_alignment_for_image':"align-right"
+						 }
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!-------------------------------------Right Image left text section Ends Here------------------------------->
+
+<!-------------------------------------Left Image Right text section Start Here------------------------------>
+
+    {% dnd_section max_width=1224,
+       vertical_alignment='MIDDLE'
+       padding={
+         'default':{
+         'top': 120,
+         'bottom': 120
+         },
+         'mobile':{
+         'top': 60,
+         'bottom': 60
+         }
+        }
+       %}
+         {% dnd_column offset=0 , width=6 %}
+           {% dnd_row %}
+						{% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image_Video_With_Before_Image"
+						 choose_between_image_and_video="image",
+						 image_group={
+						 add_custom_class_here:"image-2",
+						 add_image_here:{
+						 'alt':'Dedicated Experts',
+						 'src': get_asset_url('../Images/Resized Image/Dedicated Experts.png'),
+						 'width':592,
+						 'height':407
+						 },
+						 add_max_width_here:"592",
+						 check_to_show_box_shadow_to_image:false,
+						 set_max_width_in_responsive:"100"
+						 },
+						 check_to_add_vector_image=false,
+						 style={
+						 'check_to_show_spacing_for_section':false,
+						 'check_to_show_border_radius':true,
+						 'add_border_radius':'4',
+						 'set_alignment_for_image':"align-left"
+						 }
+					 %}
+					 {% end_dnd_module %}
+           {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=6, width=6, 
+				    padding={
+							'default':{
+							'top': 0
+							},
+							'mobile':{
+							'top': 30
+							}
+						}
+				  %}
+            {% dnd_row %}
+							{% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="content1",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:true,
+								choose_heading:"2",
+								add_heading_here:"Heading Text",
+								check_to_show_description:true,
+								add_description_here:"<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident Facilisis dapibus convallis molestie fugit.</p>
+		<p>Sociosqu eos voluptatibus modi, porttitor natoque proin proident Facilisis dapibus</p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-left",
+								set_max_width_of_the_content:"518"
+							 },
+							 styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										 'add_border_here':{
+																	"top": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "bottom": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "left": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "right": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 }
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+															 'adjust_spacing_in_desktop_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}												
+														},
+														'adjust_spacing_in_tab_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}											
+														},
+														'adjust_spacing_in_mobile_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}											
+														}
+										 }
+							 }
+							%}
+							{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row
+						   padding={
+                'default':{
+                'top': 15,
+                'bottom': 0
+                },
+                'mobile':{
+                'top': 15,
+                'bottom': 0
+                }
+               }
+				 		 %}
+              {% dnd_module path='../modules/Counter_And_Countdown', label="Counter and countdown",
+									choose_between_counter_and_countdown = "counter",
+									counter_group = {
+									add_custom_class_here : 'counter-section',
+									choose_column_layout : 'three-col-adjust',
+									choose_counter_text_size_here : '2',
+									counter_content : [
+									{
+									add_counter_number_here : '50',
+									add_heading_here : 'Heading Text',
+									check_to_show_before_content : false,
+									check_to_show_after_content : true,
+									add_content_after_the_counter_number : '+',
+									check_to_show_border_bottom : false,
+									check_to_show_border_right : false
+									},
+									{
+									add_counter_number_here : '50',
+									add_heading_here : 'Heading Text',
+									check_to_show_before_content : false,
+									check_to_show_after_content : true,
+									add_content_after_the_counter_number : '+',
+									check_to_show_border_bottom : false,
+									check_to_show_border_right : false
+									},
+									{
+									add_counter_number_here : '50',
+									add_heading_here : 'Heading Text',
+									check_to_show_before_content : false,
+									check_to_show_after_content : true,
+									add_content_after_the_counter_number : '+',
+									check_to_show_border_bottom : false,
+									check_to_show_border_right : false
+									}
+									],
+									choose_content_alignment : 'align-left'
+									},
+									style={
+									'counter_group':{
+									'show_wrapper':false,
+									'show_all_text_white':false,
+									 'spacing' : {
+                     'add_spacing_for_desktop_here' : {
+                        'padding' : {
+                            'top' : {
+                              'value' : 0
+                            },
+                            'bottom' : {
+                              'value' : 0
+                            },
+                            'left' : {
+                              'value' : 0
+                            },
+                            'right' : {
+                              'value' : 0
+                            }
+                          }
+                       },
+                       'add_spacing_for_tab_here' : {
+                         'padding' : {
+                            'top' : {
+                              'value' : 0
+                            },
+                            'bottom' : {
+                              'value' : 0
+                            },
+                            'left' : {
+                               'value' : 0
+                            },
+                            'right' : {
+                              'value' : 0
+                            }
+                          }
+                       },
+                       'add_spacing_for_mobile_here' : {
+                          'padding' : {
+                             'top' : {
+                               'value' : 0
+                             },
+                             'bottom' : {
+                                'value' : 0
+                             },
+                             'left' : {
+                                'value' : 0
+                             },
+                             'right' : {
+                                'value' : 0
+                             }
+                          }
+                        }
+                     },
+										'background':{
+											'choose_background_type':'color',
+											'add_background_color_here':{
+												'color':'#fff',
+												'opacity':0
+											}
+										},
+										'check_to_show_content_spacing': false
+										}
+								 }
+							%}
+            {% end_dnd_module %}
+         {% end_dnd_row %}
+       {% end_dnd_column %}
+     {% end_dnd_section %}
+
+<!-------------------------------------Left Image Right text section Ends Here------------------------------->
+
+<!------------------------------------- Tabber section  Start Here------------------------------>
+
+		{% dnd_section 
+			 padding={
+				'default':{
+				'top':140,
+				'bottom':140
+				},
+				'mobile':{
+				'top':60,
+				'bottom':60
+			  }
+			},
+			background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+		%}
+			{% dnd_column offset=0, width=12 %}
+				{% dnd_row %}
+					 {% dnd_module path='../modules/Tabber', label="Tabber_Section",
+						  add_custom_class="content-tabber",
+						  tabber_group=[
+						  {
+						  add_left_heading_here:"Heading Text",
+						  add_left_content_here:"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>",
+						  add_right_heading_here:"Heading Text",
+						  add_right_sub_heading_here:"More of an understanding",
+						  add_right_content_here:"<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident! Facilisis dapibus convallis molestie fugit,
+						  taciti! Itaque! Pharetra alias, animi consectetur? Autem cupidatat incidunt nec! Voluptates illo! Voluptas ligula sodales curabitur.</p>
+						  <p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident.</p>"
+						  },
+						  {
+						  add_left_heading_here:"Heading Text",
+						  add_left_content_here:"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>",
+						  add_right_heading_here:"Heading Text",
+						  add_right_sub_heading_here:"More of an understanding of what's provided by your Team or products and services.",
+						  add_right_content_here:"<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident! Facilisis dapibus convallis molestie fugit, 
+						  taciti! Itaque! Pharetra alias, animi consectetur? Autem cupidatat incidunt nec! Voluptates illo! Voluptas ligula sodales curabitur.</p>
+						  <p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident.</p>"
+						  },
+						  {
+						  add_left_heading_here:"Heading Text",
+						  add_left_content_here:"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>",
+						  add_right_heading_here:"Heading Text",
+						  add_right_sub_heading_here:"More of an understanding of what's provided by your Team.",
+						  add_right_content_here:"<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident! Facilisis dapibus convallis molestie fugit, 
+						  taciti! Itaque! Pharetra alias, animi consectetur? Autem cupidatat incidunt nec! Voluptates illo! Voluptas ligula sodales curabitur.</p>
+						  <p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident.</p>"
+						  }
+						  ],
+						  styles = {
+								spacing:{
+									spacing_for_right_simple_text: {
+										'margin':{
+										 'top':{
+											 'value':"30"
+										 },
+										 'bottom':{
+											 'value':"50"
+										 }
+									 }
+								 }
+							 }
+						 }
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!------------------------------------- Tabber section Ends Here------------------------------->
+
+<!------------------------------------- Dark section with Three Columns Start Here------------------------------>
+
+		{% dnd_section 
+					 padding={
+					 'default':{
+					 'top':140,
+					 'bottom':125
+					 },
+					 'mobile':{
+					 'top':60,
+					 'bottom':60
+					 }
+					 },
+					background_color="{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}"
+		 %}
+			{% dnd_column offset=0, width=12 %}
+				{% dnd_row %}
+					 {% dnd_column offset=0, width=5 %}
+							{% dnd_row %}
+								{% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+									{% module_attribute "html"%}
+									  <h2 style="color:#fff;">Heading Text</h2>
+									{% end_module_attribute %}
+								{% end_dnd_module %}
+							{% end_dnd_row %}
+							{% dnd_row 
+							   padding={
+								  'default':{
+								  'top':17,
+								  'bottom':0
+								  },
+								  'mobile':{
+								  'top':10,
+								  'bottom':0
+								  }
+								 }
+							 %}
+								 {% dnd_module path='../modules/Buttons', label="Buttons"
+										choose_number_of_cta="single",
+										single_cta_group={
+										"choose_type_of_cta":"video-cta",
+										video_cta_group:{
+										"choose_style_of_cta":"solid-cta",
+										"choose_video_type":"wistia",
+										"add_wistia_video_id":"pukozq6xf0",
+										"add_video_title_here":"Watch Video",
+										"add_play_icon_here":{
+										'src': get_asset_url('../Images/Play-button.svg'),
+										 'width':auto,
+										 'height':auto
+										}
+										}
+										},
+										styles={
+											'alignment_field':{
+											  'horizontal_align' : 'LEFT'
+											},
+											'single_cta_alignment':{
+											  'horizontal_align' : 'LEFT'
+											}
+									  }  
+								%}
+								{% end_dnd_module %}
+							{% end_dnd_row %}
+					 {% end_dnd_column %}
+					 {% dnd_column offset=5, width=7,
+							padding={
+							'default':{
+							'top':0,
+							'left':38
+							},
+							'mobile':{
+							'top': 30,
+							'left':0
+							}
+							}
+					 %}
+							{% dnd_row %}
+								{% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+									{% module_attribute "html"%}
+									  <p style="color:#fff;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+									  	when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+									  <p style="color:#fff;">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+									{% end_module_attribute %}
+								{% end_dnd_module %}
+							{% end_dnd_row %}
+							{% dnd_row 
+							   padding={
+								  'default':{
+								  'top':20,
+								  'bottom':0
+								  },
+								  'mobile':{
+								  'top':20,
+								  'bottom':0
+								  }
+								}
+							%}
+								{% dnd_module path='../modules/Buttons', label="Buttons"
+									 choose_number_of_cta="single",
+									 single_cta_group={
+									 "choose_type_of_cta":"secondary-cta"
+									 },
+									 styles={
+											'alignment_field':{
+											  'horizontal_align' : 'LEFT'
+											},
+											'single_cta_alignment':{
+											  'horizontal_align' : 'LEFT'
+											}
+									}
+							%}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+				{% end_dnd_row %}
+				{% dnd_row 
+					padding={
+						'default':{
+						'top':150
+						},
+						'mobile':{
+						'top':0
+						}
+					}
+				%}
+					{% dnd_column offset=0, width=3,
+						 padding={
+							 'default':{
+							 'top':0,
+							 'bottom':0,
+							 'right':12
+							 },
+							 'mobile':{
+							 'top':20,
+							 'bottom':20,
+							 'right':0
+							 }
+						 }
+					%}
+						{% dnd_row 
+							 margin={
+							  'bottom':26
+							 }
+						%}
+							 {% dnd_module
+									path='@hubspot/linked_image',
+									img={
+										'alt': 'Monitor',
+										'src': get_asset_url('../Images/Resized Image/Monitor.svg'),
+										'width': 52,
+										'height':35
+									}
+							 %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+						{% dnd_row %}
+							{% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+								{% module_attribute "html"%}
+										<h4 style="color:#fff;">Heading Text</h4>
+										<p style="color:#fff;">The headline and subheader tells us what you're offering, closes the deal. Over here you can</p>
+								{% end_module_attribute %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+					{% dnd_column offset=3, width=3,
+						 padding={
+							'default':{
+							'bottom':0,
+							'right':12
+							},
+							'mobile':{
+							'bottom':20,
+							'right':0
+							}
+						}
+					%}
+						{% dnd_row 
+							 margin={
+							 'bottom':26
+							}
+						%}
+							{% dnd_module
+									path='@hubspot/linked_image',
+									img={
+										'alt': 'Check Shield',
+										'src': get_asset_url('../Images/Resized Image/Check Shield.svg'),
+										'width': 39,
+										'heigt':41
+									}
+							%}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+						{% dnd_row %}
+							{% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+								{% module_attribute "html"%}
+										<h4 style="color:#fff;">Heading Text</h4>
+										<p style="color:#fff;">The headline and subheader tells us what you're offering, closes the deal. Over here you can</p>
+								{% end_module_attribute %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+					{% dnd_column offset=6, width=3,
+						 padding={
+							'default':{
+							'bottom':0,
+							'right':12
+							},
+							'mobile':{
+							'bottom':20,
+							'right':0
+							}
+						}
+					%}
+						{% dnd_row 
+							 margin={
+							 'bottom':26
+							}
+						%}
+							{% dnd_module
+									path='@hubspot/linked_image',
+									img={
+										'alt': 'Headphones',
+										'src': get_asset_url('../Images/Resized Image/Headphones.svg'),
+										'width': 43,
+										'height':38
+									}
+								%}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+						{% dnd_row %}
+							 {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+									{% module_attribute "html"%}
+											<h4 style="color:#fff;">Heading Text</h4>
+											<p style="color:#fff;">The headline and subheader tells us what you're offering, closes the deal. Over here you can</p>
+									{% end_module_attribute %}
+							 {% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+          {% dnd_column offset=9, width=3,
+             padding={
+							 'default':{
+							 'right':12
+							 },
+							 'mobile':{
+							 'right':0
+							 }
+						 }
+					%}
+						{% dnd_row 
+							 margin={
+							  'bottom':26
+							 }
+						%}
+							 {% dnd_module
+									path='@hubspot/linked_image',
+									img={
+										'alt': 'Speaker icon',
+										'src': get_asset_url('../Images/icon/Speaker.svg'),
+										'width': 45,
+										'height':24
+									}
+							 %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+						{% dnd_row %}
+							{% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+								{% module_attribute "html"%}
+										<h4 style="color:#fff;">Heading Text</h4>
+										<p style="color:#fff;">The headline and subheader tells us what you're offering, closes the deal. Over here you can</p>
+								{% end_module_attribute %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!-------------------------------------------------- Dark section with Three Columns ends Here -------------------------------------------->
+
+<!------------------------------------------------------- Three col Section Started ------------------------------------------------------->
+
+  {% dnd_section
+	   padding={
+      'default':{
+      'top': 140,
+      'bottom': 144
+      },
+      'mobile':{
+      'top': 60,
+      'bottom': 60
+      }
+    },
+		background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+  %}
+    {% dnd_column %}
+      {% dnd_row 
+				 padding={
+				  'default':{
+				  'left': 0,
+				  'right': 0
+				  },
+				  'mobile':{
+				  'left': 0,
+				  'right': 0
+				  }
+			  }
+     %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description", vertical_alignment = 'CENTER'%}
+          {% module_attribute "html"%}
+            <div style="text-align: center;">
+              <h2><strong>Heading Text</strong></h2>
+              <p>Hubspot Growth series is the template you need to get maximum from your Marketing Automation efforts.</p>
+            </div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row 
+			   padding={
+				  'default':{
+				  'top': 65,
+				  'bottom': 42
+				  },
+				  'mobile':{
+				  'top': 20,
+				  'bottom': 0
+				  }
+			  }
+			%}
+        {% dnd_column, offset = 0, width = 4 %}
+          {% dnd_row 
+						 padding={
+							'default':{
+							'bottom': 0
+							},
+							'mobile':{
+							'bottom': 20
+							}
+						}
+          %}
+            {% dnd_module path='../modules/Card', label="Card"
+							check_to_show_wrapper = false,
+							add_padding_top_here = "0",
+							add_padding_bottom_here = "0",
+							check_to_show_border_radius = true,
+							add_border_radius_here = "4"
+							check_to_show_box_shadow = false,
+							check_to_show_hover_effect = true,
+							hover = {
+							check_to_show_border_on_hover : true,
+							border_on_hover_group : {
+							set_border_width_here : '1',
+							set_border_color_here : {
+							'color':'#e2e2e2'
+							}
+							},
+							check_to_show_on_icon_on_hover : true,
+							add_hover_image_here : {
+							'src' : get_asset_url('../Images/Arrow_Up.svg'),
+						  'width':26,
+						  'height':21
+							},
+							hover_image_size :{
+							set_width_of_hover_image : "26",
+							set_height_of_hover_image : "21"
+							},
+							check_to_show_box_shadow : false,
+							check_to_show_background_color : false,
+							},
+							check_to_show_image_in_bottom = false,
+							card_content =
+							{
+							check_to_show_background_color_of_card : true,
+							add_card_color_here : {
+							color : "#fff"
+							},
+							check_to_show_all_text_white : false,
+							check_to_show_image_background_image_here : true,
+							image_group : {
+							choose_between_image_and_background_image : "image",
+							add_image_here : {
+					    'alt': 'Home',
+							'src' : get_asset_url('../Images/Resized Image/Home.svg'),
+						 'width':44,
+						 'height':44
+							},
+							image_size_group : {
+							set_width_of_image : '44',
+							set_height_of_image : '45'
+							}
+							},
+							check_to_show_heading : true,
+							select_heading : '4',
+							add_heading_here : "Heading Text",
+							check_to_show_description : true,
+							add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							check_to_show_email_option : false,
+							check_to_show_call_to_action : false
+							},
+							style={
+								 'check_to_show_padding':true,
+								 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											  'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											   'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+										 'padding':{
+											 'top':{
+											  'value':20
+											 },
+											 'bottom':{
+											  'value':20
+											 },
+											 'left':{
+											  'value':20
+											 },
+											 'right':{
+											  'value':20
+											 }
+										 }														 
+									 }
+								 },
+								 'check_to_show_border_on_cards':false,
+								 'alignment':{
+								  'horizontal_align':'CENTER'
+								 },
+								 'add_spacing_here':{
+									 'margin':{
+										 'top':{
+										  'value':"25"
+										 }
+									 }
+								 },
+								 'check_this_to_show_maximum_width_of_card' : false
+							 }
+					  %}
+					  {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column, offset = 4, width = 4 %}
+          {% dnd_row 
+						 padding={
+							'default':{
+							'bottom': 0
+							},
+							'mobile':{
+							'bottom': 20
+							}
+						}
+          %}
+            {% dnd_module path='../modules/Card', label="Card"
+							check_to_show_wrapper = false,
+							add_padding_top_here = "0",
+							add_padding_bottom_here = "0",
+							check_to_show_border_radius = true,
+							add_border_radius_here = "4"
+							check_to_show_box_shadow = false,
+							check_to_show_hover_effect = true,
+							hover = {
+							check_to_show_border_on_hover : true,
+							border_on_hover_group : {
+							set_border_width_here : '1',
+							set_border_color_here : {
+							'color':'#e2e2e2'
+							}
+							},
+							check_to_show_on_icon_on_hover : true,
+							add_hover_image_here : {
+							'src' : get_asset_url('../Images/Arrow_Up.svg'),
+						 'width':52,
+						 'height':44
+							},
+							hover_image_size :{
+							set_width_of_hover_image : "52",
+							set_height_of_hover_image : "44"
+							},
+							check_to_show_box_shadow : false,
+							check_to_show_background_color : false,
+							},
+							check_to_show_image_in_bottom = false,
+							card_content =
+							{
+							check_to_show_background_color_of_card : true,
+							add_card_color_here : {
+							color : "#fff"
+							},
+							check_to_show_all_text_white : false,
+							check_to_show_image_background_image_here : true,
+							image_group : {
+							choose_between_image_and_background_image : "image",
+							add_image_here : {
+					    'alt': 'Monitor',
+							'src' : get_asset_url('../Images/Resized Image/Monitor.svg'),
+							'width':42,
+							'height':44
+							},
+							image_size_group : {
+							set_width_of_image : '32',
+							set_height_of_image : '44'
+							}
+							},
+							check_to_show_heading : true,
+							select_heading : '4',
+							add_heading_here : "Heading Text",
+							check_to_show_description : true,
+							add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							check_to_show_email_option : false,
+							check_to_show_call_to_action : false
+							},
+							style={
+								 'check_to_show_padding':true,
+								 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											  'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											   'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+										 'padding':{
+											 'top':{
+											  'value':20
+											 },
+											 'bottom':{
+											  'value':20
+											 },
+											 'left':{
+											  'value':20
+											 },
+											 'right':{
+											  'value':20
+											 }
+										 }														 
+									 }
+								 },
+								 'check_to_show_border_on_cards':false,
+								 'alignment':{
+								  'horizontal_align':'CENTER'
+								 },
+								 'add_spacing_here':{
+									 'margin':{
+										 'top':{
+										  'value':"25"
+										 }
+									 }
+								 },
+								 'check_this_to_show_maximum_width_of_card' : false
+							 }
+					   %}
+					  {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column, offset = 8, width = 4 %}
+          {% dnd_row 
+					  padding={
+						'default':{
+						'bottom': 0
+						},
+						'mobile':{
+						'bottom': 20
+						}
+					}
+          %}
+            {% dnd_module path='../modules/Card', label="Card"
+							check_to_show_wrapper = false,
+							add_padding_top_here = "0",
+							add_padding_bottom_here = "0",
+							check_to_show_border_radius = true,
+							add_border_radius_here = "4"
+							check_to_show_box_shadow = false,
+							check_to_show_hover_effect = true,
+							hover = {
+							check_to_show_border_on_hover : true,
+							border_on_hover_group : {
+							set_border_width_here : '1',
+							set_border_color_here : {
+							'color':'#e2e2e2'
+							}
+							},
+							check_to_show_on_icon_on_hover : true,
+							add_hover_image_here : {
+							'src' : get_asset_url('../Images/Arrow_Up.svg'),
+						 'width':26,
+						 'height':21
+							},
+							hover_image_size :{
+							set_width_of_hover_image : "26",
+							set_height_of_hover_image : "21"
+							},
+							check_to_show_box_shadow : false,
+							check_to_show_background_color : false,
+							},
+							check_to_show_image_in_bottom = false,
+							card_content =
+							{
+							check_to_show_background_color_of_card : true,
+							add_card_color_here : {
+							color : "#fff"
+							},
+							check_to_show_all_text_white : false,
+							check_to_show_image_background_image_here : true,
+							image_group : {
+							choose_between_image_and_background_image : "image",
+							add_image_here : {
+					    'alt': 'Headphones',
+							'src' : get_asset_url('../Images/Resized Image/Headphones.svg'),
+							'width':40,
+							'height':41
+							},
+							image_size_group : {
+							set_width_of_image : '40',
+							set_height_of_image : '41'
+							}
+							},
+							check_to_show_heading : true,
+							select_heading : '4',
+							add_heading_here : "Heading Text",
+							check_to_show_description : true,
+							add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							check_to_show_email_option : false,
+							check_to_show_call_to_action : false
+							},
+							style={
+								 'check_to_show_padding':true,
+								 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											  'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											   'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+										 'padding':{
+											 'top':{
+											  'value':20
+											 },
+											 'bottom':{
+											  'value':20
+											 },
+											 'left':{
+											  'value':20
+											 },
+											 'right':{
+											  'value':20
+											 }
+										 }														 
+									 }
+								 },
+								 'check_to_show_border_on_cards':false,
+								 'alignment':{
+								  'horizontal_align':'CENTER'
+								 },
+								 'add_spacing_here':{
+									 'margin':{
+										 'top':{
+										  'value':"25"
+										 }
+									 }
+								 },
+								 'check_this_to_show_maximum_width_of_card' : false
+							 }
+					   %}
+					  {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column, offset = 0, width = 4 %}
+          {% dnd_row 
+					  padding={
+						'default':{
+						'bottom': 0
+						},
+						'mobile':{
+						'bottom': 20
+						}
+					}
+          %}
+           {% dnd_module path='../modules/Card', label="Card"
+							check_to_show_wrapper = false,
+							add_padding_top_here = "0",
+							add_padding_bottom_here = "0",
+							check_to_show_border_radius = true,
+							add_border_radius_here = "4"
+							check_to_show_box_shadow = false,
+							check_to_show_hover_effect = true,
+							hover = {
+							check_to_show_border_on_hover : true,
+							border_on_hover_group : {
+							set_border_width_here : '1',
+							set_border_color_here : {
+							'color':'#e2e2e2'
+							}
+							},
+							check_to_show_on_icon_on_hover : true,
+							add_hover_image_here : {
+							'src' : get_asset_url('../Images/Arrow_Up.svg'),
+						 'width':26,
+						 'height':21
+							},
+							hover_image_size :{
+							set_width_of_hover_image : "26",
+							set_height_of_hover_image : "21"
+							},
+							check_to_show_box_shadow : false,
+							check_to_show_background_color : false,
+							},
+							check_to_show_image_in_bottom = false,
+							card_content =
+							{
+							check_to_show_background_color_of_card : true,
+							add_card_color_here : {
+							color : "#fff"
+							},
+							check_to_show_all_text_white : false,
+							check_to_show_image_background_image_here : true,
+							image_group : {
+							choose_between_image_and_background_image : "image",
+							add_image_here : {
+					    'alt': 'Check Shield',
+							'src' : get_asset_url('../Images/Resized Image/Check Shield.svg'),
+							'width':35,
+							'height':41
+							},
+							image_size_group : {
+							set_width_of_image : '35',
+							set_height_of_image : '41'
+							}
+							},
+							check_to_show_heading : true,
+							select_heading : '4',
+							add_heading_here : "Heading Text",
+							check_to_show_description : true,
+							add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							check_to_show_email_option : false,
+							check_to_show_call_to_action : false
+							},
+							style={
+								 'check_to_show_padding':true,
+								 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											  'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											   'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+										 'padding':{
+											 'top':{
+											  'value':20
+											 },
+											 'bottom':{
+											  'value':20
+											 },
+											 'left':{
+											  'value':20
+											 },
+											 'right':{
+											  'value':20
+											 }
+										 }														 
+									 }
+								 },
+								 'check_to_show_border_on_cards':false,
+								 'alignment':{
+								  'horizontal_align':'CENTER'
+								 },
+								 'add_spacing_here':{
+									 'margin':{
+										 'top':{
+										  'value':"25"
+										 }
+									 }
+								 },
+								 'check_this_to_show_maximum_width_of_card' : false
+							 }
+					   %}
+					  {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column, offset = 4, width = 4 %}
+          {% dnd_row 
+					  padding={
+						'default':{
+						'bottom': 0
+						},
+						'mobile':{
+						'bottom': 20
+						}
+					}
+          %}
+            {% dnd_module path='../modules/Card', label="Card"
+							check_to_show_wrapper = false,
+							add_padding_top_here = "0",
+							add_padding_bottom_here = "0",
+							check_to_show_border_radius = true,
+							add_border_radius_here = "4"
+							check_to_show_box_shadow = false,
+							check_to_show_hover_effect = true,
+							hover = {
+							check_to_show_border_on_hover : true,
+							border_on_hover_group : {
+							set_border_width_here : '1',
+							set_border_color_here : {
+							'color':'#e2e2e2'
+							}
+							},
+							check_to_show_on_icon_on_hover : true,
+							add_hover_image_here : {
+							'src' : get_asset_url('../Images/Arrow_Up.svg'),
+						 'width':26,
+						 'height':21
+							},
+							hover_image_size :{
+							set_width_of_hover_image : "26",
+							set_height_of_hover_image : "21"
+							},
+							check_to_show_box_shadow : false,
+							check_to_show_background_color : false,
+							},
+							check_to_show_image_in_bottom = false,
+							card_content =
+							{
+							check_to_show_background_color_of_card : true,
+							add_card_color_here : {
+							color : "#fff"
+							},
+							check_to_show_all_text_white : false,
+							check_to_show_image_background_image_here : true,
+							image_group : {
+							choose_between_image_and_background_image : "image",
+							add_image_here : {
+					    'alt': 'graph Up',
+							'src' : get_asset_url('../Images/Resized Image/Up Graph.svg'),
+						 'width':35,
+						 'height':44
+							},
+							image_size_group : {
+							set_width_of_image : '35',
+							set_height_of_image : '44'
+							}
+							},
+							check_to_show_heading : true,
+							select_heading : '4',
+							add_heading_here : "Heading Text",
+							check_to_show_description : true,
+							add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							check_to_show_email_option : false,
+							check_to_show_call_to_action : false
+							},
+							style={
+								 'check_to_show_padding':true,
+								 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											  'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											   'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+										 'padding':{
+											 'top':{
+											  'value':20
+											 },
+											 'bottom':{
+											  'value':20
+											 },
+											 'left':{
+											  'value':20
+											 },
+											 'right':{
+											  'value':20
+											 }
+										 }														 
+									 }
+								 },
+								 'check_to_show_border_on_cards':false,
+								 'alignment':{
+								  'horizontal_align':'CENTER'
+								 },
+								 'add_spacing_here':{
+									 'margin':{
+										 'top':{
+										  'value':"25"
+										 }
+									 }
+								 },
+								 'check_this_to_show_maximum_width_of_card' : false
+							 }
+					   %}
+					  {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column, offset = 8, width = 4 %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/Card', label="Card"
+							check_to_show_wrapper = false,
+							add_padding_top_here = "0",
+							add_padding_bottom_here = "0",
+							check_to_show_border_radius = true,
+							add_border_radius_here = "4"
+							check_to_show_box_shadow = false,
+							check_to_show_hover_effect = true,
+							hover = {
+							check_to_show_border_on_hover : true,
+							border_on_hover_group : {
+							set_border_width_here : '1',
+							set_border_color_here : {
+							'color':'#e2e2e2'
+							}
+							},
+							check_to_show_on_icon_on_hover : true,
+							add_hover_image_here : {
+							'src' : get_asset_url('../Images/Arrow_Up.svg'),
+						 'width':26,
+						 'height':21
+							},
+							hover_image_size :{
+							set_width_of_hover_image : "26",
+							set_height_of_hover_image : "21"
+							},
+							check_to_show_box_shadow : false,
+							check_to_show_background_color : false,
+							},
+							check_to_show_image_in_bottom = false,
+							card_content =
+							{
+							check_to_show_background_color_of_card : true,
+							add_card_color_here : {
+							color : "#fff"
+							},
+							check_to_show_all_text_white : false,
+							check_to_show_image_background_image_here : true,
+							image_group : {
+							choose_between_image_and_background_image : "image",
+							add_image_here : {
+					    'alt': 'Speaker',
+							'src' : get_asset_url('../Images/Resized Image/Speaker.svg'),
+							'width':47,
+							'height':26
+							},
+							image_size_group : {
+							set_width_of_image : '47',
+							set_height_of_image : '26'
+							}
+							},
+							check_to_show_heading : true,
+							select_heading : '4',
+							add_heading_here : "Heading Text",
+							check_to_show_description : true,
+							add_description_here : "<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							check_to_show_email_option : false,
+							check_to_show_call_to_action : false
+							},
+							style={
+								 'check_to_show_padding':true,
+								 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											  'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+										 'padding':{
+											 'top':{
+											  'value':37
+											 },
+											 'bottom':{
+											  'value':22
+											 },
+											 'left':{
+											   'value':30
+											 },
+											 'right':{
+											  'value':30
+											 }
+										 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+										 'padding':{
+											 'top':{
+											  'value':20
+											 },
+											 'bottom':{
+											  'value':20
+											 },
+											 'left':{
+											  'value':20
+											 },
+											 'right':{
+											  'value':20
+											 }
+										 }														 
+									 }
+								 },
+								 'check_to_show_border_on_cards':false,
+								 'alignment':{
+								  'horizontal_align':'CENTER'
+								 },
+								 'add_spacing_here':{
+									 'margin':{
+										 'top':{
+										  'value':"25"
+										 }
+									 }
+								 },
+								 'check_this_to_show_maximum_width_of_card' : false
+							 }
+					   %}
+					  {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!------------------------------------------------------- Three col Section Ended ------------------------------------------------------->
+
+<!-------------------------------------------------------  gallery section Started ------------------------------------------------------->
+
+  {% dnd_section vertical_alignment='MIDDLE', max_width=1056, 
+     padding={
+       'default':{
+       'top': 140,
+       'bottom': 140
+       },
+       'mobile':{
+       'top': 60,
+       'bottom': 60
+       }
+     }
+  %}
+    {% dnd_column %}
+      {% dnd_row 
+				 padding={
+					'default':{
+					'left': 150,
+					'right': 150
+					},
+					'mobile':{
+					'left': 0,
+					'right': 0
+					 }
+				 }
+       %} 
+       {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="text-conta4",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h2>Heading Text</h2>
+								<p>The headline and subheader tells us what you're <a href='https://palmspire-3842749.hs-sites.com/en/'>offering</a>, and the form header closes the deal. Over here you can explain why your offer is so great it's worth filling out a form for.</p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-center",
+								set_max_width_of_the_content:"770"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							 }
+				 %}
+				 {% end_dnd_module %}
+       {% end_dnd_row %}
+       {% dnd_row 
+			  padding={
+				 'default':{
+				 'top': 55
+				 },
+				 'mobile':{
+				 'top': 30
+				 }
+			 }
+      %}
+        {% dnd_module path='../modules/Gallery_With_Filter', label="Gallery with filter",
+				  add_custom_class_here="normal_gallery",
+				  check_this_to_show_filter=false,
+				  content_group={
+				  left_content:[
+				  {
+				  image_group:{
+					add_image_here:{
+					'src': get_asset_url('../Images/Resized Image/Macbook Pro.png'),
+					'width':480,
+					'height':323
+					},
+					add_image_min_height_here:"323",
+					add_border_radius_here:"4"
+					},
+					text_group:{
+					add_heading_here:"Project Title",
+					add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>"
+					},
+					add_margin_bottom_to_the_card:"98"
+				  },
+				  {
+				  image_group:{
+				  add_image_here:{
+				  'src': get_asset_url('../Images/Resized Image/le Buzz Male.png'),
+						 'width':480,
+						 'height':382
+				  },
+				  add_image_min_height_here:"382",
+				  add_border_radius_here:"4"
+				  },
+				  text_group:{
+				  add_heading_here:"Project Title",
+				  add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>"
+				  },
+				  add_margin_bottom_to_the_card:"98"
+				  }				 
+				  ],
+				  right_content:[
+				  {
+				  image_group:{
+					add_image_here:{
+					'src': get_asset_url('../Images/Resized Image/le Buzz Female.png'),
+						 'width':480,
+						 'height':442
+					},
+					add_image_min_height_here:"442",
+					add_border_radius_here:"4"
+					},
+					text_group:{
+					add_heading_here:"Project Title",
+					add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>"
+					},
+					add_margin_bottom_to_the_card:"98"
+				  },
+          {
+				  image_group:{
+				  add_image_here:{
+				  'src': get_asset_url('../Images/Resized Image/Live Data.png'),
+						 'width':480,
+						 'height':323
+				  },
+				  add_image_min_height_here:"323",
+				  add_border_radius_here:"4"
+				  },
+				  text_group:{
+				  add_heading_here:"Project Title",
+				  add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>"
+				  },
+				  add_margin_bottom_to_the_card:"70"
+				  }
+				  ]
+				  },
+				  style={
+				       'show_wrapper':false,
+							 'spacing':{
+								  'add_spacing_for_desktop_view':{
+									  'padding':{
+											'top':{
+												'value':0
+											},
+											'bottom':{
+												'value':0
+											},
+											'left':{
+												'value':0
+											},
+											'right':{
+												'value':0
+											}
+										}
+									},
+									'add_spacing_for_tab_view':{
+									  'padding':{
+											'top':{
+												'value':0
+											},
+											'bottom':{
+												'value':0
+											},
+											'left':{
+												'value':0
+											},
+											'right':{
+												'value':0
+											}
+										}
+									},
+									'add_spacing_for_mobile_view':{
+									  'padding':{
+											'top':{
+												'value':0
+											},
+											'bottom':{
+												'value':0
+											},
+											'left':{
+												'value':0
+											},
+											'right':{
+												'value':0
+											}
+										}
+									}
+									},
+									'background':{
+										'choose_background_type':"color",
+										'add_background_color':{
+											'color':"#fff",
+											'opacity':0
+										}
+								 }
+				         }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row 
+					  padding={
+						'default':{
+						'top': 0
+						},
+						'mobile':{
+						'top': 30
+						}
+					}
+          %}
+           {% dnd_module path='../modules/Buttons', label="Buttons"
+							choose_number_of_cta="single",
+							single_cta_group={
+							"choose_type_of_cta":"primary-cta",
+							primary_cta_group:{
+							"choose_cta_type_here":"solid-cta"
+						  }
+						  },
+							styles={
+								'alignment_field':{
+							  'horizontal_align' : 'CENTER'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'CENTER'
+								},
+						    'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'CENTER'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'CENTER'
+								}
+						    }
+							}
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+<!-------------------------------------------------------  gallery section Ended ------------------------------------------------------->
+
+
+<!----------------------------------  border Start Here ---------------------------------->
+
+  {% dnd_section
+     vertical_alignment='MIDDLE'
+     padding={
+      'default':{
+      'top': 0,
+      'bottom':0
+      },
+      'mobile':{
+      'top': 0,
+      'bottom': 0
+      }
+     }
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<hr>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------   border End Here  --------------------------------->
+
+
+<!------------------------------------  video Starts here ------------------------------->
+  
+	{% dnd_section max_width=1096,
+		 vertical_alignment='MIDDLE'
+		 padding={
+		  'default':{
+		  'top': 140,
+		  'bottom': 125
+		  },
+		  'mobile':{
+		  'top': 60,
+		  'bottom': 60
+		  }
+		}
+	%}
+		{% dnd_column offset=0, width=12, %}
+			{% dnd_row 
+				 padding={
+					 'default':{
+					 'top': 0,
+					 'bottom': 38
+					 },
+					 'mobile':{
+					 'bottom': 40
+					 }
+				 }
+			%}
+				{% dnd_module path='@hubspot/rich_text',horizontal_alignment='CENTER'%}
+					{% module_attribute "html"%}
+					  <h2>Heading Text</h2>								
+					{% end_module_attribute %}
+				{% end_dnd_module %}
+			{% end_dnd_row %}
+			{% dnd_row 
+				 padding={
+					 'default':{
+					 'top': 0,
+					 'bottom': 69
+					 },
+					 'mobile':{
+					 'bottom': 30
+					 }
+				}
+			%}
+			  {% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image_Video_With_Before_Image"
+					 choose_between_image_and_video="video",
+					 video_group={
+					 "add_custom_class_here":"video_sec",
+					 add_thumbnail_image:{
+					 'alt':'Video Thumbnail',
+					 'src': get_asset_url('../Images/Resized Image/Video Thumbnail.png'),
+						 'width':1026,
+						 'height':589
+					 },
+					 add_play_icon_here:{
+					 'alt':'Play Button',
+					 'src': get_asset_url('../Images/Resized Image/Play Button.svg'),
+						 'width':101,
+						 'height':101
+					 },
+					 select_video_type:"youtube",
+					 add_youtube_url:{
+					 'url':{
+					 'href':"https://www.youtube.com/watch?v=qDCyvvdzND4"
+					 }
+					 },
+					 check_to_add_overlay_on_video_background:false,
+					 set_video_section_max_width_here:"1026",
+					 set_video_section_min_height_here:"589",
+					 check_this_to_show_border_radius:true,
+					 add_border_radius:"6",
+					 set_max_width_in_responsive:"92"
+					 },
+					 check_to_add_vector_image=true,
+					 vector_image_group={
+					 add_vector_image:{
+					 'alt':'Vector',
+					 'src': get_asset_url('../Images/Dotted_image.svg'),
+						 'width':151,
+						 'height':151						 
+					 },
+					 set_width_of_vector_image:"151",
+					 set_height_of_vector_image:"151",
+					 choose_vector_image_position:"top-right",
+					 set_vector_image_position:{
+					 set_x_axis_position:"-34",
+					 set_y_axis_position:"-34"
+					 }
+					 },
+					 styles={
+						'set_content_alignment':{
+							'horizontal_align' : 'CENTER'
+						},
+						'add_border_radius':'6'
+					}
+				%}
+				{% end_dnd_module %}
+			{% end_dnd_row %}
+			{% dnd_row %}
+				{% dnd_column offset=0, width=4,
+				  padding={
+					'default':{
+					'bottom':0
+					},
+					'mobile':{
+					'bottom':20
+					}
+					}
+				%}
+					{% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+						add_custom_class_here="number-content-1",
+						choose_content_type="single-content",
+						single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"4",
+						add_heading_here:"<span2>1. </span2>Heading Text",
+						check_to_show_description:true,
+						add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-center",
+						set_max_width_of_the_content:"293"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+					{% end_dnd_row %}
+				{% end_dnd_column %}
+				{% dnd_column offset=4, width=4,
+				  padding={
+					'default':{
+					'bottom':0
+					},
+					'mobile':{
+					'bottom':20
+					}
+					}			 
+			  %}
+					{% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+						add_custom_class_here="number-content-2",
+						choose_content_type="single-content",
+						single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"4",
+						add_heading_here:"<span2>2. </span2>Heading Text",
+						check_to_show_description:true,
+						add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-center",
+						set_max_width_of_the_content:"293"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+					{% end_dnd_row %}
+				{% end_dnd_column %}
+				{% dnd_column offset=8, width=4 %}
+					{% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+						add_custom_class_here="number-content-3",
+						choose_content_type="single-content",
+						single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"4",
+						add_heading_here:"<span2>3. </span2>Heading Text",
+						check_to_show_description:true,
+						add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-center",
+						set_max_width_of_the_content:"293"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+					{% end_dnd_row %}
+				{% end_dnd_column %}
+			{% end_dnd_row %}
+		{% end_dnd_column %} 
+	{% end_dnd_section %}
+  
+
+<!--------------------------------  video Ends here ------------------------------------->
+
+
+<!------------------------------- Slider section Start Here -------------------------->
+
+
+		 {% dnd_section
+				vertical_alignment='MIDDLE',
+				background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+				padding={
+				 'default':{
+				 'top': 122,
+				 'bottom':86
+				 },
+				 'mobile':{
+				 'top': 60,
+				 'bottom': 60
+				 }
+				}
+			%}
+				{% dnd_column offset=0, width=12 %}
+					 {% dnd_row 
+							margin={
+							 'default':{
+							 'top': 0,
+							 'bottom': 0
+							 },
+							 'mobile':{
+							 'top':0,
+							 'bottom': 0
+							 }
+							}
+					 %} 
+							{% dnd_module path='@hubspot/rich_text', width=12, offset=0, label="Add heading and Description"%}
+								 {% module_attribute "html"%}
+										<h2 style="text-align:center;" >Heading Text</h2>
+								 {% end_module_attribute %}
+							{% end_dnd_module %}
+					 {% end_dnd_row %}
+					 {% dnd_row %}
+              {% dnd_module path='../modules/Testimonial_Slider', label="Testimonial Slider",
+									add_custom_class="career-slider-section",
+									"choose_slider_type" = "slider_with_top_tabs",
+									slider_group=[
+									{ 
+									add_brand_logo_image:{
+					        'alt': 'slack',
+									"src": get_asset_url('../Images/Slack.png'),
+									'width':107,
+									'height':36
+									},
+									add_image_here:{
+					        'alt': 'Quotes',
+									"src": get_asset_url('../Images/Quotemarks-lef.png'),
+									'width':55,
+									'height':39
+									},
+									'add_content_here':'<blockquote>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit 
+									dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</blockquote>',
+									'add_name_here':'Jerome Bell 1',
+									'add_designation_here':'<p>CEO, Softech</p>'
+									},
+									{
+									add_brand_logo_image:{
+					        'alt': 'Google',
+									"src": get_asset_url('../Images/google.png'),
+									'width':109,
+									'height':24
+									},
+									add_image_here:{
+					        'alt': 'Quotes',
+									"src": get_asset_url('../Images/Quotemarks-lef.png'),
+									'width':55,
+									'height':39
+									},
+									'add_content_here':'<blockquote>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit 
+									dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</blockquote>',
+									'add_name_here':'Jerome Bell 2',
+									'add_designation_here':'<p>CEO, Softech</p>'
+									},
+									{
+									add_brand_logo_image:{
+					        'alt': 'Pinterest',
+									"src": get_asset_url('../Images/Pinterest.png'),
+									'width':101,
+								  'height':25
+									} ,
+									add_image_here:{
+					        'alt': 'Quotes',
+									"src": get_asset_url('../Images/Quotemarks-lef.png'),
+									'width':55,
+								  'height':39
+									},
+									'add_content_here':'<blockquote>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit 
+									dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</blockquote>',
+									'add_name_here':'Jerome Bell 3',
+									'add_designation_here':'<p>CEO, Softech</p>'
+									},
+									{
+									add_brand_logo_image:{
+					        'alt': 'Microsoft',
+									"src": get_asset_url('../Images/Microsoft.png'),
+									'width':121,
+									'height':27
+									},
+									add_image_here:{
+					        'alt': 'Quotes',
+									"src": get_asset_url('../Images/Quotemarks-lef.png'),
+									'width':55,
+									'height':39
+									},
+									'add_content_here':'<blockquote>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit 
+									dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</blockquote>',
+									'add_name_here':'Jerome Bell 4',
+									'add_designation_here':'<p>CEO, Softech</p>'
+									},
+									{
+									add_brand_logo_image:{
+					        'alt': 'Youtube',
+									"src": get_asset_url('../Images/Youtube.png'),
+									'width':121,
+									'height':30
+									},
+									add_image_here:{
+					        'alt': 'Quotes',
+									"src": get_asset_url('../Images/Quotemarks-lef.png'),
+									'width':55,
+									'height':39
+									},
+									'add_content_here':'<blockquote>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit 
+									dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</blockquote>',
+									'add_name_here':'Jerome Bell 5',
+									'add_designation_here':'<p>CEO, Softech</p>'
+									},
+									{
+									add_brand_logo_image:{
+					        'alt': 'Harvest',
+									"src": get_asset_url('../Images/Harvest.png'),
+									'width':108,
+									'height':22
+									},
+									add_image_here:{
+					        'alt': 'Quotes',
+									"src": get_asset_url('../Images/Quotemarks-lef.png'),
+									'width':55,
+									'height':39
+									},
+									'add_content_here':'<blockquote>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit 
+									dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</blockquote>',
+									'add_name_here':'Jerome Bell 5',
+									'add_designation_here':'<p>CEO, Softech</p>'
+									},
+									{
+									add_brand_logo_image:{
+					        'alt': 'Asana',
+									"src": get_asset_url('../Images/asana-3.png'),
+									'width':108,
+									'height':27
+									},
+									add_image_here:{
+					        'alt': 'Quotes',
+									"src": get_asset_url('../Images/Quotemarks-lef.png'),
+									'width':55,
+									'height':39
+									},
+									'add_content_here':'<blockquote>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit 
+									dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</blockquote>',
+									'add_name_here':'Jerome Bell 5',
+									'add_designation_here':'<p>CEO, Softech</p>'
+									}
+								]
+							%}
+							{% end_dnd_module %}
+					 {% end_dnd_row %}
+				{% end_dnd_column %}
+		 {% end_dnd_section %}
+
+<!------------------------------- Slider section End Here ---------------------------->
+
+
+<!----------------------------------- Counter Section Start Here--------------------------->
+
+
+		 {% dnd_section
+				vertical_alignment='MIDDLE'
+				padding={
+					'default':{
+					'top': 140,
+					'bottom': 140
+					},
+					'mobile':{
+					'top': 60,
+					'bottom': 60
+					}
+				}
+		%}
+			{% dnd_column offset=0, width=12 %}
+				 {% dnd_row
+						padding={
+							'default':{
+							'left': 165,
+							'right': 165
+							},
+							'mobile':{
+							'left': 0,
+							'right': 0
+							}
+						}
+				 %}
+        {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="text-conta4",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h2>Heading Text</h2>
+								<p> The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a href='https://palmspire-3842749.hs-sites.com/home-1'>offering.</a></p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-center",
+								set_max_width_of_the_content:"770"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							 }
+				 %}
+				 {% end_dnd_module %}
+				 {% end_dnd_row %}
+				 {% dnd_row 
+						padding={
+							'default':{
+							'top': 55,
+							'bottom': 0
+						  },
+							'mobile':{
+							'top': 30,
+							'bottom': 0
+					    }
+						}
+					%}
+						{% dnd_module path='../modules/Counter_And_Countdown', label="Counter and countdown",
+							  choose_between_counter_and_countdown = "counter",
+								counter_group = {
+								add_custom_class_here : 'counter-section',
+								choose_column_layout : 'four-col-adjust',
+								choose_counter_text_size_here : '2',
+								counter_content : [
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : true,
+								check_to_show_border_right : true
+								},
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : true,
+								check_to_show_border_right : true
+								},
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : true,
+								check_to_show_border_right : true
+								},
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : true,
+								check_to_show_border_right : false
+								},
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : false,
+								check_to_show_border_right : true
+								},
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : false,
+								check_to_show_border_right : true
+								},
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : false,
+								check_to_show_border_right : true
+								},
+								{
+								add_counter_number_here : '50',
+								add_heading_here : 'Heading Text',
+								check_to_show_before_content : false,
+								check_to_show_after_content : true,
+								add_content_after_the_counter_number : '+',
+								check_to_show_border_bottom : false,
+								check_to_show_border_right : false
+								}
+								],
+								choose_content_alignment : 'align-center'
+								},
+								style={
+									'counter_group':{
+									'show_wrapper':false,
+									'show_all_text_white':false,
+									'spacing' : {
+                    'add_spacing_for_desktop_here' : {
+                       'padding' : {
+                          'top' : {
+                            'value' : 0
+                          },
+                          'bottom' : {
+                            'value' : 0
+                          },
+                          'left' : {
+                            'value' : 0
+                          },
+                          'right' : {
+                            'value' : 0
+                          }
+                        }
+                      },
+                      'add_spacing_for_tab_here' : {
+                        'padding' : {
+                          'top' : {
+                            'value' : 0
+                          },
+                          'bottom' : {
+                            'value' : 0
+                          },
+                          'left' : {
+                            'value' : 0
+                          },
+                          'right' : {
+                            'value' : 0
+                          }
+                        }
+                      },
+                      'add_spacing_for_mobile_here' : {
+                        'padding' : {
+                           'top' : {
+                             'value' : 0
+                           },
+                           'bottom' : {
+                             'value' : 0
+                           },
+                           'left' : {
+                             'value' : 0
+                           },
+                           'right' : {
+                             'value' : 0
+                           }
+                         }
+                      }
+                   },
+									 'background':{
+									 'choose_background_type':'color',
+									 'add_background_color_here':{
+									 'color':'#fff',
+									 'opacity':0
+									 }
+									 },
+									 'check_to_show_content_spacing': true,
+									 'content_spacing' : {
+                     'add_spacing_of_content_for_desktop' : {
+                        'padding' : {
+                            'top' : {
+                              'value' : 65
+                            },
+                            'bottom' : {
+                              'value' : 40
+                            },
+                            'left' : {
+                              'value' : 0
+                            },
+                            'right' : {
+                              'value' : 0
+                            }
+                         }
+                      },
+                      'add_spacing_of_content_for_mobile' : {
+                         'padding' : {
+                             'top' : {
+                               'value' : 15
+                             },
+                             'bottom' : {
+                               'value' : 15
+                             },
+                             'left' : {
+                               'value' : 0
+                             },
+                             'right' : {
+                               'value' : 0
+                             }
+                          }
+                       }
+                    }
+                 }
+							}
+						%}
+           {% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+
+<!-----------------------------------Counter Section Ends Here--------------------------->
+
+
+<!-------------------------------------Contact Form Section section Start Here----------------------------->
+
+
+		{% dnd_section 
+			 padding={
+				'default':{
+				'top':130,
+				'bottom':120
+				},
+				'mobile':{
+				'top':60,
+				'bottom':60
+			  }
+			},
+			background_color="{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}"
+		%}
+			{% dnd_column offset=0, width=6 %}
+				{% dnd_row 
+					 padding={
+						'default':{
+						'bottom':241
+						},
+						'mobile':{
+						'bottom':20
+					 }
+				}
+				%}
+					{% dnd_module path='@hubspot/linked_image',
+							img={
+								'alt': 'Growthkit',
+								'src': get_asset_url('../Images/Resized Image/Growthkit Light.svg'),
+								'width': 179,
+								'height': 35
+							}
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+				{% dnd_row 
+					 padding={
+					  'default':{
+					  'right': 35
+					  },
+					  'mobile':{
+					  'right': 0
+					 }
+				 }
+				%}
+					{% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+						{% module_attribute "html"%}
+							<div>
+								<h2 style="color:#fff"><strong>Heading Text</strong></h2>
+								<p style="color:#fff">About Us Nemo nibh condimentum autem ligula ultricies velit sociosqu eos voluptatibus mod porttitor natoque proin proident!
+									Facilisis dapibus convallis<br><br>Fill out the form below, we will get back you soon.</p><br>
+								<h4 style="color:#fff">OR</h4>
+							</div>
+						{% end_module_attribute %}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+				{% dnd_row 
+					 padding={
+					  'default':{
+					  'top': 20
+					  },
+					  'mobile':{
+					  'top': 0
+					  }
+				  }
+				%}
+					{% dnd_module path='../modules/Buttons', label="Buttons"
+						 choose_number_of_cta="single",
+						 single_cta_group={
+						 "choose_type_of_cta":"secondary-cta"
+						},
+						 styles={
+						 'alignment_field':{
+						 'horizontal_align' : 'LEFT'
+						 },
+						 'single_cta_alignment':{
+						 'horizontal_align' : 'LEFT'
+						 }
+						 }
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+			{% dnd_column offset=6, width=6,
+				 padding={
+					'mobile':{
+					'top': 30
+					}
+				}
+			%}
+				{% dnd_row %}
+					         {% dnd_module path='../modules/Forms', label="Forms",
+					 choose_between_form_type="normal-form",
+					 check_to_add_vector_image=true,
+					 add_vector_image={
+									'alt':'Vector',
+					 'src': get_asset_url('../Images/Dotted_image.svg'),
+						 'width':151,
+						 'height':151
+					 },
+					 choose_vector_image_position="right",
+					 style={
+					       'adjust_spacing_for_whole_section':{
+								                        'padding':{
+																				    'top':{
+																				  'value':48
+																				 },
+																				 'bottom':{
+																					'value':50
+																				 },
+																				   'left':{
+																				  'value':50
+																				 },
+																				  'right':{
+																					'value':50
+																					}
+																				}
+								 },
+								 'add_background_color_for_whole_section':{
+								      'color':"#ffffff",
+											'opacity':100
+								 },
+								 'set_maximum_width_of_form':"523",
+								 'check_to_show_wrapper':false,
+								 'set_content_alignment':{
+								      'horizontal_align':'CENTER'
+								 },
+								 'add_border_radius':"4"
+												 }
+					%}
+          {% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!-------------------------------------Contact Form Section Ends Here------------------------------>
+
+
+
+<!----------------------------------- Recent Blog Section Started --------------------------------->
+
+		{% dnd_section vertical_alignment = 'MIDDLE'
+			 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+			 padding={
+				'default':{
+				'top': 140,
+				'bottom': 140
+				},
+				'mobile':{
+				'top': 60,
+				'bottom': 60
+				}
+			}
+		 %}
+			{% dnd_column %}
+				{% dnd_row %}
+					{% dnd_column, offset = 0, width = 12 %}
+						{% dnd_row %}
+							 {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+								{% module_attribute "html"%}
+								 <div style="text-align: center;">
+									<h2>Heading Text</h2>
+									<p>Join over 25,000 in beating the failure of strategies by following our blog.</p>
+								 </div>
+								{% end_module_attribute %}
+							 {% end_dnd_module %}
+						{% end_dnd_row %}
+						{% dnd_row 
+							padding={
+							 'default':{
+								'top':25
+								},
+								'mobile':{
+								'top':0
+								}
+							}
+						%}
+							{% dnd_module path='../modules/Recent_Blogs', label="Recent_Blogs" %}
+							{% end_dnd_module %}
+						{% end_dnd_row %}
+					{% end_dnd_column %}
+				{% end_dnd_row %}
+				{% dnd_row       
+					 padding={
+						'default':{
+							'top':50
+						},
+						'mobile':{
+							'top':30
+						}
+					}
+				 %}
+					 {% dnd_module path='../modules/Buttons', label="Buttons"
+							choose_number_of_cta="single",
+							single_cta_group={
+							"choose_type_of_cta":"primary-cta",
+							primary_cta_group:{
+							"choose_cta_type_here":"solid-cta"
+						 }
+						 },
+							styles={
+									'alignment_field':{
+									  'horizontal_align' : 'CENTER'
+									},
+									'single_cta_alignment':{
+									  'horizontal_align' : 'CENTER'
+									},
+									'set_cta_alignment_in_mobile_view':{
+										'alignment_field':{
+										  'horizontal_align' : 'CENTER'
+										},
+										'single_cta_alignment':{
+										  'horizontal_align' : 'CENTER'
+										}
+						     }
+						  }
+					%}
+					{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!--------------------------------------------------------- Recent Blog Section Ended --------------------------------------------------------->
+
+{% end_dnd_area %}
+{% endblock body %} 

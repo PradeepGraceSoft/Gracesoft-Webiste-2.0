@@ -1,0 +1,220 @@
+{% import "../_variables.css" as var %}
+
+/* Options */
+
+.pricing__options {
+  display: flex;
+  align-items: center;
+  margin-bottom: {{ var.gutter * 2 }}px;
+}
+
+.pricing__option {
+  width: calc(50% - 30px);
+}
+
+.pricing__option--1 {
+  text-align: end;
+}
+
+.pricing__option--2 {
+  text-align: start;
+}
+
+/* Changing options */
+
+.pricing__token {
+  display: none;
+}
+
+.pricing--subscription.pricing--1 .pricing__token--1,
+.pricing--subscription.pricing--2 .pricing__token--2 {
+  display: block;
+}
+
+.pricing--active .pricing__token {
+  animation: .2s ease-in-out forwards uiPop;
+}
+
+.pricing__button .pricing__token {
+  animation: none;
+}
+
+/* Toggle */
+
+.pricing__toggle {
+  flex-shrink: 0;
+  width: 35px;
+  height: 18px;
+  margin: 0 20px;
+  padding: 0;
+  position: relative;
+  background: none;
+  border: none;
+  border-radius: 999px;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  outline: none;
+  transition: .2s ease-in-out;
+}
+
+.pricing__toggle:hover {
+  transform: scale(1.1);
+}
+
+.pricing__toggle:focus {
+  box-shadow: {{ var.btn_focus_shadow }} rgba({{ var.accent|default('#F65954')|convert_rgb }}, .15);
+}
+
+.pricing--dark-no-accent .pricing__toggle:focus {
+  box-shadow: {{ var.btn_focus_shadow }} rgba({{ var.white|default('#ffffff')|convert_rgb }}, .15);
+}
+
+.pricing__toggle__bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: {{ var.accent_bg }};
+  border-radius: 999px;
+  opacity: .4;
+}
+
+.pricing--dark-no-accent .pricing__toggle__bg {
+  background: {{ var.white }};
+}
+
+.pricing__toggle__dot {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -1px;
+  background: {{ var.accent_bg }};
+  border-radius: 999px;
+  box-shadow: {{ var.accent_small_shadow }};
+  transition: .2s ease-in-out;
+}
+
+.pricing--dark-no-accent .pricing__toggle__dot {
+  background: {{ var.white }};
+  box-shadow: {{ var.small_shadow }};
+}
+
+.pricing--1 .pricing__toggle__dot {
+  left: 0;
+}
+
+.pricing--2 .pricing__toggle__dot {
+  right: 0;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .pricing--1 .pricing__toggle__dot {
+    left: auto;
+    right: 0;
+  }
+  
+  [dir="rtl"] .pricing--2 .pricing__toggle__dot {
+    right: auto;
+    left: 0;
+  }
+{% endif %}
+
+/* Plan/box */
+
+.pricing__plan {
+  margin-bottom: {{ var.gutter * 2 }}px;
+}
+
+.pricing__box {
+  margin-bottom: {{ var.gutter }}px;
+  padding: 1.5rem {{ 1.5 * var.gutter }}px 2.5rem;
+  border-radius: {{ var.radius_7 }};
+}
+
+.pricing__box--shadow {
+  box-shadow: {{ var.large_shadow }};
+}
+
+.pricing__box--shadow.pricing__box--accent {
+  box-shadow: {{ var.accent_large_shadow }};
+}
+
+/* Title */
+
+.pricing__title {
+  margin-bottom: {{ var.gutter * 1.2 }}px;
+}
+
+/* Price tag */
+
+.pricing__tag {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: {{ var.gutter * 1.2 }}px;
+}
+
+.pricing__price {
+  font-size: 4rem;
+  line-height: 1;
+  font-family: {{ var.strong_font_family }};
+  font-weight: {{ var.strong_font_weight }};
+  font-style: {{ var.strong_font_style }};
+}
+
+.pricing__info {
+  margin-bottom: .4rem;
+}
+
+/* Description */
+
+.pricing__desc {
+  margin-bottom: {{ var.gutter * 1.2 }}px;
+}
+
+/* Features */
+
+.pricing__features {
+  margin-bottom: {{ var.gutter * 1.6 }}px;
+}
+
+.pricing__feature {
+  display: flex;
+  padding-inline-start: .28rem;
+}
+
+.pricing__feature__check {
+  margin-inline-end: .56rem;
+  flex-shrink: 0;
+}
+
+.pricing__feature__check svg {
+  width: .9rem;
+  height: .9rem;
+}
+
+/* Disclaimer */
+
+.pricing__disclaimer {
+  text-align: center;
+}
+
+/* Equal height */
+
+.pricing__plans--equal {
+  align-items: stretch;
+}
+
+.pricing__plans--equal .pricing__box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.pricing__plans--equal .pricing__details {
+  height: 100%;
+}

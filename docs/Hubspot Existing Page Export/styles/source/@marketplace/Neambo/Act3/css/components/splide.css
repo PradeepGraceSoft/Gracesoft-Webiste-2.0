@@ -1,0 +1,269 @@
+{% import "../_variables.css" as var %}
+
+/* Container */
+
+.splide {
+  position: relative;
+  visibility: hidden;
+}
+
+/* Track */
+
+.splide__track {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* List */
+
+.splide__list {
+  margin: 0;
+  padding: 0;
+  width: -webkit-max-content;
+  width: max-content;
+  will-change: transform;
+}
+
+.splide.is-active .splide__list {
+  display: flex;
+}
+
+.splide--fade > .splide__track > .splide__list {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Slide */
+
+.splide__slide {
+  position: relative;
+  flex-shrink: 0;
+  outline: none;
+  display: flex;
+  align-items: stretch;
+}
+
+.splide__slide > * {
+  width: 100%;
+}
+
+.splide--draggable > .splide__track > .splide__list > .splide__slide {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.splide--fade > .splide__track > .splide__list > .splide__slide {
+  position: relative;
+  z-index: 0;
+  opacity: 0;
+}
+
+.splide--fade > .splide__track > .splide__list > .splide__slide.is-active {
+  z-index: 1;
+  opacity: 1;
+}
+
+.splide__slide:not(.is-visible) {
+  overflow: hidden;
+}
+
+.splide--running .splide__slide {
+  overflow: visible;
+}
+
+/* Arrows */
+
+.splide__arrows {
+  display: none;
+}
+
+@media (min-width: {{ var.md + 1 }}px) {
+  .splide--arrows-lg.splide--arrows-outside {
+    padding-left: calc({{ var.gutter }}px + {{ (var.ui_icon_size * 1.2)|round(2) }}rem);/* 1 */
+    padding-right: calc({{ var.gutter }}px + {{ (var.ui_icon_size * 1.2)|round(2) }}rem);/* 1 */
+  }
+  
+  .splide--arrows-lg .splide__arrows {
+    display: block;
+  }
+}
+
+@media (max-width: {{ var.md }}px) and (min-width: {{ var.sm + 1 }}px) {
+  .splide--arrows-md.splide--arrows-outside {
+    padding-left: calc({{ var.gutter }}px + {{ (var.ui_icon_size * 1.2)|round(2) }}rem);/* 1 */
+    padding-right: calc({{ var.gutter }}px + {{ (var.ui_icon_size * 1.2)|round(2) }}rem);/* 1 */
+  }
+  
+  .splide--arrows-md .splide__arrows {
+    display: block;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .splide--arrows-sm.splide--arrows-outside {
+    padding-left: calc({{ var.gutter }}px + {{ (var.ui_icon_size * 1.2)|round(2) }}rem);/* 1 */
+    padding-right: calc({{ var.gutter }}px + {{ (var.ui_icon_size * 1.2)|round(2) }}rem);/* 1 */
+  }
+  
+  .splide--arrows-sm .splide__arrows {
+    display: block;
+  }
+}
+
+.splide__arrow {
+  width: {{ (var.ui_icon_size * 1.2)|round(2) }}rem;/* 1 */
+  height: {{ (var.ui_icon_size * 1.2)|round(2) }}rem;/* 1 */
+  margin-top: -{{ (var.ui_icon_size * 1.2 / 2)|round(2) }}rem;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  border: none;
+  background: none;
+  color: {{ var.dark }};
+  transition: transform .2s ease-in-out;
+  outline: none;
+  cursor: pointer;
+}
+
+.splide--white-arrows .splide__arrow {
+  color: {{ var.white }};
+}
+
+.splide__arrow:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.splide__arrow--prev {
+  left: {{ var.gutter }}px;
+}
+
+.splide__arrow--next {
+  right: {{ var.gutter }}px;
+}
+
+.splide--arrows-outside .splide__arrow--prev {
+  left: 0;
+}
+
+.splide--arrows-outside .splide__arrow--next {
+  right: 0;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .splide__arrow--prev {
+    left: auto;
+    right: {{ var.gutter }}px;
+  }
+  
+  [dir="rtl"] .splide__arrow--next {
+    right: auto;
+    left: {{ var.gutter }}px;
+  }
+  
+  [dir="rtl"] .splide--arrows-outside .splide__arrow--prev {
+    left: auto;
+    right: 0;
+  }
+  
+  [dir="rtl"] .splide--arrows-outside .splide__arrow--next {
+    right: auto;
+    left: 0;
+  }
+{% endif %}
+
+/* Dots */
+
+.splide__pagination {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: {{ var.gutter }}px;
+  list-style: none;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+}
+
+.splide--dots-below .splide__pagination {
+  bottom: auto;
+}
+
+@media (min-width: {{ var.md + 1 }}px) {
+  .splide--dots-lg .splide__pagination {
+    display: block;
+  }
+}
+
+@media (max-width: {{ var.md }}px) and (min-width: {{ var.sm + 1 }}px) {
+  .splide--dots-md .splide__pagination {
+    display: block;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .splide--dots-sm .splide__pagination {
+    display: block;
+  }
+}
+
+.splide--dots-below .splide__pagination {
+  position: relative;
+}
+
+.splide__pagination li {
+  display: inline-block;
+}
+
+.splide__pagination__page {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: {{ var.borders_color }};
+  border-radius: 100%;
+  margin: 5px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.splide__pagination__page.is-active {
+  background: {{ var.accent_bg }};
+}
+
+.splide__pagination__page:hover {
+  background: {{ var.accent_bg }};
+  transition: .2s ease-in-out;
+}
+
+.splide--white-dots .splide__pagination__page {
+  background: {{ var.white_borders }};
+}
+
+.splide--white-dots .splide__pagination__page.is-active,
+.splide--white-dots .splide__pagination__page:hover {
+  background: {{ var.white }};
+}
+
+/* If only one slide */
+
+.splide--solo .splide__arrows,
+.splide--solo .splide__pagination {
+  display: none;
+}
+
+.splide--solo > .splide__track > .splide__list > .splide__slide {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* Full height */
+
+.splide--full-height .splide__slide {
+  min-height: 100vh;
+}

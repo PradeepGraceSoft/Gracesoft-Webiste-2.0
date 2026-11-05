@@ -1,0 +1,65 @@
+<!--
+templateType: global_partial
+label: Header no navigation
+-->
+<header class="header au-header header--no-navigation {% if theme.layout_setting.header.sticky_header.enable == true  %} au-sticky-header {% endif %}{% if theme.layout_setting.header.header_on_top_scroll.enable_scroll == true %}au-on-scroll{% endif %}">
+
+  {# Top dnd header drag and drop area #}
+  {% if theme.layout_setting.header.enable_top_header == true %}
+  <div class="header-dnd-area1 header__top">
+    {% dnd_area 'dnd-top-header' label='Top dnd header' class="content-wrapper" %}
+    {% end_dnd_area %}
+  </div>
+  {% endif %}
+
+  {# End dnd top header drag and drop area #}
+
+  {# Top header drag and drop area #}
+
+  <div class="header-dnd-area2 au-header">
+    {% dnd_area 'header-top' label='Top header' class="content-wrapper" %}
+    {# no-navigation-header #}
+    {% dnd_section 
+    padding={
+        'top': 20,
+				'bottom': 20,
+				'left': 0,
+				'right': 0
+       }, 
+     vertical_alignment='MIDDLE',  
+    full_width=true
+  %}
+    {% dnd_column
+    padding={
+        'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+       },    
+        offset=0,
+        width=12
+      %}
+    {% dnd_row %}
+    {% dnd_module path='../../modules/logo'
+  %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% end_dnd_section %}
+    {# End of no-navigation-header #}
+    {% end_dnd_area %}
+  </div>
+
+  {# End top header drag and drop area #}
+
+
+  {# Bottom header drag and drop area #}
+  {% if theme.layout_setting.header.enable_bottom_header == true %}
+  <div class="header-dnd-area3 header__bottom">
+    {% dnd_area 'dnd-bottom-header' label='Bottom dnd header' class='content-wrapper' %}
+    {% end_dnd_area %}
+  </div>
+  {% endif %}
+  {# End bottom header drag and drop area #}
+
+</header>

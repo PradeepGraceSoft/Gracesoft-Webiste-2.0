@@ -1,0 +1,101 @@
+[
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "A few things\nyou might be wondering."
+  },
+  {
+    "name": "body",
+    "label": "Introduction",
+    "type": "text",
+    "default": "Have a question about your property? Let’s talk it through."
+  },
+  {
+    "name": "label",
+    "label": "CTA",
+    "type": "text",
+    "default": "Talk to our team"
+  },
+  {
+    "name": "url",
+    "label": "Contact URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/corporate-contact",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "questions",
+    "label": "Questions and answers",
+    "type": "group",
+    "children": [
+      {
+        "name": "question",
+        "label": "Question",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "answer",
+        "label": "Answer",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 10
+    },
+    "default": [
+      {
+        "question": "What is GraceSoft Easy InnKeeping?",
+        "answer": "Easy InnKeeping is GraceSoft’s hospitality property management software. It helps lodging teams manage reservations, front desk work and guest information, with connected products for bookings, distribution, payments and communication."
+      },
+      {
+        "question": "What types of properties does it support?",
+        "answer": "GraceSoft describes solutions for hotels, motels, inns, bed and breakfasts, resorts, vacation rentals, campgrounds, condos, guest ranches and multi-property businesses. Discuss your specific property and workflow during a demo."
+      },
+      {
+        "question": "Is Easy InnKeeping cloud-based?",
+        "answer": "GraceSoft offers cloud-based property management software. Confirm device, connectivity and access requirements for your team’s setup."
+      },
+      {
+        "question": "Can I manage more than one property?",
+        "answer": "GraceSoft offers multi-property management options. Ask which portfolio workflows, permissions and reporting features are available for your configuration."
+      },
+      {
+        "question": "Can guests book directly through my website?",
+        "answer": "The GraceSoft online booking engine provides a direct booking option for your property website. Ask how it connects to your website, inventory and chosen payment setup."
+      },
+      {
+        "question": "Which booking channels can I connect?",
+        "answer": "Channel Manager connects to supported online travel agency channels. Check the current channel list with GraceSoft and confirm connection mode, plan and regional availability for your property."
+      },
+      {
+        "question": "What payment and housekeeping tools are available?",
+        "answer": "GraceSoft describes payment processing, billing and housekeeping capabilities. Available gateways, room-status workflows and task options depend on your plan and configuration."
+      },
+      {
+        "question": "Are AI voice, chat and guest messaging available?",
+        "answer": "GraceSoft offers AI voice and chat options alongside guest communication products. Ask about supported channels, availability, setup and how inquiries connect to your reservation workflow."
+      },
+      {
+        "question": "What support is available?",
+        "answer": "Ask GraceSoft about onboarding, training, support channels and service hours for your plan. Existing customers can use the GraceSoft Support Center."
+      },
+      {
+        "question": "How can I see a demo and understand pricing?",
+        "answer": "Use Book a demo to visit GraceSoft’s existing demo request page. You can also view the pricing page and discuss the products, integrations and setup your property needs."
+      }
+    ]
+  }
+]

@@ -1,0 +1,472 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact
+  screenshotPath: ../images/template-previews/contact.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--contact'
+%}
+
+{# Banner Section  #}
+{% dnd_section
+  full_width=true,
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12,
+    padding={
+      "default" : {
+        "bottom" : "0px",
+        "left" : "0px",
+        "right" : "0px",
+        "top" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/hero",
+        offset=0,
+        width=12,
+        style_1={
+          "banner_content_alignment" : {
+            "banner_content_alignment_mobile_" : {
+              "alignment_choice" : "center"
+            }
+          },
+          "image" : {
+            "alt" : "Contact Banner",
+            "height" : 556,
+            "max_height" : 556,
+            "max_width" : 1366,
+            "src" : get_asset_url('../images/multipurpose/banner-one.png'),
+            "width" : 1366
+          }
+        }
+      %}
+        {% module_attribute "content" %}
+          <h1><span style="color: #ffa17a;">Want</span> <span style="color: #ffffff;">to know More?</span></h1>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Map Section #}
+{% dnd_section
+  vertical_alignment=MIDDLE,
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/map",
+        offset=0,
+        width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_mobile_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        style={
+          "title_content" : {
+            "max_width" : {
+              "enable_max_width" : true,
+              "value" : 369
+            }
+          }
+        },
+        title_content={
+          "content" : "<h5>3891 Ranchview Dr. Richardson,<br>California 62639</h5><p>Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>",
+          "enable_mini_title" : true,
+          "mini_title" : "Headquarter"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 32,
+          "height_mobile_" : 22,
+          "height_tablet_" : 32
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-box",
+        offset=0,
+        width=12,
+        column_cout_choice={
+          "column_count" : "one_column"
+        },
+        enable_icon_image=true,
+        icon_box_repeater=[ {
+          "description_content" : '<p><span style=\"color: #146356;\"><strong><a href=\"mailto:debra.holt@example.com\" rel=\"noopener\" style=\"color: #146356;\">debra.holt@example.com</a></strong></span></p>',
+          "enable_text" : true,
+          "enable_title" : false,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Envelope Open-text",
+              "type" : "SOLID",
+              "unicode" : "f658"
+            },
+            "icon_image" : {
+              "alt" : "Message",
+              "height" : 24,
+              "loading" : "lazy",
+              "max_height" : 24,
+              "max_width" : 24,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/message.svg'),
+              "width" : 24
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : ""
+        }, {
+          "description_content" : '<p><strong><a href=\"tel:+2015550124" rel=\"noopener\" style=\"color: #146356;\">(201) 555-0124</a></strong></p>',
+          "enable_text" : true,
+          "enable_title" : false,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Alternate Fire",
+              "type" : "SOLID",
+              "unicode" : "f7e4"
+            },
+            "icon_image" : {
+              "alt" : "Calling",
+              "height" : 24,
+              "loading" : "lazy",
+              "max_height" : 24,
+              "max_width" : 24,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/calling.svg'),
+              "width" : 24
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : ""
+        }, {
+          "description_content" : '<p><span style=\"color: #146356;\">Monday - Friday 09:00 - 18h</span></p>',
+          "enable_text" : true,
+          "enable_title" : false,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Clock",
+              "type" : "REGULAR",
+              "unicode" : "f017"
+            },
+            "icon_image" : {
+              "alt" : "Time Circle",
+              "height" : 24,
+              "loading" : "lazy",
+              "max_height" : 24,
+              "max_width" : 24,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/time-circle.svg'),
+              "width" : 24
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : ""
+        } ],
+        icon_image_selection="image",
+        layout_choice_group={
+          "icon_box_layout" : "compact_layout"
+        },
+        style={
+          "box_inner_spacing" : {
+            "desktop_spacing" : {
+              "spacing_field" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 10
+                  },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 10
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 10
+                  }
+                }
+              }
+            },
+            "mobile_spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 10
+                  }
+                }
+              }
+            }
+          },
+          "colors" : {
+            "content_color" : {
+              "color" : "#022B3A",
+              "opacity" : 70
+            }
+          },
+          "content_alignment" : {
+            "less_spacing_between_image_and_text" : true
+          },
+          "enable_box_shadow" : false,
+          "overwrite" : true
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Video Section #}
+{% dnd_section
+  vertical_alignment=MIDDLE,
+  background_color="rgba(243, 234, 218, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        title_content={
+          "content" : "<h3>Interested? Let's get in touch!</h3><p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/form",
+        offset=0,
+        width=12,
+        style={
+          "form_alignment" : {
+            "max_width" : 450
+          },
+          "spacing" : {
+            "desktop_spacing" : {
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 20
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 20
+                }
+              }
+            },
+            "mobile_spacing" : {
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 15
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 15
+                }
+              }
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "background_color" : {
+            "color" : "#F3EADA",
+            "opacity" : 100
+          },
+          "height_mobile_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/video",
+        offset=0,
+        width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+
+{% end_dnd_area %}
+{% endblock body %}

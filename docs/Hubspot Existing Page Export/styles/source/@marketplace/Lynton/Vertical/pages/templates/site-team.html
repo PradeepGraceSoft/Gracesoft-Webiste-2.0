@@ -1,0 +1,36 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/team.png
+  label: "Team"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header", make_transparent=true %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-simple.html',
+      context={
+        "padding": {
+          "top": 120,
+          "bottom": 60
+        },
+        "bg_image": {
+          "backgroundPosition": "MIDDLE_CENTER",
+          "backgroundSize": "cover",
+          "imageUrl": get_asset_url('../../assets/images/gradient-bg.png')
+        }
+      }
+    %}
+
+    {% include_dnd_partial path='../sections/leadership.html' %}
+
+    {% include_dnd_partial path='../sections/team-listing.html' %}
+  {% end_dnd_area %}
+{% endblock %}

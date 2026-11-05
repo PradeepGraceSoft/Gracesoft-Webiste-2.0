@@ -1,0 +1,235 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Portfolio One
+screenshotPath: ../images/template-previews/portfolio-one.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--portfolio-one'
+%}
+
+{# Portfolio Banner #}
+{% dnd_section
+      vertical_alignment='TOP',
+      full_width=true,
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/banner-layouts',
+        "subtitle"="",
+        "content"="<h1>Just Go Ahead With Austin</h1><p>Austin is the all-in-one Multipurpose theme. Built with macros, web-accessible, and highly customizable designed by experts. Attract your visitors with your stunnable website.</p>"
+          primary_cta={ type: 'btn', style: 'filled_light', text: 'See My Work' },
+          secondary_cta={ type: 'btn', style: 'filled_dark', text: 'Download Resume' }
+         style_1={
+             'content_color': {
+            'heading' : {enable_heading_color: true },
+            'text':{ enable_content_color: true}
+          },
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 170,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 170,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+       }
+%}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_image"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Portfolio Banner #}
+
+{# Counter Section #}
+{% include_dnd_partial 
+    path='../sections/counter-section.html',
+%}
+{# End Of Counter Section #}
+
+{# Two Column Image Text #}
+{% include_dnd_partial path='../sections/two-column-img-text.html' %}
+{# End Two Column Image Text #}
+
+{# Features Section #}
+{% include_dnd_partial path='../sections/features.html' %}
+{# End Of Features Section #}
+
+{# Portfolio Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+  path='../modules/portfolio-tabs',
+%}
+{% module_attribute 'layout_choices' is_json=True %}
+{
+"select_layout": "image_slider"
+}
+{% end_module_attribute %}  
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Portfolio Section #}
+
+{# Testimonials Section #}
+{% dnd_section  %}
+{% dnd_column %}
+{% dnd_row %}
+  {% dnd_module
+          path='../modules/title-content',
+          "subtitle"="",
+          "content"="<h2>Testimonials</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec felis at pellentesque.Sed amet dolor penatibus sed at posuere justo, lacinia neque.</p>"
+            style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_testimonials' 
+          path='../modules/testimonials',
+          "hide_show_slider_dots" = false,
+%}
+{% module_attribute 'testimonial_layouts_choice' is_json=True %}
+{
+"testimonial_layouts": "two_column_slider"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Testimonials Section #}
+
+{# Spacer #}
+{% dnd_section
+  full_width=true,
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module path='../modules/spacer',
+    offset=0,
+    width=12,
+    style= {
+       height_desktop_: 60,
+        height_tablet_: 50,
+        height_mobile_: 40,
+      }
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{# Get in Touch Section #}
+{% include_dnd_partial 
+    path='../sections/get-in-touch.html',
+%}
+{# End Of Get in Touch Section #}
+
+{# Spacer #}
+{% dnd_section
+  full_width=true,
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+  %}
+ {% dnd_module path='../modules/spacer',
+    offset=0,
+    width=12,
+    style= {
+       height_desktop_: 60,
+        height_tablet_: 50,
+        height_mobile_: 40,
+      }
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{% end_dnd_area %}
+{% endblock body %}

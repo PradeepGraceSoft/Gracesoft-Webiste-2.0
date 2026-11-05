@@ -1,0 +1,294 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Landing Page Product
+screenshotPath: ../images/template-previews/landing-product.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+{% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--product-landing'
+%}
+
+{# Landing Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+     full_width=true,
+     padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_column
+  padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+      "subtitle"="",
+      "content"="<h1>New iOS app designed for you.</h1><p>All types of businesses need access to development resources, so we give you the option to decide how much you need to use.</p>",
+      style_1={
+      'max_width':{enable: true, value: 480},
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 40,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+        },
+        primary_cta = {'type': 'btn','text' : 'Get Started'},
+        secondary_cta = { 'type': 'btn','text' : 'Watch Video'},
+        image= {
+          'src': get_asset_url('../images/multipurpose/banner-three.png'),
+          'alt': 'girl'
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Landing Banner #}
+
+{# Two Column Button Text Section #}
+{% include_dnd_partial path='../sections/two-column-btn-text.html' %}
+{# End Of Two Column Button Text Section #}
+
+{# Card Section #}
+{% dnd_section 
+  padding={
+    'default': {
+      'top': 40,
+      'right': 20,
+      'bottom': 80,
+      'left': 20
+    },
+    'mobile': {
+      'top': 20,
+      'right': 20,
+      'bottom': 40,
+      'left': 20
+    }
+  },
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 'au_card' 
+				path='../modules/card',
+  card =[{
+        "enable_number": False,
+         "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Real time updates",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        },{
+        "enable_number": False,
+       "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Sell worldwide",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        },{
+        "enable_number": False,
+       "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Highly Secure",
+        "enable_content": True,
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec euismod eget dui diam nec, nibh nulla orci sit.</p>",        
+        }]
+			%}
+{% module_attribute 'card_layouts' is_json=True %}
+{
+"layouts": "card"
+}
+{% end_module_attribute %}
+{% module_attribute 'card_column' is_json=True %}
+{
+"column_choice": "three_column"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Card Section #}
+
+{# Two Column Content Section #}
+{% include_dnd_partial path='../sections/two-column-content.html' %}
+{# End Of Two Column Content  Section #}
+
+{# Form Section #}
+{% dnd_section
+  vertical_alignment='MIDDLE'
+%}
+{% dnd_column 
+  offset=0,
+  width=12 %}
+{% dnd_row  
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 20,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Connect With Us</h2><p>Stay connected, stimulated, and motivated by reaching us through conversation.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+    path='../modules/form'
+    style= {
+        'form_max_width': {enable: true, form_max_width: 500},
+                'form_spacing': {
+          'desktop': {
+            'spacing': {
+                    'padding': {
+                      'top': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            },
+            'mobile': {
+            'spacing_mobile_': {
+                    'padding': {
+                      'top': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            }
+        }
+      }
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "multiple_field_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End Form Section #}
+
+{% end_dnd_area %}
+{% endblock body %}
+{% block footer %}
+{% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

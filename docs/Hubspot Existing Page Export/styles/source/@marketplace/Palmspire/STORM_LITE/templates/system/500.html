@@ -1,0 +1,103 @@
+<!--
+templateType: error_page
+isAvailableForNewContent: true
+label: 500 Error Page
+screenshotPath: ../Images/Page Preview/500 Error.png
+-->
+
+{% extends "../layouts/base.html" %}
+
+
+{% block body %}
+<div class="row-fluid">
+    <div class="error-500 systems-page">
+        <div class="span12 widget-span widget-type-cell wrapper equal-height-container">
+            <div class="wrappe equal-height-container">
+                <div class="row-fluid-wrapper">
+                    <div class="row-fluid">
+                        <div class="span7 left-col vertical-center">
+                            <div class="text-conta">
+                                {% module 'content'
+                                                    path='@hubspot/rich_text',
+                                                    html='<h1>500<br>
+                                Server Error</h1><p>Server Error 500. We apologise and we are fixing the problem. Please try again at a later stage.</p>'
+                                                %}
+                            </div>
+                            <div class="search-bar">
+                                <form data-hs-do-not-collect="true" action="/{{ site_settings.content_search_results_page_path }}">
+                                    <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="{{ module.field_label || "Search" }}" placeholder="Search keyword..">
+                                    {% if module.content_types.website_pages %}
+                                    <input type="hidden" name="type" value="SITE_PAGE">
+                                    {% endif %}
+                                    {% if module.content_types.landing_pages %}
+                                    <input type="hidden" name="type" value="LANDING_PAGE">
+                                    {% endif %}
+                                    {% if module.content_types.blog_posts %}
+                                    <input type="hidden" name="type" value="BLOG_POST">
+                                    <input type="hidden" name="type" value="LISTING_PAGE">
+                                    {% endif %}
+                                    {% if module.content_types.knowledge_articles %}
+                                    <input type="hidden" name="type" value="KNOWLEDGE_ARTICLE">
+                                    {% endif %}
+                                    <div class="cta-container primary-cta">
+																			<button aria-label="Search" class="search-button cta_button">Search</button>
+																	</div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="span5 right-col vertical-center">
+                            <div class="image-container align-right">
+                                <img src="https://3842749.fs1.hubspotusercontent-na1.net/hubfs/3842749/Column-image.png" alt="Password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="system_recent_blogs">
+        <div class="wrapper">
+            <div class="row-fluid-wrapper">
+                <div class="row-fluid">
+									{% module "rich_text_1" path='@hubspot/rich_text', label="Heading Text and Description"
+									html="
+										<div style='text-align:center;'>
+											<h2>Heading Text</h2>
+											<p>Join over 25,000 in beating the failure of strategies by following our blog.</p>'
+										</div>"
+										%}
+                </div>
+                <div class="row-fluid">
+                    <div class="span12 recent-blog">
+                        {% module "module_167034874178116" path='../../modules/Recent_Blogs', label="Recent Blogs" %}
+                    </div>
+                </div>
+                <div class="row-fluid">
+                 {% module "sys_404_error" path='/Storm Lite/modules/Buttons', label="Buttons",
+									choose_number_of_cta="single",
+									single_cta_group={
+									"choose_type_of_cta":"primary-cta",
+									primary_cta_group:{
+									"choose_cta_type_here":"solid-cta"
+									}
+									},
+									styles={
+										'alignment_field':{
+										'horizontal_align' : 'CENTER'
+										},
+										'single_cta_alignment':{
+										'horizontal_align' : 'CENTER'
+										}
+									}
+								 %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  {% endblock body %}
+  

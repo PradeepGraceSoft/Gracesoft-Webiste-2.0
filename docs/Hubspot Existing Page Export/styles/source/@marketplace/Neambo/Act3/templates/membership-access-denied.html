@@ -1,0 +1,74 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Membership access denied
+  screenshotPath: ../images/template-previews/membership-access-denied.jpg
+-->
+
+{% set template_translations = load_translations('./_locales', html_lang, 'en') %}
+
+{% extends './_base.html' %}
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  <div class="section membership-accessdenied">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 membership-accessdenied__intro">
+          {% module 'membership_accessdenied_intro' path='../modules/section-intro',
+            label='Intro',
+            overline='{{ template_translations.membership_access_denied_overline.message }}',
+            title='{{ template_translations.membership_access_denied_title.message }}',
+            desc='<p>{{ template_translations.membership_access_denied_text.message }}</p>',
+            settings={
+              'color_scheme': 'light',
+              'title_tag': 'h1',
+              'title_looks_like': 'h2',
+              'divider': 'auto',
+              'text_max_width': '450'
+            },
+            wrapper={
+              'max_width': {
+                'lg': '700'
+              }
+            },
+            overrideable=False
+          %}
+        </div>
+        <div class="col s12 membership-accessdenied__button">
+          {% module 'membership_accessdenied_button' path='../modules/button',
+            button=[
+              {
+                'type': 'link',
+                'text': '{{ template_translations.membership_access_denied_button.message }}',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': '/'
+                  },
+                  'open_in_new_tab': false
+                },
+                'color': 'accent',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': ''
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            },
+            overrideable=False
+          %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ require_css(get_asset_url('../css/templates/membership-access-denied.css')) }}
+{% endblock body %}

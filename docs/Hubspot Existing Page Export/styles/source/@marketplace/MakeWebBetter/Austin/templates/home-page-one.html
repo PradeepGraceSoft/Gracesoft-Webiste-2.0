@@ -1,0 +1,385 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Homepage One
+screenshotPath: ../images/template-previews/home-one.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--homepage-one'
+%}
+
+{# Homepage Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+    full_width=true,
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+    }
+%}
+{% dnd_column
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+      "subtitle"="",
+      "content"="<h1>Accelerate Your Business With Austin</h1><p>Austin enriches the website with its unrivaled features. Just implement placidly whatever you think.</p>"
+      style_1= {
+        'max_width': {enable: true, value: 550},
+        'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 100,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+      }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Homepage Banner #}
+
+{# Counter Section #}
+{% include_dnd_partial 
+    path='../sections/counter-section.html',
+%}
+{# End Of Counter Section #}
+
+{# Features Section #}
+{% include_dnd_partial path='../sections/features.html' %}
+{# End Of Features Section #}
+
+{# video Section #}
+{% include_dnd_partial path='../sections/video.html' %}
+{# End Of video Section #}
+
+{# Partners Section #}
+{% dnd_section %}
+{% dnd_column
+       padding={
+				'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+			},
+ %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 40,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Our Partners</h2><p>We possess partnerships with top leading companies that can make your business flourish using optimized solutions. Uncover our partners and become one of them to grow the way we are growing!</p>"
+         style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+        %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_partners' 
+				path='../modules/our-partners',
+        partner_content=[
+     {
+    'logo': {
+      'alt': 'Partner Image',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/welovers-partner.png')
+     },
+     "content": "Today, WCFM Marketplace is the fastest growing multi vendor plugin. We have met all of the requirements to be its partner.",
+     },
+     {
+    'logo': {
+      'alt': 'Partner Image',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/hubspot-partner.png')
+     },
+     "content": "We are a HubSpot Platinum Solutions Partner. HubSpot recommends us for eCommerce advancements and customer experience, we serve our customers.",
+     },
+    {
+    'logo': {
+      'alt': 'Partner Image',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/google-partner.png')
+     },
+
+     "content": "Being the active Google Partners, we get certain benefits from Google and so our clients will leverage the same benefits.",
+     },
+     {
+    'logo': {
+      'alt': 'Welovers Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/welovers-partner.png')
+     },
+
+     "content": "Today, WCFM Marketplace is the fastest growing multi vendor plugin. We have met all of the requirements to be its partner.",
+     },
+      {
+    'logo': {
+      'alt': 'Hubspot Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/google-partner.png')
+     },
+
+     "content": "We are a HubSpot Platinum Solutions Partner. HubSpot recommends us for eCommerce advancements and customer experience, we serve our customers.",
+     },
+      {
+    'logo': {
+      'alt': 'Google Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/hubspot-partner.png')
+     },
+
+     "content": "Being the active Google Partners, we get certain benefits from Google and so our clients will leverage the same benefits.",
+     }
+    ]
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Partners Section #}
+
+{# Testimonials Section #}
+{% dnd_section %}
+{% dnd_column
+       padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 35,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+    },
+%}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Testimonials</h2><p>We always try to provide an exhilarating experience to our customers so that they can speed up their businesses without facing any obstacles.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+ %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_testimonials' 
+		path='../modules/testimonials',
+    "hide_show_quotes"=false,
+    "hide_show_social_icons"=false
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Testimonials Section #}
+
+{# Call To Action Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Interested? Let’s get in touch</h2><p>If you are interested in our product and services, then visit us. In case you are having any doubts send us an email</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+    path='../modules/form',
+    "enable_input_field_box_shadow"= True,
+    style={
+        'form_spacing': {
+          'desktop': {
+            'spacing': {
+                    'padding': {
+                      'top': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            },
+            'mobile': {
+            'spacing_mobile_': {
+                    'padding': {
+                      'top': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            }
+        },
+        'form_max_width': {enable:true, form_max_width: 600 },
+        'form_alignment': {
+          'form_horizontal_alignment_choice': {
+            'form_horizontal_alignment': left
+          },
+          'form_horizontal_alignment_choice_mobile_': {
+            'form_horizontal_alignment': center
+          }
+        }
+      },
+       'input_fields':{ 
+            'box_shadow': {
+              enable: true
+            }
+      },
+      
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "single_field_inline_button"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Call To Action Section #}
+
+{% end_dnd_area %}
+
+{% endblock body %}

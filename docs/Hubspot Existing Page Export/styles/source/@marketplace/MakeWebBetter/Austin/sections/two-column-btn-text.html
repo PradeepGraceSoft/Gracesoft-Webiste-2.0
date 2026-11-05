@@ -1,0 +1,58 @@
+<!--
+templateType: section
+label: Two Column Button Text
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/two-column-button-text.png
+description: "Two Column section with content on left side and button on right side"
+-->
+
+{% dnd_section
+  vertical_alignment='MIDDLE',
+  class="au-tab-full-width",
+  padding= {
+        'default': {
+          'top': 80,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        },
+        'mobile': {
+          'top': 40,
+          'right': 20,
+          'bottom': 20,
+          'left': 20
+        }
+    }
+%}
+{% dnd_column 
+  offset=0,
+  width=9 %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Explore The Unique Features</h2><p>We always try to strengthen our relationship with the clients. We have added several extraordinary features in Austin.</p>"
+         style_1={
+          'max_width': {enable: true, value: 720}
+        }
+ %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% dnd_column 
+  offset=9,
+  width=3 %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/button',
+        button={ type: 'btn', style: 'filled_light', text: 'Know More' },
+         styles={
+          general_settings: {
+          "alignment_desktop_": "right"
+          }
+        }
+     %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

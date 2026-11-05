@@ -1,0 +1,106 @@
+{% import "../_variables.css" as var %}
+
+.drop-down {
+  position: relative;
+  width: 270px;
+  max-width: 100%;
+}
+
+.drop-down__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: start;
+}
+
+.drop-down__btn-arrow {
+  flex-shrink: 0;
+  margin-inline-start: .56rem;
+}
+
+.drop-down__list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 5;
+  padding: {{ var.gutter }}px;
+  border-radius: {{ var.radius_6 }};
+  box-shadow: {{ var.medium_shadow }};
+  text-align: start;
+}
+
+.drop-down__list--active {
+  display: block;
+  animation: .2s ease-in-out forwards uiPop;
+}
+
+.drop-down__option {
+  display: block;
+  padding: .28rem 0;
+}
+
+.drop-down__option,
+.drop-down__option:hover {
+  text-decoration: none;
+}
+
+.drop-down__option--active {
+  font-family: {{ var.strong_font_family }};
+  font-style: {{ var.strong_font_style }};
+  font-weight: {{ var.strong_font_weight }};
+}
+
+.drop-down__option--nonitem {
+  padding-bottom: .56rem;
+  margin-bottom: .56rem;
+  border-bottom: 1px solid;
+  font-family: {{ var.ui_font_family }};
+  font-weight: {{ var.ui_font_weight }};
+  font-style: {{ var.ui_font_style }};
+  font-size: .89rem;
+}
+
+.drop-down__option--nonitem.drop-down__option--active {
+  display: none;
+}
+
+/* Light scheme */
+
+.drop-down--light .drop-down__list {
+  background: {{ var.white }};
+}
+
+.drop-down--light .drop-down__option {
+  color: {{ var.dark }};
+}
+
+.drop-down--light .drop-down__option--nonitem {
+  border-bottom-color: {{ var.borders_color }};
+}
+
+.drop-down--light .drop-down__option:hover {
+  color: {{ var.text_color }};
+}
+
+/* Dark scheme */
+
+.drop-down--dark .drop-down__list {
+  background: {{ var.dark }};
+}
+
+.drop-down--dark .drop-down__option {
+  color: {{ var.white }};
+}
+
+.drop-down--dark .drop-down__option--nonitem {
+  border-bottom-color: {{ var.white_borders }};
+}
+
+.drop-down--dark .drop-down__option:hover {
+  color: {{ var.white_text }};
+}

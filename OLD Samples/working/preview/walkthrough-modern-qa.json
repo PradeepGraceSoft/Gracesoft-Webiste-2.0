@@ -1,0 +1,29 @@
+[
+  {
+    "width": 1440,
+    "progressAt4Seconds": 0.4051,
+    "hoverFreeze": true,
+    "resume": true,
+    "loop": true,
+    "overflow": false,
+    "headings": 6
+  },
+  {
+    "width": 390,
+    "progressAt4Seconds": 0.4073,
+    "hoverFreeze": true,
+    "resume": true,
+    "loop": true,
+    "overflow": false,
+    "headings": 6
+  },
+  {
+    "width": 320,
+    "progressAt4Seconds": 0.4006,
+    "hoverFreeze": true,
+    "resume": true,
+    "loop": true,
+    "overflow": false,
+    "headings": 6
+  }
+]

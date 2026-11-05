@@ -1,0 +1,57 @@
+<!--
+  templateType: search_results_page
+  isAvailableForNewContent: true
+  label: System search results
+  screenshotPath: ../images/template-previews/system-search-results.jpg
+-->
+
+{# Important note! We have on-page search results in Act3, so this template is not necessary. To modify the search text or options, edit the global header where we’ve included the Search module. #}
+
+{% set template_translations = load_translations('./_locales', html_lang, 'en') %}
+
+{% extends './_base.html' %}
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  <div class="section system-searchresults">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 system-searchresults__intro">
+          {% module 'system_search_results_intro' path='../modules/section-intro' label='Intro' 
+            overline=''
+            title='{{ template_translations.system_search_results_title.message }}'
+            desc=''
+            settings={
+              'color_scheme': 'light',
+              'title_tag': 'h1',
+              'title_looks_like': 'h2',
+              'divider': 'auto'
+            }
+            wrapper={
+              'max_width': {
+                'lg': '700'
+              }
+            }
+          %}
+        </div>
+        <div class="col s12 system-searchresults__form">
+          <form action="/{{ site_settings.content_search_results_page_path }}">
+            <input type="text" class="hs-input" name="term" autocomplete="off" aria-label="{{ template_translations.system_search_results_input_placeholder.message }}" placeholder="{{ template_translations.system_search_results_input_placeholder.message }}"{% if request.query_dict.term|escape != '' %} value="{{ request.query_dict.term|escape }}"{% endif %}>
+            <input type="hidden" name="type" value="SITE_PAGE">
+            <input type="hidden" name="type" value="BLOG_POST">
+            <input type="hidden" name="type" value="LISTING_PAGE">
+          </form>
+        </div>
+        <div class="col s12 system-searchresults__results">
+          {% module 'search_results' path='@hubspot/search_results' %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ require_css(get_asset_url('../css/templates/system-search-results.css')) }}
+{% endblock body %}

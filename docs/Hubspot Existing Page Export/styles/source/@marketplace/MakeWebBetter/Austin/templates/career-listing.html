@@ -1,0 +1,116 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Career Listing
+screenshotPath: ../images/template-previews/career-listing.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--career'
+%}
+
+{# Career Banner #}
+{% dnd_section
+    vertical_alignment='TOP',
+    full_width=true,
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_row %}
+{% dnd_module
+          path='../modules/banner-layouts',
+        "subtitle"="",
+        "content"="<h1>Uplift your career with Austin</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus suscipit fusce quam lobortis sodales. Vulputate elementum aliquet eget lorem fermentum lobortis aliquet eu. In ullamcorper dignissim arcu convallis sed pharetra massa tor.</p>"
+         primary_cta={ type: 'none', style: 'filled_light', text: 'Let`s Move' },
+         secondary_cta={ type: 'none', style: 'filled_dark', text: 'Examine' }
+         style_1={
+             'content_color': {
+            'heading' : {enable_heading_color: true },
+            'text':{ enable_content_color: true}
+          },
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 160,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 160,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+          }
+ %}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_image"
+}
+{% end_module_attribute %}
+      %}
+{% end_dnd_module %}
+
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Career Banner #}
+
+{# Job Listing Tabs #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/listing-layouts'      
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End Of Job Listing Tabs #}
+
+
+{% end_dnd_area %}
+{% endblock body %}

@@ -1,0 +1,764 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact Us
+  screenshotPath: ../Images/Page Preview/Contact Us One.png
+-->
+
+{% extends './layouts/base.html' %}
+{% block body %}
+{% dnd_area 'dnd_area_contact_us' label='Contact-Us' class='body-container-contact-us'%}
+
+<!--====================== Banner Section =================================== -->
+
+    {% dnd_section
+			 vertical_alignment='MIDDLE'
+			 padding={
+				'default':{
+				'top': 80,
+				'bottom': 59
+				},
+				'mobile':{
+				'top': 60,
+				'bottom': 60
+				 }
+				},
+				margin={
+				'default':{
+				'top': 125,
+				'bottom': 0
+				},
+				'mobile':{
+				'top': 0,
+				'bottom': 0
+				 }
+				}
+      %}
+         {% dnd_column offset=0, width=6 %}
+           {% dnd_row %}
+							{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+								add_custom_class_here="content-text-1",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:true,
+								choose_heading:"1",
+								add_heading_here:"Add Page <br>Heading Text",
+								check_to_show_description:false,
+								add_description_here:"<p>No coding required, Clean, Easily editable, design and developed by team of Hubspot certified Marketers,
+								designers and programmers.</p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-left",
+								set_max_width_of_the_content:"460"
+							 },
+							 styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										 'add_border_here':{
+																	"top": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "bottom": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "left": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "right": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 }
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+															 'adjust_spacing_in_desktop_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}												
+														},
+														'adjust_spacing_in_tab_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}											
+														},
+														'adjust_spacing_in_mobile_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}											
+														}
+										 }
+							 }
+							%}
+							{% end_dnd_module %}
+           {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=6 , width=6,
+				   padding={
+					 'default':{
+					 'top':0
+					 },
+					 'mobile':{
+					 'top':30
+					 }
+					 }
+				 %}
+           {% dnd_row %}
+							{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+								add_custom_class_here="content-text-2",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								choose_heading:"1",
+								add_heading_here:"Add Page <br>Heading Text",
+								check_to_show_description:true,
+								add_description_here:"<p>We are ready to help you until and unless you find the right ladder to success. No coding required, Clean, Easily editable, design and 
+								                         developed by team of Hubspot certified Marketers, designers and programmers.</p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-left",
+								set_max_width_of_the_content:"552"
+							 },
+							 styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										 'add_border_here':{
+																	"top": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "bottom": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "left": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 },
+																	 "right": {
+																		 "width": { "value": 0, "units": "px" },
+																		 "opacity": 0,
+																		 "style": "solid",
+																		 "color": "#E6E6E6"
+																	 }
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+															 'adjust_spacing_in_desktop_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}												
+														},
+														'adjust_spacing_in_tab_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}											
+														},
+														'adjust_spacing_in_mobile_view':{
+																											'padding':{
+																												'top':{
+																												'value':0
+																												},
+																											 'bottom':{
+																												'value':0
+																												},
+																												'left':{
+																												'value':0
+																												},
+																												'right':{
+																												'value':0
+																												}
+																											}											
+														}
+										 }
+							 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+<!--====================== Banner Section Ends =================================== -->
+
+
+<!--===================== Form And Card Section =================================== -->
+
+  {% dnd_section 
+	   background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+     padding={
+      'default':{
+      'top': 120,
+      'bottom':110
+      },
+      'mobile':{
+      'top': 60,
+      'bottom': 30
+      }
+     }
+	 %}
+    {% dnd_column offset=0, width=5,
+			padding={
+			 'default':{
+			 'top': 0,
+			 'bottom':0,
+			 "left": 0,
+			 "right": 20
+			 },
+			 'mobile':{
+			 'top': 0,
+			 'bottom': 0,
+			 "left": 0,
+			 "right": 0
+			 }
+			}
+		%}
+      {% dnd_row %} 
+         {% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+           add_custom_class_here="contact_us_card",
+           choose_content_type= "single-content",
+           single_column_group = {
+           "check_to_show_heading":true,
+           "choose_heading":"4",
+           "add_heading_here":"Heading Text",
+           "check_to_show_description": true,
+           "add_description_here": "<p> Headphones have a more dynamic and <br> wider range of sound, </p>",
+           "check_to_show_contact_information": true,
+           "contact":{
+           "add_email_id_here": "tim.jennings@example.com",
+           "add_contact_number_here": "(225) 555-0118"
+           },
+					 "check_to_show_cta":false,
+					 choose_text_alignment:"align-left",
+					 set_max_width_of_the_content:"439",
+					 "want_icons": false
+           },
+					 styles={
+							 'check_to_show_wrapper':false,
+							 'turn_on_to_make_all_text_white':false,
+							 'background':{
+								 'choose_background':"color",
+								 'add_background_color':{
+									 'color':"#ffffff",
+									 'opacity':100
+								 }
+							 },
+							 'border':{
+								 'add_border_here':{
+									 "top": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "left": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "right": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 }
+								 },
+							 'add_border_radius':"6"
+							 },
+							 'spacing':{
+								 'adjust_spacing_in_desktop_view':{
+									 'padding':{
+										 'top':{
+										  'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										  'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }												
+								 },
+								 'adjust_spacing_in_tab_view':{
+									 'padding':{
+										 'top':{
+										   'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										  'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }											
+								 },
+								 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+										 'top':{
+										  'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										   'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }											
+								 }
+							 }
+				     }
+          %}           
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row,
+				padding={
+				 'default':{
+				 'top': 42,
+				 'bottom':0,
+				 "left": 0,
+				 "right": 0
+				 },
+				 'mobile':{
+				 'top': 40,
+				 'bottom': 0,
+				 "left": 0,
+				 "right": 0
+				 }
+				}
+		  %}
+        {% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+           add_custom_class_here="contact_us_card",
+           choose_content_type= "single-content",
+           single_column_group = {
+           "check_to_show_heading":true,
+           "choose_heading":"4",
+           "add_heading_here":"Heading Text",
+           "check_to_show_description": true,
+           "add_description_here": "<p> Headphones have a more dynamic and <br> wider range of sound, </p>",
+           "check_to_show_contact_information": true,
+           "contact":{
+           "add_email_id_here": "tim.jennings@example.com",
+           "add_contact_number_here": "(225) 555-0118"
+           },
+					 "check_to_show_cta":false,
+					 choose_text_alignment:"align-left",
+					 "want_icons": false
+           },
+					 styles={
+							 'check_to_show_wrapper':false,
+							 'turn_on_to_make_all_text_white':false,
+							 'background':{
+							 'choose_background':"color",
+							 'add_background_color':{
+							 'color':"#ffffff",
+							 'opacity':100
+							 }
+							 },
+							 'border':{
+								 'add_border_here':{
+									 "top": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "left": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "right": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 }
+								 },
+							 'add_border_radius':"6"
+							 },
+							 'spacing':{
+								 'adjust_spacing_in_desktop_view':{
+									 'padding':{
+										 'top':{
+										   'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										   'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }												
+								 },
+								 'adjust_spacing_in_tab_view':{
+									 'padding':{
+										 'top':{
+										  'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										   'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }											
+								 },
+								 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+										 'top':{
+										  'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										  'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }											
+								 }
+							 }
+				     }
+          %}           
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+      {% dnd_row,
+				padding={
+				 'default':{
+				 'top': 42,
+				 'bottom':0,
+				 "left": 0,
+				 "right": 0
+				 },
+				 'mobile':{
+				 'top': 40,
+				 'bottom': 0,
+				 "left": 0,
+				 "right": 0
+				 }
+				}
+		  %}
+        {% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+           add_custom_class_here="contact_us_card-3",
+           choose_content_type= "single-content",
+           single_column_group = {
+           "check_to_show_heading":false,
+           "choose_heading":"4",
+           "add_heading_here":"Heading Text",
+           "check_to_show_description": false,
+           "add_description_here": "<p> Headphones have a more dynamic and <br> wider range of sound, </p>",
+           "check_to_show_contact_information": false,
+					 "check_to_show_cta":false,
+					 choose_text_alignment:"align-left",
+					 "want_icons": true,
+					 "padding_top_social_icons": "0",
+					 "icon_group":[
+					 {
+					   "add_icon_here" : {
+             "name" : "Facebook",
+             "type" : "SOLID",
+             "unicode" : "f124",
+             "icon_set" : "fontawesome-5.14.0"
+             },
+						 "add_icon_link":{
+						 "href":"https://wwww.google.com"
+						 }
+					 },
+					 {
+					  "add_icon_here" : {
+						"name": "LinkedIn", 
+						"unicode":"f08c", 
+						"type":"REGULAR", 
+						"icon_set":"fontawesome-5.14.0"
+						},
+						 "add_icon_link":{
+						 "href":"https://wwww.google.com"
+						 }
+					 },
+					 {
+					   "add_icon_here": {
+             "name" : "Twitter",
+             "type" : "REGULAR",
+             "unicode" : "f099",
+             "icon_set" : "fontawesome-5.14.0"
+             },
+						 "add_icon_link":{
+						 "href":"https://wwww.google.com"
+						 }
+					 }
+					 		]
+           },
+					 styles={
+							 'check_to_show_wrapper':false,
+							 'turn_on_to_make_all_text_white':false,
+							 'background':{
+								 'choose_background':"color",
+								 'add_background_color':{
+									 'color':"#ffffff",
+									 'opacity':100
+								 }
+							 },
+							 'border':{
+								 'add_border_here':{
+									 "top": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "left": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 },
+									 "right": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+									 }
+								 },
+							 'add_border_radius':"6"
+							 },
+							 'spacing':{
+								 'adjust_spacing_in_desktop_view':{
+									 'padding':{
+										 'top':{
+										  'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										  'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }												
+								 },
+								 'adjust_spacing_in_tab_view':{
+									 'padding':{
+										 'top':{
+										  'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										  'value':25
+										 },
+										 'right':{
+										   'value':25
+										 }
+									 }											
+								 },
+								 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+										 'top':{
+										  'value':20
+										 },
+										 'bottom':{
+										  'value':20
+										 },
+										 'left':{
+										  'value':25
+										 },
+										 'right':{
+										  'value':25
+										 }
+									 }											
+								 }
+							 }
+				    }
+          %}           
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+    {% dnd_column offset=5, width=7,
+				padding={
+				 'default':{
+				 'top': 0,
+				 'bottom':0,
+				 "left": 0,
+				 "right": 0
+				 },
+				 'mobile':{
+				 'top': 40,
+				 'bottom': 0,
+				 "left": 0,
+				 "right": 0
+				 }
+				}
+		%}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/form' %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--======================  Form And Card Section Ends ============================= -->
+
+<!--===========================  Map Section Start ================================== -->
+
+  {% dnd_section, full_width= true %}
+    {% dnd_column full_height= "true",
+				padding={
+				 'default':{
+				 'top': 0,
+				 'bottom':0,
+				 "left": 0,
+				 "right": 0
+				 },
+				 'mobile':{ 
+				 'top': 40,
+				 'bottom': 0,
+				 "left": 0,
+				 "right": 0
+				 }
+				}
+		%}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+							<iframe class="map_with_grascale" src="https://www.google.com/maps/embed?
+																										 pb=!1m18!1m12!1m3!1d112148.74593748435!2d77.43493206026292!3d28.550288823367417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc0
+																										 3f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1671649562125!5m2!1sen!2sin" width="100%" style="border:0; height:40vw; " allowfullscreen=""
+											loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--===========================  Map Section Ends =================================== -->
+
+{% end_dnd_area %}
+{% endblock body %} 

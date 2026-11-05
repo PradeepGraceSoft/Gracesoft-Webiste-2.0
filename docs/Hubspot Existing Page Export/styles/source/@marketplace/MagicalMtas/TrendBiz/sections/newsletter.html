@@ -1,0 +1,26 @@
+<!--
+  templateType: section
+  label: Newsletter
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/newsletter.png
+  description: "newsletter section separated in two columns."
+-->
+
+{# Feature Section Start #}
+  {% dnd_section max_width=1200, class="feature-area" %}
+     {% dnd_column %}
+
+        {% dnd_row %}
+           {% dnd_module "module_16693993352614" path="../modules/Newsletter", label="Newsletter"  
+              newsletter_title = '<h2>Subscribe To Our Newsletter</h2>'
+           %}
+           {% end_dnd_module %}
+        {% end_dnd_row %}
+           
+     {% end_dnd_column %}
+
+  {% end_dnd_section %}
+{# Hero Slider Section End #}
+		
+		
+	

@@ -1,0 +1,191 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+-->
+<div class="blog-listing-4{{ ' blog-listing-4--float-img' if b.listing.listing_4_float_right_images }}{{ ' blog-listing-4--with-sidebar' if b.sidebar.listing_sidebar != 'none' }} section">
+  <div class="container">
+    <div class="row items-stretch">
+      <div class="blog-listing-4__content col {{ 's9' if b.sidebar.listing_sidebar != 'none' else 's12' }} md-s12">
+        {# Listing layout #}
+        {% if simple_list_page %}
+          {# All posts #}
+          <div class="blog-listing-4__simple-list txt--unstyle-links">
+            {% for content in contents %}
+              <p class="h3" style="margin-bottom: 0"><a href="{{ content.absolute_url }}">{{ content.name }}</a></p>
+              <p class="small-text">{{ content.publish_date_localized }}</p>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="blog-listing-4__list" id="post-list">
+            {% for content in contents %}
+              {%- if b.hero.homepage_hero != 'latest_post' or (current_page_num > 1 or not loop.first) or blog_author or tag -%}
+                <div class="blog-listing-4__post">
+                  <div class="blog-listing-4__contents clear">
+                    <h2 class="blog-listing-4__title h1"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
+                    {%- if b.author.show_author or b.date.show_date -%}
+                      <p class="blog-listing-4__info small-text">
+                        {{ b.text.by_on|replace('[author]', '<a href="' ~ blog_author_url(group.id, content.blog_post_author.slug) ~ '"><strong>'~ content.blog_post_author.display_name ~'</strong></a>')|replace('[date]', content.publish_date_localized) }}
+                      </p>
+                    {%- endif -%}
+                    {% if content.widgets.post_banner.body.src or content.featured_image %}
+                      <div class="blog-listing-4__img">
+                        {% if content.widgets.post_banner.body.src %}
+                          {{ image_tag(content.widgets.post_banner.body) }}
+                        {% else %}
+                          <img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text|default(content.name) }}" {{ image_srcset(content.featured_image, sm) }} loading="lazy">
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    {% if content_group.show_summary_in_listing %}
+                      {%- if b.listing.summary_type == 'meta_description' -%}
+                        <p class="blog-listing-4__summary">{{ content.meta_description }}</p>
+                      {%- elif b.listing.listing_4_summary_length > 0 -%}
+                        <p class="blog-listing-4__summary">{{ content.post_list_content|striptags|truncate(b.listing.listing_4_summary_length, true, ' &hellip;') }}</p>
+                      {%- endif -%}
+                    {% endif %}
+                    <p class="blog-listing-4__btn"><a href="{{ content.absolute_url }}" class="btn btn--medium btn--pill btn--outline btn--accent">{{ b.text.read_story }}</a></p>
+                  </div>
+                  {% if b.tags.show_tags and content.tag_list[0] %}
+                    <div class="blog-listing-4__tags small-text">
+                      <span class="blog-listing-4__tags-label">{{ b.text.topics }}:</span>
+                      {% for tag in content.tag_list %}
+                        <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="blog-listing-4__tag">{{ tag.name }}</a>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              {%- endif -%}
+            {% endfor %}
+          </div>
+        {% endif %}
+        {# "Load More" pagination #}
+        {%- if next_page_num and b.pagination.pagination_type == 'load_more' -%}
+          {{ require_css(get_asset_url('../css/components/blog-load-more.css')) }}
+          {{ require_js(get_asset_url('../js/components/blog-load-more.js'), 'footer') }}
+          <div class="blog-load-more">
+            <a id="blog_load_more_btn" class="blog-load-more__btn btn btn--large btn--outline btn--accent" href="javascript:;" next-page-link="{{ blog_page_link(next_page_num)|split('http:')|last }}">{{ b.text.load_more_stories }}</a>
+            <div class="blog-load-more__loading">
+                &nbsp;<div class="dot-pulse"></div>
+            </div>
+          </div>
+        {# Classic pagination #}
+        {%- elif contents.total_page_count > 1 and b.pagination.pagination_type == 'classic' -%}
+          {{ require_css(get_asset_url('../css/components/blog-pagination.css')) }}
+          {%- set page_list = [-2, -1, 0, 1, 2] -%}
+          {%- if contents.total_page_count - current_page_num == 1 -%}{%- set offset = -1 -%}
+          {%- elif contents.total_page_count - current_page_num == 0 -%}{%- set offset = -2 -%}
+          {%- elif current_page_num == 2 -%}{%- set offset = 1 -%}
+          {%- elif current_page_num == 1 -%}{%- set offset = 2 -%}
+          {%- else -%}{%- set offset = 0 -%}{%- endif -%}
+          <div class="blog-pagination">
+            <div class="flex flex-row items-center justify-start">
+              <a class="blog-pagination__item blog-pagination__item--arrow blog-pagination__item--prev {{ 'blog-pagination__item--disabled' if !last_page_num }}" href="{% if last_page_num %}{{ blog_page_link(last_page_num) }}{% else %}javascript:;{% endif %}">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70711 0.29289C7.31658 -0.09763 6.68342 -0.0976301 6.29289 0.29289L0.292899 6.2929C-0.0976007 6.6834 -0.0976007 7.3166 0.292899 7.7071L6.29289 13.7071C6.68342 14.0976 7.31658 14.0976 7.70711 13.7071C8.09763 13.3166 8.09763 12.6834 7.70711 12.2929L2.4142 7L7.70711 1.70711C8.09763 1.31658 8.09763 0.68342 7.70711 0.29289Z" fill="currentColor"/>
+                </svg>
+              </a>
+              {%- for page in page_list -%}
+                {%- set this_page = current_page_num + page + offset -%}
+                {%- if this_page > 0 and this_page <= contents.total_page_count -%}
+                    <a class="blog-pagination__item blog-pagination__item--number {{ 'blog-pagination__item--active' if this_page == current_page_num }}" href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+                {%- endif -%}
+              {%- endfor -%}
+              <a class="blog-pagination__item blog-pagination__item--arrow blog-pagination__item--next {{ 'blog-pagination__item--disabled' if !next_page_num }}" href="{% if next_page_num %}{{ blog_page_link(next_page_num) }}{% else %}javascript:;{% endif %}">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.29289 13.7071C0.68342 14.0976 1.31658 14.0976 1.70711 13.7071L7.7071 7.70708C8.0976 7.31658 8.0976 6.68338 7.7071 6.29288L1.70711 0.292875C1.31658 -0.097625 0.68342 -0.097625 0.29289 0.292875C-0.0976298 0.683375 -0.0976299 1.31657 0.29289 1.70707L5.5858 6.99998L0.29289 12.2929C-0.09763 12.6834 -0.09763 13.3166 0.29289 13.7071Z" fill="currentColor"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+      {%- if b.sidebar.listing_sidebar != 'none' -%}
+        <div class="blog-listing-4__aside col s3 md-s12">
+          {# Classic sidebar #}
+          {%- if b.sidebar.listing_sidebar == 'classic' -%}
+            {%- if b.sidebar.classic.recent_posts or b.sidebar.classic.topics or b.sidebar.classic.archive -%}
+              {{ require_css(get_asset_url('../css/components/tabs.css')) }}
+              {{ require_js(get_asset_url('../js/components/tabs.js'), { position: 'footer', defer:true }) }}
+              <div class="blog-classic-sidebar__tabs tabs tabs--light tabs--buttons-small tabs--indent" data-tabs-inactive="btn--light btn--outline" data-tabs-active="btn--accent btn--fill">
+                <ul class="tabs__nav justify-start">
+                  {%- if b.sidebar.classic.recent_posts -%}
+                    <li class="tabs__nav-item">
+                      <button class="tabs__btn btn btn--small btn--pill btn--accent btn--fill tabs__btn--active" go-to-tab="blog-recent-posts">{{ b.text.recent }}</button>
+                    </li>
+                  {%- endif -%}
+                  {%- if b.sidebar.classic.topics -%}
+                    <li class="tabs__nav-item">
+                      <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts else 'btn--light btn--outline' }}" go-to-tab="blog-topics">{{ b.text.topics }}</button>
+                    </li>
+                  {%- endif -%}
+                  {%- if b.sidebar.classic.archive -%}
+                    <li class="tabs__nav-item">
+                      <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts and not b.sidebar.classic.topics else 'btn--light btn--outline' }}" go-to-tab="blog-archive">{{ b.text.archive }}</button>
+                    </li>
+                  {%- endif -%}
+                </ul>
+                <div class="tabs__content">
+                  {# Recent #}
+                  {%- if b.sidebar.classic.recent_posts -%}
+                    <button class="tabs__btn btn btn--small btn--pill btn--accent btn--fill tabs__btn--active" go-to-tab="blog-recent-posts">{{ b.text.recent }}</button>
+                    <div class="tabs__tab tabs__tab--active txt--light txt--unstyle-lists txt--unstyle-links important-text small-text" id="blog-recent-posts">
+                      {% post_listing 'blog_recent_posts', label='Recent', select_blog='{{ group.id }}', list_title='', listing_type='recent', max_links=3, overrideable=False %}
+                    </div>
+                    {% set see_all = '<span class="btn btn--small btn--outline btb--pill btn--light">'~ b.text.see_all ~'</span>' %}
+                  {%- endif -%}
+                  {# Topics #}
+                  {%- if b.sidebar.classic.topics -%}
+                    <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts else 'btn--light btn--outline' }}" go-to-tab="blog-topics">{{ b.text.topics }}</button>
+                    <div class="tabs__tab{{ ' tabs__tab--active' if not b.sidebar.classic.recent_posts }} txt--light txt--unstyle-lists txt--unstyle-links important-text small-text" id="blog-topics">
+                      {% post_filter 'blog_topics', label='Topics', select_blog='{{ group.id }}', expand_link_text='{{ see_all }}', list_title='', max_links=5, filter_type='topic', overrideable=False %}
+                    </div>
+                  {%- endif -%}
+                  {# Archive #}
+                  {%- if b.sidebar.classic.archive -%}
+                    <button class="tabs__btn btn btn--small btn--pill {{ 'btn--accent btn--fill tabs__btn--active' if not b.sidebar.classic.recent_posts and not b.sidebar.classic.topics else 'btn--light btn--outline' }}" go-to-tab="blog-archive">{{ b.text.archive }}</button>
+                    <div class="tabs__tab{{ ' tabs__tab--active' if not b.sidebar.classic.recent_posts and not b.sidebar.classic.topics }} txt--light txt--unstyle-lists txt--unstyle-links important-text small-text" id="blog-archive">
+                      {% post_filter 'blog_archive', label='Archive', select_blog='{{ group.id }}', expand_link_text='{{ see_all }}', list_title='', max_links=5, filter_type='month', overrideable=False %}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+            {# Subscription #}
+            {% if b.sidebar.classic.subscription %}
+              {{ require_css(get_asset_url('../css/components/form.css')) }}
+              {{ require_css(get_asset_url('../css/components/form-dark.css')) }}
+              <div class="blog-classic-sidebar__subscription form form--dark form--dark-no-accent txt--dark form--btn-white form--btn-large form--btn-outline form--hidden-labels form--box form--box-accent">
+                <h3 class="h4">{{ b.text.subscribe_by_email }}</h3>
+                {% blog_subscribe 'blog_sub_form', label='Blog subscription',
+                  select_blog='{{ group.id }}',
+                  title='',
+                  overrideable=True
+                %}
+              </div>
+            {% endif %}
+            {{ require_css(get_asset_url('../css/components/blog-classic-sidebar.css')) }}
+          {%- elif b.sidebar.listing_sidebar == 'global' and b.sidebar.listing_sidebar_partial|trim -%}
+            {%- set sidebar_partial = '../partials/' ~ b.sidebar.listing_sidebar_partial|trim|replace('.html', '') ~ '.html' -%}
+            {%- include sidebar_partial -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+{{ require_css(get_asset_url('../css/components/blog-listing-4.css')) }}
+{%- if b.listing.padding == 'custom' -%}
+  {%- set lg_css = '' -%}
+  {%- set sm_css = '' -%}
+  {%- if b.listing.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.listing.top_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if lg_css -%}{% set lg_css = '.blog-listing-4 {' ~ lg_css ~ '}' %}{%- endif -%}
+  {%- if b.listing.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.listing.top_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-listing-4 {' ~ sm_css ~ '}}' %}{%- endif -%}
+  {%- if lg_css or sm_css -%}
+    {%- require_css -%}
+      <style>{{ lg_css ~ sm_css }}</style>
+    {%- end_require_css -%}
+  {%- endif -%}
+{%- endif -%}

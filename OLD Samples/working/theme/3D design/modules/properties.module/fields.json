@@ -1,0 +1,160 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Label",
+    "type": "text",
+    "default": "YOUR PROPERTY. YOUR WAY."
+  },
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Designed for\nyour kind of stay."
+  },
+  {
+    "name": "intro",
+    "label": "Introduction",
+    "type": "text",
+    "default": "A small inn and a busy resort have different rhythms. Explore the GraceSoft tools that fit yours."
+  },
+  {
+    "name": "properties",
+    "label": "Property types",
+    "type": "group",
+    "children": [
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "body",
+        "label": "Description",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "url",
+        "label": "Destination",
+        "type": "url",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS"
+        ],
+        "default": {
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "name": "number",
+        "label": "Number",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 8
+    },
+    "default": [
+      {
+        "title": "Hotels & motels",
+        "body": "A clearer picture at the front desk.",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        },
+        "number": "01"
+      },
+      {
+        "title": "Boutique hotels",
+        "body": "Make room for a more personal stay.",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        },
+        "number": "02"
+      },
+      {
+        "title": "Inns & bed and breakfasts",
+        "body": "More attention for every arrival.",
+        "url": {
+          "href": "https://www.gracesoft.com/bed-breakfast-reservation-software",
+          "type": "EXTERNAL"
+        },
+        "number": "03"
+      },
+      {
+        "title": "Resorts",
+        "body": "Connect the moving parts of a stay.",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        },
+        "number": "04"
+      },
+      {
+        "title": "Vacation rentals",
+        "body": "Bring bookings and properties together.",
+        "url": {
+          "href": "https://www.gracesoft.com/vacation-rental-management-software",
+          "type": "EXTERNAL"
+        },
+        "number": "05"
+      },
+      {
+        "title": "Campgrounds & RV parks",
+        "body": "Keep outdoor hospitality organized.",
+        "url": {
+          "href": "https://www.gracesoft.com/campground-management-software",
+          "type": "EXTERNAL"
+        },
+        "number": "06"
+      },
+      {
+        "title": "Multi-property groups",
+        "body": "Explore operations across your portfolio.",
+        "url": {
+          "href": "https://www.gracesoft.com/multi-property",
+          "type": "EXTERNAL"
+        },
+        "number": "07"
+      },
+      {
+        "title": "Condos",
+        "body": "Find a workflow for your kind of stay.",
+        "url": {
+          "href": "https://www.gracesoft.com/condo-management-software",
+          "type": "EXTERNAL"
+        },
+        "number": "08"
+      }
+    ]
+  },
+  {
+    "name": "ranch_label",
+    "label": "Additional ranch link",
+    "type": "text",
+    "default": "Explore dude and guest ranch software"
+  },
+  {
+    "name": "ranch_url",
+    "label": "Ranch destination",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/dude-rancher-software",
+      "type": "EXTERNAL"
+    }
+  }
+]

@@ -1,0 +1,182 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Pillar Page
+screenshotPath: ../images/template-previews/pillar.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+{% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--pillar-page', label='Main section' %}
+
+  {# START: Hero Two Column #}
+  {# START: Hero Two Column #}
+  {% dnd_section background_color="#f7f8fa" %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-hero-1",
+        offset=0,
+        width=12,
+        button_1={
+          "button_text" : "Check Features"
+        },
+        button_2={
+          "button_icon" : {
+            "name" : "",
+            "type" : "SOLID",
+            "unicode" : "f30b"
+          },
+          "button_text" : "Contact Us"
+        },
+        heading_text="Pillar Page",
+        image={
+          "alt" : "hero-tech",
+          "height" : 3647,
+          "loading" : "lazy",
+          "max_height" : 3647,
+          "max_width" : 4866,
+          "size_type" : "auto_custom_max",
+          "src" : get_asset_url('../images/hero-tech.png'),
+          "width" : 4866
+        },
+        styles={
+          "button_2" : {
+            "button_border_color" : {
+              "color" : "#5b1ee1",
+              "opacity" : 100
+            },
+            "button_outline" : true,
+            "button_text_color" : {
+              "color" : "#FFFFFF",
+              "opacity" : 100
+            }
+          }
+        },
+        tag_line=""
+      %}
+  {% module_attribute "rich_text" %}
+  <p style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Hero Two Column #}
+
+  {# START: Sidebar Content #}
+  {% dnd_section 
+          padding={ 
+            'default': { 'top': 40, 'bottom': 40, 'left': 20, 'right': 20 },
+            'mobile': { 'top': 20, 'bottom': 20 }
+          }
+    %}
+  {% dnd_module path='../modules/kz-sidebar-content' %}{% end_dnd_module %} 
+  {% end_dnd_section %}
+  {# END: Sidebar Content #}
+
+  {# START: Custom List #}
+  {% dnd_section
+  background_color="rgba(1, 68, 228, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-two-column-content-2",
+        offset=0,
+        width=12,
+        styles={
+          "content_block" : {
+            "background_color" : {
+              "color" : "#FFFFFF",
+              "opacity" : 100
+            }
+          },
+          "services_sidebar" : {
+            "border" : {
+              "bottom" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "left" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "right" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "top" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              }
+            },
+            "radius" : 6,
+            "services_background_gradient" : {
+              "colors" : [ {
+                "color" : {
+                  "a" : 1,
+                  "b" : 250,
+                  "g" : 248,
+                  "r" : 247
+                }
+              }, {
+                "color" : {
+                  "a" : 1,
+                  "b" : 250,
+                  "g" : 248,
+                  "r" : 247
+                }
+              } ],
+              "side_or_corner" : {
+                "verticalSide" : "BOTTOM"
+              }
+            }
+          }
+        }
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# END: Recent Post #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
+
+{% block footer %}
+{% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

@@ -1,0 +1,233 @@
+<!--
+ templateType: section
+ label: Feature cards
+ description: "Highlight features, benefits or services."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/feature-cards.jpg
+-->
+{% dnd_section %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-extra-settings',
+        bottom_deco={
+          'type': 'convex',
+          'color': 'light',
+          'arc_height_lg': 600,
+          'arc_height_md': 600,
+          'arc_height_sm': 600
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-intro'
+        overline='Overline',
+        title='Section Intro',
+        desc='<p>Help visitors get the basic idea within a few seconds, so they understand what this section is about.</p>',
+        settings={
+          'title_tag': 'h2',,
+          'title_looks_like': 'h1',
+          'text_max_width': ''
+        },
+        wrapper={
+          'margin': {
+            'bottom': {
+              'lg': (theme.layout.vspace_lg/2)|round(0)|string
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/feature-card',
+        card=[
+          {
+            'title': 'Made with HubSpot',
+            'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.',
+            'icon': {
+              'type': 'icon',
+              'icon': {
+                'name': 'HubSpot',
+                'style': 'REGULAR',
+                'unicode': 'f3b2',
+                'icon_set': 'fontawesome-5.14.0'
+              },
+              'shape': 'disc',
+              'fill': 'fill',
+              'size': 'large',
+              'color': 'accent'
+            },
+            'color': 'white',
+            'shadow': true,
+            'title_tag': 'h4',
+            'title_looks_like': '',
+            'max_width': 300,
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': ''
+              },
+              'open_in_new_tab': false,
+              'no_follow': false
+            }
+          },
+          {
+            'title': 'Fast and SEO-ready',
+            'desc': 'Great score on Google PSI, both desktop and mobile.',
+            'icon': {
+              'type': 'icon',
+              'icon': {
+                'name': 'Alternate Tachometer',
+                'style': 'SOLID',
+                'unicode': 'f3fd',
+                'icon_set': 'fontawesome-5.14.0'
+              },
+              'shape': 'disc',
+              'fill': 'fill',
+              'size': 'large',
+              'color': 'accent'
+            },
+            'color': 'white',
+            'shadow': true,
+            'title_tag': 'h4',
+            'title_looks_like': '',
+            'max_width': 300,
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': ''
+              },
+              'open_in_new_tab': false,
+              'no_follow': false
+            }
+          },
+          {
+            'title': 'Fully Responsive',
+            'desc': 'Feels and looks great on any screen size and any device.',
+            'icon': {
+              'type': 'icon',
+              'icon': {
+                'name': 'Mobile Phone',
+                'style': 'SOLID',
+                'unicode': 'f10b',
+                'icon_set': 'fontawesome-5.14.0'
+              },
+              'shape': 'disc',
+              'fill': 'fill',
+              'size': 'large',
+              'color': 'accent'
+            },
+            'color': 'white',
+            'shadow': true,
+            'title_tag': 'h4',
+            'title_looks_like': '',
+            'max_width': 300,
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': ''
+              },
+              'open_in_new_tab': false,
+              'no_follow': false
+            }
+          },
+          {
+            'title': 'Beautiful & Modern',
+            'desc': 'Everything fits perfectly for a great aesthetic sense & feeling.',
+            'icon': {
+              'type': 'icon',
+              'icon': {
+                'name': 'Star',
+                'style': 'SOLID',
+                'unicode': 'f005',
+                'icon_set': 'fontawesome-5.14.0'
+              },
+              'shape': 'disc',
+              'fill': 'fill',
+              'size': 'large',
+              'color': 'accent'
+            },
+            'color': 'white',
+            'shadow': true,
+            'title_tag': 'h4',
+            'title_looks_like': '',
+            'max_width': 300,
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': ''
+              },
+              'open_in_new_tab': false,
+              'no_follow': false
+            }
+          },
+          {
+            'title': 'Easily Customizable',
+            'desc': 'Easier than ever to match your brand style and feeling.',
+            'icon': {
+              'type': 'icon',
+              'icon': {
+                'name': 'tint',
+                'style': 'SOLID',
+                'unicode': 'f043',
+                'icon_set': 'fontawesome-5.14.0'
+              },
+              'shape': 'disc',
+              'fill': 'fill',
+              'size': 'large',
+              'color': 'accent'
+            },
+            'color': 'white',
+            'shadow': true,
+            'title_tag': 'h4',
+            'title_looks_like': '',
+            'max_width': 300,
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': ''
+              },
+              'open_in_new_tab': false,
+              'no_follow': false
+            }
+          },
+          {
+            'title': 'Buy Now',
+            'desc': 'Available on the HubSpot Marketplace',
+            'icon': {
+              'type': 'icon',
+              'icon': {
+                'name': 'Shopping Cart Arrow Down',
+                'style': 'SOLID',
+                'unicode': 'f218',
+                'icon_set': 'fontawesome-5.14.0'
+              },
+              'shape': 'disc',
+              'fill': 'fill',
+              'size': 'large',
+              'color': 'white-accent'
+            },
+            'color': 'accent',
+            'shadow': true,
+            'title_tag': 'h4',
+            'title_looks_like': '',
+            'max_width': 200,
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          }
+        ],
+        settings={
+          'col': {
+            'lg': 's4',
+            'md': 'md-s6'
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

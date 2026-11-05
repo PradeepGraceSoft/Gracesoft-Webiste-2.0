@@ -1,0 +1,95 @@
+{% import "../_variables.css" as var %}
+
+{% macro sneakpeek_css(s) %}
+  .splide--sp-fade-{{ s }} .splide__track {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black calc(0% + var(--splide-sp-{{ s }})), black calc(100% - var(--splide-sp-{{ s }})), rgba(0, 0, 0, 0));
+  }
+
+  .splide--sp-{{ s }} .splide__slide {
+    overflow: visible;
+  }
+
+  .splide--sp-{{ s }} .splide__slide:not(.is-visible) {
+    pointer-events: none;
+  }
+
+  /* Arrows on top */
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }} {
+    padding-inline: 0;
+  }
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }} .splide__arrow {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: var(--splide-sp-{{ s }});
+    margin-top: 0;
+    transform: none;
+  }
+
+  .splide--sp-ia-{{ s }}.splide--sp-{{ s }} .splide__arrow { /* invisible arrows */
+    opacity: 0;
+  }
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }} .splide__arrow--prev {
+    inset-inline-start: 0;
+    text-align: start;
+  }
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }} .splide__arrow--next {
+    inset-inline-end: 0;
+    text-align: end;
+  }
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }} .splide__arrow-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: {{ var.gutter * 2 }}px;
+    height: {{ var.gutter * 2 }}px;
+    background-color: {{ var.white }};
+    border-radius: 999px;
+    position: absolute;
+    top: 50%;
+    margin-top: -{{ var.gutter }}px;
+  }
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }} .splide__arrow--prev .splide__arrow-icon {
+    inset-inline-start: {%-if s == 'lg' %}{{ var.gutter }}{% elif s == 'md' %}{{ (var.gutter / 2)|round(0) }}{% elif s == 'sm' %}{{ (var.gutter / 3)|round(0) }}{% endif %}px;
+  }
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }} .splide__arrow--next .splide__arrow-icon {
+    inset-inline-end: {%-if s == 'lg' %}{{ var.gutter }}{% elif s == 'md' %}{{ (var.gutter / 2)|round(0) }}{% elif s == 'sm' %}{{ (var.gutter / 3)|round(0) }}{% endif %}px;
+  }
+
+  .splide--sp-aot-{{ s }}.splide--sp-{{ s }}.splide--white-arrows .splide__arrow-icon {
+    background-color: {{ var.dark }};
+  }
+
+  /* Hover shift */
+
+  .splide--sp-hs-{{ s }} .splide__list {
+    transition: margin .3s;
+  }
+
+  .splide--sp-hs-{{ s }}.splide--arrow-prev-hover .splide__list {
+    margin-inline-start: {{ var.gutter }}px;
+  }
+
+  .splide--sp-hs-{{ s }}.splide--arrow-next-hover .splide__list {
+    margin-inline-start: -{{ var.gutter }}px;
+  }
+{% endmacro %}
+
+@media (min-width: {{ var.md + 1 }}px) {
+  {{ sneakpeek_css('lg') }}
+}
+
+@media (max-width: {{ var.md }}px) and (min-width: {{ var.sm + 1 }}px) {
+  {{ sneakpeek_css('md') }}
+}
+
+@media (max-width: {{ var.sm }}px) {
+  {{ sneakpeek_css('sm') }}
+}

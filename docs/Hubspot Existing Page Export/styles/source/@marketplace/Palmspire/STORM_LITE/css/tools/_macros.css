@@ -1,0 +1,21 @@
+
+{% set macros = true %}
+
+{###########################################################################}
+{########################   Color Field CSS Mapper   #######################}
+{###########################################################################}
+
+
+{% macro color(value) %}
+
+  {% set colorhex = value.color|convert_rgb %}
+  {% if value.opacity != null %}
+    {% set coloropacity = value.opacity / 100 %}
+  {% else %}
+    {% set coloropacity = '1' %}
+  {% endif %}
+
+
+  rgba({{ colorhex }}, {{ coloropacity }})
+
+{% endmacro %}

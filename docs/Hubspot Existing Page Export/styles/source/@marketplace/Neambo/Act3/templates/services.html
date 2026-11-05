@@ -1,0 +1,639 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Services
+  screenshotPath: ../images/template-previews/services.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {# Row 1 #}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro'
+            overline='Premium Services',
+            title='The Services. Showcase them in a nice way.',
+            desc='',
+            settings={
+              'title_tag': 'h1'
+            },
+            wrapper={
+              'max_width': {
+                'lg': '650',
+                'md': '580',
+                'sm': '400'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {# Row 2 #}
+        {% dnd_row %}
+          {# Col 1 #}
+          {% dnd_column offset=0, width=4,
+            padding={
+              'default': {
+                'left': gutter,
+                'right': gutter
+              },
+              'mobile': {
+                'left': 0,
+                'right': 0,
+                'bottom': vspace_lg - gutter
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/image',
+                image={
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-pic1.png',
+                  'alt': 'Describe your image',
+                  'width': 250,
+                  'height': 172,
+                  'loading': 'disabled'
+                },
+                image_radius=false,
+                wrapper={
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='
+                  <h3>Social Media</h3>
+                  <p>Websites and applications that enable users to create and share content or to participate in social networking.</p>
+                ',
+                wrapper={
+                  'max_width': {
+                    'lg': '320'
+                  },
+                  'block_align': {
+                    'lg': 'center'
+                  },
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/button',
+                button=[
+                  {
+                    'internal_name': 'Button',
+                    'type': 'link',
+                    'text': 'Learn More',
+                    'link': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      },
+                      'open_in_new_tab': true,
+                      'no_follow': true
+                    },
+                    'color': 'light',
+                    'fill': 'outline',
+                    'size': 'large',
+                    'shape': 'default'
+                  }
+                ],
+                wrapper={
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {# Col 2 #}
+          {% dnd_column offset=4, width=4,
+            padding={
+              'default': {
+                'left': gutter,
+                'right': gutter
+              },
+              'mobile': {
+                'left': 0,
+                'right': 0,
+                'bottom': vspace_lg - gutter
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/image',
+                image={
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-pic2.png',
+                  'alt': 'Describe your image',
+                  'width': 250,
+                  'height': 172,
+                  'loading': 'lazy'
+                },
+                image_radius=false,
+                wrapper={
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='
+                  <h3>Branding</h3>
+                  <p>The promotion of a particular product or company by means of advertising and distinctive design.</p>
+                ',
+                wrapper={
+                  'max_width': {
+                    'lg': '320'
+                  },
+                  'block_align': {
+                    'lg': 'center'
+                  },
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/button',
+                button=[
+                  {
+                    'internal_name': 'Button',
+                    'type': 'link',
+                    'text': 'Learn More',
+                    'link': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      },
+                      'open_in_new_tab': true,
+                      'no_follow': true
+                    },
+                    'color': 'light',
+                    'fill': 'outline',
+                    'size': 'large',
+                    'shape': 'default'
+                  }
+                ],
+                wrapper={
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {# Col 3 #}
+          {% dnd_column offset=8, width=4,
+            padding={
+              'default': {
+                'left': gutter,
+                'right': gutter
+              },
+              'mobile': {
+                'left': 0,
+                'right': 0
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/image',
+                image={
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-pic3.png',
+                  'alt': 'Describe your image',
+                  'width': 250,
+                  'height': 172,
+                  'loading': 'lazy'
+                },
+                image_radius=false,
+                wrapper={
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/rich-text',
+                text='
+                  <h3>Inbound Marekting</h3>
+                  <p>A business methodology that attracts customers by creating valuable content and experiences tailored to them.</p>
+                ',
+                wrapper={
+                  'max_width': {
+                    'lg': '320'
+                  },
+                  'block_align': {
+                    'lg': 'center'
+                  },
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/button',
+                button=[
+                  {
+                    'internal_name': 'Button',
+                    'type': 'link',
+                    'text': 'Learn More',
+                    'link': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      },
+                      'open_in_new_tab': true,
+                      'no_follow': true
+                    },
+                    'color': 'light',
+                    'fill': 'outline',
+                    'size': 'large',
+                    'shape': 'default'
+                  }
+                ],
+                wrapper={
+                  'text_align': {
+                    'lg': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Benefits #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/features-showcase' %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Features #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro'
+            overline='Features',
+            title='All our services are highly oriented and tuned up.',
+            desc='',
+            wrapper={
+              'max_width': {
+                'sm': '420'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': (vspace_lg - gutter)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/quick-features',
+            items=[
+              {
+                'internal_name': 'Made with HubSpot',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'HubSpot',
+                    'style': 'REGULAR',
+                    'unicode': 'f3b2',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Made with HubSpot',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Impressive',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Comment',
+                    'style': 'REGULAR',
+                    'unicode': 'f27a',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Impressive',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Beautiful',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Star',
+                    'style': 'REGULAR',
+                    'unicode': 'f005',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Beautiful',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Modern',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'HDD',
+                    'style': 'REGULAR',
+                    'unicode': 'f0a0',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Modern',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Powerful',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Lightbulb',
+                    'style': 'REGULAR',
+                    'unicode': 'f0eb',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Powerful',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              },
+              {
+                'internal_name': 'Amazing',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Clipboard',
+                    'style': 'REGULAR',
+                    'unicode': 'f328',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'title': 'Amazing',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.'
+              }
+            ],
+            settings={
+              'col': {
+                'lg': 's6',
+                'md': 'md-s6'
+              },
+              'col_align': 'justify-center',
+              'icon': {
+                'stack_sm': true
+              },
+              'desc_size': 'normal'
+            },
+            wrapper={
+              'max_width': {
+                'lg': '850',
+                'sm': '300'
+              },
+              'block_align': {
+                'lg': 'center'
+              },
+              'text_align': {
+                'sm': 'center'
+              },
+              'padding': {
+                'left': {
+                  'lg': '60',
+                  'sm': '0'
+                }
+              }
+            } 
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Reviews #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Our Customers',
+            title='We provide businesses with digital marketing solutions that work',
+            desc='',
+            wrapper={
+              'max_width': {
+                'lg': '700'
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/review',
+            items=[
+              {
+                'rating': 'full,full,full,full,full',
+                'quote': '“Nice quote from a great customer that really tells the visitor what a fine company you are. Social proof is important for sales.”',
+                'author_photo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-i0o53.jpg',
+                  'alt': 'Describe your image',
+                  'width': 80,
+                  'height': 80,
+                  'loading': 'lazy'
+                },
+                'company_logo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-review-logo.svg',
+                  'alt': 'Describe your image',
+                  'width': 20,
+                  'height': 20,
+                  'loading': 'lazy'
+                },
+                'author_name': 'Eric Lee',
+                'author_details': 'CEO, Amazing Company'
+              },
+              {
+                'rating': 'full,full,full,full,half',
+                'quote': '“Nice quote from a great customer that really tells the visitor what a fine company you are. Social proof is important for sales.”',
+                'author_photo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-team02.jpg',
+                  'alt': 'Describe your image',
+                  'width': 80,
+                  'height': 80,
+                  'loading': 'lazy'
+                },
+                'company_logo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-6anib.svg',
+                  'alt': 'Describe your image',
+                  'width': 20,
+                  'height': 20,
+                  'loading': 'lazy'
+                },
+                'author_name': 'Kelly Brighton',
+                'author_details': 'CEO, EBE Company'
+              },
+              {
+                'rating': 'full,full,full,full,empty',
+                'quote': '“Nice quote from a great customer that really tells the visitor what a fine company you are. Social proof is important for sales.”',
+                'author_photo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-team03.jpg',
+                  'alt': 'Describe your image',
+                  'width': 80,
+                  'height': 80,
+                  'loading': 'lazy'
+                },
+                'company_logo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-3zqer.svg',
+                  'alt': 'Describe your image',
+                  'width': 20,
+                  'height': 20,
+                  'loading': 'lazy'
+                },
+                'author_name': 'Richard Peace',
+                'author_details': 'CEO, BB Company'
+              },
+              {
+                'rating': 'full,full,full,full,empty',
+                'quote': '“Nice quote from a great customer that really tells the visitor what a fine company you are. Social proof is important for sales.”',
+                'author_photo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-team03.jpg',
+                  'alt': 'Describe your image',
+                  'width': 80,
+                  'height': 80,
+                  'loading': 'lazy'
+                },
+                'company_logo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-3zqer.svg',
+                  'alt': 'Describe your image',
+                  'width': 20,
+                  'height': 20,
+                  'loading': 'lazy'
+                },
+                'author_name': 'Richard Peace',
+                'author_details': 'CEO, BB Company'
+              },
+              {
+                'rating': 'full,full,full,full,full',
+                'quote': '“Nice quote from a great customer that really tells the visitor what a fine company you are. Social proof is important for sales.”',
+                'author_photo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-i0o53.jpg',
+                  'alt': 'Describe your image',
+                  'width': 80,
+                  'height': 80,
+                  'loading': 'lazy'
+                },
+                'company_logo': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-review-logo.svg',
+                  'alt': 'Describe your image',
+                  'width': 20,
+                  'height': 20,
+                  'loading': 'lazy'
+                },
+                'author_name': 'Eric Lee',
+                'author_details': 'CEO, Amazing Company'
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '3',
+                'md': '2'
+              },
+              'col_align': 'justify-center',
+              'boxed': true
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button',
+                'type': 'link',
+                'text': 'Plans and Pricing',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color': 'accent',
+                'fill': 'fill',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'top': {
+                  'lg': (gutter * 2)|round(0)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

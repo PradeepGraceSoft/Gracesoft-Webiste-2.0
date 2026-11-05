@@ -1,0 +1,29 @@
+[
+  {
+    "name": "text_1",
+    "label": "Heading",
+    "type": "text",
+    "default": "See how Easy InnKeeping fits your front desk"
+  },
+  {
+    "name": "text_2",
+    "label": "Introduction",
+    "type": "text",
+    "default": "What would you like to see first: assigning a room, taking a direct booking or following up with a guest? Bring that question to your demo."
+  },
+  {
+    "name": "link_3",
+    "label": "Demo destination",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/livedemo"
+    }
+  },
+  {
+    "name": "link_3_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Request a Demo"
+  }
+]

@@ -1,0 +1,46 @@
+<!--
+templateType: global_partial
+label: Header no navigation
+-->
+<header class="header header--no-navigation">
+
+  {# Top header drag and drop area #}
+  {% dnd_area 'header-top' label='Top header' class='content-wrapper' %}
+  {% end_dnd_area %}
+  {# End top header drag and drop area #}
+
+  <div class="header__container header__container-lp content-wrapper">
+
+    <div class="header-lp-flex">
+
+      {# Logo #}
+      <div class="header__logo header-lp-col">
+        {% module 'site_logo' path='@hubspot/logo'
+        img={ 
+          "override_inherited_src": true, 
+          "src": get_asset_url("../../images/krazy-dark.svg"),
+          "alt": "Krazy",
+          "width": "160",
+          "height": "57"
+        },
+        label='Logo'
+      %}
+      </div>
+      {# End logo #}
+
+      <div class="header__info header-lp-col text-right">
+        {% module "rich_text_2" path="@hubspot/rich_text",
+            html='Call us on <a href="tel:1800-123-4567" rel="noopener"><span><span data-hs-icon-hubl="true" style="display: inline-block; fill: #c7aa8b;"></span> +1800 123-4567</span></a>'
+          %} 
+      </div>
+
+    </div>
+
+  </div>
+
+  {# Bottom header drag and drop area #}
+  {% dnd_area 'header-bottom' label='Bottom header' class='content-wrapper' %}
+  {% end_dnd_area %}
+  {# End bottom header drag and drop area #}
+
+</header>

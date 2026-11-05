@@ -1,0 +1,28 @@
+<!--
+  templateType: section
+  label: Two Tone Call to Action - Dark
+  description: "Full width call to action with image on the left and text/button on the right with a dark background."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/two-tone-cta-dark.png
+-->
+
+{% dnd_section full_width=true %}
+  {% dnd_module path="../modules/Two Tone Section",
+    text={
+      "heading": "Ready to Transform your Business with Little Effort Using Vertical?",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>"
+    },
+    image={
+      "src": get_asset_url('../../assets/images/two-tone-placeholder.png')
+    },
+    styles={
+      "text": {
+        "dark_mode": true,
+        "bg_color": {
+          "color": theme.global.colors.background_dark.color
+        }
+      }
+    }
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}

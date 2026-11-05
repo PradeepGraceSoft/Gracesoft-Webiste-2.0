@@ -1,0 +1,756 @@
+<!--
+  templateType: global_partial
+  label: STORM - Footer Menu
+-->
+
+<section class="footer-top-containers">
+  {% dnd_area 'footer_growthkit_top_conta'
+    label='Footer Top',
+    class='top-section-footer content-wrapper'
+  %}
+	         
+<!-----------------------------  Text or Cta Section Start Here  ------------------------->
+
+  {% dnd_section
+     background_color="{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}",
+     vertical_alignment='BOTTOM'
+     padding={
+      'default':{
+      'top': 87,
+      'bottom':87
+     },
+      'mobile':{
+      'top': 60,
+      'bottom': 60
+     }
+    },
+	 %}
+    {% dnd_column offset=0, width=8,
+		padding={
+      'default':{
+      'top': 0,
+      'right':30
+     },
+      'mobile':{
+      'top': 0,
+      'right': 0
+     }
+    },
+		%}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<div >
+							 <h2 style="color:#fff;" >Get Started</h2>
+							 <p style="color:#fff; margin-bottom:0;" >We help companies and marketers save time and generate more leads via drag and drop HubSpot COS conversion focussed templates.</p>
+						</div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+    {% dnd_column offset=8, width=4 %}
+      {% dnd_row 
+			   padding={
+				  'default':{
+				  'top': 0,
+				  'bottom':0
+				 },
+				  'mobile':{
+				  'top': 20,
+				  'bottom': 0
+				 }
+				},
+			%}
+        {% dnd_module path='../../modules/Buttons', label="Buttons",
+					choose_number_of_cta="single",
+					single_cta_group={
+					"choose_type_of_cta":"primary-cta",
+					primary_cta_group:{
+					"choose_cta_type_here":"solid-cta"
+				 }
+				 },
+					styles={
+						'alignment_field':{
+							'horizontal_align' : 'RIGHT'
+						},
+						'single_cta_alignment':{
+							'horizontal_align' : 'RIGHT'
+						},
+						'set_cta_alignment_in_mobile_view':{
+							'alignment_field':{
+								'horizontal_align' : 'LEFT'
+							},
+							'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+							}
+						}
+					}
+				%}
+				{% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-----------------------------  Text or Cta Section End Here  --------------------------->
+
+
+  {% dnd_section
+	 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}",
+     vertical_alignment='MIDDLE'
+     padding={
+     'default':{
+     'top': 0,
+     'bottom':0
+     },
+     'mobile':{
+     'top': 0,
+     'bottom': 0
+     }
+    },
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<hr style="opacity:0.09;">
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------   border End Here  --------------------------------->
+
+<!-----------------------------  Text or Cta Section End Here  -------------------------->
+
+  {% dnd_section 
+     background_color="{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}",
+     vertical_alignment='MIDDLE'
+     padding={
+      'default':{
+      'top': 60,
+      'bottom':63
+     },
+      'mobile':{
+      'top': 40,
+      'bottom': 40
+     }
+    },
+	 %}
+    {% dnd_column offset=0, width=4  %}
+      {% dnd_row vertical_alignment='MIDDLE' %}
+        {% dnd_column offset=0, width=3 %}
+				 {% dnd_row 
+					padding={
+					 'mobile':{
+					 'top': 20,
+					 'bottom': 0
+					 }
+					},
+				 %}
+					 {% dnd_module horizontal_alignment='CENTER',
+            path='@hubspot/linked_image',
+            img={
+              'alt': 'Placeholder logo',
+              'src': get_asset_url('../../Images/envelope.svg'),
+              'width': 82
+            }
+            %}
+           {% end_dnd_module %}
+				 {% end_dnd_row %} 
+			 {% end_dnd_column %}
+			 {% dnd_column offset=3, width=9 %}
+				 {% dnd_row 
+					padding={
+					 'mobile':{
+					 'top': 20,
+					 'bottom': 0
+					 }
+					}
+				 %}
+					 {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+						 {% module_attribute "html"%}
+								 <div class="align-left">
+									 <p style="color:#fff; margin-bottom: 0;" >E-mail address</p>
+										<a class="no-style-link"  href = "mailto: hello@palmspire.com" style="color:#fff;"><h4 style="color:#fff;" >hello@palmspire.com </h4></a>
+								 </div>
+						 {% end_module_attribute %}
+					 {% end_dnd_module %}
+				 {% end_dnd_row %} 
+			 {% end_dnd_column %}
+     {% end_dnd_row %} 
+    {% end_dnd_column %}
+    {% dnd_column offset=4, width=4 %}
+      {% dnd_row vertical_alignment='MIDDLE' %}
+				{% dnd_column offset=0, width=3 %}
+				 {% dnd_row 
+					padding={
+					 'mobile':{
+					 'top': 20,
+					 'bottom': 0
+					 }
+					},				 
+				 %}
+					 {% dnd_module horizontal_alignment='CENTER',
+            path='@hubspot/linked_image',
+            img={
+              'alt': 'Placeholder logo',
+              'src': get_asset_url('../../Images/phone.svg'),
+              'width': 82
+            }
+            %}
+           {% end_dnd_module %}
+				 {% end_dnd_row %} 
+			 {% end_dnd_column %}
+			 {% dnd_column offset=3, width=9 %}
+				 {% dnd_row 
+					padding={
+					 'mobile':{
+					 'top': 20,
+					 'bottom': 0
+					 }
+					},				 
+				 %}
+					 {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+						 {% module_attribute "html"%}
+								 <div class="align-left">
+									 <p style="color:#fff; margin-bottom: 0;" >Contact us</p>
+										<a class="no-style-link" href="tel:+91%209900942672" style="color:#fff;" ><h4 style="color:#fff;" >+91 990-094-2672</h4></a>
+								 </div>
+						 {% end_module_attribute %}
+					 {% end_dnd_module %}
+				 {% end_dnd_row %} 
+			 {% end_dnd_column %}        
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+    {% dnd_column offset=8, width=4 %}
+      {% dnd_row vertical_alignment='MIDDLE' %}
+        {% dnd_column offset=0, width=4 %}
+				 {% dnd_row 
+					 padding={
+					  'default':{
+					  'top':0,
+						'bottom':0,
+						'right':10
+					 },
+					  'mobile':{
+					  'top': 20,
+					  'bottom': 0,
+					  'right':0
+					 }
+					},				 
+				 %}
+					 {% dnd_module horizontal_alignment='RIGHT',
+            path='@hubspot/linked_image',
+            img={
+              'alt': 'Placeholder logo',
+              'src': get_asset_url('../../Images/handshake.svg'),
+              'width': 82
+            }
+            %}
+           {% end_dnd_module %}
+				 {% end_dnd_row %} 
+			 {% end_dnd_column %}
+			 {% dnd_column offset=4, width=8 %}
+				 {% dnd_row 
+					padding={
+					 'mobile':{
+					 'top': 20,
+					 'bottom': 0
+					 }
+					},				 
+				 %}
+					 {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+						 {% module_attribute "html"%}
+								 <div class="align-left">
+									 <p style="color:#fff; margin-bottom: 0;" >30 Days</p>
+									<h4 style="color:#fff;" >Money-back Guarantee</h4>
+								 </div>
+						 {% end_module_attribute %}
+					 {% end_dnd_module %}
+				 {% end_dnd_row %} 
+			 {% end_dnd_column %} 
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-----------------------------  Text or Cta Section End Here  --------------------------->
+
+<!----------------------------------  border Start Here ---------------------------------->
+
+  {% dnd_section
+	 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}",
+     vertical_alignment='MIDDLE'
+     padding={
+      'default':{
+      'top': 0,
+      'bottom':0
+     },
+      'mobile':{
+      'top': 0,
+      'bottom': 0
+     }
+    },
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<hr style="opacity:0.09;">
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------   border End Here  --------------------------------->
+
+	{% end_dnd_area      %}
+
+</section>
+
+<footer class="footer">
+  {% dnd_area 'footer_growthkit_pre'
+    label='Footer',
+    class='footer-section content-wrapper'
+  %}
+    
+    {% dnd_section 
+    vertical_alignment='MIDDLE',
+    padding={
+    'default':{  
+    'top': 90,
+    'bottom': 7
+    },
+    'mobile':{
+    'top': 60,
+    'bottom': 30
+    }
+    },
+    background_color="{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}"
+    %}
+  
+  {% dnd_column offset=0, width=12 %}
+     {% dnd_row %} 
+        {% dnd_column offset=0, width=12%}
+           {% dnd_row 
+           margin={
+            'bottom':60
+            } 
+           %}
+	
+	{# Footer Column 1  #}
+	
+              {% dnd_column offset=0, width=3 %}
+                {% dnd_row %} 
+                  {% dnd_module
+                    path='@hubspot/linked_image',
+                    img={
+                      'alt': 'Business Logo',
+                      'loading': 'lazy',
+                      'max_height': 45,
+                      'max_width': 226,
+                      'size_type': 'auto_custom_max',
+                      'src':get_asset_url('../../Images/Header and Footer Logos/Storm White logo.svg')
+                    }
+                  %}
+                  {% end_dnd_module %}
+                {% end_dnd_row %}
+                 {% dnd_row %} 
+                    {% dnd_module
+                      path='@hubspot/rich_text',
+                      html='<p>We help companies and marketers save time and generate more leads via drag and drop HubSpot COS.</p>'
+                      label = "Short Description"
+                    %}
+                    {% end_dnd_module %}
+                   {% end_dnd_row %}
+									 {% dnd_row flexbox_positioning='MIDDLE_CENTER', vertical_alignment='MIDDLE' %}     
+	                        {% dnd_module path='../../modules/Social _Icon _Footer', label="Social Icon Footer",
+													   social_links = [
+														  {
+														   add_icon_here : {
+															 'alt':'Facebook',
+							                 'src': get_asset_url('../../Images/icon/facebook.svg')
+							                 },
+															 social_link: {
+															 "url":{
+															 "href":"https://www.facebook.com/palmspire"
+															 }
+															 }
+														  },
+															{
+														   add_icon_here : {
+										          'alt':'Linkedin',
+							                 'src': get_asset_url('../../Images/icon/linkedin.svg')
+							                 },
+															 social_link: {
+															 "url":{
+															 "href":"https://www.linkedin.com/company/palmspire-technologies/about/"
+															 }
+															 }
+														  },
+															{
+														   add_icon_here : {
+										           'alt':'Twitter',
+							                 'src': get_asset_url('../../Images/icon/twitter.svg')
+							                 },
+															 social_link: {
+															 "url":{
+															 "href":"https://twitter.com/hellopalmspire"
+															 }
+															 }
+														  },
+															{
+														   add_icon_here : {
+										          'alt':'Email',
+							                 'src': get_asset_url('../../Images/icon/email envelop.svg')
+							                 },
+															 social_link: {
+															 "url":{
+															 "href":"hello@palmspire.com",
+															 "type":"EMAIL_ADDRESS"
+															 }
+															 }
+														  }
+													 ]
+													%}
+                        {% end_dnd_module %}
+                      {% end_dnd_row %}
+                {% end_dnd_column %}
+	
+		{# Footer Column 2 #}
+	
+              {% dnd_column offset=3, width=3,
+                   padding={
+                  'default':{  
+                  'left': 20
+                  },
+                  'mobile':{
+                  'left': 0
+                  }
+                  }
+               %}
+                  {% dnd_row %}
+                     {% dnd_module "header" path="@hubspot/header" value="Company" header_tag = "h4" %}
+                     {% end_dnd_module %}
+                  {% end_dnd_row %}
+                  {% dnd_row %} 
+                      {% dnd_module "menu" path="@hubspot/simple_menu", label="Simple Menu column 1" 
+                          menu_tree=[
+                          {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "About", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }, 
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "Pricing", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }, 
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "linkUrl": "#", 
+                        "isPublished": false, 
+                        "children": [], 
+                        "linkParams": null, 
+                        "linkLabel": "Services", 
+                        "linkTarget": null, 
+                        "pageLinkId": null, 
+                        "categoryId": null, 
+                        "isDeleted": false
+                        },
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "Resources", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        },
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "Blog", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }
+                        ] 
+                    %}
+                    {% end_dnd_module %}                    
+                  {% end_dnd_row %}
+                {% end_dnd_column %}   
+	
+		{# Footer Column 3 #}
+	
+                {% dnd_column offset=6, width=3 ,
+                    padding={
+                  'default':{  
+                  'left': 20
+                  },
+                  'mobile':{
+                  'left': 0
+                  }
+                  }
+                  %}
+                   {% dnd_row %}
+                      {% dnd_module "header" path="@hubspot/header" value="Landing Pages" header_tag = "h4" %}
+                      {% end_dnd_module %}
+                   {% end_dnd_row %}
+                   {% dnd_row %} 
+                       {% dnd_module "menu" path="@hubspot/simple_menu", label="Simple Menu column 2" 
+                        menu_tree=[
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "Book a Demo", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }, 
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "Refer a Friend", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }, 
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "linkUrl": "#", 
+                        "isPublished": false, 
+                        "children": [], 
+                        "linkParams": null, 
+                        "linkLabel": "Download Ebook", 
+                        "linkTarget": null, 
+                        "pageLinkId": null, 
+                        "categoryId": null, 
+                        "isDeleted": false
+                        },
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "linkUrl": "#", 
+                        "isPublished": false, 
+                        "children": [], 
+                        "linkParams": null, 
+                        "linkLabel": "Request a Quote", 
+                        "linkTarget": null, 
+                        "pageLinkId": null, 
+                        "categoryId": null, 
+                        "isDeleted": false
+                        }, 
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "linkUrl": "#", 
+                        "isPublished": false, 
+                        "children": [], 
+                        "linkParams": null, 
+                        "linkLabel": "FAQ/Help Centre", 
+                        "linkTarget": null, 
+                        "pageLinkId": null, 
+                        "categoryId": null, 
+                        "isDeleted": false
+                        },
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "linkUrl": "#", 
+                        "isPublished": false, 
+                        "children": [], 
+                        "linkParams": null, 
+                        "linkLabel": "Download E-Book", 
+                        "linkTarget": null, 
+                        "pageLinkId": null, 
+                        "categoryId": null, 
+                        "isDeleted": false
+                        }
+                        ] 
+                    %}
+                   {% end_dnd_module %}     
+                {% end_dnd_row %}
+                {% end_dnd_column %}      
+	
+		{# Footer Column 4 #}
+	
+                {% dnd_column offset=9, width=3 %}
+                   {% dnd_row %} 
+                      {% dnd_module "header" path="@hubspot/header" value="System Pages" header_tag = "h4" %}
+                      {% end_dnd_module %}
+                   {% end_dnd_row %}
+                   {% dnd_row %} 
+                      {% dnd_module "menu" path="@hubspot/simple_menu", label="Simple Menu column 3" 
+                          menu_tree=[
+													{
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "404", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        },
+                          {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "500", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }, 
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "Email Confirmation", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }, 
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "linkUrl": "#", 
+                        "isPublished": false, 
+                        "children": [], 
+                        "linkParams": null, 
+                        "linkLabel": "Email Unsubscribe", 
+                        "linkTarget": null, 
+                        "pageLinkId": null, 
+                        "categoryId": null, 
+                        "isDeleted": false
+                        },
+                        {
+                        "contentType": null, 
+                        "subCategory": null, 
+                        "pageLinkName": null, 
+                        "pageLinkId": null, 
+                        "isPublished": false, 
+                        "categoryId": null, 
+                        "linkParams": null, 
+                        "linkLabel": "Search Result", 
+                        "linkTarget": null, 
+                        "linkUrl": "#", 
+                        "children": [], 
+                        "isDeleted": false
+                        }
+                        ] 
+                    %}
+                   {% end_dnd_module %}    
+                 {% end_dnd_row %}
+                {% end_dnd_column %}      
+                {% end_dnd_row %}
+	
+		{# Footer Bottom Legal Text  #}
+	
+	
+	               {% dnd_row %} 
+                    {% dnd_module path='@hubspot/rich_text', label="Horizontal Line "%}
+											 {% module_attribute "html"%}
+                          <hr style="opacity:0.09; background:#e6e6e6;">
+												{% end_module_attribute %}
+										{% end_dnd_module %}
+                  {% end_dnd_row %}
+	
+                   {% dnd_row flexbox_positioning='MIDDLE_CENTER', vertical_alignment='MIDDLE' %} 
+	
+                      {% dnd_column offset=0, width=6, class= 'legal_text' %}
+                         {% dnd_row %} 
+                            {% dnd_module path='@hubspot/rich_text', label="Legal Text"%}
+														  {% module_attribute "html"%}
+															  <div style="text-align: left;">
+                                <p>Copyright {{year}} Palmspire. All rights reserved.</p>
+                                </div>
+														 {% end_module_attribute %}
+													 {% end_dnd_module %}
+                        {% end_dnd_row %}
+                     {% end_dnd_column %} 
+	
+                     {% dnd_column offset=6, width=6 %}
+                        {% dnd_row %} 
+													 {% dnd_module path='@hubspot/rich_text', label="Made By"%}
+															{% module_attribute "html"%}
+																	<div style="text-align: right;">
+                                  <p>Made 
+																	by <a style="color: #246bfd;"> Palmspire </a>Team.</p>
+	                                </div>
+															 {% end_module_attribute %}
+														{% end_dnd_module %}
+                         {% end_dnd_row %}
+                      {% end_dnd_column %} 
+	
+                  {% end_dnd_row %}
+                {% end_dnd_column %} 
+              {% end_dnd_row %} 
+            {% end_dnd_column %}        
+        {% end_dnd_section %}
+  {% end_dnd_area %}
+</footer>

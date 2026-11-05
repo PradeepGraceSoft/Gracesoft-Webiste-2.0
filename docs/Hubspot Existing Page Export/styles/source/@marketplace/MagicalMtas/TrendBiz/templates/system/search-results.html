@@ -1,0 +1,53 @@
+<!--
+  templateType: search_results_page
+  isAvailableForNewContent: true
+  label: Trendbiz - search results
+  screenshotPath: ../../images/template-previews/search-results.png
+-->
+{% extends "../layouts/base.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Search results" %}
+
+{% block body %}
+
+{# Breadcrumb Section Start #}
+  {% module "module_166930562764219" path="../../modules/Breadcrumb", label="Breadcrumb"
+  layout = 'with-image',
+  extra_class = '',
+  page_title = '<h1>Search Results</h1>',
+  breadcrumb_item = [
+    {
+    'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': '../trendbiz/home'},},
+    'breadcrumb_text' :  'Home'
+    },
+    {
+      'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': '../trendbiz/home'},},
+      'breadcrumb_text' :  'Search Results'
+    }
+  ]
+ %}
+{# Breadcrumb Section End #}
+
+
+
+<section class="content-wrapper section-padding">
+  <div class="systems-page system-page-style search-results systems-page--search-results">
+    <div class="container">
+      <div class="systems-page-width">
+        {% module_block module "search_results_content"
+          label="Search results heading",
+          path="@hubspot/rich_text"
+        %}
+          {% module_attribute "html" %}
+            <h2>Results for "{{ request.query_dict.term|escape }}"</h2>
+          {% end_module_attribute %}
+        {% end_module_block %}
+        {% module "search_results"
+          path="@hubspot/search_results"
+        %} 
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}

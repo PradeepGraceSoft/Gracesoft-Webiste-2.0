@@ -1,0 +1,65 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+{% from '../css/_variables.css' import xs, sm, md, scroll_offset_lg, scroll_offset_md, scroll_offset_sm %}
+{% block settings %}
+  {% set lp = false %}
+  {% set header_overlap = false %}
+{% endblock settings %}
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }} class="no-js {% block html_class %}{{ template_class }}{% endblock html_class %}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page_meta.html_title }}</title>
+    {% if brand_settings.favicon.src %}<link rel="shortcut icon" href="{{ brand_settings.favicon.src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    {{ require_css(get_asset_url('../css/main.css')) }}
+		<script>
+			var act = {};
+      act.xs = {{ xs }};
+      act.sm = {{ sm }};
+      act.md = {{ md }};
+			act.scroll_offset = {
+				sm: {{ scroll_offset_sm }},
+				md: {{ scroll_offset_md }},
+				lg: {{ scroll_offset_lg }},
+				get: function() {
+					if(window.matchMedia('(max-width: {{ sm }}px)').matches) return act.scroll_offset.sm;
+					if(window.matchMedia('(min-width: {{ md + 1 }}px)').matches) return act.scroll_offset.lg;
+					return act.scroll_offset.md;
+				},
+				set: function(sm, md, lg){
+					act.scroll_offset.sm = sm;
+					act.scroll_offset.md = md;
+					act.scroll_offset.lg = lg;
+				}
+			};
+		</script>
+    {{ standard_header_includes }}
+  </head>
+  <body class="{{ builtin_body_classes }}">
+    <div id="top"></div>
+    <div class="page">
+      {% block header %}
+        {% if lp %}{% global_partial path="{{ '../partials/' ~ theme.components.header.default_header_lp }}" %}
+        {% else %}{% global_partial path="{{ '../partials/' ~ theme.components.header.default_header }}" %}{% endif %}
+      {% endblock header %}
+      <main id="main-content" class="body">
+        {% block body %}
+        {% endblock body %}
+      </main>
+      {% block footer %}
+        {% if lp %}{% global_partial path="{{ '../partials/' ~ theme.components.footer.default_footer_lp }}" %}
+        {% else %}{% global_partial path="{{ '../partials/' ~ theme.components.footer.default_footer }}" %}{% endif %}
+      {% endblock footer %}
+      {% block modals %}
+        {% module 'page_modals' path='../modules/modal' label='Page modals', no_wrapper=True %}  
+        {% global_partial path='../partials/modals.html' %}
+      {% endblock modals %}
+    </div>
+		<script src="{{ get_asset_url('../js/main.js') }}"></script>
+		{{ require_js(get_asset_url('../js/components/lightbox.js'), { position: 'footer', defer: true }) }}
+    {{ standard_footer_includes }}
+  </body>
+</html>

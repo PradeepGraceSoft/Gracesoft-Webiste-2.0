@@ -1,0 +1,66 @@
+<!--
+  templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title %}<title>{{ page_meta.html_title }}</title>{% endif %}
+    {% if site_settings.favicon_src %}
+    <link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />
+    {% elif brandSettings.primaryFavicon %}
+    <link rel="shortcut icon" href="{{brandSettings.primaryFavicon}}" />
+    {% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://cdn2.hubspot.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style type="text/css">
+      .init-opacity {
+        opacity: 0;
+      }
+    </style>
+    
+    {{ require_css(get_asset_url("../../css/main.css")) }}
+    {{ require_css(get_asset_url("../../css/header.css")) }}
+    {{ require_css(get_asset_url("../../css/offcanvas-desktop.css")) }}
+    {{ require_css(get_asset_url("../../css/module-info/info-contact.css")) }}
+    {{ require_css(get_asset_url("../../css/module-info/info-socials.css")) }}
+    {{ require_css(get_asset_url("../../css/footer.css")) }}
+    {{ require_css(get_asset_url("../../css/dark-mode.css")) }}
+
+    {# This is intended to be used if a template requires template specific style sheets #}
+    {% if template_css %}
+      {{ require_css(get_asset_url(template_css)) }}
+    {% endif %}
+    {{ standard_header_includes }}
+  </head>
+  {% set dark_mode_style = theme.dark_mode.dark_mode_style %}
+  {% set lazy_load_sw = theme.lazy_load.lazy_load_sw %}
+
+  {% set button_search = theme.button_search.button_search_sw %}
+  {% set button_search_class = '' %}
+  {% if button_search == 'disable' %}
+  {% set button_search_class = ' atbs-disable-search' %}
+  {% endif %}
+  <body>
+    <div class="body-wrapper{{button_search_class}}{% if lazy_load_sw == 'disable' %} atbs-disable-lazy-load {% endif %} init-opacity {{ builtin_body_classes }} site-wrapper init-opacity {% if dark_mode_style == 'dark' %} enable-dark-mode {% endif %}">
+      {% block header %}
+        {% global_partial path='../partials/header.html' %}
+      {% endblock header %}
+
+      {% block body %}
+      {% endblock body %}
+
+      {% block footer %}
+        {% global_partial path='../partials/footer.html' %}
+      {% endblock footer %}
+    </div>
+    {{ require_js(get_asset_url('../../js/jquery.js')) }}
+    {{ require_js(get_asset_url('../../js/extension.js')) }}
+    {{ require_js(get_asset_url('../../js/scripts.js')) }}
+    {{ standard_footer_includes }}
+  </body>
+</html>

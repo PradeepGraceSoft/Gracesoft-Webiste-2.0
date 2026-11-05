@@ -1,0 +1,42 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing page
+  screenshotPath: ../images/template-previews/landing-page.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-no-navigation.html" %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--landing-page p-0"
+%}
+
+  {# Landing Form Section Start #}  
+  {% include_dnd_partial path='../sections/landing-form.html' %}
+  {# landing Form Section End #}
+
+{# CTA Box Section Start #} 
+  {% include_dnd_partial path='../sections/cta-box.html' %}
+  {# CTA Box Section End #}
+
+{# Choose Section Start #}
+  {% include_dnd_partial path="../sections/choose.html" %}
+  {# Choose Section End #}
+
+  {# Testimonial Section Start #}
+  {% include_dnd_partial path="../sections/testimonial.html" %}
+  {# Testimonial Section End #}
+
+  {# CTA Banner Section Start #} 
+  {% include_dnd_partial path='../sections/cta-banner.html' %}
+  {# CTA Banner Section End #}
+
+
+{% end_dnd_area %}
+{% endblock body %}
+

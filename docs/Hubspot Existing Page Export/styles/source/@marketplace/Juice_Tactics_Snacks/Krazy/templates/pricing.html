@@ -1,0 +1,439 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Pricing
+screenshotPath: ../images/template-previews/pricing.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--about container-fluid-custom', label='Main section' %}
+
+  {% dnd_section
+  background_color="rgba(243, 243, 247, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-pricing",
+        offset=0,
+        width=12,
+        button={
+          "button_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://484997.hs-sites.com/krazy/contact",
+              "type" : "EXTERNAL"
+            }
+          },
+          "button_text" : "Need a Customized Plan? Please contact us."
+        },
+        heading_text="Choose a plan",
+        pricing=[ {
+          "pricing_button" : {
+            "pricing_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "pricing_button_text" : "Get Started",
+            "pricing_button_type" : "simple"
+          },
+          "pricing_currency" : "$",
+          "pricing_features" : [ {
+            "pricing_features" : "All Analytics Features",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Visitor Tracking",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "User Support",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Android App"
+          } ],
+          "pricing_name" : "Startup",
+          "pricing_number" : "79.00",
+          "pricing_popular" : {
+            "badge_text" : "Most Popular",
+            "enable_badge" : false
+          },
+          "pricing_text" : "<p><span>per month</span></p>"
+        }, {
+          "pricing_button" : {
+            "pricing_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "pricing_button_text" : "Get Started",
+            "pricing_button_type" : "simple"
+          },
+          "pricing_currency" : "$",
+          "pricing_features" : [ {
+            "pricing_features" : "Everything on Startup plan",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Customized Dashboard",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Premium Support",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Detailed Metric API"
+          } ],
+          "pricing_name" : "Growth",
+          "pricing_number" : "279.00",
+          "pricing_popular" : {
+            "badge_text" : "Recommended",
+            "enable_badge" : true
+          },
+          "pricing_text" : "<p><span>per month</span></p>"
+        }, {
+          "pricing_button" : {
+            "pricing_button_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "pricing_button_text" : "Choose plan",
+            "pricing_button_type" : "simple"
+          },
+          "pricing_currency" : "$",
+          "pricing_features" : [ {
+            "pricing_features" : "Everything on Growth plan",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "iOS and Android App",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "Dedicated Support",
+            "pricing_features_icon" : {
+              "name" : "Check Circle",
+              "type" : "REGULAR",
+              "unicode" : "f058"
+            }
+          }, {
+            "pricing_features" : "24/7 Monitoring"
+          } ],
+          "pricing_name" : "Enterprise",
+          "pricing_number" : "479.00",
+          "pricing_popular" : {
+            "badge_text" : "Most Popular",
+            "enable_badge" : false
+          },
+          "pricing_text" : "<p><span>per month</span></p>"
+        } ],
+        styles={
+          "button" : {
+            "button_outline" : true
+          },
+          "heading" : {
+            "heading_type" : "<h1>"
+          },
+          "pricing" : {
+            "background" : {
+              "card_background_color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              }
+            },
+            "button" : {
+              "pricing_card_button_fullwidth" : true,
+              "pricing_card_button_outline" : false
+            },
+            "card_border" : {
+              "border" : {
+                "bottom" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "left" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "right" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                },
+                "top" : {
+                  "color" : "#e9eaf0",
+                  "opacity" : 100,
+                  "style" : "solid",
+                  "width" : {
+                    "units" : "px",
+                    "value" : 1
+                  }
+                }
+              }
+            },
+            "card_corner" : {
+              "radius" : 4
+            }
+          },
+          "section_button" : {
+            "button_outline" : true
+          }
+        },
+        tag_line=""
+      %}
+        {% module_attribute "rich_text" %}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in gravida sem enim sed. In at euismod tortor et tempor.
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {# Pricing #}
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-hero-1",
+        offset=0,
+        width=12,
+        button_1={
+          "button_text" : "Install Theme"
+        },
+        button_2={
+          "button_icon" : {
+            "name" : ""
+          },
+          "button_text" : "Learn more"
+        },
+        heading_text="Grow Your Business 10x with Krazy",
+        image={
+          "alt" : "pexels-dan-cristian-1476321",
+          "height" : 3647,
+          "loading" : "lazy",
+          "max_height" : 3647,
+          "max_width" : 4866,
+          "size_type" : "auto",
+          "src" : get_asset_url('../images/pexels-dan-cristian-1476321.jpg'),
+          "width" : 4866
+        },
+        styles={
+          "button_2" : {
+            "button_outline" : true
+          },
+          "content_type" : "left-image",
+          "heading" : {
+            "heading_type" : "<h2>"
+          },
+          "image_corner" : {
+            "radius" : 6
+          }
+        },
+        tag_line="Free HubSpot Technology Theme"
+      %}
+        {% module_attribute "rich_text" %}
+          <p>The Krazy brings all of your website requirements under one roof,&nbsp; services, sales, operations, and support altogether.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {# Testimonials #}
+  {% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-testimonial",
+        offset=0,
+        width=12,
+        heading_text="What People Say About Us",
+        styles={
+          "heading" : {
+            "heading_font_size" : 0
+          },
+          "section_background_color" : {
+            "color" : "#EEEEEE",
+            "opacity" : 100
+          }
+        },
+        tag_line="Customer reviews",
+        testimonial=[ {
+          "testimonial_image" : {
+            "alt" : "author-square",
+            "height" : 200,
+            "max_height" : 200,
+            "max_width" : 200,
+            "src" : get_asset_url('../images/author-square.jpg'),
+            "width" : 200
+          },
+          "testimonial_name" : "Bryant Chou",
+          "testimonial_text" : "<p>Nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>",
+          "testimonial_title" : "Director at TrueBox"
+        }, {
+          "testimonial_image" : {
+            "alt" : "author-square",
+            "height" : 200,
+            "max_height" : 200,
+            "max_width" : 200,
+            "src" : get_asset_url('../images/author-square.jpg'),
+            "width" : 200
+          },
+          "testimonial_name" : "Kyle Killen",
+          "testimonial_text" : "<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>",
+          "testimonial_title" : "Designer at Tiempo Labs"
+        }, {
+          "testimonial_image" : {
+            "alt" : "author-square",
+            "height" : 200,
+            "max_height" : 200,
+            "max_width" : 200,
+            "src" : get_asset_url('../images/author-square.jpg'),
+            "width" : 200
+          },
+          "testimonial_name" : "Sergei Kalashnikov",
+          "testimonial_text" : "<p>Ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna</p>",
+          "testimonial_title" : "CEO at BintoBox"
+        } ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+  
+  {% dnd_section
+  background_image={
+    "background_position" : "MIDDLE_CENTER",
+    "background_size" : "cover",
+    "image_url" : get_asset_url('../images/pexels-negative-space-33999.jpg')
+  },
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "80px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/kz-cta-2",
+        offset=0,
+        width=12,
+        button={
+          "button_text" : "Drop a query"
+        },
+        heading_text="Contact Us",
+        styles={
+          "card" : {
+            "background" : {
+              "card_background_gradient" : {
+                "colors" : [ {
+                  "color" : {
+                    "a" : 0.4,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                }, {
+                  "color" : {
+                    "a" : 0.4,
+                    "b" : 255,
+                    "g" : 255,
+                    "r" : 255
+                  }
+                } ],
+                "side_or_corner" : {
+                  "verticalSide" : "BOTTOM"
+                }
+              },
+              "card_background_type" : "gradient"
+            },
+            "corner" : {
+              "radius" : 4
+            }
+          },
+          "content_type" : "right-cta"
+        },
+        tag_line="Still, have a question?"
+      %}
+        {% module_attribute "rich_text" %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+  
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

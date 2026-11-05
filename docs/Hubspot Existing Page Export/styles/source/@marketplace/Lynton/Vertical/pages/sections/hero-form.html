@@ -1,0 +1,22 @@
+<!--
+  templateType: section
+  label: Hero - Form
+  description: "Two column hero with text and logos on the left and a form on the right."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/hero-form.png
+-->
+
+{% dnd_section full_width=true %}
+  {% dnd_module path="../modules/Hero",
+    text={{ context.text || "{
+      'eyebrow': 'Contact Us',
+      'heading': 'Why Wait? Reach New Levels with Vertical',
+      'subheadline': 'Vertical is a versatile and easy-to-use theme that can transform your scaling business with little effort. Made with care by HubSpot experts, Vertical is responsive and customizable for your specific business needs.',
+      'add_cta': false
+    }"}},
+    logos_section={{ context.logos || null }},
+    media={
+      "type": "form"
+    }
+  %}{% end_dnd_module %}
+{% end_dnd_section %}

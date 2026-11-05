@@ -1,0 +1,45 @@
+<!--
+  templateType: email_backup_unsubscribe_page
+  isAvailableForNewContent: true
+  label: Edumind - email backup unsubscribe
+  screenshotPath: ../../images/template-previews/backup-unsubscribe.png
+-->
+{% extends "../layouts/base.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Unsubscribe" %}
+
+{% block body %}
+  {# Breadcrumb Section Start #}
+  {% module "module_16607567970425" path="../../modules/Breadcrumb", label="Breadcrumb"
+    layout = 'with-image',
+    extra_class = '',
+    page_title = '<h1>Backup Unsubscribe</h1>',
+    breadcrumb_item = [
+            {
+            'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './edumind-home'},},
+            'breadcrumb_text' :  'Home'
+            },
+            {
+              'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './edumind-home'},},
+              'breadcrumb_text' :  'Backup Unsubscribe'
+            }
+          ]
+
+
+  %}
+  {# Breadcrumb Section End #} 
+
+  <section class="content-wrapper section-padding">
+    <div class="systems-page">
+      <div class="container"> 
+        <div class="systems-page-width"> 
+          {% module "backup_unsubscribe"
+            extra_classes="backup-unsubscribe",
+            path="@hubspot/email_simple_subscription"
+          %} 
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}

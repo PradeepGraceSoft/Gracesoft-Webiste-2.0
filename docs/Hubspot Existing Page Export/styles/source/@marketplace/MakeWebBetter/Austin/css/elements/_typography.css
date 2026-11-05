@@ -1,0 +1,246 @@
+body {
+  color: #6B6B6B;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-break: break-word;
+}
+
+html[lang^="ja"] body,
+html[lang^="zh"] body,
+html[lang^="ko"] body {
+  line-break: strict;
+  word-break: break-all;
+}
+
+/****************************************/
+/*              Paragraphs             */
+/****************************************/
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/****************************************/
+/*              Anchors             */
+/****************************************/
+a {
+  color: #6E41E2;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+/****************************************/
+/*              Headings             */
+/****************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111111;
+  font-weight: 700; 
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+h4 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+/****************************************/
+/*              Lists             */
+/****************************************/
+ul,
+ol {
+  margin: 0 0 1.5rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+
+.no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li::marker {
+  color: {{ theme.color_font_setting.global_colors.primary.color }};
+}
+
+/****************************************/
+/*             Code blocks             */
+/****************************************/
+code {
+  vertical-align: bottom;
+}
+
+/****************************************/
+/*              Blockquotes             */
+/****************************************/
+blockquote {
+  border: 0;
+  margin: 0 auto 2.5rem;
+  max-width: 767px;
+  padding: 80px 0px 0px;
+  position: relative;
+}
+
+blockquote:after {
+  background-image: url();
+  content: "";
+  display: block;
+  height: 38px;
+  left: 0px;
+  margin: 0px auto;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 50px;
+}
+
+/****************************************/
+/*      Subscripts and superscripts     */
+/****************************************/
+sup,
+sub {
+  font-size: 12px;
+  line-height: 20px;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/****************************************/
+/*            Focus styles             */
+/****************************************/
+:focus {
+  outline: auto;
+  outline-color: #00ff00;
+}
+
+.disable-focus-styles :focus {
+  outline: none;
+}
+
+/****************************************/
+/*         Media Queries             */
+/****************************************/
+@media only screen and (min-width: 768px) {
+  body, html {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 56px;
+  }
+  
+  h2 {
+    font-size: 48px;
+  }
+  
+  h3 {
+    font-size: 40px;
+  }
+  
+  h4 {
+    font-size: 32px;
+  }
+  
+  h5 {
+    font-size: 24px;
+  }
+  
+  h6 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body, html {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  
+  h2 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  h3 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  
+  h4 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  h5 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  h6 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

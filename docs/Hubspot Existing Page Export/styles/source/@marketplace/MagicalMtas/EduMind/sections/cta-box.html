@@ -1,0 +1,70 @@
+<!--
+  templateType: section
+  label: CTA Box
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/cta-box.png
+  description: "CTA Box section separated in one column."
+-->
+{% dnd_section max_width=1200, class="cta-box-area" %} 
+
+  {% dnd_column %}
+
+    {% dnd_row %} 
+      {% dnd_column width=12, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module "module_166754337801611" path="../modules/CTA Box", label="CTA Box" 
+            extra_class = '',
+            cta_box_subtitle = '<span>Get In Touch:</span>',
+            cta_box_title = '<h3> info@edublink </h3>',
+            cta_box_sparator = '<span>or</span>'
+            cta_box_subtitle_two = '<span>Get In Touch:</span>',
+            cta_box_title_two = '<h3> +01 123 5641 231 </h3>',
+          %}
+          {% end_dnd_module %} 
+        {% end_dnd_row %} 
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_module "module_166754340276912" path="../modules/Shape Image", label="Shape Image" 
+         shape_image_item = [
+          {
+            'show_image_or_circle' : 'image',
+            'shape_image_number_class' : 'cta-box-shape-1',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/cta/shape-01.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image',
+            'shape_image_number_class' : 'cta-box-shape-2',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '3',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/cta/shape-02.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image',
+            'shape_image_number_class' : 'cta-box-shape-3',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/cta/shape-03.png') 
+            }
+          }
+        ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+{% end_dnd_section %}

@@ -1,0 +1,129 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: TrendBiz - blog post
+  screenshotPath: ../images/template-previews/blog-post.png
+-->
+{% set template_css = "../../css/templates/blog.css" %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<div class="body-container body-container--blog-post p-0">
+
+  {# Breadcrumb Section Start #}
+  {% module "module_166930562764219" path="../modules/Breadcrumb", label="Breadcrumb"
+  layout = 'with-image',
+  extra_class = '',
+  page_title = '<h1>Blog Details</h1>',
+  breadcrumb_item = [
+            {
+            'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+            'breadcrumb_text' :  'Home'
+            },
+            {
+              'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './home'},},
+              'breadcrumb_text' :  'Blog Details'
+            }
+          ]
+
+
+  %}
+  {# Breadcrumb Section End #}
+
+  <!-- Blog Section Start -->
+  <div class="blog-details-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="blog-details-content">
+                    <div class="entry-content">
+                        {% if content.tag_list %}
+                            {% for tag in content.tag_list[0] %}
+                            <span class="category">{{ tag.name }}</span>
+                            {% endfor %}
+                          {% endif %}
+                        <h2 class="title">{{ content.name }}</h2>
+                        <ul class="blog-meta">
+                            <li><i class="far fa-calendar"></i>{{content.publish_date|datetimeformat('%B %e %Y') }}</li>
+                            <li><i class="far fa-user"></i>{{ content.blog_post_author.display_name }}</li>
+                        </ul>
+                        <div class="thumbnail">
+                            <img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text }}">
+                        </div>
+                    </div>
+                    <div class="blog-content"> 
+                        {{ content.post_body }}
+                    </div>
+                    
+                    <div class="blog-share-area">
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <div class="blog-tags">
+                                    <h6 class="title">Tags:</h6>
+                                    <div class="tag-list">
+                                        {% if content.tag_list %}
+                                            {% for tag in content.tag_list %}
+                                            <a href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="blog-share">
+                                    <h6 class="title">Share on:</h6>
+                                    {% module "module_166930625285920" path="../modules/Social Share", label="Social Share"
+                                        social_icon_group = [
+                                        {
+                                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                                        },
+                                        {
+                                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                                        },
+                                        {
+                                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                                        },
+                                        {
+                                            'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.linkedin.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+                                        }
+                                        ]
+                                        %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="comment-form-area mt-40">
+                    <div class="block-title-2">
+                        {% module_block module 'comment_title'
+                            label='Comment Title',
+                            path='@hubspot/rich_text'
+                          %}
+                          {% module_attribute 'html' %}
+                          <h3 class="heading-title">Leave Your Comment Here</h3>
+                  
+                        {% end_module_attribute %}
+                      {% end_module_block %}
+                  
+                        </div>
+
+                        <!-- Comment Form Start -->
+                        <div class="comment-form">
+                            {% module 'blog_comments'
+                                path='@hubspot/blog_comments',
+                                label="Blog comments"
+                            %}
+                        </div>
+                        <!-- Comment Form End --> 
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog Section End -->
+
+</div>
+{% endblock body %}

@@ -1,0 +1,468 @@
+{% unless macros %}{% import 'Coded files/Custom/page/Macros/_macros.css' %}{% endunless %} 
+
+/* ========================================================================== 
+   5. BLOG                                        
+   ========================================================================== */
+
+
+/* =============== General Blog Styles =============== */
+
+/* Blog Post and Listing Body Class */
+.blog {}
+
+/* Blog Post */
+.hs-blog-post {}
+
+/* Blog Listing */
+.hs-blog-listing {}
+
+/* Blog Columns Wrapper */ 
+.blog .content-wrapper {}
+
+.blog-hero {
+  background-image: url({{ blogListingsBannerImage }});
+  {{ rem('padding', '70 20') }}
+  background-size: cover;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+    .blog-hero {
+       {{ rem('padding', '70 50') }} 
+    }
+}
+@media screen and (min-width: 1280px) {
+    .blog-hero {
+       {{ rem('padding', '70') }} 
+    }
+}
+
+/* =============== Blog Content Column =============== */
+
+.blog .blog-content {}
+
+/* Use this to style the main wrapper for the blog listing pages */
+.blog-listing-wrapper {}
+
+/* Use this to style the main wrapper for the blog post pages */
+.blog-post-wrapper {}
+
+/* Blog Title */
+.hs-blog-header h1 {}
+.hs-blog-header h1 a{}
+
+/* Blog Post Title */
+.post-header h2 {
+    text-transform: uppercase;
+    {{ rem('font-size', '28') }}
+    {{ rem('margin','14 0 6 0') }}
+    line-height: 1;
+    font-weight: 600;
+}
+.post-header h2 a {
+    color: {{ mainTextColor }};
+}
+.post-header h2 a:hover {}
+
+
+/* Blog Author and Avatar */
+#hubspot-author_data {}
+#hubspot-author_data:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#hubspot-author_data a.author-link {}
+#hubspot-author_data .hs-author-avatar {}
+#hubspot-author_data .hs-author-avatar img {
+    {{ rem('width','50') }}
+    float: left;
+    {{ rem('margin-right','15') }}
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+/* Use this to set up different styling for your blog posts */
+.blog-listing-wrapper .post-listing .post-item {
+    background-color: {{ secondaryBackgroundColor }};
+    {{ rem('margin-top', '55') }}
+    position: relative;
+}
+.blog-listing-wrapper .post-listing .post-item:first-of-type {
+    {{ rem('margin-top','25') }}
+}
+.blog-listing-wrapper .post-listing .post-item a {
+    color: {{ mainTextColor }};   
+}
+.blog-listing-wrapper .post-listing .post-item .post-content {
+    {{ rem('padding','50 20 130 20') }}
+}
+.blog-listing-wrapper .post-listing .post-item .post-body {
+    {{ rem('font-size','20') }}
+    {{ rem('margin-top','26') }}
+    line-height: 1.3;
+    font-weight: 400;
+}
+@media screen and (min-width: 500px) {
+   .blog-listing-wrapper .post-listing .post-item .post-content {
+        {{ rem('padding','50 50 130 50') }}
+    } 
+}
+@media screen and (min-width: 800px) {
+    .blog-listing-wrapper .post-listing .post-item .hs-featured-image-wrapper + .post-content {
+        margin-left: 45%;    
+    }
+}
+.post-date {
+    text-transform: uppercase;
+    {{ rem('font-size','16') }}
+    font-weight: 600;
+    color: {{ mainAccentColor }};
+}
+
+.post-header .post-date {
+    {{ rem('font-size','17') }}
+    
+}
+.post-top {
+    background-size: cover;
+    background-position: center;
+    {{ rem('margin','30 0 0') }}
+}
+.post-top img {
+    width: 100%;
+    height: auto;
+}
+.post-header {
+    padding-top: 66%;
+    width: 100%;
+    background-color: rgba({{ secondaryBackgroundColor|convert_rgb }}, .7); 
+    {{ rem('padding','30 20') }}
+}
+.post-header .post-date {
+    {{ rem('font-size','17') }}
+}
+.post-header h1 {
+    {{ rem('font-size','34') }}
+    text-transform: uppercase;
+    {{ rem('margin','8 0') }}
+    line-height: 1;
+}
+.post-header #hubspot-author_data {
+    {{ rem('font-size','17') }}
+    font-weight: 300;
+}
+.blog-post-wrapper {
+    font-weight: 400;
+    {{ rem('padding-top','10') }}  
+    {{ rem('padding-bottom','50') }}  
+}
+.blog-post-wrapper .post-body > span :first-child {
+    margin-top: 0 !important;   
+}
+.post-sharing {
+    {{ rem('padding','35 0 40') }}
+}
+.post-sharing a {
+    color: {{ mainTextColor }};
+}
+.post-sharing a:before {
+    {{ rem('font-size','24') }} 
+}
+@media (min-width: 480px) {
+    .blog-post-section > div > div {
+        {{ rem('padding-left','50') }}    
+        {{ rem('padding-right','50') }}      
+    }
+    .post-top {
+        {{ rem('margin','30 0 80') }}
+    }
+    .post-top .post-header {
+        {{ rem('padding','60 50') }}
+    }
+    .post-top .post-header h1 {
+        {{ rem('font-size','54') }}
+    }
+    .post-top .post-header #hubspot-author_data {
+        {{ rem('font-size','22') }}
+    }
+    .post-top .post-header .post-date {
+        {{ rem('font-size','26') }}
+    }
+}
+
+/* Post Featured Image on Listings Page */
+.hs-featured-image-wrapper {
+    position: static;
+    width: 100%;
+}
+.hs-featured-image-wrapper .hs-featured-image-link {
+    display: block;
+    padding-bottom: 66%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+@media screen and (min-width: 800px) {
+    .blog-listing-wrapper .post-listing .hs-featured-image-wrapper {
+        {{ position('absolute','0',null,null,'0') }}
+        height: 100%;
+        width: 45%;
+    }
+    .blog-listing-wrapper .post-listing .hs-featured-image-wrapper .hs-featured-image-link {
+        padding: 0;
+        height: 100%;
+    }
+}
+
+/* Read More Link */
+a.more-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    {{ rem('font-size','16') }}
+    {{ position('absolute',null,rem('50'),rem('50'),null) }}
+}
+
+/* Title for Topic Listing Page */
+.topic-title {
+    {{ rem('font-size','22') }}
+    text-transform: uppercase;
+    font-weight: 400;
+    {{ rem('margin-top','42') }}
+}
+.topic-title span {
+    color: rgb(13,145,209);
+    font-weight: 700;
+}
+
+/* Blog Topics List */
+#hubspot-topic_data h3 {
+    {{ rem('font-size','22') }}
+    {{ rem('margin-bottom','4') }}
+}
+#hubspot-topic_data a.topic-link {
+    color: {{ mainAccentColor }};    
+    font-weight: 300;
+}
+
+
+
+/* Blog Social Sharing Icons */
+.hs-blog-social-share {}
+
+/* Blog Commments */
+@media (min-width: 480px) {
+    .widget-type-blog_comments .post-footer {
+        {{ rem('padding-bottom','130') }}
+    }   
+}
+
+#comments-listing:not(.no-comments) {
+  {{ rem('margin','10 auto 80') }}
+}
+.comment {
+    border-top: 0 none !important;
+    {{ rem('margin','10 0') }}
+    background-color: {{ secondaryBackgroundColor }};
+    {{ rem('padding','28') }}
+}
+.comment-date { 
+    /* Override default font size */
+    {{ rem('font-size','13')|replace(';',' !important;') }}
+    text-align: right; 
+    width: 40%;
+    float: right;
+    {{ rem('margin-top','3') }}
+}
+.comment-from { 
+    width: 60%;
+    float: left;
+}
+.comment-from h4 { 
+    margin: 0;
+    {{ rem('font-size','16')|replace(';',' !important;') }}
+}
+.comment-body {
+    clear: both;
+    {{ rem('padding','10 0') }} 
+    font-style: italic;
+}
+.comments-header h3 {
+    {{ rem('font-size','22') }}
+}
+
+/* Pagination */
+.blog-pagination {
+    text-align: center;
+    {{ rem('margin','60 60 30') }}
+}
+.blog-pagination-left, .blog-pagination-center, .blog-pagination-right {
+    display: inline-block;
+}
+.blog-pagination > a {
+    display: inline-block;
+    {{ rem('padding','2 20') }}
+    {{ rem('font-size','24') }}
+    {{ rem('margin-left','5') }}
+    {{ rem('margin-right','5') }}
+    color: {{ mainTextColor }};
+}
+.blog-pagination > a:hover {
+    text-decoration: none;   
+    background-color: {{ mainAccentColor }};
+    color: #fff;
+}
+.blog-pagination a.active {
+    background-color: {{ mainAccentColor }};
+    color: #fff;
+}
+.blog-pagination a.previous-posts-link {}
+.blog-pagination .all-posts-link { 
+    display: block;
+    {{ rem('padding-top','20') }}
+}
+.blog-pagination .all-posts-link a { 
+    {{ rem('font-size','14') }}   
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.blog-pagination .all-posts-link a:hover { 
+    color: {{ mainTextColor }};
+}
+.blog-pagination a.next-posts-link {}
+
+/* Blog All Posts Page */
+.hs-content-path-blog-all {}
+div.post-listing-simple {
+    {{ rem('padding','50 0') }}
+}
+div.post-listing-simple .post-item {
+    {{ rem('padding','20') }}
+}
+h2.post-listing-simple {
+    margin: 0;
+}
+h2.post-listing-simple a {}
+
+/* =============== Blog Sidebar =============== */
+
+.blog-sidebar {
+    {{ rem('font-size', '15') }}
+    {{ rem('padding-left','10') }}
+    {{ rem('padding-top','60') }}
+}
+.blog-sidebar :first-child h3 {
+    margin-top: 0 !important;
+}
+@media screen and (min-width: 480px) {
+    .blog-sidebar {
+        padding-top: 0;
+    }
+}
+
+/* Blog Modules */
+.blog-sidebar .widget-span {
+    {{ rem('margin-bottom','40') }}
+}
+.blog-sidebar .widget-span.widget-type-header {
+    margin-bottom: 0;
+}
+.blog-sidebar h3 {
+    {{ rem('font-size','22') }}
+}
+.blog-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.blog-sidebar ul a {
+    color: {{ mainAccentColor }};
+}
+.blog-sidebar .blog_sharing a:before {
+    {{ rem('font-size','34') }} 
+    color: {{ mainAccentColor }};
+}
+.blog-sidebar .blog_sharing a:hover {
+    text-decoration: none;
+}
+.recent-posts .post-body {
+    {{ rem('padding','20 0') }}
+}
+
+
+
+/* =============== Blog Author Page and Author Bio =============== */
+
+.hs-blog-listing .hs-author-profile {
+    {{ rem('margin','55 0 20 0') }}
+    position: relative;
+}
+.hs-blog-post .hs-author-profile {
+    {{ rem('padding','20 0 20 0') }}
+    {{ rem('margin','20 0 20 0') }}
+}
+.hs-blog-listing .hs-author-profile h2 {
+    {{ rem('font-size','50') }}
+    text-transform: uppercase;
+}
+.hs-blog-listing .hs-author-profile .author-info {
+    width: 100%;
+    background-color: rgba({{ secondaryBackgroundColor|convert_rgb }}, .7);
+    {{ rem('padding','30 50') }}
+}
+.hs-blog-listing .hs-author-profile .hs-author-avatar + .author-info {
+    position: absolute;
+    bottom: 0;
+}
+.hs-author-profile .hs-author-profile:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.post-listing-author .post-body {
+    {{ rem('padding','20 0') }}
+    {{ rem('font-size', '15') }}
+}
+
+.author-page .recent-posts-title {
+    {{ rem('margin-top','55') }}
+}
+
+.author-page .post-item:first-of-type {
+    margin-top: 0;
+}
+
+/* Author Avatar */
+.hs-author-profile .hs-author-avatar {}
+.hs-author-profile .hs-author-avatar img{
+  max-width: 100%;
+}
+
+/* Author Bio Wrapper*/
+.hs-blog-listing .hs-author-bio {
+    {{ rem('padding','30 50 130') }}      
+    font-weight: 400;
+}
+.hs-author-profile .hs-author-bio {
+  overflow: hidden;
+}
+
+/* Author Name */
+.hs-author-profile h2.hs-author-name {
+  margin: 0;
+}
+
+/* Author Social Follow Me */
+.hs-author-profile .hs-author-social-section {}
+.hs-author-profile .hs-author-social-label {}
+.hs-author-profile .hs-author-social-links {}
+.hs-author-profile .hs-author-social-link {
+    {{ rem('font-size', '26') }}
+    {{ rem('margin-right','5') }}
+    color: {{ mainAccentColor }};
+}
+.hs-author-profile .hs-social-facebook {}
+.hs-author-profile .hs-social-linkedin {}
+.hs-author-profile .hs-social-twitter {}
+.hs-author-profile .hs-social-google-plus {}
+

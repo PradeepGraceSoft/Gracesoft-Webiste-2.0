@@ -1,0 +1,188 @@
+<!--
+  templateType: section
+  label: FAQ
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/faq.png
+  description: "FAQ section separated in two columns."
+-->
+{% dnd_section max_width=1200, class="faq-area" %}
+  
+{% dnd_column width=12, offset=0 %}
+
+  {% dnd_row %}
+      {% dnd_column width=6, offset=0 %}
+        {% dnd_row %}
+            {% dnd_column width=12, offset=0 %}
+              {% dnd_row %}
+                {% dnd_module "module_16675429389378" path="../modules/Section Title", label="Section Title" 
+                  section_subtitle = '<span>FAq’s</span>',
+                  section_title = '<h2>Learn Your Best Education Culture with EduMind</h2>',
+                  section_shape = { 
+                    'alt': 'Section Shape Image',     
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/svg/section-title-shape.svg')  
+                  },
+                  section_excerpt = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius mod tempor incididunt labore dolore magna.</p>'
+                %}
+                {% end_dnd_module %} 
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %} 
+
+          {% dnd_row %}
+            {% dnd_column width=12, offset=0 %}
+              {% dnd_row %}
+                {% dnd_module "module_166754414536415" path="../modules/Faq", label="Faq" 
+                  select_accrodion = 'faq-accordion',
+                  accordion_id = 'faq-accordion',
+                  faq_accordion_item = [
+                    { 
+                      'accordion_collapse_class': '',
+                      'faq_data_bs_target': '#collapseOne',
+                      'aria_expanded': 'true',
+                      'accordion_header_content': 'How can I contact a school directly?',
+                      'accordion_body_id': 'collapseOne',
+                      'accordion_active_class': 'show',
+                      'data_bs_parent_id': '#faq-accordion',
+                      'accordion_body_content': '<p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eius mod ex tempor incididunt labore dolore magna aliquaenim ad minim eniam.</p>'
+                    },
+                    { 
+                      'accordion_collapse_class': 'collapsed',
+                      'faq_data_bs_target': '#collapseTwo',
+                      'aria_expanded': 'false',
+                      'accordion_header_content': 'How do I find a school where I want to study?',
+                      'accordion_body_id': 'collapseTwo',
+                      'accordion_active_class': '',
+                      'data_bs_parent_id': '#faq-accordion',
+                      'accordion_body_content': '<p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eius mod ex tempor incididunt labore dolore magna aliquaenim ad minim eniam.</p>'
+                    },
+                    { 
+                      'accordion_collapse_class': 'collapsed',
+                      'faq_data_bs_target': '#collapseThree',
+                      'aria_expanded': 'false',
+                      'accordion_header_content': 'Where should I study abroad?',
+                      'accordion_body_id': 'collapseThree',
+                      'accordion_active_class': '',
+                      'data_bs_parent_id': '#faq-accordion',
+                      'accordion_body_content': '<p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eius mod ex tempor incididunt labore dolore magna aliquaenim ad minim eniam.</p>'
+                    }
+                  ]
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %} 
+
+        {% end_dnd_column %}
+
+      {% dnd_column width=6, offset=6 %}
+
+        {% dnd_row %}
+            {% dnd_column width=6, offset=0 %}
+              {% dnd_row %}
+                {% dnd_module "module_166754416751616" path="../modules/Single Image", label="Single Image" 
+                  extra_class = 'faq-image-one',
+                  single_image = { 
+                    'alt': 'FAQ Image', 
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/faq/faq-01.jpg')  
+                  } 
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+
+            {% dnd_column width=6, offset=6 %}
+              {% dnd_row %}
+                {% dnd_module "module_166754416751616" path="../modules/Single Image", label="Single Image" 
+                  extra_class = 'faq-image-two',
+                  single_image = { 
+                    'alt': 'FAQ Image', 
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/faq/faq-02.jpg')  
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+        {% end_dnd_row %} 
+      {% end_dnd_column %}
+
+    {% end_dnd_row %}
+
+  {% dnd_row %}
+    {% dnd_module "module_166754340276912" path="../modules/Shape Image", label="Shape Image" 
+         shape_image_item = [
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'faq-shape-1',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/faq/faq-shape-01.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'faq-shape-2',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/faq/faq-shape-02.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'faq-shape-3',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/faq/faq-shape-03.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'faq-shape-4',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/faq/faq-shape-04.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'faq-shape-5',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/faq/faq-shape-05.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image', 
+            'shape_image_number_class' : 'faq-shape-6',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/faq/faq-shape-06.png') 
+            }
+          }
+        ]
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_row %}
+
+  {% end_dnd_column %}     
+{% end_dnd_section %}

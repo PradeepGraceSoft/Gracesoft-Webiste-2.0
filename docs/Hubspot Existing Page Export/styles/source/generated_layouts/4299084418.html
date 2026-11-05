@@ -1,0 +1,709 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="{{ meta_author }}">
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <meta name="generator" content="HubSpot">
+    <title>{{ page_meta.html_title }}</title>
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    
+{{ required_head_tags }}
+    {% style include_default_custom_css="false" %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    {{ user_head_overrides }}
+
+</head>
+<body class=" {{ builtin_body_classes }}" style="">
+    <div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell header-content" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span6 widget-span widget-type-logo company-logo" style="" data-widget-type="logo" data-x="0" data-w="6">
+<div class="cell-wrapper layout-widget-wrapper">
+{% logo "logo" overrideable=true, wrapping_html='', label='Logo' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span6 widget-span widget-type-text phone-number" style="" data-widget-type="text" data-x="6" data-w="6">
+<div class="cell-wrapper layout-widget-wrapper">
+{% text "module_144250096239319311" overrideable=true, value='Call Us: (765) 821 - 2108', wrapping_html='', label='Phone Number or Text' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell background-header" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell header-color-overlay" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell full-width-header-pattern-image" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja hubl" style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% image "background_image" label='Select a background image <a href="http://www.webcanopystudio.com/prelude-documentation" target="_blank">Click Here For Documentation - Password: prelude</a>', 
+src='http://cdn2.hubspot.net/hubfs/395201/Karaoke-New-York.jpg', no_wrapper=True, 
+export_to_template_context=True %}
+
+<style>
+
+.background-header {
+    background-image:url("{{widget_data.background_image.src }}");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment:scroll;
+    background-size: cover;
+}
+</style></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja hubl" style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% color "site_color_picker" label='Site Color Picker', color='#ff8000', no_wrapper=True, export_to_template_context=True %}
+<style type="text/css">
+.header-color-overlay {
+    background: rgba({{ widget_data.site_color_picker.color|convert_rgb }}, .7);
+}
+.hs-button{
+    background-color: {{ widget_data.site_color_picker.color }};
+}
+.hs-button.primary {
+    background-color: {{ widget_data.site_color_picker.color }};
+}
+.content-text ul li:before {
+  color: {{ widget_data.site_color_picker.color }};
+}
+a:link {
+    text-decoration: none;
+    color: {{ widget_data.site_color_picker.color }};
+}
+a:visited {
+    text-decoration: none;
+    color: {{ widget_data.site_color_picker.color }};
+}
+a:active {
+    text-decoration: none;
+    color: {{ widget_data.site_color_picker.color }};
+}
+a:hover {
+    text-decoration: none;
+    color:  rgba({{ widget_data.site_color_picker.color|convert_rgb }}, .7);
+}
+body .hs-button:hover{
+    background: none repeat scroll 0 0 rgba({{ widget_data.site_color_picker.color|convert_rgb }}, .7);
+    color: #FFFFFF;
+}
+</style></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell section-header" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-header header" style="" data-widget-type="header" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% header "module_14369920103386252" header_tag='h1', value='USE A CAPTIVATING HEADER TO INCREASE CONVERSION', overrideable=true, wrapping_html='', label='Image Banner Header' %}</div><!--end layout-widget-wrapper -->
+   </div><!--end widget-span -->
+    </div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja hubl" style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% boolean "image_color_overlay" label='Include Image Color Overlay', value=True, no_wrapper=True, export_to_template_context=True %}
+
+{% if widget_data.image_color_overlay.value == 'true' %}
+<style type="text/css">
+.header-color-overlay {
+    background: rgba({{ widget_data.site_color_picker.color|convert_rgb }}, .7);
+}
+</style>
+{% elif widget_data.image_color_overlay.value == 'false' %}
+<style type="text/css">
+.header-color-overlay {
+    background: rgba(0,0,0,0);
+}
+</style>
+{% endif %}</div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell full-width-light-grey-bg top-banner" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-header sub-header" style="" data-widget-type="header" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% header "module_14369920122386648" header_tag='h3', value='MAKE SURE THE MESSAGE THAT BROUGHT VISITORS HERE IS CONSISTENT WITH WHAT THEY SEE ON THIS PAGE', overrideable=true, wrapping_html='', label='Grey Area Header' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell full-width-white-bg" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+<div class="row-fluid ">
+<div class="span7 widget-span widget-type-cell content-text" style="" data-widget-type="cell" data-x="0" data-w="7">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% boolean "bullet_points" label='Toggle Bullet Points', value=True, no_wrapper=True, export_to_template_context=True %}
+
+{% if widget_data.bullet_points.value=='true' %}
+<style type="text/css">
+.content-text ul {
+    list-style-type: none;
+}
+.content-text ul li {
+    padding-left: 40px;
+    margin-bottom: 25px;
+    min-height:30px;
+    position: relative;
+}
+.content-text ul li:before {
+  content: "\{{ bulletIcon }}";
+}
+</style>
+{% endif %}
+
+{% if widget_data.bullet_points.value=='false' %}
+<style type="text/css">
+.content-text ul {
+    list-style-type: disc;
+}
+.content-text ul li {
+    padding-left: 0;
+    margin-bottom: 25px;
+    min-height:0;
+    position: relative;
+}
+.content-text ul li:before {
+  content: none;
+}
+</style>
+{% endif %}</div><!--end widget-span -->
+
+    </div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text main-content" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block rich_text "module_141296019920314918" overrideable=true, wrapping_html='', label='Main Content' %}
+{% widget_attribute "html" %}<h2>Power Statement About Why Your Offer Is Awesome</h2>
+<ul>
+<li>Point number one should be the most important takeaway from your offer</li>
+<li>The second point should not be as strong as the first</li>
+<li>With point three, we want to highlight an action users will be able to do after they download</li>
+</ul>{% end_widget_attribute %}
+              {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+   </div><!--end widget-span -->
+    </div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span5 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="7" data-w="5">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell right-form" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-5 ">
+    <div class="row-fluid ">
+<div class="span12 widget-span widget-type-form float-form" style="" data-widget-type="form" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block form "module_14128851332208862" response_redirect_url_label='', response_redirect_id=0, form_to_use='68d300a6-8ebf-49cd-8f6d-147adf6626db', title='', notifications_are_overridden=false, sfdc_campaign='', response_message='Thank you for submitting the form.', response_response_type='redirect', response_redirect_url='', form_follow_ups_follow_up_type='', overrideable=true, gotowebinar_webinar_key='', wrapping_html='', response={message='Thank you for submitting the form.', redirect_url=''}, label='Form' %}
+{% widget_attribute "notifications_override_email_addresses" is_json=True %}null{% end_widget_attribute %}
+                  {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+       </div><!--end widget-span -->
+        </div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-6 ">
+    <div class="row-fluid ">
+<div class="span12 widget-span widget-type-social_sharing social-sharing" style="" data-widget-type="social_sharing" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block social_sharing "social_sharing" wrapping_html='', overrideable=true, use_page_url=true, label='Social Sharing' %}
+{% widget_attribute "pinterest" is_json=True %}{"custom_link_format":"","enabled":true,"network":"pinterest","img_src":"https://static.hubspot.com/final/img/common/icons/social/pinterest-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "twitter" is_json=True %}{"custom_link_format":"","enabled":true,"network":"twitter","img_src":"https://static.hubspot.com/final/img/common/icons/social/twitter-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "google_plus" is_json=True %}{"custom_link_format":"","enabled":true,"network":"google_plus","img_src":"https://static.hubspot.com/final/img/common/icons/social/googleplus-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "linkedin" is_json=True %}{"custom_link_format":"","enabled":true,"network":"linkedin","img_src":"https://static.hubspot.com/final/img/common/icons/social/linkedin-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "facebook" is_json=True %}{"custom_link_format":"","enabled":true,"network":"facebook","img_src":"https://static.hubspot.com/final/img/common/icons/social/facebook-24x24.png"}{% end_widget_attribute %}
+{% widget_attribute "email" is_json=True %}{"custom_link_format":"","enabled":true,"network":"email","img_src":"https://static.hubspot.com/final/img/common/icons/social/email-24x24.png"}{% end_widget_attribute %}
+                  {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+       </div><!--end widget-span -->
+        </div><!--end row-->
+</div><!--end row-wrapper -->
+
+   </div><!--end widget-span -->
+    </div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell full-width-light-grey-bg" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% color "secondary_color_picker" label='Secondary Color Picker', color='#ff8000', no_wrapper=True, export_to_template_context=True %}
+
+<style type="text/css">
+body {
+    background-color: {{ widget_data.secondary_color_picker.color }};
+    background: {{ widget_data.secondary_color_picker.color }};
+}
+.footer-bg {
+    background-color: {{ widget_data.secondary_color_picker.color }};
+    background: {{ widget_data.secondary_color_picker.color }};
+}
+</style></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% choice "icon_style" label='Icon Styles', value='no-style' choices='square-background, square-border, circle-background, circle-border, no-style', no_wrapper=True, export_to_template_context=True %}
+
+{% if widget_data.icon_style.value=='no-style' %}
+<style type="text/css">
+.font-awesome-icon {
+    color: {{ widget_data.secondary_color_picker.color }};
+}
+.icon-wrapper {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+}
+</style>
+{% endif %}
+
+{% if widget_data.icon_style.value=='square-background' %}
+<style type="text/css">
+.font-awesome-icon {
+    color: #fff;
+}
+.icon-wrapper {
+    border: 2px solid {{ widget_data.secondary_color_picker.color }};
+    background-color: {{ widget_data.secondary_color_picker.color }};
+    border-radius: 0;
+}
+</style>
+{% endif %}
+
+{% if widget_data.icon_style.value=='square-border' %}
+<style type="text/css">
+.font-awesome-icon {
+    color: {{ widget_data.secondary_color_picker.color }};
+}
+.icon-wrapper {
+    border: 2px solid {{ widget_data.secondary_color_picker.color }};
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+}
+</style>
+{% endif %}
+
+{% if widget_data.icon_style.value=='circle-background' %}
+<style type="text/css">
+.font-awesome-icon {
+    color: #fff;
+}
+.icon-wrapper {
+    border: 2px solid {{ widget_data.secondary_color_picker.color }};
+    background-color: {{ widget_data.secondary_color_picker.color }};
+    border-radius: 50%;
+}
+</style>
+{% endif %}
+
+{% if widget_data.icon_style.value=='circle-border' %}
+<style type="text/css">
+.font-awesome-icon {
+    color: {{ widget_data.secondary_color_picker.color }};
+}
+.icon-wrapper {
+    border: 2px solid {{ widget_data.secondary_color_picker.color }};
+    background-color: rgba(0,0,0,0);
+    border-radius: 50%;
+}
+</style>
+{% endif %}</div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span4 widget-span widget-type-cell tri-column" style="" data-widget-type="cell" data-x="0" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% choice "fa_item_1" label='Column 1 Icon', value='car', choices='car, bank, ambulance, bell, shopping-cart, cutlery, cubes, eyedropper, globe, list, group, star, thumbs-up, user, wrench, gear, other', no_wrapper=True, export_to_template_context=True %}
+
+{% text "col_1_icon" label='Column 1 - Other Font Awesome Value (i.e. fa-car)', value='fa-check-circle', no_wrapper=True, export_to_template_context=True %}
+
+<div class="icon-wrapper">
+<div class="font-awesome-icon">
+{% if widget_data.fa_item_1.value == 'car' %}<i class="fa fa-car"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'bank' %}<i class="fa fa-university"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'ambulance' %}<i class="fa fa-ambulance"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'bell' %}<i class="fa fa-bell"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'shopping-cart' %}<i class="fa fa-shopping-cart"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'cutlery' %}<i class="fa fa-cutlery"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'cubes' %}<i class="fa fa-cubes"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'eyedropper' %}<i class="fa fa-eyedropper"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'globe' %}<i class="fa fa-globe"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'list' %}<i class="fa fa-list"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'group' %}<i class="fa fa-users"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'star' %}<i class="fa fa-star"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'thumbs-up' %}<i class="fa fa-thumbs-up"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'user' %}<i class="fa fa-user"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'wrench' %}<i class="fa fa-wrench"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'gear' %}<i class="fa fa-cog"></i>{% endif %}
+{% if widget_data.fa_item_1.value == 'other' %}<i class="fa {{ widget_data.col_1_icon.value }}"></i>{% endif %}
+</div>
+</div></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text " style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block rich_text "module_144241540897651564" overrideable=true, label='Column 1 Text' %}
+{% widget_attribute "html" %}<h2>Update With Ease</h2>
+<p style="text-align: justify;">This template is built for ease of use. Everything you want to change from page to page can be changed in the page editor, including the image, text, icons, and even color.</p>{% end_widget_attribute %}
+      {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell tri-column" style="" data-widget-type="cell" data-x="4" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% choice "fa_item_2" label='Column 2 Icon', value='eyedropper', choices='car, bank, ambulance, bell, shopping-cart, cutlery, cubes, eyedropper, globe, list, group, star, thumbs-up, user, wrench, gear, other', no_wrapper=True, export_to_template_context=True %}
+
+{% text "col_2_icon" label='Column 2 - Other Font Awesome Value (i.e. fa-car)', value='fa-database', no_wrapper=True, export_to_template_context=True %}
+
+<div class="icon-wrapper">
+<div class="font-awesome-icon">
+{% if widget_data.fa_item_2.value == 'car' %}<i class="fa fa-car"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'bank' %}<i class="fa fa-university"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'ambulance' %}<i class="fa fa-ambulance"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'bell' %}<i class="fa fa-bell"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'shopping-cart' %}<i class="fa fa-shopping-cart"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'cutlery' %}<i class="fa fa-cutlery"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'cubes' %}<i class="fa fa-cubes"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'eyedropper' %}<i class="fa fa-eyedropper"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'globe' %}<i class="fa fa-globe"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'list' %}<i class="fa fa-list"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'group' %}<i class="fa fa-users"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'star' %}<i class="fa fa-star"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'thumbs-up' %}<i class="fa fa-thumbs-up"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'user' %}<i class="fa fa-user"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'wrench' %}<i class="fa fa-wrench"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'gear' %}<i class="fa fa-cog"></i>{% endif %}
+{% if widget_data.fa_item_2.value == 'other' %}<i class="fa {{ widget_data.col_2_icon.value }}"></i>{% endif %}
+</div>
+</div></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text " style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block rich_text "module_144241533551049284" overrideable=true, label='Column 2 Text' %}
+{% widget_attribute "html" %}<h2>Full&nbsp;Customization</h2>
+<p style="text-align: justify;">Take advantage of the color picker and change the site color with a simple click of a button. Remove the color overlay or the pattern from the banner image. The possibilities are endless.</p>{% end_widget_attribute %}
+      {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell tri-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-10 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% choice "fa_item_3" label='Column 3 Icon', value='other', choices='car, bank, ambulance, bell, shopping-cart, cutlery, cubes, eyedropper, globe, list, group, star, thumbs-up, user, wrench, gear, other', no_wrapper=True, export_to_template_context=True %}
+
+{% text "col_3_icon" label='Column 3 - Other Font Awesome Value (i.e. fa-car)', value='fa-rebel', no_wrapper=True, export_to_template_context=True %}
+
+<div class="icon-wrapper">
+<div class="font-awesome-icon">
+{% if widget_data.fa_item_3.value == 'car' %}<i class="fa fa-car"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'bank' %}<i class="fa fa-university"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'ambulance' %}<i class="fa fa-ambulance"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'bell' %}<i class="fa fa-bell"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'shopping-cart' %}<i class="fa fa-shopping-cart"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'cutlery' %}<i class="fa fa-cutlery"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'cubes' %}<i class="fa fa-cubes"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'eyedropper' %}<i class="fa fa-eyedropper"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'globe' %}<i class="fa fa-globe"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'list' %}<i class="fa fa-list"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'group' %}<i class="fa fa-users"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'star' %}<i class="fa fa-star"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'thumbs-up' %}<i class="fa fa-thumbs-up"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'user' %}<i class="fa fa-user"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'wrench' %}<i class="fa fa-wrench"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'gear' %}<i class="fa fa-cog"></i>{% endif %}
+{% if widget_data.fa_item_3.value == 'other' %}<i class="fa {{ widget_data.col_3_icon.value }}"></i>{% endif %}
+</div>
+</div></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-11 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text " style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block rich_text "module_144241523692648362" overrideable=true, label='Column 3 Text' %}
+{% widget_attribute "html" %}<h2>Unlimited Icons</h2>
+<p style="text-align: justify;"><span>Choose from</span><span>&nbsp;a list of&nbsp;font-awesome icons with our icon chooser or add&nbsp;specific icons of your own from the full directory. You can also change the style of the icon in the page editor.</span></p>{% end_widget_attribute %}
+      {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-12 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-widget_container flex-area" style="" data-widget-type="widget_container" data-x="0" data-w="12">
+{% widget_container "module_144250017802411668" wrapping_html='', value='', overrideable=false, per_widget_wrapper_html='', label='Column' %}
+{% widget_block rich_text "module_144250086043518078" overrideable=true, label='Rich Text' %}
+{% widget_attribute "html" %}<div><img src="http://cdn2.hubspot.net/hubfs/395201/prelude-large.png" alt="Prelude - The Original Free Template" width="800" height="212" data-constrained="true" style="display: block; margin-left: auto; margin-right: auto;"></div>{% end_widget_attribute %}
+  {% end_widget_block %}
+
+{% end_widget_container %}
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-13 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell footer-bg" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-14 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-15 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% boolean "add_dots" label='Display Dotted Pattern <a href="http://www.webcanopystudio.com/prelude-documentation" target="_blank">Click Here For Documentation - Password: prelude</a>', value=True, no_wrapper=True, export_to_template_context=True %}
+
+<!-- {% if widget_data.add_dots.value == "true" %}
+<style type="text/css">
+.full-width-header-pattern-image {
+    background-image:url("http://cdn2.hubspot.net/hubfs/395201/overlay.png");
+    background-position: center center;
+    background-repeat: repeat;
+}
+</style>
+{% endif %}
+{% if widget_data.add_dots.value == "false" %}
+<style type="text/css">
+.full-width-header-pattern-image {
+    background-image: none;
+}
+</style>
+{% endif %}
+-->
+
+<!-- Added By Chris @ HubSpot -->
+{% if widget_data.add_dots.value == 'true' %}
+<style type="text/css">
+.full-width-header-pattern-image {
+    background-image:url("http://cdn2.hubspot.net/hubfs/395201/overlay.png");
+    background-position: center center;
+    background-repeat: repeat;
+}
+</style>
+{% elif widget_data.add_dots.value == 'false' %}
+<style type="text/css">
+.full-width-header-pattern-image {
+    background-image: none;
+}
+</style>
+{% endif %}</div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-16 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-page_footer footer-details" style="" data-widget-type="page_footer" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% page_footer "page_footer" footer='', overrideable=false, wrapping_html='', label='Page Footer' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    {{ standard_footer_includes }}
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+</body>
+</html>

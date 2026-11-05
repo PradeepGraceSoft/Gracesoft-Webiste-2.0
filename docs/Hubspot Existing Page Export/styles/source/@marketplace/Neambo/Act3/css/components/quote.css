@@ -1,0 +1,86 @@
+{% import "../_variables.css" as var %}
+
+.quote {
+  width: 100%;
+  padding-bottom: {{ var.gutter * 2 }}px;
+  padding-left: {{ var.gutter }}px;
+  padding-right: {{ var.gutter }}px;
+  transition: .2s ease-in-out;
+}
+
+.quote--vertical-center {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
+}
+
+.quote--vertical-center .quote__card .compact-card {
+  display: inline-flex;
+  width: auto;
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .quote {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .splide .quote {
+    padding-left: {{ var.gutter }}px;
+    padding-right: {{ var.gutter }}px;
+  }
+}
+
+.quote__icon {
+  margin-bottom: {{ var.gutter * 1.2 }}px ;
+}
+
+.quote__icon .icon {
+  box-shadow: {{ var.small_shadow }};
+}
+
+.quote__card {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.quote__card .compact-card {
+  padding-inline-end: 2.22rem;
+}
+
+.quote .compact-card {
+  margin: {{ var.gutter / 2 }}px 0 0;
+}
+
+.quote .compact-card--with-link:hover {
+  transform: scale(1.02);
+}
+
+.splide--center-mode:not(.splide--lg-2):not(.splide--lg-4):not(.splide--lg-6) .splide__slide:not(.is-active) .quote .compact-card {
+  transform: scale(1);
+}
+
+/* Slider: center mode */
+
+@media (min-width: {{ var.md + 1 }}px) {
+  .splide--center-mode:not(.splide--lg-2) .splide__slide:not(.is-active) .quote {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: {{ var.md }}px) and (min-width: {{ var.sm + 1 }}px) {
+  .splide--center-mode:not(.splide--md-2) .splide__slide:not(.is-active) .quote {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .splide--center-mode .splide__slide:not(.is-active) .quote {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}

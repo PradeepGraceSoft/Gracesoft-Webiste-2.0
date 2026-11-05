@@ -1,0 +1,162 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Landing Page Ebook
+screenshotPath: ../images/template-previews/landing-ebook.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+{% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--ebook-landing'
+%}
+
+{# Landing Banner #}
+{% dnd_section
+   vertical_alignment='TOP',
+   full_width=true,
+   padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  }
+%}
+{% dnd_column
+  padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  }
+%}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/banner-layouts',
+        "subtitle"="",
+        "content"="<h1>Get eBooks For WordPress</h1><p>The data science lifecycle follows a systematic workflow for a data modelling project such as- plan of action, data model building, model evaluation, monitoring and deploying models, etc.</p>"
+                    primary_cta={ type: 'none' }
+                    secondary_cta={ type: 'btn', style: 'outline_dark', text: 'Know us' }
+      style_1={
+        'content_color': {
+            'heading' : {enable_heading_color: true },
+            'text':{ enable_content_color: true}
+          },
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 145,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 145,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+        }
+%}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_image"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Landing Banner #}
+
+{# side-bar Section #}
+{% include_dnd_partial path='../sections/sidebar-content.html',%}
+{# End Of Side-bar Section #}
+
+{# Testimonials Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+   path='../modules/title-content',
+   "subtitle"="",
+   "content"="<h2>Words From Our Top Rated Clients</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec felis at pellentesque. Sed amet dolor penatibus sed at posuere justo, lacinia neque.</p>"
+    style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 50,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 25,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module 'au_testimonials' 
+				path='../modules/testimonials',
+        "hide_show_quotes"=true,
+        "hide_show_slider_dots" = false,
+%}
+{% module_attribute 'testimonial_layouts_choice' is_json=True %}
+{
+"testimonial_layouts": "single_column_side_nav_slider"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Testimonials Section #}
+{% end_dnd_area %}
+{% endblock body %}
+
+{% block footer %}
+{% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

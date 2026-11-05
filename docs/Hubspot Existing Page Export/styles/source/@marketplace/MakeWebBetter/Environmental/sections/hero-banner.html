@@ -1,0 +1,137 @@
+<!--
+  templateType: section
+  label: Hero banner
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/banner.png
+  description: "Full size background image section with Content and Buttons"
+-->
+
+{% dnd_section
+  padding={
+    'default' : {
+      'bottom' : '0px',
+      'left' : '0px',
+      'right' : '0px',
+      'top' : '0px'
+    }
+  },
+  full_width= true
+%}
+  {% dnd_column
+    offset=0,
+    width=12,
+    padding={
+      'default' : {
+        'left' : '0px',
+        'right' : '0px'
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path='/Environmental/modules/hero',
+        primary_cta={
+          'text' : 'Donate Now'
+        },
+        secondary_cta={
+          'layout' : 'secondary',
+          'text' : 'Contact Us'
+        },
+        select_action='button',
+        style_1={
+          'banner_content_alignment' : {
+            'banner_content_alignment_desktop_' : {
+              'alignment_choice' : 'left'
+            },
+            'banner_content_alignment_mobile_' : {
+              'alignment_choice' : 'left'
+            }
+          },
+          'image' : {
+            'alt' : 'banner-eco',
+            'height' : 720,
+            'max_height' : 720,
+            'max_width' : 1280,
+            'src' : get_asset_url('../images/multipurpose/banner-one.png'),
+            'width' : 1280
+          },
+          'max_width' : {
+            'value' : 800
+          },
+          'spacing' : {
+            'desktop' : {
+              'spacing' : {
+                'margin' : {
+                  'bottom' : {
+                    'units' : 'px',
+                    'value' : 0
+                  },
+                  'top' : {
+                    'units' : 'px',
+                    'value' : 0
+                  }
+                },
+                'padding' : {
+                  'bottom' : {
+                    'units' : 'px',
+                    'value' : 120
+                  },
+                  'left' : {
+                    'units' : 'px',
+                    'value' : 0
+                  },
+                  'right' : {
+                    'units' : 'px',
+                    'value' : 0
+                  },
+                  'top' : {
+                    'units' : 'px',
+                    'value' : 120
+                  }
+                }
+              }
+            },
+            'mobile' : {
+              'spacing_mobile_' : {
+                'margin' : {
+                  'bottom' : {
+                    'units' : 'px',
+                    'value' : 0
+                  },
+                  'top' : {
+                    'units' : 'px',
+                    'value' : 0
+                  }
+                },
+                'padding' : {
+                  'bottom' : {
+                    'units' : 'px',
+                    'value' : 50
+                  },
+                  'left' : {
+                    'units' : 'px',
+                    'value' : 0
+                  },
+                  'right' : {
+                    'units' : 'px',
+                    'value' : 0
+                  },
+                  'top' : {
+                    'units' : 'px',
+                    'value' : 50
+                  }
+                }
+              }
+            }
+          }
+        }
+      %}
+        {% module_attribute 'content' %}
+          <h2><span style="color: #ffffff;">Help</span> <span style="color: #ffa17a;">Today</span> <span style="color: #ffffff;">for</span></h2>
+          <h1><span style="color: #ffffff;">Brighter</span> <span style="color: #a3da8d;">Tomorrow</span></h1>
+          <p><span style="color: #ffffff;">Leaders across the country are tackling the most challenging and pressing issues of our time. Earth Let us all join to deal with unprecedented threats to Earth's life.</span></p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

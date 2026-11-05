@@ -1,0 +1,70 @@
+<!--
+  templateType: section
+  label: Hero - Two Column with Video
+  description: "A two column hero with text and video."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/hero-simple-video.png
+-->
+
+{% dnd_section full_width=true %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path="../modules/Hero"
+        text={
+          "eyebrow": "We are flexible",
+          "heading": "Vertical Changes Everything.",
+          "subheading": "Vertical is a versatile and easy-to-use theme that can transform your scaling business with little effort. Made with care by HubSpot experts.",
+          "add_cta": false
+        },
+        logos_section={
+          "add_logos": false
+        },
+        media={
+          "type": "video",
+          "video": {
+            "video": {
+              "source_type": "html",
+              "embed_html": "<iframe width='560' height='315' src='https://www.youtube.com/embed/SE7qrW6DA1g' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+            }
+          }
+        },
+        layout={
+          "vertical_alignment": "middle",
+          "placement": "right"
+        },
+        styles={
+          "module": {
+            "background": {
+              "bg_type": "none"
+            },
+            "mobile_background": {
+              "bg_type": "none"
+            },
+            "padding": {
+              "desktop": {
+                "padding": {
+                  "top": {
+                    "value": 70
+                  },
+                  "bottom": {
+                    "value": 70
+                  }
+                }
+              },
+              "mobile": {
+                "padding": {
+                  "top": {
+                    "value": 40
+                  },
+                  "bottom": {
+                    "value": 40
+                  }
+                }
+              }
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

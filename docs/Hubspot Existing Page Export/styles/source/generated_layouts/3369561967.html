@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+        <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+        <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+        <style type="text/css">
+        /*<![CDATA[*/
+            /* Hide preview text on rendering */
+            #preview_text {
+                display: none;
+            }
+        /*]]>*/
+        </style>
+    </head>
+    <body class="hs_simple_email_simulation">
+
+        <!-- Preview text (text which appears right after subject) -->
+        <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+
+        <div style="margin:0;font-family:Helvetica Neue,'Helvetica Neue',Helvetica,Arial,Lucida Grande,Lucida Sans,Lucida Sans Unicode,Verdana,sans-serif;color:#444;font-size:13px;line-height:1.33em;padding:0px 20px 0px 0px">
+            <div data-hubspot-form-id="emailbody" class="hubspot-editable">
+                <div class="header-container-wrapper">
+    <table class="wrappertable" cellpadding="0" cellspacing="0" border="0" width="{{ email_body_width }}">
+<tr class="scaffold" style="font-size:0; height: 0px" height="0"><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td><td colspan="1" height="0" width="8.33%" style="line-height: 0px; font-size: 0px; height: 0px">&nbsp;</td></tr>
+
+        <tr>
+            <td valign="top" colspan=12 width="100.0%" class="" style="width:100.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
+                <div class="widget-span widget-type-email_body " style="" data-widget-type="email_body">
+                    
+{% content_attribute "email_body" %}<p>Hi&nbsp;{{ contact.firstname }},</p>
+<p>Describe what you have to offer the customer. Why should they read? What did you promise them in the subject line? Tell them something cool. Make them laugh. Make them cry. Well, maybe don't do that...</p>
+<p>Use a list to:</p>
+<ul>
+<li>Explain the value of your offer</li>
+<li>Remind the reader what they&rsquo;ll get out of taking action</li>
+<li>Show off your skill with bullet points</li>
+<li>Make your content easy to scan</li>
+</ul>
+<p><a href="http://hubspot.com">LINK TO A LANDING PAGE ON YOUR SITE</a> (This is the really important part.)</p>
+<p>Now wrap it all up with a pithy little reminder of how much you love them.</p>
+<p>Aw. You silver-tongued devil, you.</p>
+<p>Sincerely,</p>
+<p>Your name</p>{% end_content_attribute %}
+                
+
+                </div><!--end widget-span -->
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" colspan=12 width="100.0%" class="" style="width:100.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
+                <div class="widget-span widget-type-email_can_spam " style="" data-widget-type="email_can_spam">
+                    &copy; {{ site_settings.company_name }}
+<br/>{{ site_settings.company_street_address_1 }}
+<br/>{{ site_settings.company_city }}, {{ site_settings.company_state }} {{ site_settings.company_zip }}
+<br/>{{ site_settings.company_country }}
+<br/>
+<br/>
+&nbsp;<a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="text-decoration: underline; whitespace: nowrap; color: inherit;">manage your email preferences</a>&nbsp;
+<br/>
+&nbsp;<a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}" style="text-decoration: underline; whitespace: nowrap; color: inherit;">unsubscribe</a>&nbsp;
+
+
+                </div><!--end widget-span -->
+            </td>
+        </tr>
+    </table>
+</div><!--end header wrapper -->
+            </div>
+        </div>
+    </body>
+</html>

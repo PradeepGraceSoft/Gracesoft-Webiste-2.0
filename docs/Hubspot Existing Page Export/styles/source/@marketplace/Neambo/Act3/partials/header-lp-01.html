@@ -1,0 +1,219 @@
+<!--
+  templateType: global_partial
+  label: Header LP 1
+-->
+
+{# Optional elements #}
+{% boolean 'enable_header_icons' label='Show icons (apply and reload the page)', value=True, export_to_template_context=True %}
+{% boolean 'enable_header_info' label='Show info (apply and reload the page)', value=True, export_to_template_context=True %}
+{% boolean 'enable_header_lang' label='Show language selector (apply and reload the page)', value=True, export_to_template_context=True %}
+
+{# Logo column width #}
+{% text 'logo_col_width_lg', label='Logo column width on large screens (possible values: 2, 3, 4, 5, 6)', value='4', export_to_template_context=True %}
+{% text 'logo_col_width_md', label='Logo column width on medium screens (possible values: 2, 3, 4, 5, 6)', value='4', export_to_template_context=True %}
+{% text 'logo_col_width_sm', label='Logo column width on small screens (possible values: 2, 3, 4, 5, 6)', value='4', export_to_template_context=True %}
+{% if widget_data.logo_col_width_lg.value|trim|int > 0 %}{% set logo_col_width_lg = widget_data.logo_col_width_lg.value|trim|int %}{% else %}{% set logo_col_width_lg = 4 %}{% endif %}
+{% if widget_data.logo_col_width_md.value|trim|int > 0 %}{% set logo_col_width_md = widget_data.logo_col_width_md.value|trim|int %}{% else %}{% set logo_col_width_md = 4 %}{% endif %}
+{% if widget_data.logo_col_width_sm.value|trim|int > 0 %}{% set logo_col_width_sm = widget_data.logo_col_width_sm.value|trim|int %}{% else %}{% set logo_col_width_sm = 4 %}{% endif %}
+
+{# Color scheme #}
+{% if theme.components.header.scheme == 'dark' %}
+  {% set header_color_scheme = 'dark' %}
+{% else %}
+  {% set header_color_scheme = 'light' %}
+{% endif %}
+
+<header class="header header--lp-1 {% if header_overlap %}header--overlap{% endif %} {% if theme.components.header.sticky_header %}header--sticky{% endif %}{% if widget_data.enable_header_lang.value and (content.translated_content|length or group.translations|length) %} header--w-lang{% else %} header--wo-lang{% endif %}{% if widget_data.enable_header_icons.value %} header--w-icons{% else %} header--wo-icons{% endif %}{% if widget_data.enable_header_info.value %} header--w-info{% else %} header--wo-info{% endif %} hs-search-hidden">
+  {% dnd_area 'above_header', label='Above the header', class='above-header' %}{% end_dnd_area %}
+  <div class="header__section header__section--main section">
+    <div class="header__center container">
+      <div class="row items-center">
+        <div class="col s{{ logo_col_width_lg }} md-s{{ logo_col_width_md }} sm-s{{ logo_col_width_sm }}">
+          <div class="header__logo">
+            {%- if not header_overlap -%}
+              <div class="header__logo__static">
+                {%- module 'static_header_logo' path='@hubspot/logo' label='Static header logo'
+                  img={
+                    'override_inherited_src': true,
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/act3-logo-color.svg',
+                    'alt': 'Logo',
+                    'width': 52,
+                    'height': 48
+                  },
+                  link='/'
+                -%}
+              </div>
+            {%- endif -%}
+            {%- if header_overlap or header_overlap is not defined -%}
+              <div class="header__logo__overlap">
+                {%- module 'overlapping_header_logo' path='@hubspot/logo' label='Overlapping header logo'
+                  img={
+                    'override_inherited_src': true,
+                    'src': 'https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/act3-logo-white2.svg',
+                    'alt': 'Logo',
+                    'width': 52,
+                    'height': 48
+                  },
+                  link='/'
+                -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="col s{{ 12 - logo_col_width_lg }} md-s{{ 12 - logo_col_width_md }} sm-s{{ 12 - logo_col_width_sm }}">
+          <div class="flex flex-row items-center justify-end no-shrink wrap">
+            {% if widget_data.enable_header_lang.value %}
+              <div class="header__lang">
+                {% module 'header_lang' path='../modules/lang-select' label='Language selector' lang_label='short' show_icon='false' color_scheme={{ header_color_scheme }} %}
+              </div>
+            {% endif %}
+            {% if widget_data.enable_header_icons.value %}
+              {% if theme.components.header.scheme == 'dark' %}
+                {% set header_icons_color = 'ghost' %}
+              {% else %}
+                {% set header_icons_color = 'light' %}
+              {% endif %}
+              <div class="header__icons">
+                <div class="header__icons__static">
+                  {% module 'static_header_icons' path="../modules/icon" label="Static header icons" 
+                    icon=[
+                      {
+                        'internal_name': 'X (Twitter)',
+                        'type': 'code',
+                        'code': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>',
+                        'color': header_icons_color,
+                        'link': {
+                          'url': {
+                            'href': 'https://x.com/HubSpot'
+                          },
+                          'open_in_new_tab': true
+                        }
+                      },
+                      {
+                        'internal_name': 'Instagram',
+                        'type': 'icon',
+                        'icon': {
+                          'name': 'Instagram',
+                          'type': 'REGULAR',
+                          'unicode': 'f16d',
+                          'icon_set': 'fontawesome-5.14.0'
+                        },
+                        'color': header_icons_color,
+                        'link': {
+                          'url': {
+                            'href': 'https://www.instagram.com/hubspot/'
+                          },
+                          'open_in_new_tab': true
+                        }
+                      },
+                      {
+                        'internal_name': 'Slack',
+                        'type': 'icon',
+                        'icon': {
+                          'name': 'Slack Logo',
+                          'type': 'REGULAR',
+                          'unicode': 'f198',
+                          'icon_set': 'fontawesome-5.14.0'
+                        },
+                        'color': header_icons_color,
+                        'link': {
+                          'url': {
+                            'href': 'https://developers.hubspot.com/slack'
+                          },
+                          'open_in_new_tab': true
+                        }
+                      }
+                    ]
+                    settings={
+                      'shape': 'disc',
+                      'fill': 'outline',
+                      'size': 'medium',
+                      'space': 10
+                    }
+                    wrapper={
+                      'text_align': {
+                        'lg': 'right'
+                      }
+                    }
+                  %}
+                </div>
+                <div class="header__icons__overlap">
+                  {% module 'overlapping_header_icons' path="../modules/icon" label="Overlapping header icons" 
+                    icon=[
+                      {
+                        'internal_name': 'X (Twitter)',
+                        'type': 'code',
+                        'code': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>',
+                        'color': 'ghost',
+                        'link': {
+                          'url': {
+                            'href': 'https://x.com/HubSpot'
+                          },
+                          'open_in_new_tab': true
+                        }
+                      },
+                      {
+                        'internal_name': 'Instagram',
+                        'type': 'icon',
+                        'icon': {
+                          'name': 'Instagram',
+                          'type': 'REGULAR',
+                          'unicode': 'f16d',
+                          'icon_set': 'fontawesome-5.14.0'
+                        },
+                        'color': 'ghost',
+                        'link': {
+                          'url': {
+                            'href': 'https://www.instagram.com/hubspot/'
+                          },
+                          'open_in_new_tab': true
+                        }
+                      },
+                      {
+                        'internal_name': 'Slack',
+                        'type': 'icon',
+                        'icon': {
+                          'name': 'Slack Logo',
+                          'type': 'REGULAR',
+                          'unicode': 'f198',
+                          'icon_set': 'fontawesome-5.14.0'
+                        },
+                        'color': 'ghost',
+                        'link': {
+                          'url': {
+                            'href': 'https://developers.hubspot.com/slack'
+                          },
+                          'open_in_new_tab': true
+                        }
+                      }
+                    ]
+                    settings={
+                      'shape': 'disc',
+                      'fill': 'outline',
+                      'size': 'medium',
+                      'space': 10
+                    }
+                    wrapper={
+                      'text_align': {
+                        'lg': 'right'
+                      }
+                    }
+                  %}
+                </div>
+              </div>
+            {% endif %}
+            {% if widget_data.enable_header_info.value %}
+              <div class="header__info">
+                {% module 'header_info' path='@hubspot/rich_text' label='Info' html='<div>Get in touch:<br><a href="tel:123-456-7890"><strong>0800 800 123</strong></a></div>' %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{{ require_css(get_asset_url('../css/components/header-lp-01.css')) }}
+{% if header_overlap %}
+  {{ require_css(get_asset_url('../css/components/header-lp-01-overlap.css')) }}
+{% endif %}

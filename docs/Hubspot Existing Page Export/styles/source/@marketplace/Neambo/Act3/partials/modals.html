@@ -1,0 +1,8 @@
+<!--
+  templateType: global_partial
+  label: Global modals
+-->
+<div class="global-modals hs-search-hidden">
+  {% module 'global_modals' path='../modules/modal', label='Global modals', no_wrapper=True %}
+  {% if modals_dnd_area %}{% dnd_area 'modals_dnd', label='Modals DnD', class='modals-dnd' %}{% end_dnd_area %}{% endif %}
+</div>

@@ -1,0 +1,27 @@
+<!--
+  templateType: email_backup_unsubscribe_page
+  isAvailableForNewContent: true
+  label: Austin - Email Unsubscribe
+  screenshotPath: ../../images/template-previews/backup-unsubscribe.png
+-->
+{% set template_css = '../../css/templates/system.css' %}
+{% extends '../layouts/base.html' %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Unsubscribe" %}
+
+{% block body %}
+<section class="systems-page">
+  <div class="system-page__banner">    
+    {% if theme.system_page_setting.email_unsubscribe_setting.is_email_unsubscribe_banner_img %}
+    {% set loadingAttr = theme.system_page_setting.email_unsubscribe_setting.eemail_unsubscribe_banner.email_unsubscribe_banner_image.loading != 'disabled' ? 'loading="{{ theme.system_page_setting.email_unsubscribe_setting.email_unsubscribe_banner.email_unsubscribe_banner_image.loading }}"' : '' %}
+    <img src="{{ theme.system_page_setting.email_unsubscribe_setting.email_unsubscribe_banner.email_unsubscribe_banner_image.src }}" alt="{{ theme.system_page_setting.email_unsubscribe_setting.email_unsubscribe_banner.email_unsubscribe_banner_image.alt }}" {{ loadingAttr }} >  
+    {% endif %}
+  </div>
+  <div class="backup-unsubscribe__content">
+    {% module 'backup_unsubscribe'
+      extra_classes='backup-unsubscribe',
+      path='@hubspot/email_simple_subscription'
+    %}
+  </div>
+</section>
+{% endblock body %}

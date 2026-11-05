@@ -1,0 +1,69 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+-->
+{{ require_css(get_asset_url('../css/components/blog-card.css')) }}
+{{ require_css(get_asset_url('../css/components/blog-listing-2.css')) }}
+{%- if b.listing.padding == 'custom' -%}
+  {%- set lg_css = '' -%}
+  {%- set sm_css = '' -%}
+  {%- if b.listing.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.listing.top_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+  {%- if lg_css -%}{% set lg_css = '.blog-listing-2 {' ~ lg_css ~ '}' %}{%- endif -%}
+  {%- if b.listing.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.listing.top_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if b.listing.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.listing.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+  {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-listing-2 {' ~ sm_css ~ '}}' %}{%- endif -%}
+  {%- if lg_css or sm_css -%}
+    {%- require_css -%}
+      <style>{{ lg_css ~ sm_css }}</style>
+    {%- end_require_css -%}
+  {%- endif -%}
+{%- endif -%}
+<div class="blog-listing-2 section">
+  <div class="blog-listing-2__center container" test="{{ b.listing.top_padding_lg }}">
+    <div class="row items-stretch {% if b.listing.col_align == 'left' %}justify-start{% elif b.listing.col_align == 'right' %}justify-end{% else %}justify-center{% endif %}" id="post-list">
+      {# Post #}
+      {% for content in contents %}
+        {%- if b.hero.homepage_hero != 'latest_post' or (current_page_num > 1 or not loop.first) or blog_author or tag -%}
+          <div class="blog-listing-2__post col s4 md-s6 sm-s12 flex-row">
+            <div class="blog-card blog-card--white blog-card--shadow{{ ' blog-card--with-img' if content.widgets.post_banner.body.src or content.featured_image }}{{ ' blog-card--with-summary' if (b.listing.listing_2_summary_length > 0 and b.listing.summary_type != 'meta_description') or b.listing.summary_type == 'meta_description' }}{{ ' blog-card--no-read-time' if not b.read_time.show_read_time }}{{ ' blog-card--title-half-space' if b.tags.show_tags and content.tag_list[0] and not b.read_time.show_read_time and not b.date.show_date and not (b.listing.summary_type == 'meta_description' or b.listing.listing_2_summary_length > 0) and b.listing.listing_2_show_tag }}">
+              <a class="blog-card__link" href="{{ content.absolute_url }}"><span class="screen-reader-text">{{ content.name }}</span></a>
+              <div class="blog-card__content">
+                {% if content.widgets.post_banner.body.src %}
+                  <div class="blog-card__img">{{ image_tag(content.widgets.post_banner.body) }}</div>
+                {% else %}
+                  <div class="blog-card__img"><img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text|default(content.name) }}" {{ image_srcset(content.featured_image, md) }} loading="lazy"></div>
+                {% endif %}
+                <div class="blog-card__body">
+                  <div class="blog-card__text">
+                    {% if b.tags.show_tags and content.tag_list[0] and b.listing.listing_2_show_tag %}
+                      <div class="blog-card__tags">
+                        <a href="{{ blog_tag_url(group.id, content.tag_list[0].slug) }}"><span class="badge badge--medium badge--accent badge--lowercase">{{ content.tag_list[0] }}</span></a>
+                      </div>
+                    {% endif %}
+                    <h3 class="blog-card__title h4">{{ content.name }}</h3>
+                    {%- if b.listing.summary_type == 'meta_description' -%}
+                      <p class="blog-card__summary">{{ content.meta_description }}</p>
+                    {%- elif b.listing.listing_2_summary_length > 0 -%}
+                      <p class="blog-card__summary">{{ content.post_list_content|striptags|truncate(b.listing.listing_2_summary_length, true, ' &hellip;') }}</p>
+                    {%- endif -%}
+                  </div>
+                  {%- if b.date.show_date or b.read_time.show_read_time -%}
+                    <div class="blog-card__info small-text">
+                      {%- if b.date.show_date -%}
+                        <span class="blog-card__date">{{ content.publish_date_localized }}</span>
+                      {%- endif -%}
+                      {%- if b.read_time.show_read_time -%}
+                        <span class="blog-card__readtime">{{ b.text.min_read|replace('[minutes]', read_time(content.post_body)) }}</span>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {% endfor %}
+    </div>
+  </div>
+</div>

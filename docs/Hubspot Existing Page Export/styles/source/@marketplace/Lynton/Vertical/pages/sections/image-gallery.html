@@ -1,0 +1,18 @@
+<!--
+  templateType: section
+  label: Image Gallery
+  description: "A full width section with image gallery."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/image-gallery.png
+-->
+
+{% dnd_section
+  full_width=true,
+  padding={'top': 60, 'bottom': 60}
+%}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path="../modules/Image Gallery" %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

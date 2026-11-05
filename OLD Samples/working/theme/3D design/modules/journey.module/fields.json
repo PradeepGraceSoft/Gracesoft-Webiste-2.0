@@ -1,0 +1,97 @@
+[
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "From first hello\nto see you again."
+  },
+  {
+    "name": "intro",
+    "label": "Introduction",
+    "type": "text",
+    "default": "Give each part of the stay a place in the bigger picture."
+  },
+  {
+    "name": "steps",
+    "label": "Journey steps",
+    "type": "group",
+    "children": [
+      {
+        "name": "number",
+        "label": "Step",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "body",
+        "label": "Description",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "url",
+        "label": "URL",
+        "type": "url",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS"
+        ],
+        "default": {
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "name": "label",
+        "label": "Link text",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 3
+    },
+    "default": [
+      {
+        "number": "01",
+        "title": "Capture the booking",
+        "body": "Bring direct reservations and supported booking channels into your property’s workflow.",
+        "url": {
+          "href": "https://www.gracesoft.com/online-booking-engine",
+          "type": "EXTERNAL"
+        },
+        "label": "Explore direct booking"
+      },
+      {
+        "number": "02",
+        "title": "Coordinate the stay",
+        "body": "Keep front desk, housekeeping, guest information and payments within reach.",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        },
+        "label": "Explore property management"
+      },
+      {
+        "number": "03",
+        "title": "Build the relationship",
+        "body": "Use guest history and communication tools to stay connected beyond check-out.",
+        "url": {
+          "href": "https://www.gracesoft.com/crm-software",
+          "type": "EXTERNAL"
+        },
+        "label": "Explore guest CRM"
+      }
+    ]
+  }
+]

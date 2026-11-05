@@ -1,0 +1,453 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ html_lang }}" {{ html_lang_dir }}> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ html_lang }}" {{ html_lang_dir }}>        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ html_lang }}" {{ html_lang_dir }}>               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="{{ meta_author }}">
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <meta name="generator" content="HubSpot">
+    <title>{{ page_meta.html_title }}</title>
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    
+{{ required_head_tags }}
+    <script src="{{ get_public_template_url("custom/page/Relentless/CompanyMain-1484238110394-1499807988.js") }}"></script>
+    {{ user_head_overrides }}
+
+</head>
+<body class=" {{ builtin_body_classes }}" style="">
+    <div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell top-header-section" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span3 widget-span widget-type-logo company-logo" style="" data-widget-type="logo" data-x="0" data-w="3">
+<div class="cell-wrapper layout-widget-wrapper">
+{% logo "logo" overrideable=False, wrapping_html='', label='Logo' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span9 widget-span widget-type-menu custom-menu-primary" style="" data-widget-type="menu" data-x="3" data-w="9">
+<div class="cell-wrapper layout-widget-wrapper">
+{% menu "module_1439844765872109416" root_type='site_root', wrapping_html='', flow='horizontal', site_map_name='Marketplace Menu w- Children', overrideable=False, flyouts='true', max_levels='3', label='Advanced Menu' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell blog-main-page" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% image "ftr_image" label='Featured Image', alt='', src='' export_to_template_context=True %}
+
+<style>
+
+.ftr-img {
+    background-image:url("{{ widget_data.ftr_image.src }}");
+    background-size:cover;
+    background-position:center top;
+    background-repeat: no-repeat;
+}
+
+
+</style></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_content " style="" data-widget-type="blog_content" data-x="0" data-w="12">
+{% if is_listing_view %}<div class="blog-section">
+    <div class="blog-listing-wrapper cell-wrapper">
+        {# simple_list_page indicates the "blog/all" page, which is a list of links to every blog post #}
+                <div class="post-listing{% if simple_list_page %}-simple{% endif %}">
+                    {% if blog_author %}
+                        <div class="hs-author-profile">
+                            <h2 class="hs-author-name">{{ blog_author.display_name }}</h2>
+                            {% if blog_author.avatar %} <div class="hs-author-avatar"> <img src="{{ blog_author.avatar }}" alt="{{ blog_author.display_name }}"> </div> {% endif %}
+                            <div class="hs-author-bio">{{ blog_author.bio }}</div>
+                            {% if blog_author.has_social_profiles %}
+                                <div class="hs-author-social-section">
+                                    <span class="hs-author-social-label">Find me on:</span>
+                                    <div class="hs-author-social-links">
+                                        {% if blog_author.facebook %}
+                                            <a href="{{ blog_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">&nbsp;</a>
+                                        {% endif %}
+                                        {% if blog_author.linkedin %}
+                                            <a href="{{ blog_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">&nbsp;</a>
+                                        {% endif %}
+                                        {% if blog_author.twitter %}
+                                            <a href="{{ blog_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">&nbsp;</a>
+                                        {% endif %}
+                                        {% if blog_author.google_plus %}
+                                            <a href="{{ blog_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus">&nbsp;</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <h3 class="hs-author-listing-header">Recent Posts</h3>
+                    {% endif %}
+                    
+            {% if not simple_list_page %}
+                        
+                    {% for content in contents %}
+                    {% set big_image = loop.index + 2 %}
+                    {% set left_image = loop.index + 1 %}
+                    {% set right_image = loop.index %}
+                    {% if big_image is divisibleby 3%} <div class="blog-triad"> {% endif %}
+                        <a href="{{content.absolute_url}}" {% if big_image is divisibleby 3 %} class="big-image-link" {% else %} class="blog-link" {% endif %}>
+                            
+                            <div {% if big_image is divisibleby 3 %} class="big-image-item" {% elif left_image is divisibleby 3 %} class="blog-post-item bpi-left" {% else %} class="blog-post-item bpi-right" {% endif %}>
+                            <div class="post-item">
+                            
+                               {% if content.post_list_summary_featured_image %}
+                                        <div class="hs-featured-image-wrapper">
+                                            <div class="hs-featured-image" style="background-image: url({{ content.post_list_summary_featured_image }});"></div>
+                                        </div>
+                                        
+                                    {% endif %}
+                                <div class="post-header">
+                                
+                                    <h3>{{ content.name }}</h3>
+                                    <div class="post-header-author">
+                                    <p class="author-date">{{ content.publish_date|datetimeformat( '%B %e, %Y' ) }} | by {{ content.blog_post_author.display_name  }}</p>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                    
+                                
+                                <div class="post-summary" id="post-summary">
+                                    {{ content.post_list_content|safe }}
+                                </div>
+                                
+                                {% if content.topic_list %}
+                                    <div id="hubspot-topic_data" class="list-topics">
+                                        In {% for topic in content.topic_list %}
+                                            <span class="topic-link" href="{{ group.absolute_url }}/topic/{{ topic.slug }}">{{ topic.name }}{% if not loop.last %},{% endif %} </span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div></a>
+                        {% if right_image is divisibleby 3 %}</div>{% endif %}
+                    {% endfor %}
+            {% else %}
+            <div class="blog-main-page top-spacer">
+            {% for content in contents %}
+                <div class="page-center"><h2 class="post-listing-simple"><a href="{{content.absolute_url}}">{{ content.name }}</a></h2></div>
+            {% endfor %}
+            </div>
+            {% endif %}
+                    
+                        
+                </div>
+
+                {% if not simple_list_page %}
+                <div class="blog-pagination">
+                    {% if last_page_num %}
+                        <a class="previous-posts-link" href="{{ blog_page_link(last_page_num) }}">Previous</a>
+                    {% endif %}
+                        <a class="all-posts-link" href="{{ group.absolute_url }}/all">All posts</a>
+                    {% if next_page_num %}
+                        <a class="next-posts-link" href="{{ blog_page_link(next_page_num) }}">Next</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+    </div>
+</div>{% else %}<div class="blog-section">{% boolean "isListing" value=False, export_to_template_context=True %}
+    <div class="blog-post-wrapper cell-wrapper">
+                <div class="blog-section">
+            <div class="blog-post-wrapper cell-wrapper">
+                <div class="ftr-img">
+                <div class="ftr-img-hdr">
+                <div class="section post-header">
+                <div class="section-post-wrapper cell-wrapper">
+                    <h1>{{ content.name }}</h1>
+                    <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
+                        <span class="hs-author-label">Posted by</span>
+                        {% if content.blog_post_author %}
+                            <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a> on {{ content.publish_date_localized }}
+                            <!--{% if content.blog_post_author.has_social_profiles %}
+                                <div class="hs-author-social-section">
+                                    <span class="hs-author-social-label">Find me on:</span>
+                                    <div class="hs-author-social-links">
+                                        {% if content.blog_post_author.facebook %}
+                                            <a href="{{ content.blog_post_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">Facebook </a>
+                                        {% endif %}
+                                        {% if content.blog_post_author.linkedin %}
+                                            <a href="{{ content.blog_post_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">LinkedIn</a>
+                                        {% endif %}
+                                        {% if content.blog_post_author.twitter %}
+                                            <a href="{{ content.blog_post_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">Twitter </a>
+                                        {% endif %}
+                                        {% if content.blog_post_author.google_plus %}
+                                            <a href="{{ content.blog_post_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus">Google+</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}-->
+                        {% endif %}
+                    </div>
+                    {% if content.topic_list %}
+                     <p id="hubspot-topic_data" class"list-topics"> In 
+                        {% for topic in content.topic_list %}
+                            <a class="topic-link" href="{{ group.absolute_url }}/topic/{{ topic.slug }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+                        {% endfor %}
+                     </p>
+                {% endif %}
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="page-center">
+                <div super-page-center>
+                
+                <div class="section post-body">
+                    {{ content.post_body }}
+                    <!--<div class="buttons">
+                    {#{% blog_social_sharing "blog_social_sharing" overrideable=False, label='Blog Social Sharing' %}#}
+                    </div>-->
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Optional: Blog Author Bio Box -->
+        {#<div class="about-author-sec row-fluid">
+            <div class="span2">
+                <img alt="{{ content.blog_post_author.display_name }}" src="{{ content.blog_post_author.avatar }}">
+            </div>
+            <div class="span10">
+                <h3>Written by <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a></h3>
+                <p>{{ content.blog_post_author.bio }}</p>
+                {% if content.blog_post_author.has_social_profiles %}
+                    <div class="hs-author-social-section">
+                        <div class="hs-author-social-links">
+                            {% if content.blog_post_author.facebook %}
+                                <a href="{{ content.blog_post_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">Facebook</a>
+                            {% endif %}
+                            {% if content.blog_post_author.linkedin %}
+                                <a href="{{ content.blog_post_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">LinkedIn</a>
+                            {% endif %}
+                            {% if content.blog_post_author.twitter %}
+                                <a href="{{ content.blog_post_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">Twitter</a>
+                            {% endif %}
+                            {% if content.blog_post_author.google_plus %}
+                                <a href="{{ content.blog_post_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus">Google+</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>#}
+        <div class="page-nav page-center">
+            <div class="previous-post">
+                {% if content.previous_post_slug %} 
+                    <a class="previous-post-link" href="/{{ content.previous_post_slug }}">&lt;&lt; Previous Post</a> 
+                {% endif %} 
+            </div>
+            <div class="next-post">
+                {% if content.next_post_slug %} 
+                <a class="next-post-link" href="/{{ content.next_post_slug }}">Next Post &gt;&gt;</a> 
+                {% endif %}
+            </div>
+        </div>
+        <div class="page-nav-bottom"></div>
+    </div>
+</div>{% endif %}</div>
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-3 ">
+<div class="row-fluid ">
+{% if widget_data.isListing.value == False %} <div> 
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_comments blog-comments" style="" data-widget-type="blog_comments" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% blog_comments "blog_comments" overrideable=False, wrapping_html='', label='Blog Comments' %}</div><!--end layout-widget-wrapper -->
+   </div><!--end widget-span -->
+    </div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+ </div> {% else %} <div></div> {% endif %}
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell full-width-footer-section" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell footer-content" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span3 widget-span widget-type-post_listing footer-object" style="" data-widget-type="post_listing" data-x="0" data-w="3">
+<div class="cell-wrapper layout-widget-wrapper">
+{% post_listing "module_14411235525946664" select_blog='3299658734', overrideable=False, wrapping_html='', list_title='Recent Posts', listing_type='recent', max_links='5', label='Post Listing' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-post_filter topic-cloud" style="" data-widget-type="post_filter" data-x="3" data-w="3">
+<div class="cell-wrapper layout-widget-wrapper">
+{% post_filter "module_144260420986525973" select_blog='3299658734', expand_link_text='See All', order_by='post_count', filter_type='topic', overrideable=False, wrapping_html='', list_title='Topic Cloud', max_links='15', label='Post Filter' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-post_listing footer-object" style="" data-widget-type="post_listing" data-x="6" data-w="3">
+<div class="cell-wrapper layout-widget-wrapper">
+{% post_listing "module_144112376340817312" select_blog='3299658734', overrideable=False, wrapping_html='', list_title='Popular Posts', listing_type='popular', max_links='5', label='Post Listing' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-rich_text " style="" data-widget-type="rich_text" data-x="9" data-w="3">
+<div class="cell-wrapper layout-widget-wrapper">
+{% widget_block rich_text "module_144112377994218678" overrideable=False, label='Rich Text' %}
+{% widget_attribute "html" %}<h3>CTA Area</h3>
+<div style="text-align: left;">{{cta('c89c2442-0bf2-47be-9684-be16848e4e45')}}</div>{% end_widget_attribute %}
+      {% end_widget_block %}
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+{% set one_left = contents.total_count + 1 %}
+{% set two_left = contents.total_count + 2 %}
+
+{% if one_left is divisibleby 3 %}
+<style type="text/css">
+
+@media only screen and (max-width: 767px) {
+  .blog-pagination {
+    margin-top: -600px!important;
+  }
+}
+</style>
+{% endif %}
+
+{% if two_left is divisibleby 3 %}
+<style type="text/css">
+
+.blog-pagination {
+  margin-top: -450px!important;
+}
+@media only screen and (max-width: 767px) {
+  .blog-pagination {
+    margin-top: -1200px!important;
+  }
+}
+</style>
+{% endif %}</div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-page_footer copyright-section" style="" data-widget-type="page_footer" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+{% page_footer "page_footer" wrapping_html='', overrideable=False, footer='', label='Page Footer' %}</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    {{ standard_footer_includes }}
+    
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+</body>
+</html>

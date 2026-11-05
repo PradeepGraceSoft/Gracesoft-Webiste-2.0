@@ -1,0 +1,34 @@
+<!--
+  templateType: section
+  label: Video
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/video.png
+  description: "Video section separated in one column with background image.."
+-->
+
+{# Feature Section Start #}
+  {% dnd_section max_width=1200, class="video-area" %}
+     {% dnd_column width=12, offset=0  %}
+
+        {% dnd_row %}
+           {% dnd_module path='@hubspot/rich_text' %}         
+            {% module_attribute 'html' %}
+              <div class="video-title">  
+                <h2>We Provide Best Quality <br>Business Services</h2>
+              </div> 
+            {% end_module_attribute %}   
+          {% end_dnd_module %} 
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+           {% dnd_module "module_166930346244218" path="../modules/Video Popup", label="Video Popup" %}
+
+           {% end_dnd_module %}
+        {% end_dnd_row %}
+
+     {% end_dnd_column %}
+  {% end_dnd_section %}
+{# Hero Slider Section End #}
+		
+		
+	

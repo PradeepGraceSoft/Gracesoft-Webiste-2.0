@@ -1,0 +1,26 @@
+<!--
+ templateType: page
+ isAvailableForNewContent: true
+ label: GraceSoft 3D Homepage — Local Review
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<a class="skip-link" href="#main-content">Skip to main content</a>
+{% module "navigation" path="../modules/navigation.module", label="Navigation" %}
+<main id="main-content">
+{% dnd_area "homepage_content", label="3D homepage content" %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/hero.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/overview.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/platform.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/journey.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/screenshots.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/properties.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/why.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/stories.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/insights.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/faq.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% dnd_section full_width=true, padding={"top":0,"bottom":0,"left":0,"right":0} %}{% dnd_column %}{% dnd_row %}{% dnd_module path="../modules/final-cta.module" %}{% end_dnd_module %}{% end_dnd_row %}{% end_dnd_column %}{% end_dnd_section %}
+{% end_dnd_area %}
+</main>
+{% module "footer" path="../modules/footer.module", label="Footer" %}
+{% endblock body %}

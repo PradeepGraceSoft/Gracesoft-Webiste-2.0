@@ -1,0 +1,28 @@
+<!--
+  templateType: section
+  label: Two Column - Image Right
+  description: "Two columns with text on the left and image on the right."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/two-col-image-right.png
+-->
+
+{% dnd_section padding={'top': 60, 'bottom': 60} %}
+  {% dnd_module path="../modules/2 Col Text and Image",
+    image={
+      "image": {
+        "src": get_asset_url('../../assets/images/vertical-portrait-collage-2.png')
+      }
+    },
+    text={
+      "eyebrow": "OUR MISSION",
+      "heading": "Drag and Drop Made Easier by HubSpot Experts"
+    },
+    layout={"placement": "right"},
+    styles={
+      "image": {
+        "animation": "right"
+      }
+    }
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}

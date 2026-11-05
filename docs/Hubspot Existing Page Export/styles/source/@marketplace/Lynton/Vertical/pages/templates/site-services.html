@@ -1,0 +1,43 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/services.png
+  label: "Services/Products"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header" %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-overlap-staggered-images.html' %}
+
+    {% include_dnd_partial path='../sections/featured-items.html', context={
+      "padding": {
+        'bottom': 80
+      },
+      "bg_image": {
+        "backgroundPosition": "MIDDLE_CENTER",
+        "backgroundSize": "cover",
+        "imageUrl": get_asset_url('../../assets/images/gradient-bg.png')
+      }
+    } %}
+
+    {% include_dnd_partial path='../sections/two-col-image-left.html' %}
+
+    {% include_dnd_partial path='../sections/two-col-image-right.html' %}
+
+    {% include_dnd_partial path='../sections/image-gallery.html' %}
+
+    {% include_dnd_partial path='../sections/testimonials-static.html' %}
+
+    {% include_dnd_partial path='../sections/logos.html' %}
+
+    {% include_dnd_partial path='../sections/cta-box.html' %}
+  {% end_dnd_area %}
+{% endblock %}

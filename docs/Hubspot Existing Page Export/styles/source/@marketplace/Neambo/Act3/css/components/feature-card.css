@@ -1,0 +1,142 @@
+{% import "../_variables.css" as var %}
+
+/* Base */
+
+.feature-card {
+  width: 100%;
+  height: 100%;
+  margin-bottom: {{ var.gutter }}px;
+  padding: {{ var.gutter }}px;
+  position: relative;
+  border-radius: {{ var.radius_7 }};
+  text-align: center;
+  transition: .2s ease-in-out;
+}
+
+.feature-card__body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-card__icon {
+  margin-top: 0.56rem;
+  margin-bottom: {{ var.gutter }}px;
+  transition: .2s ease-in-out;
+}
+
+.feature-card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/* With link */
+
+.feature-card--with-link:hover {
+  transform: scale(1.02);
+}
+
+.feature-card--with-link:hover .feature-card__icon {
+  transform: scale(1.1) translateY(2px);
+}
+
+/* Accent */
+
+.feature-card--accent {
+  background: {{ var.accent_bg }};
+  color: {{ var.white_text }};
+}
+
+.feature-card--accent.feature-card--shadow {
+  box-shadow: {{ var.accent_medium_shadow }};
+}
+
+.feature-card--accent.feature-card--shadow.feature-card--with-link:hover {
+  box-shadow: {{ var.accent_large_shadow }};
+}
+
+.feature-card--accent .feature-card__title {
+  color: {{ var.white }};
+}
+
+/* Dark */
+
+.feature-card--dark {
+  background: {{ var.dark }};
+  color: {{ var.white_text }};
+}
+
+.feature-card--dark.feature-card--shadow {
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.feature-card--dark.feature-card--shadow.feature-card--with-link:hover {
+  box-shadow: {{ var.large_shadow }};
+}
+
+.feature-card--dark .feature-card__title {
+  color: {{ var.white }};
+}
+
+/* Light */
+
+.feature-card--light {
+  background: {{ var.light }};
+}
+
+.feature-card--light.feature-card--shadow {
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.feature-card--light.feature-card--shadow.feature-card--with-link:hover {
+  box-shadow: {{ var.large_shadow }};
+}
+
+/* White */
+
+.feature-card--white {
+  background: {{ var.white }};
+}
+
+.feature-card--white.feature-card--shadow {
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.feature-card--white.feature-card--shadow.feature-card--with-link:hover {
+  box-shadow: {{ var.large_shadow }};
+}
+
+/* Ghost */
+
+.feature-card--ghost {
+  background: {{ var.white_bg }};
+  color: {{ var.white_text }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}
+
+.feature-card--ghost.feature-card--shadow {
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.feature-card--ghost.feature-card--shadow.feature-card--with-link:hover {
+  box-shadow: {{ var.large_shadow }};
+}
+
+.feature-card--ghost .feature-card__title {
+  color: {{ var.white }};
+}
+
+/* Fixes a Safari bug where the 'ghost' icon in a 'ghost' card renders with a white background. */
+
+{% if theme.miscellaneous.ghost_blur %}
+  .is-safari .feature-card--ghost .icon--ghost {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+{% endif %}

@@ -1,0 +1,72 @@
+{% import "../_variables.css" as var %}
+
+.gallery__item {
+  transition: .2s ease-in-out;
+}
+
+.gallery__row--gutter .gallery__item {
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.gallery__img {
+  width: 100%;
+}
+
+@media (min-width: {{ var.md + 1 }}px) {
+  .splide--center-mode:not(.splide--lg-2):not(.splide--lg-4):not(.splide--lg-6) .splide__slide:not(.is-active) .gallery__item {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: {{ var.md }}px) and (min-width: {{ var.sm + 1 }}px) {
+  .splide--center-mode:not(.splide--md-2):not(.splide--md-4):not(.splide--md-6) .splide__slide:not(.is-active) .gallery__item {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .splide--center-mode:not(.splide--sm-2):not(.splide--sm-4):not(.splide--sm-6) .splide__slide:not(.is-active) .gallery__item {
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+}
+
+.gallery .splide__pagination {
+  padding-top: {{ var.gutter }}px;
+}
+
+.gallery__preview {
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.gallery__preview-splide,
+.gallery__nav-splide {
+  position: relative;
+  visibility: hidden;
+}
+
+.gallery__preview-splide.is-active .splide__list,
+.gallery__nav-splide.is-active .splide__list {
+  display: flex;
+}
+
+.gallery__nav-splide .gallery__item {
+  cursor: pointer;
+}
+
+.gallery__nav-splide .gallery__item {
+  opacity: .5;
+}
+
+.gallery__nav-splide .gallery__item:hover,
+.gallery__nav-splide .splide__slide.is-active .gallery__item {
+  opacity: 1;
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .gallery__nav {
+    display: none;
+  }
+}

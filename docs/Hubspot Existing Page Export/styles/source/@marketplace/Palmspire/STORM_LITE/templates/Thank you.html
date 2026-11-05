@@ -1,0 +1,1607 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Thank You
+  screenshotPath: ../Images/Page Preview/Thank You.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_thank_you' label='Thank-you-2' class='body-container-thank-you-2' %}
+
+<!--------------------------- Thank You 2 Banner section start here ---------------------------->
+
+	 {% dnd_section vertical_alignment='MIDDLE',
+			 padding={
+			 'default':{
+			 'top':80,
+			 'bottom':290
+			 },
+			 'mobile':{
+			 'top':60,
+			 'bottom':60
+			 }
+			 },
+			 margin={
+			 'default':{
+			 'top':143
+			 },
+			 'mobile':{
+			 'top':0
+			 }
+			 },
+			 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+	 %}
+		{% dnd_column offset=0, width=6 %}
+		 {% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+						add_custom_class_here="content1",
+						choose_content_type="single-content",
+						single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"1",
+						add_heading_here:"A great big <br>Thank You  🎉",
+						check_to_show_description:true,
+						add_description_here:"<p>If this is not your email address, please ignore this page since the email associated with this page was most likely forwarded to you. If you didn’t recieve <a href='https://palmspire-3842749.hs-sites.com/home-1' style='text-decoration:underline;font-weight:500;'>Click here</a>.</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-left",
+						set_max_width_of_the_content:"489"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':12
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':12
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':12
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+		 {% end_dnd_row %}
+		{% end_dnd_column %}
+		{% dnd_column offset=6, width=6 %}
+		 {% dnd_row %}
+					{% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image Video with before image", horizontal_alignment= "RIGHT"
+						choose_between_image_and_video = "image",
+						image_group = {
+						add_custom_class_here : "image-conta",
+						add_image_here : {
+						'src' : get_asset_url('../Images/Column Images/Column-Image-3.png'),
+						'alt' : 'column-image',
+						'width':'591'
+						},
+						add_max_width_here : "460",
+						check_to_show_box_shadow_to_image : false,
+						set_width_in_responsive : "100"
+						}
+						check_to_add_vector_image = false,
+						style = {
+						'set_alignment_for_image' : 'align-right'
+						}
+					%}
+					{% end_dnd_module %}
+		 {% end_dnd_row %}
+		{% end_dnd_column %}
+	 {% end_dnd_section %}
+
+<!---------------------------- Thank you 2 Banner section end here -----------------------------> 
+
+<!----------------------- Thank you 2 Share your experience section start here ----------------->
+
+	 {% dnd_section %}
+		{% dnd_column offset=0, width=12 %}
+		 {% dnd_row %}
+			{% dnd_module path='../modules/Share_Your_Experience', label="Share your experience",
+			 add_heading_here="Share your Experience with us:",
+			 emoji_group=[
+			 {
+			 add_emoji_here:{
+			 'src': get_asset_url('../Images/Emoji-1.svg'),
+			 'alt' : 'Expressionless'
+			 }
+			 },
+			 {
+			 add_emoji_here:{
+			 'src': get_asset_url('../Images/Emoji-2.svg'),
+			 'alt' : 'Smile'
+			 }
+			 },
+			 {
+			 add_emoji_here:{
+			 'src': get_asset_url('../Images/Emoji-3.svg'),
+			 'alt' : 'Smile-with-heart'
+			 }
+			 },
+			 {
+			 add_emoji_here:{
+			 'src': get_asset_url('../Images/Emoji-4.svg'),
+			 'alt' : 'Heart-eyes'
+			 }
+			 },
+			 {
+			 add_emoji_here:{
+			 'src': get_asset_url('../Images/Emoji-5.svg'),
+			 'alt' : 'Engry'
+			 }
+			 }
+			 ],
+			 reaction_group=[
+			 {
+			 add_reaction_here:"<p>Bad Experience</p>"
+			 },
+			 {
+			 add_reaction_here:"<p>Good Experience</p>"
+			 },
+			 {
+			 add_reaction_here:"<p>Great Experience</p>"
+			 },
+			 {
+			 add_reaction_here:"<p>Amazing Experience</p>"
+			 },
+			 {
+			 add_reaction_here:"<p>Worst Experience</p>"
+			 }
+			 ],
+			 add_box_shadow_of_card="0 4px 70px 0 rgba(0, 0, 0, 0.1)",
+			 style={
+						 'check_to_show_all_text_white':false,
+						 'spacing':{
+														 'add_spacing_for_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':50
+																										},
+																									 'bottom':{
+																										'value':50
+																										},
+																										'left':{
+																										'value':55
+																										},
+																										'right':{
+																										'value':55
+																										}
+																									},
+																									'margin':{
+																										 'top':{
+																										 'value':-176
+																										 }
+																									}
+																 },
+																 'add_spacing_for_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':50
+																										},
+																									 'bottom':{
+																										'value':50
+																										},
+																										'left':{
+																										'value':30
+																										},
+																										'right':{
+																										'value':30
+																										}
+																									},
+																									'margin':{
+																										 'top':{
+																										 'value':-176
+																										 }
+																									}
+															},
+															'add_spacing_for_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':30
+																										},
+																									 'bottom':{
+																										'value':30
+																										},
+																										'left':{
+																										'value':30
+																										},
+																										'right':{
+																										'value':30
+																										}
+																									},
+																									'margin':{
+																										 'top':{
+																										 'value':0
+																										 }
+																									}
+												}					 
+						 },
+						 'background':{
+										 'add_background_color_here':{
+												'color':"#ffffff",
+												'opacity':100
+										 }
+						 },
+						 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }							 
+								 },
+								 'add_border_radius_here':"8"
+						 },
+						 'emoji_group':{
+										 'set_width_of_emoji':"35",
+										 'set_height_of_emoji':"35"
+						 }
+			 }
+			%}
+			{% end_dnd_module %}
+		 {% end_dnd_row %}
+		{% end_dnd_column %}
+	 {% end_dnd_section %} 
+
+<!------------------------ Thank you 2 Share your experience section end here ------------------>
+
+<!----------------------------- Thank you 2 Logo section start here ---------------------------->
+
+	 {% dnd_section 
+			 padding={
+			 'default':{
+			 'top':84,
+			 'bottom':100
+			 },
+			 'mobile':{
+			 'top':60,
+			 'bottom':60
+			 }
+			 }
+	 %}
+		{% dnd_column offset=0, width=12 %}
+		 {% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+					 add_custom_class_here="h4_24",
+					 choose_content_type="single-content",
+					 single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"4",
+						add_heading_here:"Subscribe to <span>free resources</span> TODAY! Be one of 2.000+ users.",
+						check_to_show_description:false,
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-center",
+						set_max_width_of_the_content:"827"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':20
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':20
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':20
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+		 {% end_dnd_row %}
+					 {% dnd_row	%}
+							{% dnd_column  offset=0, width=2 %}
+								 {% dnd_row 
+									 padding={
+									 'default':{
+									 'bottom':0
+									 },
+									 'mobile':{
+									 'bottom':15
+									 }
+									 }
+								 %}
+										{% dnd_module
+											 path='@hubspot/linked_image',
+											 horizontal_alignment='CENTER',
+											 img={
+											 'src': get_asset_url('../Images/Microsoft.png'),
+											 'alt' : 'Microsoft',
+											 'width': 110
+											 }
+										 %}
+										{% end_dnd_module %}
+								 {% end_dnd_row %}
+							{% end_dnd_column %}
+
+							{% dnd_column  offset=2, width=2 %}
+								 {% dnd_row 
+										padding={
+										'default':{
+										'bottom':0
+										},
+										'mobile':{
+										'bottom':15
+										}
+										}
+									%}
+										{% dnd_module
+											 path='@hubspot/linked_image',
+											 horizontal_alignment='CENTER',
+											 img={
+											 'src': get_asset_url('../Images/Youtube.png'),
+											 'alt' : 'Youtube',
+											 'width': 99
+											 }
+										%}
+										{% end_dnd_module %}
+								 {% end_dnd_row %}
+							{% end_dnd_column %}
+
+							{% dnd_column  offset=4, width=2 %}
+								 {% dnd_row 
+										padding={
+										'default':{
+										'bottom':0
+										},
+										'mobile':{
+										'bottom':15
+										}
+										}
+									%}
+										{% dnd_module
+											 path='@hubspot/linked_image',
+											 horizontal_alignment='CENTER',
+											 img={
+											 'src': get_asset_url('../Images/Harvest.png'),
+											 'alt' : 'Harvest',
+											 'width': 108
+											}
+										%}
+										{% end_dnd_module %}
+								 {% end_dnd_row %}
+							{% end_dnd_column %}
+
+							{% dnd_column  offset=6, width=2 %}
+								 {% dnd_row 
+										padding={
+										'default':{
+										'bottom':0
+										},
+										'mobile':{
+										'bottom':15
+										}
+										}
+									 %}
+										{% dnd_module
+											 path='@hubspot/linked_image',
+											 horizontal_alignment='CENTER',
+											 img={
+											 'src': get_asset_url('../Images/Slack.png'),
+											 'alt' : 'Slack',
+											 'width': 108
+											}
+										%}
+										{% end_dnd_module %}
+								 {% end_dnd_row %}
+							{% end_dnd_column %}
+
+							{% dnd_column  offset=8, width=2 %}
+								 {% dnd_row 
+										padding={
+										'default':{
+										'bottom':0
+										},
+										'mobile':{
+										'bottom':15
+										}
+										}
+									%}
+										{% dnd_module
+											 path='@hubspot/linked_image',
+											 horizontal_alignment='CENTER',
+											 img={
+											 'src': get_asset_url('../Images/asana-3.png'),
+											 'alt' : 'Asana',
+											 'width': 92
+											 }
+										%}
+										{% end_dnd_module %}
+								 {% end_dnd_row %}
+							{% end_dnd_column %}
+
+							{% dnd_column  offset=10, width=2 %}
+								 {% dnd_row %}
+										{% dnd_module
+											path='@hubspot/linked_image',
+											horizontal_alignment='CENTER',
+											img={
+											'src': get_asset_url('../Images/Pinterest.png'),
+											'alt' : 'Pinterest',
+											'width': 110
+											}
+										%}
+										{% end_dnd_module %}
+								 {% end_dnd_row %}
+							{% end_dnd_column %}
+					 {% end_dnd_row %}
+		{% end_dnd_column %}
+	 {% end_dnd_section %}
+
+<!------------------------------ Thank you 2 Logo section end here ----------------------------->
+
+<!------------------------------ Thank you 2 Card section start here --------------------------->
+
+	 {% dnd_section vertical_alignment="MIDDLE",
+				 padding={
+				 'default':{
+				 'top':120,
+				 'bottom':120
+				 },
+				 'mobile':{
+				 'top':60,
+				 'bottom':60
+				 }
+				 },
+				 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+	 %}
+		{% dnd_column offset=0, width=12 %}
+		 {% dnd_row vertical_alignment='MIDDLE' %}
+			{% dnd_column offset=0, width=6 %}
+			 {% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+					 add_custom_class_here="content2",
+					 choose_content_type="single-content",
+					 single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"2",
+						add_heading_here:"Add Office Heading",
+						check_to_show_description:true,
+						add_description_here:"<p>If this is not your email address, please ignore this Product page since the email associated with this page was most likely forwarded to you.</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-left",
+						set_max_width_of_the_content:"410"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}     
+			 {% end_dnd_row %}
+			{% end_dnd_column %}
+			{% dnd_column offset=6, width=6,
+					 padding={
+					 'default':{
+					 'top':0
+					 },
+					 'mobile':{
+					 'top':30
+					 }
+					 }
+			%}
+			 {% dnd_row %}
+					{% dnd_module path='../modules/Event_Listing', label="Event Listing",
+					 add_custom_class="event-card-1",
+					 check_to_show_search_bar=false,
+					 choose_card_design="horizontal_design",
+					 choose_column_layout="one_column",
+					 card_group=[
+					 {
+						add_card_image_here:{
+						'src':get_asset_url('../Images/Office-1.png'),
+						'alt' : 'Office',
+						'width': 186
+						},
+						add_border_radius_of_card_image:"4px 0 0 4px",
+						check_to_show_contact_group:true,
+						contact_group:[
+						{
+						add_icon_here:{
+									"name" : "phone",
+									"type" : "SOLID",
+									"unicode" : "f879",
+									"icon_set" :"fontawesome-5.0.10"
+						},
+						add_text_here:"<a style='color:#737588;' href='tel:(603) 555-0123'><h6>(603) 555-0123</h6></a>"
+						},
+						{
+						add_icon_here:{
+									"name" : "envelope",
+									"type" : "LIGHT",
+									"unicode" : "f0e0",
+									"icon_set" :"fontawesome-5.0.10"
+						},
+						add_text_here:"<a style='color:#737588;' href='mailto:support@example.com'><h6>support@example.com</h6></a>"
+						}
+						],
+						add_mid_text_here:"<h4>Add office Headings</h4>
+						<p>If this is not your email address, please ignore this Product page since the email associated with this page.</p>",
+						want_time_date:false,
+						check_to_show_cta:false
+					 }
+					 ],
+					 styles={
+												 'card_styling':{
+												 'check_this_to_style_the_card':true,
+												 'card':{
+												 'add_card_spacing_here':{
+												 'padding':{
+												 'top':{
+												 'value':19
+												 },
+												 'bottom':{
+												 'value':19
+												 },
+												 'left':{
+												 'value':23
+												 },
+												 'right':{
+												 'value':23
+												 }
+												 }												 
+												 },
+												 'add_background_color':{
+												 'color':"#ffffff",
+												 'opacity':100
+												 },
+												 'add_border_here':{
+												 "top": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "bottom": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "left": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "right": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 }												 
+												 },
+												 'add_border_radius_here':"4"
+												 },
+												 'image':{
+												 'add_min_height_here':"200"
+												 }
+												 }
+					 }
+					%}
+					{% end_dnd_module %}
+			 {% end_dnd_row %}
+			{% end_dnd_column %}
+		 {% end_dnd_row %}
+		 {% dnd_row
+					padding={
+					'default':{
+					'top':44,
+					'bottom':44
+					},
+					'mobile':{
+					'top':30,
+					'bottom':30
+					}
+					}
+		 %}
+			{% dnd_column offset=0, width=6 %}
+			 {% dnd_row %}
+					{% dnd_module path='../modules/Event_Listing', label="Event Listing",
+					 add_custom_class="event-card-2",
+					 check_to_show_search_bar=false,
+					 choose_card_design="horizontal_design",
+					 choose_column_layout="one_column",
+					 card_group=[
+					 {
+						add_card_image_here:{
+						'src':get_asset_url('../Images/Office-2.png'),
+						'alt' : 'Office',
+						'width': 186
+						},
+						add_border_radius_of_card_image:"4px 0 0 4px",
+						check_to_show_contact_group:true,
+						contact_group:[
+						{
+						add_icon_here:{
+									"name" : "phone",
+									"type" : "SOLID",
+									"unicode" : "f879",
+									"icon_set" :"fontawesome-5.0.10"
+						},
+						add_text_here:"<a style='color:#737588;' href='tel:(603) 555-0123'><h6>(603) 555-0123</h6></a>"
+						},
+						{
+						add_icon_here:{
+									"name" : "envelope",
+									"type" : "LIGHT",
+									"unicode" : "f0e0",
+									"icon_set" :"fontawesome-5.0.10"
+						},
+						add_text_here:"<a style='color:#737588;' href='mailto:support@example.com'><h6>support@example.com</h6></a>"
+						}
+						],
+						add_mid_text_here:"<h4>Add office Headings</h4>
+						<p>If this is not your email address, please ignore this Product page since the email associated with this page.</p>",
+						want_time_date:false,
+						check_to_show_cta:false
+					 }
+					 ],
+					 styles={
+												 'card_styling':{
+												 'check_this_to_style_the_card':true,
+												 'card':{
+												 'add_card_spacing_here':{
+												 'padding':{
+												 'top':{
+												 'value':19
+												 },
+												 'bottom':{
+												 'value':19
+												 },
+												 'left':{
+												 'value':23
+												 },
+												 'right':{
+												 'value':23
+												 }
+												 }												 
+												 },
+												 'add_background_color':{
+												 'color':"#ffffff",
+												 'opacity':100
+												 },
+												 'add_border_here':{
+												 "top": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "bottom": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "left": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "right": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 }												 
+												 },
+												 'add_border_radius_here':"4"
+												 },
+												 'image':{
+												 'add_min_height_here':"200"
+												 }
+												 }
+					 }
+					%}
+					{% end_dnd_module %}
+			 {% end_dnd_row %}
+			{% end_dnd_column %}
+			{% dnd_column offset=6, width=6,
+					 padding={
+					 'default':{
+					 'top':0
+					 },
+					 'mobile':{
+					 'top':30
+					 }
+					 }
+			%}
+			 {% dnd_row %}
+					{% dnd_module path='../modules/Event_Listing', label="Event Listing",
+					 add_custom_class="event-card-3",
+					 check_to_show_search_bar=false,
+					 choose_card_design="horizontal_design",
+					 choose_column_layout="one_column",
+					 card_group=[
+					 {
+						add_card_image_here:{
+						'src':get_asset_url('../Images/Office-3.png'),
+						'alt' : 'Office',
+						'width': 186
+						},
+						add_border_radius_of_card_image:"4px 0 0 4px",
+						check_to_show_contact_group:true,
+						contact_group:[
+						{
+						add_icon_here:{
+									"name" : "phone",
+									"type" : "SOLID",
+									"unicode" : "f879",
+									"icon_set" :"fontawesome-5.0.10"
+						},
+						add_text_here:"<a style='color:#737588;' href='tel:(603) 555-0123'><h6>(603) 555-0123</h6></a>"
+						},
+						{
+						add_icon_here:{
+									"name" : "envelope",
+									"type" : "LIGHT",
+									"unicode" : "f0e0",
+									"icon_set" :"fontawesome-5.0.10"
+						},
+						add_text_here:"<a style='color:#737588;' href='mailto:support@example.com'><h6>support@example.com</h6></a>"
+						}
+						],
+						add_mid_text_here:"<h4>Add office Headings</h4>
+						<p>If this is not your email address, please ignore this Product page since the email associated with this page.</p>",
+						want_time_date:false,
+						check_to_show_cta:false
+					 }
+					 ],
+					 styles={
+												 'card_styling':{
+												 'check_this_to_style_the_card':true,
+												 'card':{
+												 'add_card_spacing_here':{
+												 'padding':{
+												 'top':{
+												 'value':19
+												 },
+												 'bottom':{
+												 'value':19
+												 },
+												 'left':{
+												 'value':23
+												 },
+												 'right':{
+												 'value':23
+												 }
+												 }												 
+												 },
+												 'add_background_color':{
+												 'color':"#ffffff",
+												 'opacity':100
+												 },
+												 'add_border_here':{
+												 "top": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "bottom": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "left": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "right": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 }												 
+												 },
+												 'add_border_radius_here':"4"
+												 },
+												 'image':{
+												 'add_min_height_here':"200"
+												 }
+												 }
+					 }
+					%}
+					{% end_dnd_module %}
+			 {% end_dnd_row %}
+			{% end_dnd_column %}
+		 {% end_dnd_row %}
+		 {% dnd_row %}
+			{% dnd_column offset=0, width=6 %}
+			 {% dnd_row %}
+					{% dnd_module path='../modules/Event_Listing', label="Event Listing",
+					 add_custom_class="event-card-4",
+					 check_to_show_search_bar=false,
+					 choose_card_design="horizontal_design",
+					 choose_column_layout="one_column",
+					 card_group=[
+					 {
+					 add_card_image_here:{
+					'src':get_asset_url('../Images/Office-4.png'),
+					'alt' : 'Office',
+					'width': 186
+					},
+					add_border_radius_of_card_image:"4px 0 0 4px",
+					check_to_show_contact_group:true,
+					contact_group:[
+					{
+					add_icon_here:{
+									"name" : "phone",
+									"type" : "SOLID",
+									"unicode" : "f879",
+									"icon_set" :"fontawesome-5.0.10"
+					},
+					add_text_here:"<a style='color:#737588;' href='tel:(603) 555-0123''><h6>(603) 555-0123</h6></a>"
+					},
+					{
+					add_icon_here:{
+									"name" : "envelope",
+									"type" : "LIGHT",
+									"unicode" : "f0e0",
+									"icon_set" :"fontawesome-5.0.10"
+					},
+					add_text_here:"<a style='color:#737588;' href='mailto:support@example.com'><h6>support@example.com</h6></a>"
+					}
+					],
+					add_mid_text_here:"<h4>Add office Headings</h4>
+					<p>If this is not your email address, please ignore this Product page since the email associated with this page.</p>",
+					want_time_date:false,
+					check_to_show_cta:false
+					}
+				  ],
+					 styles={
+												 'card_styling':{
+												 'check_this_to_style_the_card':true,
+												 'card':{
+												 'add_card_spacing_here':{
+												 'padding':{
+												 'top':{
+												 'value':19
+												 },
+												 'bottom':{
+												 'value':19
+												 },
+												 'left':{
+												 'value':23
+												 },
+												 'right':{
+												 'value':23
+												 }
+												 }												 
+												 },
+												 'add_background_color':{
+												 'color':"#ffffff",
+												 'opacity':100
+												 },
+												 'add_border_here':{
+												 "top": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "bottom": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "left": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "right": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 }												 
+												 },
+												 'add_border_radius_here':"4"
+												 },
+												 'image':{
+												 'add_min_height_here':"200"
+												 }
+												 }
+					 }
+					%}
+					{% end_dnd_module %}
+			 {% end_dnd_row %}
+			{% end_dnd_column %}
+			{% dnd_column offset=6, width=6,
+					 padding={
+					 'default':{
+					 'top':0
+					 },
+					 'mobile':{
+					 'top':30
+					 }
+					 }
+			%}
+			 {% dnd_row %}
+					{% dnd_module path='../modules/Event_Listing', label="Event Listing",
+					 add_custom_class="event-card-5",
+					 check_to_show_search_bar=false,
+					 choose_card_design="horizontal_design",
+					 choose_column_layout="one_column",
+					 card_group=[
+					 {
+					 add_card_image_here:{
+					'src':get_asset_url('../Images/Office-5.png'),
+					'alt' : 'Office',
+					'width': 186
+					},
+					add_border_radius_of_card_image:"4px 0 0 4px",
+					check_to_show_contact_group:true,
+					contact_group:[
+					{
+					add_icon_here:{
+				  				"name" : "phone",
+									"type" : "SOLID",
+									"unicode" : "f879",
+									"icon_set" :"fontawesome-5.0.10"
+					},
+					add_text_here:"<a style='color:#737588;' href='tel:(603) 555-0123'><h6>(603) 555-0123</h6></a>"
+					},
+					{
+					add_icon_here:{
+									"name" : "envelope",
+									"type" : "LIGHT",
+									"unicode" : "f0e0",
+									"icon_set" :"fontawesome-5.0.10"
+					},
+					add_text_here:"<a style='color:#737588;' href='mailto:support@example.com'><h6>support@example.com</h6></a>"
+					}
+					],
+					add_mid_text_here:"<h4>Add office Headings</h4>
+					<p>If this is not your email address, please ignore this Product page since the email associated with this page.</p>",
+					want_time_date:false,
+					check_to_show_cta:false
+				  }
+				  ],
+					styles={
+												 'card_styling':{
+												 'check_this_to_style_the_card':true,
+												 'card':{
+												 'add_card_spacing_here':{
+												 'padding':{
+												 'top':{
+												 'value':19
+												 },
+												 'bottom':{
+												 'value':19
+												 },
+												 'left':{
+												 'value':23
+												 },
+												 'right':{
+												 'value':23
+												 }
+												 }												 
+												 },
+												 'add_background_color':{
+												 'color':"#ffffff",
+												 'opacity':100
+												 },
+												 'add_border_here':{
+												 "top": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "bottom": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "left": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "right": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 }												 
+												 },
+												 'add_border_radius_here':"4"
+												 },
+												 'image':{
+												 'add_min_height_here':"200"
+												 }
+												 }
+					 }
+					%}
+					{% end_dnd_module %}
+			 {% end_dnd_row %}
+			{% end_dnd_column %}
+		 {% end_dnd_row %}
+		{% end_dnd_column %}
+	 {% end_dnd_section %}
+
+<!------------------------------ Thank you 2 Card section end here ----------------------------->
+
+<!------------------------------ Thank you 2 Two cards section start here ---------------------->
+
+		{% dnd_section 
+					padding={
+					'default':{
+					'top':120,
+					'bottom':120
+					},
+					'mobile':{
+					'top':60,
+					'bottom':60
+					}
+					}
+		%}
+			{% dnd_column offset=0, width=6,  
+					padding={
+					'default':{
+					'right':16
+					},
+					'mobile':{
+					'right':0
+					}
+					}
+			%}
+				{% dnd_row %}
+								{% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true,
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+								 {
+								 check_to_show_background_color_of_card:true,
+								 add_card_color_here:{
+										 color:"#fff"
+								 },
+								 check_to_show_all_text_white:false,
+								 check_to_show_image_background_image_here:false,
+								 check_to_show_heading:true,
+								 select_heading : "3",
+								 add_heading_here:"Heading Text",
+								 check_to_show_description:true,
+								 add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+								 check_to_show_email_option:false,
+								 check_to_show_call_to_action:true,
+								 cta_group:{
+								 choose_type_of_cta:"primary-cta",
+							   primary_cta_group:{
+								 choose_style_of_cta:"solid-cta",
+								 add_cta_link_here:{
+								 'url':{
+								 'href':"https://www.google.com/"
+								 }
+								 },
+								 add_cta_text_here:"Call to Action"
+								 }
+								 }
+								 },
+								 style={
+												 'check_to_show_padding':true,
+												 'cards_spacing':{
+												 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+												 'top':{
+												 'value':40
+												 },
+												 'bottom':{
+												 'value':40
+												 },
+												 'left':{
+												 'value':40
+												 },
+												 'right':{
+												 'value':40
+												 }
+												 }
+												 },
+												 'adjust_spacing_in_tab_view':{
+												 'padding':{
+												 'top':{
+												 'value':40
+									 			 },
+												 'bottom':{
+												 'value':40
+												 },
+												 'left':{
+												 'value':40
+												 },
+												 'right':{
+												 'value':40
+												 }
+												 }											 
+												 },
+												 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+												 'top':{
+												 'value':30
+												 },
+												 'bottom':{
+												 'value':40
+												 },
+												 'left':{
+												 'value':30
+												 },
+												 'right':{
+												 'value':30
+												 }
+												 }														 
+												 }
+												 },
+												 'check_to_show_border_on_cards':true,
+												 'card_border':{
+												 'add_border_here':{
+												 "top": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "bottom": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "left": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "right": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 }
+												 }
+												 },
+												 'alignment':{
+												 'horizontal_align':'CENTER'
+												 },
+												 'add_spacing_here':{
+												 'margin':{
+												 'top':{
+												 'value':0
+												 }
+												 }
+								         }
+								 }
+								%}
+								{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+     {% dnd_column offset=6, width=6,
+										 padding={
+										 'default':{
+										 'left':16,
+										 'top':0
+										 },
+										 'mobile':{
+										 'top':20,
+										 'left':0
+										 }
+										 }
+			%}
+				{% dnd_row %}
+								{% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true,
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+								 {
+								 check_to_show_background_color_of_card:true,
+								 add_card_color_here:{
+										 color:"#101a29"
+								 },
+								 check_to_show_all_text_white:true,
+								 check_to_show_image_background_image_here:false,
+								 check_to_show_heading:true,
+								 select_heading : "3",
+								 add_heading_here:"Heading Text",
+								 check_to_show_description:true,
+								 add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+								 check_to_show_email_option:false,
+								 check_to_show_call_to_action:true,
+								 cta_group:{
+								 choose_type_of_cta:"primary-cta",
+							   primary_cta_group:{
+								 choose_style_of_cta:"solid-cta",
+								 add_cta_link_here:{
+								 'url':{
+								 'href':"https://www.google.com/"
+								 }
+								 },
+								 add_cta_text_here:"Call to Action"
+							 	 }
+								 }
+								 },
+								 style={
+												 'check_to_show_padding':true,
+												 'cards_spacing':{
+												 'adjust_spacing_in_desktop_view':{
+												 'padding':{
+												 'top':{
+												 'value':40
+												 },
+												 'bottom':{
+												 'value':40
+												 },
+												 'left':{
+												 'value':40
+												 },
+												 'right':{
+												 'value':40
+												 }
+												 }
+												 },
+												 'adjust_spacing_in_tab_view':{
+												 'padding':{
+												 'top':{
+												 'value':40
+												 },
+												 'bottom':{
+												 'value':40
+												 },
+												 'left':{
+												 'value':40
+												 },
+												 'right':{
+												 'value':40
+												 }
+												 }											 
+												 },
+												 'adjust_spacing_in_mobile_view':{
+												 'padding':{
+												 'top':{
+												 'value':30
+												 },
+												 'bottom':{
+												 'value':40
+												 },
+												 'left':{
+												 'value':30
+												 },
+												 'right':{
+												 'value':30
+												 }
+												 }														 
+												 }
+												 },
+												 'check_to_show_border_on_cards':true,
+												 'card_border':{
+												 'add_border_here':{
+												 "top": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "bottom": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "left": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 },
+												 "right": {
+												 "width": { "value": 1, "units": "px" },
+												 "opacity": 100,
+												 "style": "solid",
+												 "color": "#e2e2e2"
+												 }
+												 }
+											   },
+												 'alignment':{
+												 'horizontal_align':'CENTER'
+												 },
+												 'add_spacing_here':{
+												 'margin':{
+												 'top':{
+												 'value':"0"
+												 }
+												 }
+												 }
+								 }
+								%}
+								{% end_dnd_module %}
+				{% end_dnd_row %}
+			{% end_dnd_column %}
+		{% end_dnd_section %}
+
+<!------------------------------ Thank you 2 Two cards section end here ------------------------>
+
+
+  {% end_dnd_area %}
+{% endblock body %} 

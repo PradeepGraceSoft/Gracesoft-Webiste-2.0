@@ -1,0 +1,21 @@
+{% import "../_variables.css" as var %}
+
+.numbers__number {
+  margin-bottom: 3.89rem;
+  color: {{ var.accent }};
+  font-family: {{ var.ui_font_family }};
+  font-weight: {{ var.ui_font_weight }};
+  font-style: {{ var.ui_font_style }};
+  font-size: 3.5rem;
+  line-height: 1.05;
+}
+
+.numbers--dark-no-accent .numbers__number {
+  color: {{ var.white }};
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .numbers__number {
+    margin-bottom: 2rem;
+  }
+}

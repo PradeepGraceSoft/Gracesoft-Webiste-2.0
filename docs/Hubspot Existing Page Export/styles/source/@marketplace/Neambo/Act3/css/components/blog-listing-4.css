@@ -1,0 +1,107 @@
+{% import "../_variables.css" as var %}
+
+.blog-listing-4__post + .blog-listing-4__post {
+  margin-top: {{ var.gutter * 3 }}px;
+}
+
+.blog-listing-4__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-listing-4__title a:hover {
+  text-decoration: underline;
+}
+
+.blog-listing-4__img {
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.blog-listing-4--float-img .blog-listing-4__img {
+  float: right;
+  margin-inline-start: 1rem;
+  margin-bottom: 1rem;
+  max-width: 40%;
+}
+
+{% if var.rtl_ready %}
+  [dir="rtl"] .blog-listing-4--float-img .blog-listing-4__img {
+    float: left;
+  }
+{% endif %}
+
+.blog-listing-4__img img {
+  width: 100%;
+  border-radius: {{ var.radius_7 }};
+}
+
+.blog-listing-4__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: .56rem 0;
+  border-top: 1px solid {{ var.borders_color }};
+  border-bottom: 1px solid {{ var.borders_color }};
+  line-height: 1.33rem;
+}
+
+.blog-listing-4__tags-label,
+.blog-listing-4__tag {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: .28rem;
+  margin-bottom: .28rem;
+  margin-inline-end: 1.11rem;
+}
+
+.blog-listing-4__tags-label {
+  color: {{ var.dark }}; 
+}
+
+.blog-listing-4__tag {
+  color: inherit;
+  text-decoration: none;
+  padding-inline-end: 1.11rem;
+  border-inline-end: 1px solid {{ var.borders_color }};
+}
+
+.blog-listing-4__tag:last-child {
+  margin-inline-end: 0;
+  padding-inline-end: 0;
+  border-inline-end: 0;
+}
+
+.blog-listing-4__tag:hover {
+  color: {{ var.dark }};
+  text-decoration: none;
+}
+
+.blog-load-more,
+.blog-pagination {
+  margin-top: {{ var.gutter * 3 }}px;
+}
+
+.blog-pagination__item--disabled {
+  display: none;
+}
+
+@media (min-width: {{ var.md + 1 }}px) {
+  .blog-listing-4--with-sidebar .blog-listing-4__content {
+    padding-inline-end: {{ var.gutter * 2 }}px;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  
+  .blog-listing-4--float-img .blog-listing-4__img {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: {{ var.xs }}px) {
+  .blog-listing-4--float-img .blog-listing-4__img {
+    float: none;
+    margin-inline-start: 0;
+    max-width: 100%;
+  }
+}

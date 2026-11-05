@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "animations": [
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce"
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "animations": [
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce"
+    ],
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "animations": [
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce",
+      "operations-icon-bounce"
+    ],
+    "overflow": false
+  }
+]

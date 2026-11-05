@@ -1,0 +1,139 @@
+{% import "../_variables.css" as var %}
+
+/* Containers */
+
+.multi-address {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: {{ var.accent_bg }};
+}
+
+.multi-address__maps,
+.multi-address__offices {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.multi-address__offices {
+  padding-top: {{ var.vspace_lg }}px;
+  padding-bottom: {{ var.vspace_lg }}px;
+  padding-inline-start: {{ var.vspace_lg }}px;
+  padding-inline-end: {{ var.gutter }}px;
+}
+
+.multi-address__offices-inner {
+  max-width: 530px;
+}
+
+/* Map */
+
+.multi-address__map {
+  display: none;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.multi-address__map--active {
+  display: flex;
+}
+
+.multi-address--active .multi-address__map--active {
+  animation: .2s ease-in-out forwards fadeIn;
+}
+
+.multi-address__map > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* Office */
+
+.multi-address__intro {
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.multi-address__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.multi-address__office {
+  width: calc(50% - {{ var.gutter / 2 }}px);
+  margin-bottom: {{ var.gutter }}px;
+  padding: {{ var.gutter }}px;
+  background: {{ var.white }};
+  border-radius: {{ var.radius_7 }};
+  cursor: pointer;
+  transition: transform .2s ease-in-out;
+}
+
+.multi-address__office:nth-child(odd) {
+  margin-inline-end: {{ var.gutter / 2 }}px;
+}
+
+.multi-address__office:nth-child(even) {
+  margin-inline-start: {{ var.gutter / 2 }}px;
+}
+
+.multi-address__office:hover {
+  transform: scale(1.05);
+}
+
+.multi-address__office--active {
+  background: {{ var.white_bg }};
+}
+
+.multi-address__office-title {
+  margin-bottom: .56rem;
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.md }}px) {
+  .multi-address {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .multi-address__maps,
+  .multi-address__offices {
+    width: 100%;
+  }
+  
+  .multi-address__maps {
+    order: 2;
+  }
+  
+  .multi-address__offices {
+    order: 1;
+    padding-inline-start: {{ var.gutter }}px;
+    padding-inline-end: {{ var.gutter }}px;
+  }
+  
+  .multi-address__offices-inner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .multi-address__map,
+  .multi-address__map > * {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .multi-address__office {
+    width: 100%;
+  }
+
+  .multi-address__office:nth-child(odd) {
+    margin-inline-end: 0;
+  }
+
+  .multi-address__office:nth-child(even) {
+    margin-inline-start: 0;
+  }
+}

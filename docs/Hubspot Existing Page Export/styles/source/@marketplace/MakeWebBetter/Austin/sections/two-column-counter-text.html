@@ -1,0 +1,118 @@
+<!--
+templateType: section
+label: Two Column Counter Text
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/two-column-counter-text.png
+description: "Two column section with a side-heading and counter."
+-->
+
+{% dnd_section
+  vertical_alignment='MIDDLE',
+  class="au-tab-full-width"
+%}
+{% dnd_column 
+  offset=0,
+  width=6
+%}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Our Events Include</h2>"
+        style_1 : {
+            'max_width':{ 
+            enable: true,
+            value: 300 
+            }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+
+{% dnd_column 
+  offset=6,
+  width=6 %}
+{% dnd_row %}
+{% dnd_module
+  path='../modules/counter' 
+      counter_repeater = [
+     {
+      "image_or_icon_settings": {
+        "icon_image_selection": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/clock-outlined.svg'),
+          "alt": "social"
+        }
+        },
+      'counter_value': '500',
+      'counter_unit': '',
+      'counter_text': 'Relay Races'
+    },
+    {
+     "image_or_icon_settings": {
+        "icon_image_selection": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/clock-outlined.svg'),
+          "alt": "social"
+        }
+        },
+      'counter_value': '200',
+      'counter_unit': '',
+      'counter_text': 'Kick The Can'
+    },
+    {
+     "image_or_icon_settings": {
+        "icon_image_selection": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/clock-outlined.svg'),
+          "alt": "social"
+        }
+        },
+      'counter_value': '528',
+      'counter_unit': '',
+      'counter_text': 'Parachute Games'
+    },
+    {
+     "image_or_icon_settings": {
+        "icon_image_selection": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/clock-outlined.svg'),
+          "alt": "social"
+        }
+        },
+      'counter_value': '426',
+      'counter_unit': '',
+      'counter_text': 'Sports Game'
+    }
+   ]
+%}
+{% module_attribute 'counter_layouts' is_json=True %}
+{
+"counter_layout_choice": "compact_layout"
+}
+{% end_module_attribute %}
+{% module_attribute 'column_count_choice' is_json=True %}
+{
+"column_count": "two_column"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

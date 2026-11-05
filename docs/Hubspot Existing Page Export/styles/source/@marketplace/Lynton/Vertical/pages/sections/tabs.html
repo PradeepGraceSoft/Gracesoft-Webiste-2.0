@@ -1,0 +1,11 @@
+<!--
+  templateType: section
+  label: Tabs
+  description: "Tabbable content section."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/tabs.png
+-->
+
+{% dnd_section padding={{ context.padding || "{'top': 60, 'bottom': 60}" }}, background_image={{ context.bg_image || null }} %}
+  {% dnd_module path="../modules/Tabbed Content" %}{% end_dnd_module %}
+{% end_dnd_section %}

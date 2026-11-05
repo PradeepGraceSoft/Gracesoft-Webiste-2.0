@@ -1,0 +1,212 @@
+[
+  {
+    "name": "logo",
+    "label": "GraceSoft logo",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "GraceSoft",
+      "size_type": "auto"
+    }
+  },
+  {
+    "name": "home_url",
+    "label": "Home URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "menu_label",
+    "label": "Mobile menu label",
+    "type": "text",
+    "default": "Menu"
+  },
+  {
+    "name": "product_label",
+    "label": "Product menu label",
+    "type": "text",
+    "default": "Platform"
+  },
+  {
+    "name": "property_label",
+    "label": "Property navigation label",
+    "type": "text",
+    "default": "Who it’s for"
+  },
+  {
+    "name": "resources_label",
+    "label": "Resources label",
+    "type": "text",
+    "default": "Insights"
+  },
+  {
+    "name": "pricing_label",
+    "label": "Pricing label",
+    "type": "text",
+    "default": "Pricing"
+  },
+  {
+    "name": "pricing_url",
+    "label": "Pricing URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/pricing",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "login_label",
+    "label": "Login label",
+    "type": "text",
+    "default": "Login"
+  },
+  {
+    "name": "login_url",
+    "label": "Login URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://apps.gracesoft.com/pmsui/",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "demo_label",
+    "label": "Primary action",
+    "type": "text",
+    "default": "Book a demo"
+  },
+  {
+    "name": "demo_url",
+    "label": "Demo URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/livedemo",
+      "type": "EXTERNAL"
+    }
+  },
+  {
+    "name": "products",
+    "label": "Product navigation",
+    "type": "group",
+    "children": [
+      {
+        "name": "label",
+        "label": "Label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "url",
+        "label": "Destination",
+        "type": "url",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS"
+        ],
+        "default": {
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 9
+    },
+    "default": [
+      {
+        "label": "Property management",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Booking engine",
+        "url": {
+          "href": "https://www.gracesoft.com/online-booking-engine",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Channel manager",
+        "url": {
+          "href": "https://www.gracesoft.com/channel-manager",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Housekeeping",
+        "url": {
+          "href": "https://www.gracesoft.com/housekeeping",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Payments",
+        "url": {
+          "href": "https://www.gracesoft.com/payments",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Point of sale",
+        "url": {
+          "href": "https://www.gracesoft.com/point-of-sale-system",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Guest CRM",
+        "url": {
+          "href": "https://www.gracesoft.com/crm-software",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Unified inbox",
+        "url": {
+          "href": "https://www.gracesoft.com/unified-inbox",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "AI voice & chat",
+        "url": {
+          "href": "https://www.gracesoft.com/gracesoft-ai",
+          "type": "EXTERNAL"
+        }
+      }
+    ]
+  }
+]

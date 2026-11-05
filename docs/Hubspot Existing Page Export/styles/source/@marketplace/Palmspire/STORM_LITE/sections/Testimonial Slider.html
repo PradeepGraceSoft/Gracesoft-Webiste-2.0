@@ -1,0 +1,244 @@
+<!--
+  templateType: section
+  label: Testimonial Slider
+  isAvailableForNewContent: true
+  screenshotPath: ../Images/Template Previews/Testimonial Slider.png
+  description: "Testimonial Slider"
+-->
+  {% dnd_section 
+	    padding={
+				'default':{
+				'top':130,
+				'bottom':90
+				},
+				'mobile':{
+				'top':60,
+				'bottom':60
+				}
+			},
+			background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+	%}
+    {% dnd_column offset=0, column=12 %}
+      {% dnd_row
+				 padding={
+					 'default':{
+					 'bottom': 20,
+					 'left': 0,
+					 'right': 0
+					 },
+					 'mobile':{
+					 'bottom': 20,
+					 'left': 0,
+					 'right': 0
+					 }
+				 }
+      %}
+          {% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+								add_custom_class_here="text-conta4",
+								choose_content_type="single-content",
+								single_column_group={
+								check_to_show_heading:false,
+								check_to_show_description:true,
+								add_description_here:"
+								<h2>Heading Text</h2>
+								<p> The headline and subheader tells us what you're offering, and the form header closes the deal. Over here you can explain why your offer is so great <a>offering.</a></p>",
+								check_to_show_contact_information:false,
+								check_to_show_cta:false,
+								choose_text_alignment:"align-center",
+								set_max_width_of_the_content:"770"
+							  },
+							  styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+												 'choose_background':"color",
+												 'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												 }
+										 },
+										 'border':{
+										  'add_border_here':{
+												"top": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+													},
+												"bottom": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+											  "left": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												},
+												"right": {
+													"width": { "value": 0, "units": "px" },
+													"opacity": 0,
+													"style": "solid",
+													"color": "#E6E6E6"
+												}
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+											'adjust_spacing_in_desktop_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_tab_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+											},
+											'adjust_spacing_in_mobile_view':{
+												'padding':{
+													'top':{
+														'value':0
+													},
+													'bottom':{
+														'value':0
+													},
+													'left':{
+														'value':0
+													},
+													'right':{
+														'value':0
+													}
+												}												
+										 }
+									}
+							 }
+				 %}
+				 {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+         {% dnd_module path='../modules/Testimonial_Slider', label="Testimonial Slider",
+					  add_custom_class_here="slider_sec",
+            choose_slider_type="simple_slider",
+						"choose_dots_type"="dots_type_2",
+						simple_slider_group=[
+						{
+					  add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Microsoft.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Boy.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/google.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Pinterest.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/asana-3.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Boy.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Youtube.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Harvest.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 3.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						}
+						],
+						slider_function_group={
+						want_dots:"true",
+						want_arrows:"false",
+						want_autoplay:"false",
+						want_centermode:"true",
+						want_variable_width:"true",
+						wanted_to_play_infinitely:"true",
+						slider_speed:"700",
+						slider_autoplay_speed:"1000",
+						no_of_slides_to_show:"3",
+						no_of_slides_to_scroll:"1"
+						}
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}

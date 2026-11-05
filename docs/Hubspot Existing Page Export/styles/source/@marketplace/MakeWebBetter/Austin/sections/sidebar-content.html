@@ -1,0 +1,348 @@
+<!--
+templateType: section
+label: Side-Bar Content
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/sidebar.png
+description: "Content with side-bar "
+-->
+
+{# side-bar content #}
+{% dnd_section
+  class="au-side-bar au-tab-full-width",
+  vertical_alignment='TOP'
+%}
+{% dnd_column 
+    offset=0,
+    width=3,
+%}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h6>About eBook</h6><p>First, a project is planned and its possible outputs are determined. In-base data tools or open-source libraries are utilized for building machine learning models by data scientists.</p>"
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row 
+  padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 10,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 10,
+      'left': 0
+    }
+  }
+  %}
+{% dnd_module 
+    path='../modules/social-follow', 
+     %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+    path='../modules/sidebar-menu', 
+    menu =[{
+        "text": "Home",        
+        },
+       {
+        "text": "About Us",        
+        },
+        {
+        "text": "Services",        
+        },
+        {
+        "text": "Product",        
+        },
+        {
+        "text": "Portfolio",        
+        },
+        {
+        "text": "Career",        
+        }
+        ]
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h6>Subscribe to newsletter</h6><p>When Schrödinger first discovered the correct laws of quantum mechanics, he wrote an equation which described the amplitude to find a particle in various places.</p>"
+    %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/form',
+    style= {
+      'form_spacing': {
+          'desktop': {
+            'spacing': {
+                    'padding': {
+                      'top': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            },
+            'mobile': {
+            'spacing_mobile_': {
+                    'padding': {
+                      'top': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            }
+        }
+    }
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "single_field_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% dnd_column 
+    offset=3,
+    width=9,
+%}
+{% dnd_row 
+   padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 40,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  }
+%}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h4>Connect With Us</h4><p>Often users require efficient tools, useful data and resources. They need APIs to assist with data profiling, data ingestion, or feature engineering. Before deploying models data scientists require a high level of accuracy in their models.</p>"
+      style_1={
+          'max_width':{ enable: true,value: 760 }
+        }
+    %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/form' 
+    style= {
+      'form_max_width': {enable: true, 'form_max_width': 700},
+        'form_spacing': {
+          'desktop': {
+            'spacing': {
+                    'padding': {
+                      'top': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            },
+            'mobile': {
+            'spacing_mobile_': {
+                    'padding': {
+                      'top': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            }
+        }
+      }
+    %}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "multiple_field_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row      
+padding={
+        'default': {
+          'top': 100,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 40,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+      %}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h2>Pre-order eBook From These Platforms</h2><p>Evaluation metrics and visualizations are generated by the model evaluation for various purposes which may include-measurement of model performance against the new data, and much more. </p>"
+    %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row 
+    horizontal_alignment='CENTER', 
+    padding= {
+      'default': {
+          'top': 65,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 40,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+    }
+  %}
+{% dnd_module 
+    path='../modules/card',
+    styles= {
+      'spacing': {top_spacing: 50, top_desktop_negative_spacing: 50 },
+      'alignment_choice': {'alignment':'left'} 
+    }
+     card=[{
+      "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Amazon Kindle",
+        "enable_content": True,
+        "description": "<p>Internal mechanics explanation of the machine learning models has not always been possible.</p>",
+        },{
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Google Play Store",
+        "enable_content": True,
+        "description": "<p>Getting a machine learning model and fixing it into the right process is a hard-working and difficult task.</p>",
+     },{
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Apple Books",
+        "enable_content": True,
+        "description": "<p>Also, deploying a model process can be made easier by utilizing the machine learning models.</p>",
+     },{
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Kobo",
+        "enable_content": True,
+        "description": "<p>Model deployment is not the end of the process. Model monitoring must be properly carried out.</p>",
+     }]
+    %}
+{% module_attribute 'card_layouts' is_json=True %}
+{
+"layouts": "card"
+}
+{% end_module_attribute %}
+{% module_attribute 'card_column' is_json=True %}
+{
+"column_choice": "two_column"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# end of side-bar content #}

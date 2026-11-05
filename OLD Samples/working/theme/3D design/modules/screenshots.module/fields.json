@@ -1,0 +1,91 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Label",
+    "type": "text",
+    "default": "A CLOSER LOOK"
+  },
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Your day, in view."
+  },
+  {
+    "name": "intro",
+    "label": "Introduction",
+    "type": "text",
+    "default": "Take a look inside Easy InnKeeping. Explore the reservation calendar and dashboard, then see your workflows in a personalized demo."
+  },
+  {
+    "name": "calendar",
+    "label": "Calendar screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "GraceSoft Easy InnKeeping reservation calendar showing room rows and bookings by date",
+      "size_type": "auto"
+    }
+  },
+  {
+    "name": "dashboard",
+    "label": "Dashboard screenshot",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "GraceSoft Easy InnKeeping dashboard with operational summaries and reservation information",
+      "size_type": "auto"
+    }
+  },
+  {
+    "name": "calendar_label",
+    "label": "Calendar label",
+    "type": "text",
+    "default": "Reservation calendar"
+  },
+  {
+    "name": "dashboard_label",
+    "label": "Dashboard label",
+    "type": "text",
+    "default": "Property dashboard"
+  },
+  {
+    "name": "caption",
+    "label": "Screenshot caption",
+    "type": "text",
+    "default": "Actual Easy InnKeeping product screens. Appearance and available features may vary by configuration."
+  },
+  {
+    "name": "zoom_label",
+    "label": "Zoom button label",
+    "type": "text",
+    "default": "Enlarge screenshot"
+  },
+  {
+    "name": "close_label",
+    "label": "Close button label",
+    "type": "text",
+    "default": "Close screenshot"
+  },
+  {
+    "name": "demo_label",
+    "label": "CTA",
+    "type": "text",
+    "default": "See it in a demo"
+  },
+  {
+    "name": "demo_url",
+    "label": "CTA URL",
+    "type": "url",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS"
+    ],
+    "default": {
+      "href": "https://www.gracesoft.com/livedemo",
+      "type": "EXTERNAL"
+    }
+  }
+]

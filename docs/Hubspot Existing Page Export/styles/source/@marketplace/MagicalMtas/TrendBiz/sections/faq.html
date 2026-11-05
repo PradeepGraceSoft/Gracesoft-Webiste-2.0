@@ -1,0 +1,108 @@
+<!--
+  templateType: section
+  label: Faq
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/faq.png
+  description: "Faq section separated in two columns."
+-->
+
+{# Feature Section Start #}
+  {% dnd_section max_width=1200, class="faq-area" %}
+     {% dnd_column %}
+
+        {% dnd_row %}
+          {% dnd_column width=6, offset=0 %}
+
+            {% dnd_row %}
+              {% dnd_column width=12, offset=0 %}
+                {% dnd_row %}
+                  {% dnd_module "module_166922085553259" path="../modules/Section Title", label="Section Title" 
+                      layout ='without-excerpt',
+                      section_subtitle = '<span>Why Choose Us</span>',
+                      section_title = '<h2>Why Most of The People <br> Choose TrendBiz?</h2>'
+                   %}
+                  {% end_dnd_module %} 
+                {% end_dnd_row %}
+              {% end_dnd_column %}
+            {% end_dnd_row %} 
+
+            {% dnd_row %}
+              {% dnd_column width=12, offset=0 %}
+                {% dnd_row %}
+                  {% dnd_module "module_16693897233821" path="../modules/Faq", label="Faq" 
+                    select_accrodion = 'faq-accordion',
+                    accordion_id = 'faq-accordion',
+                    faq_accordion_item = [
+                      { 
+                        'accordion_collapse_class': '',
+                        'faq_data_bs_target': '#collapseOne',
+                        'aria_expanded': 'true',
+                        'accordion_header_content': 'How do you answer for consulting?',
+                        'accordion_body_id': 'collapseOne',
+                        'accordion_active_class': 'show',
+                        'data_bs_parent_id': '#faq-accordion',
+                        'accordion_body_content': '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt labore dolore magna aliqua enim ad minim veniam quis nostrud.</p>'
+                      },
+                      { 
+                        'accordion_collapse_class': 'collapsed',
+                        'faq_data_bs_target': '#collapseTwo',
+                        'aria_expanded': 'false',
+                        'accordion_header_content': 'Need business consalty to your company?',
+                        'accordion_body_id': 'collapseTwo',
+                        'accordion_active_class': '',
+                        'data_bs_parent_id': '#faq-accordion',
+                        'accordion_body_content': '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt labore dolore magna aliqua enim ad minim veniam quis nostrud.</p>'
+                      },
+                      { 
+                        'accordion_collapse_class': 'collapsed',
+                        'faq_data_bs_target': '#collapseThree',
+                        'aria_expanded': 'false',
+                        'accordion_header_content': 'How can i manage income tax?',
+                        'accordion_body_id': 'collapseThree',
+                        'accordion_active_class': '',
+                        'data_bs_parent_id': '#faq-accordion',
+                        'accordion_body_content': '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt labore dolore magna aliqua enim ad minim veniam quis nostrud.</p>'
+                      }
+                    ]
+                  %}
+                  {% end_dnd_module %}
+                {% end_dnd_row %}
+              {% end_dnd_column %}
+            {% end_dnd_row %} 
+
+          {% end_dnd_column %}
+
+          {% dnd_column width=6, offset=6 %}
+            {% dnd_row %}
+               {% dnd_module "module_16693908579885" path="../modules/Single Image", label="Single Image"  
+                  extra_class = 'faq-img',
+                  single_image = { 
+                    'alt': 'FAQ Image', 
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/faq/faq-img.png')   
+                  } 
+                %}
+                {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+            {% dnd_module "module_16693908579885" path="../modules/Single Image", label="Single Image" 
+               extra_class = 'faq-shape',
+               single_image = { 
+                 'alt': 'FAQ Shape Image', 
+                 'size_type': 'auto', 
+                  'src': get_asset_url('../images/faq/faq-shape.png')  
+               } 
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+
+     {% end_dnd_column %}
+  {% end_dnd_section %}
+{# Hero Slider Section End #}
+		
+		
+	

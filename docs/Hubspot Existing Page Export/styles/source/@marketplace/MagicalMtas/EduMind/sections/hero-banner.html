@@ -1,0 +1,113 @@
+<!--
+  templateType: section
+  label: Hero banner
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/hero-banner.png
+  description: "Hero Banner section separated in one column. This column has background image heading text button."
+-->
+
+{% dnd_section full_width=true,class="edumind-container hero-area" background_color={{ context.background_color || "#ffffff" }}, margin={
+'top': '0px',
+'bottom': '0px',
+'left': '0px',
+'right': '0px'
+},  padding={
+'top': '0px',
+'bottom': '0px',
+'left': '0px',
+'right': '0px'
+}
+%}
+  {% dnd_column %}
+    {% dnd_row %}
+        {% dnd_module "module_166758798705046" path="../modules/Hero Banner", label="Hero Banner"
+        banner_title = '<h1>The Best Program to Enroll for Exchange</h1>',
+        banner_excerpt = '<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>',
+        button_link = { 'url': { 'type': 'CONTENT', 'href': './home'},},
+        button_text = 'Find courses',
+
+        banner_gallery_item = [
+            {
+                'banner_image_class' : 'thumbnail-1',
+                'banner_gallery_image' : { 
+                        'alt': 'Banner Image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/slider-image/girl-4.png') 
+                    },
+            },
+            {
+                'banner_image_class' : 'thumbnail-2',
+                'banner_gallery_image' : { 
+                        'alt': 'Banner Image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/slider-image/girl-5.png') 
+                    },
+            },
+            {
+                'banner_image_class' : 'thumbnail-3',
+                'banner_gallery_image' : { 
+                        'alt': 'Banner Image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/slider-image/girl-6.png') 
+                    },
+            }
+        ],
+
+        online_support_subtitle = '<span>Online Support </span>',
+        online_support_number = '<h4>+012 (345) 6789</h4>',
+        scroll_button_link = { 'url': { 'type': 'CONTENT', 'href': './home'},},
+        shape_image_item = [
+            {
+                'shape_image_number_class' : 'shape-1',
+                'image_move_animation' : 'moving_parallax',
+                'animation_depth' : '2',
+                'shape_image' : { 
+                        'alt': 'Shape Image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/shape/shape-1.png') 
+                    },
+
+            },
+            {
+                'shape_image_number_class' : 'shape-2',
+                'image_move_animation' : 'moving_parallax',
+                'animation_depth' : '2',
+                'shape_image' : { 
+                        'alt': 'Shape Image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/shape/shape-2.png') 
+                    },
+
+            },
+            {
+                'shape_image_number_class' : 'shape-3',
+                'image_move_animation' : 'moving_parallax',
+                'animation_depth' : '2',
+                'shape_image' : { 
+                        'alt': 'Shape Image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/shape/shape-3.png') 
+                    },
+
+            },
+            {
+                'shape_image_number_class' : 'shape-4',
+                'image_move_animation' : 'moving_parallax',
+                'animation_depth' : '2',
+                'shape_image' : { 
+                        'alt': 'Shape Image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/shape/shape-4.png') 
+                    },
+
+            }
+        ]
+
+        
+        %}
+
+        {% end_dnd_module %}
+    {% end_dnd_row %}
+   {% end_dnd_column %}
+
+{% end_dnd_section %}

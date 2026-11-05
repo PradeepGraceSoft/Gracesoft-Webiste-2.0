@@ -1,0 +1,76 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/template-previews/home.jpg
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  {% dnd_area "dnd_area"
+    label="Main section",
+    class="body-container body-container--home p-0" 
+  %} 
+
+  {# Hero Slider Section Start #}  
+  {% include_dnd_partial path='../sections/hero-slider.html' %}
+  {# Hero Slider Section End #}  
+
+  {# Feature Section Start #}  
+  {% include_dnd_partial path='../sections/feature.html' %}
+  {# Feature Section End #}  
+
+  {# About Section Start #}  
+  {% include_dnd_partial path='../sections/about.html' %}
+  {# About Section End #} 
+
+  {# Service Section Start #}  
+  {% include_dnd_partial path='../sections/service.html' %}
+  {# Service Section End #}
+
+  {# Video Section Start #}  
+  {% include_dnd_partial path='../sections/video.html' %}
+  {# Video Section End #}
+
+  {# Faq Section Start #}  
+  {% include_dnd_partial path='../sections/faq.html' %}
+  {# Faq Section End #}
+
+  {# Team Section Start #}  
+  {% include_dnd_partial path='../sections/team.html' %}
+  {# Team Section End #}
+
+  {# Project Section Start #}  
+  {% include_dnd_partial path='../sections/project.html' %}
+  {# Project Section End #}
+
+  {# Testimonial Section Start #}   
+  {% include_dnd_partial path='../sections/testimonial.html' %}
+  {# Testimonial Section End #} 
+
+  {# Funfact Section Start #}   
+  {% include_dnd_partial path='../sections/funfact.html' %}
+  {# Funfact Section End #} 
+
+  {# Blog Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_166937122508224" path="../modules/Blog", label="Blog"
+    blog_layout = 'with-title',
+    section_subtitle = '<span>Latest Articles</span>',
+    section_title = '<h2>What’s New in Business <br> Area to Know</h2>'
+    
+
+
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Blog Section End #}
+
+  {# Newsletter Section Start #}   
+  {% include_dnd_partial path='../sections/newsletter.html' %}
+  {# Newsletter Section End #} 
+
+
+  
+  {% end_dnd_area %} 
+{% endblock body %}

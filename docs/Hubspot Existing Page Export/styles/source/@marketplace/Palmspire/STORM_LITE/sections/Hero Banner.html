@@ -1,0 +1,219 @@
+<!--
+  templateType: section
+  label: Hero Banner
+  isAvailableForNewContent: true
+  screenshotPath: ../Images/Page Preview/Hero Banner.png
+  description: "Full size section separated in two columns. Left column has heading and text and right column has a Imagee."
+-->
+
+    {% dnd_section
+				vertical_alignment='MIDDLE',
+					padding={
+					'default':{
+					'top': 114,
+					'bottom': 99 
+					},
+					'mobile':{
+					'top': 60,
+					'bottom': 60
+					} 
+				 },
+				 margin={
+					'default':{
+					'top': 125
+					},
+					'mobile':{
+					'top': 0
+					}
+				}
+      %}
+         {% dnd_column offset=0, width=6 %}
+          {% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text"
+						add_custom_class_here="content-text",
+						choose_content_type="single-content",
+						single_column_group={
+						check_to_show_heading:true,
+						choose_heading:"1",
+						add_heading_here:"Add two lines<br> of Heading Text",
+						check_to_show_description:true,
+						add_description_here:"<p>No coding required, Clean, Easily editable, design and developed by team of Hubspot certified Marketers, designers and programmers.</p>",
+						check_to_show_contact_information:false,
+						check_to_show_cta:false,
+						choose_text_alignment:"align-left",
+						set_max_width_of_the_content:"460"
+					 },
+					 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+												'color':"#fff",
+												'opacity':0
+										 }
+								 },
+								 'border':{
+								 'add_border_here':{
+															"top": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "bottom": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "left": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 },
+															 "right": {
+																 "width": { "value": 0, "units": "px" },
+																 "opacity": 0,
+																 "style": "solid",
+																 "color": "#E6E6E6"
+															 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+													 'adjust_spacing_in_desktop_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}												
+												},
+												'adjust_spacing_in_tab_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												},
+												'adjust_spacing_in_mobile_view':{
+																									'padding':{
+																										'top':{
+																										'value':0
+																										},
+																									 'bottom':{
+																										'value':0
+																										},
+																										'left':{
+																										'value':0
+																										},
+																										'right':{
+																										'value':0
+																										}
+																									}											
+												}
+								 }
+					 }
+					%}
+					{% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row,
+         padding={
+           'default':{
+           'top': 25
+           },
+           'mobile':{
+           'top': 15
+           }
+         }
+      %}
+         {% dnd_module path='../modules/Buttons', label="Buttons"
+						 choose_number_of_cta="double",
+						 first_cta_group={
+						 choose_type_of_cta:"primary-cta",
+						 primary_cta_group:{
+						 choose_style_of_cta:"solid-cta"
+						 }
+						 },
+						 second_cta_group={
+						 choose_type_of_cta:"video-cta",
+						 video_cta_group:{
+						 choose_style_of_cta:"transparent-cta",
+						 choose_video_type:"wistia",
+						 add_wistia_video_id:"pukozq6xf0",
+						 add_video_title_here:"Watch video",
+						 add_play_icon_here:{
+						 'src': get_asset_url('../Images/Resized Image/Play Icon Black.svg'),
+						 'width':auto,
+						 'height':auto
+						 }
+						 }
+						 },
+						 styles={
+                'alignment_field':{
+                'horizontal_align' : 'LEFT'
+                },
+				        'single_cta_alignment':{
+						    'horizontal_align' : 'LEFT'
+						    }
+             }
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+   {% dnd_column offset=6 , width=6,
+	   padding={
+		 'default':{
+		 'top':0
+		 },
+		 'mobile':{
+		 'top':30
+		 }
+		 }
+	 %}
+      {% dnd_row %}
+						{% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image_Video_With_Before_Image"
+						 choose_between_image_and_video="image",
+						 image_group={
+						 add_custom_class_here:"image-1",
+						 add_image_here:{
+						 'alt':'Drag & drop',
+						 'src': get_asset_url('../Images/Column Images/Laptop-on-table.png'),
+						 'width':'531',
+						 'height':'498'
+						 },
+						 add_max_width_here:"528",
+						 check_to_show_box_shadow_to_image:false,
+						 set_max_width_in_responsive:"100"
+						 },
+						 check_to_add_vector_image=false,
+						 style={
+						 'check_to_show_spacing_for_section':false,
+						 'check_to_show_border_radius':true,
+						 'add_border_radius':'4',
+						 'set_alignment_for_image':"align-right"
+						 }
+					 %}
+					 {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}

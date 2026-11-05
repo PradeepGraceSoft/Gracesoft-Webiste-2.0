@@ -1,0 +1,188 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Thank You One
+screenshotPath: ../images/template-previews/thank-one.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+{% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+   label='Main section',
+   class='body-container body-container--thankyou-one'
+%}
+
+{# Thank You Banner Section #}
+{% dnd_section
+  vertical_alignment='MIDDLE',
+%}
+{% dnd_column %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 50,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+      }
+%}
+{% dnd_module
+  horizontal_alignment="CENTER",
+   path='../modules/image'
+   "image"= {
+     "src": get_asset_url('../images/multipurpose/thankyou-one.png'),
+     "alt": "thankyou-img"
+   },
+ %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor arcu leo fringilla tempus felis magna. Egestas ac, nibh leo semper. Mi, mauris sagittis quis faucibus iaculis est condimentum nunc lectus. Duis ipsum diam euismod et amet id massa facilisi vestibulum. Non hendrerit in ultrices pharetra tincidunt. In at scelerisque purus suspendisse etiam viverra fermentum. Tempus ut dictum porttitor egestas nunc.</p>"
+        primary_cta={ type: 'btn', style: 'filled_light', text: 'Downloads' }
+        secondary_cta={ type: 'none', style: '', text: '' }
+          style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End Of Thank You Banner Section #}
+
+{# Spacer #}
+{% dnd_section
+full_width=true,
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+			%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{# Subscription Form Seciton #}
+{% dnd_section 
+   max_width= 650 
+ %}
+{% dnd_column %}
+{% dnd_row 
+   padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h2>Subscribe to our newsletter</h2><p>If you need any assistance from me, please feel free to contact me.</p>",
+       style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+    %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/form',
+    style= {
+      'input_fields': {
+        'box_shadow': {
+          enable: true,
+        }
+      }
+    }
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "single_field_inline_button"
+}
+{% end_module_attribute %}
+
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{#  End of Subscription Form Section #}
+
+{# Spacer #}
+{% dnd_section
+full_width=true,
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_module 'au_spacer' 
+				path='../modules/spacer',
+			%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+{# End of Spacer #}
+
+{% end_dnd_area %}
+{% endblock body %}
+
+{% block footer %}
+{% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

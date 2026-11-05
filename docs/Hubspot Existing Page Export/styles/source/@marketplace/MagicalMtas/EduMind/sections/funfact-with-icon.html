@@ -1,0 +1,112 @@
+<!--
+  templateType: section
+  label: Funfact With Icon
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/funfact-with-icon.png
+  description: "Funfact section separated in four columns."
+-->
+{% dnd_section max_width=1200, class="funfact-with-icon-area" %} 
+
+  {% dnd_column %}
+    {% dnd_row %}
+
+      {% dnd_column width=3, offset=0 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754420372817" path="../modules/Funfact", label="Funfact" 
+            layout = 'funfact-with-icon',
+            extra_class = '',
+            section_shape = { 
+              'alt': 'Funfact Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/funfact/funfact-1.svg')  
+            }
+            funfect_number = '29.3',
+            funfect_number_extension = '<span>K</span>',
+            funfact_title = '<h3>Student Enrolled</h3>'
+          %}
+        {% end_dnd_module %} 
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=3, offset=3 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754420372817" path="../modules/Funfact", label="Funfact"  
+            layout = 'funfact-with-icon',
+            extra_class = '',
+            section_shape = { 
+              'alt': 'Funfact Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/funfact/funfact-1.svg')  
+            }
+            funfect_number = '32.4',
+            funfect_number_extension = '<span>K</span>',
+            funfact_title = '<h3>Class Completed</h3>'
+          %}
+        {% end_dnd_module %} 
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=3, offset=6 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754420372817" path="../modules/Funfact", label="Funfact" 
+            layout = 'funfact-with-icon',
+            extra_class = '',
+            section_shape = { 
+              'alt': 'Funfact Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/funfact/funfact-1.svg')  
+            }
+            funfect_number = '100.',
+            funfect_number_extension = '<span>%</span>',
+            funfact_title = '<h3>Satisfaction Rate</h3>'
+          %}
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+
+      {% dnd_column width=3, offset=9 %}
+        {% dnd_row  margin={
+          'top': '0px',
+          'bottom': '30px',
+          'left': '0px',
+          'right': '0px'
+          }
+        %}
+          {% dnd_module "module_166754420372817" path="../modules/Funfact", label="Funfact" 
+            layout = 'funfact-with-icon',
+            extra_class = '',
+            section_shape = { 
+              'alt': 'Funfact Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/funfact/funfact-1.svg')  
+            }
+            funfect_number = '355.',
+            funfect_number_extension = '<span>+</span>',
+            funfact_title = '<h3>Top Instructors</h3>'
+          %}
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+    {% end_dnd_row %} 
+  {% end_dnd_column %}
+{% end_dnd_section %}

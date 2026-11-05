@@ -1,0 +1,125 @@
+{% import "../_variables.css" as var %}
+
+.scroll-to {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  transition: background .1s ease-in-out, border-color .1s ease-in-out, color .1s ease-in-out, transform .2s ease-in-out;
+}
+
+.scroll-to--bottom {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.scroll-to:hover {
+  transform: scale(1.1);
+}
+
+.scroll-to__arrow {
+  width: 10px;
+  line-height: 0;
+}
+
+.scroll-to__arrow svg {
+  vertical-align: top;
+  margin-top: 2px;
+  fill: currentColor;
+}
+
+/* Outline */
+
+.scroll-to--outline {
+  border: 2px solid;
+}
+
+.scroll-to--outline:hover {
+  border: 0;
+}
+
+/* Accent */
+
+.scroll-to--accent.scroll-to--outline {
+  border-color: {{ var.accent }};
+  color: {{ var.accent }};
+}
+
+.scroll-to--accent.scroll-to--fill,
+.scroll-to--accent.scroll-to--outline:hover {
+  background: {{ var.accent_bg }};
+  color: {{ var.white }};
+}
+
+/* Dark */
+
+.scroll-to--dark.scroll-to--outline {
+  border-color: {{ var.dark }};
+  color: {{ var.dark }};
+}
+
+.scroll-to--dark.scroll-to--fill,
+.scroll-to--dark.scroll-to--outline:hover {
+  background: {{ var.dark }};
+  color: {{ var.white }};
+}
+
+/* Light */
+
+.scroll-to--light.scroll-to--outline {
+  border-color: {{ var.borders_color }};
+  color: {{ var.dark }};
+}
+
+.scroll-to--light.scroll-to--fill,
+.scroll-to--light.scroll-to--outline:hover {
+  background: {{ var.light }};
+  color: {{ var.dark }};
+}
+
+/* White */
+
+.scroll-to--white.scroll-to--outline {
+  border-color: {{ var.white }};
+  color: {{ var.white }};
+}
+
+.scroll-to--white.scroll-to--fill,
+.scroll-to--white.scroll-to--outline:hover {
+  background: {{ var.white }};
+  color: {{ var.dark }};
+}
+
+/* White with accent */
+
+.scroll-to--white-accent.scroll-to--outline {
+  border-color: {{ var.white }};
+  color: {{ var.accent }};
+}
+
+.scroll-to--white-accent.scroll-to--fill,
+.scroll-to--white-accent.scroll-to--outline:hover {
+  background: {{ var.white }};
+  color: {{ var.accent }};
+}
+
+/* Ghost */
+
+.scroll-to--ghost.scroll-to--outline {
+  border-color: {{ var.white_borders }};
+  color: {{ var.white }};
+}
+
+.scroll-to--ghost.scroll-to--fill,
+.scroll-to--ghost.scroll-to--outline:hover {
+  background: {{ var.white_bg }};
+  color: {{ var.white }};
+  {% if theme.miscellaneous.ghost_blur %}
+    -webkit-backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+    backdrop-filter: blur({{ theme.miscellaneous.ghost_blur_amount|default(24) }}px);
+  {% endif %}
+}

@@ -1,0 +1,70 @@
+<!--
+  templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- use only when the page has forms in the webpage -->
+ 
+    <link rel="preconnect" href="https://cdn2.hubspot.net">
+    <link rel="preconnect" href="https://static.hsappstatic.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">    
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">   
+    
+    
+    {% if page_meta.html_title %}<title>{{ page_meta.html_title }}</title>{% endif %}
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    {% if template_css %}
+      {{ require_css(get_asset_url(template_css), { async: true }) }}
+    {% endif %}
+    {{ require_css(get_asset_url('../../css/library.min.css'), { async: true }) }}
+    {{ require_css(get_asset_url('../../css/main.css')) }}
+    {{ require_css(get_asset_url("../../css/theme-overrides.css")) }}
+    
+    {{ standard_header_includes }}
+  </head>
+  <body>
+    <div class="body-wrapper {{ builtin_body_classes }}">
+      {% block header %}
+        {% global_partial path='../partials/header.html' %}
+      {% endblock header %}
+      
+      <main id="main-content" class="body-container-wrapper">
+      {% block body %}
+      {% endblock body %}
+      </main>
+      
+      {% block footer %}
+       {% global_partial path='../partials/footer.html' %}
+      {% endblock footer %}
+    </div>
+    <script>
+      Array.from(document.getElementsByClassName("hs-menu-wrapper")).forEach(
+        function (element) {
+          element.classList.remove("hs-menu-wrapper");
+        }
+      );
+    </script>
+    {{ standard_footer_includes }}
+    {{ require_js(get_asset_url('../../js/library.min.js'), { position: 'header', async: false, defer: false }) }}
+    <script>
+      // Passive event listeners
+        jQuery.event.special.touchstart = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+        jQuery.event.special.touchmove = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+
+    </script>
+    {{ require_js(get_asset_url('../../js/main.js'), { position: 'footer', async: true, defer: true }) }}
+    {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+  </body>
+</html>

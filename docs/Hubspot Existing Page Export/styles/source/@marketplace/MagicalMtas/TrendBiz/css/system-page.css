@@ -1,0 +1,326 @@
+
+.error-page {
+    text-align: center;
+  }
+  
+  .error-page h1 {
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  
+  .error-500-page h2 {
+    line-height: 1.3;
+    margin-bottom: 25px;  
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .error-500-page h2 {
+      margin-bottom: 20px; 
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .error-500-page h2 {
+      margin-bottom: 20px; 
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .error-500-page h2 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+  }
+  .error-page h2 {
+    margin: 0px 0 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    .error-page h2 {
+      font-size: 25px;
+    } 
+  }
+  
+  
+  
+ /* ======== Backup Unsubscribe CSS ========*/
+
+  .systems-page-width {
+    max-width: 670px; 
+    margin: auto;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .systems-page-width {
+      max-width: 600px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .systems-page-width {
+      max-width: 100%;
+    }
+  }
+
+ .page-header h1 {
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .page-header h1 {
+      font-size: 40px; 
+    }
+  }
+ @media only screen and (max-width: 767px) {
+   .page-header h1 {
+     font-size: 28px;
+   }
+ }
+
+  .backup-unsubscribe{
+   text-align: center;
+ }
+ .systems-page form {
+   border: 1px solid #fff;
+   background-color: #fff; 
+ }
+ .backup-unsubscribe .hs-input {
+     width: 100% !important;
+     font-size: 15px !important;
+     padding: 12px 24px !important; 
+     margin: 10px 0 20px; 
+     border-radius: 28px;
+     height: 56px !important;
+     font-size: var(--body-font-size);
+     border: 1px solid #e6e6e7;
+ }
+ .backup-unsubscribe .hs-input:focus {
+    border: 1px solid var(--primary-color);
+ }
+ 
+ .backup-unsubscribe .hs-button,  
+ .subscription-preferences .hs-button{
+   font-weight: 700;
+   text-transform: capitalize;
+   padding: 18px 37px;
+   line-height: 1;
+   font-size: var(--body-font-size);
+   background-color: var(--primary-color);
+   color: #ffffff;
+   cursor: pointer;
+   display: inline-block; 
+   text-align: center;
+   vertical-align: middle; 
+   border: 1px solid var(--primary-color);
+   border-radius: 28px; 
+   transition: all 0.3s ease-in-out;
+   letter-spacing: .5px;
+   width: auto;
+ }
+ 
+
+ .subscription-preferences .hs-button:hover {
+   background-color: var(--form-btn-hover-bg-color);
+	border: 1px solid var(--form-btn-hover-border-color);
+ }
+ 
+ 
+ /* ======== membership login CSS ========*/
+ .system-page-style {
+   margin: 0 auto;
+ }
+ .padding-modify.breadcrumb-padding {
+     padding: 110px 0 110px;
+ }
+ #hs-membership-form .hs-form-field label {
+     display: inline-block;
+ }
+ @media only screen and (min-width: 768px) and (max-width: 991px) {
+   .padding-modify.breadcrumb-padding {
+     padding: 80px 0 90px;
+   }
+ }
+ @media only screen and (max-width: 767px) {
+   .padding-modify.breadcrumb-padding {
+     padding: 60px 0 70px;
+   }
+ }
+ #hs_cos_wrapper_content_ {
+     text-align: center;
+ }
+ .system-page-style h1,
+ .system-page-style h2 {
+   line-height: 1.3;
+   margin: 0 0 15px;
+ }
+
+ @media only screen and (min-width: 768px) and (max-width: 991px) {
+   .system-page-style h1 {
+     font-size: 42px;
+   }
+ }
+ @media only screen and (max-width: 767px) {
+   .system-page-style h1,
+   .system-page-style h2 {
+     font-size: 25px;
+   }
+ }
+ .password-prompt h2 {
+   line-height: 1;
+   margin: 0 0 15px;
+ }
+ @media only screen and (min-width: 992px) and (max-width: 1199px) {
+   .password-prompt h2 {
+     font-size: 42px;
+   }
+ }
+ @media only screen and (min-width: 768px) and (max-width: 991px) {
+   .password-prompt h2 {
+     font-size: 42px;
+   }
+ }
+ @media only screen and (max-width: 767px) {
+   .password-prompt h2 {
+     font-size: 34px;
+   }
+ }
+ 
+ .system-page-style .form-container {
+   text-align: left;
+ }
+ 
+ .system-page-style .form-container label, 
+ .system-page-style .form-container label,
+ .password-prompt form label {
+  color: var(--base-color);
+ }
+ 
+ .system-page-style .form-container .hs-input, 
+ .system-page-style .form-container input,
+ .password-prompt form input {
+   width: 100%;
+   font-size: var(--body-font-size);
+   color: var(--base-color);
+   padding: 10px 20px !important;
+   margin-bottom: 0px;
+   background-color: #ffffff;
+   border: 1px solid #e6e6e7;
+   transition: all .3s ease 0s; 
+   border-radius: 28px;
+ }
+ .system-page-style .form-container .hs-input::-webkit-input-placeholder , 
+ .system-page-style .form-container input::-webkit-input-placeholder , 
+ .password-prompt form input::-webkit-input-placeholder , 
+ .system-page-style .form-container .hs-input::-moz-input-placeholder ,
+ .system-page-style .form-container input::-webkit-input-placeholder,
+ .password-prompt form input::-moz-input-placeholder {
+    color: #7c7c7c;
+    opacity: 1;
+ }
+ .system-page-style .form-container .hs-input:focus, .system-page-style .form-container input:focus{
+   border: 1px solid var(--primary-color);
+ }
+ .system-page-style .form-container input{
+   height: 56px !important;
+   margin-top: 10px;
+ }
+ .system-page-style .form-container .hs-input[type=checkbox]{
+   width: 20px !important;
+   height: 20px !important;
+   padding: 0 !important;
+   margin: 0 10px 0 0;
+   top: 3px;
+   position: relative;
+   float: left;
+ }
+ 
+ .system-page-style .form-container .hs-button,
+ .password-prompt form .hs-button {
+   font-weight: 700;
+   text-transform: capitalize;
+   padding: 15px 28px;  
+   line-height: 1;
+   background-color: var(--primary-color);
+   color: #ffffff;
+   cursor: pointer;
+   display: inline-block; 
+   text-align: center;
+   vertical-align: middle;
+   border: 1px solid var(--primary-color);
+   font-size: var(--body-font-size);
+   border-radius: 28px;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+ .system-page-style .form-container .hs-button:hover , 
+ .system-page-style .form-container .hs-button:focus {
+   background-color: var(--headings-color);
+   border: 1px solid var(--headings-color);
+ }
+
+ 
+ .systems-page--search-results, .subscription-preferences, .subscription-confirmation{
+   margin: auto;
+ }
+ .password-prompt{
+ margin-top: 20px;
+ text-align: center;
+ }
+ .subscribe-options p {
+ margin-bottom: 15px;
+ }
+ 
+
+ 
+ .password-prompt form input {
+   height: 56px !important; 
+   border: 1px solid #e6e6e7;
+ }
+ .password-prompt form input:focus {
+    border: 1px solid var(--primary-color);
+ }
+ .password-prompt form .hs-button {
+   padding: 17px 36px !important;
+   margin: 17px 0 0px;  
+   width: auto;
+   height: auto !important;
+ }
+ .password-prompt form .hs-button:hover , 
+ .password-prompt form .hs-button:focus {
+   border: 1px solid var(--headings-color);
+   background-color: var(--headings-color); 
+ }
+ .subscription-preferences .header {
+   margin: 10px 0 10px;
+   position: static;
+ }
+ .subscriptions-confirmation {
+   text-align: center;
+ } 
+ .subscriptions-confirmation .page-header h1 {
+   margin: 0;
+ } 
+ 
+ .subscriptions-confirmation .success {
+   color: var(--primary-color);
+   margin: 12px 0 0; 
+ }
+ 
+ .search-results {
+   text-align: center;
+ }
+ 
+ .search-results h2 {
+   margin: 0 0 0px;
+ }
+ 
+.item-inner .checkbox-row {
+    margin: 10px 0 10px;
+}
+
+.item-inner p {
+    margin: 0px 0 10px;
+}
+
+
+
+
+
+
+

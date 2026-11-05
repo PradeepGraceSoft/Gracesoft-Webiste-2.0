@@ -1,0 +1,268 @@
+<!--
+  templateType: global_partial
+  label: Header 1
+-->
+
+{# Optional elements #}
+{% boolean 'enable_header_search' label='Show search (apply and reload the page)', value=True, export_to_template_context=True %}
+{% boolean 'enable_header_lang' label='Show language selector (apply and reload the page)', value=True, export_to_template_context=True %}
+{% boolean 'enable_above_header' label='Enable Above header DnD area (please use with caution)', value=False, export_to_template_context=True %}
+
+{# Logo column width #}
+{% text 'logo_col_width_lg', label='Logo column width on large screens (possible values: 2, 3, 4, 5, 6)', value='3', export_to_template_context=True %}
+{% text 'logo_col_width_md', label='Logo column width on medium screens (possible values: 2, 3, 4, 5, 6)', value='3', export_to_template_context=True %}
+{% text 'logo_col_width_sm', label='Logo column width on small screens (possible values: 2, 3, 4, 5, 6)', value='4', export_to_template_context=True %}
+{% if widget_data.logo_col_width_lg.value|trim|int > 0 %}{% set logo_col_width_lg = widget_data.logo_col_width_lg.value|trim|int %}{% else %}{% set logo_col_width_lg = 3 %}{% endif %}
+{% if widget_data.logo_col_width_md.value|trim|int > 0 %}{% set logo_col_width_md = widget_data.logo_col_width_md.value|trim|int %}{% else %}{% set logo_col_width_md = 3 %}{% endif %}
+{% if widget_data.logo_col_width_sm.value|trim|int > 0 %}{% set logo_col_width_sm = widget_data.logo_col_width_sm.value|trim|int %}{% else %}{% set logo_col_width_sm = 4 %}{% endif %}
+
+{# Color scheme #}
+{% if theme.components.header.scheme == 'dark' %}
+  {% set header_color_scheme = 'dark' %}
+{% else %}
+  {% set header_color_scheme = 'light' %}
+{% endif %}
+
+<header class="header header--1 {% if header_overlap %}header--overlap{% endif %} {% if theme.components.header.sticky_header %}header--sticky{% endif %}{% if widget_data.enable_header_search.value %} header--w-search{% else %} header--wo-search{% endif %}{% if widget_data.enable_header_lang.value and (content.translated_content|length or group.translations|length) %} header--w-lang{% else %} header--wo-lang{% endif %} hs-search-hidden">
+  {% dnd_area 'above_header', label='Above the header', class='above-header' %}{% end_dnd_area %}
+  <div class="{% if theme.components.header.sticky_header %}header__sticky-wrapper{% endif %}">
+    <div class="{% if theme.components.header.sticky_header %}header__sticky-element{% endif %}">
+      <div class="header__section header__section--main section">
+        <div class="header__center container">
+          <div class="row items-center">
+            <div class="col s{{ logo_col_width_lg }} md-s{{ logo_col_width_md }} sm-s{{ logo_col_width_sm }} justify-center">
+              <div class="header__logo">
+                {%- if not header_overlap -%}
+                  <div class="header__logo__static">
+                    {%- module 'static_header_logo' path='@hubspot/logo' label='Static header logo'
+                      img={
+                        'override_inherited_src': true,
+                        'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/act3-logo-color.svg',
+                        'alt': 'Logo',
+                        'width': 52,
+                        'height': 48
+                      },
+                      link='/'
+                    -%}
+                  </div>
+                {%- endif -%}
+                {%- if header_overlap or header_overlap is not defined -%}
+                  <div class="header__logo__overlap">
+                    {%- module 'overlapping_header_logo' path='@hubspot/logo' label='Overlapping header logo'
+                      img={
+                        'override_inherited_src': true,
+                        'src': 'https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/act3-logo-white2.svg',
+                        'alt': 'Logo',
+                        'width': 52,
+                        'height': 48
+                      },
+                      link='/'
+                    -%}
+                  </div>
+                {%- endif -%}
+                {%- if theme.components.header.sticky_header -%}
+                  <div class="header__logo__sticky">
+                    {%- module 'sticky_header_logo' path='@hubspot/logo' label='Sticky header logo'
+                      img={
+                        'override_inherited_src': true,
+                        'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/act3-logo-color.svg',
+                        'alt': 'Logo',
+                        'width': 52,
+                        'height': 48,
+                        'loading': 'lazy'
+                      },
+                      link='/'
+                    -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+            <div class="col s{{ 12 - logo_col_width_lg }} md-s{{ 12 - logo_col_width_md }} sm-s{{ 12 - logo_col_width_sm }}">
+              <div class="flex flex-row items-center justify-end no-shrink wrap">
+                <div class="header__nav">
+                  {% module 'header_nav' path='../modules/nav', label='Navigation',
+                    settings={
+                      'color_scheme': header_color_scheme,
+                      'flyout_activation': 'on-hover',
+                      'arrows': false
+                    },
+                    flyout=[
+                      {
+                        'internal_flyout_name': 'Sample mega menu flyout',
+                        'assign': 10,
+                        'layout': 'layout-1',
+                        'header': '<h3>Company</h3>',
+                        'aside_image': {
+                          'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-18.jpg',
+                          'alt': 'Describe your image',
+                          'width': 800,
+                          'loading': 'lazy'
+                        },
+                        'aside_image_radius': true,
+                        'footer': "<hr><p>{{cta('bf903a54-a994-4fa3-b368-d60e0a7769da')}}</p>",
+                        'column': [
+                          '
+                            <ul>
+                              <li><a href="#1">About</a>
+                                <ul>
+                                  <li><a href="#2">Our Story</a></li>
+                                  <li><a href="#3">Our Mission</a></li>
+                                  <li><a href="#4">Our Commitment</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          ',
+                          '
+                            <ul>
+                              <li><a href="#1">Team</a>
+                                <ul>
+                                  <li><a href="#2">Management Team</a></li>
+                                  <li><a href="#3">Board of Directors</a></li>
+                                  <li><a href="#4">Careers</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          ',
+                          '
+                            <ul>
+                              <li><a href="#1">News</a>
+                                <ul>
+                                  <li><a href="#2">Industry Tips</a></li>
+                                  <li><a href="#3">Press Releases</a></li>
+                                  <li><a href="#4">Upcoming Events</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          ',
+                          '
+                            <ul>
+                              <li><a href="#1">Contact</a>
+                                <ul>
+                                  <li><a href="#2">Headquarters</a></li>
+                                  <li><a href="#3">Local Offices</a></li>
+                                  <li><a href="#4">Get in touch</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          '
+                        ]
+                      }
+                    ]
+                  %}
+                </div>
+                {% if widget_data.enable_header_search.value %}
+                  <div class="header__search">
+                    {% module 'header_search' path='../modules/site-search' label='Search' color_scheme={{ header_color_scheme }} %}
+                  </div>
+                {% endif %}
+                {% if widget_data.enable_header_lang.value %}
+                  <div class="header__lang">
+                    {% module 'header_lang' path='../modules/lang-select' label='Language selector' color_scheme={{ header_color_scheme }} %}
+                  </div>
+                {% endif %}
+                <div class="header__buttons">
+                  <div class="header__buttons__static">
+                    {% module 'static_header_buttons' path='../modules/button' label='Static header buttons'
+                      button=[
+                        {
+                          'internal_name': 'Buy Now',
+                          'type': 'link',
+                          'text': 'Buy Now',
+                          'link': {
+                            'url': {
+                              'type': 'EXTERNAL',
+                              'href': 'https://www.hubspot.com/'
+                            }
+                          },
+                          'color': 'accent',
+                          'fill': 'fill',
+                          'size': 'medium',
+                          'shape': 'default'
+                        }
+                      ]
+                    %}
+                  </div>
+                  <div class="header__buttons__overlap">
+                    {% module 'overlapping_header_buttons' path='../modules/button' label='Overlapping header buttons'
+                      button=[
+                        {
+                          'internal_name': 'Buy Now',
+                          'type': 'link',
+                          'text': 'Buy Now',
+                          'link': {
+                            'url': {
+                              'type': 'EXTERNAL',
+                              'href': 'https://www.hubspot.com/'
+                            }
+                          },
+                          'color': 'accent',
+                          'fill': 'fill',
+                          'size': 'medium',
+                          'shape': 'default'
+                        }
+                      ]
+                    %}
+                  </div>
+                  {% if theme.components.header.sticky_header %}
+                    <div class="header__buttons__sticky">
+                      {% module 'sticky_header_buttons' path='../modules/button' label='Sticky header buttons'
+                          button=[
+                            {
+                              'internal_name': 'Buy Now',
+                              'type': 'link',
+                              'text': 'Buy Now',
+                              'link': {
+                                'url': {
+                                  'type': 'EXTERNAL',
+                                  'href': 'https://www.hubspot.com/'
+                                }
+                              },
+                              'color': 'accent',
+                              'fill': 'fill',
+                              'size': 'medium',
+                              'shape': 'default'
+                            }
+                          ]
+                        %}
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="header__mobile-nav">
+                  {% module 'header_mobile_nav', path='../modules/mobile-nav', label='Mobile navigation',
+                    buttons={
+                      'enable': true,
+                      'button': [
+                        {
+                          'internal_name': 'Buy Now',
+                          'type': 'link',
+                          'text': 'Buy Now',
+                          'link': {
+                            'url': {
+                              'type': 'EXTERNAL',
+                              'href': 'https://www.hubspot.com/'
+                            }
+                          },
+                          'color': 'accent',
+                          'fill': 'fill',
+                          'size': 'medium',
+                          'shape': 'default'
+                        }
+                      ]
+                    },
+                    settings={
+                      'color_scheme': header_color_scheme
+                    }
+                  %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{{ require_css(get_asset_url('../css/components/header-01.css')) }}
+{% if header_overlap %}
+  {{ require_css(get_asset_url('../css/components/header-01-overlap.css')) }}
+{% endif %}

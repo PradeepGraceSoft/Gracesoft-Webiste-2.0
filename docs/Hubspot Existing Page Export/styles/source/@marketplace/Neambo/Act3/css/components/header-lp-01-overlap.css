@@ -1,0 +1,31 @@
+{% import '../_variables.css' as var %}
+
+.header--overlap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 6;
+  background: none;
+}
+
+/* Fixes HS editor overlapping problem */
+
+.hs-inline-edit .header--overlap {
+  z-index: 2147483599;
+}
+
+.header--overlap .header__info {
+  color: {{ var.white_text }};
+}
+
+.header--overlap .header__icons + .header__info,
+.header--overlap .header__lang + .header__info {
+  border-color: {{ var.white_borders }};
+}
+
+.header--overlap .header__info a,
+.header--overlap .header__info a:hover,
+.header--overlap .header__lang .lang-select__button {
+  color: {{ var.white }};
+}

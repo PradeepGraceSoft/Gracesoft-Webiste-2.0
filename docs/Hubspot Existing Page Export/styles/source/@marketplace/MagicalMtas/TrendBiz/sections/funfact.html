@@ -1,0 +1,93 @@
+<!--
+  templateType: section
+  label: Funfact
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/funfact.png
+  description: "Funfact section separated in four columns."
+-->
+
+{# Funfact Section Start #}
+  {% dnd_section max_width=1200, class="funfact-area" %}
+     {% dnd_column width=12, offset=0  %}
+
+        {% dnd_row %}
+          {% dnd_column width=3, offset=0 %}
+            {% dnd_row  margin={
+              'bottom': '30px'
+              }
+            %}
+              {% dnd_module "module_166937094984674" path="../modules/Funfact", label="Funfact"  
+                funfact_image = { 
+                  'alt': 'Funfact Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/funfact/funfact-1.svg')  
+                },
+                funfact_number = '<h2>25+</h2>',
+                funfact_title = '<h3>Years Experience</h3>'
+              %}
+            {% end_dnd_module %} 
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+
+          {% dnd_column width=3, offset=3 %}
+            {% dnd_row  margin={
+              'bottom': '30px'
+              }
+            %}
+              {% dnd_module "module_166937094984674" path="../modules/Funfact", label="Funfact"  
+                funfact_image = { 
+                  'alt': 'Funfact Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/funfact/funfact-2.svg')  
+                },
+                funfact_number = '<h2>50+</h2>',
+                funfact_title = '<h3>Projects Done</h3>'
+              %}
+            {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+
+          {% dnd_column width=3, offset=6 %}
+            {% dnd_row  margin={
+              'bottom': '30px'
+              }
+            %}
+              {% dnd_module "module_166937094984674" path="../modules/Funfact", label="Funfact"  
+                funfact_image = { 
+                  'alt': 'Funfact Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/funfact/funfact-3.svg')  
+                },
+                funfact_number = '<h2>950+</h2>',
+                funfact_title = '<h3>Happy Coustomers</h3>'
+              %}
+            {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+
+          {% dnd_column width=3, offset=9 %}
+            {% dnd_row  margin={
+              'bottom': '30px'
+              }
+            %}
+              {% dnd_module "module_166937094984674" path="../modules/Funfact", label="Funfact"  
+                funfact_image = { 
+                  'alt': 'Funfact Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/funfact/funfact-4.svg')  
+                },
+                funfact_number = '<h2>15+</h2>',
+                funfact_title = '<h3>Awards Win</h3>'
+              %}
+            {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+
+        {% end_dnd_row %} 
+
+     {% end_dnd_column %}
+  {% end_dnd_section %}
+{# Team Section End #}
+		
+		
+	

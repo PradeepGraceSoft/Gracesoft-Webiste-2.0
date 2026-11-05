@@ -1,0 +1,29 @@
+<!--
+  templateType: email_backup_unsubscribe_page
+  isAvailableForNewContent: true
+  label: Environmental - email backup unsubscribe
+  screenshotPath: ../../images/template-previews/backup-unsubscribe.png
+-->
+{% set template_css = '../../css/templates/system.css' %}
+{% extends '../layouts/base.html' %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Unsubscribe" %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="systems-page en-backup-unsubscribe">
+    <div class="en-system-page__banner">    
+      {% if theme.system_page_setting.email_unsubscribe_setting.is_email_unsubscribe_banner_img %}
+        <img src="{{ theme.system_page_setting.email_unsubscribe_setting.email_unsubscribe_banner.email_unsubscribe_banner_image.src }}" alt="{{theme.system_page_setting.email_unsubscribe_setting.email_unsubscribe_banner.email_unsubscribe_banner_image.alt}}" loading="{{theme.system_page_setting.email_unsubscribe_setting.email_unsubscribe_banner.email_unsubscribe_banner_image.loading}}">  
+      {% endif %}
+    </div>
+    <div class="en-backup-unsubscribe__wrap">
+      {% module 'backup_unsubscribe'
+      extra_classes='backup-unsubscribe',
+      path='@hubspot/email_simple_subscription'
+      %}
+    </div>
+  </div>
+
+</section>
+{% endblock body %}

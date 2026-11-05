@@ -1,0 +1,1509 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+  label: "Style Guide"
+-->
+
+{% set template_body_classes = 'style-guide' %}
+
+{% extends '../partials/base.html' %}
+
+{% block body %}
+  {% dnd_area "body" %}
+    {% dnd_section padding={'top': 50, 'bottom': 0} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text", label="Theme Rich Text",
+              eyebrow="",
+              heading="Style Guide",
+              heading_level="h1",
+              subheading="<p>This is a template designed to demonstrate the site's global settings set within the Theme Settings. The following sections will showcase the global text, buttons, and form styling as well the modules and sections available in the theme.
+
+              </p><p><small>This Style Guide template should NOT be used for creating a page.</small></p>",
+              text="",
+              add_cta=tfalse
+            ]
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 60} %}
+          {% dnd_module path="../modules/Theme Rich Text", label="Theme Rich Text",
+              eyebrow="",
+              heading="",
+              heading_level="h1",
+              subheading="",
+              text="<h2 class='style-guide-heading'>Typography</h2><div class='style-guide__typography'><h1>H1: The Quick Brown Fox Jumps Over The Lazy Dog.</h1><h2>H2: The Quick Brown Fox Jumps Over The Lazy Dog.</h2><h3>H3: The Quick Brown Fox Jumps Over The Lazy Dog.</h3><h4>H4: The Quick Brown Fox Jumps Over The Lazy Dog.</h4><h5>H5: The Quick Brown Fox Jumps Over The Lazy Dog.</h5><h6>H6: The Quick Brown Fox Jumps Over The Lazy Dog.</h6><p class='subheading'>Subeadline: The Quick Brown Fox Jumps Over The Lazy Dog.</p><p class='eyebrow'>Eyebrow: The Quick Brown Fox Jumps Over The Lazy Dog.</p><p>Body: The Quick Brown Fox Jumps Over The Lazy Dog.</p><p><a href='https://themes.lyntonweb.com'>Link: The Quick Brown Fox Jumps Over The Lazy Dog.</a></p></div>",
+              add_cta=tfalse
+            ]
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section full_width=true, padding={'top': 60, 'bottom': 0} %}
+      {% dnd_column width=6, padding={top: 30, right: 114, bottom: 30, left: 100} %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Button",
+              cta=[
+              {
+                "color": "primary",
+                "text": "Calls to Action"
+              },
+              {
+                "color": "link",
+                "text": "Arrow Link CTA"
+              }
+            ],
+            cta_alignment="left"
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=6, offset=6, background_color="{{ theme.global.colors.background_dark.color }}", padding={top: 30, right: 100, bottom: 30, left: 100} %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Button", 
+            cta=[
+              {
+                "color": "secondary",
+                "text": "Secondary CTA"
+              },
+              {
+                "color": "link",
+                "text": "Arrow Link Dark"
+              }
+            ],
+            cta_alignment="left",
+            styles={
+              "module": {
+                "dark_mode": true
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section full_width=true, padding={top: 0} %}
+      {% dnd_column width=6, background_color="{{ theme.global.colors.background_light.color }}", padding={top: 50, right: 100, bottom: 50, left: 100} %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text",
+            label="Theme Rich Text",
+            eyebrow="Light Background"
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Form", label="Theme Form", 
+              styles={
+                "dark_mode": false,
+                "boxin": false
+              },
+              form={
+                "heading": {
+                  "heading": null
+                }
+              }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column width=6, offset=6, background_color="{{ theme.global.colors.background_dark.color }}", padding={top: 50, right: 100, bottom: 50, left: 100} %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text",
+            label="Theme Rich Text",
+            eyebrow="Dark Background",
+            styles={
+              "text": {
+                "dark_mode": true
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Form", label="Theme Form"
+            styles={
+              "boxin": false,
+              "dark_mode": true
+            },
+            form={
+              "heading": {
+                "heading": null
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 120, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text",
+        label="Theme Rich Text",
+        eyebrow="",
+        heading="",
+        subheading="",
+        text="<h2 class='style-guide-heading'>Modules</h2><p class='subheading'>The following are all the modules available in this theme, in their default state (not including modules that do not render visible content)</p>"
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="cta-box",
+            eyebrow="",
+            heading="Call to Action Box",
+            heading_level="h2",
+            subheading="A styled box that includes call to action text and button."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Call to Action Box" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="collapsible-text",
+            eyebrow="",
+            heading="Collapsible Text",
+            heading_level="h2",
+            subheading="List of collapsible items for condensing content."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Collapsible Text" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="comparison-table",
+            eyebrow="",
+            heading="Comparison Table",
+            heading_level="h2",
+            subheading="A table to compare features of different products or product levels."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Comparison Table" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="comparison-table",
+            eyebrow="",
+            heading="Contact Info",
+            heading_level="h2",
+            subheading="A map and text to include location and contact information."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Contact Info" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="counter",
+            eyebrow="",
+            heading="Counter",
+            heading_level="h2",
+            subheading="Animated numerical stats that count up to the desired number."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Counter" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="feature-grid",
+            eyebrow="",
+            heading="Feature Grid",
+            heading_level="h2",
+            subheading="A grid of featured items that can include an icon, text, and call to action."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Feature Grid" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="feature-items",
+            eyebrow="",
+            heading="Feature Items",
+            heading_level="h2",
+            subheading="A set of featured items such as benefits, services, etc. Each item can include an icon, text, and CTA."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Feature Items" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section full_width=true, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="full-width-two-columns",
+            eyebrow="",
+            heading="Full Width Two Columns",
+            heading_level="h2",
+            subheading="Two columns that span the entire width of a section. Includes text and an image with left or right placement."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Two Tone Section" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section full_width=true, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="hero-one-col",
+            eyebrow="",
+            heading="Hero - 1 Column",
+            heading_level="h2",
+            subheading="Single column hero with option to add text with an image, form, or video below it. <strong>Set this module's section's Content Alignment to Full Width</strong>"
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Hero - Full Width" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section full_width=true, padding={'top': 250, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="hero-two-col",
+            eyebrow="",
+            heading="Hero - 2 Columns",
+            heading_level="h2",
+            subheading="Two column hero with options to add text and logos to one side and an image, form, or video on the other side. <strong>Set this module's section's Content Alignment to Full Width</strong>"
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Hero" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="hero-text-only",
+            eyebrow="",
+            heading="Hero - Text Only",
+            heading_level="h2",
+            subheading="A simple text only hero."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Simple Hero" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section full_width=true, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="image-slider",
+            eyebrow="",
+            heading="Image Slider",
+            heading_level="h2",
+            subheading="A multi-slide slider with image and title to showcase services/products. <strong>Set this module's section's Content Alignment to Full Width</strong>"
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Image Gallery" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="logos",
+            eyebrow="",
+            heading="Logos",
+            heading_level="h2",
+            subheading="A simple row of logos."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Logos" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="pricing-boxes",
+            eyebrow="",
+            heading="Pricing Boxes",
+            heading_level="h2",
+            subheading="Informational boxes for product pricing."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Pricing Boxes" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="related-posts",
+            eyebrow="",
+            heading="Related Posts",
+            heading_level="h2",
+            subheading="Dynamically generated posts related to the content of the current page."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Related Blog Posts" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="showcase-slider",
+            eyebrow="",
+            heading="Showcase Slider",
+            heading_level="h2",
+            subheading="A multi-slide slider with image and title to showcase services/products. <strong>Set this module's section's Content Alignment to Full Width</strong>"
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Showcase Slider" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="social-follow",
+            eyebrow="",
+            heading="Social Follow",
+            heading_level="h2",
+            subheading="Icon links to social media pages."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Social Follow" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="social-sharing",
+            eyebrow="",
+            heading="Social Sharing",
+            heading_level="h2",
+            subheading="Icon links to share page to social media."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Social Sharing" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="staggered-images",
+            eyebrow="",
+            heading="Staggered Images",
+            heading_level="h2",
+            subheading="A set of images with alternating top margins."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Staggered Images" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="tabbed-content",
+            eyebrow="",
+            heading="Tabbed Content",
+            heading_level="h2",
+            subheading="Tabular content that can contain text, CTAs, an image, and/or a form."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Tabbed Content" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="team-listing",
+            eyebrow="",
+            heading="Team Listing",
+            heading_level="h2",
+            subheading="List out team members with their name, title, social links, and profile image."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Team Listing" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section full_width=true, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="testimonials-slider",
+            eyebrow="",
+            heading="Testimonials Slider",
+            heading_level="h2",
+            subheading="A full width two-column slider of testimonials with image in one column and quote text in the other."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Testimonials Slider" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="testimonials-static",
+            eyebrow="",
+            heading="Testimonials Static",
+            heading_level="h2",
+            subheading="Simple testimonials in columns."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Testimonials Static" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="theme-buttons",
+            eyebrow="",
+            heading="Theme Buttons",
+            heading_level="h2",
+            subheading="Adds a call to action button to your page."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Button" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="theme-form",
+            eyebrow="",
+            heading="Theme Form",
+            heading_level="h2",
+            subheading="A form module with extra options not available in HubSpot's default module."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Theme Form" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="theme-image",
+            eyebrow="",
+            heading="Theme Image",
+            heading_level="h2",
+            subheading="An image module with extra styling options not available in HubSpot's default module."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Theme Image" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="theme-rich-text",
+            eyebrow="",
+            heading="Theme Rich Text",
+            heading_level="h2",
+            subheading="A rich text module with extra styling options not available in HubSpot's default module."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/Theme Rich Text" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 60, 'bottom': 60} %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/Theme Rich Text"
+          section_id="text-image-cols",
+            eyebrow="",
+            heading="Text and Image Columns",
+            heading_level="h2",
+            subheading="Quickly create two columns with text and an image."
+            text="",
+            add_cta=false,
+            styles={
+              "text": {
+                "alignment": "center"
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row padding={top: 35} %}
+          {% dnd_module path="../modules/2 Col Text and Image" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section padding={'top': 120, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text",
+        label="Theme Rich Text",
+        eyebrow="",
+        heading="",
+        subheading="",
+        text="<h2 class='style-guide-heading'>Sections</h2><p class='subheading'>The following are all the saved sections available in this theme (not including blog-specific sections).</p>"
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="comparison-table-section",
+        eyebrow="",
+        heading="Comparison Table",
+        heading_level="h2",
+        subheading="Table comparison for products, services, service tiers, etc.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/comparison-table.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="contact-two-column",
+        eyebrow="",
+        heading="Contact - Two Column",
+        heading_level="h2",
+        subheading="Two column section with map on the left and contact information on the right.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/contact.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="contact-overlap",
+        eyebrow="",
+        heading="Counter with Overlap",
+        heading_level="h2",
+        subheading="A list of stats with animated counter overlapping section above it. >> Section above this must have a background different from this section's for the overlap to be apparent.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/counter-double-overlap.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="cta-box-section",
+        eyebrow="",
+        heading="Call to Action Box",
+        heading_level="h2",
+        subheading="A full width call to action with text and button.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/cta-box.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="faq",
+        eyebrow="",
+        heading="FAQ",
+        heading_level="h2",
+        subheading="Collapsible text for frequently asked questions.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/faq.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="feature-grid",
+        eyebrow="",
+        heading="Feature Grid",
+        heading_level="h2",
+        subheading="A grid of featured items.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/feature-grid.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="featured-items",
+        eyebrow="",
+        heading="Feature Items",
+        heading_level="h2",
+        subheading="A list of items with icon, heading, text, and call to action.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/featured-items.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="featured-items-three",
+        eyebrow="",
+        heading="Feature Items - Three",
+        heading_level="h2",
+        subheading="A list of three items with icon, heading, text, and call to action.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/featured-items-three.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-form",
+        eyebrow="",
+        heading="Hero Form",
+        heading_level="h2",
+        subheading="Two column hero with text and logos on the left and a form on the right.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-form.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-overhanging-form",
+        eyebrow="",
+        heading="Hero - Overhanging Form",
+        heading_level="h2",
+        subheading="A full width hero with just text and a form overhanging it.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-full-form.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-overhanging-pricing",
+        eyebrow="",
+        heading="Hero - Overhanging Pricing",
+        heading_level="h2",
+        subheading="A full width hero with just text and pricing boxes overhanging it.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-full-overhang-pricing.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-overlapping-image",
+        eyebrow="",
+        heading="Hero - Overlapping Image",
+        heading_level="h2",
+        subheading="A full width hero with an image overlapping section below. >> Section below this must have a background different from this section's background for the overlap to be apparent.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-full-overlap-image.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-staggered-overlapping-images",
+        eyebrow="",
+        heading="Hero - Staggered Overlapping Images",
+        heading_level="h2",
+        subheading="A two column hero with staggered images overlapping the section below. >> Section below must have a background different from this section's background for overlap to be apparent.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-overlap-staggered-images.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-simple",
+        eyebrow="",
+        heading="Hero - Simple",
+        heading_level="h2",
+        subheading="A plain text-only hero.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-simple.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-two-col",
+        eyebrow="",
+        heading="Hero - Two Column",
+        heading_level="h2",
+        subheading="A two column hero with text and logos on the left and image on the right.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-two-col.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="hero-two-col-video",
+        eyebrow="",
+        heading="Hero - Two Column with Video",
+        heading_level="h2",
+        subheading="A two column hero with text and video.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/hero-video.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="image-gallery",
+        eyebrow="",
+        heading="Image Gallery",
+        heading_level="h2",
+        subheading="A full width section with image gallery.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/image-gallery.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="leadership",
+        eyebrow="",
+        heading="Leadership",
+        heading_level="h2",
+        subheading="A short list of leadership members.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/leadership.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="leadership-dark",
+        eyebrow="",
+        heading="Leadership - Dark",
+        heading_level="h2",
+        subheading="A short list of leadership members on dark background.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/leadership-dark.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="logos",
+        eyebrow="",
+        heading="Logos",
+        heading_level="h2",
+        subheading="Simple row of logos with heading.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/logos.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="related-blogs",
+        eyebrow="",
+        heading="Related Blogs",
+        heading_level="h2",
+        subheading="A showcase of blog posts.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/related-blogs.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="related-blogs-dark",
+        eyebrow="",
+        heading="Related Blogs - Dark",
+        heading_level="h2",
+        subheading="A showcase of blog posts with a dark background.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/related-blogs-dark.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="showcase-slider",
+        eyebrow="",
+        heading="Showcase Slider",
+        heading_level="h2",
+        subheading="A showcase of blog posts with a dark background.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/showcase-slider.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="tabs",
+        eyebrow="",
+        heading="Tabs",
+        heading_level="h2",
+        subheading="Tabbable content section.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/tabs.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="team-listing",
+        eyebrow="",
+        heading="Team Listing",
+        heading_level="h2",
+        subheading="A listing of your team members.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/team-listing.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="testimonials-slider-section",
+        eyebrow="",
+        heading="Testimonials Slider",
+        heading_level="h2",
+        subheading="A full width testimonial slider with light background color.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/testimonial-slider.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="testimonials-static-section",
+        eyebrow="",
+        heading="Testimonials Static",
+        heading_level="h2",
+        subheading="A set of three static testimonials with a heading.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/testimonials-static.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="testimonials-logos",
+        eyebrow="",
+        heading="Testimonials with Logos",
+        heading_level="h2",
+        subheading="A set of three static testimonials with a heading and list of logos.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/testimonials-with-logos.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="two-col-image-left",
+        eyebrow="",
+        heading="Two Column - Image Left",
+        heading_level="h2",
+        subheading="Two columns with text on the right and image on the left.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/two-col-image-left.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="two-col-image-right",
+        eyebrow="",
+        heading="Two Column - Image Right",
+        heading_level="h2",
+        subheading="Two columns with text on the left and image on the right.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/two-col-image-right.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="two-col-text",
+        eyebrow="",
+        heading="Two Column - Text Only",
+        heading_level="h2",
+        subheading="Simple two columns of text.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/two-col-text-only.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="two-col-text-bg",
+        eyebrow="",
+        heading="Two Column - Text Only with Background",
+        heading_level="h2",
+        subheading="Simple two columns of text with background image.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/two-col-text-only-bg.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="two-tone-cta",
+        eyebrow="",
+        heading="Two Tone Call to Action",
+        heading_level="h2",
+        subheading="Full width call to action with image on the left and text/button on the right.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/two-tone-cta.html' %}
+
+    {% dnd_section max_width=600, padding={'top': 60, 'bottom': 60} %}
+      {% dnd_module path="../modules/Theme Rich Text"
+        section_id="two-tone-cta-dark",
+        eyebrow="",
+        heading="Two Tone Call to Action - Dark",
+        heading_level="h2",
+        subheading="Full width call to action with image on the left and text/button on the right with a dark background.",
+        text="",
+        add_cta=false,
+        styles={
+          "text": {
+            "alignment": "center"
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% include_dnd_partial path='../sections/two-tone-cta-dark.html' %}
+  {% end_dnd_area %}
+{% endblock %}

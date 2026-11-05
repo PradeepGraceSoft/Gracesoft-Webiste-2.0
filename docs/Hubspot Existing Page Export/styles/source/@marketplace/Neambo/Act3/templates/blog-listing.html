@@ -1,0 +1,565 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Blog listing
+  screenshotPath: ../images/template-previews/blog-listing.jpg
+-->
+
+{%- extends './_base.html' -%}
+
+{%- block settings -%}
+  {% from '../css/_variables.css' import sm %}
+
+  {%- set template_class = 'blog-listing' -%}
+  {%- set homepage = true if current_page_num == 1 and not (tag or blog_author or simple_list_page) else false -%}
+
+  {# Blog template configuration #}
+
+  {%- module 'blog_config' path='../modules/blog-config' label='Blog configuration', blog_design="classic", export_to_template_context=True, no_wrapper=True -%}
+  {%- set b = widget_data.blog_config -%}
+  
+  {# Hero & header settings #}
+
+  {%- set lp = false -%}
+  {%- set header_overlap = false -%}
+
+  {%- if homepage and contents|length > 0 -%}
+    {%- if b.hero.homepage_hero == 'featured_post' and b.hero.featured_post_id|trim -%}
+      {%- set hero_post = content_by_id(b.hero.featured_post_id|trim) -%}
+    {%- elif b.hero.homepage_hero == 'latest_post' -%}
+      {%- set hero_post = contents[0] -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if homepage and b.header.homepage_header_overlap == 'yes' and b.hero.homepage_hero != 'none'  -%}
+    {%- set header_overlap = true -%}
+  {%- elif b.header.homepage_header_overlap == 'no' -%}
+    {%- set header_overlap = false -%}
+  {%- elif hero_post -%}
+    {%- set header_overlap = true -%}
+  {%- endif -%}
+
+{%- endblock settings -%}
+
+{%- block body -%}
+
+  {# Import variables and macros #}
+
+  {%- from '../css/_variables.css' import sm, md, gutter -%}
+  {%- from '../macros/utility.html' import read_time, image_srcset, image_tag -%}
+  
+  {# Simple listing (all posts) page #}
+
+  {%- if simple_list_page and b.listing.layout != 'listing_4' -%}
+    <div class="blog-simple-list section txt--unstyle-links">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div>
+              <h1 style="margin-bottom: 3rem">{{ group.public_title }}</h1>
+              {%- for content in contents -%}
+                <p class="h3" style="margin-bottom: 0"><a href="{{ content.absolute_url }}">{{ content.name }}</a></p>
+                <p class="small-text">{{ content.publish_date_localized }}</p>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- else -%}
+  
+    {# Author page #}
+
+    {%- if blog_author -%}
+      {{ require_css(get_asset_url('../css/components/section-intro.css')) }}
+      {{ require_css(get_asset_url('../css/components/blog-author.css')) }}
+      <div class="blog-author section{{ ' blog-author--w-photo' if blog_author.avatar else ' blog-author--wo-photo' }}">
+        <div class="container">
+          <div class="row">
+            {%- if blog_author.avatar -%}
+              <div class="col s2">
+                <div class="blog-author__photo">
+                  <img src="{{ blog_author.avatar }}" alt="{{ blog_author.display_name }}" {{ image_srcset(blog_author.avatar, 170) }} width="170" height="170">
+                </div>
+              </div>
+            {%- endif -%}
+            <div class="blog-author__details col {% if blog_author.avatar %}s10{% else %}s12{% endif %}">
+              <div class="blog-author__details-inner">
+                <div class="section-intro">
+                  <h1>{{ blog_author.display_name }}</h1>
+                  <div class="section-intro__desc">
+                    <div class="section-intro__desc-inner">
+                      {%- if blog_author.bio -%}
+                        <p>{{ blog_author.bio }}</p>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  <div class="section-intro__divider"><div></div></div>
+                </div>
+                {%- if blog_author.has_social_profiles -%}
+                  <div class="blog-author__icons">
+                    {%- if blog_author.twitter -%}
+                      <a class="blog-author__icon blog-author__icon--twitter" href="{{ blog_author.twitter }}" target="_blank" aria-label="{{ blog_author.display_name }} | Twitter">
+                        <span class="icon icon--medium icon--disc icon--outline icon--light">
+                          <span class="icon__glyph">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+                          </span>
+                        </span>
+                      </a>
+                    {%- endif -%}
+                    {%- if blog_author.facebook -%}
+                      <a class="blog-author__icon blog-author__icon--facebook" href="{{ blog_author.facebook }}" target="_blank" aria-label="{{ blog_author.display_name }} | Facebook">
+                        <span class="icon icon--medium icon--disc icon--outline icon--light">
+                          <span class="icon__glyph">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                              <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </a>
+                    {%- endif -%}
+                    {%- if blog_author.linkedin -%}
+                      <a class="blog-author__icon blog-author__icon--linkedin" href="{{ blog_author.linkedin }}" target="_blank" aria-label="{{ blog_author.display_name }} | LinkedIn">
+                        <span class="icon icon--medium icon--disc icon--outline icon--light">
+                          <span class="icon__glyph">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </a>
+                    {%- endif -%}
+                    {%- if blog_author.website -%}
+                      <a class="blog-author__icon blog-author__icon--website" href="{{ blog_author.website }}" target="_blank" aria-label="{{ blog_author.display_name }} | Website">
+                        <span class="icon icon--medium icon--disc icon--outline icon--light">
+                          <span class="icon__glyph">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                              <path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </a>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {# Hero section > Featured/Latest Post #}
+    
+    {%- if hero_post -%}
+      {{ require_css(get_asset_url('../css/components/blog-hero-1.css')) }}
+      <div class="blog-hero-1 section{% if b.hero.hero_height == 'full' %} minh-full{% elif b.hero.hero_height == 'half' %} minh-half{% endif %} justify-{{ b.hero.hero_vertical_alignment }}">
+        {%- require_css -%}
+          <style>
+            {%- if hero_post.widgets.post_background.body.src -%}
+              @media (min-width: {{ sm + 1 }}px) {
+                .blog-hero-1 {
+                  background-image: url({{ hero_post.widgets.post_background.body.src }});
+                }
+              }
+            {%- elif hero_post.featured_image -%}
+              @media (min-width: {{ sm + 1 }}px) {
+                .blog-hero-1 {
+                  background-image: url({{ hero_post.featured_image }});
+                }
+              }
+            {%- endif -%}
+            {%- if hero_post.widgets.post_background_sm.body.src -%}
+              @media (max-width: {{ sm }}px) {
+                .blog-hero-1 {
+                  background-image: url({{ hero_post.widgets.post_background_sm.body.src }});
+                }
+              }
+            {%- elif hero_post.widgets.post_background.body.src -%}
+              @media (max-width: {{ sm }}px) {
+                .blog-hero-1 {
+                  background-image: url({{ resize_image_url(hero_post.widgets.post_background.body.src, sm, 0, 0) }});
+                }
+              }
+            {%- elif hero_post.featured_image -%}
+              @media (max-width: {{ sm }}px) {
+                .blog-hero-1 {
+                  background-image: url({{ resize_image_url(hero_post.featured_image, sm, 0, 0) }});
+                }
+              }
+            {%- endif -%}
+            .blog-hero-1 {
+              padding-top: {{ b.hero.hero_top_padding_lg }}px;
+              padding-bottom: {{ b.hero.hero_bottom_padding_lg }}px;
+            }
+            @media (max-width: {{ sm }}px) {
+              .blog-hero-1 {
+                padding-top: {{ b.hero.hero_top_padding_sm }}px;
+                padding-bottom: {{ b.hero.hero_bottom_padding_sm }}px;
+              }
+            }
+          </style>
+        {%- end_require_css -%}
+        <div class="blog-hero-1__center container">
+          <div class="row">
+            <div class="col s12">
+              <div class="blog-hero-1__overlay" style="opacity: {{ hero_post.widgets.hero_overlay_opacity.body.value|default('0.3') }}"></div>
+              <div class="blog-hero-1__contents">
+                {%- if b.tags.show_tags -%}
+                  <div class="blog-hero-1__tags">
+                    <div class="blog-hero-1__tags-visible">
+                      {%- if hero_post.tag_list[0] -%}
+                        <a href="{{ blog_tag_url(group.id, hero_post.tag_list[0].slug) }}" class="blog-hero-1__tag badge badge--medium badge--{% if hero_post.tag_list[1] %}white{% else %}accent{% endif %} badge--lowercase">{{ hero_post.tag_list[0].name }}</a>
+                      {%- endif -%}
+                      {%- if hero_post.tag_list[1] -%}
+                        <a href="{{ blog_tag_url(group.id, hero_post.tag_list[1].slug) }}" class="blog-hero-1__tag badge badge--medium badge--accent badge--lowercase">{{ hero_post.tag_list[1].name }}</a>
+                      {%- endif -%}
+                    </div>
+                    {%- if hero_post.tag_list[2] -%}
+                      {{ require_css(get_asset_url('../css/components/tag-list.css')) }}
+                      {{ require_js(get_asset_url('../js/components/tag-list.js'), { position: 'footer', defer:true }) }}
+                      <div class="blog-hero-1__tags-list tags-list">
+                        <a href="javascript:;" class="tags-list__btn tags-list__btn--ghost tags-list__open-list" aria-label="{{ b.text.all_topics }}">
+                          <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 10C3.89543 10 3 10.8954 3 12C3 13.1046 3.89543 14 5 14C6.10457 14 7 13.1046 7 12C7 10.8954 6.10457 10 5 10ZM12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10ZM17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12Z" fill="currentColor"/>
+                          </svg>
+                        </a>
+                        <div class="tags-list__list">
+                          {%- for tag in hero_post.tag_list -%}
+                            {%- if loop.index > 2 -%}
+                              <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="tags-list__item">{{ tag.name }}</a>
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+                <div class="blog-hero-1__title txt--dark">
+                  <h1 class="display"><a href="{{ hero_post.absolute_url }}">{{ hero_post.name }}</a></h1>
+                </div>
+                {%- if true in [b.author.show_author, b.read_time.show_read_time, b.date.show_date] -%}
+                  {{ require_css(get_asset_url('../css/components/blog-infobar.css')) }}
+                  <div class="blog-hero-1__infobar blog-infobar blog-infobar--dark">
+                    {%- if b.author.show_author -%}
+                      <div class="blog-infobar__author">
+                        {%- if hero_post.blog_post_author.avatar -%}
+                          <a href="{{ blog_author_url(group.id, hero_post.blog_post_author.slug) }}"><img src="{{ hero_post.blog_post_author.avatar }}" {{ image_srcset(hero_post.blog_post_author.avatar, 40) }} alt="{{ hero_post.blog_post_author.display_name }}" width="40" height="40"></a>
+                        {%- endif -%}  
+                        <div class="blog-hero-1__author-name">{{ b.text.by|replace('[author]', '<a href="{{ blog_author_url(group.id, hero_post.blog_post_author.slug) }}">{{ hero_post.blog_post_author.display_name }}</a>') }}</div>
+                      </div>
+                    {%- endif -%}
+                    {%- if b.read_time.show_read_time -%}
+                      <div class="blog-infobar__time">
+                        <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg> {{ b.text.min_read|replace('[minutes]', read_time(hero_post.post_body)) }}
+                      </div>
+                    {%- endif -%}
+                    {%- if b.date.show_date -%}
+                      <div class="blog-infobar__date">
+                        <svg width="13" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"></path></svg> {{ hero_post.publish_date_localized }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {# Hero section > DnD Area) #}
+
+    {%- if b.hero.homepage_hero == 'drag_and_drop' and (homepage or (b.hero.show_on_all_pages and not blog_author)) -%}
+      {%- dnd_area 'blog_intro_dnd_area' class="blog-intro-dnd-area" -%}
+        {%- dnd_section
+          vertical_alignment='MIDDLE',
+          padding={
+            'default': {
+              'top': gutter,
+              'bottom': gutter
+            }
+          }
+        -%}
+          {%- dnd_column width=6, offset=0 -%}
+            {%- dnd_row -%}
+              {%- dnd_module path='../modules/rich-text',
+                text='<h1>Welcome to our Amazing Blog</h1><p>Well written, interesting and very helpful. With more than 30k subscribers and 5 milion visits every month, you know you are in the right place to grow.</p>'
+              -%}{%- end_dnd_module -%}
+            {%- end_dnd_row -%}
+          {%- end_dnd_column -%}
+          {%- dnd_column width=6, offset=6 -%}
+            {%- dnd_row -%}
+              {%- dnd_module path='../modules/image',
+                image={
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-blogintro2.png',
+                  'alt': 'Describe your image',
+                  'width': 1114,
+                  'height': 807,
+                  'loading': 'disabled'
+                }
+              -%}{%- end_dnd_module -%}
+            {%- end_dnd_row -%}
+          {%- end_dnd_column -%}
+        {%- end_dnd_section -%}
+      {%- end_dnd_area -%}
+    {%- endif -%}
+
+    {# Toolbar #}
+    
+    {%- if b.toolbar.listing_toolbar != 'none' -%}
+
+      <div class="blog-toolbar-1{{ ' blog-toolbar-1--author' if blog_author }} section{{ ' bg-dark' if b.toolbar.bg != 'custom' and b.toolbar.color_scheme == 'dark' }}{{ ' bg-light' if b.toolbar.bg != 'custom' and b.toolbar.color_scheme != 'dark' }}"{{ ' style="background-color: ' ~ b.toolbar.custom_bg_color.color ~ ';"' if b.toolbar.bg == 'custom' }}>
+        <div class="blog-toolbar-1__center container">
+          <div class="row">
+            <div class="col s12">
+              <div class="flex flex-row items-center {% if b.toolbar.listing_toolbar_alignment == 'left' %}justify-start{% elif b.toolbar.listing_toolbar_alignment == 'center'%}justify-center{% elif b.toolbar.listing_toolbar_alignment == 'right' %}justify-end{% else %}justify-between{% endif %} sm-flex-col sm-items-stretch">
+                {%- if blog_author -%}
+                  <div class="blog-toolbar-1__title-wrapper txt--{{ 'dark' if b.toolbar.color_scheme == 'dark' else 'light' }}">
+                    <div class="blog-toolbar-1__title blog-toolbar-1__title--author h3">{{ b.text.posts_by|replace('[author]', blog_author.display_name) }}</div>
+                  </div>
+                {%- elif b.toolbar.listing_toolbar in ['title_and_search', 'title'] -%}
+                  {%- set toolbar_title_tag = 'h1' if tag or current_page_num > 1 or b.hero.homepage_hero not in ['latest_post', 'featured_post', 'drag_and_drop'] else 'span' -%}
+                  <div class="blog-toolbar-1__title-wrapper txt--{{ 'dark' if b.toolbar.color_scheme == 'dark' else 'light' }}">
+                    <{{ toolbar_title_tag }} class="blog-toolbar-1__title blog-toolbar-1__title--blog-title h3">
+                      {% if current_page_num > 1 or tag %}
+                        <span class="blog-toolbar-1__title-icon">
+                          <a href="/{{ group.slug }}" class="ui-icon">
+                            <svg width="24" height="21" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+                            </svg>
+                          </a>
+                        </span>
+                        <span class="blog-toolbar-1__title-text">{{ group.public_title }}{% if tag %}<span class="blog-toolbar-1__title-tag"> / {{ page_meta.html_title|split(' | ')|last }}</span>{% endif %}</span>
+                      {% else %}
+                        {{ group.public_title }}
+                      {% endif %}
+                    </{{ toolbar_title_tag }}>
+                  </div>
+                {%- elif b.toolbar.listing_toolbar in ['topics_and_search', 'topics'] -%}
+                  <div class="blog-toolbar-1__topics">
+                    <div class="drop-down drop-down--light">
+                      <button class="drop-down__btn btn btn--large btn--fill btn--accent{% if b.toolbar.topics_button_shape == 'pill' %} btn--pill{% endif %}" aria-label="{{ b.text.all_topics }}">
+                        {%- if tag or current_page_num > 1 or archive_list_page or b.hero.homepage_hero not in ['latest_post', 'featured_post', 'drag_and_drop'] -%}
+                          <h1 class="drop-down__btn-text" style="color: inherit; font: inherit; margin: 0;">{% if tag %}{{ page_meta.html_title|split(' | ')|last }}{% else %}{{ b.text.all_topics }}{% endif %}</h1>
+                        {%- else -%}
+                          <span class="drop-down__btn-text">{% if tag %}{{ page_meta.html_title|split(' | ')|last }}{% else %}{{ b.text.all_topics }}{% endif %}</span>
+                        {%- endif -%}
+                        <span class="drop-down__btn-arrow">
+                          <svg width="16" height="16" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.60311 4.14644C3.40785 4.34171 3.40785 4.65829 3.60311 4.85356L6.60312 7.85355C6.79837 8.0488 7.11497 8.0488 7.31022 7.85355L10.3102 4.85356C10.5055 4.65829 10.5055 4.34171 10.3102 4.14644C10.115 3.95119 9.79837 3.95119 9.60312 4.14644L6.95667 6.7929L4.31022 4.14644C4.11496 3.95119 3.79838 3.95119 3.60311 4.14644Z" fill="currentColor"/>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="drop-down__list">
+                        <a class="drop-down__option drop-down__option--nonitem{% if not tag %} drop-down__option--active{% endif %}" href="{{ group.absolute_url }}">{{ b.text.all_topics }}</a>
+                        {%- for btag in blog_tags(group.id, 250) -%}
+                          <a class="drop-down__option{% if btag.slug == tag %} drop-down__option--active{% endif %}" href="{{ blog_tag_url(group.id, btag.slug) }}">{{ btag.name }}</a>
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  </div>
+                  {{ require_css(get_asset_url('../css/components/drop-down.css')) }}
+                  {{ require_js(get_asset_url('../js/components/drop-down.js'), { position: 'footer', defer: true }) }}
+                {%- endif -%}
+                {%- if b.toolbar.listing_toolbar in ['topics_and_search', 'title_and_search', 'search'] -%}
+                  {{ require_css(get_asset_url('../css/components/search-box.css')) }}
+                  {{ require_css(get_asset_url('../css/components/blog-search.css')) }}
+                  {{ require_js(get_asset_url('../js/components/blog-search.js'), { position: 'footer', defer: true }) }}
+                  <div class="blog-toolbar-1__search blog-search">
+                    <div class="search-box search-box--{{ 'dark' if b.toolbar.color_scheme == 'dark' else 'light' }}">
+                      <form class="blog-search__form" onsubmit="do_blog_search(event);" autocomplete="off" results-zero-text="{{ b.text.sorry_no_results_found|escape }}">
+                        <input name="term" class="search-box__input blog-search__input" type="text" placeholder="{{ b.text.search_the_blog }}">
+                        <input name="groupId" type="hidden" value="{{ group.id }}">
+                        <input name="language" type="hidden" value="{{ group.language.languageTag }}">
+                        <input name="limit" type="hidden" value="20">
+                        <input name="offset" type="hidden" value="0">
+                        <input name="length" type="hidden" value="SHORT">
+                        <button class="search-box__btn blog-search__search-icon ui-icon" type="submit" value="{{ b.text.search_the_blog }}" aria-label="{{ b.text.search_the_blog }}">
+                          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.71 19.29L17.31 15.9C18.407 14.5025 19.0022 12.7767 19 11C19 9.41775 18.5308 7.87103 17.6518 6.55544C16.7727 5.23984 15.5233 4.21446 14.0615 3.60896C12.5997 3.00346 10.9911 2.84504 9.43928 3.15372C7.88743 3.4624 6.46197 4.22433 5.34315 5.34315C4.22433 6.46197 3.4624 7.88743 3.15372 9.43928C2.84504 10.9911 3.00347 12.5997 3.60897 14.0615C4.21447 15.5233 5.23985 16.7727 6.55544 17.6518C7.87103 18.5308 9.41775 19 11 19C12.7767 19.0022 14.5025 18.407 15.9 17.31L19.29 20.71C19.383 20.8037 19.4936 20.8781 19.6154 20.9289C19.7373 20.9797 19.868 21.0058 20 21.0058C20.132 21.0058 20.2627 20.9797 20.3846 20.9289C20.5064 20.8781 20.617 20.8037 20.71 20.71C20.8037 20.617 20.8781 20.5064 20.9289 20.3846C20.9797 20.2627 21.0058 20.132 21.0058 20C21.0058 19.868 20.9797 19.7373 20.9289 19.6154C20.8781 19.4936 20.8037 19.383 20.71 19.29ZM5 11C5 9.81331 5.3519 8.65327 6.01119 7.66658C6.67047 6.67988 7.60755 5.91085 8.7039 5.45672C9.80026 5.0026 11.0067 4.88378 12.1705 5.11529C13.3344 5.3468 14.4035 5.91824 15.2426 6.75736C16.0818 7.59647 16.6532 8.66557 16.8847 9.82946C17.1162 10.9933 16.9974 12.1997 16.5433 13.2961C16.0892 14.3925 15.3201 15.3295 14.3334 15.9888C13.3467 16.6481 12.1867 17 11 17C9.4087 17 7.88258 16.3679 6.75736 15.2426C5.63214 14.1174 5 12.5913 5 11Z" fill="currentColor"></path>
+                          </svg>
+                        </button>
+                        <button class="search-box__btn blog-search__cancel-icon blog-search__reset ui-icon" type="reset" aria-label="{{ b.text.close_search_window }}">
+                          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.707 4.707a1 1 0 0 0-1.414-1.414L12 10.586 4.707 3.293a1 1 0 0 0-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 1 0 1.414 1.414L12 13.414l7.293 7.293a1 1 0 0 0 1.414-1.414L13.414 12l7.293-7.293z" fill="currentColor"></path>
+                          </svg>
+                        </button>
+                      </form>
+                    </div>
+                    <div class="blog-search__results-overlay blog-search__reset"></div>
+                    <div class="blog-search__results-wrapper">
+                      <div class="blog-search__results"></div>
+                    </div>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {{ require_css(get_asset_url('../css/components/blog-toolbar-1.css')) }}
+
+      {%- if b.toolbar.padding == 'custom' -%}
+        {%- set lg_css = '' -%}
+        {%- set sm_css = '' -%}
+        {%- if b.toolbar.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.toolbar.top_padding_lg ~ 'px;' %}{%- endif -%}
+        {%- if b.toolbar.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.toolbar.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+        {%- if lg_css -%}{% set lg_css = '.blog-toolbar-1 {' ~ lg_css ~ '}' %}{%- endif -%}
+        {%- if b.toolbar.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.toolbar.top_padding_sm ~ 'px;' %}{%- endif -%}
+        {%- if b.toolbar.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.toolbar.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+        {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-toolbar-1 {' ~ sm_css ~ '}}' %}{%- endif -%}
+        {%- if lg_css or sm_css -%}
+          {%- require_css -%}
+            <style>{{ lg_css ~ sm_css }}</style>
+          {%- end_require_css -%}
+        {%- endif -%}
+      {%- endif -%}
+
+    {%- endif -%}
+
+    {# Listing #}
+
+    {%- set blog_listing_partial = '../partials/blog-listing-' ~ b.listing.layout|replace('listing_', '') ~ '.html' -%}
+    {%- include blog_listing_partial -%}
+
+    {# Pagination #}
+
+    {%- if b.listing.layout != 'listing_4' -%}
+
+      {# "Load More" pagination #}
+
+      {%- if next_page_num and b.pagination.pagination_type == 'load_more' -%}
+        {{ require_css(get_asset_url('../css/components/center-button.css')) }}
+        {{ require_css(get_asset_url('../css/components/blog-load-more.css')) }}
+        {{ require_js(get_asset_url('../js/components/blog-load-more.js'), 'footer') }}
+        <div class="blog-load-more section justify-center">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <div class="center-btn">
+                  <a id="blog_load_more_btn" class="blog-load-more__btn center-btn__btn btn btn--large btn--outline btn--accent" href="javascript:;" next-page-link="{{ blog_page_link(next_page_num)|split('http:')|last }}">{{ b.text.load_more_stories }}</a>
+                  <div class="blog-load-more__loading">
+                     &nbsp;<div class="dot-pulse"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {# Classic pagination #}
+
+      {%- elif contents.total_page_count > 1 and b.pagination.pagination_type == 'classic' -%}
+        {{ require_css(get_asset_url('../css/components/blog-pagination.css')) }}
+        {%- set page_list = [-2, -1, 0, 1, 2] -%}
+        {%- if contents.total_page_count - current_page_num == 1 -%}{%- set offset = -1 -%}
+        {%- elif contents.total_page_count - current_page_num == 0 -%}{%- set offset = -2 -%}
+        {%- elif current_page_num == 2 -%}{%- set offset = 1 -%}
+        {%- elif current_page_num == 1 -%}{%- set offset = 2 -%}
+        {%- else -%}{%- set offset = 0 -%}{%- endif -%}
+        <div class="blog-pagination blog-pagination--{{ b.pagination.pagination_align }} section justify-center">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <div class="flex flex-row items-center {% if b.pagination.pagination_align == 'left' %}justify-start{% elif b.pagination.pagination_align == 'right' %}justify-end{% else %}justify-center{% endif %}">
+                  <a class="blog-pagination__item blog-pagination__item--arrow blog-pagination__item--prev {{ 'blog-pagination__item--disabled' if !last_page_num }}" href="{% if last_page_num %}{{ blog_page_link(last_page_num) }}{% else %}javascript:;{% endif %}">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70711 0.29289C7.31658 -0.09763 6.68342 -0.0976301 6.29289 0.29289L0.292899 6.2929C-0.0976007 6.6834 -0.0976007 7.3166 0.292899 7.7071L6.29289 13.7071C6.68342 14.0976 7.31658 14.0976 7.70711 13.7071C8.09763 13.3166 8.09763 12.6834 7.70711 12.2929L2.4142 7L7.70711 1.70711C8.09763 1.31658 8.09763 0.68342 7.70711 0.29289Z" fill="currentColor"/>
+                    </svg>
+                  </a>
+                  {%- for page in page_list -%}
+                    {%- set this_page = current_page_num + page + offset -%}
+                    {%- if this_page > 0 and this_page <= contents.total_page_count -%}
+                        <a class="blog-pagination__item blog-pagination__item--number {{ 'blog-pagination__item--active' if this_page == current_page_num }}" href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+                    {%- endif -%}
+                  {%- endfor -%}
+                  <a class="blog-pagination__item blog-pagination__item--arrow blog-pagination__item--next {{ 'blog-pagination__item--disabled' if !next_page_num }}" href="{% if next_page_num %}{{ blog_page_link(next_page_num) }}{% else %}javascript:;{% endif %}">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.29289 13.7071C0.68342 14.0976 1.31658 14.0976 1.70711 13.7071L7.7071 7.70708C8.0976 7.31658 8.0976 6.68338 7.7071 6.29288L1.70711 0.292875C1.31658 -0.097625 0.68342 -0.097625 0.29289 0.292875C-0.0976298 0.683375 -0.0976299 1.31657 0.29289 1.70707L5.5858 6.99998L0.29289 12.2929C-0.09763 12.6834 -0.09763 13.3166 0.29289 13.7071Z" fill="currentColor"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if b.pagination.padding == 'custom' -%}
+        {%- set lg_css = '' -%}
+        {%- set sm_css = '' -%}
+        {%- if b.pagination.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.pagination.top_padding_lg ~ 'px;' %}{%- endif -%}
+        {%- if b.pagination.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.pagination.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+        {%- if lg_css -%}{% set lg_css = '.blog-load-more, .blog-pagination {' ~ lg_css ~ '}' %}{%- endif -%}
+        {%- if b.pagination.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.pagination.top_padding_sm ~ 'px;' %}{%- endif -%}
+        {%- if b.pagination.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.pagination.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+        {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-load-more, .blog-pagination {' ~ sm_css ~ '}}' %}{%- endif -%}
+        {%- if lg_css or sm_css -%}
+          {%- require_css -%}
+            <style>{{ lg_css ~ sm_css }}</style>
+          {%- end_require_css -%}
+        {%- endif -%}
+      {%- endif -%}
+
+    {%- endif -%}
+
+    {# Subscription section #}
+
+    {%- if b.subscription_section.listing_subscription_section -%}
+      <div class="blog-sub section hs-search-hidden">
+        <div class="blog-sub__center container">
+          <div class="row">
+            <div class="col s12">
+              <div class="blog-sub__icon">
+                <figure class="icon icon--large icon--disc icon--fill icon--white-accent">
+                  <div class="icon__glyph">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.8954 2 10 2.89543 10 4V4.34141C7.66961 5.16508 6 7.38756 6 10L6 11.5L6 13.5996L4.38253 15.8237C3.94008 16.432 3.87642 17.2372 4.21777 17.9076C4.55913 18.5779 5.24775 19 6 19H9C9 20.6569 10.3431 22 12 22C13.6569 22 15 20.6569 15 19H18C18.7522 19 19.4409 18.5779 19.7822 17.9076C20.1236 17.2372 20.0599 16.432 19.6175 15.8237L18 13.5996L18 11.5V10C18 7.38756 16.3304 5.16508 14 4.34141V4C14 2.89543 13.1046 2 12 2ZM13.0012 17H13H11L8.47299 17H6L7.45455 15L7.61747 14.776C7.86608 14.4341 8 14.0223 8 13.5996V11.5V10C8 7.79086 9.79086 6 12 6C14.2091 6 16 7.79086 16 10L16 11.5V13.5996C16 14.0223 16.1339 14.4341 16.3825 14.776L16.5455 15L18 17H15.527H13.0012ZM12 20C11.4477 20 11 19.5523 11 19H13C13 19.5523 12.5523 20 12 20ZM17.0715 3.62861C17.2766 3.11583 17.8586 2.86641 18.3714 3.07152L18 4C18.3714 3.07152 18.372 3.07178 18.3727 3.07203L18.374 3.07257L18.3768 3.0737L18.3829 3.07622L18.3975 3.08233C18.4082 3.08688 18.4209 3.09242 18.4353 3.09898C18.4643 3.11211 18.5006 3.12941 18.5433 3.15134C18.6285 3.19515 18.7394 3.25776 18.8672 3.34295C19.1227 3.51327 19.448 3.77557 19.7682 4.15982C20.4219 4.94424 21 6.17226 21 8C21 8.55228 20.5523 9 20 9C19.4477 9 19 8.55228 19 8C19 6.62774 18.5781 5.85576 18.2318 5.44018C18.052 5.22443 17.8773 5.08673 17.7578 5.00705C17.6981 4.96724 17.6528 4.94235 17.6286 4.92991C17.6203 4.92565 17.6146 4.9229 17.6117 4.92154C17.1104 4.71051 16.8687 4.13573 17.0715 3.62861ZM5.62861 3.07152C6.14139 2.86641 6.72336 3.11583 6.92848 3.62861C7.13132 4.13573 6.88963 4.71051 6.38829 4.92154C6.38542 4.9229 6.37969 4.92565 6.37141 4.92991C6.34722 4.94235 6.30191 4.96724 6.2422 5.00705C6.12268 5.08673 5.94802 5.22443 5.76822 5.44018C5.4219 5.85576 5 6.62774 5 8C5 8.55228 4.55228 9 4 9C3.44772 9 3 8.55228 3 8C3 6.17226 3.5781 4.94424 4.23178 4.15982C4.55198 3.77557 4.87732 3.51327 5.1328 3.34295C5.26059 3.25776 5.37153 3.19515 5.45671 3.15134C5.49935 3.12941 5.53569 3.11211 5.56465 3.09898C5.57914 3.09242 5.5918 3.08688 5.60249 3.08233L5.61706 3.07622L5.62322 3.0737L5.62601 3.07257L5.62733 3.07203C5.62798 3.07178 5.62861 3.07152 6 4L5.62861 3.07152Z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </figure>
+              </div>
+              {%- if b.subscription_section.one_field_subscription_form -%}
+                {{ require_css(get_asset_url('../css/components/form.css')) }}
+                {{ require_css(get_asset_url('../css/components/one-field-form.css')) }}
+                {%- set blog_sub_form_classes = ' blog-sub__form--one form form--one-field' -%}
+              {%- else -%}
+                {%- set blog_sub_form_classes = ' blog-sub__form--multi' -%}
+              {%- endif -%}
+              {{ require_css(get_asset_url('../css/components/blog-sub.css')) }}
+              <div class="blog-sub__form{{ blog_sub_form_classes }}">
+                {% blog_subscribe 'blog_sub_form', label='Blog subscription',
+                  select_blog='{{ group.id }}',
+                  title={{ b.text.get_email_notifications }},
+                  overrideable=False
+                %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%- if b.subscription_section.padding == 'custom' -%}
+        {%- set lg_css = '' -%}
+        {%- set sm_css = '' -%}
+        {%- if b.subscription_section.top_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-top:' ~ b.subscription_section.top_padding_lg ~ 'px;' %}{%- endif -%}
+        {%- if b.subscription_section.bottom_padding_lg is not none -%}{% set lg_css = lg_css ~ 'padding-bottom:' ~ b.subscription_section.bottom_padding_lg ~ 'px;' %}{%- endif -%}
+        {%- if lg_css -%}{% set lg_css = '.blog-sub {' ~ lg_css ~ '}' %}{%- endif -%}
+        {%- if b.subscription_section.top_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-top:' ~ b.subscription_section.top_padding_sm ~ 'px;' %}{%- endif -%}
+        {%- if b.subscription_section.bottom_padding_sm is not none -%}{% set sm_css = sm_css ~ 'padding-bottom:' ~ b.subscription_section.bottom_padding_sm ~ 'px;' %}{%- endif -%}
+        {%- if sm_css -%}{% set sm_css = '@media(max-width:' ~ sm ~ 'px){' ~ '.blog-sub {' ~ sm_css ~ '}}' %}{%- endif -%}
+        {%- if lg_css or sm_css -%}
+          {%- require_css -%}
+            <style>{{ lg_css ~ sm_css }}</style>
+          {%- end_require_css -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+
+  {%- endif -%}
+
+  {# Below listing DnD area #}
+
+  {%- dnd_area 'blog_below_listing', label='Below the listing', class='blog-below-listing' -%}{%- end_dnd_area -%}
+{%- endblock body -%}

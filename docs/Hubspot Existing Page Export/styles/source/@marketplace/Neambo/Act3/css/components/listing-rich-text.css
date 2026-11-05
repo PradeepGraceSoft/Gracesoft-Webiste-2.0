@@ -1,0 +1,21 @@
+{% import "../_variables.css" as var %}
+
+.listing__rich-text {
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.listing__rich-text--boxed {
+  height: 100%;
+  padding: {{ var.gutter }}px;
+  background: {{ var.white }};
+  border-radius: {{ var.radius_7 }};
+  box-shadow: {{ var.medium_shadow }};
+}
+
+.listing__rich-text--boxed-dark {
+  background: {{ var.dark }};
+}
+
+.listing__rich-text--boxed p:last-child {
+  margin-bottom: 0;
+}

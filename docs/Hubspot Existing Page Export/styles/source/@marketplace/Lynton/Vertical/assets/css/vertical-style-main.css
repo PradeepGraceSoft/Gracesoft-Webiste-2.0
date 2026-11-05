@@ -1,0 +1,216 @@
+{% include './macros.css' %}
+{% include './fontawesome.css' %}
+
+:root,
+::before,
+::after {
+  --max-width: {{ theme.global.max_width }}px;
+  --vertical-spacing: {{ theme.global.spacing.vertical_spacing }}px;
+  --borders: {{ theme.global.borders.style.css|replace('border: ','') }};
+  --box-shadow: {{ box_shadow(theme.global.box_shadow) }};
+  --header-height: {{ theme.header.header_height }}px;
+
+  /* Colors */
+  --accent-color: {{ theme.global.colors.accent.color }};
+  --alt-accent-color: {{ theme.global.colors.accent_alt.color }};
+  --accent-light-color: {{ theme.global.colors.accent_light.color }};
+  --text-color: {{ theme.global.colors.text.color }};
+  --dark-bg: {{ field_color(theme.global.colors.background_dark) }};
+  --light-bg: {{ field_color(theme.global.colors.background_light) }};
+
+  /* Typography */
+  --primary-font: font_stack(theme.global.fonts.primary_font.font, theme.global.fonts.primary_font.fallback);
+  --secondary-font: font_stack(theme.global.fonts.secondary_font.font, theme.global.fonts.secondary_font.fallback);
+
+  {% set t = theme.typography %}
+  {% set types = [
+      {"font": t.body_text, "slug": "base"},
+      {"font": t.heading_one, "slug": "h1"},
+      {"font": t.heading_two, "slug": "h2"},
+      {"font": t.heading_three, "slug": "h3"},
+      {"font": t.heading_four, "slug": "h4"},
+      {"font": t.heading_five, "slug": "h5"},
+      {"font": t.heading_six, "slug": "h6"},
+      {"font": t.blockquote, "slug": "blockquote"},
+      {"font": t.eyebrow, "slug": "eyebrow"},
+      {"font": t.subheadline, "slug": "subheadline"}
+    ]
+  %}
+  {% for type in types %}
+    {{ typography(type.font, type.slug, false) }}
+  {% endfor %}
+
+  /* Links */
+  --links: {{ t.links.link_color.color }};
+  --links-hover: {{ t.links.link_hover_color.color }};
+
+  /* Buttons */
+  {{ typography(theme.global.buttons, "button", false) }}
+
+  --button-border-radius: {{ theme.global.buttons.corners }}px;
+  --button-border-width: {{ theme.global.buttons.border_width }}px;
+  --button-padding: {{ theme.global.buttons.vertical_padding }}px {{ theme.global.buttons.horizontal_padding }}px;
+  --header-button-padding: {{ (theme.global.buttons.vertical_padding - 5) if (theme.global.buttons.vertical_padding - 5) > 0 else theme.global.buttons.vertical_padding }}px {{ (theme.global.buttons.horizontal_padding - 10) if (theme.global.buttons.horizontal_padding - 10) > 10 else theme.global.buttons.horizontal_padding }}px;
+
+  {% set b = theme.buttons %}
+  {% set buttons = [
+      {"name": b.primary_colors, "slug": "primary"},
+      {"name": b.secondary_colors, "slug": "secondary"},
+      {"name": b.tertiary_colors, "slug": "tertiary"},
+      {"name": b.form, "slug": "form"},
+      {"name": b.link_button, "slug": "link"}
+    ]
+  %}
+  {% for button in buttons %}
+    {{ button_colors(button.name, button.slug) }}
+  {% endfor %}
+
+   /** Icons **/
+  --icon-color: {{ theme.icons.color.color }};
+  --icon-hover-color: {{ theme.icons.hover_color.color }};
+  --icon-enclosed-radius: {{ theme.icons.enclosed.radius }}px;
+  --icon-enclosed-color: {{ theme.icons.enclosed.color.color }};
+  --icon-enclosed-hover-color: {{ theme.icons.enclosed.hover_color.color }};
+  --icon-enclosed-bg-color: {{ theme.icons.enclosed.bg_color.color }};
+  --icon-enclosed-bg-hover-color: {{ theme.icons.enclosed.bg_hover_color.color }};
+  --icon-enclosed-border: {{ theme.icons.enclosed.border.css }};
+  --icon-enclosed-border-hover-color: {{ theme.icons.enclosed.border_hover_color.color }};
+
+  /** Lists **/
+  --list-spacing: {{ theme.lists.vertical_spacing }}px;
+  --bullet-content: "{{ "\\"~theme.lists.bullet_type }}";
+  --bullet-color: {{ theme.lists.bullet_color.color }};
+
+  /** Forms **/
+  {% set f = theme.forms.fields %}
+  {% set forms = [
+      {"font": f.label_text, "slug": "labels"},
+      {"font": f.help_text, "slug": "help"},
+      {"font": f.input_text, "slug": "input"},
+      {"font": f.placeholders_text, "slug": "placeholders"},
+      {"font": f.choice.text, "slug": "choice"},
+      {"font": f.errors.text, "slug": "errors"},
+      {"font": f.gdpr.text, "slug": "gdpr"}
+    ]
+  %}
+
+  {% for text in forms %}
+    --{{ text.slug }}-font: {{ font_short(text.font, 1) }};
+    --{{ text.slug }}-color: {{ text.font.color }};
+  {% endfor %}
+
+  --field-bg: {{ field_color(theme.forms.fields.bg_color) }};
+  --field-radius: {{ theme.forms.fields.border.radius }}px;
+  --field-border: {{ theme.forms.fields.border.style.css|replace('border: ','') }};
+  --field-focus: {{ theme.forms.fields.border.focus_color.color }};
+  --field-error: {{ theme.forms.fields.border.style.top.width.value + 1 }}px {{ theme.forms.fields.border.style.top.style }} {{ theme.forms.fields.border.error_color.color }};
+
+  --input-height: {{ theme.forms.fields.input.height }}px;
+
+  --multi-height: {{ theme.forms.fields.multiline.height }}px;
+
+  --choice-height: {{ theme.forms.fields.choice.height }}px;
+  --choice-checked-bg: {{ theme.forms.fields.choice.bg_color_checked.color }};
+
+  --errors-bg: {{ field_color(theme.forms.fields.errors.bg_color) }};
+
+  --select-arrow: url({{ get_asset_url('../icons/select-arrow.svg') }});
+
+  /** Box In **/
+  --boxin-bg: {{ field_color(theme.forms.boxin.bg_color) }};
+  --boxin-border: {{ theme.forms.boxin.border.style.css|replace('border: ','') }};
+  --boxin-radius: {{ theme.forms.boxin.border.radius }}px;
+  --boxin-shadow: {{ box_shadow(theme.forms.boxin.box_shadow) }};
+
+  /** Default **/
+  --default-title: {{ font_short(theme.forms.default.title, theme.forms.default.title_line_height) }};
+  --default-title-color: {{ theme.forms.default.title.color }};
+  --default-title-bg: {{ field_color(theme.forms.default.title_bg_color) }};
+  --default-title-padding: {% if theme.forms.default.title_bg_color.color %}1em{% else %}0{% endif %};
+  --default-bg: {{ field_color(theme.forms.default.bg_color) }};
+  --default-border: {{ theme.forms.default.border.css|replace('border: ','') }};
+  --default-padding: {% if theme.forms.default.border.css || theme.forms.default.bg_color.color %}1.5em{% else %}0{% endif %};
+
+  {{ padding(theme.forms.boxin, "boxin") }}
+
+  /** Sliders **/
+  --arrows: {{ field_color(theme.sliders.arrow_color) }};
+  --arrows-hover: {{ field_color(theme.sliders.arrow_color_hover) }};
+  --pagination: {{ field_color(theme.sliders.pagination_color) }};
+  --pagination-active: {{ field_color(theme.sliders.pagination_color_active) }};
+
+  /** Header **/
+  --header-sticky: {{ "fixed" if theme.header.sticky else "static" }};
+  --dropdown-background: {{ field_color(theme.header.child_menu_links.background_color) }};
+
+  /** Menus **/
+  {{ typography(theme.header.menu_links, "menu-link", false) }}
+  {{ typography(theme.header.child_menu_links, "child-link", false) }}
+
+  /** Footer **/
+  --footer-links: {{ theme.footer.text.link_color.color }};
+  --footer-links-hover: {{ theme.footer.text.link_hover_color.color }};
+
+  {{ typography(theme.footer.text, "footer", false) }}
+  {{ typography(theme.footer.menu_links, "footer-menu", false) }}
+  {{ typography(theme.footer.child_menu_links, "footer-child", false) }}
+}
+
+/** Dark Mode **/
+.module-wrapper--dark,
+.module-wrapper--dark *::after,
+.module-wrapper--dark *::before {
+  /* Typography */
+  {% for type in types %}
+    {{ typography(type.font, type.slug, true) }}
+  {% endfor %}
+
+  /* Links */
+  --links: {{ t.links.dark_mode_link.color }};
+  --links-hover: {{ t.links.dark_mode_link_hover.color }};
+
+  /* Buttons */
+  {{ button_colors(theme.buttons.form_dark, "form") }}
+
+  --button-link-text: {{ theme.buttons.link_button.dark_text.color }};
+  --button-link-text-hover: {{ theme.buttons.link_button.dark_text_hover.color }};
+
+  /** Icons **/
+  --icon-color: {{ theme.icons.dark_mode.color.color }};
+  --icon-hover-color: {{ theme.icons.dark_mode.hover_color.color }};
+  --icon-enclosed-color: {{ theme.icons.dark_mode.enclosed.color.color }};
+  --icon-enclosed-hover-color: {{ theme.icons.dark_mode.enclosed.hover_color.color }};
+  --icon-enclosed-bg-color: {{ theme.icons.dark_mode.enclosed.bg_color.color }};
+  --icon-enclosed-bg-hover-color: {{ theme.icons.dark_mode.enclosed.bg_hover_color.color }};
+  --icon-enclosed-border: {{ theme.icons.dark_mode.enclosed.border.css }};
+  --icon-enclosed-border-hover-color: {{ theme.icons.dark_mode.enclosed.border_hover_color.color }};
+
+  /** Lists **/
+  --bullet-color: {{ theme.lists.bullet_color_dark.color }};
+  --bullet-image: url({{ theme.lists.bullet_image_dark.src }});
+
+  /** Forms **/
+  {% set fd = theme.forms.dark_mode %}
+  {% set dark_forms = [
+      {"font": fd.labels, "slug": "labels"},
+      {"font": fd.help, "slug": "help"},
+      {"font": fd.input, "slug": "input"},
+      {"font": fd.placeholders, "slug": "placeholders"},
+      {"font": fd.choice, "slug": "choice"},
+      {"font": fd.errors, "slug": "errors"},
+      {"font": fd.gdpr, "slug": "gdpr"}
+    ]
+  %}
+
+  {% for text in dark_forms %}
+    --{{ text.slug }}-color: {{ text.font.color }};
+  {% endfor %}
+
+  /** Sliders **/
+  --arrows: {{ field_color(theme.sliders.dark_mode.arrow_color) }};
+  --arrows-hover: {{ field_color(theme.sliders.dark_mode.arrow_color_hover) }};
+  --pagination: {{ field_color(theme.sliders.dark_mode.pagination_color) }};
+  --pagination-active: {{ field_color(theme.sliders.dark_mode.pagination_color_active) }};
+}
+
+{% include './vertical-style.css' %}

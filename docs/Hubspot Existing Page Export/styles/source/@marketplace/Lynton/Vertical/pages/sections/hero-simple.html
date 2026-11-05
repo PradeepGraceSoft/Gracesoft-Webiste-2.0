@@ -1,0 +1,26 @@
+<!--
+  templateType: section
+  label: Hero - Simple
+  description: "A plain text-only hero."
+  isAvailableForNewContent: true
+  screenshotPath: ../../assets/screenshots/sections/hero--simple.png
+-->
+
+{% dnd_section max_width=740,
+  padding={{ context.padding || "{'top': 60, 'bottom': 60}" }},
+  background_image={{ context.bg_image }}
+%}
+  {% dnd_module path="../modules/Theme Rich Text",
+    eyebrow="",
+    heading={{ context.heading || "Meet Our People" }},
+    heading_level="h1"
+    subheading={{ context.subheading || "Vertical is a versatile and easy-to-use theme that can transform your scaling business with little effort. Made with care by HubSpot experts." }},
+    text=""
+    add_cta=false,
+    styles={
+      "text": {
+        "alignment": "center"
+      }
+    }
+  %}{% end_dnd_module %}
+{% end_dnd_section %}

@@ -1,0 +1,79 @@
+<!--
+ templateType: section
+ label: Review slider
+ description: "List reviews from your amazing customers/clients or business partners, each with photos and rates, in a smooth slider. You may need to save and reload the editor."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/review-slider.jpg
+-->
+{% dnd_section max_width=700 %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/section-extra-settings',
+        bg_color='dark'
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path='../modules/review',
+        items=[
+          {
+            'rating': 'full,full,full,full,full',
+            'quote': '“Happy to work with these guys. They went above and beyond and helped me achieve my big goals.”',
+            'author_photo': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-i0o53.jpg',
+              'alt': 'Describe your image',
+              'width': 80,
+              'height': 80,
+              'loading': 'lazy'
+            },
+            'company_logo': {
+              'src': ''
+            },
+            'author_name': 'Eric Lee',
+            'author_details': 'Brooklyn, New York'
+          },
+          {
+            'rating': 'full,full,full,full,full',
+            'quote': "“I definitely recommend Vokalia & Consonantia. Find the courage to pursue your dream. Don't wait, like I did.”",
+            'author_photo': {
+              'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-b8etd.jpg',
+              'alt': 'Describe your image',
+              'width': 80,
+              'height': 80,
+              'loading': 'lazy'
+            },
+            'company_logo': {
+              'src': ''
+            },
+            'author_name': 'Kelly Brighton',
+            'author_details': 'Boston, Massachusetts'
+          }
+        ],
+        settings={
+          'color_scheme': 'dark',
+          'col': {
+            'lg': '1',
+            'md': '1'
+          },
+          'rating': true,
+          'boxed': false,
+          'quote_size': 'xlarge',
+          'slider': true,
+          'slider_settings': {
+            'arrows': {
+              'white': true
+            },
+            'dots': {
+              'white': true
+            },
+            'center_mode': true
+          }
+        },
+        wrapper={
+          'text_align': {
+            'lg': 'center'
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

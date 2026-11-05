@@ -1,0 +1,719 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home 3
+  screenshotPath: ../images/template-previews/home-3.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': 0
+        }
+      }
+    %}
+      {% dnd_module path='../modules/section-intro',
+        overline='Everything You Need',
+        title='Design. Results. Growth.',
+        desc='<p>Help visitors get the basic idea within a few seconds, so they understand what this section is about.</p>',
+        settings={
+          'title_tag': 'h1',
+          'title_looks_like': 'display',
+          'text_max_width': '420'
+        },
+        wrapper={
+          'max_width': {
+            'lg': ''
+          },
+          'margin': {
+            'bottom': {
+              'lg': ''
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# SECTION: Cards #}
+
+    {% dnd_section
+      max_width=1600,
+      padding={
+        'default': {
+          'top': 0,
+          'bottom': (vspace_lg / 2)|round(0)
+        },
+        'mobile': {
+          'left': 0,
+          'right': 0
+        }
+      }
+    %}
+      {% dnd_module path='../modules/go-card',
+        items=[
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-suzpg.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mcqne.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-cwfdn.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-s01l8.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          },
+          {
+            'image': {
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-flte8.jpg',
+              'alt': 'Describe your image',
+              'width': 400,
+              'height': 296,
+              'loading': 'lazy'
+            },
+            'title': 'Nothing else matters',
+            'desc': 'Nothing else matters',
+            'arrow': true,
+            'color': 'white',
+            'title_tag': 'h4',
+            'link': {
+              'url': {
+                'type': 'EXTERNAL',
+                'href': 'https://www.hubspot.com/'
+              },
+              'open_in_new_tab': true,
+              'no_follow': true
+            }
+          }
+        ],
+        settings={
+          'col': {
+            'lg': '3',
+            'md': '2'
+          },
+          'slider': true,
+          'slider_settings': {
+            'arrows': {
+              'lg': true,
+              'md': true,
+              'sm': false,
+              'white': false
+            },
+            'dots': {
+              'lg': true,
+              'md': true,
+              'sm': true,
+              'white': false
+            },
+            'center_mode': true
+          }
+        },
+        wrapper={
+          'max_width': {
+            'sm': '550'
+          },
+          'block_align': {
+            'sm': 'center'
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# SECTION: Properties #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': gutter,
+          'bottom': gutter
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            top_border='default',
+            bottom_border='default'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/properties',
+            items=[
+              {
+                'text': 'Attract',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'magnet',
+                    'style': 'SOLID',
+                    'unicode': 'f076',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'text': 'Convert',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Sync',
+                    'style': 'SOLID',
+                    'unicode': 'f2f1',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'text': 'Close',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Handshake',
+                    'style': 'SOLID',
+                    'unicode': 'f2b5',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'text': 'Delight',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Hand Holding Heart',
+                    'style': 'SOLID',
+                    'unicode': 'f4be',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent'
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              }
+            ],
+            settings={
+              'stack': false,
+              'icons': {
+                'shape': 'disc',
+                'fill': 'fill',
+                'size': 'small'
+              }
+            },
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Benefits intro #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_module path='../modules/section-intro'
+        overline='Overline',
+        title='Section Intro',
+        desc='<p>Help visitors get the basic idea within a few seconds, so they understand what this section is about.</p>',
+        settings={
+          'title_tag': 'h2',,
+          'title_looks_like': 'h1',
+          'text_max_width': ''
+        },
+        wrapper={
+          'margin': {
+            'bottom': {
+              'lg': ''
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# SECTION: Benefits #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/features-showcase' %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Numbers #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {# Row 1 #}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bottom_border='default'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {# Row 2 #}
+        {% dnd_row vertical_alignment='MIDDLE' %}
+          {# Col 1 #}
+          {% dnd_column offset=0, width=4,
+            padding={
+              'default': {
+                'right': gutter
+              },
+              'mobile': {
+                'right': 0,
+                'bottom': (gutter * 2)|round(0)
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/numbers',
+                number='100%',
+                text='
+                  <h3>Traffic Increase</h3>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                '
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {# Col 2 #}
+          {% dnd_column offset=4, width=4,
+            padding={
+              'default': {
+                'left': (gutter / 2)|round(0),
+                'right': (gutter / 2)|round(0)
+              },
+              'mobile': {
+                'left': 0,
+                'right': 0,
+                'bottom': (gutter * 2)|round(0)
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/numbers',
+                number='27k+',
+                text='
+                  <h3>Leads Generated</h3>
+                  <p>Far far away, behind the word mountains, far from the countries.</p>
+                '
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {# Col 3 #}
+          {% dnd_column offset=8, width=4,
+            padding={
+              'default': {
+                'left': gutter
+              },
+              'mobile': {
+                'left': 0
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/numbers',
+                number='700+',
+                text='
+                  <h3>Success Stories</h3>
+                  <p>Far far away, behind the word mountains, far from the countries Consonantia.</p>
+                '
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Features intro #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_module path='../modules/section-intro'
+        overline='Overline',
+        title='Section Intro',
+        desc='<p>Help visitors get the basic idea within a few seconds, so they understand what this section is about.</p>',
+        settings={
+          'title_tag': 'h2',,
+          'title_looks_like': 'h1',
+          'text_max_width': ''
+        },
+        wrapper={
+          'margin': {
+            'bottom': {
+              'lg': ''
+            }
+          }
+        }
+      %}{% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# SECTION: Features #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': 0
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bg_color='light',
+            top_deco={
+              'type': 'concave',
+              'color': 'white',
+              'arc_height_lg': 216,
+              'arc_height_md': 216,
+              'arc_height_sm': 216
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/feature-card',
+            card=[
+              {
+                'title': 'Made with HubSpot',
+                'desc': 'Powerful drag-and-drop Page Editor and Theme Settings.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'HubSpot',
+                    'style': 'REGULAR',
+                    'unicode': 'f3b2',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Fast and SEO-ready',
+                'desc': 'Great score on Google PSI, both desktop and mobile.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Alternate Tachometer',
+                    'style': 'SOLID',
+                    'unicode': 'f3fd',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Fully Responsive',
+                'desc': 'Feels and looks great on any screen size and any device.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Mobile Phone',
+                    'style': 'SOLID',
+                    'unicode': 'f10b',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Beautiful & Modern',
+                'desc': 'Everything fits perfectly for a great aesthetic sense & feeling.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Star',
+                    'style': 'SOLID',
+                    'unicode': 'f005',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Easily Customizable',
+                'desc': 'Easier than ever to match your brand style and feeling.',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'tint',
+                    'style': 'SOLID',
+                    'unicode': 'f043',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'accent'
+                },
+                'color': 'white',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 300,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': ''
+                  },
+                  'open_in_new_tab': false,
+                  'no_follow': false
+                }
+              },
+              {
+                'title': 'Buy Now',
+                'desc': 'Available on the HubSpot Marketplace',
+                'icon': {
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Shopping Cart Arrow Down',
+                    'style': 'SOLID',
+                    'unicode': 'f218',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'shape': 'disc',
+                  'fill': 'fill',
+                  'size': 'large',
+                  'color': 'white-accent'
+                },
+                'color': 'accent',
+                'shadow': true,
+                'title_tag': 'h4',
+                'title_looks_like': '',
+                'max_width': 200,
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': 's4',
+                'md': 'md-s6'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

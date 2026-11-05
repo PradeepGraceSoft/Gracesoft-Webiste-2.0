@@ -1,0 +1,274 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Blog Listing
+  screenshotPath: ../images/template-previews/blog-index.jpg
+-->
+{% if (blog_listing_dnd_area == 'disable') || tag || blog_author %}
+{% set template_css = '../../css/blogs/archive-default.css' %} 
+{% endif %}
+
+{% extends './layouts/base.html' %}
+{% set blog_listing_dnd_area = theme.blog_listing.blog_listing_dnd_area %}
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper {% if (blog_listing_dnd_area == 'enable') and !tag and !blog_author %} atbs-home-design atbs-leave-margin-footer {% endif %}">
+  <div class="site-content">
+    {% if (blog_listing_dnd_area == 'disable') || tag || blog_author %}
+    <div class="atbs-block atbs-block--fullwidth atbs-archive-page" data-layout="container">
+      {% if tag %}
+      <div class="block-heading text-center block-heading-style-1">
+        <h3 class="block-heading__title atbs-exclude">
+          {{page_meta.html_title|split(' | ')|last}}
+        </h3>
+      </div>
+      {% elif blog_author %}
+      <div class="author-box__wrapper">
+          <div class="author-box">
+              {% if blog_author.avatar %}
+              <div class="author-avatar">
+                  <img alt="{{ resize_image_url(blog_author.display_name, 110, 110, 110,true,true) }}" src="{{ blog_author.avatar }}" class="avatar photo">
+              </div>
+              {% endif %}
+              <div class="author-box__text">
+                  <div class="author-name">
+                      <span class="entry-author__name">{{ blog_author.display_name }}</span>
+                  </div>
+                  {% if blog_author.bio %}
+                    <p class="author-bio">{{ blog_author.bio }}</p>
+                  {% endif %}
+                  {% if blog_author.has_social_profiles %}
+                  <div class="author-social list-unstyled list-horizontal">
+                    {% if blog_author.website %}
+                      <a href="{{ blog_author.website }}" target="_blank" rel="noopener">
+                        {% icon
+                          name='link',
+                          purpose='semantic',
+                          style='SOLID',
+                          title='Follow me on my website',
+                          width='10'
+                        %}
+                      </a>
+                    {% endif %}
+                    {% if blog_author.facebook %}
+                      <a href="{{ blog_author.facebook }}" target="_blank" rel="noopener">
+                        {% icon
+                          name='facebook-f',
+                          purpose='semantic',
+                          style='SOLID',
+                          title='Follow me on Facebook',
+                          width='10'
+                        %}
+                      </a>
+                    {% endif %}
+                    {% if blog_author.linkedin %}
+                      <a href="{{ blog_author.linkedin }}" target="_blank" rel="noopener">
+                        {% icon
+                          name='linkedin-in',
+                          purpose='semantic',
+                          style='SOLID',
+                          title='Follow me on LinkedIn',
+                          width='10'
+                        %}
+                      </a>
+                    {% endif %}
+                    {% if blog_author.twitter %}
+                      <a href="{{ blog_author.twitter }}" target="_blank" rel="noopener">
+                        {% icon
+                          name='twitter',
+                          purpose='semantic',
+                          style='SOLID',
+                          title='Follow me on Twitter',
+                          width='10'
+                        %}
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+          </div>
+      </div>
+      {% endif %}
+        <div class="posts-list flex-box box-item-4i box-space-40">
+          {% for post in contents %}
+              <div class="list-item">
+                  <article class="post post--vertical post--vertical-rectangle">
+                    {% if post.featured_image %}
+                      <div class="post__thumb object-fit" data-height="310">
+                          <a href="{{ post.absolute_url }}">
+                              <div class="box-background-image atbs-img-lazy" data-src="{{ resize_image_url(post.featured_image, 350, 250, 350,true,true) }}"></div>
+                          </a>
+                          {% if post.topic_list[0].name %}
+                          <a href="{{ blog_tag_url(my_blog, post.topic_list[0].slug) }}" class="post__cat post__cat-bg overlay-item--top-left">{{ post.topic_list[0].name }}</a>
+                          {% endif %}
+                      </div>
+                    {% else %}
+                      <div class="post__thumb object-fit" data-height="310">
+                          <a href="{{ post.absolute_url }}">
+                              <div class="box-background-image atbs-img-lazy" data-src="{{ get_asset_url('../images/grayscale-mountain.png') }}"></div>
+                          </a>
+                          {% if post.topic_list[0].name %}
+                          <a href="{{ blog_tag_url(my_blog, post.topic_list[0].slug) }}" class="post__cat post__cat-bg overlay-item--top-left">{{ post.topic_list[0].name }}</a>
+                          {% endif %}
+                      </div>
+                    {% endif %}
+                      <div class="post__text">
+                          <h3 class="post__title f-22 f-w-600 atbs-exclude">
+                              <a href="{{ post.absolute_url }}">{{ post.name }}</a>
+
+                          </h3>
+                      </div>
+                  </article>
+              </div>
+            {% endfor %}
+        </div>
+      {# Blog pagination #}
+      {% if (blog_author and (contents.total_page_count > 1) ) || 
+            (tag and (contents.total_page_count > 1) ) || 
+            ( !tag and !blog_author and (contents.total_page_count > 1) and (blog_listing_dnd_area == 'disable') )   
+      %}
+          <nav class="atbs-pagination atbs-pagination__links flex-box align-item-center justify-content-center">
+              {% set page_list = [-2, -1, 0, 1, 2] %}
+              {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+              {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+              {% elif current_page_num == 2 %}{% set offset = 1 %}
+              {% elif current_page_num == 1 %}{% set offset = 2 %}
+              {% else %}{% set offset = 0 %}{% endif %}
+              <a class="atbs-pagination__item atbs-pagination__item-prev {{ 'disable-click' if !last_page_num }} " {% if last_page_num %} href="{% if current_page_num == 2 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(last_page_num) }}{% endif %}"{% endif %}>
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3287 5.00023V7.00023L4.50042 7.00023L7.74294 10.2428L6.32873 11.657L0.671875 6.00012L6.32873 0.343262L7.74294 1.75747L4.50019 5.00023L17.3287 5.00023Z" fill="#222222"/>
+                </svg>
+              </a>
+              {% for page in page_list %}
+                {% set this_page = current_page_num + page + offset %}
+                {% if this_page > 0 and this_page <= contents.total_page_count %}
+                  <a class="atbs-pagination__item {{ 'atbs-pagination-active__item' if this_page == current_page_num }}" aria-label="Go to Page {{ this_page }}" {{ 'aria-current="true"' if this_page == current_page_num }} href="{% if this_page == 1 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(this_page) }}{% endif %}">{{ this_page }}</a>
+                {% endif %}
+              {% endfor %}
+              <a class="atbs-pagination__item atbs-pagination__item-next {{ 'disable-click' if !next_page_num }} " {% if next_page_num %} href="{{ blog_page_link(current_page_num + 1) }}"{% endif %} >
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0377 0.343262L10.6268 1.76078L13.897 5.01575L0.291992 5.02944L0.294005 7.02944L13.8618 7.01578L10.6466 10.246L12.0641 11.6569L17.7078 5.98686L12.0377 0.343262Z" fill="#222222"/>
+                </svg>
+              </a>
+          </nav>
+    </div>
+    {% endif %}
+    {# End blog pagination #}
+
+    {% elif (blog_listing_dnd_area == 'enable') and !tag and !blog_author %}
+        {% dnd_area "body_dnd_blog_listing" class='body-container ' %}
+
+           <!-- block heading -->
+            {% dnd_section 'section 1',
+               full_width="true",
+                padding={
+                  'top': '0',
+                  'bottom': '0',
+                  'left': '0',
+                  'right': '0'
+                },
+                margin={
+                  'top': 0,
+                  'bottom': 150
+                },
+            %}
+                {% dnd_module 
+                path="../modules/block-post-grid-1-techies.module"
+                %}
+                {% end_dnd_module %}
+            {% end_dnd_section %}
+           <!-- block heading -->
+
+
+           <!-- blog list -->
+            {% dnd_section 'section 2',
+               full_width="true",
+                padding={
+                  'top': '0',
+                  'bottom': '0',
+                  'left': '0',
+                  'right': '0'
+                },
+                margin={
+                  'top': 0,
+                  'bottom': 150
+                },
+            %}
+                {% dnd_module 
+                path="../modules/listing-grid-article-no-sidebar-1-techies.module"
+                %}
+                {% end_dnd_module %}
+            {% end_dnd_section %}
+           <!-- blog list -->
+
+           <!-- block gallery -->
+            {% dnd_section 'section 3',
+               full_width="true",
+                padding={
+                  'top': '0',
+                  'bottom': '0',
+                  'left': '0',
+                  'right': '0'
+                },
+                margin={
+                  'top': 0,
+                  'bottom': 150
+                },
+            %}
+                {% dnd_module 
+                path="../modules/block-post-grid-2-techies.module"
+                %}
+                {% end_dnd_module %}
+            {% end_dnd_section %}
+           <!-- block gallery -->
+
+           <!-- blog list -->
+            {% dnd_section 'section 4',
+               full_width="true",
+                padding={
+                  'top': '0',
+                  'bottom': '0',
+                  'left': '0',
+                  'right': '0'
+                },
+                margin={
+                  'top': 0,
+                  'bottom': 150
+                },
+            %}
+                {% dnd_module 
+                path="../modules/listing-grid-article-no-sidebar-2-techies.module",
+                choice_field_load_posts="enable"
+                %}
+                {% end_dnd_module %}
+            {% end_dnd_section %}
+           <!-- blog list -->
+
+
+           <!-- blog list -->
+            {% dnd_section 'section 5',
+               full_width="true",
+                padding={
+                  'top': '0',
+                  'bottom': '0',
+                  'left': '0',
+                  'right': '0'
+                },
+                margin={
+                  'top': 0,
+                  'bottom': 0
+                },
+            %}
+                {% dnd_module 
+                path="../modules/listing-list-article-no-sidebar-1-techies.module"
+                %}
+                {% end_dnd_module %}
+            {% end_dnd_section %}
+           <!-- blog list -->
+
+        
+        {% end_dnd_area %}
+    {% endif %}
+    </div>
+</main>
+{% endblock body %}

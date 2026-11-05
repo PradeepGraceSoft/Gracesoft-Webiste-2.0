@@ -1,0 +1,506 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Homepage Three
+screenshotPath: ../images/template-previews/home-three.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--homepage-three'
+%}
+
+{# Homepage Banner #}
+{% dnd_section
+    vertical_alignment='MIDDLE',
+    full_width=true,
+    padding = {
+          'default': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          },
+          'mobile': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+         }
+     }
+%}
+{% dnd_column
+    padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module
+      path='../modules/banner-layouts',
+      "subtitle"="",
+      "content"="<h1>Launch Website On iOS And Android</h1><p>Just imagine, believe, and achieve. Facilely run the app. App is coded by brilliant developers and tested by experienced testers.</p>"
+      primary_cta={ type: 'btn', style: 'filled_light', text: 'Lets Begin' },
+      secondary_cta={ type: 'btn', style: 'arrow_light', text: 'Watch Video' },  
+      "image"={
+        'src': get_asset_url('../images/multipurpose/banner-three.png')
+      },
+       style_1={
+        'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 40,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+      }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Homepage Banner #}
+
+{# Card Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 35,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Unlock The Pre-eminent Features</h2>
+        <p>This App consists of different elements and numerous features for providing amazing user experience.</p>"
+         style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_card' 
+				path='../modules/card',
+        styles= {
+          'alignment_choice': {alignment: 'left'}
+        }
+   card =[{
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Easy Installation",
+        "enable_content": True,
+        "description": "<p>You can easily install the app from Google Play Store as well as Apple Play Store.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Android And iOS App",
+        "enable_content": True,
+        "description": "<p>Mobile Application is compatible for both these platforms with excellent UI/UX design.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Customization",
+        "enable_content": True,
+        "description": "<p>Fulfil your every hankering. Update your settings, manage languages, and perform configuration.</p>",        
+        },
+        {
+        "enable_number": False,
+       "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Top quality",
+        "enable_content": True,
+        "description": "<p>We are honoured to be the “Best Android Templates of 2022.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Unswerving",
+        "enable_content": True,
+        "description": "<p>Our App is stable. Work with eCommerce sites, it will be connected with your site so that you can easily manage your store.</p>",        
+        },
+        {
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/automation.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Highly Supportive",
+        "enable_content": True,
+        "description": "<p>Get in touch with us. Never hesitate. Our team is always ready to assist you. Feel free to contact us or drop an email.</p>",        
+        }
+        ]
+			%}
+{% module_attribute 'card_layouts' is_json=True %}
+{
+"layouts": "card"
+}
+{% end_module_attribute %}
+{% module_attribute 'card_column' is_json=True %}
+{
+"column_choice": "three_column"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/button',
+        button={ type: 'btn', style: 'filled_light', text: 'Know More' },
+         styles={
+          general_settings: {
+          "alignment_desktop_": "center"
+          }
+        }
+     %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Card Section #}
+
+{# Two Column Video Section #}
+{% include_dnd_partial path='../sections/two-column-video-text.html' %}
+{# End Of Two Column Video Section #}
+
+{# Two Column Content Section #}
+{% include_dnd_partial path='../sections/two-column-content.html' %}
+{# End Of Two Column Content Section #}
+
+{# Team Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row 
+    padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 40,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 20,
+      'left': 0
+    }
+  }
+%}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Our Team</h2>
+        <p>We are led by a team of highly dedicated professionals which turn challenges into fruitful results for our business.</p>"
+         style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_team' 
+				path='../modules/our-team',
+        style={
+          'alignment': { alignment: 'center' }
+        }
+        team_member =[{
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jane-cooper.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Jane Cooper",
+        "designation": "Digital Marketting",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jenny-wilson.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Jenny Wilson",
+        "designation": "Web Designer",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/wade-warner.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Wade Warren",
+        "designation": "Front-end Devloper",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/cameron-williamson.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Cameron Williamson",
+        "designation": "Digital Marketting",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/cody-fisher.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Cody Fisher",
+        "designation": "UI/UX Designer",        
+        },
+        {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/zelia-doe.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Zelia Doe",
+        "designation": "Sr.Business Analyst",        
+        },{
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jane-cooper.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Maria Harris",
+        "designation": "Managing Director",        
+        },{
+        "image":{
+          "src": get_asset_url('../images/multipurpose/jenny-wilson.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Jackie Doumet",
+        "designation": "Software Engineer",    
+        }, {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/wade-warner.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Maria Harris",
+        "designation": "Managing Director",        
+        }, {
+        "image":{
+          "src": get_asset_url('../images/multipurpose/brooklyn.png'),
+          "alt": "Team Member"
+        },
+        "members_name": "Brooklyn Simmons",
+        "designation": "Technical Team Lead",           
+        }]
+			%}
+{% module_attribute 'layout_choices' is_json=True %}
+{
+"select_layout": "slider_with_dots"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Team Section #}
+
+{# Testimonials Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Testimonials</h2><p>We always aim to fulfill our clients aspirations. So that there will be shortcomings in their path.</p>"
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_testimonials' 
+				path='../modules/testimonials',
+        "hide_show_quotes"=true,
+        "hide_show_slider_dots" = false,
+			%}
+{% module_attribute 'testimonial_layouts_choice' is_json=True %}
+{
+"testimonial_layouts": "single_column_side_nav_slider"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Testimonials Section #}
+
+{# Partners Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 'au_partners' 
+				path='../modules/our-partners',
+        style={
+          'greyscale':{ icon_greyscale: true }
+        }
+           partner_content=[
+     {
+
+    'logo': {
+      'alt': 'Hubspot Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/hubspot-partner.png')
+     },
+     },
+     {
+    'logo': {
+      'alt': 'Capterra Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/capterra.png')
+     },
+     },
+    {
+
+    'logo': {
+      'alt': 'Goodfirms Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/goodfirms.png')
+     },
+    },
+     {
+
+    'logo': {
+      'alt': 'Crowd Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/crowd.png')
+     },
+     },
+      {
+
+    'logo': {
+      'alt': 'Trustpilot Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/trustpilot.png')
+     },
+     },
+       {
+
+    'logo': {
+      'alt': 'Software Suggest Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/software-suggest.png')
+     },
+     }
+  ]
+%}
+{% module_attribute 'layout_choice' is_json=True %}
+{
+"select_layout": "listing"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Partners Section #}
+
+{# Contact Section #}
+{% include_dnd_partial path='../sections/contact-us.html' %}
+{# End of Contact Section #}
+
+{# Call To Action Section #}
+{% include_dnd_partial path='../sections/cta-column-reverse.html' %}
+{# End of Call To Action Section #}
+
+{% end_dnd_area %}
+{% endblock body %}

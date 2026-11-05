@@ -1,0 +1,23 @@
+<!--
+  templateType: email_subscriptions_confirmation_page
+  isAvailableForNewContent: true
+  label: Environmental - email subscriptions confirmation
+  screenshotPath: ../../images/template-previews/confirm-subscriptions.png
+-->
+{% set template_css = '../../css/templates/system.css' %}
+{% extends '../layouts/base.html' %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Confirm subscriptions" %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="systems-page en-subscriptions-confirmation">
+    <div class="systems-page__content-wrap">
+      <h1 class="systems-page__heading">Thanks for updating your email preference</h1>
+    </div>
+    {% module 'subscriptions_confirmation'
+    path='@hubspot/email_subscriptions_confirmation'
+    %}
+  </div>
+</section>
+{% endblock body %}

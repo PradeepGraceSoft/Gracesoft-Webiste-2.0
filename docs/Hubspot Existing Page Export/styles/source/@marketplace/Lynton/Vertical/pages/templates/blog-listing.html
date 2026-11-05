@@ -1,0 +1,104 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/blog-listing.png
+  label: "Blog Listing"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top", no_wrapper=true %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header", make_transparent=true %}
+{% endblock %}
+
+{% block body %}
+  {% if blog_author %}
+    {% dnd_area "author_hero" %}
+      {% dnd_section
+          max_width=800,
+          background_color="{{ theme.global.colors.background_light.color }}",
+          margin={
+            'bottom': 50
+          }
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path="../modules/Blog Author" %}{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  {% endif %}
+
+  {% if !blog_author && !tag %}
+    {% dnd_area "main_hero" %}
+      {% dnd_section
+          full_width=true,
+          padding={'top': 150, 'bottom': 75},
+          background_image = {
+            "backgroundPosition": "MIDDLE_CENTER",
+            "backgroundSize": "cover",
+            "imageUrl": get_asset_url('../../assets/images/contact-full-width-bg.png')
+          }
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path="../modules/Theme Rich Text",
+              eyebrow="",
+              heading="{{ blog.public_title || 'The Vertical Blog' }}",
+              heading_level="h1",
+              subheading="{{ blog.description || 'The latest updates, stories and ideas.' }}",
+              text="",
+              styles={
+                "text": {
+                  "alignment": "center"
+                }
+              }
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {% dnd_section padding={'bottom': 80} %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path="../modules/Blog Featured Posts" %}{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  {% endif %}
+
+  {% if tag %}
+    {% dnd_area "tag_hero" %}
+      {% dnd_section
+        max_width=800,
+        padding={'top': 100, 'bottom': 50},
+      %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path="../modules/Theme Rich Text",
+              eyebrow="",
+              heading="{{ contents_topics|selectattr('slug', 'equalto', tag)|map(attribute='name')|join() }}",
+              subheading="",
+              text="",
+              styles={
+                "text": {
+                  "alignment": "center"
+                }
+              }
+            %}{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  {% endif %}
+
+  {% dnd_area "post_listing" %}
+    {% dnd_section padding={'bottom': 100} %}
+      {% dnd_module path="../modules/Blog Listing" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+{% endblock %}

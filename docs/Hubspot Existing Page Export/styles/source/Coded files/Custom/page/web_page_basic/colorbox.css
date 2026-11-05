@@ -1,0 +1,259 @@
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9998; overflow:visible;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#cboxOverlay{background:#fff;}
+#colorbox{}
+#cboxContent{margin-top:32px; overflow:visible;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{background:#000; padding:0;border:5px solid #0E3155;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+#cboxLoadingGraphic{background:url('/Portals/107648/assets/bookingengine/images/loading.gif') no-repeat center center;}
+#cboxLoadingOverlay{background:#000;}
+#cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
+#cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+#cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose{
+text-indent:-9999px; width:24px; height:24px; position:absolute; top:-10px; 
+background:#0E3155 url('/Portals/107648/assets/bookingengine/images/controls.png') no-repeat 0 0;
+-moz-border-radius:12px;
+-webkit-border-radius:12px;
+border-radius:12px; 
+color: #FFFFFF;
+}
+#cboxPrevious{background-position:0px 0px; right:44px;}
+#cboxPrevious:hover{background-position:0px -25px;}
+#cboxNext{background-position:-25px 0px; right:22px;}
+#cboxNext:hover{background-position:-25px -25px;}
+#cboxClose{background-position:-48px 1px; right:-10px;z-index:9999}
+#cboxClose:hover{background-position:-48px -25px;}
+.cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{right:66px;}
+.cboxSlideshow_on #cboxSlideshow{background-position:-75px -25px; right:44px;}
+.cboxSlideshow_on #cboxSlideshow:hover{background-position:-100px -25px;}
+.cboxSlideshow_off #cboxSlideshow{background-position:-100px 0px; right:44px;}
+.cboxSlideshow_off #cboxSlideshow:hover{background-position:-75px -25px;}
+
+/*Colorbox Custom Start*/
+.demo ul li {
+border: 3px solid #fff;
+box-shadow: 0 0 6px rgba(0,0,0,.2);
+-webkit-box-shadow:0 0 6px rgba(0,0,0,.2);
+-moz-box-shadow: 0 0 6px rgba(0,0,0,.2);
+float: left;
+display: block;
+margin-bottom: 15px;
+margin-right: 0px;
+margin-left: 0px;
+height: 130px;
+padding: 0px;
+}
+
+.demo ul li .contentext {
+position: absolute;
+width: 100%;
+height: 130px;
+background: url('http://cdn2.hubspot.net/hub/107648/file-240357227-png/assets/bookingengine/images/ex_hotel_shad.png') repeat-x top;
+}
+
+.demo ul li .contentext2 {
+width: 100%;
+}
+
+.demo ul li .text {
+color: #fff;
+text-decoration: none;
+width: 45%;
+float: left;
+padding: 5px 7px;
+font-family: 'Helvetica';
+font-size: 15px;
+text-align: left;
+}
+
+.demo ul li .text2 {
+text-align: right;
+font-family: 'helvetica';
+width: 55%;
+font-size: 12px;
+padding-top: 7px;
+}
+
+.demo {
+margin: 0 auto;
+}
+
+.demo p, .demo ul {
+margin-right: 0;
+}
+
+.image-grid:after {
+content: "";
+display: block;
+height: 0;
+overflow: hidden;
+clear: both;
+}
+
+.image-grid {
+padding-left: 0px;
+}
+
+.image-grid li {
+float: left;
+text-align: center;
+font-family: "Helvetica Neue",sans-serif;
+line-height: 17px;
+color: #686f74;
+height: 177px;
+overflow: hidden;
+}
+
+.image-grid li img, .image-grid li strong {
+display: block;
+}
+
+.image-grid li strong {
+color: #fff;
+}
+
+.hs-switch {
+width: 100%;
+height: 130px;
+position: absolute;
+}
+
+.hs-switch .hs-pre {
+color: #CC0000;
+font-family: trebuchet ms;
+font-size: 14pt;
+font-weight: normal;
+text-decoration: none;
+height: 130px;
+display: inline-block;
+position: relative;
+z-index: 999;
+width: 100%;
+}
+
+.hs-switch .hs-pre b {
+height: 124px;
+}
+
+.hs-switch a {
+color: #00CCCC;
+font-family: trebuchet ms;
+font-size: 14pt;
+font-weight: normal;
+text-decoration: none;
+display: inline-block;
+height: 130px;
+position: relative;
+z-index: 999;
+width: 100%;
+}
+
+.hs-switch a .asdf {
+display: none;
+text-decoration: none;
+position: relative;
+z-index: 999;
+height: 130px;
+width: 100%;
+}
+
+.hs-switch a:hover .asdf {
+color: #0000CC;
+display: block;
+text-decoration: none;
+background-color: transparent;
+display: inline-block;
+width: 100%;
+height: 130px;
+z-index: 999;
+background: url('http://cdn2.hubspot.net/hub/107648/file-239491379-png/assets/bookingengine/images/ex_hotel_hover.png') repeat;
+}
+
+.hs-switch a:hover .hs-pre {
+display: none;
+text-decoration: none;
+position: relative;
+z-index: 999;
+}
+
+.asdf {
+opacity: 0;
+-webkit-transition: opacity 0.3s linear;
+-moz-transition: opacity 0.3s linear;
+-ms-transition: opacity 0.3s linear;
+}
+
+.asdf:hover {
+opacity: 1;
+}
+
+.q12012-right4 {
+font-size: 14px;
+padding: 0;
+margin-top: 0px;
+}
+
+.q12012-right4 .q12012-btngo {
+font-size: 12px;
+width: auto;
+}
+
+.q12012-right4 .q12012-btngo img {
+display: inline;
+width: 13px;
+}
+
+.q12012-right5 {
+position: absolute;
+z-index: 88;
+top: 50px;
+left: 35px;
+}
+
+.q12012-btngo {
+background: url('http://cdn2.hubspot.net/hub/107648/file-204823405-png/assets/bookingengine/images/btn-bg1.png') repeat-x;
+border: 1px solid #dfdfdf;
+height: 22px;
+line-height: 22px;
+vertical-align: middle;
+color: #08C;
+text-align: center;
+text-shadow: 1px 1px #FFF;
+display: inline-block;
+text-decoration: none;
+padding: 0 20px;
+margin-top: 0px;
+-moz-border-radius: 11px;
+-ms-border-radius: 11px;
+-webkit-border-radius: 11px;
+border-radius: 11px;
+}
+
+.cont .q12012-btngo img {
+display: inline;
+margin: auto auto auto 10px;
+}
+
+.q12012-btngo:hover {
+background: url('http://cdn2.hubspot.net/hub/107648/file-204823405-png/assets/bookingengine/images/btn-bg1.png') repeat-x;
+}
+
+.hs .q12012-btngo {
+font-family: "helvetica", Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+.featured .q12012-btngo {
+font-family: "helvetica", Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+/*Colorbox Custom End*/

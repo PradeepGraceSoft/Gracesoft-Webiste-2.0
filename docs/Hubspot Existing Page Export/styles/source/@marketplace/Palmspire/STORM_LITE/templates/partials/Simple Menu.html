@@ -1,0 +1,133 @@
+<!--
+templateType: global_partial
+isAvailableForNewContent: false
+label: Header
+-->
+
+
+<header class="header growthkit-simple_menu">
+	{% dnd_area 'header-top'
+    label='Top header',
+    class='content-wrapper'
+  %}
+	{% end_dnd_area %}
+
+	<div class="header-container-wrapper">
+		<div class="row-fluid-wrapper">
+			<div class="row-fluid">
+				<div class="header-grp simple-header-sec header-section">
+					<div class="row-fluid-wrapper">
+						<div class="row-fluid">
+							<div class="span12 widget-span widget-type-cell wrapper equal-height-container search-popup">
+								<div class="row-fluid-wrapper">
+									<div class="row-fluid">
+										<div class="span12 top_visuals">
+											<div class="span11 left_div">
+												{% module "module_16814785503091" path='../../modules/Updated_Top_Bar', label="Updated Top Bar" %}
+												
+											</div>
+											<div class="span1 right_div">
+												{% module "module_168434174138968" path='../../modules/Language_Switcher', label="Language_Switcher" %}
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid">
+
+										<div id="myHeaderOverlay" class="header-search-popup">
+											<div class="overlay-bg">
+											</div>
+											<span class="closebtn" title="Close Overlay"></span>
+											<div class="text-container">
+
+												<div class="overlay-content">
+													{% module "module_16814786005573" path='../../modules/Site_Search', label="Site_Search",
+													placeholder = "Search keyword.."
+													%}    
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row-fluid">
+							<div class="span12 widget-span widget-type-cell wrapper equal-height-container simple-header">
+										
+										<div class="w2  logo-image">											
+											<div class="normal-theme-logo-conta">
+												{% module 'header_logo_simple_1'
+																	 path='@hubspot/logo', label="Brand Logo in Normal Theme",
+                                    img={
+																	 'override_inherited_src': true,
+																	 'src': get_asset_url('../../Images/Header and Footer Logos/Storm Black logo.svg'),
+																	 'alt': 'Storm Black',
+																	 'width': '240',
+																	 'height': '34'
+																	 }
+																	 %}
+											</div>
+											<div class="dark-theme-logo-conta">
+												{% module 'header_logo_simple_2'
+																	 path='@hubspot/logo',label="Brand Logo in Dark Theme",
+																	 img={
+																	 'override_inherited_src': true,
+																	 'src': get_asset_url('../../Images/Header and Footer Logos/Storm White logo.svg'),
+																	 'alt': 'Storm white',
+																	 'width': '240',
+																	 'height': '34'
+																	 }
+
+																	 %}
+											</div>
+										</div>
+										<div class="w2 scheme_toggle_sec">
+											<div class="row-fluid">
+												<div class="toggle_me_now">
+													<div class="label">
+														<p>Dark Mode</p>
+													</div>
+													<label aria-label="Switch Theme Scheme" class="switch_theme_scheme">
+														<input aria-label="Switch Theme Scheme Input" type="checkbox" id="toggle_dark_theme"><span id="toggleButton"class="slider round"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="w6 header-menu vertical-center custom-menu-primary">
+											<div class="row-fluid">
+												{% module_block module 'header_menu_simple' path='@hubspot/menu' overrideable=True, orientation='horizontal', label='Header Menu'  %}
+												{% end_module_block %}
+											</div>
+										</div>
+										<div class="w2 header_cta_cont">
+											<div class="row-fluid">
+												<div class="header-cta right-group align-right">
+													{% module "module_16814786247654" path='../../modules/Buttons', label="Buttons" %}
+												</div>
+											</div>
+										</div>
+										
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	{% dnd_area 'header-bottom'
+    label='Bottom header',
+    class='content-wrapper'
+  %}
+	{% end_dnd_area %}
+
+</header>
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!--
+  templateType: section
+  label: Brand Logo
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/brand-logo.png
+  description: "Brand Logo with slider section."
+-->
+  {% dnd_section max_width=1200, class="trendbiz-container brand-logo-section" background_color={{ context.background_color || "#f7f7f7" }}, margin={
+  'top': '0px',
+  'bottom': '0px',
+  'left': '0px',
+  'right': '0px'
+  },  padding={
+  'top': '70px',
+  'bottom': '70px',
+  'left': '0px',
+  'right': '0px'
+  }
+  %}
+  {% dnd_column %}
+
+    {% dnd_row %}
+          {% dnd_module "module_16695730224637" path="../modules/Brand Logo", label="Brand Logo" 
+            brand_logo_item = [
+              {
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand/brand-logo-1.png')  
+                }
+              },
+              {
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand/brand-logo-2.png')  
+                }
+              },
+              {
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand/brand-logo-3.png')  
+                }
+              },
+              {
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand/brand-logo-4.png')  
+                }
+              },
+              {
+                'brand_logo_image' : { 
+                  'alt': 'Brand Logo Image',    
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/brand/brand-logo-5.png')  
+                }
+              }
+            ]
+          %}
+          {% end_dnd_module %} 
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+{% end_dnd_section %}

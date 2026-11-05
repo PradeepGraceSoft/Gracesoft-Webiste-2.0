@@ -1,0 +1,178 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Lead Magnet Landing Page
+screenshotPath: ../images/template-previews/lead-magnet.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+{% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--book-a-meeting-landing-page', label='Main section' %}
+
+  {% dnd_section
+  background_color="rgba(247, 248, 250, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-two-column-content-3",
+        offset=0,
+        width=12,
+        tag_line="Start",
+        heading_text="Tracking user analytics to increase sales",
+        button={
+          "button_text" : ""
+        },
+        form={
+          "type" : "form"
+        },
+        styles={
+          "heading" : {
+            "heading_font_size" : 58
+          }
+        }
+      %}
+  {% module_attribute "rich_text" %}
+  <h2><strong>Cutting-edge features for advanced analytics</strong></h2>
+  <p><span>Make visitors understand exactly what the topic is about, why you addressing the topic and how you're going to do it. Keep it short and sweet.<strong><br></strong></span></p>
+  <ul role="list">
+    <li><span>Why should visitors download it?</span></li>
+    <li><span>What are visitors going to benefit from it?</span></li>
+    <li><span>Proof that it's really sweet.</span></li>
+  </ul>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+  {% dnd_module
+    path="../modules/kz-card-2",
+    offset=0,
+    width=12
+  %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section
+  background_color="rgba(247, 248, 250, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-logo-slider",
+        offset=0,
+        width=12
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section
+  background_color="rgba(1, 68, 228, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/kz-two-column-content-2",
+        offset=0,
+        width=12,
+        styles={
+          "content_block" : {
+            "background_color" : {
+              "color" : "#FFFFFF",
+              "opacity" : 100
+            }
+          },
+          "services_sidebar" : {
+            "border" : {
+              "bottom" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "left" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "right" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              },
+              "top" : {
+                "color" : "#dae5ec",
+                "opacity" : 100,
+                "style" : "solid",
+                "width" : {
+                  "units" : "px",
+                  "value" : 1
+                }
+              }
+            },
+            "radius" : 6,
+            "services_background_gradient" : {
+              "colors" : [ {
+                "color" : {
+                  "a" : 1,
+                  "b" : 250,
+                  "g" : 248,
+                  "r" : 247
+                }
+              }, {
+                "color" : {
+                  "a" : 1,
+                  "b" : 250,
+                  "g" : 248,
+                  "r" : 247
+                }
+              } ],
+              "side_or_corner" : {
+                "verticalSide" : "BOTTOM"
+              }
+            }
+          }
+        }
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
+
+{% block footer %}
+{% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

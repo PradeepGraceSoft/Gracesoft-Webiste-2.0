@@ -1,0 +1,38 @@
+<!--
+  templateType: email_subscription_preferences_page
+  isAvailableForNewContent: true
+  label: Email subscription preferences
+  screenshotPath: ../images/template-previews/email-subscription-preferences.jpg
+-->
+
+{% set template_translations = load_translations('./_locales', html_lang, 'en') %}
+
+{% extends './_base.html' %}
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  <div class="section system-subpref">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          {% email_subscriptions 'subscription_preferences', label='Subscription Preferences',
+            header='{{ template_translations.email_subscription_preferences_title.message }}', 
+            subheader_text='{{ template_translations.email_subscription_preferences_text.message }}', 
+            unsubscribe_all_text='{{ template_translations.email_subscription_preferences_all_text.message }}', 
+            unsubscribe_all_option='{{ template_translations.email_subscription_preferences_all_check.message }}', 
+            button_text='{{ template_translations.email_subscription_preferences_button.message }}', 
+            resubscribe_button_text='{{ template_translations.email_subscription_preferences_resub_button.message }}', 
+            unsubscribe_single_text='{{ template_translations.email_subscription_preferences_uncheck.message }}', 
+            unsubscribe_all_unsubbed_text='{{ template_translations.email_subscription_preferences_unsubbed.message }}'
+          %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ require_css(get_asset_url('../css/templates/email-subscription-preferences.css')) }}
+{% endblock body %}

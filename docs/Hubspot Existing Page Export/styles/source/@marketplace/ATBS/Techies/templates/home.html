@@ -1,0 +1,264 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/template-previews/home.jpg
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper atbs-home-design atbs-leave-margin-footer">
+  
+  <div class="site-content atbs-home-design__wrap">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content edias the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--home', label='Main section' %}
+
+  <!-- block main featured -->
+  {% dnd_section 'section 1',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 'block-featured',
+      path="../modules/block-main-featured-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+  <!-- block main featured -->
+
+
+   <!-- block about -->
+  {% dnd_section 'section 2',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-about-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+  <!-- block about -->
+
+  <!-- block check -->
+  {% dnd_section 'section 3',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-check-list-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+  <!-- block check -->
+
+
+   <!-- block service -->
+  {% dnd_section 'section 5',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-service-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block service -->
+
+   <!-- block questions -->
+  {% dnd_section 'section 6',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-questions-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block questions -->
+
+   <!-- block team -->
+  {% dnd_section 'section 7',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-team-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block team -->
+
+   <!-- block grid -->
+  {% dnd_section 'section 8',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-grid-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block grid -->
+
+   <!-- block testimonials -->
+  {% dnd_section 'section 8',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-testimonials-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block testimonials -->
+
+
+   <!-- block contact -->
+  {% dnd_section 'section 9',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-contact-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block contact -->
+
+
+    <!-- block price -->
+  {% dnd_section 'section 10',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 150
+      },
+  %}
+      {% dnd_module 
+      path="../modules/block-price-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block price -->
+
+    <!-- block listing -->
+  {% dnd_section 'section 11',
+     full_width="true",
+      padding={
+        'top': '0',
+        'bottom': '0',
+        'left': '0',
+        'right': '0'
+      },
+      margin={
+        'top': 0,
+        'bottom': 0
+      },
+  %}
+      {% dnd_module 
+      path="../modules/listing-list-article-no-sidebar-1-techies.module"
+      %}
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+
+   <!-- block listing -->
+
+
+  {% end_dnd_area %}
+  </div>
+</main>
+{% endblock body %}

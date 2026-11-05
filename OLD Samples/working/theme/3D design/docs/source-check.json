@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-05",
+  "scope": "Local source validation, not a HubSpot compiler",
+  "modules": 13,
+  "issues": [
+    "faq.module: expected isolated local module, not shared global content",
+    "faq.module: missing SITE_PAGE content type",
+    "final-cta.module: expected isolated local module, not shared global content",
+    "final-cta.module: missing SITE_PAGE content type",
+    "footer.module: expected isolated local module, not shared global content",
+    "footer.module: missing SITE_PAGE content type",
+    "hero.module: expected isolated local module, not shared global content",
+    "hero.module: missing SITE_PAGE content type",
+    "insights.module: expected isolated local module, not shared global content",
+    "insights.module: missing SITE_PAGE content type",
+    "journey.module: expected isolated local module, not shared global content",
+    "journey.module: missing SITE_PAGE content type",
+    "navigation.module: expected isolated local module, not shared global content",
+    "navigation.module: missing SITE_PAGE content type",
+    "overview.module: expected isolated local module, not shared global content",
+    "overview.module: missing SITE_PAGE content type",
+    "platform.module: expected isolated local module, not shared global content",
+    "platform.module: missing SITE_PAGE content type",
+    "properties.module: expected isolated local module, not shared global content",
+    "properties.module: missing SITE_PAGE content type",
+    "screenshots.module: expected isolated local module, not shared global content",
+    "screenshots.module: missing SITE_PAGE content type",
+    "stories.module: expected isolated local module, not shared global content",
+    "stories.module: missing SITE_PAGE content type",
+    "why.module: expected isolated local module, not shared global content",
+    "why.module: missing SITE_PAGE content type"
+  ],
+  "warnings": [],
+  "evidence": [
+    {
+      "file": "theme.json",
+      "json": "parsed"
+    },
+    {
+      "file": "fields.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/faq.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/faq.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "faq.module",
+      "editableFields": 5,
+      "referencedFields": 5
+    },
+    {
+      "file": "modules/final-cta.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/final-cta.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "final-cta.module",
+      "editableFields": 7,
+      "referencedFields": 7
+    },
+    {
+      "file": "modules/footer.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/footer.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "footer.module",
+      "editableFields": 11,
+      "referencedFields": 11
+    },
+    {
+      "file": "modules/hero.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/hero.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "hero.module",
+      "editableFields": 19,
+      "referencedFields": 19
+    },
+    {
+      "file": "modules/insights.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/insights.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "insights.module",
+      "editableFields": 4,
+      "referencedFields": 4
+    },
+    {
+      "file": "modules/journey.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/journey.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "journey.module",
+      "editableFields": 3,
+      "referencedFields": 3
+    },
+    {
+      "file": "modules/navigation.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/navigation.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "navigation.module",
+      "editableFields": 13,
+      "referencedFields": 13
+    },
+    {
+      "file": "modules/overview.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/overview.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "overview.module",
+      "editableFields": 5,
+      "referencedFields": 5
+    },
+    {
+      "file": "modules/platform.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/platform.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "platform.module",
+      "editableFields": 4,
+      "referencedFields": 4
+    },
+    {
+      "file": "modules/properties.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/properties.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "properties.module",
+      "editableFields": 6,
+      "referencedFields": 6
+    },
+    {
+      "file": "modules/screenshots.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/screenshots.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "screenshots.module",
+      "editableFields": 12,
+      "referencedFields": 12
+    },
+    {
+      "file": "modules/stories.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/stories.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "stories.module",
+      "editableFields": 5,
+      "referencedFields": 5
+    },
+    {
+      "file": "modules/why.module/meta.json",
+      "json": "parsed"
+    },
+    {
+      "file": "modules/why.module/fields.json",
+      "json": "parsed"
+    },
+    {
+      "module": "why.module",
+      "editableFields": 5,
+      "referencedFields": 5
+    },
+    {
+      "file": "js/site.js",
+      "syntax": "pass"
+    },
+    {
+      "file": "scripts/build.cjs",
+      "syntax": "pass"
+    },
+    {
+      "file": "scripts/check.cjs",
+      "syntax": "pass"
+    },
+    {
+      "file": "scripts/optimize-images.cjs",
+      "syntax": "pass"
+    },
+    {
+      "file": "scripts/serve.cjs",
+      "syntax": "pass"
+    },
+    {
+      "file": "src/scene.js",
+      "syntax": "pass"
+    },
+    {
+      "file": "tests/qa.cjs",
+      "syntax": "pass"
+    }
+  ],
+  "passed": false
+}

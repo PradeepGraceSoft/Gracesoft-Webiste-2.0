@@ -1,0 +1,89 @@
+<!--
+templateType: error_page
+isAvailableForNewContent: true
+label: Backup Unsubscribe Error Page
+screenshotPath: ../Images/Page Preview/Backup Unsubscribe.png
+-->
+
+{% extends "../layouts/base.html" %}
+
+
+{% block body %}
+
+<div class="row-fluid">
+	<div class="backup_unsubscribe">
+		<div class="span12 widget-span widget-type-cell wrapper equal-height-container">
+			<div class="equal-height-container">
+				<div class="row-fluid-wrapper">
+					<div class="row-fluid">
+						<div class="left-col span7 vertical-center">
+							{% module "rich_text_1" path='@hubspot/rich_text', label="Heading Text and Description"
+								html="
+									<div>
+										<h1>Email<br> Unsubscribe</h1>
+								    <p>The headline and subheader tells us what you're <a href='#'>offering</a>, and the form header closes the deal. Over here you can explain why your offer is so great it's worth filling out a form for.</p>
+									</div>"
+									%}
+							<div class="systems-page">
+								{% module "module_167285645896354" path="@hubspot/email_simple_subscription", label="email_simple_subscription.module"
+								button_text="Subscribe now",
+								input_placeholder="Enter Your Email"
+								%}
+							</div>
+						</div>
+						<div class="right-col span5 vertical-center">
+							<div class="image-container align-center">
+								<img src="https://3842749.fs1.hubspotusercontent-na1.net/hubfs/3842749/Growthkit%20Premium%20Free%20Pack/Laptop_with_vector.png" alt="Password">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="system_recent_blogs">
+		<div class="wrapper">
+			<div class="row-fluid-wrapper">
+				<div class="row-fluid">
+					{% module "rich_text_1" path='@hubspot/rich_text', label="Heading Text and Description"
+            html="
+              <div style='text-align:center;'>
+                <h2>Heading Text</h2>
+                <p>Join over 25,000 in beating the failure of strategies by following our blog.</p>'
+              </div>"
+							%}
+				</div>
+				<div class="row-fluid">
+					<div class="span12 recent-blog">
+						{% module "module_167034874178116" path='../../modules/Recent_Blogs', label="Recent Blogs" %}
+					</div>
+
+				</div>
+				<div class="row-fluid">
+					{% module "sys_404_error" path='/Storm Lite/modules/Buttons', label="Buttons",
+					choose_number_of_cta="single",
+					single_cta_group={
+					"choose_type_of_cta":"primary-cta",
+					primary_cta_group:{
+					"choose_cta_type_here":"solid-cta"
+					}
+					},
+					styles={
+					  'alignment_field':{
+					  'horizontal_align' : 'CENTER'
+					  },
+					  'single_cta_alignment':{
+					  'horizontal_align' : 'CENTER'
+					  }
+					}
+				 %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock body %}

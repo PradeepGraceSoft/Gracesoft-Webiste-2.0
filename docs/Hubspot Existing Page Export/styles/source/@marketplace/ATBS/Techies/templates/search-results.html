@@ -1,0 +1,62 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Search Results
+  screenshotPath: ../images/template-previews/search-results.jpg
+-->
+{% set template_css = '../../css/templates/system.css' %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  <div class="site-content" data-layout="container">
+    <section class="content-wrapper">
+        <div class="systems-page systems-page--search-results box-search-results">
+            {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content fashios the ability to adjust the content and alignment of the text. #}
+            {% dnd_area 'dnd_area' class='body-container body-container--home', label='Main section' %}
+               {% dnd_section 'search',
+               full_width="true",
+                   padding={
+                   'top': '0',
+                   'bottom': '0',
+                   'left': '0',
+                   'right': '0'
+                   },
+                   margin={
+                   'top': 0,
+                   'bottom':0
+                   },
+                  %}
+                   {% dnd_module 'search_results_content', label='Search results heading',
+                    path='@hubspot/rich_text' %}
+                   {% module_attribute 'html' %}
+                        <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
+                    {% end_module_attribute %}
+                   {% end_dnd_module %}
+            {% end_dnd_section %}
+
+
+            {% dnd_section 'search_results',
+               full_width="true",
+                   padding={
+                   'top': '0',
+                   'bottom': '0',
+                   'left': '0',
+                   'right': '0'
+                   },
+                   margin={
+                   'top': 0,
+                   'bottom':0
+                   },
+                  %}
+                  {% dnd_module 'search_results'
+                        path='@hubspot/search_results' %}
+                    {% end_dnd_module %}
+            {% end_dnd_section %}
+         {% end_dnd_area %}
+        </div>
+      </section>
+    </div>
+</main>
+{% endblock body %}

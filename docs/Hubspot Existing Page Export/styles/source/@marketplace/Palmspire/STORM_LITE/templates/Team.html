@@ -1,0 +1,5879 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Team
+  screenshotPath: ../Images/Page Preview/Team Two.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_team' label='Team' class='body-container-team' %}
+
+<!----------------------------------Team 2 Banner section Start Here---------------------------->
+
+  {% dnd_section vertical_alignment='MIDDLE',
+	       padding={
+				 'default':{
+				 'top': 80,
+		     'bottom':86
+				 },
+				 'mobile':{
+				 'top':60,
+				 'bottom':60
+				 }
+				 },
+		     margin={
+				 'default':{
+				 'top': 127
+				 },
+				 'mobile':{
+				 'top': 0
+				 }
+			   }
+	%}
+   {% dnd_column offset=0, width=6 %}
+     {% dnd_row %}
+      {% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+			 add_custom_class_here="content1",
+			 choose_content_type="single-content",
+			 single_column_group={
+			 check_to_show_heading:true,
+			 choose_heading:"1",
+			 add_heading_here:"Add Page <br>Heading Text",
+			 check_to_show_description:true,
+			 add_description_here:"<p>No coding required, Clean, Easily editable, design and developed by team of Hubspot certified Marketers, designers and programmers.</p>",
+			 check_to_show_contact_information:false,
+			 check_to_show_cta:false,
+			 set_max_width_of_the_content:"465"
+			 },
+			 styles={
+			       'check_to_show_wrapper':false,
+						 'turn_on_to_make_all_text_white':false,
+						 'background':{
+						     'choose_background':"color",
+								 'add_background_color':{
+								    'color':"#fff",
+										'opacity':0
+								 }
+						 },
+						 'border':{
+						 'add_border_here':{
+						 "top": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "bottom": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "left": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+					   "color": "#E6E6E6"
+						 },
+						 "right": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 }
+						 },
+						 'add_border_radius':"0"
+						 },
+						 'spacing':{
+						 'adjust_spacing_in_desktop_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+					   'value':0
+					   },
+						 'left':{
+					   'value':0
+					   },
+					   'right':{
+						 'value':0
+						 }
+						 }												
+					   },
+					   'adjust_spacing_in_tab_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+						 },
+						 'left':{
+						 'value':0
+						 },
+						 'right':{
+						 'value':0
+						 }
+						 }											
+						 },
+						 'adjust_spacing_in_mobile_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+						 },
+					   'left':{
+					   'value':0
+						 },
+						 'right':{
+						 'value':0
+					   }
+						 }											
+					   }
+						 }
+			 }
+			%}
+      {% end_dnd_module %}
+     {% end_dnd_row %}
+     {% dnd_row 
+	         margin={
+					 'default':{
+					 'top':15
+					 },
+					 'mobile':{
+					 'top':15
+					 }
+					 }
+					%}
+          {% dnd_module path='../modules/Buttons', label="Buttons",
+					choose_number_of_cta="single",
+					single_cta_group={
+					"choose_type_of_cta":"primary-cta",
+					primary_cta_group:{
+					"choose_cta_type_here":"solid-cta"
+				 }
+				 },
+					styles={
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								},
+						    'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								}
+						}
+					}
+				%}
+				{% end_dnd_module %}
+     {% end_dnd_row %}
+   {% end_dnd_column %} 
+   {% dnd_column offset=6, width=6,
+	        padding={
+					'mobile':{
+					'top':40
+					}
+					}
+	 %}
+     {% dnd_row %}
+        {% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image Video with before image",
+					 choose_between_image_and_video="image",
+					 image_group={
+					 add_custom_class_here:"image-sec1",
+					 add_image_here:{
+					 'src': get_asset_url('../Images/Column Images/Column-Image-15.png'),
+				   'alt' : 'Column'
+					 },
+					 add_max_width_here:"538",
+				   check_to_show_box_shadow_to_image:false,
+					 set_width_in_responsive:"100"
+					 },
+					 check_to_add_vector_image=false,
+					 style={
+				       'check_to_show_spacing_for_section':false,
+							 'check_to_show_border_radius':true,
+							 'add_border_radius':"4",
+               'set_alignment_for_image':"align-right"										
+          }
+			  %}
+        {% end_dnd_module %}          
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!---------------------------------- Team 2 Banner section Ends Here----------------------------->
+
+<!-------------------------------------Team 2 section 1 Start Here------------------------------->
+
+  {% dnd_section max_width=1160,
+	     padding={
+			 'default':{
+			 'top':120,
+			 'bottom':65
+			 },
+			 'mobile':{
+			 'top':60,
+			 'bottom':65
+			 }
+			 },
+			 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+	%}
+   {% dnd_column offset=0, width=12 %}
+     {% dnd_row %}
+            {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+            {% module_attribute "html"%}
+              <div style="text-align: center;">
+                <h2><strong>Heading Text</strong></h2>
+                <p>The headline and subheader tells us what you're <a href="https://palmspire-3842749.hs-sites.com/home-1">offering.</a></p>
+              </div>
+            {% end_module_attribute %}
+            {% end_dnd_module %}
+     {% end_dnd_row %}
+     {% dnd_row
+		       padding={
+					 'default':{
+					 'top':55
+					 },
+					 'mobile':{
+					 'top':25
+					 }
+					 }
+		 %}
+			 {% dnd_column offset=0, width=6 %}
+				 {% dnd_row 
+						margin={
+						'default':{
+						'bottom':27
+						},
+						'mobile':{
+						'bottom':15
+						}
+						}
+				 %}
+					 {% dnd_module
+							path='@hubspot/linked_image',
+							img={
+								'alt': 'Monitor icon',
+								'src': get_asset_url('../Images/Up_graph.svg'),
+								'width': 50,
+				        'alt' : 'Up-graph'
+							}
+						%}
+						{% end_dnd_module %}
+				 {% end_dnd_row %}
+				 {% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+						 add_custom_class_here="content2",
+						 choose_content_type="single-content",
+						 single_column_group={
+						 check_to_show_heading:true,
+						 choose_heading:"3",
+						 add_heading_here:"Heading Text",
+						 check_to_show_description:true,
+						 add_description_here:"<p>Its the best solution, saves time and money and give you the website that converts. you can reach out to us to know more about the services 
+						 via email or chat, our email is <a href='mailto:hello@palmspire.com'>hello@palmspire.com</a></p>",
+						 check_to_show_contact_information:false,
+						 check_to_show_cta:false,
+						 choose_text_alignment:"align-left",
+						 set_max_width_of_the_content:"508"
+						 },
+						 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+								 'choose_background':"color",
+								 'add_background_color':{
+								 'color':"#fff",
+								 'opacity':0
+								 }
+								 },
+								 'border':{
+								 'add_border_here':{
+								 "top": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "bottom": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "left": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "right": {
+							   "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+								 'adjust_spacing_in_desktop_view':{
+								 'padding':{
+								 'top':{
+								 'value':0
+								 },
+							   'bottom':{
+							   'value':0
+								 },
+								 'left':{
+								 'value':0
+							   },
+								 'right':{
+								 'value':0
+							   }
+							   }												
+							   },
+								 'adjust_spacing_in_tab_view':{
+								 'padding':{
+								 'top':{
+								 'value':0
+								 },
+								 'bottom':{
+							   'value':0
+								 },
+							   'left':{
+								 'value':0
+								 },
+								 'right':{
+								 'value':0
+								 }
+								 }											
+								 },
+								 'adjust_spacing_in_mobile_view':{
+								 'padding':{
+								 'top':{
+								 'value':0
+								 },
+								 'bottom':{
+								 'value':0
+								 },
+								 'left':{
+								 'value':0
+								 },
+								 'right':{
+								 'value':0
+							   }
+								 }											
+								 }
+							 }
+					  }
+					%}
+					{% end_dnd_module %}
+				 {% end_dnd_row %}
+			 {% end_dnd_column %}
+			 {% dnd_column offset=6, width=6,
+					 padding={
+					 'default':{
+					 'top':0,
+					 'left':37
+					 },
+					 'mobile':{
+					 'top':20,
+					 'left':0
+					 }
+					 }
+			 %}
+				 {% dnd_row 
+             margin={
+						 'default':{
+						 'bottom':27
+						 },
+						 'mobile':{
+						 'bottom':15
+						 }
+						 }
+				 %}
+					 {% dnd_module
+							 path='@hubspot/linked_image',
+							 img={
+								 'alt': 'Speaker icon',
+								 'src': get_asset_url('../Images/shield.svg'),
+								 'width': 50,
+				          'alt' : 'Shield'
+							 }
+						%}
+						{% end_dnd_module %}
+				 {% end_dnd_row %}
+				 {% dnd_row %}
+					{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+						 add_custom_class_here="content3",
+						 choose_content_type="single-content",
+						 single_column_group={
+						 check_to_show_heading:true,
+						 choose_heading:"3",
+						 add_heading_here:"Heading Text",
+						 check_to_show_description:true,
+						 add_description_here:"<p>Its the best solution, saves time and money and give you the website that converts. you can reach out to us to know more about the services via email or chat.</p>",
+						 check_to_show_contact_information:false,
+						 check_to_show_cta:false,
+						 choose_text_alignment:"align-left",
+						 set_max_width_of_the_content:"508"
+						 },
+						 styles={
+								 'check_to_show_wrapper':false,
+								 'turn_on_to_make_all_text_white':false,
+								 'background':{
+								 'choose_background':"color",
+								 'add_background_color':{
+								 'color':"#fff",
+								 'opacity':0
+								 }
+								 },
+								 'border':{
+								 'add_border_here':{
+								 "top": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "bottom": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "left": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "right": {
+							   "width": { "value": 0, "units": "px" },
+								 "opacity": 0,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 }
+								 },
+								 'add_border_radius':"0"
+								 },
+								 'spacing':{
+								 'adjust_spacing_in_desktop_view':{
+								 'padding':{
+								 'top':{
+								 'value':0
+								 },
+							   'bottom':{
+							   'value':0
+								 },
+								 'left':{
+								 'value':0
+							   },
+								 'right':{
+								 'value':0
+							   }
+							   }												
+							   },
+								 'adjust_spacing_in_tab_view':{
+								 'padding':{
+								 'top':{
+								 'value':0
+								 },
+								 'bottom':{
+							   'value':0
+								 },
+							   'left':{
+								 'value':0
+								 },
+								 'right':{
+								 'value':0
+								 }
+								 }											
+								 },
+								 'adjust_spacing_in_mobile_view':{
+								 'padding':{
+								 'top':{
+								 'value':0
+								 },
+								 'bottom':{
+								 'value':0
+								 },
+								 'left':{
+								 'value':0
+								 },
+								 'right':{
+								 'value':0
+							   }
+								 }											
+								 }
+							 }
+					  }
+					%}
+					{% end_dnd_module %}
+				 {% end_dnd_row %}
+			 {% end_dnd_column %}
+     {% end_dnd_row %}
+   {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-------------------------------------Team 2 section 1 Ends Here-------------------------------->
+
+<!----------------------------------  Team 2 border Start Here ---------------------------------->
+
+  {% dnd_section vertical_alignment='MIDDLE', max_width=1160 %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+          {% module_attribute "html"%}
+						<hr>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %} 
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!----------------------------------  Team 2 border End Here  ----------------------------------->
+
+<!-----------------------------------Team 2 Logo section  Start Here----------------------------->
+
+  {% dnd_section vertical_alignment='MIDDLE',
+			 background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+       padding={
+			 'default':{
+			 'top':59,
+			 'bottom':120
+			 },
+			 'mobile':{
+			 'top':60,
+			 'bottom':60
+			 }
+			 }
+	%}
+    {% dnd_column offset=0, width=12 %}
+      {% dnd_row %} 
+         {% dnd_column offset=0, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'src': get_asset_url('../Images/Microsoft.png'),
+                 'width': 120,
+								 'height':27,
+				         'alt' : 'Microsoft'
+               }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=2, width=2 %}
+            {% dnd_row 
+							 padding={
+							 'mobile':{
+							 'top':15,
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'src': get_asset_url('../Images/Youtube.png'),
+                 'width': 109,
+								 'height':27,
+				         'alt' : 'Youtube'
+                }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=4, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15,
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'src': get_asset_url('../Images/Harvest.png'),
+                 'width': 119,
+								 'height':27,
+				         'alt' : 'Harvest'
+                }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=6, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15,
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'src': get_asset_url('../Images/asana-3.png'),
+                 'width': 119,
+								 'height':27,
+				         'alt' : 'Asana'
+                }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=8, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15,
+							 'bottom':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'src': get_asset_url('../Images/Slack.png'),
+                 'width': 101,
+								 'height':27,
+				         'alt' : 'Slack'
+                }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+         {% dnd_column offset=10, width=2 %}
+            {% dnd_row 
+						   padding={
+							 'mobile':{
+							 'top':15
+							 }
+							 }
+						%}
+               {% dnd_module path='@hubspot/linked_image', horizontal_alignment='CENTER',
+                 img={
+                 'src': get_asset_url('../Images/Pinterest.png'),
+                 'width': 120,
+								 'height':27,
+				         'alt' : 'Pinterest'
+                 }
+               %}
+               {% end_dnd_module %}
+            {% end_dnd_row %}
+         {% end_dnd_column %}
+      {% end_dnd_row %}      
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-----------------------------------Team 2 Logo section  Ends Here------------------------------>
+
+<!-------------------------------------Team 2 section 2 Start Here------------------------------->
+
+  {% dnd_section 
+	         padding={
+					 'default':{
+					 'top':130,
+					 'bottom':100
+					 },
+					 'mobile':{
+					 'top':60,
+					 'bottom':60
+					 }
+					 }
+	%}
+   {% dnd_column offset=0, width=12 %}
+     {% dnd_row %}
+           {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+           {% module_attribute "html"%}
+                <h2><strong>Heading Text</strong></h2>
+                <p>Hubspot Growth series is the template you need to get maximum from your Marketing Automation efforts.</p>
+           {% end_module_attribute %}
+           {% end_dnd_module %}
+     {% end_dnd_row %}
+     {% dnd_row 
+		      padding={
+					'default':{
+					'top':55
+					},
+					'mobile':{
+					'top':25
+					}
+					} 
+		 %}
+        {% dnd_column offset=0, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+						}
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+							 check_to_show_wrapper=false,
+							 add_padding_top_here="0",
+							 add_padding_bottom_here="0",
+							 check_to_show_border_radius=true, 
+							 add_border_radius_here="4",
+							 check_to_show_box_shadow=false,
+							 check_to_show_hover_effect=false,
+							 check_to_show_image_in_bottom=false,
+							 card_content=
+								 {
+								 check_to_show_background_color_of_card:true,
+								 add_card_color_here:{
+										 color:"#fff"
+								 },
+								 check_to_show_all_text_white:false,
+								 check_to_show_image_background_image_here:true,
+								 image_group:{
+								 choose_between_image_and_background_image:"bg-image",
+								 background_image:{
+								 add_background_image_here:{
+								 'src': get_asset_url('../Images/Team-1.png'),
+				         'alt' : 'Team'
+								 },
+								 add_minimum_height_for_background_image:"305"
+								 },
+								 check_to_show_border_radius_of_image:true,
+								 circular_image_group:{
+								 add_border_radius_for_top_left_corner:"6",
+								 add_border_radius_for_top_right_corner:"6",
+								 add_border_radius_for_bottom_left_corner:"0",
+								 add_border_radius_for_bottom_right_corner:"0",
+								 check_to_show_maximum_width_of_image:true,
+								 add_maximum_width_for_image:"255"
+								 }
+								 },
+								 check_to_show_heading:true,
+								 select_heading : "4",
+								 add_heading_here:"John doe",
+								 check_to_show_description:true,
+								 add_description_here:"<p>Add Designation</p>",
+								 check_to_show_email_option:false,
+								 check_to_show_call_to_action:false
+								 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=3, width=3,
+				   padding={
+					 'default':{
+					 'bottom':0
+					 },
+					 'mobile':{
+					 'bottom':20
+					 }
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="6",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-2.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+								 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+							%}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=6, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+						}
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-3.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							  style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=9, width=3 %}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-4.png'),
+				          'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+							%}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+     {% end_dnd_row %}
+
+     {% dnd_row 
+		    padding={
+				'default':{
+				'top':20
+				},
+				'mobile':{
+				'top':20
+				}
+				} 
+		 %}
+       {% dnd_column offset=0, width=3,
+				  padding={
+					'default':{
+					'bottom':0
+					},
+					'mobile':{
+					'bottom':20
+					}
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team_5.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=3, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+						}
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="6",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-7.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+							%}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=6, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+					  }
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-8.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=9, width=3 %}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-6.png'),
+				           'alt' : 'Team' 
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+							%}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+     {% end_dnd_row %}
+
+     {% dnd_row 
+		    padding={
+				'default':{
+				'top':20
+				},
+				'mobile':{
+				'top':20
+				}
+				} 
+		  %}
+        {% dnd_column offset=0, width=3,
+				   padding={
+					 'default':{
+					 'bottom':0
+					 },
+					 'mobile':{
+					 'bottom':20
+					 }
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-9.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=3, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+						}
+					}
+				%}
+          {% dnd_row %}
+            {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="6",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-11.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=6, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+						}
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-12.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+							%}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=9, width=3 %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/Card', label="Card"
+							 check_to_show_wrapper=false,
+							 add_padding_top_here="0",
+							 add_padding_bottom_here="0",
+							 check_to_show_border_radius=true, 
+							 add_border_radius_here="4",
+							 check_to_show_box_shadow=false,
+							 check_to_show_hover_effect=false,
+							 check_to_show_image_in_bottom=false,
+							 card_content=
+								 {
+								 check_to_show_background_color_of_card:true,
+								 add_card_color_here:{
+										 color:"#fff"
+								 },
+								 check_to_show_all_text_white:false,
+								 check_to_show_image_background_image_here:true,
+								 image_group:{
+								 choose_between_image_and_background_image:"bg-image",
+								 background_image:{
+								 add_background_image_here:{
+								 'src': get_asset_url('../Images/Team-10.png'),
+				         'alt' : 'Team'
+								 },
+								 add_minimum_height_for_background_image:"305"
+								 },
+								 check_to_show_border_radius_of_image:true,
+								 circular_image_group:{
+								 add_border_radius_for_top_left_corner:"6",
+								 add_border_radius_for_top_right_corner:"6",
+								 add_border_radius_for_bottom_left_corner:"0",
+								 add_border_radius_for_bottom_right_corner:"0",
+								 check_to_show_maximum_width_of_image:true,
+								 add_maximum_width_for_image:"255"
+								 }
+								 },
+								 check_to_show_heading:true,
+								 select_heading : "4",
+								 add_heading_here:"John doe",
+								 check_to_show_description:true,
+								 add_description_here:"<p>Add Designation</p>",
+								 check_to_show_email_option:false,
+								 check_to_show_call_to_action:false
+								 },
+               style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+     {% end_dnd_row %}
+
+     {% dnd_row 
+		    padding={
+				'default':{
+				'top':20
+				},
+				'mobile':{
+				'top':20
+				}
+			  } 
+		  %}
+        {% dnd_column offset=0, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+						}
+					}
+				%}
+          {% dnd_row %}
+            {% dnd_module path='../modules/Card', label="Card"
+							 check_to_show_wrapper=false,
+							 add_padding_top_here="0",
+							 add_padding_bottom_here="0",
+							 check_to_show_border_radius=true, 
+							 add_border_radius_here="4",
+							 check_to_show_box_shadow=false,
+							 check_to_show_hover_effect=false,
+							 check_to_show_image_in_bottom=false,
+							 card_content=
+								 {
+								 check_to_show_background_color_of_card:true,
+								 add_card_color_here:{
+										 color:"#fff"
+								 },
+								 check_to_show_all_text_white:false,
+								 check_to_show_image_background_image_here:true,
+								 image_group:{
+								 choose_between_image_and_background_image:"bg-image",
+								 background_image:{
+								 add_background_image_here:{
+								 'src': get_asset_url('../Images/Team-13.png'),
+				         'alt' : 'Team'
+								 },
+								 add_minimum_height_for_background_image:"305"
+								 },
+								 check_to_show_border_radius_of_image:true,
+								 circular_image_group:{
+								 add_border_radius_for_top_left_corner:"6",
+								 add_border_radius_for_top_right_corner:"6",
+								 add_border_radius_for_bottom_left_corner:"0",
+								 add_border_radius_for_bottom_right_corner:"0",
+								 check_to_show_maximum_width_of_image:true,
+								 add_maximum_width_for_image:"255"
+								 }
+								 },
+								 check_to_show_heading:true,
+								 select_heading : "4",
+								 add_heading_here:"John doe",
+								 check_to_show_description:true,
+								 add_description_here:"<p>Add Designation</p>",
+								 check_to_show_email_option:false,
+								 check_to_show_call_to_action:false
+								 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=3, width=3,
+				   padding={
+					 'default':{
+					 'bottom':0
+					 },
+					 'mobile':{
+					 'bottom':20
+				   }
+				  }
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="6",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-15.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=6, width=3,
+				   padding={
+						'default':{
+						'bottom':0
+						},
+						'mobile':{
+						'bottom':20
+						}
+					}
+				%}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-16.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							 style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset=9, width=3 %}
+          {% dnd_row %}
+             {% dnd_module path='../modules/Card', label="Card"
+								 check_to_show_wrapper=false,
+								 add_padding_top_here="0",
+								 add_padding_bottom_here="0",
+								 check_to_show_border_radius=true, 
+								 add_border_radius_here="4",
+								 check_to_show_box_shadow=false,
+								 check_to_show_hover_effect=false,
+								 check_to_show_image_in_bottom=false,
+								 card_content=
+									 {
+									 check_to_show_background_color_of_card:true,
+									 add_card_color_here:{
+											 color:"#fff"
+									 },
+									 check_to_show_all_text_white:false,
+									 check_to_show_image_background_image_here:true,
+									 image_group:{
+									 choose_between_image_and_background_image:"bg-image",
+									 background_image:{
+									 add_background_image_here:{
+									 'src': get_asset_url('../Images/Team-14.png'),
+				           'alt' : 'Team'
+									 },
+									 add_minimum_height_for_background_image:"305"
+									 },
+									 check_to_show_border_radius_of_image:true,
+									 circular_image_group:{
+									 add_border_radius_for_top_left_corner:"6",
+									 add_border_radius_for_top_right_corner:"6",
+									 add_border_radius_for_bottom_left_corner:"0",
+									 add_border_radius_for_bottom_right_corner:"0",
+									 check_to_show_maximum_width_of_image:true,
+									 add_maximum_width_for_image:"255"
+									 }
+									 },
+									 check_to_show_heading:true,
+									 select_heading : "4",
+									 add_heading_here:"John doe",
+									 check_to_show_description:true,
+									 add_description_here:"<p>Add Designation</p>",
+									 check_to_show_email_option:false,
+									 check_to_show_call_to_action:false
+									 },
+							style={
+							    'check_to_show_padding':true,
+									'cards_spacing':{
+									'adjust_spacing_in_desktop_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}
+									},
+									'adjust_spacing_in_tab_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}											 
+									},
+									'adjust_spacing_in_mobile_view':{
+									'padding':{
+									'top':{
+									'value':0
+									},
+									'bottom':{
+									'value':0
+									},
+									'left':{
+									'value':0
+									},
+									'right':{
+									'value':0
+									}
+									}														 
+									}
+									},
+									'check_to_show_border_on_cards':false,
+									'alignment':{
+									'horizontal_align':'CENTER'
+									},
+									'add_spacing_here':{
+									'margin':{
+									'top':{
+									'value':"10"
+									}
+									}
+									},
+									'check_this_to_show_maximum_width_of_card':true,
+									'set_maximum_width_for_cards':"255"
+							 }
+						 %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+     {% end_dnd_row %}
+     {% dnd_row 
+	      padding={
+				'default':{
+				'top':55
+				},
+				'mobile':{
+				'top':25
+				}
+				}
+			%}
+        {% dnd_module path='../modules/Buttons', label="Buttons",
+					choose_number_of_cta="single",
+					single_cta_group={
+					"choose_type_of_cta":"primary-cta",
+					primary_cta_group:{
+					"choose_cta_type_here":"solid-cta"
+				 }
+				 },
+					styles={
+								'alignment_field':{
+								'horizontal_align' : 'CENTER'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'CENTER'
+								},
+						    'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'CENTER'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'CENTER'
+								}
+						}
+					}
+				%}
+				{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-------------------------------------Team 2 section 2 Ends Here-------------------------------->
+
+<!-------------------------------------Team 2 section 3 Start Here------------------------------->
+
+ {% dnd_section vertical_alignment = 'MIDDLE' , background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+	  padding={
+      'default':{
+      'top': 140,
+      'bottom': 140
+      },
+      'mobile':{
+      'top': 60,
+      'bottom': 60
+      }
+    }
+  %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_column offset = 0, width = 5 %}
+          {% dnd_row %}
+						 {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+							 {% module_attribute "html"%}
+								 <h2>Heading Text</h2>
+							 {% end_module_attribute %}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row 
+					     padding={
+							 'default':{
+							 'top':15
+							 },
+							 'mobile':{
+							 'top':15
+							 }
+							 }
+					%}
+           {% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta = "single",
+						single_cta_group = {
+						choose_type_of_cta : "video-cta",
+						video_cta_group : {
+						choose_style_of_cta :"solid-cta",
+						choose_video_type : "youtube",
+						add_youtube_url:{
+						'url':{
+					  'href':"https://www.youtube.com/watch?v=qDCyvvdzND4"
+				 	  }
+						},
+						add_video_title_here: 'Call to Action',
+						add_on_hover_play_icon_here : {
+						'src' : get_asset_url('../Images/Play_icon_black.svg'),
+				    'alt' : 'Play-button'
+						},
+						add_play_icon_here : {
+						'src' : get_asset_url('../Images/Play-button.svg'),
+				    'alt' : 'Play-button'
+						}
+						}
+						},
+						styles={
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								},
+								'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								}
+							}
+						}
+						%}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset = 5, width = 7,
+					 padding={
+						'default':{
+						'top': 0
+						},
+						'mobile':{
+						'top': 30
+						}
+					}
+        %}
+          {% dnd_row %}
+							{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+							 add_custom_class_here="content4",
+							 choose_content_type="single-content",
+							 single_column_group={
+							 check_to_show_heading:false,
+							 choose_heading:"1",
+							 add_heading_here:"Heading Text",
+							 check_to_show_description:true,
+							 add_description_here:"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							 when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>It has survived not only five centuries, but also the leap into electronic 
+							 typesetting, remaining essentially unchanged.</p>",
+							 check_to_show_contact_information:false,
+							 check_to_show_cta:false,
+							 choose_text_alignment:"align-left",
+							 set_max_width_of_the_content:"608"
+							 },
+							 styles={
+										 'check_to_show_wrapper':false,
+										 'turn_on_to_make_all_text_white':false,
+										 'background':{
+										 'choose_background':"color",
+										 'add_background_color':{
+										 'color':"#fff",
+										 'opacity':0
+										 }
+										 },
+										 'border':{
+										 'add_border_here':{
+										 "top": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+									   "color": "#E6E6E6"
+										 },
+										 "bottom": {
+									   "width": { "value": 0, "units": "px" },
+									   "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+										 },
+										 "left": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+										 },
+										 "right": {
+										 "width": { "value": 0, "units": "px" },
+										 "opacity": 0,
+										 "style": "solid",
+										 "color": "#E6E6E6"
+										 }
+										 },
+										 'add_border_radius':"0"
+										 },
+										 'spacing':{
+										 'adjust_spacing_in_desktop_view':{
+										 'padding':{
+										 'top':{
+										 'value':0
+										 },
+										 'bottom':{
+										 'value':0
+										 },
+										 'left':{
+									   'value':0
+										 },
+										 'right':{
+										 'value':0
+										 }
+									   }												
+									   },
+										 'adjust_spacing_in_tab_view':{
+									   'padding':{
+										 'top':{
+										 'value':0
+										 },
+										 'bottom':{
+										 'value':0
+										 },
+										 'left':{
+										 'value':0
+										 },
+										 'right':{
+										 'value':0
+										 }
+										 }											
+										 },
+										 'adjust_spacing_in_mobile_view':{
+										 'padding':{
+										 'top':{
+										 'value':0
+										 },
+										 'bottom':{
+										 'value':0
+										 },
+										 'left':{
+										 'value':0
+										 },
+										 'right':{
+									   'value':0
+										 }
+										 }											
+										 }
+									 }
+							 }
+							%}
+						 {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row 
+					      padding={
+								'default':{
+								'top':25
+								},
+								'mobile':{
+								'top':15
+								}
+								}
+					%}
+           {% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta = "single",
+						single_cta_group = {
+						choose_type_of_cta : 'secondary-cta',
+						secondary_cta_group : {
+						}
+						},
+						styles={
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								},
+								'set_cta_alignment_in_mobile_view':{
+																 'alignment_field':{
+																		 'horizontal_align' : 'LEFT'
+																	},
+														'single_cta_alignment':{
+																		 'horizontal_align' : 'LEFT'
+														}
+								}
+						}
+						%}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row
+				 padding={
+				  'default':{
+					'top': 150
+					},
+					'mobile':{
+					'top': 50
+					}
+					}
+				%}
+        {% dnd_column offset = 0, width = 4 %}
+          {% dnd_row
+						 padding={
+							 'default':{
+							 'bottom': 26
+							 },
+							 'mobile':{
+							 'bottom': 10
+							 }
+						 }
+          %}
+            {% dnd_module
+							 path='@hubspot/linked_image',
+							 img={
+								 'alt': 'Monitor',
+								 'src': get_asset_url('../Images/Monitor.svg'),
+								 'width': 46,
+								 'height':46,
+				         'alt' : 'Monitor'
+							 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+						{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+						 add_custom_class_here="content6",
+						 choose_content_type="single-content",
+						 single_column_group={
+						 check_to_show_heading:true,
+						 choose_heading:"4",
+						 add_heading_here:"Heading Text",
+						 check_to_show_description:true,
+						 add_description_here:"<p>The headline and subheader tells us what you're offering, closes the deal.</p>",
+						 check_to_show_contact_information:false,
+						 check_to_show_cta:false,
+						 choose_text_alignment:"align-left",
+						 set_max_width_of_the_content:"353"
+						 },
+						 styles={
+									 'check_to_show_wrapper':false,
+									 'turn_on_to_make_all_text_white':false,
+									 'background':{
+											 'choose_background':"color",
+											 'add_background_color':{
+													'color':"#fff",
+													'opacity':0
+											 }
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius':"0"
+									 },
+									 'spacing':{
+									 'adjust_spacing_in_desktop_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+								   }
+									 }												
+									 },
+									 'adjust_spacing_in_tab_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+								 }
+							 }
+						 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/Buttons', label="Buttons",
+							choose_number_of_cta = "single",
+							single_cta_group = {
+							choose_type_of_cta : 'secondary-cta',
+							secondary_cta_group : {
+							}
+							},
+						  styles={
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								},
+								'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								}
+							}
+						}
+						%}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset = 4, width = 4 ,
+					 padding={
+						'mobile':{
+						'top': 25
+						}
+					}
+        %}
+          {% dnd_row
+						 padding={
+							 'default':{
+							 'bottom': 26
+							 },
+							 'mobile':{
+							 'bottom': 10
+							 }
+						 }
+          %}
+            {% dnd_module
+							 path='@hubspot/linked_image',
+							 img={
+								 'alt': 'Headphones',
+								 'src': get_asset_url('../Images/Headphones.svg'),
+								 'width': 46,
+								 'height':46,
+				         'alt' : 'Headphone'
+							 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+						{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+							 add_custom_class_here="content7",
+							 choose_content_type="single-content",
+							 single_column_group={
+							 check_to_show_heading:true,
+							 choose_heading:"4",
+							 add_heading_here:"Heading Text",
+							 check_to_show_description:true,
+							 add_description_here:"<p>The headline and subheader tells us what you're offering, closes the deal.</p>",
+							 check_to_show_contact_information:false,
+							 check_to_show_cta:false,
+							 choose_text_alignment:"align-left",
+							 set_max_width_of_the_content:"353"
+							 },
+							 styles={
+									 'check_to_show_wrapper':false,
+									 'turn_on_to_make_all_text_white':false,
+									 'background':{
+											 'choose_background':"color",
+											 'add_background_color':{
+													'color':"#fff",
+													'opacity':0
+											 }
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius':"0"
+									 },
+									 'spacing':{
+									 'adjust_spacing_in_desktop_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }												
+									 },
+									 'adjust_spacing_in_tab_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 }
+									 }
+						 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/Buttons', label="Buttons",
+							choose_number_of_cta = "single",
+							single_cta_group = {
+							choose_type_of_cta : 'secondary-cta',
+							secondary_cta_group : {
+							}
+							},
+							styles={
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								},
+								'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								}
+								}
+						}
+						%}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset = 8, width = 4 ,
+					 padding={
+						'mobile':{
+						'top': 25
+						}
+					}
+        %}
+          {% dnd_row
+						 padding={
+							 'default':{
+							 'bottom': 26
+							 },
+							 'mobile':{
+							 'bottom': 10
+							 }
+						 }
+          %}
+            {% dnd_module
+							 path='@hubspot/linked_image',
+							 img={
+								 'alt': 'Speaker',
+								 'src': get_asset_url('../Images/Speaker.svg'),
+								 'width': 46,
+								 'height':46,
+				         'alt' : 'Speaker'
+							 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+						{% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+							 add_custom_class_here="content8",
+							 choose_content_type="single-content",
+							 single_column_group={
+							 check_to_show_heading:true,
+							 choose_heading:"4",
+							 add_heading_here:"Heading Text",
+							 check_to_show_description:true,
+							 add_description_here:"<p>The headline and subheader tells us what you're offering, closes the deal.</p>",
+							 check_to_show_contact_information:false,
+							 check_to_show_cta:false,
+							 choose_text_alignment:"align-left",
+							 set_max_width_of_the_content:"353"
+							 },
+							 styles={
+									 'check_to_show_wrapper':false,
+									 'turn_on_to_make_all_text_white':false,
+									 'background':{
+											 'choose_background':"color",
+											 'add_background_color':{
+													'color':"#fff",
+													'opacity':0
+											 }
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius':"0"
+									 },
+									 'spacing':{
+									 'adjust_spacing_in_desktop_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }												
+									 },
+									 'adjust_spacing_in_tab_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 }
+									 }
+						 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta = "single",
+						single_cta_group = {
+						choose_type_of_cta : 'secondary-cta',
+						secondary_cta_group : {
+						}
+						},
+						styles={
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								},
+								'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								}
+							}
+						}
+						%}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-------------------------------------Team 2 section 3 Ends Here-------------------------------->
+
+<!-------------------------------------Team 2 section 4 Start Here------------------------------->
+
+  {% dnd_section max_width=1165,
+	       padding={
+				 'default':{
+				   'top':130
+				 },
+				 'mobile':{
+				   'top':60
+				 }				 
+				 }
+	%}
+   {% dnd_column offset=0, width=12 %}
+     {% dnd_row %}
+            {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description", horizontal_alignment='CENTER' %}
+							{% module_attribute "html"%}
+              <div style="text-align: center;">
+							  <h2><strong>Heading Text</strong></h2>
+								<p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+              </div>
+              {% end_module_attribute %}
+            {% end_dnd_module %}           
+     {% end_dnd_row %}
+   {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------- Detail Section 1 ---------------------------------------->
+  {% dnd_section max_width=1165,
+		       padding={
+					 'default':{
+					 'top':60
+					 },
+					 'mobile':{
+					 'top':30
+					 }
+					 }
+  %}
+       {% dnd_column offset=0, width=6, vertical_alignment='TOP' %}
+         {% dnd_row %}
+					{% dnd_module path='../modules/Job_Detail_Card', label="Job Detail Card",
+							add_custom_class_here="team-1",
+							check_this_to_show_box_shadow=false,
+							choose_card="job-detail-card",
+							job_detail_card={
+							check_this_to_show_logo:false,
+							check_this_to_show_cta:false,
+							content:{
+							choose_heading_type:"3",
+							add_heading_here:"Heading Text",
+							check_this_to_show_description:false
+							},
+							detail:[
+							{
+							 add_title_for_detail:"Location ",
+							 add_value_for_detail:" London",
+							 check_to_reverse_the_styling_of_title_and_value:false
+							},
+							{
+							 add_title_for_detail:"Type",
+							 add_value_for_detail:" Full-time",
+							 check_to_reverse_the_styling_of_title_and_value:false
+							},
+							{
+							 add_title_for_detail:"Salary",
+							 add_value_for_detail:" $$$-$$$$",
+							 check_to_reverse_the_styling_of_title_and_value:false
+							}
+							]
+							},
+							styles={
+									 'show_wrapper':false,
+									 'white_text':false,
+									 'background':{
+												'choose_background':"color",
+												'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												}
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius_here':"0"							     
+									 },
+									 'spacing':{
+									 'add_spacing_in_desktop':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }												
+									 },
+									 'add_spacing_in_tab':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'add_spacing_in_mobile':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 }							 
+									 }
+						}
+					%}
+					{% end_dnd_module %}
+        {% end_dnd_row %}
+       {% end_dnd_column %}
+       {% dnd_column offset=6, width=6, vertical_alignment='TOP' %}
+					 {% dnd_row %}
+						{% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta="single",
+						single_cta_group={
+						"choose_type_of_cta":"primary-cta",
+						primary_cta_group:{
+						"choose_cta_type_here":"solid-cta"
+					 }
+					 },
+						styles={
+									'alignment_field':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'set_cta_alignment_in_mobile_view':{
+									'alignment_field':{
+									'horizontal_align' : 'LEFT'
+									},
+									'single_cta_alignment':{
+								  'horizontal_align' : 'LEFT'
+								}
+							}
+						}
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+   {% dnd_section max_width=1165,
+			      padding={
+					 'default':{
+					 'top':20
+					 },
+					 'mobile':{
+					 'top':15
+					 }					 
+					 }
+	 %}
+   {% dnd_column %}
+     {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+            {% module_attribute "html"%}
+                  <hr>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+     {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------- Detail Section 2 ---------------------------------------->
+
+   {% dnd_section max_width=1165,
+		       padding={
+					 'default':{
+					 'top':37
+					 },
+					 'mobile':{
+					 'top':20
+					 }
+					 }
+    %}
+       {% dnd_column offset=0, width=6, vertical_alignment='TOP' %}
+         {% dnd_row %}
+					{% dnd_module path='../modules/Job_Detail_Card', label="Job Detail Card",
+						add_custom_class_here="team-1",
+						check_this_to_show_box_shadow=false,
+						choose_card="job-detail-card",
+						job_detail_card={
+						check_this_to_show_logo:false,
+						check_this_to_show_cta:false,
+						content:{
+						choose_heading_type:"3",
+						add_heading_here:"Heading Text",
+						check_this_to_show_description:false
+						},
+						detail:[
+						{
+						 add_title_for_detail:"Location ",
+						 add_value_for_detail:" London",
+						 check_to_reverse_the_styling_of_title_and_value:true
+						},
+						{
+						 add_title_for_detail:"Type",
+						 add_value_for_detail:" Full-time",
+						 check_to_reverse_the_styling_of_title_and_value:true
+						},
+						{
+						 add_title_for_detail:"Salary",
+						 add_value_for_detail:" $$$-$$$$",
+						 check_to_reverse_the_styling_of_title_and_value:true
+						}
+						]
+						},
+						styles={
+									 'show_wrapper':false,
+									 'white_text':false,
+									 'background':{
+												'choose_background':"color",
+												'add_background_color':{
+														'color':"#fff",
+														'opacity':0
+												}
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius_here':"0"							     
+									 },
+									 'spacing':{
+									 'add_spacing_in_desktop':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }												
+									 },
+									 'add_spacing_in_tab':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+								   'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'add_spacing_in_mobile':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 }							 
+									 }
+						}
+					%}
+					{% end_dnd_module %}
+        {% end_dnd_row %}
+       {% end_dnd_column %}
+       {% dnd_column offset=6, width=6, vertical_alignment='TOP' %}
+					 {% dnd_row %}
+						{% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta="single",
+						single_cta_group={
+						"choose_type_of_cta":"primary-cta",
+						primary_cta_group:{
+						"choose_cta_type_here":"solid-cta"
+					 }
+					 },
+						styles={
+									'alignment_field':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'set_cta_alignment_in_mobile_view':{
+									'alignment_field':{
+									'horizontal_align' : 'LEFT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'LEFT'
+								}
+							}
+						}
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+   {% dnd_section max_width=1165,
+			padding={
+				'default':{
+				'top':20
+				},
+				'mobile':{
+				'top':15
+				}					 
+				}
+	 %}
+   {% dnd_column %}
+     {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+            {% module_attribute "html"%}
+                  <hr>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+     {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------- Detail Section 3 ---------------------------------------->
+
+    {% dnd_section max_width=1165,
+		   padding={
+				 'default':{
+				 'top':37
+					},
+					'mobile':{
+					'top':20
+					}
+				}
+     %}
+       {% dnd_column offset=0, width=6, vertical_alignment='TOP' %}
+         {% dnd_row %}
+					{% dnd_module path='../modules/Job_Detail_Card', label="Job Detail Card",
+							add_custom_class_here="team-1",
+							check_this_to_show_box_shadow=false,
+							choose_card="job-detail-card",
+							job_detail_card={
+							check_this_to_show_logo:false,
+							check_this_to_show_cta:false,
+							content:{
+							choose_heading_type:"3",
+							add_heading_here:"Heading Text",
+							check_this_to_show_description:false
+							},
+							detail:[
+							{
+							 add_title_for_detail:"Location ",
+							 add_value_for_detail:" London",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							},
+							{
+							 add_title_for_detail:"Type",
+							 add_value_for_detail:" Full-time",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							},
+							{
+							 add_title_for_detail:"Salary",
+							 add_value_for_detail:" $$$-$$$$",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							}
+							]
+							},
+							styles={
+								'show_wrapper':false,
+								'white_text':false,
+								'background':{
+								'choose_background':"color",
+								'add_background_color':{
+								'color':"#fff",
+								'opacity':0
+								}
+								},
+								'border':{
+								'add_border_here':{
+								"top": {
+								"width": { "value": 0, "units": "px" },
+								"opacity": 0,
+								"style": "solid",
+								"color": "#E6E6E6"
+								},
+								"bottom": {
+								"width": { "value": 0, "units": "px" },
+								"opacity": 0,
+								"style": "solid",
+								"color": "#E6E6E6"
+								},
+								"left": {
+								"width": { "value": 0, "units": "px" },
+								"opacity": 0,
+								"style": "solid",
+								"color": "#E6E6E6"
+								},
+								"right": {
+								"width": { "value": 0, "units": "px" },
+								"opacity": 0,
+								"style": "solid",
+								"color": "#E6E6E6"
+								}
+								},
+							  'add_border_radius_here':"0"							     
+								},
+								'spacing':{
+								'add_spacing_in_desktop':{
+								'padding':{
+								'top':{
+								'value':0
+								},
+								'bottom':{
+								'value':0
+								},
+								'left':{
+								'value':0
+								},
+								'right':{
+								'value':0
+								}
+							  }												
+								},
+								'add_spacing_in_tab':{
+								'padding':{
+								'top':{
+								'value':0
+								},
+								'bottom':{
+								'value':0
+								},
+								'left':{
+								'value':0
+								},
+								'right':{
+								'value':0
+								}
+								}											
+								},
+								'add_spacing_in_mobile':{
+								'padding':{
+								'top':{
+								'value':0
+								},
+								'bottom':{
+								'value':0
+								},
+								'left':{
+								'value':0
+								},
+								'right':{
+								'value':0
+								}
+								}											
+							}							 
+						}
+						}
+					%}
+					{% end_dnd_module %}
+        {% end_dnd_row %}
+       {% end_dnd_column %}
+       {% dnd_column offset=6, width=6, vertical_alignment='TOP' %}
+					 {% dnd_row %}
+						{% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta="single",
+						single_cta_group={
+						"choose_type_of_cta":"primary-cta",
+						primary_cta_group:{
+						"choose_cta_type_here":"solid-cta"
+					 }
+					 },
+						styles={
+									'alignment_field':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'set_cta_alignment_in_mobile_view':{
+									'alignment_field':{
+									'horizontal_align' : 'LEFT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'LEFT'
+								}
+							}
+						}
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+   {% dnd_section max_width=1165,
+			      padding={
+					 'default':{
+					 'top':20
+					 },
+					 'mobile':{
+					 'top':15
+					 }					 
+					 }
+	 %}
+   {% dnd_column %}
+     {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+            {% module_attribute "html"%}
+                  <hr>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+     {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------- Detail Section 4 ---------------------------------------->
+
+    {% dnd_section max_width=1165,
+		       padding={
+					 'default':{
+					 'top':37
+					 },
+					 'mobile':{
+					 'top':20
+					 }
+					 }
+    %}
+       {% dnd_column offset=0, width=6, vertical_alignment='TOP' %}
+         {% dnd_row %}
+					{% dnd_module path='../modules/Job_Detail_Card', label="Job Detail Card",
+						add_custom_class_here="team-1",
+						check_this_to_show_box_shadow=false,
+						choose_card="job-detail-card",
+						job_detail_card={
+						check_this_to_show_logo:false,
+						check_this_to_show_cta:false,
+						content:{
+						choose_heading_type:"3",
+						add_heading_here:"Heading Text",
+						check_this_to_show_description:false
+						},
+						detail:[
+						{
+						 add_title_for_detail:"Location ",
+						 add_value_for_detail:" London",
+						 check_to_reverse_the_styling_of_title_and_value:true
+						},
+						{
+						 add_title_for_detail:"Type",
+						 add_value_for_detail:" Full-time",
+						 check_to_reverse_the_styling_of_title_and_value:true
+						},
+						{
+						 add_title_for_detail:"Salary",
+						 add_value_for_detail:" $$$-$$$$",
+						 check_to_reverse_the_styling_of_title_and_value:true
+						}
+						]
+						},
+						styles={
+									 'show_wrapper':false,
+									 'white_text':false,
+									 'background':{
+									 'choose_background':"color",
+									 'add_background_color':{
+									 'color':"#fff",
+									 'opacity':0
+									 }
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius_here':"0"							     
+									 },
+									 'spacing':{
+									 'add_spacing_in_desktop':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }												
+									 },
+									 'add_spacing_in_tab':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'add_spacing_in_mobile':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 }							 
+									 }
+						}
+					%}
+					{% end_dnd_module %}
+        {% end_dnd_row %}
+       {% end_dnd_column %}
+       {% dnd_column offset=6, width=6, vertical_alignment='TOP' %}
+					 {% dnd_row %}
+						{% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta="single",
+						single_cta_group={
+						"choose_type_of_cta":"primary-cta",
+						primary_cta_group:{
+						"choose_cta_type_here":"solid-cta"
+					 }
+					 },
+						styles={
+									'alignment_field':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'set_cta_alignment_in_mobile_view':{
+									'alignment_field':{
+								  'horizontal_align' : 'LEFT'
+								  },
+								  'single_cta_alignment':{
+									'horizontal_align' : 'LEFT'
+								  }
+							}
+						}
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+   {% dnd_section max_width=1165,
+			padding={
+			  'default':{
+			  'top':20
+				 },
+				 'mobile':{
+				 'top':15
+				 }					 
+			 }
+	 %}
+   {% dnd_column %}
+     {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+            {% module_attribute "html"%}
+                  <hr>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+     {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------- Detail Section 5 ---------------------------------------->
+
+    {% dnd_section max_width=1165,
+		       padding={
+					 'default':{
+					 'top':37
+					 },
+					 'mobile':{
+					 'top':20
+					 }
+					 }
+      %}
+       {% dnd_column offset=0, width=6, vertical_alignment='TOP' %}
+         {% dnd_row %}
+					{% dnd_module path='../modules/Job_Detail_Card', label="Job Detail Card",
+							add_custom_class_here="team-1",
+							check_this_to_show_box_shadow=false,
+							choose_card="job-detail-card",
+							job_detail_card={
+							check_this_to_show_logo:false,
+							check_this_to_show_cta:false,
+							content:{
+							choose_heading_type:"3",
+							add_heading_here:"Heading Text",
+							check_this_to_show_description:false
+							},
+							detail:[
+							{
+							 add_title_for_detail:"Location ",
+							 add_value_for_detail:" London",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							},
+							{
+							 add_title_for_detail:"Type",
+							 add_value_for_detail:" Full-time",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							},
+							{
+							 add_title_for_detail:"Salary",
+							 add_value_for_detail:" $$$-$$$$",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							}
+							]
+							},
+							styles={
+									 'show_wrapper':false,
+									 'white_text':false,
+									 'background':{
+									 'choose_background':"color",
+									 'add_background_color':{
+									 'color':"#fff",
+									 'opacity':0
+									 }
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius_here':"0"							     
+									 },
+									 'spacing':{
+									 'add_spacing_in_desktop':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }												
+									 },
+									 'add_spacing_in_tab':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'add_spacing_in_mobile':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 }							 
+									 }
+						}
+					%}
+					{% end_dnd_module %}
+        {% end_dnd_row %}
+       {% end_dnd_column %}
+       {% dnd_column offset=6, width=6, vertical_alignment='TOP' %}
+					 {% dnd_row %}
+						{% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta="single",
+						single_cta_group={
+						"choose_type_of_cta":"primary-cta",
+						primary_cta_group:{
+						"choose_cta_type_here":"solid-cta"
+					 }
+					 },
+						styles={
+									'alignment_field':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'set_cta_alignment_in_mobile_view':{
+									'alignment_field':{
+									'horizontal_align' : 'LEFT'
+									},
+								  'single_cta_alignment':{
+								  'horizontal_align' : 'LEFT'
+								 }
+							}
+						}
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+   {% dnd_section max_width=1165,
+			      padding={
+					 'default':{
+					 'top':20
+					 },
+					 'mobile':{
+					 'top':15
+					 }					 
+					 }
+	 %}
+   {% dnd_column %}
+     {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+            {% module_attribute "html"%}
+                  <hr>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+       {% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+<!--------------------------------------- Detail Section 6 ---------------------------------------->
+
+    {% dnd_section max_width=1165,
+		   padding={
+				 'default':{
+				 'top':37,
+				 'bottom':130
+				 },
+					'mobile':{
+					'top':20,
+					'bottom':60
+				}
+			}
+    %}
+       {% dnd_column offset=0, width=6, vertical_alignment='TOP' %}
+         {% dnd_row %}
+					{% dnd_module path='../modules/Job_Detail_Card', label="Job Detail Card",
+							add_custom_class_here="team-1",
+							check_this_to_show_box_shadow=false,
+							choose_card="job-detail-card",
+							job_detail_card={
+							check_this_to_show_logo:false,
+							check_this_to_show_cta:false,
+							content:{
+							choose_heading_type:"3",
+							add_heading_here:"Heading Text",
+							check_this_to_show_description:false
+							},
+							detail:[
+							{
+							 add_title_for_detail:"Location ",
+							 add_value_for_detail:" London",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							},
+							{
+							 add_title_for_detail:"Type",
+							 add_value_for_detail:" Full-time",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							},
+							{
+							 add_title_for_detail:"Salary",
+							 add_value_for_detail:" $$$-$$$$",
+							 check_to_reverse_the_styling_of_title_and_value:true
+							}
+							]
+							},
+							styles={
+									 'show_wrapper':false,
+									 'white_text':false,
+									 'background':{
+									 'choose_background':"color",
+									 'add_background_color':{
+									 'color':"#fff",
+									 'opacity':0
+									 }
+									 },
+									 'border':{
+									 'add_border_here':{
+									 "top": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "bottom": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "left": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 },
+									 "right": {
+									 "width": { "value": 0, "units": "px" },
+									 "opacity": 0,
+									 "style": "solid",
+									 "color": "#E6E6E6"
+									 }
+									 },
+									 'add_border_radius_here':"0"							     
+									 },
+									 'spacing':{
+									 'add_spacing_in_desktop':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }												
+									 },
+									 'add_spacing_in_tab':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 },
+									 'add_spacing_in_mobile':{
+									 'padding':{
+									 'top':{
+									 'value':0
+									 },
+									 'bottom':{
+									 'value':0
+									 },
+									 'left':{
+									 'value':0
+									 },
+									 'right':{
+									 'value':0
+									 }
+									 }											
+									 }							 
+									 }
+						}
+					%}
+					{% end_dnd_module %}
+        {% end_dnd_row %}
+       {% end_dnd_column %}
+       {% dnd_column offset=6, width=6, vertical_alignment='TOP' %}
+					{% dnd_row %}
+						{% dnd_module path='../modules/Buttons', label="Buttons",
+							choose_number_of_cta="single",
+							single_cta_group={
+							"choose_type_of_cta":"primary-cta",
+							primary_cta_group:{
+							"choose_cta_type_here":"solid-cta"
+						 }
+						 },
+							styles={
+									'alignment_field':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'RIGHT'
+									},
+									'set_cta_alignment_in_mobile_view':{
+									'alignment_field':{
+									'horizontal_align' : 'LEFT'
+									},
+									'single_cta_alignment':{
+									'horizontal_align' : 'LEFT'
+								}
+							}
+						}
+					 %}
+					 {% end_dnd_module %}
+				{% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+<!-------------------------------------Team 2 section 4 Ends Here-------------------------------->
+
+<!-------------------------------------Team 2 section 5 Start Here------------------------------->
+
+  {% dnd_section vertical_alignment='MIDDLE', max_width=1164, background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+	   padding={
+		 'default':{
+		 'top':152,
+		 'bottom':140
+		 },
+		 'mobile':{
+		 'top':60,
+		 'bottom':60
+		 }
+		 }
+	%}
+    {% dnd_column offset=0, width=6 %}
+      {% dnd_row %}
+        {% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image_Video_with_before_image",
+						   choose_between_image_and_video="video",
+							 video_group={
+							 "add_custom_class_here":"video_sec1",
+							 add_thumbnail_image:{
+							 'src': get_asset_url('../Images/Thumbnail_image.png'),
+				       'alt' : 'Thumbnail'
+							 },
+               add_play_icon_here:{
+							 'src': get_asset_url('../Images/playbutton.svg'),
+				       'alt' : 'Play-button'
+							 },
+							 add_width_of_play_button:"55",
+							 select_video_type:"youtube",
+							 add_youtube_url:{
+							 'url':{
+							 'href':"https://www.youtube.com/watch?v=qDCyvvdzND4"
+							 }
+							 },
+							 check_to_add_overlay_on_video_background:false,
+							 set_video_section_max_width_here:"531",
+							 set_video_section_min_height_here:"359",
+							 set_max_width_in_responsive:"94"
+               },
+							 check_to_add_vector_image=true,
+							 vector_image_group={
+							 add_vector_image:{
+							 'src': get_asset_url('../Images/Dotted_image.svg'),
+				       'alt' : 'Dotted-image'						 
+							 },
+							 set_width_of_vector_image:"87",
+							 set_height_of_vector_image:"87",
+							 choose_vector_image_position:"top-left",
+							 set_vector_image_position:{
+							 set_x_axis_position:"-23",
+							 set_y_axis_position:"-23"
+							 }
+							 },
+							 styles={
+							       'check_to_show_spacing_for_section':false,
+                     'set_alignment_for_image':"align-center",
+											'check_to_show_border_radius':true,
+											'add_border_radius':"4.4"
+               }
+				%}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column offset=6, width=6,
+				     padding={
+						'default':{
+						 'top':0,
+						 'left':27
+						 },
+						'mobile':{
+						'top':30,
+						'left':0
+						}
+						}
+		%}
+      {% dnd_row 
+			      padding={
+			    'default':{
+					 'bottom':15
+					},
+					 'mobile':{
+					 'bottom':0
+					}
+					}
+			%}
+      {% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+			 add_custom_class_here="content9",
+			 choose_content_type="single-content",
+			 single_column_group={
+			 check_to_show_heading:true,
+			 choose_heading:"2",
+			 add_heading_here:"Heading Text",
+			 check_to_show_description:true,
+			 add_description_here:"<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident Facilisis dapibus convallis molestie fugit.</p>",
+			 check_to_show_contact_information:false,
+			 check_to_show_cta:false,
+			 choose_text_alignment:"align-left",
+			 set_max_width_of_the_content:"536"
+			 },
+			 styles={
+			       'check_to_show_wrapper':false,
+						 'turn_on_to_make_all_text_white':false,
+						 'background':{
+						     'choose_background':"color",
+								 'add_background_color':{
+								 'color':"#fff",
+								 'opacity':0
+								 }
+						 },
+						 'border':{
+						 'add_border_here':{
+						 "top": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "bottom": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "left": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "right": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 }
+						 },
+						 'add_border_radius':"0"
+						 },
+						 'spacing':{
+						 'adjust_spacing_in_desktop_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+						 },
+						 'left':{
+						 'value':0
+						 },
+						 'right':{
+						 'value':0
+						 }
+						 }												
+						 },
+						 'adjust_spacing_in_tab_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+						 },
+						 'left':{
+						 'value':0
+						 },
+						 'right':{
+						 'value':0
+						 }
+						 }											
+						 },
+						 'adjust_spacing_in_mobile_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+						 },
+						 'left':{
+						 'value':0
+						 },
+						 'right':{
+						 'value':0
+						 }
+						 }											
+						 }
+						 }
+			  }
+		  	%}
+       {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+         {% dnd_module path='../modules/List_Item', label="List Item"
+						choose_list_item = "unordered",
+						unordered_group = [
+						{
+						choice_image_or_icon : 'image',
+							add_image_before_list : {
+							'src':get_asset_url('../Images/Check.svg'),
+							'width':'18',
+						},
+						add_list_text_here : "Desktop cinema display.",
+						set_spacing_from_left_side : "34",
+						set_spacing_from_bottom : "9.3"
+						}
+						],
+						style = {
+						'all_text_white' : false,
+						'check_to_show_spacing' : false,
+						'choose_background_option' : 'none',
+						'list_item_styling':{
+						'add_font_size_for_list_items':'16',
+						'add_font_weight_for_list_items':'400'
+						}
+						}
+						%}
+					{% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+            {% dnd_module path='../modules/List_Item', label="List Item"
+						choose_list_item = "unordered",
+						unordered_group = [
+						{
+						choice_image_or_icon : 'image',
+							add_image_before_list : {
+							'src':get_asset_url('../Images/Check.svg'),
+							'width':'18',,
+				      'alt' : 'Check'
+						},
+						add_list_text_here : "iPad or tablet.",
+						set_spacing_from_left_side : "34",
+						set_spacing_from_bottom : "9.3"
+						}
+						],
+						style = {
+						'all_text_white' : false,
+						'check_to_show_spacing' : false,
+						'choose_background_option' : 'none',
+						'list_item_styling':{
+						'add_font_size_for_list_items':'16',
+						'add_font_weight_for_list_items':'400'
+						}
+						}
+						%}
+					{% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+         {% dnd_module path='../modules/List_Item', label="List Item"
+						choose_list_item = "unordered",
+						unordered_group = [
+						{
+						choice_image_or_icon : 'image',
+							add_image_before_list : {
+							'src':get_asset_url('../Images/Check.svg'),
+							'width':'18',
+				      'alt' : 'Check'
+						},
+						add_list_text_here : "Mobile device of your liking. Double check!",
+						set_spacing_from_left_side : "34",
+						set_spacing_from_bottom : "9.3"
+						}
+						],
+						style = {
+						'all_text_white' : false,
+						'check_to_show_spacing' : false,
+						'choose_background_option' : 'none',
+						'list_item_styling':{
+						'add_font_size_for_list_items':'16',
+						'add_font_weight_for_list_items':'400'
+						}
+						}
+				%}
+				{% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row 
+			    margin={
+					'default':{
+					  'top':35
+					},
+					'mobile':{
+					  'top':15
+					}
+					}
+		 	%}
+        {% dnd_module path='../modules/Buttons', label="Buttons",
+					choose_number_of_cta="single",
+					single_cta_group={
+					"choose_type_of_cta":"primary-cta",
+					primary_cta_group:{
+					"choose_cta_type_here":"solid-cta"
+				 }
+				 },
+					styles={
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+								},
+						    'set_cta_alignment_in_mobile_view':{
+								'alignment_field':{
+								'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+								'horizontal_align' : 'LEFT'
+							}
+						}
+					}
+				%}
+				{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-------------------------------------Team 2 section 5 Ends Here-------------------------------->
+
+<!------------------------------Team 2 Accordion Section Starts Here----------------------------->
+
+  {% dnd_section vertical_alignment='MIDDLE',
+     padding={
+     'default':{
+     'top': 130,
+     'bottom':0
+     },
+     'mobile':{
+     'top': 60,
+     'bottom': 0
+     }
+    }
+	 %}
+    {% dnd_column %}
+      {% dnd_row
+						padding={
+						'default':{
+						'left': 171,
+						'right': 171
+						},
+						'mobile':{
+						'left': 0,
+						'right': 0
+						}
+					}
+      %}
+        {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description" , horizontal_alignment = "CENTER" %}
+        {% module_attribute "html"%}
+          <div style="text-align: center;">
+            <h2><strong>Heading Text</strong></h2>
+            <p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+          </div>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section vertical_alignment='MIDDLE',
+			max_width="855",
+			padding={
+     'default':{
+     'top': 50,
+     'bottom':100
+     },
+     'mobile':{
+     'top': 30,
+     'bottom': 60
+     }
+    },
+	 %}
+    {% dnd_column %}
+      {% dnd_row %}
+	      {% dnd_module path='../modules/Accordion', label="Accordion" 
+							add_custom_class_here ="accordion-1"
+							accordion_group=[
+							{
+							check_to_show_border:false,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_open_by_default:true,
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit."
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+							},
+							{
+							check_to_show_border:true,
+							border:{
+							add_border_color_here :{
+              color : '#e6e6e6'
+              },
+							"add_top_border_width" : "1",
+							"add_left_border_width" : "0",
+							"add_right_border_width" : "0",
+							"add_bottom_border_width" : "0",
+							},
+							"add_question_here":"Q. Do you design the layout, if i don't have a responsive one?",
+							"add_description_here":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet 
+							solutaLorem ipsum dolor sit amet, consectetur adipisicing elit.",
+							}
+							],
+							styles = {
+								 'text_white':{
+								 'all_text_white' : false
+								  },
+								  'section_style' : {
+								  'section_background' : {
+								  'choose_section_background' :'color',
+								  'add_background_color' :  {
+								  color : '#FFFFFF'
+								 }
+								 },
+								 'section_spacing' : {
+								 'desktop_spacing' : {
+								 'padding' : {
+								 'top' : {
+								 'value' : 0
+								 },
+								 'bottom' : {
+								 'value' :0
+								 },
+								 'left' : {
+								 'value' : 0
+								 },
+								 'right' : {
+								 'value' : 0
+								 }
+								 }
+								 },
+								 'tab_spacing' : {
+								 'padding' : {
+								 'top' : {
+								 'value' : 0
+								 },
+								 'bottom' : {
+								 'value' :0
+								 },
+								 'left' : {
+								 'value' : 0
+								 },
+								 'right' : {
+								 'value' : 0
+								 }
+								 }
+								 },
+								 'mobile_spacing' : {
+								 'padding' : {
+								 'top' : {
+								 'value' : 0
+								 },
+								 'bottom' : {
+								 'value' :0
+								 },
+								 'left' : {
+								 'value' : 0
+								 },
+								 'right' : {
+								 'value' : 0
+								 }
+								 }
+								 }
+								 }
+								 },
+								 'accordion_style' : {
+								 'accordion_background' : {
+								 'choose_accordion_background' :'color',
+								 'add_background_color' :  {
+								 color : '#FFFFFF'
+								 }
+								 },
+								 'check_to_show_border' : true,
+								 'accordion_border':{
+								 'add_border_here':{
+								 "top": {
+							   "width": { "value": 1, "units": "px" },
+								 "opacity": 100,
+								 "style": "solid",
+								  "color": "#E6E6E6"
+								 },
+								 "bottom": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 100,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "left": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 100,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 },
+								 "right": {
+								 "width": { "value": 0, "units": "px" },
+								 "opacity": 100,
+								 "style": "solid",
+								 "color": "#E6E6E6"
+								 }
+								 },
+								 "add_border_radius_here" :"0"
+								 },
+								 'add_accordion_button_color' : { color : "#2CD8B1"},
+								 'spacing' : {
+								 'description_spacing' : {
+								 'padding' : {
+								 'top' : {
+								 'value' : 18
+								 },
+								 'bottom' : {
+								 'value' :15
+								 },
+								 'left' : {
+								 'value' : 0
+								 },
+								 'right' : {
+								 'value' : 65
+								 }
+								 }
+								 },
+								 'desktop_spacing' : {
+								 'padding' : {
+								 'top' : {
+								 'value' : 37
+								 },
+								 'bottom' : {
+								 'value' :20
+								 },
+								 'left' : {
+								 'value' : 0
+								 },
+								 'right' : {
+								 'value' : 0
+								 }
+								 }
+								 },
+								 'tab_spacing' : {
+								 'padding' : {
+								 'top' : {
+								 'value' : 25
+								 },
+								 'bottom' : {
+								 'value' :10
+								 },
+								 'left' : {
+								 'value' : 0
+								 },
+								 'right' : {
+								 'value' : 0
+								 }
+								 }
+								 },
+								 'mobile_spacing' : {
+								 'padding' : {
+								 'top' : {
+								 'value' : 25
+								 },
+								 'bottom' : {
+								 'value' :15
+								 },
+								 'left' : {
+								 'value' : 0
+								 },
+								 'right' : {
+								 'value' : 0
+								 }
+								 }
+								 }
+							 }
+						  }
+						}
+					%}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!------------------------------Team 2 Accordion Section Ends Here------------------------------->
+
+<!-----------------------------------Team 2 Slider Section Starts Here--------------------------->
+
+  {% dnd_section 
+	      padding={
+				'default':{
+				'top':130,
+				'bottom':90
+				},
+				'mobile':{
+				'top':60,
+				'bottom':60
+				}
+				},
+				background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}"
+	%}
+    {% dnd_column offset=0, column=12 %}
+      {% dnd_row %}
+      {% dnd_module path='../modules/Rich_Text', label="Rich_Text",
+			 add_custom_class_here="content10",
+			 choose_content_type="single-content",
+			 single_column_group={
+        check_to_show_heading:true,
+				choose_heading:"2",
+				add_heading_here:"Heading Text",
+				check_to_show_description:true,
+				add_description_here:"<p>The headline and subheader tells us what you're <a href='https://palmspire-3842749.hs-sites.com/home-1'>offering </a>, and the form header closes the deal. Over here you can explain why your offer is so great it's worth filling out a form for.</p>",
+				check_to_show_contact_information:false,
+			  check_to_show_cta:false,
+        choose_text_alignment:"align-center",
+			  set_max_width_of_the_content:"827"
+			 },
+			 styles={
+			       'check_to_show_wrapper':false,
+						 'turn_on_to_make_all_text_white':false,
+						 'background':{
+						     'choose_background':"color",
+								 'add_background_color':{
+								    'color':"#fff",
+										'opacity':0
+								 }
+						 },
+						 'border':{
+						 'add_border_here':{
+						 "top": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "bottom": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "left": {
+						 "width": { "value": 0, "units": "px" },
+					   "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 },
+						 "right": {
+						 "width": { "value": 0, "units": "px" },
+						 "opacity": 0,
+						 "style": "solid",
+						 "color": "#E6E6E6"
+						 }
+						 },
+						 'add_border_radius':"0"
+						 },
+						 'spacing':{
+						 'adjust_spacing_in_desktop_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+						 },
+						 'left':{
+						 'value':0
+						 },
+						 'right':{
+						 'value':0
+						 }
+					   }												
+						 },
+						 'adjust_spacing_in_tab_view':{
+						 'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+						 },
+						 'left':{
+						 'value':0
+						 },
+						 'right':{
+						 'value':0
+						 }
+						 }											
+						 },
+						 'adjust_spacing_in_mobile_view':{
+					   'padding':{
+						 'top':{
+						 'value':0
+						 },
+						 'bottom':{
+						 'value':0
+					   },
+						 'left':{
+						 'value':0
+						 },
+						 'right':{
+						 'value':0
+						 }
+						 }											
+						 }
+						 }
+			 }
+			%}
+      {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row 
+			     padding={
+					 'default':{
+					 'top':18
+					 },
+					 'mobile':{
+					 'top':30
+					 }
+					 }
+			%}
+         {% dnd_module path='../modules/Testimonial_Slider', label="Testimonial Slider",
+					  add_custom_class_here="slider_sec",
+            choose_slider_type="simple_slider",
+						"choose_dots_type"="dots_type_2",
+						simple_slider_group=[
+						{
+					  add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Microsoft.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Boy.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/google.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Pinterest.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 3.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/asana-3.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Boy.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Youtube.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 2.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						},
+						{
+						add_max_width_of_image:"94",
+						add_image_here:{
+						'src': get_asset_url('../Images/Harvest.png')
+						},
+						add_content_here:"<p><em>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.
+						Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Sunt qui esse pariatur duis deserunt mollit dolore.”</em></p>",
+						add_bottom_image_here:{
+								'src': get_asset_url('../Images/Resized Image/Circle 3.png')
+						},
+						add_name_here:"Jerome Bell",
+						add_designation_here:"<p>CEO, Softech</p>"
+						}
+						],
+						slider_function_group={
+						want_dots:"true",
+						want_arrows:"false",
+						want_autoplay:"false",
+						want_centermode:"true",
+						want_variable_width:"true",
+						wanted_to_play_infinitely:"true",
+						slider_speed:"700",
+						slider_autoplay_speed:"1000",
+						no_of_slides_to_show:"3",
+						no_of_slides_to_scroll:"1"
+						}
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!-----------------------------------Team 2 Slider Section Ends Here----------------------------->
+
+  {% dnd_section 
+				padding={
+				'default':{
+				'top':120,
+				'bottom':120
+				},
+				'mobile':{
+				'top':60,
+				'bottom':60
+				}
+				}
+	%}
+    {% dnd_column offset=0, width=6,  
+		    padding={
+				'default':{
+				'right':16
+				},
+				'mobile':{
+				'right':0
+				}
+				}
+		%}
+      {% dnd_row %}
+              {% dnd_module path='../modules/Card', label="Card"
+							 check_to_show_wrapper=false,
+							 add_padding_top_here="0",
+							 add_padding_bottom_here="0",
+							 check_to_show_border_radius=true,
+							 add_border_radius_here="4",
+							 check_to_show_box_shadow=false,
+							 check_to_show_hover_effect=false,
+							 check_to_show_image_in_bottom=false,
+							 card_content=
+							 {
+							 check_to_show_background_color_of_card:true,
+							 add_card_color_here:{
+							     color:"#fff"
+							 },
+							 check_to_show_all_text_white:false,
+							 check_to_show_image_background_image_here:false,
+							 check_to_show_heading:true,
+							 select_heading : "3",
+							 add_heading_here:"Heading Text",
+							 check_to_show_description:true,
+							 add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							 check_to_show_email_option:false,
+							 check_to_show_call_to_action:true,
+							 cta_group:{
+							  choose_type_of_cta:"primary-cta",
+								primary_cta_group:{
+								 choose_style_of_cta:"solid-cta",
+								 add_cta_link_here:{
+								 'url':{
+								 'href':"https://www.google.com/"
+								 }
+								 },
+								 add_cta_text_here:"Call to Action"
+								},
+								add_spacing_from_top_of_cta : "10"
+							 }
+							 },
+							 style={
+							     'check_to_show_padding':true,
+									 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+								   'padding':{
+									 'top':{
+									 'value':40
+									 },
+									 'bottom':{
+									 'value':40
+									 },
+									 'left':{
+								   'value':40
+									 },
+								   'right':{
+								   'value':40
+									 }
+									 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+									 'padding':{
+								   'top':{
+									 'value':40
+									 },
+								   'bottom':{
+									 'value':40
+									 },
+									 'left':{
+									 'value':40
+									 },
+									 'right':{
+									 'value':40
+									 }
+									 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+									 'top':{
+								   'value':30
+									 },
+									 'bottom':{
+									 'value':40
+									 },
+									 'left':{
+									 'value':30
+									 },
+									 'right':{
+									 'value':30
+									 }
+									 }														 
+									 }
+									 },
+								   'check_to_show_border_on_cards':true,
+								   'card_border':{
+								   'add_border_here':{
+									 "top": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+									 },
+									 "bottom": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+									 },
+									 "left": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+								   },
+								   "right": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+									 }
+									 }
+									 },
+									 'alignment':{
+									 'horizontal_align':'CENTER'
+								   },
+									 'add_spacing_here':{
+								   'margin':{
+								   'top':{
+									 'value':0
+									 }
+								 }
+							}
+						 }
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column offset=6, width=6,
+				padding={
+					'default':{
+					'left':16,
+					'top':0
+			  	},
+					'mobile':{
+					'top':20,
+					'left':0
+				}
+			 }
+		%}
+      {% dnd_row %}
+              {% dnd_module path='../modules/Card', label="Card"
+							 check_to_show_wrapper=false,
+							 add_padding_top_here="0",
+							 add_padding_bottom_here="0",
+							 check_to_show_border_radius=true,
+							 add_border_radius_here="4",
+							 check_to_show_box_shadow=false,
+							 check_to_show_hover_effect=false,
+							 check_to_show_image_in_bottom=false,
+							 card_content=
+							 {
+							 check_to_show_background_color_of_card:true,
+							 add_card_color_here:{
+							     color:"#101a29"
+							 },
+							 check_to_show_all_text_white:true,
+							 check_to_show_image_background_image_here:false,
+							 check_to_show_heading:true,
+							 select_heading : "3",
+							 add_heading_here:"Heading Text",
+							 check_to_show_description:true,
+							 add_description_here:"<p>Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist</p>",
+							 check_to_show_email_option:false,
+							 check_to_show_call_to_action:true,
+							 cta_group:{
+							  choose_type_of_cta:"primary-cta",
+								primary_cta_group:{
+								 choose_style_of_cta:"solid-cta",
+								 add_cta_link_here:{
+								 'url':{
+								 'href':"https://www.google.com/"
+								 }
+								 },
+								 add_cta_text_here:"Call to Action"
+								},
+								add_spacing_from_top_of_cta : "10"
+							 }
+							 },
+							 style={
+							     'check_to_show_padding':true,
+									 'cards_spacing':{
+									 'adjust_spacing_in_desktop_view':{
+								   'padding':{
+									 'top':{
+									 'value':40
+									 },
+									 'bottom':{
+									 'value':40
+									 },
+									 'left':{
+								   'value':40
+									 },
+								   'right':{
+								   'value':40
+									 }
+									 }
+									 },
+									 'adjust_spacing_in_tab_view':{
+									 'padding':{
+								   'top':{
+									 'value':40
+									 },
+								   'bottom':{
+									 'value':40
+									 },
+									 'left':{
+									 'value':40
+									 },
+									 'right':{
+									 'value':40
+									 }
+									 }											 
+									 },
+									 'adjust_spacing_in_mobile_view':{
+									 'padding':{
+									 'top':{
+								   'value':30
+									 },
+									 'bottom':{
+									 'value':40
+									 },
+									 'left':{
+									 'value':30
+									 },
+									 'right':{
+									 'value':30
+									 }
+									 }														 
+									 }
+									 },
+								   'check_to_show_border_on_cards':true,
+								   'card_border':{
+								   'add_border_here':{
+									 "top": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+									 },
+									 "bottom": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+									 },
+									 "left": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+								   },
+								   "right": {
+									 "width": { "value": 1, "units": "px" },
+									 "opacity": 100,
+									 "style": "solid",
+									 "color": "#e2e2e2"
+									 }
+									 }
+									 },
+									 'alignment':{
+									 'horizontal_align':'CENTER'
+								   },
+									 'add_spacing_here':{
+								   'margin':{
+								   'top':{
+									 'value':0
+									 }
+								 }
+							}
+						 }
+				 %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!------------------------------------Team 2 Text or Cta Section Start Here  -------------------->
+
+
+{% end_dnd_area %}
+{% endblock body %} 

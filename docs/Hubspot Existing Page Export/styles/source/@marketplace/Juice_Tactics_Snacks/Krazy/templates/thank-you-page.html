@@ -1,0 +1,146 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Thank You Page
+  screenshotPath: ../images/template-previews/thank-you.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--thank-you-page', label='Main section' %}
+  
+    {# START: Hero 1 #}
+    {% dnd_section 
+          background_color="#f7f8fa",
+          padding={ 
+            'default': { 'top': 40, 'bottom': 40, 'left': 20, 'right': 20 },
+            'mobile': { 'top': 20, 'bottom': 20 }
+          }
+    %}
+    {% dnd_module path='../modules/kz-hero-1',
+      tag_line="",
+      heading_text="Thanks for downloading!",
+      rich_text='<p><span style="font-size: 20px;">Problems downloading? <a href="#">Try again</a>.</span></p>',
+       button_1={
+        "button_text": ""
+      },
+      button_2={
+        "button_text": ""
+      },
+     image={
+            'alt': 'About Image 2',
+            'loading': 'lazy',
+            'src': get_asset_url("../images/grayscale-mountain.png")
+      },
+      styles={
+           "heading_type": "<h1>",
+           "image_corner" : {
+            "radius" : 6
+          }
+        }
+    %}
+    {% end_dnd_module %} 
+    {% end_dnd_section %}
+    {# END: Hero 1 #}
+   
+    {# START: Card 1 #}
+    {% dnd_section 
+          padding={ 
+            'default': { 'top': 40, 'bottom': 40, 'left': 20, 'right': 20 },
+            'mobile': { 'top': 20, 'bottom': 20 }
+          }
+    %}
+    {% dnd_module path='../modules/kz-card-1',
+      card=[
+        {
+         "card_number":"",
+         "card_icon":{
+            "name": "Alternate File",
+            "unicode": "f15c",
+            "type": "REGULAR"
+         },
+         "card_title":"Lorem ipsum",
+         "card_text":'<a href="#">TEXT LINK</a>'
+        },
+        {
+         "card_number":"",
+         "card_icon":{
+            "name": "Desktop",
+            "unicode": "f108",
+            "type": "SOLID"
+         },
+         "card_title":"Lorem ipsum",
+         "card_text":'<a href="#">TEXT LINK</a>'
+        },
+        {
+         "card_number":"",
+         "card_icon":{
+            "name": "Alternate Mobile",
+            "unicode": "f3cd",
+            "type": "SOLID"
+         },
+         "card_title":"Lorem ipsum",
+         "card_text":'<a href="#">TEXT LINK</a>'
+        }
+      ],
+      styles={
+        "card_title_size": 24,
+        "card_text_center": true,
+        "card_background_type":"gradient",
+        "card_border":{
+          "top":
+            {
+                "width":
+                {
+                    "value": 1,
+                    "units": "px"
+                },
+                "opacity": 100,
+                "style": "solid",
+                "color": "#dae5ec"
+            },
+            "bottom":
+            {
+                "width":
+                {
+                    "value": 1,
+                    "units": "px"
+                },
+                "opacity": 100,
+                "style": "solid",
+                "color": "#dae5ec"
+            },
+            "left":
+            {
+                "width":
+                {
+                    "value": 1,
+                    "units": "px"
+                },
+                "opacity": 100,
+                "style": "solid",
+                "color": "#dae5ec"
+            },
+            "right":
+            {
+                "width":
+                {
+                    "value": 1,
+                    "units": "px"
+                },
+                "opacity": 100,
+                "style": "solid",
+                "color": "#dae5ec"
+            }
+        }
+      }
+    %}
+    {% end_dnd_module %} 
+    {% end_dnd_section %}
+    {# END: Card 1 #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

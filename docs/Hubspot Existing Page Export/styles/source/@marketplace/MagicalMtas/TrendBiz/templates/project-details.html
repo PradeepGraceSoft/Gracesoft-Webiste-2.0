@@ -1,0 +1,209 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Project Details
+  screenshotPath: ../images/template-previews/project-details.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--project-details p-0"
+%}
+
+  {# Breadcrumb Section Start #}
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# Project Details End #}
+  {% dnd_section max_width=1200, class="trendbiz-container project-details-section" background_color={{ context.background_color || "#FFFFFF" }}, margin={
+  'top': '0px',
+  'bottom': '0px',
+  'left': '0px',
+  'right': '0px'
+  },  padding={
+  'top': '120px',
+  'bottom': '0px',
+  'left': '0px',
+  'right': '0px'
+  } %}
+
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module "module_16683653819508" path="../modules/Single Image", label="Single Image"
+          extra_class = '',
+          single_image = { 
+                    'alt': 'Project Image', 
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/project/project-details.jpg') 
+                },
+
+                %}
+
+                {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_column %}
+
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}         
+              {% module_attribute 'html' %}
+                  <h2>Our Business Growth</h2>
+                  <p>Business Strategy</p>
+                {% end_module_attribute %}  
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}         
+              {% module_attribute 'html' %}
+                  <p>The relationship between geometry and architectural design are described and discussed along some examples. Geometry is the fundamental science of forms and their order. Geometric figures, forms and transformations build the material of architectural design.</p>
+                  <p>In the history of architecture geometric rules based on the ideas of proportions and symmetries formed fixed tools for architectural design. The relationship between geometry and architectural design are described.</p>
+     
+                {% end_module_attribute %}  
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}         
+              {% module_attribute 'html' %}
+                  <p>Project Link:	<strong>https://magicalmtas.com/</strong></p>
+     
+                {% end_module_attribute %}  
+        {% end_dnd_module %}
+        {% end_dnd_row %}
+
+
+        {% dnd_row %}
+          {% dnd_module "module_16693758788257" path="../modules/List", label="List"
+            select_list = 'label-list',
+            extra_class = '',
+            label_list_item = [
+              {
+                'label_text' : 'Date:',
+                'label_text_value' : '28 Aug 2016'
+              },
+              {
+                'label_text' : 'Client:',
+                'label_text_value' : 'Alfred Norris'
+              },
+              {
+                'label_text' : 'Awards: ',
+                'label_text_value' : '2021 Awwwards'
+              }
+            ]
+
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+
+  {% dnd_row %}
+    {% dnd_column width=6, offset=0  %}
+      {% dnd_row %}
+        {% dnd_module "module_166930625285920" path="../modules/Social Share", label="Social Share"
+              social_icon_group = [
+              {
+                  'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+              },
+              {
+                  'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+              },
+              {
+                  'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+              },
+              {
+                  'social_icon_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.linkedin.com/'}, 'open_in_new_tab': false, 'no_follow': false },
+              }
+              ]
+              %}
+      {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+
+    {% dnd_column width=6, offset=6 %}
+      {% dnd_row %}
+        {% dnd_module "module_16693758788257" path="../modules/List", label="List"
+          select_list = 'check-list',
+          extra_class = 'check-list-inline',
+          list_item = [
+            {
+              'list_title' : '1,071:'
+            },
+            {
+              'list_title' : '1994'
+            }
+          ]
+
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+
+  {% end_dnd_row %}
+
+  {% dnd_row %}
+    {% dnd_column width=6, offset=0 %}
+      {% dnd_row %}
+        {% dnd_module "module_16683653819508" path="../modules/Single Image", label="Single Image"
+        extra_class = '',
+        single_image = { 
+                  'alt': 'Project Image', 
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/project/project-gallery-1.jpg') 
+              },
+
+              %}
+
+              {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+
+    {% dnd_column width=6, offset=6 %}
+      {% dnd_row %}
+        {% dnd_module "module_16683653819508" path="../modules/Single Image", label="Single Image"
+        extra_class = '',
+        single_image = { 
+                  'alt': 'Project Image', 
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/project/project-gallery-2.jpg') 
+              },
+
+              %}
+
+              {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_row %}
+
+  {% dnd_row %}
+    {% dnd_module path='@hubspot/rich_text' %}         
+        {% module_attribute 'html' %}
+            <p>The relationship between geometry and architectural design are described and discussed along some examples. Geometry is the fundamental science of forms and their order. Geometric figures, forms and transformations build the material of architectural design.</p>
+            <p>In the history of architecture geometric rules based on the ideas of proportions and symmetries formed fixed tools for architectural design. The relationship between geometry and architectural design are described.</p>
+
+          {% end_module_attribute %}  
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+
+
+  {% end_dnd_column %}
+
+ 
+  {% end_dnd_section %}
+  {# Project Details End #}
+
+  
+
+  
+
+{% end_dnd_area %}
+{% endblock body %}

@@ -1,0 +1,244 @@
+{% import '../_variables.css' as var %}
+
+/* Animations */
+
+@keyframes sticky_header_active {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0%)
+  }
+}
+
+@keyframes sticky_header_inactive {
+  from {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Sticky element */
+
+.header--sticky-active .header__sticky-element {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+/* Fixes HS editor overlapping problem */
+
+.hs-inline-edit .header--sticky-active .header__sticky-element {
+  z-index: 2147483599;
+}
+
+/* Main section */
+
+.header__section--main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header--sticky-inactive .header__section--main {
+  animation: .2s ease-in-out sticky_header_inactive;
+}
+
+.header--sticky-active .header__section--main {
+  box-shadow: {{ var.small_shadow }};
+  animation: .2s ease-in-out sticky_header_active;
+}
+
+.header__section--main .header__center {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header--sticky-active .header__section--main .header__center {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+/* Top section */
+
+.header__section--top {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header__section--top .header__center {
+  padding-top: .56rem;
+  padding-bottom: .56rem;
+}
+
+/* Elements */
+
+.header:not(.header--overlap) .header__logo__overlap,
+.header--overlap .header__logo__static,
+.header--sticky-active .header__logo__overlap,
+.header--sticky-active .header__logo__static,
+.header--sticky:not(.header--sticky-active) .header__logo__sticky {
+  display: none;
+}
+
+.header__nav .nav {
+  position: static;
+}
+
+.header:not(.header--overlap) .nav__mega {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.header__info {
+  font-size: {{ var.small_text }}rem;
+}
+
+.header--w-lang .header__info {
+  margin-inline-start: 1.2rem;
+  padding-inline-start: 1.2rem;
+  border-inline-start: 1px solid;
+}
+
+.header--wo-lang .header__lang,
+.header--wo-lang .header__mobile-lang {
+  display: none;
+}
+
+.header__mobile-lang,
+.header__mobile-search {
+  display: none;
+}
+
+.header--w-lang .header__mobile-search {
+  margin-inline-start: 1.2rem;
+}
+
+.header__info a {
+  text-decoration: none;
+}
+
+.header__info a:hover {
+  text-decoration: underline;
+}
+
+.header__info p {
+  margin-bottom: 0;
+}
+
+.header:not(.header--overlap) .navbar__mega {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.header__buttons .inline-items > *:first-child {
+  margin-inline-start: 1.2rem;
+}
+
+.header__mobile-nav {
+  display: none;
+}
+
+.header:not(.header--overlap) .header__buttons__overlap,
+.header--overlap .header__buttons__static {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.md }}px) {
+  .header__lang,
+  .header__search,
+  .header__nav {
+    display: none;
+  }
+  
+  .header__mobile-lang,
+  .header__mobile-search,
+  .header__mobile-nav {
+    display: block;
+  }
+  
+  .header__mobile-nav {
+    margin-inline-start: 1.2rem;
+  }
+  
+  .mnav-active {
+    overflow: hidden;
+  }
+  
+  .header--w-lang .header__info {
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+    border-inline-start: none;
+  }
+}
+
+@media (max-width: {{ var.sm }}px) {
+  .header__section--top {
+    display: none;
+  }
+}
+
+/* Dark scheme */
+
+{% if theme.components.header.scheme == 'dark' %}
+
+  .header,
+  .header__section--main {
+    background: {{ var.dark }};
+  }
+  
+  .header__section--top {
+    background: {{ var.white_bg }};
+  }
+  
+  /* Info */
+  
+  .header__info {
+    color: {{ var.white_text }};
+  }
+  
+  .header--w-lang .header__info {
+    border-inline-start-color: {{ var.white_borders }};
+  }
+  
+  .header__info a,
+  .header__info a:hover {
+    color: {{ var.white }};
+  }
+  
+  .header__nav .nav__link .super-text {
+    color: {{ var.white_text }};
+  }
+
+/* Light scheme */
+
+{% else %}
+
+  .header,
+  .header__section--main {
+    background: {{ var.white }};
+  }
+  
+  .header__section--top {
+    background: {{ var.light }};
+  }
+
+  .header__section--main {
+    background: {{ var.white }};
+  }
+  
+  /* Info */
+  
+  .header--w-lang .header__info {
+    border-inline-start-color: {{ var.borders_color }};
+  }
+
+{% endif %}

@@ -1,0 +1,236 @@
+<!--
+ templateType: section
+ label: Wrap-up
+ description: "Similar to the 'Theme corners' regarding corner radius, but using a row for the box. This section also includes 'reveal' scrolling animations."
+ isAvailableForNewContent: true
+ screenshotPath: ../images/section-previews/wrap-up.jpg
+-->
+{% from '../css/_variables.css' import gutter %}
+{% dnd_section class="dnd-section-theme-corners",
+  max_width=1234,
+  padding={
+    "default": {
+      "bottom": 0
+    }
+  }
+%}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module path="../modules/section-extra-settings",
+        bg_media="image",
+        bg_img={
+          "src" : "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/blur-bg-03.jpg",
+          "alt" : "background image"
+        },
+        bottom_deco={
+          "type" : "concave",
+          "arc_height_lg" : 388,
+          "arc_height_md" : 388,
+          "arc_height_sm" : 588
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path="../modules/review",
+        items=[
+          {
+            "rating" : "full,full,full,full,full",
+            "quote" : "“Happy to work with these guys. They went above and beyond and helped me achieve my big goals.”",
+            "author_photo" : {
+              "src" : "https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-i0o53.jpg",
+              "alt" : "Describe your image",
+              "width" : 80,
+              "height" : 80,
+              "loading" : "lazy"
+            },
+            "company_logo" : {
+              "src" : ""
+            },
+            "author_name" : "Eric Lee",
+            "author_details" : "Brooklyn, New York"
+          }
+        ],
+        settings={
+          "boxed" : false,
+          "col" : {
+            "lg" : "1",
+            "md" : "1"
+          },
+          "color_scheme" : "light",
+          "quote_size" : "xlarge",
+          "rating" : true
+        },
+        wrapper={
+          "max_width" : {
+            "lg" : "600"
+          },
+          "block_align" : {
+            "lg" : "center"
+          },
+          "margin" : {
+            "bottom" : {
+              "lg" : gutter|string,
+              "sm": "0"
+            }
+          },
+          "text_align" : {
+            "lg" : "center"
+          },
+          "identifiers" : {
+            "custom_class" : "reveal reveal--up reveal--rerun"
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row background_color="rgba(255, 255, 255, 1)",
+      vertical_alignment="MIDDLE",
+      padding={
+        "default" : {
+          "bottom" : gutter*2,
+          "left" : gutter*2,
+          "right" : gutter*2,
+          "top" : gutter*2
+        },
+        "mobile" : {
+          "bottom" : gutter,
+          "left" : gutter,
+          "right" : gutter,
+          "top" : gutter
+        }
+      }
+    %}
+      {% dnd_column offset=0, width=6 %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/section-intro",
+            title="Become a Pro",
+            overline="Summer Sale!",
+            settings={
+              "color_scheme" : "light",
+              "divider" : "",
+              "overline_style" : "badge",
+              "text_max_width" : "500",
+              "title_looks_like" : "display",
+              "title_tag" : "h2"
+            },
+            wrapper={
+              "text_align" : {
+                "lg" : "",
+                "sm" : "center"
+              },
+              "margin" : {
+                "bottom" : {
+                  "lg" : "0"
+                }
+              },
+              "identifiers" : {
+                "custom_class" : "reveal reveal--right reveal--rerun"
+              },
+            }
+          %}
+            {% module_attribute "desc" %}
+              <p>Elevate your skills and transform into a PRO with our exclusive offer. Get ready to bask in the glow of premium features, unbeatable perks, and unparalleled benefits!</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/button",
+            button=[
+              {
+                "internal_name" : "Get Started",
+                "type" : "link",
+                "text" : "Get Started",
+                "link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : true,
+                  "url" : {
+                    "href" : "https://ecosystem.hubspot.com/marketplace/website/act3-theme-by-neambo",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "link_class" : "reveal reveal--right reveal--rerun reveal--delay-400",
+                "color" : "accent",
+                "fill" : "fill",
+                "size" : "large",
+                "shape" : "default",
+                "add_icon" : true,
+                "icon" : {
+                  "icon" : {
+                    "name" : "arrow-right",
+                    "type" : "SOLID",
+                    "unicode" : "f061"
+                  },
+                  "icon_position" : "right",
+                  "icon_size" : 60
+                }
+              },
+              {
+                "internal_name" : "Learn Act3",
+                "type" : "link",
+                "text" : "Learn Act3",
+                "link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : true,
+                  "url" : {
+                    "href" : "https://neambo.com/support/act3",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "link_class" : "reveal reveal--right reveal--rerun reveal--delay-200",
+                "color" : "light",
+                "fill" : "outline",
+                "size" : "large",
+                "shape" : "default",
+                "add_icon" : true,
+                "icon" : {
+                  "icon" : {
+                    "name" : "arrow-right",
+                    "type" : "SOLID",
+                    "unicode" : "f061"
+                  },
+                  "icon_position" : "right",
+                  "icon_size" : 60
+                },
+              }
+            ],
+            wrapper={
+              "text_align" : {
+                "sm" : "center"
+              },
+              "margin" : {
+                "bottom" : {
+                  "lg" : gutter|string
+                },
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=6, width=6 %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/image",
+            image={
+              "src" : "https://273774.fs1.hubspotusercontent-na1.net/hubfs/273774/act3/images/sample-prlx3-resize-optim.jpg",
+              "alt" : "sample-prlx3-resize-optim",
+              "width" : 1020,
+              "height" : 680,
+              "loading" : "lazy",
+              "size_type" : "exact"
+            },
+            wrapper={
+              "text_align" : {
+                "sm" : "center"
+              },
+              "identifiers" : {
+                "custom_class" : "reveal reveal--left reveal--rerun reveal--delay-400"
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

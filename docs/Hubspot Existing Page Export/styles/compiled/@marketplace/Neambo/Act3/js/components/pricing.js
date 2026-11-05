@@ -1,0 +1,2 @@
+const pricing_toggle=document.querySelectorAll(".pricing__toggle");for(i=0;i<pricing_toggle.length;i++)pricing_toggle[i].addEventListener("click",function(event){const pricing_wrapper=event.target.closest(".pricing");pricing_wrapper.classList.toggle("pricing--1"),pricing_wrapper.classList.toggle("pricing--2"),pricing_wrapper.classList.add("pricing--active")});
+//# sourceURL=https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/hub_generated/template_assets/1/186085640341/1792753257794/template_pricing.js

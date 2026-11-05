@@ -1,0 +1,118 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+{% set footer_bg_color = theme.footer.footer_text_color %} 
+{% set footer_bg_color_class = '' %} 
+{% if footer_bg_color == 'white' %} 
+{% set footer_bg_color_class = ' inverse-text' %} 
+{% endif %}
+
+{% set footer_dnd_area = theme.footer.footer_dnd_area %}
+{% if footer_dnd_area == 'enable' %}
+<footer class="site-footer{{footer_bg_color_class}}">
+    {% dnd_area "body_dnd_footer" %}
+        {% dnd_section 'footer',
+            full_width="false",
+             maxwidth = '1200',
+             padding={
+               'top': '30',
+               'bottom': '30',
+               'left': '0',
+               'right': '0'
+             },
+             margin={
+               'top': 0,
+               'bottom': 0
+             },
+             vertical_alignment='MIDDLE'
+        %}
+
+        <!-- column left -->
+            {% dnd_column 'footer-row-1' 
+                offset='0', 
+                width='8',
+               vertical_alignment='MIDDLE'
+            %}
+
+                {% dnd_row 'footer-item'
+                 %}
+                    {% dnd_module 'logo_footer' path='../../modules/logo-techies' %} {% end_dnd_module %}
+                {% end_dnd_row %}
+
+            {% end_dnd_column %}
+
+        <!-- end column left -->
+
+        <!-- column right -->
+            {% dnd_column 'footer-row-2' 
+                offset='8', 
+                width='4',
+               vertical_alignment='MIDDLE'
+            %}
+                {% dnd_row 'footer-item'
+                %}
+                    {% dnd_module path="../../modules/copyright-footer-techies" %} {% end_dnd_module %}
+                {% end_dnd_row %}
+
+            {% end_dnd_column %}
+        <!-- end column left -->
+        {% end_dnd_section %}
+    {% end_dnd_area %}
+</footer>
+{% else %}
+<footer class="site-footer site-footer-default{{footer_bg_color_class}}">
+    <div class="site-footer__middle" data-layout="container">
+        {% module "module_161940301342213" path="../../modules/background-footer-techies", label="Background Footer" %}
+        <div class="flex-box box-space-75">
+            <div class="column-width-25">
+                {% module "module_161940301345349" path="../../modules/text-footer-techies", label="Text Footer" %}
+            </div>
+            <div class="column-width-25">
+                {% module "module_161940301342669" path="../../modules/information-footer-techies", label="Information Footer" %}
+            </div>
+            <div class="column-width-20">
+                {% module "module_161940301342663" path="../../modules/menu-footer-vertical-techies", label="Menu Footer" %}
+            </div>
+            <div class="column-width-30">
+                {% module "module_161940301344446" path="../../modules/block-form-techies", label="Form Subscribe Footer" %}
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__bottom flex-box" data-layout="container">
+        <div class="column-left column-width-50">
+            {% module "module_161940301345557" path="../../modules/social-footer-techies", label="Social Footer" %}
+        </div>
+        <div class="column-right column-width-50 text-right">
+            {% module "module_161940301342777" path="../../modules/copyright-footer-techies", label="Copyright" %}
+        </div>
+    </div>
+</footer>
+{% endif %}
+{% set dark_mode_sw = theme.dark_mode.dark_mode_sw %}
+{% if dark_mode_sw == "enable" %}
+<div class="atbs-theme-switch__background">
+    <div class="atbs-theme-btn-show">
+        <svg width="25" height="25" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.6841 4.22807C13.7017 4.5614 14.3859 4.94737 15.1402 5.64912L17.3157 4.96491L18.5262 7.03509L16.8595 8.57895C17.0525 9.54386 17.0525 10.4561 16.8595 11.4211L18.5262 12.9649L17.3157 15.0351L15.1402 14.3509C14.3859 15.0526 13.7017 15.4386 12.6841 15.7719L12.1929 18H9.80692L9.31569 15.7719C8.29814 15.4386 7.61393 15.0526 6.85955 14.3509L4.68411 15.0351L3.47358 12.9649L5.14025 11.4211C4.94727 10.4561 4.94727 9.54386 5.14025 8.57895L3.47358 7.03509L4.68411 4.96491L6.85955 5.64912C7.61393 4.94737 8.29814 4.5614 9.31569 4.22807L9.80692 2H12.1929L12.6841 4.22807ZM14.4034 2.75439L13.8069 0H8.19288L7.59639 2.75439C7.19288 2.94737 6.80691 3.17544 6.43849 3.42105L3.73674 2.57895L0.947266 7.42105L3.03498 9.35088C2.9999 9.77193 2.9999 10.2281 3.03498 10.6491L0.947266 12.5789L3.73674 17.4211L6.43849 16.5789C6.80691 16.8246 7.19288 17.0526 7.59639 17.2456L8.19288 20H13.8069L14.4034 17.2456C14.8069 17.0526 15.1929 16.8246 15.5613 16.5789L18.2631 17.4211L21.0525 12.5789L18.9648 10.6491C18.9999 10.2281 18.9999 9.77193 18.9648 9.35088L21.0525 7.42105L18.2631 2.57895L15.5613 3.42105C15.1929 3.17544 14.8069 2.94737 14.4034 2.75439ZM6.9999 10C6.9999 12.2105 8.78937 14 10.9999 14C13.2104 14 14.9999 12.2105 14.9999 10C14.9999 7.78947 13.2104 6 10.9999 6C8.78937 6 6.9999 7.78947 6.9999 10ZM8.9999 10C8.9999 8.77193 9.77183 8 10.9999 8C12.228 8 12.9999 8.77193 12.9999 10C12.9999 11.2281 12.228 12 10.9999 12C9.77183 12 8.9999 11.2281 8.9999 10Z" fill="#F2F2F2"/>
+        </svg>
+        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.7018 5.29825L7.70176 0.298246C7.52632 0.105263 7.2807 0 7 0C6.45614 0 6 0.45614 6 1C6 1.2807 6.10526 1.52632 6.29825 1.70175L11.2982 6.70175C11.4737 6.89474 11.7193 7 12 7C12.5439 7 13 6.54386 13 6C13 5.7193 12.8947 5.47368 12.7018 5.29825ZM6.70175 5.29825L1.70175 0.298246C1.52632 0.105263 1.2807 0 1 0C0.45614 0 0 0.45614 0 1C0 1.2807 0.105263 1.52632 0.298246 1.70175L5.29825 6.70175C5.47368 6.89474 5.7193 7 6 7C6.54386 7 7 6.54386 7 6C7 5.7193 6.89474 5.47368 6.70175 5.29825ZM1.70175 11.7018L6.70175 6.70175C6.89474 6.52632 7 6.2807 7 6C7 5.45614 6.54386 5 6 5C5.7193 5 5.47368 5.10526 5.29825 5.29825L0.298246 10.2982C0.105263 10.4737 0 10.7193 0 11C0 11.5439 0.45614 12 1 12C1.2807 12 1.52632 11.8947 1.70175 11.7018ZM7.70176 11.7018L12.7018 6.70175C12.8947 6.52632 13 6.2807 13 6C13 5.45614 12.5439 5 12 5C11.7193 5 11.4737 5.10526 11.2982 5.29825L6.29825 10.2982C6.10526 10.4737 6 10.7193 6 11C6 11.5439 6.45614 12 7 12C7.2807 12 7.52632 11.8947 7.70176 11.7018Z" fill="#F2F2F2"/>
+        </svg>
+    </div>
+    <div class="atbs-theme-switch is-toggle-switch">
+        <div class="atbs-theme-switch__inner">
+            <span class="atbs-theme-switch__light">
+                <svg width="23" height="23" viewBox="0 0 45.2 45.2">
+                    <path d="M22.6 11.3a11.3 11.3 0 100 22.6 11.3 11.3 0 000-22.6zM22.6 8c-1.2 0-2.2-1-2.2-2.3V2.2a2.2 2.2 0 114.4 0v3.5c0 1.3-1 2.2-2.2 2.2zM22.6 37.2c-1.2 0-2.2 1-2.2 2.2V43a2.2 2.2 0 104.4 0v-3.6c0-1.2-1-2.2-2.2-2.2zM33 12.2c-1-.8-1-2.2 0-3l2.4-2.6a2.2 2.2 0 013.1 3.1L36 12.2c-.8.9-2.2.9-3 0zM12.2 33c-.8-1-2.2-1-3 0l-2.6 2.4a2.2 2.2 0 003.1 3.1l2.5-2.5c.9-.8.9-2.2 0-3zM37.2 22.6c0-1.2 1-2.2 2.2-2.2H43a2.2 2.2 0 110 4.4h-3.6c-1.2 0-2.2-1-2.2-2.2zM8 22.6c0-1.2-1-2.2-2.3-2.2H2.2a2.2 2.2 0 100 4.4h3.5c1.3 0 2.2-1 2.2-2.2zM33 33c.8-1 2.2-1 3 0l2.5 2.4a2.2 2.2 0 11-3 3.1L32.8 36c-.8-.8-.8-2.2 0-3zM12.2 12.2c.9-.8.9-2.2 0-3L9.7 6.5a2.2 2.2 0 00-3 3.1L9 12.2c.9.9 2.3.9 3.1 0z"></path>
+                </svg>
+            </span>
+            <span class="atbs-theme-switch__dark">
+                <svg width="23" height="23" viewBox="0 0 511 512">
+                    <path d="M334.3 5.1a19 19 0 00-5 20.5 234 234 0 0114.2 80.6c0 63.2-24.7 122.7-69.4 167.5A235.4 235.4 0 01106.6 343c-27.8 0-54.9-4.8-80.5-14.1a19 19 0 00-24 25.7 266.9 266.9 0 00345.2 137c32.4-13.5 61.6-33 86.7-58a267.3 267.3 0 0078.5-192.6A267 267 0 00355 1.7 19 19 0 00334.3 5zm0 0"></path>
+                </svg>
+            </span>
+        </div>
+    </div>
+</div>
+{% endif %}

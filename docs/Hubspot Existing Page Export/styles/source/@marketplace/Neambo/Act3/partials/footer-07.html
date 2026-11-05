@@ -1,0 +1,483 @@
+<!--
+  templateType: global_partial
+  label: Footer 7
+-->
+
+{# Color scheme #}
+{% if theme.components.footer.scheme == 'dark' %}
+  {% set footer_color_scheme = 'dark' %}
+{% else %}
+  {% set footer_color_scheme = 'light' %}
+{% endif %}
+
+{% dnd_area 'above_footer', label='Above footer', class='above-footer' %}{% end_dnd_area %}
+
+<footer class="footer footer--7 hs-search-hidden">
+  <div class="footer__section footer__section--form section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="flex flex-row items-center justify-center wrap sm-flex-col">
+            <div class="footer__form-title">
+              {% module 'footer_form_title' path='../modules/rich-text' label='Form title' 
+                text='<h4>Subscribe to news and product updates</h4>' 
+                settings={
+                  'color_scheme': footer_color_scheme
+                }
+                wrapper={
+                  'max_width': {
+                    'lg': '200'
+                  },
+                  'block_align': {
+                    'sm': 'center'
+                  },
+                  'text_align': {
+                    'sm': 'center'
+                  }
+                }
+              %}
+            </div>
+            <div class="footer__form">
+              {% module 'footer_form' path='../modules/form' label='Form'
+                form_title='',
+                one_field_form=false,
+                form={
+                  'form_id': ''
+                },
+                settings={
+                  'form_title_tag': 'h4'
+                }
+              %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__section footer__section--logos section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="footer__logos">
+            {% module 'footer_logos' path='../modules/logos' label='Logos'
+              items=[
+                {
+                  'internal_name': 'Visa',
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/visa-' ~ footer_color_scheme ~ '.svg',
+                    'alt': 'Visa',
+                    'width': 45,
+                    'height': 40,
+                    'loading': 'lazy'
+                  }
+                },
+                {
+                  'internal_name': 'Apple Pay',
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/apple-pay-' ~ footer_color_scheme ~ '.svg',
+                    'alt': 'Apple Pay',
+                    'width': 63,
+                    'height': 50,
+                    'loading': 'lazy'
+                  }
+                },
+                {
+                  'internal_name': 'Amazon Pay',
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/amazon-pay-' ~ footer_color_scheme ~ '.svg',
+                    'alt': 'Amazon Pay',
+                    'width': 50,
+                    'height': 40,
+                    'loading': 'lazy'
+                  }
+                },
+                {
+                  'internal_name': 'Bitcoin',
+                  'image': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/bitcoin-' ~ footer_color_scheme ~ '.svg',
+                    'alt': 'Bitcoin',
+                    'width': 27,
+                    'height': 35,
+                    'loading': 'lazy'
+                  }
+                }
+              ]
+              settings={
+                'col': {
+                  'lg': '4',
+                  'md': '4',
+                  'sm': '4'
+                },
+                'col_align': 'justify-center',
+                'slider': false
+              }
+              wrapper={
+                'max_width': {
+                  'lg': '680'
+                },
+                'block_align': {
+                  'lg': 'center'
+                }
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__section footer__section--nav section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="footer__nav">
+            {% module 'footer_nav' path='../modules/column-navigation' label='Navigation'
+              column=[
+                {
+                  'title': 'Solutions',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Consulting',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Audits',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Training',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Development',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Products',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'CRM Platform',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Enterprise',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Apps',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Licensing',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Individual',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Team',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Renewals',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Upgrades',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Resources',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Read our blog',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Documentation',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Developer API',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Community',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Company',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'About us',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'News',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Events',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Join our team',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Contact us',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  'title': 'Legal',
+                  'title_link': {
+                    'url': {
+                      'href': '#'
+                    }
+                  },
+                  'link': [
+                    {
+                      'text': 'Privacy policy',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Terms of use',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    },
+                    {
+                      'text': 'Cookies',
+                      'address': {
+                        'url': {
+                          'href': '#'
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+              settings={
+                'color_scheme': footer_color_scheme,
+                'col_lg': 's2',
+                'col_md': 'md-s3',
+                'col_sm': 'sm-s6',
+                'col_align': 'justify-center'
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__section footer__section--bottom section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="footer__icons">
+            {% module 'footer_icons' path='../modules/icon' label='Icons'
+              icon=[
+                {
+                  'internal_name': 'X (Twitter)',
+                  'type': 'code',
+                  'code': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>',
+                  'color': 'accent',
+                  'link': {
+                    'url': {
+                      'href': 'https://x.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'internal_name': 'Slack',
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Slack Logo',
+                    'unicode': 'f198',
+                    'type': 'REGULAR',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent',
+                  'link': {
+                    'url': {
+                      'href': 'https://youtube.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'internal_name': 'GitHub',
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'github',
+                    'unicode': 'f09b',
+                    'type': 'REGULAR',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent',
+                  'link': {
+                    'url': {
+                      'href': 'https://github.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                }
+              ]
+              settings={
+                'shape': 'none',
+                'fill': 'fill',
+                'size': 'large',
+                'space': 30
+              }
+              wrapper={
+                'text_align': {
+                  'lg': 'center'
+                },
+                'margin': {
+                  'bottom': {
+                    'lg': '50'
+                  }
+                }
+              }
+            %}
+          </div>
+          <div class="footer__copyright">
+            {% module 'footer_copyright' path='../modules/rich-text' label='Copyright' 
+              text='© Copyright {{ year }} <strong>Company</strong>' 
+              settings={
+                'color_scheme': footer_color_scheme
+              }
+              wrapper={
+                'text_align': {
+                  'lg': 'center'
+                }
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{{ require_css(get_asset_url('../css/components/footer-07.css')) }}

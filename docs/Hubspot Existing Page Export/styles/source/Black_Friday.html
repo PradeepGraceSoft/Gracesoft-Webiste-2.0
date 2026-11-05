@@ -1,0 +1,66 @@
+<!--
+  templateType: "drag_drop_email"
+  isAvailableForNewContent: false
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{{content.html_title}}</title>
+    <!--
+    Prevent iOS 11 from automatically scaling emails
+    - https://litmus.com/blog/what-email-marketers-need-to-know-about-ios-11-and-the-new-iphones
+    -->
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--
+    We have included meta ‘Content Type’ so that we can set the character
+    set as UTF8 u2013 specifying as much as possible can be a good thing when
+    writing code for the whole range of email clients.
+    More info on Content-Type Character Encoding in HTML Emails:
+    - https://www.emailonacid.com/blog/article/email-development/the_importance_of_content-type_character_encoding_in_html_emails/
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
+    The IE=Edge meta tag enables CSS3 and media queries in Windows Phone 7.5
+    and higher. That's why you should use it in your email.
+    More info:
+    - https://www.campaignmonitor.com/forums/topic/7989/windows-phone-8-has-full-css3media-query-support/
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--
+    Meta ‘Viewport’ as seen above sets the viewable area to the width of the
+    device screen u2013 this is essential if you want your email to be
+    responsive. If your email is intended solely for desktop users then
+    don't include this line of code.
+    -->
+    {% style_settings is_json=True %}
+      {"background_color":"#000000","background_image":"","background_image_type":"REPEAT","body_border_color":"#ffffff","body_border_color_choice":null,"body_border_width":"5","body_color":"#ffffff","color_picker_favorite1":null,"color_picker_favorite2":null,"color_picker_favorite3":null,"color_picker_favorite4":null,"color_picker_favorite5":null,"color_picker_favorite6":null,"email_body_padding":null,"email_body_width":null,"heading_one_font":{"bold":null,"color":"#f21414","font":null,"font_style":{},"italic":null,"size":"28","underline":null},"heading_two_font":{"bold":null,"color":null,"font":null,"font_style":{},"italic":null,"size":"22","underline":null},"links_font":{"bold":false,"color":"#57c2ba","font":null,"font_style":{},"italic":false,"size":null,"underline":true},"primary_accent_color":null,"primary_font":"Arial, sans-serif","primary_font_color":"#042e40","primary_font_line_height":null,"primary_font_size":"15","secondary_accent_color":null,"secondary_font":"Arial, sans-serif","secondary_font_color":"#616b73","secondary_font_line_height":null,"secondary_font_size":"12","user_module_defaults":{"button_email":{"background_color":"#ed1c24","corner_radius":0,"font":"Arial, sans-serif","font_color":"#ffffff","font_size":15,"font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":15},"styles":{"bold":true,"italic":false,"underline":false}}},"email_divider":{"color":{"color":"#ed1c24","opacity":100},"height":2,"line_type":"dashed"}}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes}}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }} 
+    {{ overrideable_stylesheet }}
+  </head>
+
+  <body bgcolor="{{style_settings.background_color}}">
+  {{ preview_snippet }}
+  {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% widget_block email_flex_area "main" overrideable=True %}
+            {% widget_attribute "default_layout" is_json=True %}
+              {"boxFirstElementIndex":0,"boxLastElementIndex":2,"boxed":true,"sections":[{"columns":[{"id":"column_1538390858230_0","widgets":["module_1542020291947159","builtin_module_0_0_0","module_1542021528438242"],"width":12}],"id":"section_1538390858230","style":{"backgroundColor":"#000000","backgroundType":"CONTENT","paddingBottom":"50px","paddingTop":"50px"}},{"columns":[{"id":"column_1542108790397_0","widgets":["module_1542021573530254"],"width":12}],"id":"section_1542108790397","style":{"backgroundColor":"#000000","backgroundType":"CONTENT","paddingBottom":"50px","paddingTop":"0px"}},{"columns":[{"id":"column_1542021618942_0","widgets":["module_1542022500025404","module_1542021631670299","module_1542022601477416"],"width":12}],"id":"section_1542021618942","style":{"backgroundType":"CONTENT","paddingBottom":"60px","paddingTop":"40px"}},{"columns":[{"id":"column_1542021765334_0","widgets":["builtin_module_2_0_0"],"width":12}],"id":"section_1542021765334","style":{"backgroundType":"CONTENT","paddingBottom":"0px","paddingTop":"30px"}}]}
+            {% end_widget_attribute %}
+            {% widget_attribute "default_widgets" %}
+              {"builtin_module_0_0_0":{"body":{"html":"<p style=\"text-align: center;\"><span style=\"font-size: 72px;\"><strong><span style=\"color: #ffffff;\">50% OFF EVERYTHING</span></strong></span></p>","module_id":1155639},"id":"builtin_module_0_0_0","module_id":1155639,"name":"builtin_module_0_0_0","type":"module"},"builtin_module_2_0_0":{"body":{"align":"center","font":{"color":"#ffffff","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":false}},"hs_enable_module_padding":false,"link_font":{"color":"#ffffff","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}},"module_id":2869621,"unsubscribe_link_type":"unsubscribe"},"id":"builtin_module_2_0_0","module_id":2869621,"name":"builtin_module_2_0_0","type":"module"},"module_1542020291947159":{"body":{"alignment":"center","css":{},"hs_enable_module_padding":false,"img":{"alt":"","height":154,"src":"email_dnd_template_images/Bow-01.png","width":2500},"link":null,"module_id":1367093},"id":"module_1542020291947159","module_id":1367093,"name":"module_1542020291947159","type":"module"},"module_1542021528438242":{"body":{"alignment":"center","background_color":"#ffffff","corner_radius":0,"cta_field":null,"destination":"http://www.example.com","font_style":{"color":"#000000","font":"Arial, sans-serif","size":{"units":"px","value":15},"styles":{"bold":true,"italic":false,"underline":false}},"make_full_width":true,"module_id":1976948,"text":"View Black Friday deals"},"id":"module_1542021528438242","module_id":1976948,"name":"module_1542021528438242","type":"module"},"module_1542021573530254":{"body":{"alignment":"center","css":{},"hs_enable_module_padding":false,"img":{"alt":"","height":154,"src":"email_dnd_template_images/Bow-01.png","width":2500},"link":null,"module_id":1367093},"id":"module_1542021573530254","module_id":1367093,"name":"module_1542021573530254","type":"module"},"module_1542021631670299":{"body":{"html":"<h1 style=\"text-align: center;\">FREE SHIPPING</h1>\n<p style=\"text-align: center;\">Get free shipping on all orders of $50 or more. Jump start your holiday shopping and beat the rush. But hurry, offer ends on Monday.</p>","module_id":1155639},"id":"module_1542021631670299","module_id":1155639,"name":"module_1542021631670299","type":"module"},"module_1542022500025404":{"body":{"alignment":"center","css":{"padding-bottom":"10px","padding-left":"20px","padding-right":"20px","padding-top":"10px"},"hs_enable_module_padding":true,"img":{"alt":"","height":44,"src":"email_dnd_template_images/Shio-02.png","width":300},"link":null,"module_id":1367093},"id":"module_1542022500025404","module_id":1367093,"name":"module_1542022500025404","type":"module"},"module_1542022601477416":{"body":{"alignment":"center","background_color":"#ed1c24","corner_radius":0,"cta_field":null,"destination":"http://www.example.com","font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":15},"styles":{"bold":true,"italic":false,"underline":false}},"make_full_width":true,"module_id":1976948,"text":"Shop now"},"id":"module_1542022601477416","module_id":1976948,"name":"module_1542022601477416","type":"module"}}
+            {% end_widget_attribute %}
+            {% end_widget_block %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+.price-card-background {
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 50px 35px 40px 35px;
+    min-height: 380px;
+    border: 1px solid var(--color-border-black);
+    background-color: var(--color-background-site);
+    -webkit-box-shadow: 0 55px 30px -40px rgba(0,0,0,0.1);
+    box-shadow: 0 55px 30px -40px rgba(0,0,0,0.1);
+}
+.price-card-background .price__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 30px auto 50px auto;
+}
+
+
+.price-card-background .price-hint {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-dark-contrast-80);
+}
+.price-card-background .price-hint svg {
+    height: 16px;
+    width: auto;
+    margin-right: 5px;
+}
+.price-card-background .price-heading__title {
+    color: var(--color-dark-contrast-100);
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+.price-card-background .price-heading__description {
+    font-size: 1.28571428571rem;
+    line-height: 1.5;
+    color: var(--color-dark-contrast-80);
+    font-style: italic;
+}
+
+.price-card-background .price__amount {
+    font-size: 2.42857142857rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.price-card-background .price-heading__price {
+    font-size: 1.85714285714rem;
+    line-height: 1.5;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--color-primary);
+    margin-top: 20px;
+}
+
+.price-card-background .paragraph-description:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.price-card-background .paragraph-heading {
+    font-size: 1.07142857143rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--color-dark-contrast-100);
+    text-transform: uppercase;
+}
+
+.price-card-background .price-card__description {
+    margin-top: 45px;
+}
+.price-card-background .paragraph-info {
+    font-size: 1.14285714286rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-dark-contrast-80);
+    margin-top: 12px;
+}
+.price-card-background .paragraph-info .info-disable {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.price-card-background .paragraph-info svg {
+    margin-right: 7px;
+}
+.price-card-background .paragraph-info svg path {
+    fill: var(--color-primary);
+}
+.price-card-background .paragraph-info > *:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.price-card-background .price-tag {
+    padding: 4px 14px;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: var(--color-white-contrast-100);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-bottom: 8px;
+    font-size: 0.85714285714rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+
+.price-button {
+    padding: 12px 30px;
+    background-color: var(--color-primary);
+    color: var(--color-white-contrast-100);
+    font-size: 1.14285714286rem;
+    line-height: 1.5;
+    font-weight: 500;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-top: 45px;
+    text-align: center;
+
+}
+.price-button:hover {
+    color: var(--color-white-contrast-100);
+}
+
+
+.price-card-background.inverse-text {
+    background-color: var(--color-primary);
+}
+.price-card-background.inverse-text .paragraph-info,
+.price-card-background.inverse-text .price-heading__description,
+.price-card-background.inverse-text .price-card__description,
+.price-card-background.inverse-text .price-hint {
+    color: var(--color-white-contrast-95);
+}
+.price-card-background.inverse-text .price-tag {
+    background-color: var(--color-white-contrast-100);
+    color: var(--color-primary);
+}
+.price-card-background.inverse-text .price-heading__price,
+.price-card-background.inverse-text .price-heading__title,
+.price-card-background.inverse-text .price__amount {
+    color: var(--color-white-contrast-100);
+}
+
+.price-card-background.inverse-text .paragraph-heading {
+    color: var(--color-white-contrast-100);
+}
+
+.price-card-background.inverse-text .paragraph-info svg path {
+    fill: var(--color-white-contrast-100);
+}
+.price-card-background.inverse-text .price-button {
+    color: var(--color-primary);
+    background-color: #fff;
+}
+
+
+
+@media (max-width: 1680px) {
+    .section-module-11 .flex-box {
+        margin: -30px -20px;
+    }
+    .section-module-11 .flex-box > * {
+        padding: 30px 20px;
+    }
+
+    .price-card-background .price-hint {
+        margin-bottom: 12px;
+    }
+    .price-card-background .price-heading__title {
+        font-size: 1.57142857143rem;
+        line-height: 1.4;
+    }
+    .price-card-background .price-heading__price {
+        font-size: 1.28571428571rem;
+        line-height: 1.5;
+    }
+}
+@media (max-width: 1545px) and (min-width: 1200px) {
+    .price-card-background .price-heading__title {
+        font-size: 1.57142857143rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 1199px) {
+    .price-card-background .price-heading__title {
+        font-size: 1.42857142857rem;
+        line-height: 1.4;
+    }
+
+    .section-module-11 .flex-box {
+        margin: -30px -15px;
+    }
+    .section-module-11 .flex-box > * {
+        padding: 30px 15px;
+        width: 50%;
+    }
+}
+@media (max-width: 680px) {
+    .section-module-11 .flex-box {
+        margin: -20px -15px;
+    }
+    .section-module-11 .flex-box > * {
+        padding: 20px 15px;
+        width: 100%;
+    }
+
+    .price-card-background .price-card__description {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 320px) {
+    .price-card-background .paragraph-heading {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .price-card-background .paragraph-info {
+        font-size: 1.07142857143rem;
+        line-height: 1.5;
+    }
+}

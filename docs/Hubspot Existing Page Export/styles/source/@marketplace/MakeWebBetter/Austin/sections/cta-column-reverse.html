@@ -1,0 +1,140 @@
+<!--
+templateType: section
+label: CTA Column Reverse
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/cta-column-reverse.png
+description: "Two column with content and signle field form on left side and image on right side."
+-->
+
+{% dnd_section
+  class="au-cta au-tab-full-width",
+  vertical_alignment='MIDDLE'
+%}
+{% dnd_column 
+  offset=0,
+  width=8 %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/title-content',
+        "subtitle"="",
+        "content"="<h2>Subscribe to our newsletter</h2><p>Move Parallel with us. Achieve your goals by consistently getting our latest updates. Always keep an eye on what we are doing by subscribing to our newsletter.</p>"
+        %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row
+      padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 30,
+          'left': 0
+        }
+      }
+    %}
+{% dnd_module
+        path='../modules/form',
+        "enable_input_field_box_shadow"= True,
+        style={
+        'form_spacing': {
+          'desktop': {
+            'spacing': {
+                    'padding': {
+                      'top': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 30,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            },
+           'mobile': {
+            'spacing_mobile_': {
+                    'padding': {
+                      'top': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'bottom': {
+                        'value': 20,
+                        'units': 'px'
+                      },
+                      'left': {
+                        'value': 0,
+                        'units': 'px'
+                      },
+                      'right': {
+                        'value': 0,
+                        'units': 'px'
+                      }
+                    }
+                }
+            }
+        },
+        'form_alignment': {
+          'form_horizontal_alignment_choice': {
+            'form_horizontal_alignment': 'left'
+          }
+        },
+          'input_fields':{ 
+            'box_shadow': {
+              enable: true
+            }
+          },
+          'form_max_width': { enable: true, form_max_width: 500 },
+        }
+%}
+{% module_attribute 'form_layouts_choice' is_json=True %}
+{
+"form_layouts": "single_field_form"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% dnd_column 
+  offset=8,
+  width=4%}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/image'
+        "image"={
+        'src': get_asset_url('../images/multipurpose/subscribe-two.png'),
+        'alt': 'Subscribe'
+      },
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

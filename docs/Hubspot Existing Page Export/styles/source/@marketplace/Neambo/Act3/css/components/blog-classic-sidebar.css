@@ -1,0 +1,33 @@
+{% import "../_variables.css" as var %}
+
+.blog-classic-sidebar__tabs {
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.blog-classic-sidebar__tabs h3:empty {
+  display: none;
+}
+
+.blog-classic-sidebar__tabs .hs-postlisting-item:not(:last-child) {
+  margin-bottom: .56rem;
+  padding-bottom: .56rem;
+  border-bottom: 1px solid {{ var.borders_color }};
+}
+
+.blog-classic-sidebar__tabs .filter-expand-link,
+.blog-classic-sidebar__tabs .filter-expand-link:hover {
+  text-decoration: none;
+}
+
+.blog-classic-sidebar__subscription {
+  position: sticky;
+  top: {{ var.scroll_offset_lg + var.gutter }}px;
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.md }}px) {
+  .blog-classic-sidebar__tabs {
+    margin-top: {{ var.gutter * 3 }}px;
+  }
+}

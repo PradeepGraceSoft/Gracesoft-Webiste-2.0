@@ -1,0 +1,40 @@
+<!--
+  templateType: section
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+{% dnd_section padding={
+  "top":"0",
+  "bottom":"0"
+  }, full_width=True %}
+  {% dnd_column width=6 %}
+    {% dnd_module path="@hubspot/image_email", img={
+      "alt":"QuailCreek",
+      "height":179,
+      "src":"https://107648.fs1.hubspotusercontent-na1.net/hubfs/107648/QuailCreek.png",
+      "width":260
+      }, link="https://www.gracesoft.com/case-studies/quailcreek", hs_enable_module_padding=True, hs_wrapper_css={
+      "padding-bottom":"10px",
+      "padding-left":"20px",
+      "padding-right":"20px",
+      "padding-top":"10px"
+      } %}
+
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+  {% dnd_column width=6 %}
+    {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+      "padding-bottom":"10px",
+      "padding-left":"20px",
+      "padding-right":"20px",
+      "padding-top":"10px"
+      } %}
+      {% module_attribute "html" %}<p style="line-height: 150%; font-size: 14px;">"Easy Innkeeping they lived up to their name, making reservation management easy. They even helped us handle multiple meeting rooms and integrated our RV Campground reservations into their affordable solution. I highly recommend Easy Innkeeping for its personal touch, dependability, and affordability."</p>
+<p style="line-height: 125%; font-size: 14px;">&nbsp;</p>
+<div>
+<div style="line-height: 125%; font-size: 14px;"><span style="color: #000000;"><a href="https://www.gracesoft.com/case-studies/quailcreek" style="color: #000000;" rel="noopener">Quail Creek Resort</a></span></div>
+<div style="line-height: 125%; font-size: 14px;">Matthew Nail</div>
+</div>{% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

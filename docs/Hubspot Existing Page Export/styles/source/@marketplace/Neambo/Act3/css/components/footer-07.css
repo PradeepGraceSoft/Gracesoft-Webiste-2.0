@@ -1,0 +1,126 @@
+{% import "../_variables.css" as var %}
+
+.footer h4 {
+  font-family: {{ var.text_font_family }};
+  font-weight: {{ var.text_font_weight }};
+  font-style: {{ var.text_font_style }};
+  font-size: {{ var.large_text }}rem;
+  line-height: {{ var.text_height }};
+}
+
+/* Form */
+
+.footer__section--form {
+  padding-bottom: 2.78rem;
+}
+
+.footer__form-title {
+  margin-inline-end: 1.67rem;
+}
+
+.footer__form-title h4 {
+  margin-bottom: 0;
+}
+
+.footer__form {
+  width: 412px;
+  max-width: 100%;
+}
+
+/* Logos */
+
+.footer__section--logos {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer__logos {
+  padding-top: 2.11rem;
+  padding-bottom: 2.11rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+/* Nav */
+
+.footer__section--nav {
+  padding-top: 2.78rem;
+  padding-bottom: 1.67rem;
+}
+
+/* Bottom */
+
+.footer__section--bottom {
+  padding-top: 2.78rem;
+}
+
+.footer__section--bottom:after {
+  content: '';
+  display: block;
+  width: 6.67rem;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer__copyright .txt--light {
+  color: {{ var.dark }};
+}
+
+.footer__copyright .txt--dark {
+  color: {{ var.white }};
+}
+
+/* Responsive */
+
+@media (max-width: {{ var.sm }}px) {
+  .footer__form-title {
+    margin-bottom: {{ var.gutter }}px;
+  }
+}
+
+/* Dark scheme */
+
+{% if theme.components.footer.scheme == 'dark' %}
+
+  .footer {
+    background: {{ var.dark }};
+  }
+  
+  .footer h4 {
+    color: {{ var.white }};
+  }
+  
+  .footer__logos {
+    border-color: {{ var.white_borders }};
+    color: {{ var.white }};
+  }
+  
+  .footer__section--bottom:after {
+    background: {{ var.white_borders }};
+  }
+
+/* Light scheme */
+
+{% else %}
+
+  .footer {
+    background: {{ var.white }};
+  }
+  
+  .footer h4 {
+    color: {{ var.dark }};
+  }
+  
+  .footer__logos {
+    border-color: {{ var.borders_color }};
+    color: {{ var.dark }};
+  }
+  
+  .footer__section--bottom:after {
+    background: {{ var.borders_color }};
+  }
+
+{% endif %}

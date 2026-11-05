@@ -1,0 +1,88 @@
+{% import '../_variables.css' as var %}
+
+.membership-login__intro {
+  text-wrap: balance;
+}
+
+.membership-login__form {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: {{ var.gutter }}px {{ var.gutter * 2 }}px {{ var.gutter * 2 }}px;
+  border-radius: {{ var.radius_7 }};
+  background: {{ var.light }};
+}
+
+.membership-login__form p {
+  font-size: {{ var.small_text }}rem;
+}
+
+.membership-login__form .no-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.membership-login__form .hs-error-msg {
+  color: {{ var.white }};
+}
+
+.membership-login__form .hs-membership-global-error:empty {
+  display: none;
+}
+
+.membership-login__form a.hs-login-widget-show-password {
+  float: right;
+  font-size: {{ var.small_text }}rem;
+}
+
+.membership-login__form .hs-input:not([type="checkbox"]):not([type="radio"]) {
+  margin-top: .28rem;
+}
+
+.membership-login__form .hs-button {
+  width: 100%;
+  margin-top: {{ var.gutter }}px;
+}
+
+.membership-login__form #hs_login_reset {
+  font-size: {{ var.small_text }}rem;
+}
+
+.membership-login__form .form-separator {
+  display: flex;
+  align-items: center;
+  margin-block: {{ var.gutter }}px;
+}
+
+.membership-login__form .form-separator::before,
+.membership-login__form .form-separator::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: {{ var.radius_1 }};
+  background: {{ var.borders_color }};
+}
+
+.membership-login__form .form-separator::before {
+  margin-inline-end: {{ var.gutter }}px;
+}
+
+.membership-login__form .form-separator::after {
+  margin-inline-start: {{ var.gutter }}px;
+}
+
+.membership-login__details {
+  margin-top: {{ var.gutter }}px;
+}
+
+.membership-login__form #hs-passwordless-submit:disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+
+@media (max-width: {{ var.xs }}px) {
+  .membership-login__form {
+    padding: {{ var.gutter }}px;
+  }
+}

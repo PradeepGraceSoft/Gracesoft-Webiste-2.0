@@ -1,0 +1,2151 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/template-previews/homepage.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--home'
+%}
+
+{# Banner Section #}
+{% dnd_section
+  full_width=true,
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12,
+    padding={
+      "default" : {
+        "left" : "0px",
+        "right" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/hero",
+        offset=0,
+        width=12,
+        primary_cta={
+          "text" : "Donate Now"
+        },
+        secondary_cta={
+          "layout" : "secondary",
+          "text" : "Contact Us"
+        },
+        select_action="button",
+        style_1={
+          "banner_content_alignment" : {
+            "banner_content_alignment_desktop_" : {
+              "alignment_choice" : "left"
+            },
+            "banner_content_alignment_mobile_" : {
+              "alignment_choice" : "left"
+            }
+          },
+          "image" : {
+            "alt" : "banner-eco",
+            "height" : 720,
+            "max_height" : 720,
+            "max_width" : 1280,
+            "src" : get_asset_url('../images/multipurpose/banner-one.png'),
+            "width" : 1280
+          },
+          "max_width" : {
+            "value" : 800
+          },
+          "spacing" : {
+            "desktop" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 120
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 120
+                  }
+                }
+              }
+            },
+            "mobile" : {
+              "spacing_mobile_" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 0
+                  }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 50
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 0
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 50
+                  }
+                }
+              }
+            }
+          }
+        }
+      %}
+        {% module_attribute "content" %}
+          <h2><span style="color: #ffffff;">Help</span> <span style="color: #ffa17a;">Today</span> <span style="color: #ffffff;">for</span></h2>
+          <h1><span style="color: #ffffff;">Brighter</span> <span style="color: #a3da8d;">Tomorrow</span></h1>
+          <p><span style="color: #ffffff;">Leaders across the country are tackling the most challenging and pressing issues of our time. Earth Let us all join to deal with unprecedented threats to Earth's life.</span></p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Icon Box Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        enable_mini_title=false,
+        style={
+          "title_content" : {
+            "alignment" : {
+              "alignment_desktop" : "center"
+            },
+            "max_width" : {
+              "enable_max_width" : true,
+              "value" : 550
+            }
+          }
+        },
+        title_content={
+          "content" : "<h3>Our Continued Project Assistance Programs</h3>"
+        }
+      %}
+        {% module_attribute "content" %}
+          <h3 style="text-align: center;">Our Continued Project Assistance Programs</h3>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "30px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-box",
+        offset=0,
+        width=12,
+        column_cout_choice={
+          "column_count" : "three_column"
+        },
+        icon_box_repeater=[ {
+          "description_content" : "<p>The warming of the atmosphere has an impact on weather patterns, causing more frequent and severe droughts and storms worldwide.</p>",
+          "enable_text" : true,
+          "enable_title" : true,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Alternate Fire",
+              "type" : "SOLID",
+              "unicode" : "f7e4"
+            },
+            "icon_image" : {
+              "alt" : "reduce",
+              "height" : 80,
+              "loading" : "lazy",
+              "max_height" : 80,
+              "max_width" : 80,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/icons/globe.svg'),
+              "width" : 80
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : "Reduce Global Warming Now"
+        }, {
+          "description_content" : "<p>Higher temperatures are shortening the seasons and, in some places, have already exceeded safe levels for ecosystems and humans.</p>",
+          "enable_text" : true,
+          "enable_title" : true,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Alternate Fire",
+              "type" : "SOLID",
+              "unicode" : "f7e4"
+            },
+            "icon_image" : {
+              "alt" : "growth",
+              "height" : 78,
+              "loading" : "lazy",
+              "max_height" : 80,
+              "max_width" : 82,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/icons/ecosystem.svg'),
+              "width" : 80
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : "Protecting Ecosystems"
+        }, {
+          "description_content" : "<p>This energy transition has the potential to impact many aspects of life, including the environment, society, the economy, and governance.</p>",
+          "enable_text" : true,
+          "enable_title" : true,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Alternate Fire",
+              "type" : "SOLID",
+              "unicode" : "f7e4"
+            },
+            "icon_image" : {
+              "alt" : "light",
+              "height" : 80,
+              "loading" : "lazy",
+              "max_height" : 80,
+              "max_width" : 80,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/icons/bulb.svg'),
+              "width" : 80
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : "Shift Towards Clean Energy"
+        }, {
+          "description_content" : "<p>Sustainable aquaculture, e.g. grouper aquaculture, meets the high demand for reef fish while potentially preserving coastal communities' livelihoods.</p>",
+          "enable_text" : true,
+          "enable_title" : true,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Alternate Fire",
+              "type" : "SOLID",
+              "unicode" : "f7e4"
+            },
+            "icon_image" : {
+              "alt" : "family",
+              "height" : 80,
+              "loading" : "lazy",
+              "max_height" : 76,
+              "max_width" : 70,
+              "size_type" : "exact",
+              "src" : get_asset_url('../images/icons/livelihoods.svg'),
+              "width" : 74
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : "Safe Coastal Livelihoods"
+        }, {
+          "description_content" : "<p>Solubility is differentiated by whether the substance is easily dissolved in organic solvents under normal environmental conditions of temperature &amp; pressure.</p>",
+          "enable_text" : true,
+          "enable_title" : true,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Alternate Fire",
+              "type" : "SOLID",
+              "unicode" : "f7e4"
+            },
+            "icon_image" : {
+              "alt" : "mask",
+              "height" : 80,
+              "loading" : "lazy",
+              "max_height" : 80,
+              "max_width" : 80,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/icons/gas-mask.svg'),
+              "width" : 80
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : "Stop Toxic Chemical in Air"
+        }, {
+          "description_content" : "<p>Radioactive materials released into the environment can contaminate the air, water, surfaces, soil, plants, buildings, people &amp; animals.</p>",
+          "enable_text" : true,
+          "enable_title" : true,
+          "field_group" : {
+            "link_color" : {
+              "color" : "#22B2CF",
+              "opacity" : 100
+            },
+            "link_color_inherit_condition" : true
+          },
+          "icon_image" : {
+            "icon_field" : {
+              "name" : "Alternate Fire",
+              "type" : "SOLID",
+              "unicode" : "f7e4"
+            },
+            "icon_image" : {
+              "alt" : "fan",
+              "height" : 80,
+              "loading" : "lazy",
+              "max_height" : 80,
+              "max_width" : 80,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/icons/wheel.svg'),
+              "width" : 80
+            }
+          },
+          "link_display_condition" : false,
+          "link_text" : "Real time updates",
+          "link_url" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.hubspot.com/",
+              "type" : "EXTERNAL"
+            }
+          },
+          "title" : "Ban Radioactive Contamination"
+        } ],
+        style={
+          "box_inner_spacing" : {
+            "desktop_spacing" : {
+              "spacing_field" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 20
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 15
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 15
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 20
+                  }
+                }
+              }
+            },
+            "mobile_spacing" : {
+              "spacing" : {
+                "margin" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : { }
+                },
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 15
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 15
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 15
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 15
+                  }
+                }
+              }
+            }
+          },
+          "colors" : {
+            "box_background_color" : {
+              "color" : "#fafafa",
+              "opacity" : 100
+            }
+          },
+          "overwrite" : true
+        }
+      %}
+      {% end_dnd_module %}globe
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Counter Section #}
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/counter",
+        offset=0,
+        width=12,
+        counter=[ {
+          "counter_text" : "Trees Planted",
+          "counter_unit" : "+",
+          "counter_value" : "5898",
+          "enable_counter_unit" : false,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "tree",
+            "height" : 145,
+            "loading" : "lazy",
+            "max_height" : 145,
+            "max_width" : 144,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/tree.png'),
+            "width" : 144
+          }
+        }, {
+          "counter_text" : "Changing Life Since",
+          "counter_unit" : "+",
+          "counter_value" : "1994",
+          "enable_counter_unit" : false,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "life",
+            "height" : 145,
+            "loading" : "lazy",
+            "max_height" : 145,
+            "max_width" : 145,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/changing-life.png'),
+            "width" : 145
+          }
+        }, {
+          "counter_text" : "Our Partners",
+          "counter_unit" : "+",
+          "counter_value" : "21",
+          "enable_counter_unit" : true,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "partner",
+            "height" : 144,
+            "loading" : "lazy",
+            "max_height" : 145,
+            "max_width" : 145,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/partner.png'),
+            "width" : 144
+          }
+        }, {
+          "counter_text" : "Volunteers",
+          "counter_unit" : "+",
+          "counter_value" : "385",
+          "enable_counter_unit" : false,
+          "icon" : {
+            "name" : "Drafting Compass",
+            "type" : "SOLID",
+            "unicode" : "f568"
+          },
+          "image" : {
+            "alt" : "hands",
+            "height" : 145,
+            "loading" : "lazy",
+            "max_height" : 145,
+            "max_width" : 144,
+            "size_type" : "auto_custom_max",
+            "src" : get_asset_url('../images/multipurpose/volunteer.png'),
+            "width" : 144
+          }
+        } ],
+        enable_counter_text=true,
+        enable_image_icon=true,
+        style={
+          "counter" : {
+            "counter_text" : {
+              "desktop" : {
+                "overwrite" : false
+              }
+            },
+            "counter_value" : {
+              "desktop" : {
+                "font" : {
+                  "color" : "#146356",
+                  "fallback" : "sans-serif",
+                  "font" : "Manrope",
+                  "font_set" : "GOOGLE",
+                  "size" : 76,
+                  "styles" : { },
+                  "variant" : "700"
+                },
+                "overwrite" : true
+              }
+            }
+          },
+          "spacing" : {
+            "desktop_spacing" : {
+              "margin" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 30
+                },
+                "top" : { }
+              },
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 0
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 5
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 5
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 0
+                }
+              }
+            },
+            "mobile_spacing" : {
+              "margin" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 20
+                },
+                "top" : { }
+              },
+              "padding" : {
+                "bottom" : {
+                  "units" : "px",
+                  "value" : 5
+                },
+                "left" : {
+                  "units" : "px",
+                  "value" : 5
+                },
+                "right" : {
+                  "units" : "px",
+                  "value" : 5
+                },
+                "top" : {
+                  "units" : "px",
+                  "value" : 5
+                }
+              }
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Feature Card Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "40px",
+      "top" : "40px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/feature-card",
+        offset=0,
+        width=12,
+        card=[ {
+          "content" : {
+            "button" : {
+              "button_layout" : "filled",
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Collaborating with local partners to implement community-owned clean drinking water projects in remote communities.</p>",
+            "image" : {
+              "alt" : "feature",
+              "height" : 610,
+              "loading" : "lazy",
+              "max_height" : 610,
+              "max_width" : 380,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/feature-card-one.png'),
+              "width" : 380
+            },
+            "sub_title" : "Air Pollution",
+            "title" : "What’s currently happening in Air Pollution all around the world? AQI region-wise."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        }, {
+          "content" : {
+            "button" : {
+              "button_layout" : "filled",
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Collaborating with local partners to implement community-owned clean drinking water projects in remote communities.</p>",
+            "image" : {
+              "alt" : "water",
+              "height" : 610,
+              "loading" : "lazy",
+              "max_height" : 610,
+              "max_width" : 380,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/feature-card-two.png'),
+              "width" : 380
+            },
+            "sub_title" : "WATER POLLUTANT",
+            "title" : "Think up spending hours every day looking for drinking water."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 50,
+            "start_label" : "Raised : $10.11 million"
+          }
+        }, {
+          "content" : {
+            "button" : {
+              "button_layout" : "filled",
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Collaborating with local partners to implement community-owned clean drinking water projects in remote communities.</p>",
+            "image" : {
+              "alt" : "melting",
+              "height" : 610,
+              "loading" : "lazy",
+              "max_height" : 610,
+              "max_width" : 380,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/feature-card-three.png'),
+              "width" : 380
+            },
+            "sub_title" : "MELTING ICEBERGS",
+            "title" : "Negative mass balances due to retiring glaciers is causing them to disappear."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        } ],
+        style={
+          "enable_style" : false
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Two Column Image and Text Section #}
+{% dnd_section
+  vertical_alignment='MIDDLE',
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_column
+        offset=0,
+        width=6,
+        padding={
+          "default" : {
+            "bottom" : "0px",
+            "top" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/linked_image",
+            offset=0,
+            width=12,
+            horizontal_alignment="CENTER",
+            img={
+              "alt" : "action",
+              "height" : 509,
+              "loading" : "lazy",
+              "max_height" : 509,
+              "max_width" : 564,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/boat.png'),
+              "width" : 564
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column
+        offset=6,
+        width=6,
+        padding={
+          "default" : {
+            "bottom" : "0px",
+            "top" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/spacer",
+            offset=0,
+            width=12,
+            style={
+              "height_mobile_" : 30
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/title-content",
+            offset=0,
+            width=12,
+            title_content={
+              "content" : "<h3>Take Action. Let’s Get In Touch</h3><p>Given the limited resources, the issues we address, from hunger clean drinking water to disease prevention and homelessness, can be taxing.</p>"
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/spacer",
+            offset=0,
+            width=12,
+            style={
+              "height_desktop_" : 30,
+              "height_mobile_" : 20,
+              "height_tablet_" : 25
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/button",
+            offset=0,
+            width=12,
+            button={
+              "text" : "Donate Now"
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Benefactors Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        style={
+          "title_content" : {
+            "alignment" : {
+              "alignment_desktop" : "center"
+            }
+          }
+        },
+        title_content={
+          "content" : "<h3>Our Benefactors</h3>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "background_color" : {
+            "color" : "#fafafa",
+            "opacity" : 100
+          },
+          "height_desktop_" : 40,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/benefactor",
+        offset=0,
+        width=12,
+        benefactor_list=[ {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Pauline Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "http://makewebbetter-5145589.hs-sites.com/en/people-detail-page",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/pauline.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "James Stewart",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "http://makewebbetter-5145589.hs-sites.com/en/people-detail-page",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/brandon.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "William Mejia",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "http://makewebbetter-5145589.hs-sites.com/en/people-detail-page",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/morris.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Brandon Hudgins",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "http://makewebbetter-5145589.hs-sites.com/en/people-detail-page",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/william.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "Cesar Watts",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "http://makewebbetter-5145589.hs-sites.com/en/people-detail-page",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "Team Member",
+            "height" : 336,
+            "loading" : "lazy",
+            "max_height" : 336,
+            "max_width" : 381,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/cesar.png'),
+            "width" : 381
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          } ]
+        }, {
+          "field_group" : {
+            "name_profile" : "Pauline J. Wright",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "name_profile" : {
+            "name_profile" : "James Stewart",
+            "profile_link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "http://makewebbetter-5145589.hs-sites.com/en/people-detail-page",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "James Stewart",
+            "height" : 335,
+            "loading" : "lazy",
+            "max_height" : 335,
+            "max_width" : 380,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/james.png'),
+            "width" : 380
+          },
+          "social" : [ {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.instagram.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.linkedin.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "LinkedIn In",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            }
+          }, {
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : true,
+              "url" : {
+                "href" : "https://www.twitter.com/",
+                "type" : "EXTERNAL"
+              }
+            },
+            "social_icon" : {
+              "name" : "Twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            }
+          } ]
+        } ],
+        style={
+          "overwrite_style" : true
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+{# Case Study Section #}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        style={
+          "title_content" : {
+            "alignment" : {
+              "alignment_desktop" : "center"
+            }
+          }
+        },
+        title_content={
+          "content" : "<h3>Case Study</h3>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_desktop_" : 40,
+          "height_mobile_" : 30,
+          "height_tablet_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/case-study",
+        offset=0,
+        width=12,
+        card=[ {
+          "content" : {
+            "button" : {
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Planning and zoning are examples of mitigation actions, as are floodplain protection, property acquisition and relocation, and public outreach projects. Installing disaster warning systems, purchasing radio communications equipment, and conducting emergency response training are examples of preparedness actions. Disaster mitigation is at the heart of emergency management.</p>",
+            "image" : {
+              "alt" : "case",
+              "height" : 473,
+              "loading" : "lazy",
+              "max_height" : 473,
+              "max_width" : 392,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/case-study.png'),
+              "width" : 392
+            },
+            "sub_title" : "Air Pollution",
+            "title" : "What’s currently happening in Air Pollution all around the world? AQI region-wise."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        }, {
+          "content" : {
+            "button" : {
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Planning and zoning are examples of mitigation actions, as are floodplain protection, property acquisition and relocation, and public outreach projects. Installing disaster warning systems, purchasing radio communications equipment, and conducting emergency response training are examples of preparedness actions. Disaster mitigation is at the heart of emergency management.</p>",
+            "image" : {
+              "alt" : "case",
+              "height" : 473,
+              "loading" : "lazy",
+              "max_height" : 473,
+              "max_width" : 392,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/case-study.png'),
+              "width" : 392
+            },
+            "sub_title" : "Air Pollution",
+            "title" : "What’s currently happening in Air Pollution all around the world? AQI region-wise."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        }, {
+          "content" : {
+            "button" : {
+              "button_type" : "secondary",
+              "link_field" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "link_text" : "Donate"
+            },
+            "content" : "<p>Planning and zoning are examples of mitigation actions, as are floodplain protection, property acquisition and relocation, and public outreach projects. Installing disaster warning systems, purchasing radio communications equipment, and conducting emergency response training are examples of preparedness actions. Disaster mitigation is at the heart of emergency management.</p>",
+            "image" : {
+              "alt" : "case",
+              "height" : 473,
+              "loading" : "lazy",
+              "max_height" : 473,
+              "max_width" : 392,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/case-study.png'),
+              "width" : 392
+            },
+            "sub_title" : "Air Pollution",
+            "title" : "What’s currently happening in Air Pollution all around the world? AQI region-wise."
+          },
+          "progress" : {
+            "end_label" : "Goal: $23 million",
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "link_text" : "Donate",
+            "progress" : 80,
+            "start_label" : "Raised : $10.11 million"
+          }
+        } ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Review Section #}
+{% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/review",
+        offset=0,
+        width=12,
+        review=[ {
+          "name_review" : "Goldie D. Taylor",
+          "profile" : "Investor",
+          "profile_image" : {
+            "alt" : "profile-3",
+            "height" : 51,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 49,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/goldie.png'),
+            "width" : 50
+          },
+          "review_text" : "<p>Human degradation of nature is the greatest challenge of the twenty-first century, yet it barely registers as a political issue. Environment solutions often create jobs &amp; economic opportunities.</p>"
+        }, {
+          "name_review" : "Charles M. Pruitt",
+          "profile" : "Advocacy Partner",
+          "profile_image" : {
+            "alt" : "profile-3",
+            "height" : 51,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 49,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/charles.png'),
+            "width" : 50
+          },
+          "review_text" : "<p>Environmental research has resulted in significant advancements that have resulted in the protection of human and ecosystem health. <br>In the industrialized world, voluntary environmental agreements are a must.</p>"
+        }, {
+          "name_review" : "Karen J. Lugo",
+          "profile" : "Volunteer",
+          "profile_image" : {
+            "alt" : "profile-3",
+            "height" : 51,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 49,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/karen.png'),
+            "width" : 50
+          },
+          "review_text" : "<p>A brilliant strategy for finally making nature conservation and sustainability relevant in elections by supporting green candidates in all possible efforts. Let’s make that happen with our mechanisms.</p>"
+        }, {
+          "name_review" : "Charles M. Pruitt",
+          "profile" : "Advocacy Partner",
+          "profile_image" : {
+            "alt" : "profile-3",
+            "height" : 51,
+            "loading" : "lazy",
+            "max_height" : 50,
+            "max_width" : 49,
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/multipurpose/charles.png'),
+            "width" : 50
+          },
+          "review_text" : "<p>Environmental research has resulted in significant advancements that have resulted in the protection of human and ecosystem health. <br>In the industrialized world, voluntary environmental agreements are a must.</p>"
+        } ],
+        style={
+          "overwrite_style" : false
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Partner Section #}
+{% dnd_section %}
+  {% dnd_column
+    offset=0,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/title-content",
+        offset=0,
+        width=12,
+        style={
+          "title_content" : {
+            "max_width" : {
+              "enable_max_width" : true,
+              "value" : 450
+            }
+          }
+        },
+        title_content={
+          "content" : "<h4>The Environment is All We Have In Common</h4><p>Turning the ship around takes a lot of willpower and ingenuity.</p>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/spacer",
+        offset=0,
+        width=12,
+        style={
+          "height_mobile_" : 30
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/partner",
+        offset=0,
+        width=12,
+        layout={
+          "column_choice" : "three_column"
+        },
+        parnter=[ {
+          "image" : {
+            "alt" : "Adobe",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 122,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/adobe.png'),
+            "width" : 122
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.adobe.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Dell",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 82,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/dell.png'),
+            "width" : 82
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.dell.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Uber",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 93,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/uber.png'),
+            "width" : 93
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.uber.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Paypal",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 121,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/paypal.png'),
+            "width" : 121
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.paypal.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Microsoft",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 150,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/microsoft.png'),
+            "width" : 150
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.microsoft.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Google",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 98,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/google.png'),
+            "width" : 98
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.Google.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Spotify",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 107,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/spotify.png'),
+            "width" : 107
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.spotify.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Dropbox",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 163,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/dropbox.png'),
+            "width" : 163
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.dropbox.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image" : {
+            "alt" : "Nike",
+            "height" : 32,
+            "loading" : "lazy",
+            "max_height" : 32,
+            "max_width" : 89,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/multipurpose/nike.png'),
+            "width" : 89
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "https://www.nike.com/",
+              "type" : "EXTERNAL"
+            }
+          }
+        } ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Video and Form Section #}
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "bottom" : "50px",
+      "top" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_column
+        offset=0,
+        width=6,
+        padding={
+          "default" : {
+            "bottom" : "0px",
+            "top" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/title-content",
+            offset=0,
+            width=12,
+            title_content={
+              "content" : "<h3>Sign Up For Environment News &amp; Alerts</h3><p>We are bringing worldwide concerns and solutions fresh to your emails. As opposed to what others do, we make our contributions timely.</p>"
+            }
+          %}
+            {% module_attribute "content" %}
+              <p><span>We are bringing worldwide concerns and solutions fresh to your emails. As opposed to what others do, we make our contributions timely.</span></p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/form",
+            offset=0,
+            width=12,
+            style={
+              "form_alignment" : {
+                "max_width" : 480
+              },
+              "input_field" : {
+                "border_color" : {
+                  "color" : "#B9D1CD",
+                  "opacity" : 100
+                },
+                "enable" : true
+              },
+              "spacing" : {
+                "desktop_spacing" : {
+                  "padding" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 20
+                    },
+                    "left" : {
+                      "units" : "px",
+                      "value" : 0
+                    },
+                    "right" : {
+                      "units" : "px",
+                      "value" : 0
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 0
+                    }
+                  }
+                },
+                "mobile_spacing" : {
+                  "padding" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 15
+                    },
+                    "left" : {
+                      "units" : "px",
+                      "value" : 0
+                    },
+                    "right" : {
+                      "units" : "px",
+                      "value" : 0
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 0
+                    }
+                  }
+                }
+              }
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/spacer",
+            offset=0,
+            width=12,
+            style={
+              "height_mobile_" : 30
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column
+        offset=6,
+        width=6,
+        padding={
+          "default" : {
+            "bottom" : "0px",
+            "top" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/video",
+            offset=0,
+            width=12,
+            image={
+              "alt" : "video-poster",
+              "height" : 525,
+              "loading" : "lazy",
+              "max_height" : 525,
+              "max_width" : 587,
+              "size_type" : "auto_custom_max",
+              "src" : get_asset_url('../images/multipurpose/video-poster.png'),
+              "width" : 587
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+{% end_dnd_area %}
+{% endblock body %}

@@ -1,0 +1,35 @@
+<!--
+  templateType: none
+-->
+
+<!doctype html>
+<html class="no-js" lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    {% include './global-head.html' %}
+
+    {{ standard_header_includes }}
+
+    {% block head %}{% endblock %}
+  </head>
+
+  <body class="{{ builtin_body_classes }} {{ template_body_classes }} {% if theme.header.sticky %}sticky-header{% endif %}">
+    {% block globals %}{% endblock %}
+
+    {% block header %}
+      {% global_partial path="{{ './header.html' }}" %}
+    {% endblock header %}
+
+    <div class="screen-reader-text" id="aria-live-polite" aria-live="polite"></div>
+    <div class="screen-reader-text" id="aria-live-assertive" aria-live="assertive"></div>
+
+    <main id="body" class="body-wrapper" tabindex="-1">
+      {% block body %}{% endblock body %}
+    </main>
+
+    {% block footer %}
+      {% global_partial path="{{ './footer.html' }}" %}
+    {% endblock footer %}
+
+    {{ standard_footer_includes }}
+  </body>
+</html>

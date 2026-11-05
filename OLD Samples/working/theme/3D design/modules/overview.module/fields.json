@@ -1,0 +1,89 @@
+[
+  {
+    "name": "heading",
+    "label": "Heading",
+    "type": "text",
+    "default": "Built for hospitality. Designed for simplicity."
+  },
+  {
+    "name": "definition_heading",
+    "label": "Definition heading",
+    "type": "text",
+    "default": "What is GraceSoft Easy InnKeeping?"
+  },
+  {
+    "name": "definition",
+    "label": "Product definition",
+    "type": "text",
+    "default": "GraceSoft Easy InnKeeping is hospitality property management software for hotels, inns, resorts and other lodging businesses. It helps teams organize reservations, front desk tasks and guest information, with connected options for direct booking, channel distribution, payments and guest communication."
+  },
+  {
+    "name": "qualification",
+    "label": "Scope qualification",
+    "type": "text",
+    "default": "Products, integrations and workflows depend on your property’s plan and configuration. Confirm the right setup with GraceSoft."
+  },
+  {
+    "name": "links",
+    "label": "Connected workflow links",
+    "type": "group",
+    "children": [
+      {
+        "name": "label",
+        "label": "Label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "url",
+        "label": "Destination",
+        "type": "url",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS"
+        ],
+        "default": {
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 4
+    },
+    "default": [
+      {
+        "label": "Manage your property",
+        "url": {
+          "href": "https://www.gracesoft.com/hotel-management-software",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Welcome direct bookings",
+        "url": {
+          "href": "https://www.gracesoft.com/online-booking-engine",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Connect your channels",
+        "url": {
+          "href": "https://www.gracesoft.com/channel-manager",
+          "type": "EXTERNAL"
+        }
+      },
+      {
+        "label": "Stay close to your guests",
+        "url": {
+          "href": "https://www.gracesoft.com/unified-inbox",
+          "type": "EXTERNAL"
+        }
+      }
+    ]
+  }
+]

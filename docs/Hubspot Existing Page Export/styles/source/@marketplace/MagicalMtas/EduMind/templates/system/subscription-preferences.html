@@ -1,0 +1,44 @@
+<!--
+  templateType: email_subscription_preferences_page
+  isAvailableForNewContent: true
+  label: Edumind - email subscription preferences
+  screenshotPath: ../../images/template-previews/subscription-preferences.png
+-->
+{% extends "../layouts/base.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Subscription preferences" %}
+
+{% block body %}
+  {# Breadcrumb Section Start #}
+  {% module "module_16607567970425" path="../../modules/Breadcrumb", label="Breadcrumb"
+  layout = 'with-image',
+  extra_class = '',
+  page_title = '<h1>Subscription Preferences</h1>',
+  breadcrumb_item = [
+            {
+            'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './edumind-home'},},
+            'breadcrumb_text' :  'Home'
+            },
+            {
+              'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './edumind-home'},},
+              'breadcrumb_text' :  'Subscription Preferences'
+            }
+          ]
+
+
+  %}
+  {# Breadcrumb Section End #} 
+
+<section class="content-wrapper section-padding">
+  <div class="systems-page  subscription-preferences">
+    <div class="container">
+      <div class="systems-page-width"> 
+        {% module "subscription_preferences"
+          path="@hubspot/email_subscriptions"
+        %}
+      </div>
+    </div>
+  </div> 
+</section>
+
+{% endblock body %}

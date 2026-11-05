@@ -1,0 +1,338 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: About Us Three
+screenshotPath: ../images/template-previews/about-three.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--about-us-three'
+%}
+
+{# About Banner #}
+{% dnd_section
+      vertical_alignment='TOP',
+       full_width=true,
+        padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 40,
+          'left': 0
+        }
+      }
+ %}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/banner-layouts',
+        "subtitle"="",
+        "content"="<h1>Hi, I'm Jenny Wilson</h1><p>Scintillating Freelancer Graphic Designer having 20+ years of experience in developing engaging brand designs for clients. Skilled in animation, design, and illustration.</p>"
+          primary_cta={ type: 'btn', style: 'filled_light', text: 'See My Work' },
+          secondary_cta={ type: 'btn', style: 'filled_dark', text: 'Download Resume' }
+         style_1={
+              'content_color': {
+              'heading' : {enable_heading_color: true },
+              'text':{ enable_content_color: true}
+            },
+          'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 170,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 170,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+        }
+%}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+{
+"banner_layouts": "background_image"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of About Banner #}
+
+{# Two Column Video Section #}
+{% include_dnd_partial path='../sections/two-column-video-text.html' %}
+{# End Of Two Column Video Section #}
+
+{# Portfolio #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+	  path='../modules/portfolio-tabs',
+    'slider_settings': {
+      'enable_slider_navigations'= True;
+    }
+
+%}
+{% module_attribute 'layout_choices' is_json=True %}
+{
+"select_layout": "image_slider"
+}
+{% end_module_attribute %}  
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Portfolio Section #}
+
+{# Counter Section #}
+{% dnd_section 
+  background_color= {{ theme.color_font_setting.global_colors.primary.color }}
+%}
+{% dnd_column %}
+{% dnd_row
+        padding={
+          'default': {
+            'top': 0,
+            'right': 0,
+            'bottom': 20,
+            'left': 0
+          },
+          'mobile': {
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          }
+        }
+%}
+{% dnd_module
+   path='../modules/title-content',
+   "subtitle"="",
+   "content"="<h2>Some Intresting Facts</h2>"
+     style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'Counter' 
+				path='../modules/counter',
+        style = {
+          'content_alignment_choice_desktop_': {
+            'alignment': 'center',
+          },
+          'content_alignment_choice_mobile_': {
+            'alignment': 'center',
+          }
+     }
+ counter_repeater = [
+     {
+        "image_or_icon_settings": {
+        "icon_image_selection": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/clock-outlined.svg'),
+          "alt": "social"
+        }
+        },
+      'counter_value': '500',
+      'counter_unit': '',
+      'counter_text': 'Working Hours'
+    },
+    {
+       "image_or_icon_settings": {
+        "icon_image_selection": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/user.svg'),
+          "alt": "social"
+        }
+        },
+      'counter_value': '200',
+      'counter_unit': '',
+      'counter_text': 'Happy Customers'
+    },
+    {
+       "image_or_icon_settings": {
+        "icon_image_selection": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/presentation.svg'),
+          "alt": "social"
+        }
+        },
+      'counter_value': '426',
+      'counter_unit': '',
+      'counter_text': 'Projects Finished'
+    }
+   ]
+%}
+
+{% module_attribute 'column_count_choice' is_json=True %}
+{
+"column_count": "three_column"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Counter Section #}
+
+{# Partners Section #}
+{% dnd_section %}
+{% dnd_column
+       padding={
+				'top': 0,
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+			},
+%}
+{% dnd_row %}
+{% dnd_module 'au_partners' 
+				path='../modules/our-partners',
+        style = {
+          'inner_spacing': {inner_spacing: 60,horizontal: 20},
+     }
+ partner_content=[
+     {
+    'logo': {
+      'alt': 'Hubspot Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/hubspot-partner.png')
+     },
+     },
+     {
+    'logo': {
+      'alt': 'Capterra Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/capterra.png')
+     },
+     },
+    {
+
+    'logo': {
+      'alt': 'Goodfirms Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/goodfirms.png')
+     },
+    },
+     {
+
+    'logo': {
+      'alt': 'Crowd Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/crowd.png')
+     },
+     },
+      {
+
+    'logo': {
+      'alt': 'Trustpilot Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/trustpilot.png')
+     },
+     },
+       {
+
+    'logo': {
+      'alt': 'Software Suggest Partner',
+      'size_type': 'auto',
+      'src': get_asset_url('../images/multipurpose/software-suggest.png')
+     },
+     }
+     ]
+%}
+{% module_attribute 'layout_choice' is_json=True %}
+{
+"select_layout": "listing"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Partners Section #}
+
+{# Testimonials Section #}
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module
+          path='../modules/title-content',
+          "subtitle"="",
+          "content"="<h2>Our Clients Testimonials</h2>
+          <p>“For us, customers success is our success”.</p>"
+             style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module 'au_testimonials' 
+      path='../modules/testimonials',
+      "hide_show_slider_dots" = false,
+%}
+{% module_attribute 'testimonial_layouts_choice' is_json=True %}
+{
+"testimonial_layouts": "two_column_slider"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Testimonials Section #}
+
+{# Two Column Content Section #}
+{% include_dnd_partial path='../sections/contact-us.html' %}
+{# End Of Two Column Content Section #}
+
+{% end_dnd_area %}
+{% endblock body %}

@@ -1,0 +1,28 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  enableDomainStylesheets: false
+  screenshotPath: ../../assets/screenshots/templates/pricing.png
+  label: "Pricing"
+-->
+
+{% extends '../partials/base.html' %}
+
+{% block globals %}
+  {% module "back_to_top" path="../modules/Back to Top", label="Back to Top" %}
+  {% module "transparent_header" path="../modules/Transparent Header" label="Transparent Header", make_transparent=true %}
+{% endblock %}
+
+{% block body %}
+  {% dnd_area "main_content" %}
+    {% include_dnd_partial path='../sections/hero-full-overhang-pricing.html' %}
+
+    {% include_dnd_partial path='../sections/comparison-table.html' %}
+
+    {% include_dnd_partial path='../sections/testimonials-with-logos.html' %}
+
+    {% include_dnd_partial path='../sections/faq.html' %}
+
+    {% include_dnd_partial path='../sections/cta-box.html' %}
+  {% end_dnd_area %}
+{% endblock %}

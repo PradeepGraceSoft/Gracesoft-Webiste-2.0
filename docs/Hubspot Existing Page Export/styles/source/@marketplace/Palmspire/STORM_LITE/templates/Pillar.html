@@ -1,0 +1,1152 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pillar Page
+  screenshotPath: ../Images/Page Preview/Pillar Page.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_pillar' label='Pillar' class='body-container-pillar' %}
+
+<!--------------------------------------------------Pillar Banner section Started -------------------------------------------------->
+
+{% dnd_section vertical_alignment = 'MIDDLE', max_width = 1150,
+   background_color= "{{ theme.colors_group.growthkit_colors.light_scheme.background.light_background_color.color }}",
+	  padding={
+       'default':{
+       'top': 90,
+       'bottom': 350
+       },
+       'mobile':{
+       'top': 60,
+       'bottom': 60
+       }
+     },
+		 margin={
+      'default':{
+      'top': 143
+      },
+      'mobile':{
+      'top': 0
+      }
+    }
+  %}
+    {% dnd_column%}
+      {% dnd_row %}
+        {% dnd_column offset=0, width=6 %}
+          {% dnd_row %}
+           {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description"%}
+            {% module_attribute "html"%}
+             <div>
+               <h1>Pillar Page <br>Heading Text</h1>
+             </div>
+           {% end_module_attribute %}
+         {% end_dnd_module %}
+       {% end_dnd_row %}
+     {% end_dnd_column %}
+     {% dnd_column offset=6, width=6,
+		   margin={
+         'default':{
+          'left': 24
+         },
+         mobile:{
+         'left': 0
+         }
+       }
+		 %}
+       {% dnd_row %}
+         {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description" %}
+           {% module_attribute "html"%}
+             <div>
+               <p>No coding required, Clean, Easily editable, design and developed by team of Hubspot certified Marketers, designers and programmers.</p>
+             </div>
+           {% end_module_attribute %}
+         {% end_dnd_module %}
+       {% end_dnd_row %}
+			 {% dnd_row
+					padding={
+					  'top':15
+					}
+			 %}
+				 {% dnd_module path='../modules/Buttons', label="Buttons",
+						choose_number_of_cta="single",
+						single_cta_group={
+						"choose_type_of_cta":"primary-cta",
+						primary_cta_group:{
+						"choose_cta_type_here":"solid-cta"
+					  }
+					  },
+						styles={
+								'alignment_field':{
+									'horizontal_align' : 'LEFT'
+								},
+								'single_cta_alignment':{
+									'horizontal_align' : 'CENTER'
+								},
+								'set_cta_alignment_in_mobile_view':{
+									'alignment_field':{
+										'horizontal_align' : 'LEFT'
+									},
+									'single_cta_alignment':{
+										'horizontal_align' : 'LEFT'
+									}
+								}
+							}
+				    %}
+				    {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------------------Pillar Banner section Ended -------------------------------------------------->
+
+
+<!--------------------------------------------------Image Banner section Started -------------------------------------------------->
+
+   {% dnd_section vertical_alignment = 'MIDDLE',
+			margin={
+				'default':{
+				'top': -270
+				},
+				'mobile':{
+				'top': 0
+				}
+			},
+      padding={
+       'default':{
+       'top': 0,
+       'bottom': 0
+       },
+       'mobile':{
+       'top': 60,
+       'bottom': 0
+       }
+      }
+    %}
+      {% dnd_column%}
+        {% dnd_row %}
+          {% dnd_module path='../modules/Image_Video_With_Before_Image', label="Image Video with before image"
+						choose_between_image_and_video="image",
+						image_group={
+						"add_custom_class_here":"image-cont35",
+						add_image_here:{
+						'alt':'Discussion',
+						'src': get_asset_url('../Images/Discussion_2.png'),
+						'width': '1128',
+						'height': auto
+						},
+						add_max_width_here :'1200',
+						add_image_height_here : '542',
+						check_to_show_box_shadow_to_image: false,
+						add_box_shadow_here : "0 4.7px 70px 0 rgba(0, 0, 0, 0.1)",
+						choose_alignment_for_image : "align-center",
+						check_this_to_show_border_radius:true,
+						add_border_radius:"8",
+						},
+						check_to_add_vector_image=true,
+						vector_image_group={
+						add_vector_image:{
+						'alt':'Vector',
+						'src': get_asset_url('../Images/Dotted_image.svg'),
+						'width': auto,
+						'height': auto
+						},
+						set_width_of_vector_image:"101",
+						set_height_of_vector_image:"101",
+						choose_vector_image_position:"top-right",
+						set_vector_image_position:{
+						set_x_axis_position:"-20",
+						set_y_axis_position:"-25"
+						}
+						},
+						styles={
+						'set_content_alignment':{
+						  'horizontal_align' : 'RIGHT'
+						},
+						  'add_border_radius':'4'
+						}	
+          %}
+          {% end_dnd_module %}
+       {% end_dnd_row %}
+     {% end_dnd_column %}
+   {% end_dnd_section %}
+
+<!--------------------------------------------------Image Banner section Ended -------------------------------------------------->
+
+<!--------------------------------------------------Sticky Sidebar section Started -------------------------------------------------->
+
+  {% dnd_section 
+		 padding={
+			'default':{
+			'top': 102,
+			'bottom': 130
+			},
+			'mobile':{
+			'top': 60,
+			'bottom': 60
+			}
+		}
+  %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../modules/Sticky_Sidebar', label="Sticky_Sidebar"
+					check_to_show_sticky_sidebar_on_the_right_side = false,
+					content_title_container = {
+					add_heading_here : 'Table of Content:',
+					check_to_show_content_description_here  : false,
+					content_title : {
+					choose_title_type : 'count',
+					title_with_count : [
+					{
+					add_content_title_here : 'Growth Driven Design'
+					},
+					{
+					add_content_title_here : 'Mobile and Tab Friendly'
+					},
+					{
+					add_content_title_here : 'Drag & Drop Layout'
+					},
+					{
+					add_content_title_here : 'All Custom Modules'
+					},
+					{
+					add_content_title_here : 'Search engine optimized'
+					}
+					]
+					}
+					},
+					simple_card = {
+					check_to_show_all_text_white_of_simple_card : false,
+					choose_heading_type : '4',
+					add_simple_card_heading_here : 'Heading Text',
+					add_simple_card_description_here : 'You may feel the answer is obvious, but for your knowledge not every developer considers store.',
+					choose_between_cta_or_form : 'cta',
+					cta_group : {
+					add_simple_card_cta_link_here:{
+						'url':{
+						'href':"https://www.google.com/"
+						}
+					},
+					add_simple_card_cta_text_here : 'Call to Action'
+					}
+					},
+					check_to_show_content_over_main_content = false,
+					content = [
+					{
+					check_this_to_show_border_after_content : true,
+					choose_content_heading_type : 'count',
+					heading_with_count : {
+					add_content_heading_here : 'Growth Driven Design',
+					},
+					add_description_here : '<p>You may feel the answer is obvious, but for your knowledge not every developer considers store revision when they quote a job. Ask the developer if it is included. 
+					Store revision is must because in case something is not working on your store as you expected, you can ask the developer to make the changes without hitting your budget. The reason can be
+					miscommunication or any other but at the end it is fixed.</p>
+						                    <br>
+						                    <p>Revision service means your developer is skilled, confident in his work and done the work many times already. The developer will never want repeat work and hence will
+																try to achieve it right the first time to reduce workload.</p>
+						                    <br>
+						                    <p>If revisions are not included you may have to pay extra charges for each change request. Hence it is highly recommended to ensure you get store revisions.</p>
+						                    <br><br>
+						                    <h3>Do You Provide Satisfaction Guarantee?</h3>
+						                    <br>
+						                    <p>Ensure the quality of work your Shopify store deserves by asking if your developer offers 100% satisfaction guarantee. A real Shopify expert will not hesitate for the
+																same as they are confident of their ability to deliver their client’s request. If you are not happy with the results then the task is redone.</p>
+						                    <ul class="tick">
+						                    <li>We are GDPR complaint and will make sure that all your data and information is secured.</li>
+						                    <li>Our tech team will provide 24/7 dedicated support for all your queries. We also incorporate product improvements based on client feedback.</li>
+						                    <li>We customize the design and development based upon your business requirements.</li>
+						                    <li>We keep us well updated about ongoing market trends and deliver you the latest designs based upon your niche.</li>
+						                    <li>100% Transparency throughout the process and Real-time communication on Slack.</li>
+						                    </ul>
+						                    <p>Your developer ensuring his or her work means you’ll be getting value for money service. Yes it is true there are some people who are never satisfied but a true businessman
+																when see the performance, appreciates it. And our experience says that most of the Shopify store owners are professionals.</p>',
+				check_to_show_image_video_here : false,
+				check_to_show_one_single_card : false,
+				check_to_show_another_description_below_the_image : false,
+				check_to_show_counter_section : false,
+				check_to_show_blog_content : false,
+				check_to_show_listed_item_section : false,
+				check_to_show_cta : true,
+				cta_group : {
+				choose_type_of_cta : 'primary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Call to Action',
+				check_to_show_spacing_from_left : false,
+				add_spacing_from_top : '40'
+				},
+				check_to_show_two_card_section : false,
+				spacing_for_content_container :{
+				desktop_spacing : {
+				add_spacing_top : '0',
+				add_spacing_bottom : '120'
+				},
+				tablet_spacing : {
+				add_spacing_top : '0',
+				add_spacing_bottom : '80'
+				},
+				mobile_spacing : {
+				add_spacing_top : '60',
+				add_spacing_bottom : '60'
+				}
+				}
+				},
+				{
+				check_this_to_show_border_after_content : true,
+				choose_content_heading_type : 'count',
+				heading_with_count : {
+				add_content_heading_here : 'Mobile and Tab Friendly',
+				},
+				add_description_here : '<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident Facilisis dapibus convallis molestie fugit.</p>',
+				check_to_show_image_video_here : true,
+				image_group : {
+				choose_between_image_and_video : 'image',
+				image_group : {
+				add_image_here : {
+				'alt':'Meeting',
+				'src':get_asset_url('../Images/Discussion.png'),
+				'width': auto,
+				'height': auto
+				}
+				}
+				},
+				check_to_show_one_single_card : false,
+				check_to_show_another_description_below_the_image : true,
+				description_below_the_image : {
+				add_description_here_below_image : '<h2 class="h2-24">More of an understanding of what’s provided by your Team or products and services.</h2>
+                                            <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent.</p>
+                                            <br>
+                                            <p>Claiming to be an expert and being a real Shopify official expert are two different things. Ask for their work credentials. Shopify is an awesome platform.
+																						The spirit of the community is great. There are many developers who want to do Shopify work.</p>
+                                            <br>
+                                            <p>But real experience is still the best teacher. So do what you can before you partner to give the responsibility of your ecommerce store.</p>
+                                            <br>
+                                            <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent. Claiming to be
+																						an expert and being a real Shopify official expert are two different things.</p>
+                                            <br>
+                                            <p>Ask for their work credentials. Shopify is an awesome platform. The spirit of the community is great. There are many developers who want to do Shopify work.</p>
+                                            <br>
+                                            <p>But real experience is still the best teacher. So do what you can before you partner to give the responsibility of your ecommerce store.</p>
+                                            <br>
+                                            <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent. Claiming to be
+																						an expert and being a real Shopify official expert are two different things.</p>
+                                            <br><br>
+                                            <h3>Are You a HubSpot Expert?</h3>
+                                            <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent. Claiming to 
+																						be an expert and being a real Shopify official expert are two different things.</p>
+                                            <br>
+                                            <p>Ask for their work credentials. Shopify is an awesome platform. The spirit of the community is great. There are many developers who want to do Shopify work.
+																						But real experience is still the best teacher. So do what you can before you partner to give the responsibility of your ecommerce store.</p>'
+				},
+				check_to_show_counter_section : false,
+				check_to_show_blog_content : false,
+				check_to_show_listed_item_section : false,
+				check_to_show_cta : true,
+				cta_group : {
+				choose_type_of_cta : 'primary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Call to Action',
+				check_to_show_spacing_from_left : false,
+				add_spacing_from_top : '40'
+				},
+				check_to_show_two_card_section : true,
+				two_card_section : {
+				check_to_show_card_styling : true,
+				check_to_show_card_head_content : true,
+				card_head_content : {
+				add_card_heading_here : 'Heading Text',
+				add_card_description_here : '<p>The headline and subheader tells us what you’re <a href="https://palmspire-3842749.hs-sites.com/home-1">offering</a>, and the form header closes the deal. Over here you can explain why your offer.</p>'
+				},
+				card : [
+				{
+				check_to_show_card_logo : true,
+				add_card_logo_here : {
+				'alt':'Monitor',
+				'src':get_asset_url('../Images/Monitor.svg'),
+				'width': auto,
+				'height': auto
+				},
+				add_card_heading_here : 'Heading Text',
+				add_card_description_here : 'The headline and subheader tells us what you’re offering, closes the deal. Over here you can',
+				card_cta_group : {
+				choose_cta_type : 'secondary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Read More'
+				}
+				},
+				{
+				check_to_show_card_logo : true,
+				add_card_logo_here : {
+				'alt':'Headphones',
+				'src':get_asset_url('../Images/Headphones.svg'),
+				'width': auto,
+				'height': auto
+				},
+				add_card_heading_here : 'Heading Text',
+				add_card_description_here : 'The headline and subheader tells us what you’re offering, closes the deal. Over here you can',
+				card_cta_group : {
+				choose_cta_type : 'secondary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Read More',
+				}
+				}
+				]
+				},
+				spacing_for_content_container :{
+				desktop_spacing : {
+				add_spacing_top : '120',
+				add_spacing_bottom : '120'
+				},
+				tablet_spacing : {
+				add_spacing_top : '80',
+				add_spacing_bottom : '80'
+				},
+				mobile_spacing : {
+				add_spacing_top : '60',
+				add_spacing_bottom : '60'
+				}
+				}
+				},
+				{
+				check_this_to_show_border_after_content : true,
+				choose_content_heading_type : 'count',
+				heading_with_count : {
+				add_content_heading_here : 'Drag & Drop Layout',
+				},
+				add_description_here : '<p>Nemo nibh, condimentum autem ligula ultricies, velit, sociosqu eos voluptatibus modi, porttitor natoque proin proident Facilisis dapibus convallis 
+				molestie fugit.</p>
+                                <br>
+                                <h4>Are You a HubSpot Expert:</h4>
+                                <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent.</p>
+                                <br>
+                                <p>Claiming to be an expert and being a real Shopify official expert are two different things. Ask for their work credentials. Shopify is an awesome platform.
+																The spirit of the community is great. There are many developers who want to do Shopify work.</p>
+                                <br>
+                                <p>But real experience is still the best teacher. So do what you can before you partner to give the responsibility of your ecommerce store.</p>
+                                <br>
+                                <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent. Claiming to
+																be an expert and being a real Shopify official expert are two different things.</p>',
+				check_to_show_image_video_here : false,
+				check_to_show_one_single_card : false,
+				check_to_show_another_description_below_the_image : false,
+				check_to_show_counter_section : true,
+				counter_group : [
+				{
+				add_counter_number_here : '37',
+				add_counter_heading_here : 'Website Pages',
+				add_counter_description_here : 'You may feel the answer is obvious, but for your knowledge not every developer considers store.'
+				},
+				{
+				add_counter_number_here : '40',
+				add_counter_heading_here : 'Landing Psges',
+				add_counter_description_here : 'You may feel the answer is obvious, but for your knowledge not every developer considers store.'
+				},
+				{
+				add_counter_number_here : '20',
+				add_counter_heading_here : 'Email Templates',
+				add_counter_description_here : 'You may feel the answer is obvious, but for your knowledge not every developer considers store.'
+				},
+				{
+				add_counter_number_here : '4',
+				add_counter_heading_here : 'Premium Blogs',
+				add_counter_description_here : 'You may feel the answer is obvious, but for your knowledge not every developer considers store.'
+				}
+				],
+				check_to_show_blog_content : true,
+				recent_blog_group:{
+				add_heading_here : 'From Blog',
+				add_description_here : '<p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent.</p>',
+				choose_number_of_blogs : '4'
+				},
+				check_to_show_listed_item_section : false,
+				check_to_show_cta : true,
+				cta_group : {
+				choose_type_of_cta : 'primary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Call to Action',
+				check_to_show_spacing_from_left : false,
+				add_spacing_from_top : '30'
+				},
+				check_to_show_two_card_section : false,
+				spacing_for_content_container :{
+				desktop_spacing : {
+				add_spacing_top : '120',
+				add_spacing_bottom : '120'
+				},
+				tablet_spacing : {
+				add_spacing_top : '80',
+				add_spacing_bottom : '80'
+				},
+				mobile_spacing : {
+				add_spacing_top : '60',
+				add_spacing_bottom : '60'
+				}
+				}
+				},
+				{
+				check_this_to_show_border_after_content : true,
+				choose_content_heading_type : 'count',
+				heading_with_count : {
+				add_content_heading_here : 'All Custom Modules',
+				},
+				add_description_here : '<p>Claiming to be an expert and being a real Shopify official expert are two different things. Ask for their work credentials. Shopify is an awesome platform.
+				The spirit of the community is great. There are many developers who want to do Shopify work.</p>
+                                <br>
+                                <p>But real experience is still the best teacher. So do what you can before you partner to give the responsibility of your ecommerce store.</p>
+                                <br>
+                                <ol>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took</li>
+                                <li>Mobile device of your liking. Double check!</li>
+                                <li>A galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</li>
+                                </ol>
+                                <p>When you make changes in your website it needs to be fixed for mobile user experience too. An expert Shopify developer will know how to fix mobile UX issues.
+																If something is out of the alignment on mobile the developer will fix it as part of the deal. Most of the developers today have more than one skill set.</p>',
+				check_to_show_image_video_here : true,
+				image_group : {
+				choose_between_image_and_video : 'video',
+				video_group : {
+				add_video_thumbnail_image_here : {
+				'alt':'Thumbnail',
+				'src':get_asset_url('../Images/Thumbnail_image.png'),
+				'width': auto,
+				'height': auto
+				},
+				add_video_play_icon_here :{
+				'alt':'Play Button',
+				'src': get_asset_url('../Images/playbutton.svg'),
+				'width': auto,
+				'height': auto
+				},
+				choose_video_type : 'wistia',
+				add_wistia_code_here: 'xohkwsl5i2'
+				}
+				},
+				check_to_show_one_single_card : false,
+				check_to_show_another_description_below_the_image : false,
+				check_to_show_counter_section : false,
+				check_to_show_blog_content : false,
+				check_to_show_listed_item_section : false,
+				check_to_show_cta : false,
+				check_to_show_two_card_section : true,
+				two_card_section : {
+				check_to_show_card_styling : false,
+				check_to_show_card_head_content : false,
+				card : [
+				{
+				check_to_show_card_logo : false,
+				add_card_heading_here : '<span style="color:#2cd8b1">1. </span>Heading Text',
+				add_card_description_here : 'Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist',
+				card_cta_group : {
+				choose_cta_type : 'primary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Call to Action'
+				}
+				},
+				{
+				check_to_show_card_logo : false,
+				add_card_heading_here : '<span style="color:#2cd8b1">2. </span>Heading Text',
+				add_card_description_here : 'Headphones have a more dynamic and wider range of sound, with a clarity that can bring you closer to the artist',
+				card_cta_group : {
+				choose_cta_type : 'primary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Call to Action',
+				}
+				}
+				]
+				},
+				spacing_for_content_container :{
+				desktop_spacing : {
+				add_spacing_top : '120',
+				add_spacing_bottom : '120'
+				},
+				tablet_spacing : {
+				add_spacing_top : '80',
+				add_spacing_bottom : '80'
+				},
+				mobile_spacing : {
+				add_spacing_top : '60',
+				add_spacing_bottom : '60'
+				}
+				}
+				},
+				{
+				check_this_to_show_border_after_content : false,
+				choose_content_heading_type : 'count',
+				heading_with_count : {
+				add_content_heading_here : 'Search engine optimized',
+				},
+				add_description_here : '<br><h3>Are You a HubSpot Expert?</h3>
+                                <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent.</p>
+                                <br>
+                                <p>Claiming to be an expert and being a real Shopify official expert are two different things. Ask for their work credentials. Shopify is an awesome platform. 
+																The spirit of the community is great. There are many developers who want to do Shopify work.</p>
+                                <br>
+                                <p>But real experience is still the best teacher. So do what you can before you partner to give the responsibility of your ecommerce store.</p>
+                                <br>
+                                <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent. Claiming to 
+																be an expert and being a real Shopify official expert are two different things.</p>
+                                <br>
+                                <p>Ask for their work credentials. Shopify is an awesome platform. The spirit of the community is great. There are many developers who want to do Shopify work.</p>
+                                <br>
+                                <p>But real experience is still the best teacher. So do what you can before you partner to give the responsibility of your ecommerce store</p>',
+				check_to_show_image_video_here : false,
+				check_to_show_one_single_card : true,
+				one_single_card_group : {
+				add_logo_here : {
+				'alt':'Palmspire',
+				'src':get_asset_url('../Images/Logos/Palmspire_white.svg'),
+				'width': auto,
+				'height': auto
+				},
+				star_container : [
+				{
+				add_star_image_here : {
+				'alt':'Star',
+				'src':get_asset_url('../Images/yellow-star.png'),
+				'width': auto,
+				'height': auto
+				}
+				},
+				{
+				add_star_image_here : {
+				'alt':'Star',
+				'src':get_asset_url('../Images/yellow-star.png'),
+				'width': auto,
+				'height': auto
+				}
+				},
+				{
+				add_star_image_here : {
+				'alt':'Star',
+				'src':get_asset_url('../Images/yellow-star.png'),
+				'width': auto,
+				'height': auto
+				}
+				},
+				{
+				add_star_image_here : {
+				'alt':'Star',
+				'src':get_asset_url('../Images/yellow-star.png'),
+				'width': auto,
+				'height': auto
+				}
+				},
+				{
+				add_star_image_here : {
+				'alt':'Star',
+				'src':get_asset_url('../Images/yellow-star.png'),
+				'width': auto,
+				'height': auto
+				}
+				}
+				],
+				add_description_here : '<p>“Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure
+				tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.”</p>',
+				author_group : {
+				add_author_avatar_here : {
+				'alt':'Jerome Bell',
+				'src':get_asset_url('../Images/Team-2.png'),
+				'width': auto,
+				'height': auto
+				},
+				add_author_details_here : '<h6>Jerome Bell</h6>
+                                   <p>CEO, Softech</p>'
+				}
+				},
+				check_to_show_another_description_below_the_image : true,
+				description_below_the_image : {
+				add_description_here_below_image : '<h3>What’s the Process?</h3>
+                                            <br>
+                                            <p>Partnering with the right person is important for your business. Not everyone can become a Shopify expert. Shopify carefully vets their talent.</p>
+                                            <br>
+                                            <p>Claiming to be an expert and being a real Shopify official expert are two different things. Ask for their work credentials. Shopify is an awesome platform.
+																						The spirit of the community is 
+																						great. There are many developers who want to do Shopify work.</p>'
+				},
+				check_to_show_counter_section : false,
+				check_to_show_blog_content : false,
+				check_to_show_listed_item_section : true,
+				listed_items : [
+				{
+				add_heading_here : 'Heading Text',
+				add_description_here : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet.</p>'
+				},
+				{
+				add_heading_here : 'Heading Text',
+				add_description_here : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet
+				solutaLorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+				},
+				{
+				add_heading_here : 'Heading Text',
+				add_description_here : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quidem suscipit sit corporis rerum harum Expedita labore saepe ratione voluptates animi eveniet.</p>'
+				}
+				],
+				check_to_show_cta : true,
+				cta_group : {
+				choose_type_of_cta : 'primary-cta',
+				add_cta_link_here:{
+					'url':{
+					'href':"https://www.google.com/"
+					}
+				},
+				add_cta_text_here : 'Call to Action',
+				check_to_show_spacing_from_left : true,
+				add_spacing_from_top : '40'
+				},
+				check_to_show_two_card_section : false,
+				spacing_for_content_container :{
+				desktop_spacing : {
+				add_spacing_top : '120',
+				add_spacing_bottom : '0'
+				},
+				tablet_spacing : {
+				add_spacing_top : '80',
+				add_spacing_bottom : '0'
+				},
+				mobile_spacing : {
+				add_spacing_top : '60',
+				add_spacing_bottom : '0'
+				}
+				}
+				}
+				],
+				set_top_spacing_for_sticky_sidebar = "150",
+				set_top_spacing_for_content_except_first_one ="50",
+				style={
+				'check_to_show_padding' : true,
+				'spacing_for_whole_section' : {
+					'adjust_spacing_for_whole_section_in_desktop' : {
+						'padding' : {
+							 'top' : {
+									'value' : 0
+							 },
+							 'bottom' : {
+									'value' : 0
+							 },
+							 'left' : {
+									'value' : 0
+							 },
+							 'right' : {
+									'value' : 0
+							 }
+						}
+					},
+					'adjust_spacing_for_whole_section_in_tablet' : {
+						 'padding' : {
+								'top' : {
+									 'value' : 0
+								},
+								'bottom' : {
+									 'value' : 0
+								},
+								'left' : {
+									 'value' : 0
+								},
+								'right' : {
+									 'value' : 0
+								}
+						 }
+						},
+					 'adjust_spacing_for_whole_section_in_mobile' : {
+						 'padding' : {
+								'top' : {
+									 'value' : 0
+								},
+								'bottom' : {
+									 'value' : 0
+								},
+								'left' : {
+									 'value' : 0
+								},
+								'right' : {
+									 'value' : 0
+								}
+						 }
+					}
+        },
+				'check_to_show_background_color':false,
+				'content_title_container_group' :{
+					'adjust_spacing_for_content_title_container' : {
+						'padding' : {
+							 'top' : {
+									'value' : 26
+							 },
+							 'bottom' : {
+									'value' : 15
+							 },
+							 'left' : {
+									'value' : 30
+							 },
+							 'right' : {
+									'value' : 0
+							 }
+						}
+					},
+					'add_background_color_for_content_title_container':{
+					  'color':'#101a29'
+					},
+					'add_border_radius_for_content_title_container':'8'
+				},
+				'simple_card' : {
+					'adjust_spacing_for_simple_card' : {
+						'padding' : {
+							 'top' : {
+									'value' : 26
+							 },
+							 'bottom' : {
+									'value' : 30
+							 },
+							 'left' : {
+									'value' : 30
+							 },
+							 'right' : {
+									'value' : 15
+							 }
+						}
+					},
+					'add_background_color_for_simple_card':{
+					  'color':'#fff'
+					},
+				  'add_border_radius_for_simple_card':'8',
+					  'add_border_for_simple_card':{
+							"top": {
+								"width": { "value": 1, "units": "px" },
+							  "opacity": 100,
+								"style": "solid",
+								"color": "#e2e2e2"
+							},
+							"bottom": {
+								"width": { "value": 1, "units": "px" },
+								"opacity": 100,
+								"style": "solid",
+								"color": "#e2e2e2"
+							},
+							"left": {
+								"width": { "value": 1, "units": "px" },
+								"opacity": 100,
+								"style": "solid",
+								"color": "#e2e2e2"
+							},
+							"right": {
+								"width": { "value": 1, "units": "px" },
+								"opacity": 100,
+								"style": "solid",
+					 			"color": "#e2e2e2"
+							}
+						}
+				  }
+				  }
+          }
+				%}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------------------Sticky Sidebar section Ended -------------------------------------------------->
+
+<!--------------------------------------------------------- Two-Col Form Section Started --------------------------------------------------------->
+
+  {% dnd_section vertical_alignment = 'MIDDLE',
+	   background_color="{{ theme.colors_group.growthkit_colors.light_scheme.background.background_accent_color.color }}" ,
+		 padding={
+			 'default':{
+			 'top': 122,
+			 'bottom': 120
+			 },
+  		 'mobile':{
+			 'top': 60,
+			 'bottom': 60
+			 }
+		 }
+  %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_column offset = 0, width = 6 %}
+          {% dnd_row 
+						 padding={
+							 'default':{
+							 'bottom': 240
+							 },
+							 'mobile':{
+							 'bottom': 20
+							 }
+						 }
+          %}
+						 {% dnd_module
+							 path='@hubspot/linked_image',
+							 img={
+								 'alt': 'GrowthKit',
+								 'src': get_asset_url('../Images/Footer Logo.svg'),
+								 'width': 180,
+								 'height': auto
+							 }
+							 %}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row 
+						 padding={
+						'default':{
+						'right': 45
+						},
+						'mobile':{
+						'right': 0
+						}
+					}
+         %}
+            {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description", horizontal_alignment="LEFT" %}
+							{% module_attribute "html"%}
+								<h2 style="color:#fff"><strong>Heading Text</strong></h2>
+								<p style="color:#fff">About Us Nemo nibh condimentum autem ligula ultricies velit sociosqu eos voluptatibus mod porttitor natoque proin proident! Facilisis dapibus convallis<br>
+									<br>Fill out the form below, we will get back you soon.</p><br>
+                <h4 style="color:#fff">OR</h4>
+							{% end_module_attribute %}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row 
+						 padding={
+							 'default':{
+							 'top': 8
+							 }
+						 }
+          %}
+						{% dnd_module path='../modules/Buttons', label="Buttons",
+							choose_number_of_cta="single",
+							single_cta_group={
+							"choose_type_of_cta":"secondary-cta"
+						 },
+							styles={
+									'alignment_field':{
+										'horizontal_align' : 'LEFT'
+									},
+									'single_cta_alignment':{
+										'horizontal_align' : 'CENTER'
+									},
+									'set_cta_alignment_in_mobile_view':{
+										'alignment_field':{
+											'horizontal_align' : 'LEFT'
+										},
+										'single_cta_alignment':{
+											'horizontal_align' : 'LEFT'
+										}
+							  	}
+							 }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column offset = 6, width = 6,
+					 padding={
+						'default':{
+						'top': 0
+						},
+						'mobile':{
+						'top': 80
+						}
+					}
+        %}
+          {% dnd_row %}
+          {% dnd_module path='../modules/Forms', label="Forms",
+						 choose_between_form_type="normal-form",
+						 check_to_add_vector_image=true,
+						 add_vector_image={
+				     'alt':'Vector',
+						 'src': get_asset_url('../Images/Dotted_image.svg'),
+						 'width': auto,
+						 'height': auto
+						 },
+						 choose_vector_image_position="right",
+						 style={
+					       'adjust_spacing_for_whole_section':{
+								   'padding':{
+										 'top':{
+											 'value':48
+										 },
+										 'bottom':{
+											 'value':50
+										 },
+										 'left':{
+											 'value':50
+										 },
+									   'right':{
+											 'value':50
+										 }
+									 }
+								 },
+								 'add_background_color_for_whole_section':{
+								    'color':"#ffffff",
+										'opacity':100
+								 },
+								 'set_maximum_width_of_form':"523",
+								 'check_to_show_wrapper':false,
+								 'set_content_alignment':{
+								      'horizontal_align':'CENTER'
+								 },
+								 'add_border_radius':"4"							 
+					      }
+						%}
+						{% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------------------------- Two-Col Form Section Ended --------------------------------------------------------->
+
+<!--------------------------------------------------------- Recent Blog Section Started --------------------------------------------------------->
+
+  {% dnd_section vertical_alignment = 'MIDDLE',
+     padding={
+			 'default':{
+			 'top': 130,
+			 'bottom': 140
+			 },
+			 'mobile':{
+			 'top': 60,
+			 'bottom': 60
+			 }
+		}
+  %}
+    {% dnd_column %}
+      {% dnd_row %}
+         {% dnd_module path='@hubspot/rich_text', label="Heading Text and Description", horizontal_alignment = "CENTER"%}
+            {% module_attribute "html"%}
+              <div style="text-align: center;">
+                <h2><strong>Heading Text</strong></h2>
+                <p>Join over 25,000 in beating the failure of strategies by following our blog.</p>
+              </div>
+            {% end_module_attribute %}
+         {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row 
+				 padding={
+					 'default':{
+					 'top': 30,
+					 'bottom' : 50
+					 },
+					 'mobile':{
+					 'top': 20,
+					 'bottom' : 20
+					 }
+				 }
+      %}
+       {% dnd_module path='../modules/Recent_Blogs', label="Recent Blogs" 
+				 check_to_show_subscription_email = false,
+				 choose_recent_blog_layout = "layout1",
+				 layout_1 = {
+				 check_to_show_four_blog_in_three_columns : false,
+				 add_blog_count : '3',
+				 check_to_show_cta : true,
+				 choose_column_options : 'three-col-adjust'
+				 },
+				 style = {
+					 'layout_1':{
+						 'add_spacing_for_recent_post' : {
+							 'padding' : {
+								 'top' : {
+									 'value' : 20
+								 },
+								 'bottom' : {
+									'value' : 35
+								 },
+								 'left' : {
+									'value' : 20
+								 },
+								 'right' : {
+									'value' : 20
+								 }
+							 }
+					   },
+						 'adjust_spacing_for_recent_post_in_tablet' : {
+							 'padding' : {
+								 'top' : {
+								  'value' : 20
+								 },
+								 'bottom' : {
+								  'value' : 35
+								 },
+								 'left' : {
+								  'value' : 20
+								 },
+								 'right' : {
+								  'value' : 20
+								 }
+							 }
+						 },
+					   'check_to_show_box_shadow_on_hover':true
+					  }
+					 }
+			  %}
+        {% end_dnd_module %} 
+      {% end_dnd_row %}
+      {% dnd_row 
+			   padding={
+					 'default':{
+					 'top': 0,
+					 'bottom': 0
+					 },
+					 'mobile':{
+					 'top': 20,
+					 'bottom': 0
+					 }
+				 }
+			%}
+        {% dnd_module path='../modules/Buttons', label="Buttons" , horizontal_alignment="CENTER"
+					 choose_number_of_cta="single",
+					 single_cta_group={
+					 "choose_type_of_cta":"primary-cta",
+					 primary_cta_group:{
+					 "choose_cta_type_here":"solid-cta"
+					 }
+					 },
+					 styles={
+							'alignment_field':{
+							  'horizontal_align' : 'LEFT'
+							},
+							'single_cta_alignment':{
+							  'horizontal_align' : 'CENTER'
+							}
+					 }
+			  %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+<!--------------------------------------------------------- Recent Blog Section Ended --------------------------------------------------------->
+
+
+{% end_dnd_area %}
+{% endblock body %} 

@@ -1,0 +1,179 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Event Details
+  screenshotPath: ../images/template-previews/event-details.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+  {% dnd_area "dnd_area"
+    label="Main section",
+    class="body-container body-container--event-details p-0"
+  %}
+
+  {# Breadcrumb Section Start #} 
+  {% include_dnd_partial path="../sections/breadcrumb.html" %}
+  {# Breadcrumb Section End #}
+
+  {# Event Details Start #}
+  {% dnd_section max_width=1200, class="edumind-container" background_color={{ context.background_color || "#FFFFFF" }}, margin={
+  'top': '0px',
+  'bottom': '0px',
+  'left': '0px',
+  'right': '0px'
+  },  padding={
+  'top': '130px',
+  'bottom': '130px',
+  'left': '0px',
+  'right': '0px'
+  } %}
+    {% dnd_column %}
+        
+        {% dnd_row %}
+          {% dnd_column %}
+            {% dnd_row %}
+              {% dnd_module "module_16683653819508" path="../modules/Single Image", label="Single Image"
+              extra_class = '',
+              single_image = { 
+                        'alt': 'Event Image', 
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/event-details.jpg') 
+                    },
+
+                    %}
+
+                    {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+
+
+        {% dnd_row %}
+
+            {% dnd_column width=8, offset=0 %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h2>Global Education Fall Meeting for Everyone</h2>
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module "module_16677396970051" path="../modules/List", label="List"
+                      select_list = 'meta-list',
+                      meta_list = [
+                        {
+                          'meta_text' : 'Oct 10, 2022',
+                        },
+                        {
+                          'meta_text' : '08:00AM-10:00PM',
+                        },
+                        {
+                          'meta_text' : 'Newyork City, USA',
+                        }
+                      ]
+                    %}
+                    {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores.</p>
+                            <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+               
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h3>Event Location</h3>
+                             <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam. </p>
+                          {% end_module_attribute %}  
+                  {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                  {% dnd_row %}
+                    {% dnd_module "module_16677396970051" path="../modules/List", label="List"
+                      select_list = 'meta-list',
+                      meta_list = [
+                        {
+                          'meta_text' : 'Oct 10, 2022',
+                        },
+                        {
+                          'meta_text' : '08:00AM-10:00PM',
+                        },
+                        {
+                          'meta_text' : 'Newyork City, USA',
+                        }
+                      ]
+                    %}
+                    {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+                {% dnd_row %}
+                    {% dnd_module "module_16677406183988" path="../modules/Google Map", label="Google Map" %}
+                    {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+
+            {% end_dnd_column %}
+
+            {% dnd_column width=4, offset=8 %}
+
+                
+
+                  {% dnd_row, margin={
+                    'top': '20px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                },  padding={
+                    'top': '0px',
+                    'bottom': '0px',
+                    'left': '0px',
+                    'right': '0px'
+                } %}
+                    {% dnd_module "module_166774077178110" path="../modules/Sidebar Widget", label="Sidebar Widget"
+                        sidebar_title = '<h4>Event Info</h4>',
+                        list_item = [
+                          {
+                            'list_label_text' : 'Cost:',
+                            'list_value' : '<span class="price">Free</span>'
+                          },
+                          {
+                            'list_label_text' : 'Total Slot:',
+                            'list_value' : '<span>30</span>'
+                          },
+                          {
+                            'list_label_text' : 'Booked Slot:',
+                            'list_value' : '<span>2</span>'
+                          }
+                        ],
+                        button_link = { 'url': { 'type': 'CONTENT', 'href': './home'},},
+                        button_text = 'Book Now'
+                    %}
+                    {% end_dnd_module %}
+                  {% end_dnd_row %}
+
+            {% end_dnd_column %}
+
+
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {# Event Details End #}
+
+  {# Instructor Section Start #} 
+  {% include_dnd_partial path='../sections/instructor.html' %}
+  {# Instructor Section End #} 
+
+{% end_dnd_area %}
+{% endblock body %}

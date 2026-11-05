@@ -1,0 +1,317 @@
+<!--
+  templateType: drag_drop_email
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    <meta property="og:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    <meta name="twitter:title" content="{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}">
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
+    {% style_settings is_json=True %}
+    {"background_color":"#EAF0F6","body_border_color":"#EAF0F6","body_border_width":"1","body_border_color_choice":"BORDER_MANUAL","body_color":"#ffffff","use_email_client_default_settings":false,"primary_font":"Arial, sans-serif","primary_font_color":"#23496d","primary_font_size":"15","secondary_font":"Arial, sans-serif","secondary_font_color":"#23496d","secondary_font_size":"12","heading_one_font":{"size":"28"},"heading_two_font":{"size":"22"},"links_font":{"color":"#00a4bd","underline":true,"bold":false,"italic":false},"user_module_defaults":{"button_email":{"background_color":"#00a4bd","corner_radius":8,"font":"Arial, sans-serif","font_size":16,"font_color":"#ffffff","font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}},"email_divider":{"height":1,"color":{"color":"#23496d","opacity":100},"line_type":"solid"}},"layout_padding":{"top":{"value":20,"units":"px"},"bottom":{"value":20,"units":"px"},"left":{"value":10,"units":"px"},"right":{"value":10,"units":"px"}},"mobile_settings":{}}
+    {% end_style_settings %}
+    {{ email_standard_header_includes }}
+    {{ outlook_header_includes }}
+    {{ resets_stylesheet }}
+    {{ main_stylesheet }}
+    {{ overrideable_stylesheet }}
+  </head>
+  <body id="hs_body" bgcolor="{{style_settings.background_color}}">
+    {{ preview_snippet }}
+    {{ outlook_background_snippet }}
+    <div class="hse-body-background">
+      <table role="presentation" class="hse-body-wrapper-table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="hse-body-wrapper-td" valign="top">
+            {% dnd_area "main", full_width=False %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/Easy%20Innkeeping%2025%20Years%20of%20Innovation%2c%20Redefining%20Hotel%20Management%20Software%20Standards.png",
+                    "alt":"Easy Innkeeping 25 Years of Innovation, Redefining Hotel Management Software Standards",
+                    "size_type":None,
+                    "width":560,
+                    "height":301,
+                    "loading":"disabled"
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#23496d",
+                    "opacity":100
+                    }, line_type="solid", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    }, height=1 %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div>
+<div>
+<p style="text-align: center; font-weight: bold;">This is what Vista Verde has to say about us!&nbsp;</p>
+</div>
+</div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/VistaVerderTes.png",
+                    "alt":"VistaVerderTes",
+                    "size_type":None,
+                    "width":560,
+                    "height":414,
+                    "loading":"disabled"
+                    }, hs_enable_module_padding=False, hs_wrapper_css={} %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module corner_radius=8, path="@hubspot/button_email", background_color="#00a4bd", font_color="#ffffff", font_size=16, destination="https://www.gracesoft.com/testimonials", text="View our Client Testimonies", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    }, font="Arial, sans-serif" %}
+                    {% module_attribute "style" is_json=True %}{"background_color":{"color":"#102d7b","opacity":100},"corner_radius":22,"font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"value":30,"units":"px"},"styles":{"bold":false,"italic":false,"underline":false}}}{% end_module_attribute %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/email_divider", color={
+                    "color":"#23496d",
+                    "opacity":100
+                    }, line_type="solid", style={
+                    "width":100
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    }, height=1 %}
+
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<h2 style="font-size: 35px; line-height: 175%;"><span style="font-family: Georgia, serif;">Fresh off the Trail</span></h2>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/log%20abin.png",
+                    "width":940,
+                    "height":788
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div><span style="font-weight: bold;"> </span>
+<div><span style="font-weight: bold;"> </span>
+<p style="font-weight: bold;">Worried about the size of your property?</p>
+<p style="font-weight: bold;">&nbsp;</p>
+<span style="font-weight: bold;"> </span></div>
+<div>
+<p>No Dude Ranch is too small OR too big to utilize Easy Innkeeping, from only 1 unit to over 100+ units! We can cater to and conform to your needs.</p>
+</div>
+</div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6, offset=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/Horses.png",
+                    "width":940,
+                    "height":788
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div>
+<div>
+<p style="font-weight: bold;">We love your Horses!</p>
+<p style="font-weight: bold;">&nbsp;</p>
+</div>
+<div>
+<p>Keep track of your beloved horses with our <a href="https://www.gracesoft.com/crm-software">CRM</a>. Which horse is assigned to which Guest, who is on a rest day, Custom feeding requirements, tackle management, and even more!</p>
+</div>
+</div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/Fun%20family.png",
+                    "width":940,
+                    "height":788
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div>
+<div>
+<p style="font-weight: bold;">Returning Guests?</p>
+<p style="font-weight: bold;">&nbsp;</p>
+</div>
+<div>
+<p>You can also <a href="https://www.gracesoft.com/crm-software">track </a>all the information needed for your Guests! Weight, dietary restrictions, car color, anything you need!</p>
+</div>
+</div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+                {% dnd_column width=6, offset=6 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/Cow.png",
+                    "width":940,
+                    "height":788
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"0px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module path="@hubspot/rich_text", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"0px",
+                    "padding-bottom":"10px"
+                    } %}
+                    {% module_attribute "html" %}<div>
+<div>
+<p style="font-weight: bold;">Low Booking numbers?</p>
+<p style="font-weight: bold;">&nbsp;</p>
+</div>
+<div>
+<p>Try our Simple SEO services! If you’re looking for a simple marketing strategy at a low cost. We’re here to support you!</p>
+</div>
+</div>{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "top":"0",
+                "bottom":"0"
+                }, full_width=False, stack="LEFT_TO_RIGHT" %}
+                {% dnd_column width=12 %}
+                  {% dnd_module path="@hubspot/image_email", img={
+                    "src":"https://107648.fs1.hubspotusercontent-na2.net/hubfs/107648/Solgan%20Header.png",
+                    "alt":"Solgan Header",
+                    "width":560,
+                    "height":205
+                    }, hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    } %}
+
+                  {% end_dnd_module %}
+                  {% dnd_module corner_radius=8, path="@hubspot/button_email", background_color="#00a4bd", font_color="#ffffff", font_size=16, destination="https://outlook.office365.com/book/EIKDemoUSandEurope@gracesoft.com/?ismsaljsauthenabled=true", text="🐎Schedule your Demo Here🐎", hs_enable_module_padding=True, hs_wrapper_css={
+                    "padding-left":"20px",
+                    "padding-right":"20px",
+                    "padding-top":"10px",
+                    "padding-bottom":"10px"
+                    }, font="Arial, sans-serif" %}
+                    {% module_attribute "style" is_json=True %}{"background_color":{"color":"#102d7b","opacity":100},"corner_radius":25,"inner_vertical_padding":12,"inner_horizontal_padding":19,"font_style":{"color":"#ffffff","font":"Arial, sans-serif","size":{"value":30,"units":"px"},"styles":{"bold":false,"italic":false,"underline":false}}}{% end_module_attribute %}
+                    {% module_attribute "font_style" is_json=True %}{"color":"#ffffff","font":"Arial, sans-serif","size":{"units":"px","value":16},"styles":{"bold":false,"italic":false,"underline":false}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+              {% dnd_section padding={
+                "default":{
+                  "top":"20",
+                  "bottom":"20"
+                  },
+                "mobile":{
+                  "top":"20",
+                  "bottom":"20"
+                  }
+                }, full_width={
+                "default":False,
+                "mobile":False
+                }, stack="LEFT_TO_RIGHT", background_color={
+                "default":"",
+                "mobile":""
+                } %}
+                {% dnd_column width=12 %}
+                  {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="center", lineNumber=76, hs_enable_module_padding=False, startPosition=-729, unsubscribe_link_type="both" %}
+                    {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+                    {% module_attribute "font" is_json=True %}{"color":"#23496d","font":"Arial, sans-serif","size":{"units":"px","value":12}}{% end_module_attribute %}
+                  {% end_dnd_module %}
+                {% end_dnd_column %}
+              {% end_dnd_section %}
+            {% end_dnd_area %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

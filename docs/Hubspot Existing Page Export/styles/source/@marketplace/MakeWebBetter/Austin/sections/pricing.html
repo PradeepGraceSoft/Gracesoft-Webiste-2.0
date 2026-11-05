@@ -1,0 +1,239 @@
+<!--
+templateType: section
+label: Pricing
+isAvailableForNewContent: true
+screenshotPath: ../images/section-previews/pricing.png
+description: "Middle centered heading above three pricing cards, containing a subheading, description, and button each."
+-->
+
+{% dnd_section %}
+{% dnd_column %}
+{% dnd_row 
+ padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 35,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+    }
+%}
+{% dnd_module
+        path='../modules/title-content',
+        subtitle= " ",
+        content= "<h2>Software Packages & Pricing</h2> <p>Each pricing plan is unique. Each plan possesses extraordinary features with affordable pricing.</p>",
+        style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 950 }
+        }
+%}
+{% module_attribute 'general_setting' is_json=True %}
+{
+"alignment_choice": "center"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row %}
+{% dnd_module
+        path='../modules/pricing-card' ,
+ "enable_icon_or_image" = True,
+                 general_settings={
+ 'alignment': { 
+ alignment: 'left'
+ }
+        }
+        basic_plans=[{
+        "heading": "Basic Plan",
+        "price": "$49.9",
+        "enable_badge": False,
+        "icon_or_image": "image",
+        features : [{
+        "image": {
+              'alt': context.card_one_image_alt || 'Email',
+              'loading': context.card_one_image_loading || 'disabled',
+              'max_height': context.card_one_image_height || 26,
+              'max_width': context.card_one_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_two_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "5 Users",
+        },{
+        "image": {
+              'alt': context.card_one_image_alt || 'Email',
+              'loading': context.card_one_image_loading || 'disabled',
+              'max_height': context.card_one_image_height || 26,
+              'max_width': context.card_one_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_two_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "8 GB Storage",
+        },
+        {
+        "image": {
+              'alt': context.card_one_image_alt || 'Email',
+              'loading': context.card_one_image_loading || 'disabled',
+              'max_height': context.card_one_image_height || 26,
+              'max_width': context.card_one_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_one_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "4 Projects",
+        }],
+        "text": "Buy Now",
+          'link_field': {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : "https://www.google.com"
+              },
+      }
+        },
+        {
+        "heading": " Premium Plan",
+        "price": "$149.99",
+        "enable_badge": True,
+        "badge": "Most Popular",
+        "icon_or_image": "image",
+        features : [{
+        "image": {
+              'alt': context.card_two_image_alt || 'Email',
+              'loading': context.card_two_image_loading || 'disabled',
+              'max_height': context.card_two_image_height || 26,
+              'max_width': context.card_two_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_two_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "19 Users",
+        },{
+        "image": {
+              'alt': context.card_two_image_alt || 'Email',
+              'loading': context.card_two_image_loading || 'disabled',
+              'max_height': context.card_two_image_height || 26,
+              'max_width': context.card_two_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_two_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "15 GB Storage",
+        },
+        {
+        "image": {
+              'alt': context.card_two_image_alt || 'Email',
+              'loading': context.card_two_image_loading || 'disabled',
+              'max_height': context.card_two_image_height || 26,
+              'max_width': context.card_two_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_two_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "18 Projects",
+        },
+        {
+        "image": {
+              'alt': context.card_two_image_alt || 'Email',
+              'loading': context.card_two_image_loading || 'disabled',
+              'max_height': context.card_two_image_height || 26,
+              'max_width': context.card_two_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_two_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "Email preview on air",
+        }],
+        "text": "Buy Now",
+          'link_field': {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : "https://www.google.com"
+              },
+  }
+        },
+        {
+        "heading": "Enterprise Plan",
+        "price": "$500.56",
+        "enable_badge": False,
+        "icon_or_image": "image",
+        features : [{
+        "image": {
+              'alt': context.card_three_image_alt || 'Email',
+              'loading': context.card_three_image_loading || 'disabled',
+              'max_height': context.card_three_image_height || 26,
+              'max_width': context.card_three_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_three_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "35 Users",
+        },{
+        "image": {
+              'alt': context.card_three_image_alt || 'Email',
+              'loading': context.card_three_image_loading || 'disabled',
+              'max_height': context.card_three_image_height || 26,
+              'max_width': context.card_three_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_three_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "30 GB Storage",
+        },{
+        "image": {
+              'alt': context.card_three_image_alt || 'Email',
+              'loading': context.card_three_image_loading || 'disabled',
+              'max_height': context.card_three_image_height || 26,
+              'max_width': context.card_three_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_three_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "34 Projects",
+        },{
+        "image": {
+              'alt': context.card_three_image_alt || 'Email',
+              'loading': context.card_three_image_loading || 'disabled',
+              'max_height': context.card_three_image_height || 26,
+              'max_width': context.card_three_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_three_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "Email preview on air",
+        },{
+        "image": {
+              'alt': context.card_three_image_alt || 'Email',
+              'loading': context.card_three_image_loading || 'disabled',
+              'max_height': context.card_three_image_height || 26,
+              'max_width': context.card_three_image_width || 26,
+              'size_type': 'auto_custom_max',
+              'src': context.card_three_image || get_asset_url('../images/icons/check.svg')
+            },
+            "text": "Spam testing and blocking",
+        }],
+        "text": "Buy Now",
+          'link_field': {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : "https://www.google.com"
+              },
+  }
+        }]
+      %}
+{% module_attribute 'badge' is_json=True %}
+{
+"badge_position": "side"
+}
+{% end_module_attribute %}
+{% module_attribute 'pricing_card_layout' is_json=True %}
+{
+"layouts": "basic"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

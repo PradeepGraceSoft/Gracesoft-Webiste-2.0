@@ -1,0 +1,115 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+<header class="header-wrap">
+  {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+
+  <a href="#main-content" class="header__skip">Skip to content</a>
+
+ {# Top header drag and drop area #}
+  {% dnd_area 'header-top'
+      label='Top header',
+      class='content-wrapper'
+  %}
+  {% end_dnd_area %}
+{# End dnd top header drag and drop area #}
+
+{# Main header #}
+  {% if theme.header.header_top_bar.is_header_top_bar==true %}
+    <div class="en-notification-bar">
+      <div class="content-wrapper en-notification-bar__row">
+        <div class="en-notification-bar__icon-box">
+        {% module 'icon-box'
+          path="../../modules/icon-box",
+          column_cout_choice={
+            "column_count" : "one_column"
+          },
+          icon_box_repeater=[ {
+            "description_content" : "<p>Join the fight, Become a Volunteer</p>",
+            "enable_text" : true,
+            "enable_title" : false,
+            "icon_image" : {
+              "icon_field" : {
+                "name" : "Alternate Fire",
+                "type" : "SOLID",
+                "unicode" : "f7e4"
+              },
+              "icon_image" : {
+                "alt" : "handpointing",
+                "height" : 17,
+                "loading" : "lazy",
+                "max_height" : 17,
+                "max_width" : 16,
+                "size_type" : "auto",
+                "src" : get_asset_url('../../images/icons/handpointing.svg'),
+                "width" : 16
+              }
+            },
+            "title" : "Real time updates"
+          } ],
+          layout_choice_group={
+            "icon_box_layout" : "compact_layout"
+          },
+          style={
+            "content_alignment" : {
+              "less_spacing_between_image_and_text" : true
+            },
+            "enable_box_shadow" : true
+          }
+        %}
+        </div>
+        <div class="en-notification-bar__social-icon">
+          {% module 'social-follow' path='../../modules/social-follow', 
+                    label='Social Follow'
+          %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <div class="en-header header">
+    <div class="header__container content-wrapper">
+
+      {# Header logo column #}
+
+      <div class="header__logo header__logo--main">
+        {% module 'site_logo' path='@hubspot/logo' %}
+      </div>
+
+      {# Header navigation column #}
+
+      <div class="header__column">
+        {# Header navigation row one #}
+        <div class="header__row-1">
+          {% if content.translated_content|length || is_listing_view && group.translations %}
+            <div class="header--toggle header__language-switcher--toggle"></div>
+          {% endif %}
+          <div class="header__navigation header--element">
+            {% module 'navigation-primary'
+              path='../../modules/menu',
+              label='Primary navigation'
+            %}
+          </div>
+          {% module 'header-controls'
+            path='../../modules/header-controls',
+            label='Header Controls'
+          %}
+          <div class="header--toggle header__navigation--toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Bottom header drag and drop area #}
+
+  {% dnd_area 'header-bottom'
+    label='Bottom header',
+    class='content-wrapper'
+  %}
+  {% end_dnd_area %}
+
+</header>

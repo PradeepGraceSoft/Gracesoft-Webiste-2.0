@@ -1,0 +1,86 @@
+<!--
+  templateType: section
+  label: CTA Banner
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/cta-banner.png
+  description: "CTA Banner section separated in one column."
+-->
+{% dnd_section max_width=1200, class="cta-banner-area", background_color={{ context.background_color || "#f0f4f5" }}, background_image={
+"backgroundPosition": "MIDDLE_CENTER",
+"backgroundSize": "cover",
+"imageUrl": context.background_image || get_asset_url("../images/bg/bg-cta-banner.jpg")
+}, %} 
+
+  {% dnd_column %}
+
+    {% dnd_row %}
+      {% dnd_module path='@hubspot/rich_text' %}         
+        {% module_attribute 'html' %}
+          <div class="section-title cta-title">  
+            <h2>Get Your Quality Skills <span>Certificate</span> <br> Through EduMind</h2>
+          </div> 
+        {% end_module_attribute %}   
+      {% end_dnd_module %}     
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_module "module_166754328158510" path="../modules/Button With Link", label="Button With Link"  
+         button_text = "Get started now ",
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {% dnd_row %}
+      {% dnd_module "module_166754340276912" path="../modules/Shape Image", label="Shape Image" 
+         shape_image_item = [
+          {
+            'show_image_or_circle' : 'image',
+            'shape_image_number_class' : 'cta-banner-shape-1',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/cta/cta-banner-shape-1.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image',
+            'shape_image_number_class' : 'cta-banner-shape-2',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '3',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/cta/cta-banner-shape-2.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image',
+            'shape_image_number_class' : 'cta-banner-shape-3',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '2',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/cta/cta-banner-shape-3.png') 
+            }
+          },
+          {
+            'show_image_or_circle' : 'image',
+            'shape_image_number_class' : 'cta-banner-shape-4',
+            'image_move_animation' : 'moving_parallax',
+            'animation_depth' : '3',
+            'shape_image' : { 
+              'alt': 'Shape Image One',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/cta/cta-banner-shape-4.png') 
+            }
+          }
+        ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+{% end_dnd_section %}

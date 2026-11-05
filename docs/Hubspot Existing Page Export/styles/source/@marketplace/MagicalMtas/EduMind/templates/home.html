@@ -1,0 +1,80 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/template-previews/home.jpg
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  {% dnd_area "dnd_area"
+    label="Main section",
+    class="body-container body-container--home p-0" 
+  %}
+
+  {# Hero Banner Section Start #} 
+  {% include_dnd_partial path='../sections/hero-banner.html' %}
+  {# Hero Banner Section End #}  
+  
+  {# Categorie Section Start #} 
+  {% include_dnd_partial path='../sections/categorie.html' %}
+  {# Categorie Section End #}  
+
+  {# Course Section Start #} 
+  {% include_dnd_partial path='../sections/course.html' %}
+  {# Course Section End #} 
+  
+  {# Brand Logo Section Start #} 
+  {% include_dnd_partial path='../sections/brand-logo.html' %}
+  {# Brand Logo Section End #}  
+  
+  {# Instructor Section Start #} 
+  {% include_dnd_partial path='../sections/instructor.html' %}
+  {# Instructor Section End #}  
+
+  {# Funfact Section Start #} 
+  {% include_dnd_partial path='../sections/funfact.html' %}
+  {# Funfact Section End #}  
+
+  {# CTA Box Section Start #} 
+  {% include_dnd_partial path='../sections/faq.html' %}
+  {# CTA Box Section End #}
+
+  {# Event Section Start #} 
+  {% include_dnd_partial path='../sections/event.html' %}
+  {# Event Section End #}
+
+  {# Blog Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16681644895877" path="../modules/Blog", label="Blog"
+    blog_layout = 'with-title',
+    section_class = '',
+    section_subtitle = '<span>Latest Articles</span>',
+    section_title = '<h2>Get News with EduBlink</h2>',
+    section_shape = { 
+              'alt': 'Section Shape Image',     
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/svg/section-title-shape.svg')  
+            }
+    
+
+
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Blog Section End #}
+
+  {# CTA Box Section Start #} 
+  {% include_dnd_partial path='../sections/cta-box.html' %}
+  {# CTA Box Section End #}
+
+  
+
+  {# CTA Banner Section Start #} 
+  {% include_dnd_partial path='../sections/cta-banner.html' %}
+  {# CTA Banner Section End #}
+
+
+  
+  {% end_dnd_area %} 
+{% endblock body %}

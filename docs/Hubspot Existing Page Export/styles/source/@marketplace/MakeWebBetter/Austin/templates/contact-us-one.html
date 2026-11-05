@@ -1,0 +1,225 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Contact Us One
+screenshotPath: ../images/template-previews/contact-one.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section',
+  class='body-container body-container--contact-us-one'
+%}
+
+{#  Banner Section #}
+{% dnd_section 
+  vertical_alignment='MIDDLE',
+  full_width=true,
+  padding={
+    'default': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    },
+    'mobile': {
+      'top': 0,
+      'right': 0,
+      'bottom': 0,
+      'left': 0
+    }
+  }
+%}
+{% dnd_column 
+  padding={
+        'default': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+     }
+%}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/banner-layouts',  
+      'subtitle'="",
+      'content'="<h1>We Know Better. We Do Better</h1>
+      <p>Aptera is the best web design company focused on providing innovative solutions such as- web design & development, apps, video animation, logo design, branding for startups as well as large enterprises.</p>",
+       primary_cta={ type: 'none' },
+       secondary_cta={ type: 'none' },
+       style_1={
+       'max_width': {enable: true, value: 500},
+        'spacing': {
+              'desktop': {
+                'spacing': {
+                    'padding': {
+                        'top': {
+                          'value': 40,
+                          'units': 'px'
+                        },
+                        'bottom': {
+                          'value': 80,
+                          'units': 'px'
+                        },
+                        'left': {
+                          'value': 20,
+                          'units': 'px'
+                        },
+                        'right': {
+                          'value': 20,
+                          'units': 'px'
+                        }
+                      }
+                  }
+               }
+           }
+      }    
+%}
+{% module_attribute 'banner_layouts_choice' is_json=True %}
+    {
+    "banner_layouts": "banner_with_form"
+    }
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{#  End of Banner Section #}
+
+{# Card Seciton #}
+{% dnd_section 
+     max_width=850,
+     padding={
+        'default': {
+          'top': 80,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        },
+        'mobile': {
+          'top': 40,
+          'right': 20,
+          'bottom': 20,
+          'left': 20
+        }
+    }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/title-content', 
+     "subtitle"="",
+     "content"="<h2>Our Offices</h2><p>We are growing fastly. We are located at more than 45 US locations- and fifty more around the world.</p>"
+     style_1={
+         "alignment_choice" : {
+         "desktop" : {
+         "alignment_choice" : "center"
+         },
+         },
+          'max_width':{ enable: true,value: 760 }
+        }
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% dnd_row 
+    horizontal_alignment='CENTER', 
+    padding= {
+      'default': {
+          'top': 65,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        },
+        'mobile': {
+          'top': 40,
+          'right': 0,
+          'bottom': 0,
+          'left': 0
+        }
+    }
+%}
+{% dnd_module 
+    path='../modules/card',
+     card=[{
+      "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/office.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Head-Office",
+        "enable_content": True,
+        "description": "1600 Pennsylvania Avenue NW Washington, D.C.",
+        },{
+        "enable_number": False,
+        "enable_icon_or_image": True,
+        "image_or_icon_setting": {
+        "icon_or_image": "image",
+        "image":{
+          "src": get_asset_url('../images/icons/location-with-bg.svg'),
+          "alt": "social"
+        }
+        },
+        "enable_heading": True,
+        "heading": "Branch",
+        "enable_content": True,
+        "description": "1600 Pennsylvania Avenue NW Washington, D.C.",
+     }]
+%}
+{% module_attribute 'card_layouts' is_json=True %}
+{
+      "layouts": "card"
+}
+{% end_module_attribute %}
+{% module_attribute 'card_column' is_json=True %}
+{
+"column_choice": "two_column"
+}
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{#  End of Card Section #}
+
+{# Map Section #}
+{% dnd_section 
+   padding={
+        'default': {
+          'top': 0,
+          'right': 20,
+          'bottom': 80,
+          'left': 20
+        },
+        'mobile': {
+          'top': 0,
+          'right': 20,
+          'bottom': 40,
+          'left': 20
+        }
+      }
+%}
+{% dnd_column %}
+{% dnd_row %}
+{% dnd_module 
+    path='../modules/map',
+%}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+{# End of Map Section #}
+{% end_dnd_area %}
+{% endblock body %}

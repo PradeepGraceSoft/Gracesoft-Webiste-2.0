@@ -1,0 +1,298 @@
+<!--
+  templateType: global_partial
+  label: Footer 10
+-->
+
+{# Color scheme #}
+{% if theme.components.footer.scheme == 'dark' %}
+  {% set footer_color_scheme = 'dark' %}
+  {% set footer_form_color_scheme = 'form--dark txt--dark' %}
+{% else %}
+  {% set footer_color_scheme = 'light' %}
+  {% set footer_form_color_scheme = 'form--light txt--light' %}
+{% endif %}
+
+{% dnd_area 'above_footer', label='Above footer', class='above-footer' %}{% end_dnd_area %}
+
+<div class="footer footer--10 hs-search-hidden">
+  <div class="footer__section footer__section--main section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s3 md-s6">
+          <div class="footer__about">
+            {% module 'footer_about' path='../modules/rich-text' label='About'
+              text='<p>Create your beautiful and powerful HubSpot website.</p>'
+              settings={
+                'color_scheme': footer_color_scheme
+              }
+              size='small'
+              wrapper={
+                'max_width': {
+                  'lg': '270'
+                }
+              }
+            %}
+          </div>
+          <div class="footer__icons">
+            {% module 'footer_icons' path='../modules/icon' label='Icons'
+              icon=[
+                {
+                  'internal_name': 'X (Twitter)',
+                  'type': 'code',
+                  'code': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>',
+                  'color': 'accent',
+                  'link': {
+                    'url': {
+                      'href': 'https://x.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'internal_name': 'Slack',
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'Slack Logo',
+                    'unicode': 'f198',
+                    'type': 'REGULAR',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent',
+                  'link': {
+                    'url': {
+                      'href': 'https://youtube.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'internal_name': 'GitHub',
+                  'type': 'icon',
+                  'icon': {
+                    'name': 'github',
+                    'unicode': 'f09b',
+                    'type': 'REGULAR',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'color': 'accent',
+                  'link': {
+                    'url': {
+                      'href': 'https://github.com/'
+                    },
+                    'open_in_new_tab': true
+                  }
+                }
+              ]
+              settings={
+                'shape': 'none',
+                'fill': 'fill',
+                'size': 'large',
+                'space': 30
+              },
+              wrapper={
+                'margin': {
+                  'bottom': {
+                    'lg': '30'
+                  }
+                }
+              }
+            %}
+          </div>
+        </div>
+        <div class="col s2 md-s6">
+          <div class="footer__nav">
+            {% module 'footer_nav' path='../modules/rich-text' label='Navigation'
+              text='
+                <ul>
+                  <li><a href="#">Website</a></li>
+                  <li><a href="#">Conversion</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Email</a></li>
+                  <li><a href="#">Help</a></li>
+                </ul>
+              '
+              settings={
+                'color_scheme': footer_color_scheme
+              }
+            %}
+          </div>
+        </div>
+        <div class="col s3 md-s6">
+          <div class="footer__contact">
+            {% module 'footer_contact' path='../modules/properties' label='Contact'
+              items=[
+                {
+                  'text': '25 Growth Street, Inbound City, MA 02123, United States',
+                  'icon': {
+                    'internal_name': 'Address',
+                    'type': 'icon',
+                    'icon': {
+                      'name': 'Alternate Map Marker',
+                      'unicode': 'f3c5',
+                      'type': 'SOLID',
+                      'icon_set': 'fontawesome-5.14.0'
+                    },
+                    'color': 'accent'
+                  },
+                  'link': {
+                    'url': {
+                      'href': 'https://g.page/hubspot-cambridge-25-first?share'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'text': '+212-800-1234',
+                  'icon': {
+                    'internal_name': 'Phone',
+                    'type': 'icon',
+                    'icon': {
+                      'name': 'Alternate Phone',
+                      'unicode': 'f879',
+                      'type': 'SOLID',
+                      'icon_set': 'fontawesome-5.14.0'
+                    },
+                    'color': 'accent'
+                  },
+                  'link': {
+                    'url': {
+                      'href': 'tel:+212-800-1234'
+                    },
+                    'open_in_new_tab': true
+                  }
+                },
+                {
+                  'text': 'info@yourcompany.com',
+                  'icon': {
+                    'internal_name': 'Email',
+                    'type': 'icon',
+                    'icon': {
+                      'name': 'Envelope',
+                      'unicode': 'f0e0',
+                      'type': 'SOLID',
+                      'icon_set': 'fontawesome-5.14.0'
+                    },
+                    'color': 'accent'
+                  },
+                  'link': {
+                    'url': {
+                      'type': 'EMAIL_ADDRESS',
+                      'href': 'info@yourcompany.com'
+                    },
+                    'open_in_new_tab': true
+                  }
+                }
+              ]
+              settings={
+                'color_scheme': footer_color_scheme,
+                'icons': {
+                  'shape': 'none'
+                }
+              }
+              wrapper={
+                'max_width': {
+                  'lg': '270'
+                }
+              }
+            %}
+          </div>
+        </div>
+        <div class="col s4 md-s6">
+          <div class="footer__form-title">
+            {% module 'footer_form_title' path='../modules/rich-text' label='Form intro'
+              text='<p>Get notified about special offers, updates and upcoming events.</p>'
+              settings={
+                'color_scheme': footer_color_scheme,
+                'text_size': 'small'
+              }
+              wrapper={
+                'max_width': {
+                  'lg': '270'
+                }
+              }
+            %}
+          </div>
+          <div class="footer__form">
+            {% module 'footer_form' path='../modules/form' label='Form'
+              form_title='',
+              one_field_form=false,
+              form={
+                'form_id': ''
+              },
+              settings={
+                'form_title_tag': 'h4'
+              },
+              wrapper={
+                'max_width': {
+                  'lg': '370'
+                }
+              }
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__section footer__section--bottom section">
+    <div class="footer__center container">
+      <div class="row">
+        <div class="col s12">
+          <div class="footer__lang-and-links-and-copyright">
+            <div class="flex flex-row items-center justify-between md-flex-col md-items-stretch">
+              <div class="footer__lang">
+                {% module 'footer_lang' path='../modules/lang-select' label='Language selector' 
+                  lang_label='full' 
+                  show_icon='true' 
+                  color_scheme={{ footer_color_scheme }}
+                  wrapper={
+                    'margin': {
+                      'bottom': {
+                        'md': '20'
+                      }
+                    }
+                  }
+                %}
+              </div>
+              <div class="footer__links-and-copyright">
+                <div class="flex flex-row items-center justify-end md-justify-between  sm-flex-col sm-items-stretch sm-justify-start">
+                  <div class="footer__links">
+                    {% module 'footer_links' path='../modules/rich-text' label='Links'
+                      text='
+                        <ul>
+                          <li><a href="#">Terms</a></li>
+                          <li><a href="#">Privacy</a></li>
+                          <li><a href="#">Sitemap</a></li>
+                        </ul>
+                      '
+                      settings={
+                        'color_scheme': footer_color_scheme,
+                        'text_size': 'small'
+                      }
+                      wrapper={
+                        'margin': {
+                          'bottom': {
+                            'sm': '20'
+                          }
+                        }
+                      }
+                    %}
+                  </div>
+                  <div class="footer__copyright">
+                    {% module 'footer_copyright' path='../modules/rich-text' label='Copyright'
+                      text='Copyright © {{ year }} Company, Inc.'
+                      settings={
+                        'color_scheme': footer_color_scheme,
+                        'text_size': 'small'
+                      }
+                    %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ require_css(get_asset_url('../css/components/footer-10.css')) }}

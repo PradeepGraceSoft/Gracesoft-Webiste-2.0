@@ -1,0 +1,45 @@
+[
+  {
+    "name": "colors",
+    "label": "Design colors",
+    "type": "group",
+    "children": [
+      {
+        "name": "midnight",
+        "label": "Midnight background",
+        "type": "color",
+        "default": {
+          "color": "#071D29",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "teal",
+        "label": "Primary accent",
+        "type": "color",
+        "default": {
+          "color": "#73E0CB",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "ink",
+        "label": "Light-section text",
+        "type": "color",
+        "default": {
+          "color": "#132D38",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "paper",
+        "label": "Light surface",
+        "type": "color",
+        "default": {
+          "color": "#F5F5EF",
+          "opacity": 100
+        }
+      }
+    ]
+  }
+]

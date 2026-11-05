@@ -1,0 +1,103 @@
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    translate: 0 40px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes revealDown {
+  from {
+    opacity: 0;
+    translate: 0 -40px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    translate: 40px 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    translate: -40px 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes revealZoom {
+  from {
+    opacity: 0;
+    scale: .9;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal--done {
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.reveal--done:not([class^="reveal--animation-"]) {
+  animation-name: reveal;
+}
+
+.reveal--zoom.reveal--done {
+  animation-name: revealZoom;
+}
+
+.reveal--up.reveal--done {
+  animation-name: revealUp;
+}
+
+.reveal--down.reveal--done {
+  animation-name: revealDown;
+}
+
+.reveal--left.reveal--done {
+  animation-name: revealLeft;
+}
+
+.reveal--right.reveal--done {
+  animation-name: revealRight;
+}
+
+.hs-inline-edit .reveal {
+  opacity: 1;
+  visibility: visible;
+  animation: none;
+}

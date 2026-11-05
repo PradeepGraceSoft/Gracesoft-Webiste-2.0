@@ -1,0 +1,145 @@
+<!--
+templateType: blog_post
+isAvailableForNewContent: true
+label: Blog Post
+screenshotPath: ../images/template-previews/blog-post.png
+-->
+{% set template_css = '../../css/templates/blog.css' %}
+
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  <div class="body-container body-container--blog-post">
+
+    {# Blog Post Hero Case Study #}
+    {% module "kz_blog_post_hero" path='../modules/kz-blog-post-hero', label="Blog Post Hero" %} 
+    
+    {# Blog post #}
+    <div class="content-wrapper">
+      <article class="blog-post">
+        <div class="blog-post__body">
+          {{ content.post_body }}
+        </div>
+      </article>
+
+      {% if group.allow_comments %}
+      <div class="blog-comments">
+        {% module 'blog_comments'
+		      path='@hubspot/blog_comments',
+		      label="Blog comments"
+	      %}
+      </div>
+      {% endif %}
+    </div>
+    {# End blog post #}
+
+    {# Blog post related posts #}
+    {% module "kz_related_blog_items" path='../modules/kz-related-post' label="Related Blog Posts" %}
+
+    {# Blog Post CTA #}
+    {% module "kz_blog_post_cta" path='../modules/kz-blog-post-cta', label="Blog Post CTA"
+      tag_line="",
+      heading_text="Create your account today!",
+      rich_text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>",
+      button={
+        "button_text": "JOIN NOW",
+          "button_link": {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+          "href" : "https://484997.hs-sites.com/krazy/contact",
+          "type" : "EXTERNAL"
+          }
+        }
+      },
+      styles={
+        "button": {
+          "button_outline": true
+        },
+        "cta_wrapper": {
+          "cta_wrap_background_color": {
+            "color": "#fff",
+            "opacity": 100
+          },
+          "cta_wrap_max_width": 1920,
+          "cta_wrap_corner_radius": 6
+        },
+        "section": {
+          "section_background_type": "gradient",
+          "section_background_gradient": {
+            "colors": [
+             {
+              "color": {
+               "r": 1,
+               "g": 68,
+               "b": 228,
+               "a": 1
+              }
+             },
+             {
+              "color": {
+               "r": 1,
+               "g": 68,
+               "b": 228,
+               "a": 1
+              }
+             }
+            ]
+          }
+        }
+      }
+    %}
+    {# Blog Post Subscribe Form #}
+    {% module "kz_blog_post_subscribe_form" path="../modules/kz-blog-post-subscribe-form", label="Blog Post Subscribe Form",
+        tag_line="",
+		    heading_text="Subscribe to receive articles directly in your inbox",
+        styles={
+          "section" : {
+            "section_background_type" : "",
+            "section_show_hide" : true,
+            "section_spacing" : {
+              "desktop" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 60
+                  },
+                  "left" : { },
+                  "right" : { },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 60
+                  }
+                }
+              },
+              "mobile" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 20
+                  },
+                  "left" : { },
+                  "right" : { },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 20
+                  }
+                }
+              }
+            }
+          },
+          "subscribe_form_wrapper" : {
+            "subscribe_form_wrap_background_color" : {
+              "color" : "#f7f8fa",
+              "opacity" : 100
+            },
+            "subscribe_form_wrap_max_width" : 1920,
+            "subscribe_form_wrapper_corner_radius" : 6
+          }
+        }
+      %}
+  </div>
+</main>
+{% endblock body %}

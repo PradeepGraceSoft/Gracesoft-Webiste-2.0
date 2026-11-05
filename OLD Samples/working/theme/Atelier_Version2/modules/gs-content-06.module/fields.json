@@ -1,0 +1,182 @@
+[
+  {
+    "name": "text_1",
+    "label": "Directory heading",
+    "type": "text",
+    "default": "What kind of property do you manage?"
+  },
+  {
+    "name": "link_2",
+    "label": "Hotels and Motels",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/hotel-management-software"
+    }
+  },
+  {
+    "name": "link_2_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Hotels and Motels"
+  },
+  {
+    "name": "link_3",
+    "label": "Bed & Breakfasts",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/bed-breakfast-reservation-software"
+    }
+  },
+  {
+    "name": "link_3_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Bed & Breakfasts"
+  },
+  {
+    "name": "link_4",
+    "label": "Resorts and Inns",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/bed-breakfast-reservation-software"
+    }
+  },
+  {
+    "name": "link_4_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Resorts and Inns"
+  },
+  {
+    "name": "link_5",
+    "label": "Vacation Rentals",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/vacation-rental-management-software"
+    }
+  },
+  {
+    "name": "link_5_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Vacation Rentals"
+  },
+  {
+    "name": "link_6",
+    "label": "Campgrounds and RV Parks",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/campground-management-software"
+    }
+  },
+  {
+    "name": "link_6_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Campgrounds and RV Parks"
+  },
+  {
+    "name": "link_7",
+    "label": "Dude Ranches",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/dude-rancher-software"
+    }
+  },
+  {
+    "name": "link_7_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Dude Ranches"
+  },
+  {
+    "name": "link_8",
+    "label": "Condos",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/condo-management-software"
+    }
+  },
+  {
+    "name": "link_8_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Condos"
+  },
+  {
+    "name": "link_9",
+    "label": "Multi-Property Groups",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "https://www.gracesoft.com/multi-property"
+    }
+  },
+  {
+    "name": "link_9_label",
+    "label": "Link label",
+    "type": "text",
+    "default": "Multi-Property Groups"
+  },
+  {
+    "name": "intro",
+    "label": "Supporting line",
+    "type": "text",
+    "default": "Choose your property type to explore the tools that fit your day."
+  },
+  {
+    "name": "link_2_description",
+    "label": "Card description 1",
+    "type": "text",
+    "default": "Coordinate room assignments, arrivals and departures."
+  },
+  {
+    "name": "link_3_description",
+    "label": "Card description 2",
+    "type": "text",
+    "default": "Keep room availability and guest details close at hand."
+  },
+  {
+    "name": "link_4_description",
+    "label": "Card description 3",
+    "type": "text",
+    "default": "Connect guest stays with front desk and on-property services."
+  },
+  {
+    "name": "link_5_description",
+    "label": "Card description 4",
+    "type": "text",
+    "default": "Track bookings and availability across rental units."
+  },
+  {
+    "name": "link_6_description",
+    "label": "Card description 5",
+    "type": "text",
+    "default": "Explore reservations for sites and overnight stays."
+  },
+  {
+    "name": "link_7_description",
+    "label": "Card description 6",
+    "type": "text",
+    "default": "Explore reservation workflows for ranch stays."
+  },
+  {
+    "name": "link_8_description",
+    "label": "Card description 7",
+    "type": "text",
+    "default": "Find availability and reservations by condo unit."
+  },
+  {
+    "name": "link_9_description",
+    "label": "Card description 8",
+    "type": "text",
+    "default": "Explore tools for teams responsible for several properties."
+  }
+]

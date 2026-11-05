@@ -1,0 +1,213 @@
+{% import "../_variables.css" as var %}
+
+/* Base */
+
+.content-card {
+  height: 100%;
+  position: relative;
+  box-shadow: {{ var.medium_shadow }};
+  border-radius: {{ var.radius_7 }};
+  padding-bottom: .56rem;/* #1 */
+  margin-bottom: {{ var.gutter }}px;
+  transition: .2s ease-in-out;
+}
+
+.content-card--no-img-just-icon {
+  margin-top: 1.82rem; /* half the icon--large size */
+}
+
+.content-card--extra-bottom-space {
+  padding-bottom: calc(.56rem + 1.82rem / 2); /* #1 + #2 / 2 */
+}
+
+.content-card--with-link:hover,
+.content-card--collapse-desc:hover {
+  box-shadow: {{ var.large_shadow }};
+  transform: scale(1.02);
+}
+
+.content-card__header a,
+.content-card__body a {
+  position: relative;
+  z-index: 2;
+}
+
+/* Link */
+
+.content-card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Image */
+
+.content-card__img {
+  overflow: hidden;
+  border-radius: {{ var.radius_7 }} {{ var.radius_7 }} 0 0;
+}
+
+.content-card__img img {
+  width: 100%;
+  transition: .2s ease-in-out;
+}
+
+.content-card--with-link:hover .content-card__img img,
+.content-card--collapse-desc:hover .content-card__img img {
+  transform: scale(1.1);
+}
+
+/* Safari corners fix on hover */
+
+.content-card__img,
+.content-card__icon {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* Icon */
+
+.content-card__icon {
+  padding: 0 {{ var.gutter / 2 }}px;
+  margin-top: -1.82rem; /* half the icon--large size */ /* #2 */
+  transition: .2s ease-in-out;
+}
+
+.content-card--with-link:hover .content-card__icon,
+.content-card--collapse-desc:hover .content-card__icon {
+  transform: translateY(-.56rem);
+}
+
+/* Header */
+
+.content-card__header {
+  padding: {{ var.gutter }}px;
+}
+
+.content-card--no-title-space .content-card__header {
+  padding-bottom: 0;
+}
+
+/* Label */
+
+.content-card__label {
+  margin-bottom: .56rem;
+  color: {{ var.accent }};
+  text-decoration: none;
+  font-family: {{ var.ui_font_family }};
+  font-style: {{ var.ui_font_style }};
+  font-weight: {{ var.ui_font_weight }};
+  font-size: .67rem;
+  line-height: 1rem;
+  letter-spacing: .067rem;
+  text-transform: uppercase;
+}
+
+/* Title */
+
+.content-card__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-card--collapse-desc .content-card__title {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.content-card__title-tag {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.content-card__chevron {
+  flex-shrink: 0;
+  margin: 0;
+  margin-inline-start: {{ var.gutter }}px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.content-card__chevron:not(:focus-visible) {
+  outline: none;
+}
+
+.content-card__header:hover .content-card__chevron {
+  transform: scale(1.15, 1.15);
+}
+
+.content-card__chevron__up,
+.content-card__chevron__down {
+  display: block;
+}
+
+.content-card__chevron__up,
+.content-card--expanded .content-card__chevron__down {
+  display: none;
+}
+
+.content-card--expanded .content-card__chevron__up {
+  display: block;
+}
+
+/* Date */
+
+.content-card__date {
+  margin-top: {{ var.gutter }}px;
+  margin-bottom: 0;
+}
+
+.content-card--no-title-space .content-card__date {
+  margin-top: 0;
+  margin-bottom: {{ var.gutter }}px;
+}
+
+.content-card__body {
+  padding: {{ var.gutter }}px;
+  padding-top: 0;
+}
+
+.content-card--collapse-desc .content-card__body {
+  display: none;
+}
+
+.content-card--expanded .content-card__body {
+  display: block;
+  animation: .2s ease-in-out uiPop;
+}
+
+.content-card__desc > *:last-child {
+  margin-bottom: 0;
+}
+
+.content-card__desc + .content-card__btn {
+  margin-top: {{ var.gutter }}px;
+}
+
+/* Light scheme */
+
+.content-card--light {
+  background: {{ var.white }};
+}
+
+.content-card--light .content-card__chevron {
+  color: {{ var.dark }};
+}
+
+/* Dark scheme */
+
+.content-card--dark {
+  background: {{ var.dark }};
+}
+
+.content-card--dark .content-card__chevron {
+  color: {{ var.white }};
+}

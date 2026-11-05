@@ -1,0 +1,10 @@
+<!-- templateType: none -->
+<!doctype html>
+<html lang="{{ html_lang }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page_meta.html_title or pageTitle %}<title>{{ (page_meta.html_title or pageTitle)|escape_html }}</title>{% endif %}
+{% if page_meta.meta_description %}<meta name="description" content="{{ page_meta.meta_description|escape_attr }}">{% endif %}
+{{ standard_header_includes }}
+{{ require_css(get_asset_url('../../css/design.css')) }}
+{{ require_css(get_asset_url('../../css/tokens.css')) }}
+{{ require_js(get_asset_url('../../js/site.js'), 'footer') }}
+</head><body>{% block body %}{% endblock body %}{{ standard_footer_includes }}</body></html>

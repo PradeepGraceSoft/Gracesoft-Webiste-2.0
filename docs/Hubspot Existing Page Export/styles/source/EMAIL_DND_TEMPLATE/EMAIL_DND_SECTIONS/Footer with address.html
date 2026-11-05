@@ -1,0 +1,27 @@
+<!--
+  templateType: section
+  isAvailableForNewContent: true
+  isGeneratedDndTemplate: true
+  -->
+{% dnd_section padding={
+  "top":"30",
+  "bottom":"30"
+  }, full_width=True, background_color="#17242A" %}
+  {% dnd_column width=6 %}
+    {% dnd_module path="@hubspot/follow_me_email", scale=29, lineNumber=11, hs_enable_module_padding=True, startPosition=-299, hs_wrapper_css={
+      "padding-bottom":"10px",
+      "padding-left":"20px",
+      "padding-right":"20px",
+      "padding-top":"10px"
+      } %}
+      {% module_attribute "social" is_json=True %}[{"network":"linkedin","url":"https://www.linkedin.com/company/gracesoft/"},{"network":"twitter","url":"https://twitter.com/gracesoftinc"},{"network":"facebook","url":"https://www.facebook.com/GraceSoft"},{"network":"whatsapp","url":"https://api.whatsapp.com/send?phone=917200423323"},{"network":"instagram","url":"https://www.instagram.com/gracesoftinc/"},{"network":"youtube","url":"https://www.youtube.com/user/gracesoft1"},{"network":"pinterest","url":"https://www.pinterest.com/gracesoft/"}]{% end_module_attribute %}
+      {% module_attribute "font_style" is_json=True %}{"color":"#FFFFFF","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":14},"styles":{}}{% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+  {% dnd_column width=6 %}
+    {% dnd_module schema_version=2, css_class="dnd-module", path="@hubspot/email_footer", align="right", lineNumber=177, hs_enable_module_padding=False, startPosition=19, unsubscribe_link_type="both" %}
+      {% module_attribute "link_font" is_json=True %}{"color":"#00a4bd","font":"Helvetica,Arial,sans-serif","size":{"units":"px","value":12},"styles":{"bold":false,"italic":false,"underline":true}}{% end_module_attribute %}
+      {% module_attribute "font" is_json=True %}{"color":"#FFFFFF","font":"Merriweather,Georgia,sans-serif","size":{"value":13,"units":"px"},"font_set":"DEFAULT"}{% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

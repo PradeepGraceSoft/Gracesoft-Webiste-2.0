@@ -1,0 +1,2231 @@
+<!doctype html>
+<html lang="en" class="no-js ">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Voice AI | Chat AI</title> 
+  <link rel="shortcut icon" href="https://www.gracesoft.com/hubfs/anew/Images/g-logo.ico"> 
+  <meta name="description" content="Manage multiple properties with one cloud PMS. Centralize reservations, reporting, and guest data with GraceSoft Easy InnKeeping multi-property management software."> 
+  <script>
+			var act = {};
+      act.xs = 479;
+      act.sm = 767;
+      act.md = 1139;
+			act.scroll_offset = {
+				sm: 66,
+				md: 66,
+				lg: 66,
+				get: function() {
+					if(window.matchMedia('(max-width: 767px)').matches) return act.scroll_offset.sm;
+					if(window.matchMedia('(min-width: 1140px)').matches) return act.scroll_offset.lg;
+					return act.scroll_offset.md;
+				},
+				set: function(sm, md, lg){
+					act.scroll_offset.sm = sm;
+					act.scroll_offset.md = md;
+					act.scroll_offset.lg = lg;
+				}
+			};
+		</script> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta property="og:description" content="Manage multiple properties with one cloud PMS. Centralize reservations, reporting, and guest data with GraceSoft Easy InnKeeping multi-property management software."> 
+  <meta property="og:title" content="Voice AI | Chat AI"> 
+  <meta name="twitter:description" content="Manage multiple properties with one cloud PMS. Centralize reservations, reporting, and guest data with GraceSoft Easy InnKeeping multi-property management software."> 
+  <meta name="twitter:title" content="Voice AI | Chat AI"> 
+  <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716780/1792753253417/template_main.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716654/1792753255303/template_nav.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716739/1792753267875/template_site-search.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640267/1792753268910/template_lang-select.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716777/1792753264121/template_mobile-nav.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085657879/1792753257255/template_header-01.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085657884/1792753268021/template_section-extra-settings.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640246/1792753255300/template_rich-text.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640274/1792753260229/template_section-intro.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716635/1792753255730/template_feature-card.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640256/1792753255331/template_quick-features.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085657776/1792753261863/template_accordion.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/module_assets/1/186085716874/1748237113551/module_icon.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716636/1792753265304/template_column-navigation.min.css"> 
+  <link rel="stylesheet" href="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085657761/1792753254994/template_footer-03.min.css"> 
+  <style>
+  @font-face {
+    font-family: "Jost";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("/_hcms/googlefonts/Jost/700.woff2") format("woff2"), url("/_hcms/googlefonts/Jost/700.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Jost";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("/_hcms/googlefonts/Jost/500.woff2") format("woff2"), url("/_hcms/googlefonts/Jost/500.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Jost";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("/_hcms/googlefonts/Jost/regular.woff2") format("woff2"), url("/_hcms/googlefonts/Jost/regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Jost";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("/_hcms/googlefonts/Jost/600.woff2") format("woff2"), url("/_hcms/googlefonts/Jost/600.woff") format("woff");
+  }
+</style> 
+  <!-- Editor Styles --> 
+  <style id="hs_editor_style" type="text/css">
+.content_bucket-row-0-force-full-width-section > .row-fluid {
+  max-width: none !important;
+}
+.content_bucket-row-1-max-width-section-centering > .row-fluid {
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* HubSpot Non-stacked Media Query Styles */
+@media (min-width:768px) {
+  .content_bucket-row-2-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_17812945166162-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_17812945166162-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1781294534783-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1781294534783-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+}
+/* HubSpot Styles (default) */
+.content_bucket-row-0-padding {
+  padding-top: 160px !important;
+  padding-bottom: 20px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.content_bucket-row-1-padding {
+  padding-top: 60px !important;
+  padding-bottom: 20px !important;
+}
+.content_bucket-row-2-padding {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.content_bucket-row-3-padding {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+.content_bucket-row-4-padding {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+.cell_17459362987643-row-1-padding {
+  padding-bottom: 72px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+/* HubSpot Styles (mobile) */
+@media (max-width: 767px) {
+  .cell_17459362987643-row-1-padding {
+    padding-bottom: 48px !important;
+  }
+}
+</style> 
+  <link rel="canonical" href="../../../com/gracesoft/www/voiceai-chatai.html"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="msvalidate.01" content="4D9072709FE4907393BE9588424B44C3"> 
+  <meta name="google-site-verification" content="aqDUL1PQIvgzgkYTVkckfypeaMjXXl4yC6Z8NB05PEw"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet"> 
+  <style>
+html{
+    overflow-x: hidden;
+}
+   h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+ h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+   h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+    .h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1f2937;
+  }
+  p{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #4b5563;
+  }
+  li{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+.btn{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px !important;
+    font-weight: 500;
+}
+  .ui-label {
+    color: #4b5563;
+    font-style: normal;
+    line-height: 1.28;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+  .badge--large{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+  .section-intro__overline{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px; 
+    font-weight: 500;
+}
+  .review__quote {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #4b5563;
+}
+  .accordion__title--default {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+  .nav__link {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2937;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+}
+  .featshow__btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+  .comptab__box .comptab__box--text{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+strong{
+font-family: 'Inter', sans-serif !important;
+}  
+  .strong{
+font-family: 'Inter', sans-serif !important;
+}  
+  .pricing__price{
+color: #1f2937;
+font-family: 'Poppins', sans-serif !important;
+}
+.pricing__info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px !important;
+}
+.pricing__feature__text{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
+}
+
+div:has(> header) {
+   position: sticky !important;
+   top: 0px !important;
+   z-index: 1000 !important;
+}
+  .kl-navbar__button {
+    color: #4e598c;
+    display: inline-block;
+    font-family: Inter, sans-serif !important;
+    font-size: 12px;
+    font-weight: 700 !important;
+    line-height: 2em;
+    word-break: normal;
+}
+    .kl-footer__byline{
+  display: none !important;
+  }
+.kl-footer__content {
+    padding: 60px 0 120px 0;
+}
+.floating-left-buttons {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.floating-left-buttons.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hide checkbox */
+.contact-toggle {
+    display: none;
+}
+
+/* Desktop */
+.float-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.float-toggle {
+    display: none;
+}
+
+.whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    background: unset;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-btn img {
+    width: 40px;
+}
+
+.float-btn {
+    background: linear-gradient(111.02deg, #f5693f, #f53f71);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px !important;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.float-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .floating-left-buttons {
+        left: 15px;
+        bottom: 20px;
+    }
+
+    .float-toggle {
+        display: flex;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: linear-gradient(111.02deg, #f5693f, #f53f71);
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        border: 0;
+        padding: 0;
+    }
+
+    .float-options {
+        display: none;
+        margin-bottom: 12px;
+        align-items: flex-start;
+    }
+
+    .contact-toggle:checked ~ .float-options {
+        display: flex;
+    }
+
+    .whatsapp-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .whatsapp-btn img {
+        width: 38px;
+    }
+
+    .float-btn {
+        padding: 10px 16px;
+        font-size: 14px !important;
+    }
+}
+</style> 
+  <script>
+  setTimeout(load_js, 10000); // Delay 4 seconds in loading function
+setTimeout(load_jsgtag, 10000); // Delay 4 seconds in loading function
+function load_js()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://www.googletagmanager.com/gtag/js?id=AW-988721745';
+    head_ID.appendChild(script_element);
+}
+function load_jsgtag()
+{
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://www.googletagmanager.com/gtag/js?id=G-QC7JYCD38K';
+    head_ID.appendChild(script_element);
+}
+var delayInMilliseconds = 10000; //1 second
+
+setTimeout(function() {
+  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-988721745'); 
+}, delayInMilliseconds);
+</script> 
+  <!-- Google tag (gtag.js) --> 
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-988721745"></script>  --> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QC7JYCD38K"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-QC7JYCD38K'); </script> 
+  <meta property="og:url" content="https://www.gracesoft.com/voiceai-chatai"> 
+  <script>var hsVars = { app_hs_base_url: 'https://app-na2.hubspot.com' };</script> 
+  <meta name="twitter:card" content="summary"> 
+  <style>
+  .feature-card--accent p{
+color: #fff;
+}
+  .feature-card--17461637366589-2 p{
+color: #fff !important;
+}
+      .module--footer_about p{
+    color: #fff !important;
+  }
+    .module--footer_nav li{
+    color: #fff !important;
+  }
+  .header__search{
+    display: none !important;
+  }
+  .header__section--main {
+    box-shadow: 0 8px 16px rgba(34, 35, 38, .05), 0 4px 8px rgba(34, 35, 38, .05) !important;
+}
+div:has(> header) {
+    position: sticky !important;
+    top: unset !important;
+    z-index: 1000 !important;
+}
+  @media (min-width: 1200px){
+    
+  }
+  
+  @media (min-width: 1400px) {
+  
+  /* CSS */
+    .section-intro__desc-inner h2{
+      font-size: 3rem;
+    }
+            .section-intro__desc-inner p{
+      font-size: 1.2rem !important;
+    }
+  .dnd-section>.row-fluid {
+    margin: 0 auto;
+    max-width: 1400px !important;
+}
+    .container{
+      width: 1400px !important;
+    }
+        #hs_cos_wrapper_module_173947302213615 {
+        margin-left: 55px !important;
+    }
+        #hs-link-static_header_logo_hs_logo_widget img{
+      width: 140px !important;
+    }
+    #hs-link-sticky_header_logo_hs_logo_widget img{
+       width: 130px !important;
+    }
+        .badge--large.badge--lowercase {
+        font-size: 1.2rem !important;
+    }
+        #hs_cos_wrapper_module_174048848616012 {
+        margin-left: 45px !important;
+    }
+        #hs_cos_wrapper_module_174049654042313 {
+        padding: 0px 40px !important;
+    }
+        .cell_17405592865732-row-1-padding {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+        .cell_1740561058358-vertical-alignment {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+        #hs_cos_wrapper_module_1740560015284 {
+        padding-left: 50px !important;
+    }
+        #hs_cos_wrapper_module_1740560173680 {
+        padding-right: 50px !important;
+    }
+        .module--1739481323252 .module__inner {
+        width: 700px !important;
+    }
+        .ui-label {
+        font-size: 1.4rem !important;
+    }
+        .feature-card__body .feature-card__desc {
+        font-size: 1.2rem !important;
+    }
+        .feature-card__body .feature-card__title {
+        font-size: 1.5rem !important;
+    }
+    .module--content_bucket-module-18 .module__inner {
+    width: 700px !important;
+}
+        .compact-card__desc {
+        font-size: 1.2rem !important;
+    }
+        .module--content_bucket-module-14 .module__inner {
+        width: 700px !important;
+    }
+    .nav__link{
+      font-size: 1rem !important;
+    }
+        .btn--medium {
+        font-size: 1.2rem !important;
+    }
+        .btn--large {
+        font-size: 1.2rem !important;
+    }
+    #hs_cos_wrapper_widget_1740656970514 {
+      width: 95% !important;
+    }
+        .module--173947287161713 .module__inner {
+    width: 700px !important;
+}
+    .section-intro__title .display{
+      font-size: 3rem !important;
+    }
+        .section-intro__desc .section-intro__desc-inner {
+        font-size: 1.2rem !important;
+    }
+        #rtext__1739477252519 h6 {
+        font-size: 1.5rem !important;
+    }
+        #rtext__1739477198158 p {
+        font-size: 1.3rem !important;
+    }
+        .accordion__details p {
+        font-size: 1.3rem !important;
+    }
+        .accordion__title-summary .large-text {
+        font-size: 1.3rem !important;
+    }
+}
+  @media (min-width: 1600px) {
+        .section-intro__title .display{
+      font-size: 3rem !important;
+    }
+        #hs_cos_wrapper_widget_1740656970514 {
+      width: 95% !important;
+    }
+    .dnd-section>.row-fluid {
+        margin: 0 auto;
+        max-width: 1700px !important;
+    }
+        .nav__link{
+      font-size: 1rem !important;
+    }
+    .container{
+      width: 1600px !important;
+    }
+    #hs-link-static_header_logo_hs_logo_widget img{
+      width: 150px !important;
+    }
+    #hs-link-sticky_header_logo_hs_logo_widget img{
+       width: 140px !important;
+    }
+    .module--173947302213614 .module__inner {
+    width: 700px !important;
+}
+    .btn--medium {
+    font-size: 1.2rem !important;
+}
+    .section-intro__desc-inner h2{
+      font-size: 2.8rem !important;
+    }
+        .section-intro__desc-inner p{
+      font-size: 1.3rem !important;
+    }
+    #hs_cos_wrapper_module_173947302213615{
+      margin-left: 64px !important;
+    }
+    .btn--large {
+    font-size: 1.2rem !important;
+}
+    .badge--large.badge--lowercase {
+    font-size: 1.2rem !important;
+}
+    .module--174048848616011 .module__inner {
+    width: 700px !important;
+}
+    #hs_cos_wrapper_module_174048848616012{
+      margin-left: 40px !important;
+    }
+    #hs_cos_wrapper_module_174049654042313{
+      padding: 0px 40px !important;
+    }
+    .ui-label {
+    font-size: 1.4rem !important;
+    }
+    .module--content_bucket-module-18 .module__inner {
+    width: 750px !important;
+}
+  .compact-card__desc {
+    font-size: 1.2rem !important;
+}  
+    .module--content_bucket-module-14 .module__inner {
+    width: 700px !important;
+}
+    .cell_17405592865732-row-1-padding {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
+    .cell_1740561058358-vertical-alignment{
+         padding-left: 50px !important;
+    padding-right: 50px !important;
+    }
+    #hs_cos_wrapper_module_1740560015284{
+       padding-left: 50px !important;
+    }
+    #hs_cos_wrapper_module_1740560173680{
+       padding-right: 50px !important;
+    }
+    .module--1739481323252 .module__inner {
+    width: 700px !important;
+}
+    .feature-card__body .feature-card__title {
+      font-size: 1.5rem !important;
+    }
+    .feature-card__body .feature-card__desc {
+      font-size: 1.2rem !important;
+    }
+    .module--173947287161713 .module__inner {
+    width: 700px !important;
+}
+    .section-intro__desc .section-intro__desc-inner{
+         font-size: 1.2rem !important;
+    }
+    .heading .txt--light h2{
+     font-size: 3rem !important; 
+    }
+    #rtext__1739477198158 p{
+      font-size: 1.3rem !important;
+    }
+    #rtext__1739477252519 h6{
+      font-size: 1.5rem !important;
+    }
+    #rtext__footer_about h4{
+         font-size: 1.4rem !important;
+    }
+    .col-nav__title {
+    font-size: 1.4rem !important;
+}
+    .col-nav__link {
+    font-size: 1.1rem !important;
+}
+    #rtext__footer_copyright .small-text {
+    font-size: 1.2rem !important;
+}
+    .accordion__title-summary .large-text {
+    font-size: 1.4rem !important;
+}
+    .accordion__details p{
+          font-size: 1.4rem !important;
+    }
+}
+  .header--sticky-inactive .header__section--main {
+    box-shadow: 0 8px 16px rgba(34, 35, 38, .05), 0 4px 8px rgba(34, 35, 38, .05) !important;
+</style> 
+  <script type="application/ld+json">  
+
+      { 
+
+        "@context": "http://www.schema.org", 
+
+        "@type": "product", 
+
+        "brand": "GraceSoft", 
+
+        "name": "Reviews", 
+
+        "image": "https://www.gracesoft.com/hubfs/GraceSoftLogo.webp", 
+
+        "description": "Streamline hotel bookings with our Easy Innkeeping Hotel Reservation Software. Channel manager, website bookings, payments, reservations, & marketing all together for small to mid-sized properties. Perfect for hotels, vacation rentals, and B&Bs.", 
+
+        "aggregateRating": { 
+
+          "@type": "aggregateRating", 
+
+          "ratingValue": "5", 
+
+          "reviewCount": "28,546" 
+
+                  
+
+        } 
+
+      } 
+
+    </script> 
+  <meta name="generator" content="HubSpot">
+ </head> 
+ <body class="  hs-content-id-356092692206 hs-landing-page hs-page hs-content-path-voiceai-chatai hs-content-name-voice-ai-chat-ai  "> 
+  <div id="top"></div> 
+  <div class="page"> 
+   <div data-global-resource-path="@marketplace/Neambo/Act3/partials/header-01.html"> 
+    <header class="header header--1  header--sticky header--w-search header--wo-lang hs-search-hidden"> 
+     <div class="container-fluid above-header"> 
+      <div class="row-fluid-wrapper"> 
+       <div class="row-fluid"> 
+        <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12"> 
+        </div>
+        <!--end widget-span --> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="header__sticky-wrapper"> 
+      <div class="header__sticky-element"> 
+       <div class="header__section header__section--main section"> 
+        <div class="header__center container"> 
+         <div class="row items-center"> 
+          <div class="col s3 md-s3 sm-s4 justify-center"> 
+           <div class="header__logo">
+            <div class="header__logo__static">
+             <div id="hs_cos_wrapper_static_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+              <span id="hs_cos_wrapper_static_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../../../com/gracesoft/www/index.html" id="hs-link-static_header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=212&amp;height=100&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png" class="hs-image-widget " height="100" style="height: auto;width:212px;border-width:0px;border:0px;" width="212" alt="GraceSoft Easy InnKeeping Logo" title="GraceSoft Easy InnKeeping Logo" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=106&amp;height=50&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 106w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=212&amp;height=100&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 212w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=318&amp;height=150&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 318w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=424&amp;height=200&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 424w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=530&amp;height=250&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 530w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=636&amp;height=300&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 636w" sizes="(max-width: 212px) 100vw, 212px"></a></span> 
+             </div>
+            </div>
+            <div class="header__logo__sticky">
+             <div id="hs_cos_wrapper_sticky_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+              <span id="hs_cos_wrapper_sticky_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../../../com/gracesoft/www/index.html" id="hs-link-sticky_header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=212&amp;height=100&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png" class="hs-image-widget " height="100" style="height: auto;width:212px;border-width:0px;border:0px;" width="212" alt="GraceSoft Easy InnKeeping Logo" title="GraceSoft Easy InnKeeping Logo" loading="lazy" srcset="https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=106&amp;height=50&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 106w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=212&amp;height=100&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 212w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=318&amp;height=150&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 318w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=424&amp;height=200&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 424w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=530&amp;height=250&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 530w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193243.043.png?width=636&amp;height=300&amp;name=Untitled%20design%20-%202025-07-09T193243.043.png 636w" sizes="(max-width: 212px) 100vw, 212px"></a></span> 
+             </div>
+            </div>
+           </div> 
+          </div> 
+          <div class="col s9 md-s9 sm-s8"> 
+           <div class="flex flex-row items-center justify-end no-shrink wrap"> 
+            <div class="header__nav"> 
+             <div id="hs_cos_wrapper_header_nav" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+              <div class="module module--header_nav module--nav module--text-left module--md-text-center module--sm-text-center"> 
+               <div class="module__inner"> 
+                <nav class="nav nav--light nav--on-hover hs-skip-lang-url-rewrite" flyout-delay="0" aria-label="Main menu"> 
+                 <ul class="nav__list nav__list--level1">
+                  <li class="nav__item nav__item--branch"> <a class="nav__link" href="../../../com/gracesoft/www/index.html">Product</a>
+                   <ul class="nav__list nav__list--level2 nav__list--flyout">
+                    <li class="nav__item nav__item--branch"> <a class="nav__link" href="../../../com/gracesoft/www/index.html">Solutions</a>
+                     <ul class="nav__list nav__list--level3 nav__list--flyout">
+                      <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/hotel-management-software">Hotel Management</a></li>
+                      <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/bed-breakfast-reservation-software">Bed &amp; Breakfast</a></li>
+                      <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/vacation-rental-management-software">Vacation Rental</a></li>
+                      <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/dude-rancher-software">Dude Ranch</a></li>
+                      <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/condo-management-software">Condo Management </a></li>
+                      <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/campground-management-software">Campground &amp; RV Park</a></li>
+                     </ul></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/online-booking-engine">Online Booking Engine</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/channel-manager">Channel Manager</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/websites">Websites</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/point-of-sale-system">Point of Sale </a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/crm-software">CRM</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/gracesoft-ai">AI</a></li>
+                   </ul></li>
+                  <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/pricing">Pricing</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/testimonials">Testimonial</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/feature-listing">Features</a></li>
+                  <li class="nav__item nav__item--branch"> <a class="nav__link" href="../../../com/gracesoft/www/index.html">Resources</a>
+                   <ul class="nav__list nav__list--level2 nav__list--flyout">
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/case-study">Case Studies</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/infographics">Infographics</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://support.gracesoft.com/support/home">Support Center</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/blog">Blogs</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/webinar">Webinar</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/pci-compliance">PCI Compliance</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/devices">Devices</a></li>
+                   </ul></li>
+                  <li class="nav__item nav__item--branch"> <a class="nav__link" href="../../../com/gracesoft/www/index.html">About Us</a>
+                   <ul class="nav__list nav__list--level2 nav__list--flyout">
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/about">About Us</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/about/executive-team">Dream Team</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/featured-clients">Featured Clients</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/corporate-contact">Contact Us</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="https://www.gracesoft.com/news-updates">News</a></li>
+                   </ul></li>
+                  <li class="nav__item"> <a class="nav__link" href="https://apps.gracesoft.com/pmsui/">Login</a></li>
+                 </ul> 
+                </nav> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="header__search"> 
+             <div id="hs_cos_wrapper_header_search" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+              <div id="header_search" class="site-search site-search--light txt--light"> 
+               <a href="../../../com/gracesoft/www/index.html" class="site-search__open ui-icon" role="button" aria-label="Open search window"> 
+                <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                 <path d="M20.71 19.29L17.31 15.9C18.407 14.5025 19.0022 12.7767 19 11C19 9.41775 18.5308 7.87103 17.6518 6.55544C16.7727 5.23984 15.5233 4.21446 14.0615 3.60896C12.5997 3.00346 10.9911 2.84504 9.43928 3.15372C7.88743 3.4624 6.46197 4.22433 5.34315 5.34315C4.22433 6.46197 3.4624 7.88743 3.15372 9.43928C2.84504 10.9911 3.00347 12.5997 3.60897 14.0615C4.21447 15.5233 5.23985 16.7727 6.55544 17.6518C7.87103 18.5308 9.41775 19 11 19C12.7767 19.0022 14.5025 18.407 15.9 17.31L19.29 20.71C19.383 20.8037 19.4936 20.8781 19.6154 20.9289C19.7373 20.9797 19.868 21.0058 20 21.0058C20.132 21.0058 20.2627 20.9797 20.3846 20.9289C20.5064 20.8781 20.617 20.8037 20.71 20.71C20.8037 20.617 20.8781 20.5064 20.9289 20.3846C20.9797 20.2627 21.0058 20.132 21.0058 20C21.0058 19.868 20.9797 19.7373 20.9289 19.6154C20.8781 19.4936 20.8037 19.383 20.71 19.29ZM5 11C5 9.81331 5.3519 8.65327 6.01119 7.66658C6.67047 6.67988 7.60755 5.91085 8.7039 5.45672C9.80026 5.0026 11.0067 4.88378 12.1705 5.11529C13.3344 5.3468 14.4035 5.91824 15.2426 6.75736C16.0818 7.59647 16.6532 8.66557 16.8847 9.82946C17.1162 10.9933 16.9974 12.1997 16.5433 13.2961C16.0892 14.3925 15.3201 15.3295 14.3334 15.9888C13.3467 16.6481 12.1867 17 11 17C9.4087 17 7.88258 16.3679 6.75736 15.2426C5.63214 14.1174 5 12.5913 5 11Z" fill="currentColor" /> 
+                </svg> </a> 
+               <div class="site-search__popup"> 
+                <div class="site-search__bar"> 
+                 <form id="searchForm" class="site-search__form" autocomplete="off" results-zero-text="Sorry, no results found."> 
+                  <input class="site-search__input" id="searchInput" name="searchInput" type="text" placeholder="Search our website" title="Search our website"> 
+                  <input name="portalId" type="hidden" value="107648"> 
+                  <input name="language" type="hidden" value=""> 
+                  <input name="domains" type="hidden" value="all"> 
+                  <button class="site-search__submit ui-icon" type="submit" aria-label="Search"> 
+                   <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                    <path d="M20.71 19.29L17.31 15.9C18.407 14.5025 19.0022 12.7767 19 11C19 9.41775 18.5308 7.87103 17.6518 6.55544C16.7727 5.23984 15.5233 4.21446 14.0615 3.60896C12.5997 3.00346 10.9911 2.84504 9.43928 3.15372C7.88743 3.4624 6.46197 4.22433 5.34315 5.34315C4.22433 6.46197 3.4624 7.88743 3.15372 9.43928C2.84504 10.9911 3.00347 12.5997 3.60897 14.0615C4.21447 15.5233 5.23985 16.7727 6.55544 17.6518C7.87103 18.5308 9.41775 19 11 19C12.7767 19.0022 14.5025 18.407 15.9 17.31L19.29 20.71C19.383 20.8037 19.4936 20.8781 19.6154 20.9289C19.7373 20.9797 19.868 21.0058 20 21.0058C20.132 21.0058 20.2627 20.9797 20.3846 20.9289C20.5064 20.8781 20.617 20.8037 20.71 20.71C20.8037 20.617 20.8781 20.5064 20.9289 20.3846C20.9797 20.2627 21.0058 20.132 21.0058 20C21.0058 19.868 20.9797 19.7373 20.9289 19.6154C20.8781 19.4936 20.8037 19.383 20.71 19.29ZM5 11C5 9.81331 5.3519 8.65327 6.01119 7.66658C6.67047 6.67988 7.60755 5.91085 8.7039 5.45672C9.80026 5.0026 11.0067 4.88378 12.1705 5.11529C13.3344 5.3468 14.4035 5.91824 15.2426 6.75736C16.0818 7.59647 16.6532 8.66557 16.8847 9.82946C17.1162 10.9933 16.9974 12.1997 16.5433 13.2961C16.0892 14.3925 15.3201 15.3295 14.3334 15.9888C13.3467 16.6481 12.1867 17 11 17C9.4087 17 7.88258 16.3679 6.75736 15.2426C5.63214 14.1174 5 12.5913 5 11Z" fill="currentColor"></path> 
+                   </svg> </button> 
+                  <a href="../../../com/gracesoft/www/index.html" class="site-search__close ui-icon" role="button" aria-label="Close search window"> 
+                   <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                    <path d="M20.707 4.707a1 1 0 0 0-1.414-1.414L12 10.586 4.707 3.293a1 1 0 0 0-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 1 0 1.414 1.414L12 13.414l7.293 7.293a1 1 0 0 0 1.414-1.414L13.414 12l7.293-7.293z" fill="currentColor" /> 
+                   </svg> </a> 
+                 </form> 
+                </div> 
+                <div class="site-search__results"> 
+                 <div class="site-search__results-block"> 
+                  <div class="site-search__result-template"> 
+                   <div class="site-search__result-title ui-label"></div> 
+                   <div class="site-search__result-desc small-text"></div> 
+                  </div> 
+                  <button class="site-search__more btn btn--fill btn--medium btn--accent">More results</button> 
+                 </div> 
+                </div> 
+               </div> 
+              </div>
+             </div> 
+            </div> 
+            <div class="header__lang"> 
+             <div id="hs_cos_wrapper_header_lang" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+              <div class="module module--header_lang module--lang-select"> 
+               <div class="module__inner"> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="header__buttons"> 
+             <div class="header__buttons__static"> 
+              <div id="hs_cos_wrapper_static_header_buttons" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="module module--static_header_buttons module--button"> 
+                <div class="module__inner"> 
+                 <div class="inline-items" style="gap: 10px;"> 
+                  <a href="https://www.gracesoft.com/livedemo" class="btn btn--fill btn--medium btn--accent btn--default  btn--static_header_buttons-1"> Request Demo </a> 
+                  <a href="https://www.gracesoft.com/freetrial?__hstc=233546881.68ed64020666fceb0c76c0e3bd25ab53.1737360651631.1741933541512.1742546164127.53&amp;__hssc=233546881.1.1742546164127&amp;__hsfp=3960087866" class="btn btn--outline btn--medium btn--accent btn--default  btn--static_header_buttons-2"> Free Trial </a>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="header__buttons__overlap"> 
+              <div id="hs_cos_wrapper_overlapping_header_buttons" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="module module--overlapping_header_buttons module--button"> 
+                <div class="module__inner"> 
+                 <div class="inline-items"> 
+                  <a href="https://www.gracesoft.com/livedemo" class="btn btn--fill btn--medium btn--accent btn--default  btn--overlapping_header_buttons-1"> Request Demo </a>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="header__buttons__sticky"> 
+              <div id="hs_cos_wrapper_sticky_header_buttons" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="module module--sticky_header_buttons module--button"> 
+                <div class="module__inner"> 
+                 <div class="inline-items" style="gap: 10px;"> 
+                  <a href="https://share.hsforms.com/1wGiiZMrCQAmwNix9MC9NFg2b28?__hstc=253088470.4ae48a40834030a2cc483828c57b%E2%80%A6" class="btn btn--fill btn--medium btn--accent btn--default  btn--sticky_header_buttons-1"> Request Demo </a> 
+                  <a href="https://www.gracesoft.com/freetrial?__hstc=233546881.68ed64020666fceb0c76c0e3bd25ab53.1737360651631.1741933541512.1742546164127.53&amp;__hssc=233546881.1.1742546164127&amp;__hsfp=3960087866" class="btn btn--outline btn--medium btn--accent btn--default  btn--sticky_header_buttons-2"> Free Trial </a>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="header__mobile-nav"> 
+             <div id="hs_cos_wrapper_header_mobile_nav" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+              <div class="module module--header_mobile_nav module--mnav"> 
+               <div class="module__inner"> 
+                <div class="mnav mnav--light"> 
+                 <a class="mnav__open ui-icon" href="../../../com/gracesoft/www/index.html" role="button" aria-label="Open menu"> 
+                  <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                   <path d="M3 6a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm0 6a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm1 5a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4z" fill="currentColor" /> 
+                  </svg> </a> 
+                 <div class="mnav__overlay"></div> 
+                 <div class="mnav__popup"> 
+                  <div class="mnav__section mnav__section--first mnav__menu hs-skip-lang-url-rewrite"> 
+                   <ul class="mnav__menu__list mnav__menu__list--level1"> 
+                    <li class="mnav__menu__item mnav__menu__item--parent"> 
+                     <div class="mnav__menu__label"> 
+                      <a class="mnav__menu__link" href="../../../com/gracesoft/www/index.html">Product</a> 
+                      <div class="mnav__menu__toggle" role="button"> 
+                       <div class="mnav__menu__toggle__open-icon"> 
+                        <svg class="mnav__menu__toggle__open" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                        </svg> 
+                       </div> 
+                       <div class="mnav__menu__toggle__close-icon"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                        </svg> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <ul class="mnav__menu__list mnav__menu__list--level2 mnav__menu__list--child"> 
+                      <li class="mnav__menu__item mnav__menu__item--parent"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="../../../com/gracesoft/www/index.html">Solutions</a> 
+                        <div class="mnav__menu__toggle" role="button"> 
+                         <div class="mnav__menu__toggle__open-icon"> 
+                          <svg class="mnav__menu__toggle__open" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                           <path d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                          </svg> 
+                         </div> 
+                         <div class="mnav__menu__toggle__close-icon"> 
+                          <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                           <path d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                          </svg> 
+                         </div> 
+                        </div> 
+                       </div> 
+                       <ul class="mnav__menu__list mnav__menu__list--level3 mnav__menu__list--child"> 
+                        <li class="mnav__menu__item"> 
+                         <div class="mnav__menu__label"> 
+                          <a class="mnav__menu__link" href="https://www.gracesoft.com/hotel-management-software">Hotel Management</a> 
+                         </div> </li> 
+                        <li class="mnav__menu__item"> 
+                         <div class="mnav__menu__label"> 
+                          <a class="mnav__menu__link" href="https://www.gracesoft.com/bed-breakfast-reservation-software">Bed &amp; Breakfast</a> 
+                         </div> </li> 
+                        <li class="mnav__menu__item"> 
+                         <div class="mnav__menu__label"> 
+                          <a class="mnav__menu__link" href="https://www.gracesoft.com/vacation-rental-management-software">Vacation Rental</a> 
+                         </div> </li> 
+                        <li class="mnav__menu__item"> 
+                         <div class="mnav__menu__label"> 
+                          <a class="mnav__menu__link" href="https://www.gracesoft.com/dude-rancher-software">Dude Ranch</a> 
+                         </div> </li> 
+                        <li class="mnav__menu__item"> 
+                         <div class="mnav__menu__label"> 
+                          <a class="mnav__menu__link" href="https://www.gracesoft.com/condo-management-software">Condo Management </a> 
+                         </div> </li> 
+                        <li class="mnav__menu__item"> 
+                         <div class="mnav__menu__label"> 
+                          <a class="mnav__menu__link" href="https://www.gracesoft.com/campground-management-software">Campground &amp; RV Park</a> 
+                         </div> </li> 
+                       </ul> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/online-booking-engine">Online Booking Engine</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/channel-manager">Channel Manager</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/websites">Websites</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/point-of-sale-system">Point of Sale </a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/crm-software">CRM</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/gracesoft-ai">AI</a> 
+                       </div> </li> 
+                     </ul> </li> 
+                    <li class="mnav__menu__item"> 
+                     <div class="mnav__menu__label"> 
+                      <a class="mnav__menu__link" href="https://www.gracesoft.com/pricing">Pricing</a> 
+                     </div> </li> 
+                    <li class="mnav__menu__item"> 
+                     <div class="mnav__menu__label"> 
+                      <a class="mnav__menu__link" href="https://www.gracesoft.com/testimonials">Testimonial</a> 
+                     </div> </li> 
+                    <li class="mnav__menu__item"> 
+                     <div class="mnav__menu__label"> 
+                      <a class="mnav__menu__link" href="https://www.gracesoft.com/feature-listing">Features</a> 
+                     </div> </li> 
+                    <li class="mnav__menu__item mnav__menu__item--parent"> 
+                     <div class="mnav__menu__label"> 
+                      <a class="mnav__menu__link" href="../../../com/gracesoft/www/index.html">Resources</a> 
+                      <div class="mnav__menu__toggle" role="button"> 
+                       <div class="mnav__menu__toggle__open-icon"> 
+                        <svg class="mnav__menu__toggle__open" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                        </svg> 
+                       </div> 
+                       <div class="mnav__menu__toggle__close-icon"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                        </svg> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <ul class="mnav__menu__list mnav__menu__list--level2 mnav__menu__list--child"> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/case-study">Case Studies</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/infographics">Infographics</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://support.gracesoft.com/support/home">Support Center</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/blog">Blogs</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/webinar">Webinar</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/pci-compliance">PCI Compliance</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/devices">Devices</a> 
+                       </div> </li> 
+                     </ul> </li> 
+                    <li class="mnav__menu__item mnav__menu__item--parent"> 
+                     <div class="mnav__menu__label"> 
+                      <a class="mnav__menu__link" href="../../../com/gracesoft/www/index.html">About Us</a> 
+                      <div class="mnav__menu__toggle" role="button"> 
+                       <div class="mnav__menu__toggle__open-icon"> 
+                        <svg class="mnav__menu__toggle__open" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                        </svg> 
+                       </div> 
+                       <div class="mnav__menu__toggle__close-icon"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                        </svg> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <ul class="mnav__menu__list mnav__menu__list--level2 mnav__menu__list--child"> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/about">About Us</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/about/executive-team">Dream Team</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/featured-clients">Featured Clients</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/corporate-contact">Contact Us</a> 
+                       </div> </li> 
+                      <li class="mnav__menu__item"> 
+                       <div class="mnav__menu__label"> 
+                        <a class="mnav__menu__link" href="https://www.gracesoft.com/news-updates">News</a> 
+                       </div> </li> 
+                     </ul> </li> 
+                    <li class="mnav__menu__item"> 
+                     <div class="mnav__menu__label"> 
+                      <a class="mnav__menu__link" href="https://apps.gracesoft.com/pmsui/">Login</a> 
+                     </div> </li> 
+                   </ul> 
+                  </div> 
+                  <div class="mnav__section mnav__buttons inline-items inline-items--left"> 
+                   <a href="https://www.hubspot.com/" class="btn btn--fill btn--medium btn--accent btn--default  btn--header_mobile_nav-1"> Buy Now </a>
+                  </div> 
+                  <a href="../../../com/gracesoft/www/index.html" class="mnav__close ui-icon" role="button" aria-label="Open menu"> 
+                   <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                    <path d="M20.707 4.707a1 1 0 0 0-1.414-1.414L12 10.586 4.707 3.293a1 1 0 0 0-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 1 0 1.414 1.414L12 13.414l7.293 7.293a1 1 0 0 0 1.414-1.414L13.414 12l7.293-7.293z" fill="currentColor" /> 
+                   </svg> </a> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+   </div> 
+   <main id="main-content" class="body"> 
+    <div class="container-fluid main"> 
+     <div class="row-fluid-wrapper"> 
+      <div class="row-fluid"> 
+       <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12"> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 content_bucket-row-0-force-full-width-section dnd-section content_bucket-row-0-padding"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_17459362987647" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <div class="module--section-bg module--17459362987647">
+                <div class="section-bg section-bg--dark section-bg--top-border-none section-bg--bottom-border-none"> 
+                 <div class="section-bg__media section-bg__media--lg section-bg__img" role="img" aria-label="AI assistant" style="background-image: url(https://www.gracesoft.com/hubfs/AI%20assistant.png); background-position: left center"></div> 
+                 <div class="section-bg__overlay section-bg__overlay--dark" style="opacity: 0.40;"></div> 
+                </div> 
+               </div>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-3 cell_17459362987643-row-1-padding dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span5 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="5"> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                 <div id="hs_cos_wrapper_widget_1781296249456" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+                  <div class="module module--1781296249456 module--rtext module--text-center module--md-text-center"> 
+                   <div class="module__inner"> 
+                    <div id="rtext__1781296249456" class="rtext rtext--box-none txt--dark"> 
+                     <div class="rtext__content clear normal-text"> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+             </div>
+             <!--end widget-span --> 
+             <div class="span7 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="5" data-w="7"> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                 <div id="hs_cos_wrapper_module_17813530101193" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+                  <div class="module module--17813530101193 module--rtext module--text-center module--md-text-center"> 
+                   <div class="module__inner"> 
+                    <div id="rtext__17813530101193" class="rtext rtext--box-none txt--dark"> 
+                     <div class="rtext__content clear normal-text"> 
+                      <h1><span>Voice AI &amp; Chat AI</span></h1> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+                 <div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"> 
+                  <div class="row-fluid "> 
+                   <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                    <div id="hs_cos_wrapper_module_17813532040963" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+                     <div class="module module--17813532040963 module--rtext module--text-center module--md-text-center"> 
+                      <div class="module__inner"> 
+                       <div id="rtext__17813532040963" class="rtext rtext--box-none txt--dark"> 
+                        <div class="rtext__content clear normal-text"> 
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div>
+                   <!--end widget-span --> 
+                  </div>
+                  <!--end row--> 
+                 </div>
+                 <!--end row-wrapper --> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-1 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                 <div id="hs_cos_wrapper_module_1746165126366" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+                  <style>.module--1746165126366{margin-bottom:80px;}</style> 
+                  <div class="module module--1746165126366 module--button module--text-center"> 
+                   <div class="module__inner"> 
+                    <div class="inline-items inline-items--center"> 
+                     <a href="https://www.gracesoft.com/freetrial" class="btn btn--fill btn--large btn--accent btn--default  btn--1746165126366-1"> Start your free trial today ! </a>
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+                 <div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"> 
+                  <div class="row-fluid "> 
+                   <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                    <div id="hs_cos_wrapper_module_17813531907493" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+                     <div class="module module--17813531907493 module--rtext module--text-center module--md-text-center"> 
+                      <div class="module__inner"> 
+                       <div id="rtext__17813531907493" class="rtext rtext--box-none txt--dark"> 
+                        <div class="rtext__content clear normal-text"> 
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div>
+                   <!--end widget-span --> 
+                  </div>
+                  <!--end row--> 
+                 </div>
+                 <!--end row-wrapper --> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 content_bucket-row-1-padding dnd-section content_bucket-row-1-max-width-section-centering"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_17461646879676" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <style>.module--17461646879676{margin-bottom:48px;}.module--17461646879676 .module__inner{width:950px;}</style> 
+               <div class="module module--17461646879676 module--section-intro module--block-center module--text-center"> 
+                <div class="module__inner"> 
+                 <div class="section-intro section-intro--light txt--light"> 
+                  <div class="section-intro__title"> 
+                   <h2>Automate Guest Communication with <br>AI-Powered Hospitality Technology</h2> 
+                  </div> 
+                  <div class="section-intro__desc"> 
+                   <div class="section-intro__desc-inner clear"> 
+                    <p style="text-align: center;"><span style="color: #000000;">Enhance guest experiences and reduce staff workload with GraceSoft Voice AI and Chat AI. Provide instant responses to guest inquiries, streamline communication, and deliver 24/7 support through intelligent hotel automation.</span></p> 
+                   </div> 
+                  </div> 
+                  <div class="section-intro__divider section-intro__divider--auto">
+                   <div class="section-intro__divider-line"></div>
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+              <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"> 
+               <div class="row-fluid "> 
+                <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+                 <div id="hs_cos_wrapper_module_17461637366589" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+                  <style>.module--17461637366589 .module__inner{width:1138px;}</style> 
+                  <div class="module module--17461637366589 module--feature-card module--block-center"> 
+                   <div class="module__inner"> 
+                    <div class="row items-stretch justify-center"> 
+                     <div class="col s4 md-s6 sm-s12"> 
+                      <div class="feature-card feature-card--17461637366589-1 feature-card--white  feature-card--shadow" style="text-align: center;"> 
+                       <div class="feature-card__body" style="max-width: 300px;"> 
+                        <div class="feature-card__icon"> 
+                         <span class="icon icon--17461637366589-1 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-hidden="true">
+                            <g id="Question Circle1_layer">
+                             <path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z" />
+                            </g>
+                           </svg> </span> </span> 
+                        </div> 
+                        <h3 class="feature-card__title h4">Respond to Guest Questions Instantly</h3> 
+                        <p class="feature-card__desc">Provide immediate answers to common guest inquiries regarding reservations, check-in details, property amenities, directions, and policies without requiring staff intervention.</p> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="col s4 md-s6 sm-s12"> 
+                      <div class="feature-card feature-card--17461637366589-2 feature-card--accent  feature-card--shadow" style="text-align: center;"> 
+                       <div class="feature-card__body" style="max-width: 300px;"> 
+                        <div class="feature-card__icon"> 
+                         <span class="icon icon--17461637366589-2 icon--type-icon icon--large icon--disc icon--fill icon--ghost"> <span class="icon__glyph"> 
+                           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true">
+                            <g id="User Tie2_layer">
+                             <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z" />
+                            </g>
+                           </svg> </span> </span> 
+                        </div> 
+                        <h3 class="feature-card__title h4">Improve Guest Satisfaction</h3> 
+                        <p class="feature-card__desc">Deliver faster communication and consistent responses that help create a better guest experience before, during, and after their stay.</p> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="col s4 md-s6 sm-s12"> 
+                      <div class="feature-card feature-card--17461637366589-3 feature-card--white  feature-card--shadow" style="text-align: center;"> 
+                       <div class="feature-card__body" style="max-width: 300px;"> 
+                        <div class="feature-card__icon"> 
+                         <span class="icon icon--17461637366589-3 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512" aria-hidden="true">
+                            <g id="Business Time3_layer">
+                             <path d="M496 224c-79.59 0-144 64.41-144 144s64.41 144 144 144 144-64.41 144-144-64.41-144-144-144zm64 150.29c0 5.34-4.37 9.71-9.71 9.71h-60.57c-5.34 0-9.71-4.37-9.71-9.71v-76.57c0-5.34 4.37-9.71 9.71-9.71h12.57c5.34 0 9.71 4.37 9.71 9.71V352h38.29c5.34 0 9.71 4.37 9.71 9.71v12.58zM496 192c5.4 0 10.72.33 16 .81V144c0-25.6-22.4-48-48-48h-80V48c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h395.12c28.6-20.09 63.35-32 100.88-32zM320 96H192V64h128v32zm6.82 224H208c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h291.43C327.1 423.96 320 396.82 320 368c0-16.66 2.48-32.72 6.82-48z" />
+                            </g>
+                           </svg> </span> </span> 
+                        </div> 
+                        <h3 class="feature-card__title h4">Reduce Front Desk Workload</h3> 
+                        <p class="feature-card__desc">Automate repetitive guest interactions and allow your staff to focus on delivering exceptional hospitality instead of answering routine questions.</p> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="col s4 md-s6 sm-s12"> 
+                      <div class="feature-card feature-card--17461637366589-4 feature-card--accent  feature-card--shadow" style="text-align: center;"> 
+                       <div class="feature-card__body" style="max-width: 300px;"> 
+                        <div class="feature-card__icon"> 
+                         <span class="icon icon--17461637366589-4 icon--type-icon icon--large icon--disc icon--fill icon--ghost"> <span class="icon__glyph"> 
+                           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512" aria-hidden="true">
+                            <g id="Phone Volume4_layer">
+                             <path d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z" />
+                            </g>
+                           </svg> </span> </span> 
+                        </div> 
+                        <h3 class="feature-card__title h4">Support Guests 24/7</h3> 
+                        <p class="feature-card__desc">Never miss an opportunity to assist guests. AI-powered communication tools remain available around the clock, even outside business hours.</p> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="col s4 md-s6 sm-s12"> 
+                      <div class="feature-card feature-card--17461637366589-5 feature-card--white  feature-card--shadow" style="text-align: center;"> 
+                       <div class="feature-card__body" style="max-width: 300px;"> 
+                        <div class="feature-card__icon"> 
+                         <span class="icon icon--17461637366589-5 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512" aria-hidden="true">
+                            <g id="Phone Volume5_layer">
+                             <path d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z" />
+                            </g>
+                           </svg> </span> </span> 
+                        </div> 
+                        <h3 class="feature-card__title h4">Increase Operational Efficiency</h3> 
+                        <p class="feature-card__desc">Streamline communication processes and reduce response times while maintaining professional and accurate guest interactions.</p> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="col s4 md-s6 sm-s12"> 
+                      <div class="feature-card feature-card--17461637366589-6 feature-card--accent  feature-card--shadow" style="text-align: center;"> 
+                       <div class="feature-card__body" style="max-width: 300px;"> 
+                        <div class="feature-card__icon"> 
+                         <span class="icon icon--17461637366589-6 icon--type-icon icon--large icon--disc icon--fill icon--ghost"> <span class="icon__glyph"> 
+                           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true">
+                            <g id="Building6_layer">
+                             <path d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z" />
+                            </g>
+                           </svg> </span> </span> 
+                        </div> 
+                        <h3 class="feature-card__title h4">Built for Modern Hospitality</h3> 
+                        <p class="feature-card__desc">Designed specifically for hotels, motels, inns, resorts, and vacation rentals, Voice AI and Chat AI integrate seamlessly into your hospitality operations.</p> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div>
+                <!--end widget-span --> 
+               </div>
+               <!--end row--> 
+              </div>
+              <!--end row-wrapper --> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-5 content_bucket-row-2-padding dnd-section content_bucket-row-2-vertical-alignment"> 
+         <div class="row-fluid "> 
+          <div class="span1 widget-span widget-type-cell dnd-column cell_1781294534783-vertical-alignment" style="" data-widget-type="cell" data-x="0" data-w="1"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1781294534270" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="module module--1781294534270 module--rtext"> 
+                <div class="module__inner"> 
+                 <div id="rtext__1781294534270" class="rtext rtext--box-none txt--light"> 
+                  <div class="rtext__content clear normal-text"> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+          <div class="span11 widget-span widget-type-cell cell_17812945166162-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="1" data-w="11"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1781294584432" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="module module--1781294584432 module--heading module--text-center module--md-text-center"> 
+                <div class="module__inner"> 
+                 <div class="heading txt--light"> 
+                  <h2>Key Features</h2> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_17461646879679" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <style>.module--17461646879679 .module__inner{width:1114px;}</style> 
+               <div class="module module--17461646879679 module--quickfeat module--block-center module--md-block-center"> 
+                <div class="module__inner"> 
+                 <div class="quickfeat quickfeat--light txt--light txt--unstyle-links"> 
+                  <div class="row items-stretch justify-center"> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-1 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512" aria-hidden="true">
+                         <g id="Robot7_layer">
+                          <path d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">AI-powered voice assistance</h4> 
+                     </div> 
+                     <span class="screen-reader-text">AI-powered voice assistance</span> 
+                    </div> 
+                   </div> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-2 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-hidden="true">
+                         <g id="Rocket.Chat8_layer">
+                          <path d="M486.41 107.57c-76.93-50.83-179.18-62.4-264.12-47.07C127.26-31.16 20.77 11 0 23.12c0 0 73.08 62.1 61.21 116.49-86.52 88.2-45.39 186.4 0 232.77C73.08 426.77 0 488.87 0 488.87c20.57 12.16 126.77 54.19 222.29-37 84.75 15.23 187 3.76 264.12-47.16 119.26-76.14 119.65-220.61 0-297.15zM294.18 404.22a339.53 339.53 0 0 1-88.11-11.37l-19.77 19.09a179.74 179.74 0 0 1-36.59 27.39A143.14 143.14 0 0 1 98 454.06c1-1.78 1.88-3.56 2.77-5.24q29.67-55 16-98.69c-32.53-25.61-52-58.34-52-94.13 0-82 102.74-148.43 229.41-148.43S523.59 174 523.59 256 420.85 404.22 294.18 404.22zM184.12 291.3a34.32 34.32 0 0 1-34.8-33.72c-.7-45.39 67.83-46.38 68.52-1.09v.51a34 34 0 0 1-33.72 34.32zm73.77-33.72c-.79-45.39 67.74-46.48 68.53-1.19v.61c.39 45.08-67.74 45.57-68.53.58zm143.38 33.72a34.33 34.33 0 0 1-34.81-33.72c-.69-45.39 67.84-46.38 68.53-1.09v.51a33.89 33.89 0 0 1-33.72 34.32z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">Automated guest messaging</h4> 
+                     </div> 
+                     <span class="screen-reader-text">Automated guest messaging</span> 
+                    </div> 
+                   </div> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-3 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-hidden="true">
+                         <g id="Weixin (WeChat)9_layer">
+                          <path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154zm-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4zm-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2zM563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4zm-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6zm107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">Instant response capabilities</h4> 
+                     </div> 
+                     <span class="screen-reader-text">Instant response capabilities</span> 
+                    </div> 
+                   </div> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-4 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512" aria-hidden="true">
+                         <g id="User Clock10_layer">
+                          <path d="M496 224c-79.6 0-144 64.4-144 144s64.4 144 144 144 144-64.4 144-144-64.4-144-144-144zm64 150.3c0 5.3-4.4 9.7-9.7 9.7h-60.6c-5.3 0-9.7-4.4-9.7-9.7v-76.6c0-5.3 4.4-9.7 9.7-9.7h12.6c5.3 0 9.7 4.4 9.7 9.7V352h38.3c5.3 0 9.7 4.4 9.7 9.7v12.6zM320 368c0-27.8 6.7-54.1 18.2-77.5-8-1.5-16.2-2.5-24.6-2.5h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h347.1c-45.3-31.9-75.1-84.5-75.1-144zm-96-112c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">24/7 guest support</h4> 
+                     </div> 
+                     <span class="screen-reader-text">24/7 guest support</span> 
+                    </div> 
+                   </div> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-5 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true">
+                         <g id="Calendar Check11_layer">
+                          <path d="M436 160H12c-6.627 0-12-5.373-12-12v-36c0-26.51 21.49-48 48-48h48V12c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v52h128V12c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v52h48c26.51 0 48 21.49 48 48v36c0 6.627-5.373 12-12 12zM12 192h424c6.627 0 12 5.373 12 12v260c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V204c0-6.627 5.373-12 12-12zm333.296 95.947l-28.169-28.398c-4.667-4.705-12.265-4.736-16.97-.068L194.12 364.665l-45.98-46.352c-4.667-4.705-12.266-4.736-16.971-.068l-28.397 28.17c-4.705 4.667-4.736 12.265-.068 16.97l82.601 83.269c4.667 4.705 12.265 4.736 16.97.068l142.953-141.805c4.705-4.667 4.736-12.265.068-16.97z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">Reservation inquiry assistance</h4> 
+                     </div> 
+                     <span class="screen-reader-text">Reservation inquiry assistance</span> 
+                    </div> 
+                   </div> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-6 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512" aria-hidden="true">
+                         <g id="User Shield12_layer">
+                          <path d="M622.3 271.1l-115.2-45c-4.1-1.6-12.6-3.7-22.2 0l-115.2 45c-10.7 4.2-17.7 14-17.7 24.9 0 111.6 68.7 188.8 132.9 213.9 9.6 3.7 18 1.6 22.2 0C558.4 489.9 640 420.5 640 296c0-10.9-7-20.7-17.7-24.9zM496 462.4V273.3l95.5 37.3c-5.6 87.1-60.9 135.4-95.5 151.8zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm96 40c0-2.5.8-4.8 1.1-7.2-2.5-.1-4.9-.8-7.5-.8h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c6.8 0 13.3-1.5 19.2-4-54-42.9-99.2-116.7-99.2-212z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">Reduced staff workload</h4> 
+                     </div> 
+                     <span class="screen-reader-text">Reduced staff workload</span> 
+                    </div> 
+                   </div> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-7 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512" aria-hidden="true">
+                         <g id="User Plus13_layer">
+                          <path d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">Improved guest engagement</h4> 
+                     </div> 
+                     <span class="screen-reader-text">Improved guest engagement</span> 
+                    </div> 
+                   </div> 
+                   <div class="col s6 md-s6 sm-s12"> 
+                    <div class="quickfeat__item" style="margin-bottom: 28px;"> 
+                     <div class="quickfeat__icon"> 
+                      <span class="icon icon--17461646879679-8 icon--type-icon icon--large icon--disc icon--fill icon--accent"> <span class="icon__glyph"> 
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-hidden="true">
+                         <g id="Alternate Sync14_layer">
+                          <path d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z" />
+                         </g>
+                        </svg> </span> </span> 
+                     </div>
+                     <div class="quickfeat__text" style="padding-inline-start: 14px;padding-inline-end: 18px;padding-top: 20px;"> 
+                      <h4 class="quickfeat__title">Hospitality-focused automation</h4> 
+                     </div> 
+                     <span class="screen-reader-text">Hospitality-focused automation</span> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-section content_bucket-row-3-padding"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_17813614506567" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+               <div class="module--section-bg module--17813614506567">
+                <div class="section-bg section-bg--accent section-bg--top-border-none section-bg--bottom-border-none"> 
+                </div> 
+               </div>
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_17813614506568" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <style>.module--17813614506568{margin-bottom:8px;}.module--17813614506568 .module__inner{width:900px;}@media(max-width:767px){.module--17813614506568{margin-bottom:0px;}}</style> 
+               <div class="module module--17813614506568 module--section-intro module--block-center module--text-center"> 
+                <div class="module__inner"> 
+                 <div class="section-intro section-intro--dark txt--dark"> 
+                  <div class="section-intro__title"> 
+                   <h2>Ready to Modernize Guest Communication?</h2> 
+                  </div> 
+                  <div class="section-intro__desc"> 
+                   <div class="section-intro__desc-inner clear"> 
+                    <p><span style="color: #ffffff;">Discover how GraceSoft Voice AI and Chat AI can help your property improve guest experiences, increase efficiency, and embrace the future of hospitality technology.&nbsp;</span></p> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_module_17813614506569" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="module module--17813614506569 module--button module--text-center"> 
+                <div class="module__inner"> 
+                 <div class="inline-items inline-items--center"> 
+                  <a href="https://www.gracesoft.com/livedemo" target="_blank" class="btn btn--outline btn--large btn--white btn--default  btn--17813614506569-1"> Book a Demo Today! </a>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+        <div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-section content_bucket-row-4-padding"> 
+         <div class="row-fluid "> 
+          <div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12"> 
+           <div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-row"> 
+            <div class="row-fluid "> 
+             <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> 
+              <div id="hs_cos_wrapper_widget_1781361078310" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+               <div class="module module--1781361078310 module--accordion"> 
+                <div class="module__inner"> 
+                 <div class="accordion accordion--light txt--light accordion--back-to-top accordion--toggle"> 
+                  <div class="accordion__inner clear"> 
+                   <h2 class="accordion__group-title" style="margin-bottom: 40px">Frequently Asked Questions</h2> 
+                   <div class="accordion__items"> 
+                    <div class="accordion__item"> 
+                     <div class="accordion__header"> 
+                      <div class="accordion__title-summary"> 
+                       <div class="accordion__title  accordion__title--default large-text important-text">
+                        What is hotel Voice AI?
+                       </div> 
+                       <div class="accordion__summary small-text"></div> 
+                      </div> 
+                      <button class="accordion__chevron ui-icon" aria-label="Expand/collapse What is hotel Voice AI?"> <span class="accordion__chevron__down"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                        </svg> </span> <span class="accordion__chevron__up"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                        </svg> </span> </button> 
+                     </div> 
+                     <div class="accordion__details">
+                      <p><span style="color: #000000;">Voice AI uses artificial intelligence to answer guest questions through voice-based interactions, helping hotels provide faster support and improve operational efficiency.</span></p>
+                     </div> 
+                    </div> 
+                    <div class="accordion__item"> 
+                     <div class="accordion__header"> 
+                      <div class="accordion__title-summary"> 
+                       <div class="accordion__title  accordion__title--default large-text important-text">
+                        What is Chat AI for hotels?
+                       </div> 
+                       <div class="accordion__summary small-text"></div> 
+                      </div> 
+                      <button class="accordion__chevron ui-icon" aria-label="Expand/collapse What is Chat AI for hotels?"> <span class="accordion__chevron__down"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                        </svg> </span> <span class="accordion__chevron__up"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                        </svg> </span> </button> 
+                     </div> 
+                     <div class="accordion__details">
+                      <p><span style="color: #000000;">Chat AI automatically responds to guest inquiries through messaging channels, helping properties provide quick and accurate communication.</span></p>
+                     </div> 
+                    </div> 
+                    <div class="accordion__item"> 
+                     <div class="accordion__header"> 
+                      <div class="accordion__title-summary"> 
+                       <div class="accordion__title  accordion__title--default large-text important-text">
+                        Can AI reduce front desk workload?
+                       </div> 
+                       <div class="accordion__summary small-text"></div> 
+                      </div> 
+                      <button class="accordion__chevron ui-icon" aria-label="Expand/collapse Can AI reduce front desk workload?"> <span class="accordion__chevron__down"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                        </svg> </span> <span class="accordion__chevron__up"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                        </svg> </span> </button> 
+                     </div> 
+                     <div class="accordion__details">
+                      <p><span style="color: #000000;">Yes. AI can handle routine guest questions, reservation inquiries, and common requests, allowing staff to focus on higher-value guest interactions.</span></p>
+                     </div> 
+                    </div> 
+                    <div class="accordion__item"> 
+                     <div class="accordion__header"> 
+                      <div class="accordion__title-summary"> 
+                       <div class="accordion__title  accordion__title--default large-text important-text">
+                        Is Voice AI available 24/7?
+                       </div> 
+                       <div class="accordion__summary small-text"></div> 
+                      </div> 
+                      <button class="accordion__chevron ui-icon" aria-label="Expand/collapse Is Voice AI available 24/7?"> <span class="accordion__chevron__down"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="currentColor" /> 
+                        </svg> </span> <span class="accordion__chevron__up"> 
+                        <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071Z" fill="currentColor" /> 
+                        </svg> </span> </button> 
+                     </div> 
+                     <div class="accordion__details">
+                      <p><span style="color: #000000;">Yes. Voice AI and Chat AI can assist guests around the clock, helping properties improve guest service at any time.</span></p>
+                     </div> 
+                    </div> 
+                   </div> 
+                   <a class="accordion__back-to-top" href="../../../com/gracesoft/www/index.html">Back to top</a> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div>
+             <!--end widget-span --> 
+            </div>
+            <!--end row--> 
+           </div>
+           <!--end row-wrapper --> 
+          </div>
+          <!--end widget-span --> 
+         </div>
+         <!--end row--> 
+        </div>
+        <!--end row-wrapper --> 
+       </div>
+       <!--end widget-span --> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+   <div data-global-resource-path="@marketplace/Neambo/Act3/partials/footer-03.html"> 
+    <div class="container-fluid above-footer"> 
+     <div class="row-fluid-wrapper"> 
+      <div class="row-fluid"> 
+       <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12"> 
+       </div>
+       <!--end widget-span --> 
+      </div> 
+     </div> 
+    </div> 
+    <footer class="footer footer--3 hs-search-hidden"> 
+     <div class="footer__section footer__section--main section"> 
+      <div class="footer__center container"> 
+       <div class="row"> 
+        <div class="col s4 md-s12"> 
+         <div class="footer__logo"> 
+          <div id="hs_cos_wrapper_footer_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+           <span id="hs_cos_wrapper_footer_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../../../com/gracesoft/www/index.html" id="hs-link-footer_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193326.016.png?width=256&amp;height=121&amp;name=Untitled%20design%20-%202025-07-09T193326.016.png" class="hs-image-widget " height="121" style="height: auto;width:256px;border-width:0px;border:0px;" width="256" alt="GraceSoft Easy InnKeeping Logo" title="GraceSoft Easy InnKeeping Logo" srcset="https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193326.016.png?width=128&amp;height=61&amp;name=Untitled%20design%20-%202025-07-09T193326.016.png 128w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193326.016.png?width=256&amp;height=121&amp;name=Untitled%20design%20-%202025-07-09T193326.016.png 256w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193326.016.png?width=384&amp;height=182&amp;name=Untitled%20design%20-%202025-07-09T193326.016.png 384w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193326.016.png?width=512&amp;height=242&amp;name=Untitled%20design%20-%202025-07-09T193326.016.png 512w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193326.016.png?width=640&amp;height=303&amp;name=Untitled%20design%20-%202025-07-09T193326.016.png 640w, https://www.gracesoft.com/hs-fs/hubfs/Untitled%20design%20-%202025-07-09T193326.016.png?width=768&amp;height=363&amp;name=Untitled%20design%20-%202025-07-09T193326.016.png 768w" sizes="(max-width: 256px) 100vw, 256px"></a></span> 
+          </div> 
+         </div> 
+         <div class="footer__about"> 
+          <div id="hs_cos_wrapper_footer_about" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+           <style>.module--footer_about .module__inner{width:280px;}</style> 
+           <div class="module module--footer_about module--rtext"> 
+            <div class="module__inner"> 
+             <div id="rtext__footer_about" class="rtext rtext--box-none txt--dark"> 
+              <div class="rtext__content clear normal-text"> 
+               <p><span>GraceSoft Easy InnKeeping: 25+ Years of Innovation, redefining hotel management software standards.<br><br>Address:<br></span><span>7310 Cortez Rd, Richmond, TX 77469<br></span><span>United States</span></p> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="footer__icons"> 
+          <div id="hs_cos_wrapper_footer_icons" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+           <style>@media(max-width:767px){.module--footer_icons{margin-bottom:60px;}}</style> 
+           <div class="module module--footer_icons module--icon"> 
+            <div class="module__inner"> 
+             <div class="inline-items" style="gap: 10px;"> 
+              <a href="https://x.com/gracesoftinc" target="_blank"><span class="icon icon--footer_icons-1 icon--type-code icon--medium icon--disc icon--outline icon--white"> <span class="icon__glyph"> 
+                 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+                  <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z" />
+                 </svg> </span> <span class="screen-reader-text"></span> </span></a> 
+              <a href="https://www.instagram.com/gracesoftinc/" target="_blank"><span class="icon icon--footer_icons-2 icon--type-icon icon--medium icon--disc icon--outline icon--white"> <span class="icon__glyph"> 
+                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true">
+                  <g id="Instagram15_layer">
+                   <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                  </g>
+                 </svg> </span> <span class="screen-reader-text"></span> </span></a> 
+              <a href="https://www.linkedin.com/company/gracesoft/"><span class="icon icon--footer_icons-3 icon--type-icon icon--medium icon--disc icon--outline icon--white"> <span class="icon__glyph"> 
+                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true">
+                  <g id="LinkedIn16_layer">
+                   <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                  </g>
+                 </svg> </span> <span class="screen-reader-text"></span> </span></a> 
+              <a href="https://www.facebook.com/GraceSoft/"><span class="icon icon--footer_icons-4 icon--type-icon icon--medium icon--disc icon--outline icon--white"> <span class="icon__glyph"> 
+                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true">
+                  <g id="Facebook Square17_layer">
+                   <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+                  </g>
+                 </svg> </span> <span class="screen-reader-text"></span> </span></a> 
+              <a href="https://www.youtube.com/@gracesoft1"><span class="icon icon--footer_icons-5 icon--type-icon icon--medium icon--disc icon--outline icon--white"> <span class="icon__glyph"> 
+                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-hidden="true">
+                  <g id="YouTube18_layer">
+                   <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                  </g>
+                 </svg> </span> <span class="screen-reader-text"></span> </span></a>
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="col s8 md-s12"> 
+         <div class="footer__nav"> 
+          <div id="hs_cos_wrapper_footer_nav" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+           <div class="module module--footer_nav module--col-nav"> 
+            <div class="module__inner"> 
+             <div class="col-nav col-nav--dark"> 
+              <div class="row justify-start"> 
+               <div class="col s3 md-s3 sm-s6"> 
+                <div class="box"> 
+                 <div class="col-nav__col"> 
+                  <div class="col-nav__title"> 
+                   <a href="#">Contact Us</a>
+                  </div> 
+                  <ul class="col-nav__list"> 
+                   <li class="col-nav__item"> <a href="../../../com/gracesoft/www/index.html" class="col-nav__link ">Main No:1-713-981-5300</a> </li> 
+                   <li class="col-nav__item"> +1-832-919-2384 </li> 
+                   <li class="col-nav__item"> +91-72004-23323 </li> 
+                   <li class="col-nav__item"> sales@gracesoft.com </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/livedemo" target="_blank" class="col-nav__link ">Demo</a> </li> 
+                  </ul> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="col s3 md-s3 sm-s6"> 
+                <div class="box"> 
+                 <div class="col-nav__col"> 
+                  <div class="col-nav__title"> 
+                   <a href="#">Products</a>
+                  </div> 
+                  <ul class="col-nav__list"> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/free-inns-bnb-software" target="_blank" class="col-nav__link ">Free Inn &amp; B&amp;B Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/free-hotel-software" target="_blank" class="col-nav__link ">Free Hotel Management Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/hotel-management-software" target="_blank" class="col-nav__link ">Hotel Management Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/hotel-reservation-software" target="_blank" class="col-nav__link ">Hotel Reservation Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/bed-breakfast-reservation-software" target="_blank" class="col-nav__link ">B&amp;B Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/condo-management-software" target="_blank" class="col-nav__link ">Condo Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/online-booking-engine" target="_blank" class="col-nav__link ">Website Booking Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/vacation-rental-management-software" target="_blank" class="col-nav__link ">Vacation Rental Management Software</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/free-vacation-rental-software" target="_blank" class="col-nav__link ">Free Vacation Rental Software</a> </li> 
+                  </ul> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="col s3 md-s3 sm-s6"> 
+                <div class="box"> 
+                 <div class="col-nav__col"> 
+                  <div class="col-nav__title"> 
+                   <a href="https://support.gracesoft.com/support/home">Resources</a>
+                  </div> 
+                  <ul class="col-nav__list"> 
+                   <li class="col-nav__item"> <a href="#" class="col-nav__link ">Live Support</a> </li> 
+                   <li class="col-nav__item"> <a href="https://apps.gracesoft.com/pmsui/" target="_blank" class="col-nav__link ">PMS Login</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/blog" target="_blank" class="col-nav__link ">Blog</a> </li> 
+                  </ul> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="col s3 md-s3 sm-s6"> 
+                <div class="box"> 
+                 <div class="col-nav__col"> 
+                  <div class="col-nav__title"> 
+                   <a href="#">Locations</a>
+                  </div> 
+                  <ul class="col-nav__list"> 
+                   <li class="col-nav__item"> <a href="../../../com/gracesoft/www/index.html" target="_blank" class="col-nav__link ">GraceSoft USA</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/india" target="_blank" class="col-nav__link ">GraceSoft India</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/canada" target="_blank" class="col-nav__link ">GraceSoft Canada</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/nigeria" target="_blank" class="col-nav__link ">GraceSoft Nigeria</a> </li> 
+                   <li class="col-nav__item"> <a href="https://www.gracesoft.com/hotel-software-middle-east" target="_blank" class="col-nav__link ">GraceSoft Middle East</a> </li> 
+                  </ul> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="footer__section footer__section--bottom section"> 
+      <div class="footer__center container"> 
+       <div class="row"> 
+        <div class="col s12"> 
+         <div class="footer__copyright-and-links"> 
+          <div class="row items-center"> 
+           <div class="col s6"> 
+            <div class="footer__copyright"> 
+             <div id="hs_cos_wrapper_footer_copyright" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+              <div class="module module--footer_copyright module--rtext"> 
+               <div class="module__inner"> 
+                <div id="rtext__footer_copyright" class="rtext rtext--box-none txt--dark"> 
+                 <div class="rtext__content clear small-text">
+                   Copyright © 2026 GraceSoft, Inc. 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="col s6"> 
+            <div class="footer__links"> 
+             <div id="hs_cos_wrapper_footer_links" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+              <div class="module module--footer_links module--rtext"> 
+               <div class="module__inner"> 
+                <div id="rtext__footer_links" class="rtext rtext--box-none txt--dark"> 
+                 <div class="rtext__content clear small-text"> 
+                  <br> 
+                  <ul> 
+                   <li><a href="https://www.gracesoft.com/privacy-statement" rel="noopener">Terms and Privacy</a></li> 
+                  </ul> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div data-global-resource-path="@marketplace/Neambo/Act3/partials/modals.html">
+    <div class="global-modals hs-search-hidden"> 
+    </div>
+   </div> 
+  </div> 
+  <script src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640360/1792753253537/template_main.min.js"></script> 
+  <script defer src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085657925/1792753252028/template_lightbox.min.js"></script> 
+  <script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script> 
+  <script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script> 
+  <script defer src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716807/1792753259889/template_nav.min.js"></script> 
+  <script src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085716808/1792753253475/template_site-search.min.js"></script> 
+  <script src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640359/1792753257864/template_lang-select.min.js"></script> 
+  <script src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640336/1792753264118/template_mobile-nav.min.js"></script> 
+  <script src="https://www.gracesoft.com/hubfs/hub_generated/template_assets/1/186085640356/1792753253447/template_accordion.min.js"></script> 
+  <!-- Start of HubSpot Analytics Code Not Loaded --> 
+  <script>
+(function(){
+  const timeoutEvent = document.createEvent('CustomEvent');
+  timeoutEvent.initCustomEvent("content-analytics-code-not-loaded", true, true, { detail: "Not loaded in preview mode" });
+  window.dispatchEvent(timeoutEvent);
+})();
+</script> 
+  <!-- End of HubSpot Analytics Code Not Loaded --> 
+  <script type="text/javascript">
+var hsVars = {
+    render_id: "caa327db-0029-4ee3-bb62-3bb7e677c154",
+    ticks: 1793200561147,
+    page_id: 356092692206,
+    
+    content_group_id: 0,
+    portal_id: 107648,
+    app_hs_base_url: "https://app-na2.hubspot.com",
+    cp_hs_base_url: "https://cp-na2.hubspot.com",
+    language: "en",
+    analytics_page_type: "landing-page",
+    scp_content_type: "",
+    
+    analytics_page_id: "356092692206",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: null
+}
+</script> 
+  <script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js"></script> 
+  <style>
+    .footer__copyright-and-links {
+    padding-top: 10px !important;
+}
+  .footer__section--bottom {
+    padding-bottom: 20px !important;
+}
+  .footer__section--main {
+    padding-bottom: 20px !important;
+}
+</style> 
+  <script>
+  window.prechatTemplate = {
+    "SubmitLabel": "Start Chat",
+    "fields": {
+      "0": {"error": "Please Enter a valid name","fieldId": "name","label": "Full Name","required":"yes","type":"text"},
+      "1": {"error": "Please Enter a valid Email","fieldId": "email","label": "Email","required":"yes","type":"email"},
+      "2": {"error": "Please Enter a valid Phone Number","fieldId": "phone","label": "Phone","required":"yes","type":"phone"},
+      "3": {"error": "Please Enter a Property Name","fieldId": "cf_title","label": "Property Name","required":"yes","type":"text"}
+    },
+    "heading": "Chat with Us",
+    "mainbgColor": "#0AA4DB",
+    "maintxColor": "#fff",
+    "textBanner": "We can't wait to talk to you. But first, please take a couple of moments to tell us a bit about yourself."
+  };
+
+  window.fcSettings = {
+    onInit: function() {
+      // Initialize pre-chat form
+      if (window.fcPreChatform) {
+        window.fcPreChatform.fcWidgetInit(window.prechatTemplate);
+      }
+
+      // Inject custom styles for Freshchat pre-chat form
+      const style = document.createElement("style");
+      style.innerHTML = `
+        /* Label styles */
+        .chat-fc-form-outer div.fc-form ul li label {
+          position: absolute !important;
+          top: -15px !important;
+          font-weight: lighter !important;
+          margin-left: 8px !important;
+          margin-right: 8px !important;
+          padding: 0px 3px !important;
+          background-color: white !important;
+          border-radius: 3px !important;
+        }
+        /* Input styles */
+        .chat-fc-form-outer div.fc-form ul li input {
+          padding: 13px 0px 13px 10px !important;
+          width: 100% !important;
+          border: 1px solid #ddd !important;
+          border-radius: 3px !important;
+        }
+        /* TextBanner (intro sentence) styles */
+        .chat-fc-form-outer .fc-form .fc-form-header p {
+          line-height: 1.2 !important;
+          margin-bottom: 25px !important;
+          font-weight: lighter !important;
+          margin-top: 10px !important;
+          font-size: 16px !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  };
+
+  window.fcWidgetMessengerConfig = {
+    config: {
+      content: {
+        actions: { tab_chat: "Chat" },
+        headers: { chat: "Chat With Us" }
+      },
+      cssNames: {
+        expanded: "custom_fc_expanded",
+        widget: "custom_fc_frame"
+      }
+    }
+  };
+</script> 
+  <script src="https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js"></script> 
+  <script src="http://in.fw-cdn.com/32001440/1057521.js" chat="true" widgetid="0a04bc62-baed-498f-adec-5e2bf1056e62">
+</script> 
+  <!-- End Facebook Pixel Code 
+<noscript async ><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=510966462654695&ev=PageView&noscript=1"
+/></noscript>
+End Facebook Pixel Code --> 
+  <!-- Meta Pixel Code --> 
+  <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1313022930738316');
+fbq('track', 'PageView');
+</script> 
+  <noscript>
+   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1313022930738316&amp;ev=PageView&amp;noscript=1">
+  </noscript> 
+  <!-- End Meta Pixel Code --> 
+  <!--Google search Engine Console--> 
+  <meta name="google-site-verification" content="DfoC00W9lqOqmOnvkltkjMSyXST24BVqU_fUL5iD-TE"> 
+  <!--End of Google search Engine Console--> 
+  <div class="floating-left-buttons"> 
+   <!-- CSS-only toggle --> 
+   <input type="checkbox" id="contact-toggle" class="contact-toggle"> 
+   <label for="contact-toggle" class="float-toggle"> ☎ </label> 
+   <div class="float-options"> 
+    <a href="https://api.whatsapp.com/send?phone=917200423323" target="_blank" class="whatsapp-btn"> <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> </a> 
+    <a href="../../../com/gracesoft/www/corporate-contact.html" class="float-btn"> Contact Us </a> 
+   </div> 
+  </div> 
+  <script>
+window.addEventListener("scroll", function () {
+    const scrollPercent =
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+    if (scrollPercent > 30) {
+        document.querySelector(".floating-left-buttons")
+                ?.classList.add("show");
+    }
+});
+</script> 
+ </body>
+</html>

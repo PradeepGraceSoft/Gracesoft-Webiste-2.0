@@ -1,0 +1,229 @@
+{% unless macros %}{% import 'Coded files/Custom/page/Macros/_macros.css' %}{% endunless %}
+
+/* ==========================================================================
+   4. MAIN NAVIGATION                                            
+   ========================================================================== */
+
+/* Mobile 'Menu' Button */
+.mobile-trigger {
+    background-color: {{ mainAccentColor }};
+    text-decoration: none;
+    text-transform: uppercase;
+    color: {{ secondaryTextColor }};
+    {{ rem('font-size', '21') }}
+    font-weight: 200;
+    position: relative; 
+    {{ rem('padding', '13') }}
+    cursor: pointer;
+}
+.menu-open {
+    overflow: hidden;
+}
+@media screen and (min-width:768px) {
+    .mobile-trigger {
+        display: none;
+    }
+    .menu-open {
+        overflow: visible;
+    }
+}
+
+/* Mobile Menu 'X' Close Button */
+.close-menu {
+    display: none;
+    {{ rem('height','30') }}
+    {{ rem('width','30') }}
+    cursor: pointer;
+}
+.close-menu:before {
+    content: "";
+    display: block;
+    {{ rem('height','2') }}
+    {{ rem('width','30') }}
+    background: {{ secondaryTextColor }};
+    {{ transform('rotate(45deg)') }}
+    {{ position('absolute','50%',null, null,'0') }}
+}
+.close-menu:after {
+    content: "";
+    display: block;
+    height: 2px;
+    {{ rem('width','30') }}
+    background: {{ secondaryTextColor }};
+    {{ transform('rotate(135deg)') }}
+    {{ position('absolute','50%',null, null,'0') }}
+}
+.custom-menu-primary.open .close-menu {
+    display: block;
+    color: {{ secondaryTextColor }};
+    {{ position('fixed',rem('10'),rem('30')) }}   
+    z-index: 2;
+}
+@media screen and (min-width:768px) {
+    .custom-menu-primary.open .close-menu {
+        display: none;
+    }
+    .child-trigger:after {
+        display: none;   
+    }
+}
+.child-trigger:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    {{ rem('font-size','36') }}
+    color: #fff;
+}
+
+/* Main Menu Styles */
+.custom-menu-primary {
+    background-color: {{ mainAccentColor }};
+    margin: 0;
+}
+.custom-menu-primary.js-enabled .layout-widget-wrapper {
+    {{ position('fixed','50%','50%','50%','50%') }}
+    background-color: {{ mainAccentColor }};
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    overflow: auto;
+}
+.custom-menu-primary.open .layout-widget-wrapper {
+    opacity: .95;
+    z-index: 2;
+    {{ position(null,'0','0','0','0') }}
+    {{ rem('padding','30 0') }}
+    {{ transition('all 0.2s ease-in') }}
+}
+.custom-menu-primary.closed .layout-widget-wrapper {
+    {{ transition('all 0.2s ease-in') }}
+}
+.custom-menu-primary .hs-menu-wrapper > ul{
+    display: block;  
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li{
+    display: inline-block;
+    float: none !important;
+    {{ rem('padding', '13') }}
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: {{ secondaryTextColor }};
+    {{ rem('font-size', '32') }}
+    font-weight: 200;
+    position: relative;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > a:before {
+    content: "";
+    height: 2px;
+    width: 80%;
+    {{ position('absolute','100%',null,null,'50%') }}
+    {{ transform('translateX(-50%)') }}
+    background-color: {{ secondaryTextColor }};
+    opacity: 0;
+    {{ transition('width 1s ease-out, opacity .1s ease') }}
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:hover > a:before,
+.custom-menu-primary .hs-menu-wrapper > ul > li.active > a:before,
+.custom-menu-primary .hs-menu-wrapper > ul > li.active-branch > a:before {
+    width: 80%;
+    background-color: {{ secondaryTextColor }};
+    position: absolute;
+    opacity: 1;
+    width: 80%;
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul li.active > a {
+    text-decoration: underline;
+}
+@media screen and (min-width:768px) {
+    .custom-menu-primary .hs-menu-wrapper > ul > li > a {
+        {{ rem('font-size', '21') }}
+    }
+   .custom-menu-primary.js-enabled .layout-widget-wrapper {
+       overflow: visible;
+   }
+    .custom-menu-primary .hs-menu-wrapper > ul > li.hs-item-has-children > a:after {
+        content: "\f107";
+        display: inline-block;
+        margin-left: 5px;
+        font-family: FontAwesome;
+        color: #fff;
+    }
+    .custom-menu-primary .hs-menu-wrapper > ul ul > li.hs-item-has-children > a:after {
+        content: "\f105";
+        display: inline-block;
+        margin-left: 10px;
+        font-family: FontAwesome;
+        color: #fff;        
+    }
+}
+@media screen and (max-width:768px) {
+    .custom-menu-primary .hs-menu-wrapper > ul > li.child-active-open > a:before {
+        width: 80%;
+        background-color: {{ secondaryTextColor }};
+        position: absolute;
+        opacity: 1;
+        width: 80%;
+    }
+}
+
+/* Main Menu Child Items */
+.custom-menu-primary .hs-menu-wrapper > ul ul{
+    display: none;
+    top: 100%;
+    background-color: {{ mainAccentColor }};
+    text-align: center;
+}
+@media screen and (min-width:768px) {
+    .custom-menu-primary .hs-menu-wrapper > ul ul{
+        min-width: 100%;
+        display: block !important;
+        overflow: visible;
+        max-height: initial;
+    }    
+    .hs-menu-wrapper.hs-menu-flow-horizontal.flyouts > ul > li.hs-item-has-children > ul.hs-menu-children-wrapper {
+        left: 50%;
+        {{ transform('translateX(-50%)') }}
+    }
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul li{
+    {{ rem('padding', '13') }}
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul li a{
+    color: {{ secondaryTextColor }};
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul li a:hover{}
+
+/* Override max width on menu links */
+.custom-menu-primary .hs-menu-wrapper > ul li a, 
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {
+    overflow: visible !important;
+    max-width: none !important;
+    width: auto !important;
+    display: inline-block;
+}
+
+/* Fix menu disappearing on desktop after toggling mobile menu */
+@media screen and (min-width:768px) {
+    .custom-menu-primary .hs-menu-wrapper > ul li a, 
+    .hs-menu-wrapper.hs-menu-flow-horizontal > ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {
+        display:block !important;
+    }
+    .custom-menu-primary .hs-menu-wrapper > ul > li {
+        vertical-align: top; 
+    }
+    .custom-menu-primary.js-enabled .layout-widget-wrapper {
+        {{ position('relative','0','initial','initial','0') }}
+        height: auto;
+        text-align: center;
+        opacity: 1;
+        z-index: 1;
+        padding: 0;
+    }   
+}
+
+/* Center Menu On Mobile */
+@media screen and (max-width:768px) { 
+    {{ verticalAndHorizontalCenter('.custom-menu-primary .hs_cos_wrapper_type_menu', '.custom-menu-primary .hs-menu-wrapper') }}
+}

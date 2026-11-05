@@ -1,0 +1,68 @@
+{% unless macros %}{% import 'Coded files/Custom/page/Macros/_macros.css' %}{% endunless %}
+
+/* ==========================================================================
+   3. COS STRUCTURE                                            
+   ========================================================================== */
+
+
+/* =============== Structure =============== */
+
+/* The outer wrappers of your website */
+.header-container-wrapper,  
+.body-container-wrapper, 
+.footer-container-wrapper {}
+
+/* The inner wrappers of your website */
+.header-container, 
+.body-container, 
+.footer-container {}
+
+
+/* =============== Header =============== */
+
+.header-container-wrapper {
+    text-align: center;
+    border-top: 4px solid {{ footerBackgroundColor }};
+}
+.header-container-wrapper .logo {
+    {{ rem('padding','30') }}
+}
+.header-container {}
+
+
+
+/* =============== Content =============== */
+
+.body-container-wrapper {
+    
+}
+.body-container {
+    {{ rem('padding','30 0') }}
+}
+
+.container-fluid .row-fluid .page-center.content-wrapper {
+    {{ rem('padding-bottom','30') }}
+    max-width: 960px;
+}
+.main-content {}
+.sidebar{}
+.sidebar.right{}
+.sidebar.left{}
+
+
+/* =============== Footer =============== */
+
+.footer-container-wrapper {
+    background-color: {{ footerBackgroundColor }};
+    text-align: center;
+    color: {{ secondaryTextColor }};
+    {{ rem('padding','40') }}
+}
+.footer-container-wrapper .follow-me {
+    {{ rem('padding','30 0 15 0') }}
+}
+
+
+
+.footer-container {}
+

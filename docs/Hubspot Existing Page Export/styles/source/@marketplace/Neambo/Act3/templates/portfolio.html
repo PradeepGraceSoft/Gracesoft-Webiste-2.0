@@ -1,0 +1,394 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Portfolio
+  screenshotPath: ../images/template-previews/portfolio.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter, content_width %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0)
+        },
+        'mobile': {
+          'top': vspace_sm
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            bottom_border='default'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Portfolio',
+            title="Some of the recent work we've done.",
+            desc='',
+            settings={
+              'title_tag': 'h1',
+              'title_looks_like': 'h2'
+            },
+            wrapper={
+              'max_width': {
+                'md': '480',
+                'sm': '320'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {# Row 1 #}
+        {% dnd_row %}
+          {% dnd_module path='../modules/cover-card',
+            card=[
+              {
+                'text': '<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</h3>',
+                'labels': {
+                  'badge': 'Social Media',
+                  'info': 'SaaS'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-c0s9q.jpg',
+                    'alt': 'Describe your image',
+                    'width': 770,
+                    'height': 500
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 20,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '500'
+                },
+                'text_max_width': {
+                  'lg': '500'
+                },
+                'content_align': {
+                  'lg': '4',
+                  'md': '4',
+                  'sm': '4'
+                }
+              },
+              {
+                'text': '<h3>Separated they live in Bookmarksgrove</h3>',
+                'labels': {
+                  'badge': 'Marketing',
+                  'info': 'Healthcare'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-p1y8m.jpg',
+                    'alt': 'Describe your image',
+                    'width': 370,
+                    'height': 500
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 20,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '370'
+                },
+                'text_max_width': {
+                  'lg': '370'
+                },
+                'content_align': {
+                  'lg': '1',
+                  'md': '1',
+                  'sm': '1'
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '2r',
+                'md': '2r'
+              },
+              'col_align': 'justify-center'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {# Row 2 #}
+        {% dnd_row %}
+          {% dnd_module path='../modules/cover-card',
+            card=[
+              {
+                'text': '<h3>A small river named Duden flows</h3>',
+                'labels': {
+                  'badge': 'Web Design',
+                  'info': 'Education'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-bjqqp.jpg',
+                    'alt': 'Describe your image',
+                    'width': 370,
+                    'height': 500
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 20,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '500'
+                },
+                'text_max_width': {
+                  'lg': '500'
+                },
+                'content_align': {
+                  'lg': '2',
+                  'md': '2',
+                  'sm': '2'
+                }
+              },
+              {
+                'text': '<h3>Question Marks and devious Semikoli, but the Little Blind Text didn’t listen</h3>',
+                'labels': {
+                  'badge': 'Social Media',
+                  'info': 'Technology'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-y0i9j.jpg',
+                    'alt': 'Describe your image',
+                    'width': 770,
+                    'height': 500
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 20,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '370'
+                },
+                'text_max_width': {
+                  'lg': '370'
+                },
+                'content_align': {
+                  'lg': '3',
+                  'md': '3',
+                  'sm': '3'
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '2l',
+                'md': '2l'
+              },
+              'col_align': 'justify-center'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/cover-card',
+            card=[
+              {
+                'text': '<h3>When she reached the first hills of the Italic Mountains</h3>',
+                'labels': {
+                  'badge': 'Marketing',
+                  'info': 'December 2019'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-yhfc4.jpg',
+                    'alt': 'Describe your image',
+                    'width': 370,
+                    'height': 376
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 0,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '376'
+                },
+                'text_max_width': {
+                  'lg': '500'
+                },
+                'content_align': {
+                  'lg': '5',
+                  'md': '5',
+                  'sm': '5'
+                }
+              },
+              {
+                'text': '<h3>Pointing has no control about the blind texts</h3>',
+                'labels': {
+                  'badge': 'Web Design',
+                  'info': 'December 2019'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-1lx13.jpg',
+                    'alt': 'Describe your image',
+                    'width': 370,
+                    'height': 376
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 50,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '370'
+                },
+                'text_max_width': {
+                  'lg': '370'
+                },
+                'content_align': {
+                  'lg': '5',
+                  'md': '5',
+                  'sm': '5'
+                }
+              },
+              {
+                'text': '<h3>Alphabet Village and the subline of her own road</h3>',
+                'labels': {
+                  'badge': 'Social Media',
+                  'info': 'November 2019'
+                },
+                'image': {
+                  'lg': {
+                    'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-jl2lj.jpg',
+                    'alt': 'Describe your image',
+                    'width': 370,
+                    'height': 376
+                  }
+                },
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color_scheme': 'dark',
+                'overlay': 50,
+                'card_shadow': false,
+                'min_height': {
+                  'lg': '370'
+                },
+                'text_max_width': {
+                  'lg': '370'
+                },
+                'content_align': {
+                  'lg': '5',
+                  'md': '5',
+                  'sm': '5'
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '3',
+                'md': '3'
+              },
+              'col_align': 'justify-center'
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button',
+                'type': 'link',
+                'text': "Let's do your project next!",
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color': 'accent',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'top': {
+                  'lg': (vspace_lg - gutter)|string,
+                  'sm': (vspace_sm - gutter)|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

@@ -1,0 +1,709 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home 5
+  screenshotPath: ../images/template-previews/home-5.jpg
+-->
+
+{% extends './_base.html' %}
+
+{% block settings %}
+  {% boolean "lp" label='LP header and footer', value=false, export_to_template_context=true %}
+  {% boolean "header_overlap" label='Overlapping header', value=false, export_to_template_context=true %}
+  {% set lp = widget_data.lp.value %}
+  {% set header_overlap = widget_data.header_overlap.value %}
+{% endblock settings %}
+
+{% block body %}
+  {% from '../css/_variables.css' import vspace_lg, vspace_sm, gutter %}
+  {% dnd_area 'content_bucket', class='main' %}
+
+    {# SECTION: Above the fold #}
+
+    {% dnd_section
+      vertical_alignment='MIDDLE',
+      background_color='#b5b4c4'
+    %}
+      {% dnd_column offset=0, width=7 %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/heading',
+            text='Get your HubSpot website going!',
+            html_tag='h1',
+            looks_like='display',
+            color_scheme='dark',
+            wrapper={
+              'text_align': {
+                'sm': 'center'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string,
+                  'sm': '0'
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button',
+                'type': 'link',
+                'text': 'Install Now',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color': 'accent',
+                'fill': 'fill',
+                'size': 'large',
+                'shape': 'pill',
+                'add_icon': true,
+                'icon': {
+                  'icon': {
+                    'name': 'HubSpot',
+                    'style': 'REGULAR',
+                    'unicode': 'f3b2',
+                    'icon_set': 'fontawesome-5.14.0'
+                  },
+                  'icon_position': 'right',
+                  'icon_size': 107
+                }
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'sm': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column offset=7, width=5 %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-hshp06.jpg',
+              'width': 600,
+              'height': 508,
+              'alt': 'HubSpot logo',
+              'loading': 'disabled'
+            },
+            wrapper={
+              'text_align': {
+                'sm': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Logos #}
+
+    {% dnd_section
+      max_width=1280,
+      padding={
+        'default': {
+          'top': 60,
+          'bottom': 60
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            top_border='default',
+            bottom_border='default'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/logos',
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Cards #}
+
+    {% dnd_section
+      padding={
+        'default': {
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row vertical_alignment='MIDDLE' %}
+          {% dnd_column offset=0, width=6,
+            padding={
+              'mobile': {
+                'bottom': gutter
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/heading',
+                text='It’s all about you',
+                html_tag='h2',
+                remove_space=true,
+                wrapper={
+                  'text_align': {
+                    'sm': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column offset=6, width=6,
+            padding={
+              'mobile': {
+                'bottom': gutter
+              }
+            }
+          %}
+            {% dnd_row %}
+              {% dnd_module path='../modules/button',
+                button=[
+                  {
+                    'internal_name': 'Button 1',
+                    'type': 'link',
+                    'text': 'Discover More',
+                    'link': {
+                      'url': {
+                        'type': 'EXTERNAL',
+                        'href': 'https://www.hubspot.com/'
+                      },
+                      'open_in_new_tab': true,
+                      'no_follow': true
+                    },
+                    'color': 'light',
+                    'fill': 'outline',
+                    'size': 'large',
+                    'shape': 'default'
+                  }
+                ],
+                wrapper={
+                  'text_align': {
+                    'lg': 'right',
+                    'sm': 'center'
+                  }
+                }
+              %}{% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+        {% dnd_row
+          padding={
+            'default': {
+              'top': (gutter * 2)|round(0)
+            },
+            'default': {
+              'top': gutter
+            }
+          }
+        %}
+          {% dnd_module path='../modules/go-card',
+            items=[
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-suzpg.jpg',
+                  'alt': 'Describe your image',
+                  'width': 400,
+                  'height': 296,
+                  'loading': 'lazy'
+                },
+                'title': 'Nothing else matters',
+                'desc': 'Nothing else matters',
+                'arrow': true,
+                'color': 'white',
+                'title_tag': 'h4',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              },
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-mcqne.jpg',
+                  'alt': 'Describe your image',
+                  'width': 400,
+                  'height': 296,
+                  'loading': 'lazy'
+                },
+                'title': 'Nothing else matters',
+                'desc': 'Nothing else matters',
+                'arrow': true,
+                'color': 'white',
+                'title_tag': 'h4',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              },
+              {
+                'image': {
+                  'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-cwfdn.jpg',
+                  'alt': 'Describe your image',
+                  'width': 400,
+                  'height': 296,
+                  'loading': 'lazy'
+                },
+                'title': 'Nothing else matters',
+                'desc': 'Nothing else matters',
+                'arrow': true,
+                'color': 'white',
+                'title_tag': 'h4',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                }
+              }
+            ],
+            settings={
+              'col': {
+                'lg': '3',
+                'md': '2'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Highlight 1 #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image-plus-text',
+            text='
+              <h2>Make layout changes directly on your page.</h2>
+              <p>You no longer need to edit your template to add sections and modules, or make layout changes.</p>
+            ',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-iv3ks.jpg',
+              'alt': 'Describe your image',
+              'width': 850,
+              'height': 574,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Learn More',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'light',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            settings={
+              'order': 'it',
+              'stack_order': 'sit',
+              'stack_txt_max_width': 500,
+              'stack_txt_center': true,
+              'stack_img_center': true
+            },
+            wrapper={
+              'text_align': {
+                'md': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Highlight 2 #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image-plus-text',
+            text='
+              <h2>Customize theme styles without editing code.</h2>
+              <p>Everything is at your fingertip with an intuitive and neat interface. You don’t need to leave HubSpot or edit code to change your theme’s styles.</p>
+            ',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-w4byu.jpg',
+              'alt': 'Describe your image',
+              'width': 850,
+              'height': 574,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Learn More',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'light',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            settings={
+              'order': 'ti',
+              'stack_order': 'sit',
+              'stack_txt_max_width': 500,
+              'stack_txt_center': true,
+              'stack_img_center': true
+            },
+            wrapper={
+              'text_align': {
+                'md': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Highlight 3 #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image-plus-text',
+            text='
+              <h2>Make layout changes directly on your page.</h2>
+              <p>You no longer need to edit your template to add sections and modules, or make layout changes.</p>
+            ',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-t14zd.jpg',
+              'alt': 'Describe your image',
+              'width': 850,
+              'height': 574,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Learn More',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'light',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            settings={
+              'order': 'it',
+              'stack_order': 'sit',
+              'stack_txt_max_width': 500,
+              'stack_txt_center': true,
+              'stack_img_center': true
+            },
+            wrapper={
+              'text_align': {
+                'md': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Highlight 4 #}
+
+    {% dnd_section
+      full_width=true,
+      padding={
+        'default': {
+          'top': (vspace_lg / 2)|round(0),
+          'bottom': (vspace_lg / 2)|round(0)
+        }
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/image-plus-text',
+            text='
+              <h2>Customize theme styles without editing code.</h2>
+              <p>Everything is at your fingertip with an intuitive and neat interface. You don’t need to leave HubSpot or edit code to change your theme’s styles.</p>
+            ',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-2myd1.jpg',
+              'alt': 'Describe your image',
+              'width': 850,
+              'height': 574,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Learn More',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true
+                },
+                'color': 'light',
+                'fill': 'outline',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            settings={
+              'order': 'ti',
+              'stack_order': 'sit',
+              'stack_txt_max_width': 500,
+              'stack_txt_center': true,
+              'stack_img_center': true
+            },
+            wrapper={
+              'text_align': {
+                'md': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Images #}
+
+    {% dnd_section
+      max_width=1640
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='',
+            title='Custom Colors and Fonts',
+            desc='<p>Match your brand style with custom colors, fonts, and many other cool settings that will make your website look amazingly beautiful and unique.</p>',
+            wrapper={
+              'max_width': {
+                'lg': '600'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module offset=0, width=3, path='../modules/image',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-m3jvm.jpg',
+              'alt': 'Describe your image',
+              'width': 350,
+              'height': 501,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'top': {
+                  'lg': (gutter * 3)|round(0)|string,
+                  'sm': '0'
+                },
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+          {% dnd_module offset=3, width=3, path='../modules/image',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-59u4v.jpg',
+              'alt': 'Describe your image',
+              'width': 350,
+              'height': 501,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+          {% dnd_module offset=6, width=3, path='../modules/image',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hub/273774/hubfs/act3/images/sample-asdk12dd.jpg',
+              'alt': 'Describe your image',
+              'width': 350,
+              'height': 501,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              },
+              'margin': {
+                'top': {
+                  'lg': (gutter * 3)|round(0)|string,
+                  'sm': '0'
+                },
+                'bottom': {
+                  'lg': gutter|string
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+          {% dnd_module offset=9, width=3, path='../modules/image',
+            image={
+              'src': 'https://f.hubspotusercontent20.net/hubfs/273774/act3/images/sample-eag2q.jpg',
+              'alt': 'Describe your image',
+              'width': 350,
+              'height': 501,
+              'loading': 'lazy'
+            },
+            img_radius=true,
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# SECTION: Call to action #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-extra-settings',
+            top_border='default',
+            bottom_border='default'
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/section-intro',
+            overline='Ready to Install',
+            title='Available now on the official HubSpot Marketplace',
+            desc='',
+            settings={
+              'divider': ''
+            },
+            wrapper={
+              'max_width': {
+                'lg': '700'
+              },
+              'margin': {
+                'bottom': {
+                  'lg': (gutter / 3)|round(0)|string,
+                  'sm': '0'
+                }
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/button',
+            button=[
+              {
+                'internal_name': 'Button 1',
+                'type': 'link',
+                'text': 'Get Started',
+                'link': {
+                  'url': {
+                    'type': 'EXTERNAL',
+                    'href': 'https://www.hubspot.com/'
+                  },
+                  'open_in_new_tab': true,
+                  'no_follow': true
+                },
+                'color': 'accent',
+                'fill': 'fill',
+                'size': 'large',
+                'shape': 'default'
+              }
+            ],
+            wrapper={
+              'text_align': {
+                'lg': 'center'
+              }
+            }
+          %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}
